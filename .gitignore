@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 段階別バックアップ(各~75MB JSON含む)・中間生成物・一時ファイル
+**/_backup_before_*/
+**/_backup_decomp_*/
+_settings_corrected_tmp.json
+**/_settings_corrected_tmp.json
+*.bak
+*.bak_*
+*_tmp*
+*.tmp
+.~lock.*
+~$*
+
+# _analysis の中間チャンク(レビュー用分割)
+_analysis_20260625/out/nf_chunks/
+_analysis_20260625/out/unrev_chunks/
+
+# 冗長/代替の大物JSON(主要成果 最终的な替换用リスト...json のみ保持)
+* (2).json
+*Mingeo*
+# 大物の研究用埋め込みCSV(アプリ実行に不要・非中核)
+*average_embeddings*
+*平均语义向量*
+# _analysis の開発中に生成した最終JSON複製(配備済みは各アプリに在る)
+_analysis_20260625/out/new_*.json
+_analysis_20260625/out/*.bak*
+
+# 開発/研究フォルダ(アプリ実行に不要・3アプリで重複・大物)
+**/20250215_*整理したFolder/
+**/以日语*聚类排序的结果/
+**/PEJVO(世界语全部单词列表)の第一部分*/
+**/2017年版PEJVO*比较/
+**/确定世界语词根对应的汉字/
+**/アプリの説明書*/
+# アプリ同梱の研究用 例句/原pejvo 大物txt(実行不要)
+**/例句_Esperanto文本.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 退避した元アプリ.git はDownloads配下(リポジトリ外)
