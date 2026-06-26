@@ -1,0 +1,57 @@
+[
+ {
+  "word": "Sud-Sud/an/o",
+  "gold": "sud-sud/an/o",
+  "app": "sud/-/sudan/o"
+ },
+ {
+  "word": "Cis-Jordani/o",
+  "gold": "cis-jordani/o",
+  "app": "cis/-/jordan/io"
+ },
+ {
+  "word": "Meklenburgi/o-Antau^/pomer/i/o",
+  "gold": "meklenburgi/o-antaŭ/pomer/i/o",
+  "app": "meklenburgi/o-/antaŭ/pomer/io"
+ },
+ {
+  "word": "ti/a-ti/a",
+  "gold": "ti/a-ti/a",
+  "app": "tia/-/tia"
+ },
+ {
+  "word": "vestig^/o",
+  "gold": "vestiĝ/o",
+  "app": "vest/iĝ/o"
+ },
+ {
+  "word": "Baal-Zebub",
+  "gold": "baal-zebub",
+  "app": "baal/-/zebu/b"
+ },
+ {
+  "word": "Ut-Napis^tim",
+  "gold": "ut-napiŝtim",
+  "app": "ut/-na/piŝt/im"
+ },
+ {
+  "word": "Baal-Zebul",
+  "gold": "baal-zebul",
+  "app": "baal/-z/ebul"
+ },
+ {
+  "word": "sin/g^en/o",
+  "gold": "sin/ĝen/o",
+  "app": "si/n/ĝen/o"
+ },
+ {
+  "word": "sin/g^en/ad/o",
+  "gold": "sin/ĝen/ad/o",
+  "app": "si/n/ĝen/ad/o"
+ },
+ {
+  "word": "2,2,4-trimetil/pentan/o",
+  "gold": "2,2,4-trimetil/pentan/o",
+  "app": "2,2,4-/tri/metil/pentan/o"
+ }
+]

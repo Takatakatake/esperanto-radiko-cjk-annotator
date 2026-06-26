@@ -1,0 +1,570 @@
+[
+ {
+  "w": "Brajton/o",
+  "target": "brajton/o"
+ },
+ {
+  "w": "mau^rici/a",
+  "target": "maŭrici/a"
+ },
+ {
+  "w": "abandon/i",
+  "target": "abandon/i"
+ },
+ {
+  "w": "agami/o",
+  "target": "agami/o"
+ },
+ {
+  "w": "agregat/o",
+  "target": "agregat/o"
+ },
+ {
+  "w": "Akvilon/o",
+  "target": "akvilon/o"
+ },
+ {
+  "w": "alkanon/o",
+  "target": "alkanon/o"
+ },
+ {
+  "w": "anhidro/",
+  "target": "anhidro"
+ },
+ {
+  "w": "arki/",
+  "target": "arki"
+ },
+ {
+  "w": "asignat/o",
+  "target": "asignat/o"
+ },
+ {
+  "w": "Au^str/i-Hungari/o",
+  "target": "aŭstr/i-hungari/o"
+ },
+ {
+  "w": "bakter/icid/a",
+  "target": "bakter/icid/a"
+ },
+ {
+  "w": "balzamit/o",
+  "target": "balzamit/o"
+ },
+ {
+  "w": "bar-micv/o",
+  "target": "bar-micv/o"
+ },
+ {
+  "w": "blefarit/o",
+  "target": "blefarit/o"
+ },
+ {
+  "w": "butanon/o",
+  "target": "butanon/o"
+ },
+ {
+  "w": "2-buten/al/o",
+  "target": "2-buten/al/o"
+ },
+ {
+  "w": "Celadon/o",
+  "target": "celadon/o"
+ },
+ {
+  "w": "cementit/o",
+  "target": "cementit/o"
+ },
+ {
+  "w": "centrant/o",
+  "target": "centrant/o"
+ },
+ {
+  "w": "cian/",
+  "target": "cian"
+ },
+ {
+  "w": "dakrioadenit/o",
+  "target": "dakrioadenit/o"
+ },
+ {
+  "w": "diazo/",
+  "target": "diazo"
+ },
+ {
+  "w": "diskant/o",
+  "target": "diskant/o"
+ },
+ {
+  "w": "eksciton/o",
+  "target": "eksciton/o"
+ },
+ {
+  "w": "ele/o",
+  "target": "ele/o"
+ },
+ {
+  "w": "elektrum/o",
+  "target": "elektrum/o"
+ },
+ {
+  "w": "emigr/ad/o",
+  "target": "emigr/ad/o"
+ },
+ {
+  "w": "Emilian/o",
+  "target": "emilian/o"
+ },
+ {
+  "w": "endo/",
+  "target": "endo"
+ },
+ {
+  "w": "eskalon/o",
+  "target": "eskalon/o"
+ },
+ {
+  "w": "eskalon/i",
+  "target": "eskalon/i"
+ },
+ {
+  "w": "1,2-etandiol/o",
+  "target": "1,2-etandiol/o"
+ },
+ {
+  "w": "foliant/o",
+  "target": "foliant/o"
+ },
+ {
+  "w": "graviton/o",
+  "target": "graviton/o"
+ },
+ {
+  "w": "Harun-al-Ras^id/o",
+  "target": "harun-al-raŝid/o"
+ },
+ {
+  "w": "heks/",
+  "target": "heks"
+ },
+ {
+  "w": "heksa/",
+  "target": "heksa"
+ },
+ {
+  "w": "helmint/o",
+  "target": "helmint/o"
+ },
+ {
+  "w": "hemi/",
+  "target": "hemi"
+ },
+ {
+  "w": "henikoz/",
+  "target": "henikoz"
+ },
+ {
+  "w": "Herkulan/o",
+  "target": "herkulan/o"
+ },
+ {
+  "w": "hetero/",
+  "target": "hetero"
+ },
+ {
+  "w": "hiper/",
+  "target": "hiper"
+ },
+ {
+  "w": "Honorat/o",
+  "target": "honorat/o"
+ },
+ {
+  "w": "ikoz/",
+  "target": "ikoz"
+ },
+ {
+  "w": "impetig/o",
+  "target": "impetig/o"
+ },
+ {
+  "w": "impetig/a",
+  "target": "impetig/a"
+ },
+ {
+  "w": "intra/",
+  "target": "intra"
+ },
+ {
+  "w": "itol/",
+  "target": "itol"
+ },
+ {
+  "w": "jokto/",
+  "target": "jokto"
+ },
+ {
+  "w": "kala-azar/o",
+  "target": "kala-azar/o"
+ },
+ {
+  "w": "kanelon/oj",
+  "target": "kanelon/oj"
+ },
+ {
+  "w": "karbazon/o",
+  "target": "karbazon/o"
+ },
+ {
+  "w": "kombinat/o",
+  "target": "kombinat/o"
+ },
+ {
+  "w": "komunon/aj",
+  "target": "komunon/aj"
+ },
+ {
+  "w": "kontra/",
+  "target": "kontra"
+ },
+ {
+  "w": "Ku-Kluks-Klan/o",
+  "target": "ku-kluks-klan/o"
+ },
+ {
+  "w": "Kvinto-Kurti/o",
+  "target": "kvinto-kurti/o"
+ },
+ {
+  "w": "Lateran/o",
+  "target": "lateran/o"
+ },
+ {
+  "w": "lazaron/o",
+  "target": "lazaron/o"
+ },
+ {
+  "w": "lulu",
+  "target": "lulu"
+ },
+ {
+  "w": "megalo/",
+  "target": "megalo"
+ },
+ {
+  "w": "mejbomit/o",
+  "target": "mejbomit/o"
+ },
+ {
+  "w": "merkapto/",
+  "target": "merkapto"
+ },
+ {
+  "w": "meta/",
+  "target": "meta"
+ },
+ {
+  "w": "metadon/o",
+  "target": "metadon/o"
+ },
+ {
+  "w": "miria/",
+  "target": "miria"
+ },
+ {
+  "w": "nitrozo/",
+  "target": "nitrozo"
+ },
+ {
+  "w": "nona/",
+  "target": "nona"
+ },
+ {
+  "w": "Nov-Kaledoni/an/o",
+  "target": "nov/-/kaledoni/an/o"
+ },
+ {
+  "w": "oestron/o",
+  "target": "oestron/o"
+ },
+ {
+  "w": "okta/",
+  "target": "okta"
+ },
+ {
+  "w": "oleum/o",
+  "target": "oleum/o"
+ },
+ {
+  "w": "oligo/",
+  "target": "oligo"
+ },
+ {
+  "w": "opiniam/o",
+  "target": "opiniam/o"
+ },
+ {
+  "w": "oratori/o",
+  "target": "oratori/o"
+ },
+ {
+  "w": "ot/o-rin/o-laring/o/log/o",
+  "target": "ot/o-rin/o-laring/o/log/o"
+ },
+ {
+  "w": "parados/o",
+  "target": "parados/o"
+ },
+ {
+  "w": "patrone/o",
+  "target": "patrone/o"
+ },
+ {
+  "w": "penta/",
+  "target": "penta"
+ },
+ {
+  "w": "peta/",
+  "target": "peta"
+ },
+ {
+  "w": "pingven/oj",
+  "target": "pingven/oj"
+ },
+ {
+  "w": "Plata-urb/o",
+  "target": "plata/-/urb/o"
+ },
+ {
+  "w": "plektrant/o",
+  "target": "plektrant/o"
+ },
+ {
+  "w": "pneu^mo/",
+  "target": "pneŭmo"
+ },
+ {
+  "w": "Pont-Eu^ksen/o",
+  "target": "pont-eŭksen/o"
+ },
+ {
+  "w": "prezidi/o",
+  "target": "prezidi/o"
+ },
+ {
+  "w": "prop/",
+  "target": "prop"
+ },
+ {
+  "w": "2-propenil/o",
+  "target": "2-propenil/o"
+ },
+ {
+  "w": "1,2,3-propantriol/o",
+  "target": "1,2,3-propantriol/o"
+ },
+ {
+  "w": "provizi/o",
+  "target": "provizi/o"
+ },
+ {
+  "w": "purpura/o",
+  "target": "purpura/o"
+ },
+ {
+  "w": "rekursi/o",
+  "target": "rekursi/o"
+ },
+ {
+  "w": "resum/ad/o",
+  "target": "resum/ad/o"
+ },
+ {
+  "w": "ret/i-romanc^/a",
+  "target": "ret/i-romanĉ/a"
+ },
+ {
+  "w": "reversi/o",
+  "target": "reversi/o"
+ },
+ {
+  "w": "riz/o/pod/oj",
+  "target": "riz/o/pod/oj"
+ },
+ {
+  "w": "Saksi/o-Anhalt/o",
+  "target": "saksi/o-anhalt/o"
+ },
+ {
+  "w": "seskvi/",
+  "target": "seskvi"
+ },
+ {
+  "w": "silikon/o",
+  "target": "silikon/o"
+ },
+ {
+  "w": "spondilit/o",
+  "target": "spondilit/o"
+ },
+ {
+  "w": "stereo/",
+  "target": "stereo"
+ },
+ {
+  "w": "sukcesi/o",
+  "target": "sukcesi/o"
+ },
+ {
+  "w": "Fermi-surfac/o",
+  "target": "fermi/-/surfac/o"
+ },
+ {
+  "w": "C^efec^-s^los/il/o",
+  "target": "ĉefeĉ-ŝlos/il/o"
+ },
+ {
+  "w": "tekstil/a",
+  "target": "tekstil/a"
+ },
+ {
+  "w": "timpanon/o",
+  "target": "timpanon/o"
+ },
+ {
+  "w": "traktus/o",
+  "target": "traktus/o"
+ },
+ {
+  "w": "transit/a",
+  "target": "transit/a"
+ },
+ {
+  "w": "transit/e",
+  "target": "transit/e"
+ },
+ {
+  "w": "Tristan/o",
+  "target": "tristan/o"
+ },
+ {
+  "w": "tromp/ad/o",
+  "target": "tromp/ad/o"
+ },
+ {
+  "w": "Baal-Zebub",
+  "target": "baal-zebub"
+ },
+ {
+  "w": "Bat-S^eb/a",
+  "target": "bat-ŝeb/a"
+ },
+ {
+  "w": "Temis",
+  "target": "temis"
+ },
+ {
+  "w": "Ut-Napis^tim",
+  "target": "ut-napiŝtim"
+ },
+ {
+  "w": "Baal-Zebul",
+  "target": "baal-zebul"
+ },
+ {
+  "w": "Patr/o/Ni/a",
+  "target": "patr/o/ni/a"
+ },
+ {
+  "w": "Sankta-Georg/o",
+  "target": "sankta-georg/o"
+ },
+ {
+  "w": "Sankta-Johan/o",
+  "target": "sankta-johan/o"
+ },
+ {
+  "w": "Sankta-Luci/o",
+  "target": "sankta-luci/o"
+ },
+ {
+  "w": "sin/g^en/o",
+  "target": "si/n/ĝen/o"
+ },
+ {
+  "w": "sin/g^en/ad/o",
+  "target": "si/n/ĝen/ad/o"
+ },
+ {
+  "w": "dat/um/int",
+  "target": "dat/um/int"
+ },
+ {
+  "w": "tra/met/as",
+  "target": "tra/met/as"
+ },
+ {
+  "w": "tra/met/os",
+  "target": "tra/met/os"
+ },
+ {
+  "w": "tra/met/at",
+  "target": "tra/met/at"
+ },
+ {
+  "w": "tra/met/ot",
+  "target": "tra/met/ot"
+ },
+ {
+  "w": "tra/met/ad",
+  "target": "tra/met/ad"
+ },
+ {
+  "w": "tra/met/ant",
+  "target": "tra/met/ant"
+ },
+ {
+  "w": "tra/met/int",
+  "target": "tra/met/int"
+ },
+ {
+  "w": "tra/met/ont",
+  "target": "tra/met/ont"
+ },
+ {
+  "w": "sen/tig/a",
+  "target": "sen/tig/a"
+ },
+ {
+  "w": "montenegr/a",
+  "target": "montenegr/a"
+ },
+ {
+  "w": "h^ilopod/oj",
+  "target": "ĥilopod/oj"
+ },
+ {
+  "w": "2-propan/ol/o",
+  "target": "2-propan/ol/o"
+ },
+ {
+  "w": "servil/a",
+  "target": "servil/a"
+ },
+ {
+  "w": "spionit/o",
+  "target": "spionit/o"
+ },
+ {
+  "w": "undek/",
+  "target": "undek"
+ },
+ {
+  "w": "si/n/g^en/i",
+  "target": "si/n/ĝen/i"
+ },
+ {
+  "w": "moratori/o",
+  "target": "moratori/o"
+ }
+]
