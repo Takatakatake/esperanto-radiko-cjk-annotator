@@ -26,6 +26,11 @@ verb_suffix_2l={'as':'as', 'is':'is', 'os':'os', 'us':'us','at':'at','it':'it','
 AN=[['dietan', '/diet/an/', '/diet/an'], ['afrikan', '/afrik/an/', '/afrik/an'], ['movadan', '/mov/ad/an/', '/mov/ad/an'], ['akcian', '/akci/an/', '/akci/an'], ['montaran', '/mont/ar/an/', '/mont/ar/an'], ['amerikan', '/amerik/an/', '/amerik/an'], ['regnan', '/regn/an/', '/regn/an'], ['dezertan', '/dezert/an/', '/dezert/an'], ['asocian', '/asoci/an/', '/asoci/an'], ['insulan', '/insul/an/', '/insul/an'], ['azian', '/azi/an/', '/azi/an'], ['ŝtatan', '/ŝtat/an/', '/ŝtat/an'], ['doman', '/dom/an/', '/dom/an'], ['montan', '/mont/an/', '/mont/an'], ['familian', '/famili/an/', '/famili/an'], ['urban', '/urb/an/', '/urb/an'], ['popolan', '/popol/an/', '/popol/an'], ['dekan', '/dekan/', '/dek/an'], ['partian', '/parti/an/', '/parti/an'], ['lokan', '/lok/an/', '/lok/an'], ['ŝipan', '/ŝip/an/', '/ŝip/an'], ['eklezian', '/eklezi/an/', '/eklezi/an'], ['landan', '/land/an/', '/land/an'], ['orientan', '/orient/an/', '/orient/an'], ['lernejan', '/lern/ej/an/', '/lern/ej/an'], ['enlandan', '/en/land/an/', '/en/land/an'], ['kalkan', '/kalkan/', '/kalk/an'], ['estraran', '/estr/ar/an/', '/estr/ar/an'], ['etnan', '/etn/an/', '/etn/an'], ['eŭropan', '/eŭrop/an/', '/eŭrop/an'], ['fazan', '/fazan/', '/faz/an'], ['polican', '/polic/an/', '/polic/an'], ['socian', '/soci/an/', '/soci/an'], ['societan', '/societ/an/', '/societ/an'], ['grupan', '/grup/an/', '/grup/an'], ['ligan', '/lig/an/', '/lig/an'], ['nacian', '/naci/an/', '/naci/an'], ['koran', '/koran/', '/kor/an'], ['religian', '/religi/an/', '/religi/an'], ['kuban', '/kub/an/', '/kub/an'], ['majoran', '/major/an/', '/major/an'], ['nordan', '/nord/an/', '/nord/an'], ['paran', 'paran', '/par/an'], ['parizan', '/pariz/an/', '/pariz/an'], ['parokan', '/parok/an/', '/parok/an'], ['podian', '/podi/an/', '/podi/an'], ['rusian', '/rus/i/an/', '/rus/ian'], ['satan', '/satan/', '/sat/an'], ['sektan', '/sekt/an/', '/sekt/an'], ['senatan', '/senat/an/', '/senat/an'], ['skisman', '/skism/an/', '/skism/an'], ['sudan', 'sudan', '/sud/an'], ['utopian', '/utopi/an/', '/utopi/an'], ['vilaĝan', '/vilaĝ/an/', '/vilaĝ/an'], ['arĝentan', '/arĝent/an/', '/arĝent/an']]
 ON=[['duon', '/du/on/', '/du/on'], ['okon', '/ok/on/', '/ok/on'], ['nombron', '/nombr/on/', '/nombr/on'], ['patron', '/patron/', '/patr/on'], ['karbon', '/karbon/', '/karb/on'], ['ciklon', '/ciklon/', '/cikl/on'], ['aldon', '/al/don/', '/ald/on'], ['balon', '/balon/', '/bal/on'], ['baron', '/baron/', '/bar/on'], ['baston', '/baston/', '/bast/on'], ['magneton', '/magnet/on/', '/magnet/on'], ['beton', 'beton', '/bet/on'], ['bombon', '/bombon/', '/bomb/on'], ['breton', 'breton', '/bret/on'], ['burĝon', '/burĝon/', '/burĝ/on'], ['centon', '/cent/on/', '/cent/on'], ['milon', '/mil/on/', '/mil/on'], ['kanton', '/kanton/', '/kant/on'], ['citron', '/citron/', '/citr/on'], ['platon', 'platon', '/plat/on'], ['dekon', '/dek/on/', '/dek/on'], ['kvaron', '/kvar/on/', '/kvar/on'], ['kvinon', '/kvin/on/', '/kvin/on'], ['seson', '/ses/on/', '/ses/on'], ['trion', '/tri/on/', '/tri/on'], ['karton', '/karton/', '/kart/on'], ['foton', '/fot/on/', '/fot/on'], ['peron', '/peron/', '/per/on'], ['elektron', '/elektr/on/', '/elektr/on'], ['drakon', 'drakon', '/drak/on'], ['mondon', '/mon/don/', '/mond/on'], ['pension', '/pension/', '/pensi/on'], ['ordon', '/ordon/', '/ord/on'], ['eskadron', 'eskadron', '/eskadr/on'], ['senton', '/sen/ton/', '/sent/on'], ['eston', 'eston', '/est/on'], ['fanfaron', '/fanfaron/', '/fanfar/on'], ['feston', '/feston/', '/fest/on'], ['flegmon', 'flegmon', '/flegm/on'], ['fronton', '/fronton/', '/front/on'], ['galon', '/galon/', '/gal/on'], ['mason', '/mason/', '/mas/on'], ['helikon', 'helikon', '/helik/on'], ['kanon', '/kanon/', '/kan/on'], ['kapon', '/kapon/', '/kap/on'], ['kokon', '/kokon/', '/kok/on'], ['kolon', '/kolon/', '/kol/on'], ['komision', '/komision/', '/komisi/on'], ['salon', '/salon/', '/sal/on'], ['ponton', '/ponton/', '/pont/on'], ['koton', '/koton/', '/kot/on'], ['kripton', 'kripton', '/kript/on'], ['kupon', '/kupon/', '/kup/on'], ['lakon', 'lakon', '/lak/on'], ['ludon', '/lu/don/', '/lud/on'], ['melon', '/melon/', '/mel/on'], ['menton', '/menton/', '/ment/on'], ['milion', '/milion/', '/mili/on'], ['milionon', '/milion/on/', '/milion/on'], ['naŭon', '/naŭ/on/', '/naŭ/on'], ['violon', '/violon/', '/viol/on'], ['trombon', '/trombon/', '/tromb/on'], ['senson', '/sen/son/', '/sens/on'], ['sepon', '/sep/on/', '/sep/on'], ['skadron', 'skadron', '/skadr/on'], ['stadion', '/stadion/', '/stadi/on'], ['tetraon', 'tetraon', '/tetra/on'], ['timon', '/timon/', '/tim/on'], ['valon', 'valon', '/val/on']]
 allowed_values = {-1, "-1", "ー１", "ー1", "-１", "－１", "－1"}
+# 純粋な文法語尾(名詞o類・形容詞a類・副詞e類・対格n・複数j)。custom_stemmingでリテラル付加する。
+_GRAM_ENDINGS = {"o","oj","on","ojn","a","aj","an","ajn","e","en","n","j","jn"}
+# ハイフン直後のエスペラント文字を大文字化(固有名詞 Abu-Dabi 等。実テキストは各部大文字)
+def _cap_after_hyphen(s):
+    return re.sub(r'-([a-zĉĝĥĵŝŭ])', lambda m: '-' + m.group(1).upper(), s)
 suffix_2char_roots=['ad', 'ag', 'am', 'ar', 'as', 'at', 'av', 'di', 'ec', 'eg', 'ej', 'em', 'er', 'et', 'id', 'ig', 'il', 'in', 'ir', 'is', 'it', 'lu', 'nj', 'op', 'or', 'os', 'ot', 'ov', 'pi', 'te', 'uj', 'ul', 'um', 'us', 'uz','ĝu','aĵ','iĝ','aĉ','aĝ','ŝu','eĥ']
 prefix_2char_roots=['al', 'am', 'av', 'bo', 'di', 'du', 'ek', 'el', 'en', 'fi', 'ge', 'ir', 'lu', 'ne', 'ok', 'or', 'ov', 'pi', 're', 'te', 'uz','ĝu','aĉ','aĝ','ŝu','eĥ']
 standalone_2char_roots=['al', 'ci', 'da', 'de', 'di', 'do', 'du', 'el', 'en', 'fi', 'ha', 'he', 'ho', 'ia', 'ie', 'io', 'iu', 'ja', 'je', 'ju','ke', 'la', 'li', 'mi', 'ne', 'ni', 'nu', 'ok', 'ol', 'po', 'se', 'si', 've', 'vi','ŭa','aŭ','ĉe','ĝi','ŝi','ĉu']
@@ -312,7 +317,15 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                     continue
                 elif isinstance(i[1], int) or (isinstance(i[1], str) and i[1].isdigit()):
                     replacement_priority_by_length = int(i[1])
-                Replaced_String = safe_replace(i[0], temporary_replacements_list_final).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
+                # 設定JSONの語幹: 注釈版(word_anno)が「語幹全体を1ユニットとして持つ」場合のみ採用
+                # (固有名詞の偽友グロス回避。複数片に分節する語はsafe_replaceの語根単位グロスを優先し、
+                #  word_annoの旧分節による上書き退行=alten→al/ten 等を防ぐ)
+                _stem_ns = i[0].replace('/', '')
+                _wa = word_anno_nosl.get(_stem_ns) if word_anno_nosl is not None else None
+                if _wa is not None and len(_wa) == 1 and _wa[0][0].replace('/', '') == _stem_ns:
+                    Replaced_String = build_ruby_from_anno(_wa).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
+                else:
+                    Replaced_String = safe_replace(i[0], temporary_replacements_list_final).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
                 if "ne" in i[2]:
                     pre_replacements_dict_3[esperanto_Word_before_replacement] = [Replaced_String, replacement_priority_by_length]
                     i[2].remove("ne")
@@ -327,7 +340,12 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                 if len(i[2]) >= 1:
                     for jj in i[2]:
                         j2 = jj.replace('/', '')
-                        j3 = safe_replace(jj, temporary_replacements_list_final).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
+                        # 純粋な文法語尾(o/oj/on/ojn/a/aj/an/ajn/e/en/n/j等)はリテラル付加
+                        # (通常名詞処理と整合。対格onが分数接尾辞-on-に誤マッチするのを防ぐ)
+                        if j2 in _GRAM_ENDINGS:
+                            j3 = j2
+                        else:
+                            j3 = safe_replace(jj, temporary_replacements_list_final).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
                         pre_replacements_dict_3[esperanto_Word_before_replacement + j2] = [Replaced_String + j3, replacement_priority_by_length + len(j2) * 10000]
                 else:
                     pre_replacements_dict_3[esperanto_Word_before_replacement] = [Replaced_String, replacement_priority_by_length]
@@ -390,9 +408,15 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
             pre_replacements_list_4.append((old, new, place_holder))
             pre_replacements_list_4.append((old.upper(), new.upper(), place_holder[:-1] + 'up$'))
             if old[0] == ' ':
-                pre_replacements_list_4.append((old[0] + old[1:].capitalize(), new[0] + capitalize_ruby_and_rt(new[1:]), place_holder[:-1] + 'cap$'))
+                cap_old = old[0] + old[1:].capitalize(); cap_new = new[0] + capitalize_ruby_and_rt(new[1:])
             else:
-                pre_replacements_list_4.append((old.capitalize(), capitalize_ruby_and_rt(new), place_holder[:-1] + 'cap$'))
+                cap_old = old.capitalize(); cap_new = capitalize_ruby_and_rt(new)
+            pre_replacements_list_4.append((cap_old, cap_new, place_holder[:-1] + 'cap$'))
+            # ハイフン複合の各部大文字変種(固有名詞 Abu-Dabi 等。実テキストはこの形)
+            if '-' in old.strip().strip('-'):
+                pc_old = _cap_after_hyphen(cap_old)
+                if pc_old != cap_old:
+                    pre_replacements_list_4.append((pc_old, _cap_after_hyphen(cap_new), place_holder[:-1] + 'pc$'))
     elif format_type in ('括弧(号)格式', '括弧(号)格式_汉字替换'):
         for old, new, place_holder in pre_replacements_list_3:
             pre_replacements_list_4.append((old, new, place_holder))
