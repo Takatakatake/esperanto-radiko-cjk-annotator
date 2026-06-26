@@ -83,7 +83,7 @@ st.write("---")
 #=================================================================
 selected_option = st.radio(
     "JSON 파일을 어떻게 하시겠습니까? (치환용 JSON 파일 불러오기)",
-    ("기본값 사용", "업로드하기")
+    ("기본값 사용", "한자화 버전(새 한자 배정) 사용", "업로드하기")
 )
 
 # Streamlit の折りたたみ (expander) でサンプルJSONのダウンロードを案内
@@ -117,6 +117,16 @@ if selected_option == "기본값 사용":
         st.success("기본 JSON을 성공적으로 불러왔습니다.")
     except Exception as e:
         st.error(f"JSON 파일 불러오기에 실패했습니다: {e}")
+        st.stop()
+elif selected_option == "한자화 버전(새 한자 배정) 사용":
+    kanji_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)_漢字化_新割当版.json"
+    try:
+        (replacements_final_list,
+         replacements_list_for_localized_string,
+         replacements_list_for_2char) = load_replacements_lists(kanji_json_path)
+        st.success("한자화 버전 JSON(새 한자 배정)을 성공적으로 불러왔습니다. 에스페란토가 한자(루비=어근)로 변환됩니다.")
+    except Exception as e:
+        st.error(f"한자화 버전 JSON 불러오기에 실패했습니다: {e}")
         st.stop()
 else:
     uploaded_file = st.file_uploader("JSON 파일을 업로드하십시오 (합병된 3개 JSON 파일).json 형식", type="json")

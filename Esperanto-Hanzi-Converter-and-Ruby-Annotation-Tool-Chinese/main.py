@@ -79,7 +79,7 @@ st.write("---")
 # --------------------------------------------------------------------
 selected_option = st.radio(
     "请选择替换规则 JSON 文件的读取方式：",
-    ("使用默认 JSON", "上传 JSON 文件")
+    ("使用默认 JSON", "使用汉字化版(新汉字分配)", "上传 JSON 文件")
 )
 
 # 在折叠框中提供一个示例 JSON 文件可下载
@@ -105,6 +105,14 @@ if selected_option == "使用默认 JSON":
         st.success("成功读取默认 JSON 文件。")
     except Exception as e:
         st.error(f"读取默认 JSON 文件时出错: {e}")
+        st.stop()
+elif selected_option == "使用汉字化版(新汉字分配)":
+    kanji_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)_漢字化_新割当版.json"
+    try:
+        replacements_final_list, replacements_list_for_localized_string, replacements_list_for_2char = load_replacements_lists(kanji_json_path)
+        st.success("成功读取汉字化版 JSON(新汉字分配)。世界语将转换为汉字(注音=词根)。")
+    except Exception as e:
+        st.error(f"读取汉字化版 JSON 时出错: {e}")
         st.stop()
 else:
     uploaded_file = st.file_uploader("请上传 JSON 文件 (合并3个JSON文件).json 格式", type="json")

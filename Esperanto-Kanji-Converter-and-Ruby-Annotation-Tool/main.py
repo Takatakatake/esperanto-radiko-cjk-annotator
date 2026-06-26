@@ -68,7 +68,7 @@ st.write("---")
 # 1) JSONファイル (置換ルール) をロードする (デフォルト or アップロード)
 selected_option = st.radio(
     "JSONファイルをどうしますか？ (置換用JSONファイルの読み込み)",
-    ("デフォルトを使用する", "アップロードする")
+    ("デフォルトを使用する", "漢字化版(新漢字割り当て)を使用する", "アップロードする")
 )
 
 
@@ -96,6 +96,14 @@ if selected_option == "デフォルトを使用する":
         st.success("デフォルトJSONの読み込みに成功しました。")
     except Exception as e:
         st.error(f"JSONファイルの読み込みに失敗: {e}")
+        st.stop()
+elif selected_option == "漢字化版(新漢字割り当て)を使用する":
+    kanji_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)_漢字化_新割当版.json"
+    try:
+        replacements_final_list, replacements_list_for_localized_string, replacements_list_for_2char = load_replacements_lists(kanji_json_path)
+        st.success("漢字化版JSON(新漢字割り当て)の読み込みに成功しました。エスペラント文が漢字(ルビ=語根)に変換されます。")
+    except Exception as e:
+        st.error(f"漢字化版JSONの読み込みに失敗: {e}")
         st.stop()
 else:
     uploaded_file = st.file_uploader("JSONファイルをアップロード (合并3个JSON文件).json 形式)", type="json")
