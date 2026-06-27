@@ -394,6 +394,51 @@ st.write("### 최종 치환용 JSON 파일 만들기(버튼)")
 
 if st.button("치환용 JSON 파일 생성하기"):
     with st.spinner("치환용 JSON 파일 생성 중... 잠시만 기다려 주십시오."):
+        # === 高精度generate()版 (gen_replacement由来の改善を搭載) =========================
+        # word_anno(JCK日中韓注釈マスター由来の文脈グロス)、文法語尾のリテラル付加、
+        # ハイフン複合の各部大文字化、複数対格 -ojn/-ajn 生成 を反映し高精度JSONを生成。
+        import os as _os
+        import esp_generation_module as _egm
+        _DATA = "./Appの运行に使用する各类文件"
+        def _is_default(_c):
+            _s = str(_c)
+            return ("デフォルト" in _s) or ("默认" in _s) or ("기본값" in _s)
+        def _resolve_csv():
+            if _is_default(csv_choice):
+                return csv_path_default
+            _p = _os.path.join(_DATA, "_uploaded_csv_tmp.csv")
+            CSV_data_imported.to_csv(_p, index=False, encoding="utf-8")
+            return _p
+        def _resolve_json(_choice, _default_path, _data, _name):
+            if _is_default(_choice):
+                return _default_path
+            _p = _os.path.join(_DATA, _name)
+            with open(_p, "w", encoding="utf-8") as _f:
+                json.dump(_data, _f, ensure_ascii=False)
+            return _p
+        _csv = _resolve_csv()
+        _settings = _resolve_json(json_choice, json_path_default, custom_stemming_setting_list, "_uploaded_settings_tmp.json")
+        _user = _resolve_json(json_choice2, json_path_default2, user_replacement_item_setting_list, "_uploaded_user_tmp.json")
+        _estem = _os.path.join(_DATA, "PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json")
+        _roots = _os.path.join(_DATA, "世界语全部词根_约11137个_202501.txt")
+        _word_anno = None
+        _wa = _os.path.join(_DATA, "word_anno.json")
+        if _is_default(csv_choice) and "汉字替换" not in format_type and _os.path.exists(_wa):
+            with open(_wa, encoding="utf-8") as _f:
+                _word_anno = json.load(_f)
+        combined_data = _egm.generate(".", _DATA, _csv, _settings, _user, _estem, _roots,
+                                      format_type, word_anno=_word_anno,
+                                      use_parallel=use_parallel, num_processes=int(num_processes))
+        download_data = json.dumps(combined_data, ensure_ascii=False, indent=2)
+        st.success("置換リストの生成が完了しました！（高精度版）")
+        st.download_button(
+            label="Download 最终的な替换用リスト(列表)(合并3个JSON文件)",
+            data=download_data,
+            file_name="最终的な替换用リスト(列表)(合并3个JSON文件).json",
+            mime='application/json'
+        )
+        st.stop()  # 以降の旧インライン生成ロジックは上記generate()版に置換済(温存・到達しない)
+        # =============================================================================
         with open("./Appの运行に使用する各类文件/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
