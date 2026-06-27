@@ -22,6 +22,7 @@ SKIP = {"tiu","tio","tia","tie","kiu","kio","kia","kie","ĉiu","ĉio","iu","io",
 _culp = OUT + r"\tier11_culprits.json"
 if os.path.exists(lp(_culp)):
     SKIP |= set(json.load(open(lp(_culp), encoding="utf-8")))
+# 注釈ルビ=コーパスHTML準拠で国際語一体保持(全候補強制)。漢字化のみKANJI_DECOMPOSEでgold分解。
 def is_verb(g):
     return bool(re.search(r'(する|える|いる|きる|ぐ|ぶ|つ|ねる|べる|てる)$', g)) or g.startswith("(を)") or g.startswith("(に)")
 

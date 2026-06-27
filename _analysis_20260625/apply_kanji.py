@@ -29,10 +29,15 @@ STEM=r"\世界语单词词根分解方法の使用者自定义设置.json"; USER
 with open(lp(OUT+r"\word_kanji.json"),encoding='utf-8') as f: word_kanji=json.load(f)
 print(f"word_kanji {len(word_kanji)}語形 / FMT={FMT}")
 
-# 漢字化「偽分解」: ルビ用に一体化強制した語根のうち、漢字マスターで未対応だが
-# 部分語根に漢字がある語(esperant=esper望/ant在)は、漢字モードでは強制を外して
-# 偽分解し漢字を割り当てる(ユーザー方針)。ルビ側(apply_confirmed)は一体のまま不変。
+# 漢字化「偽分解」(ユーザー方針: 注釈ルビ=コーパス準拠で一体, 漢字=マスター準拠で分解)。
+# ルビ用に一体化強制した国際語のうち、マスターgold語根分解辞書が分解する語
+# (psikologi→psik/o/logi, agresiv→agres/iv, esperant→esper/ant 等)は、
+# 漢字モードでは強制を外して偽分解し、マスター漢字割り当てを各語根に適用する。
+# ルビ側(apply_confirmed)は一体のまま不変(独立生成)。
 KANJI_DECOMPOSE = {"esperant"}
+_grv = OUT + r"\gold_revert_roots.json"   # マスターgoldが分解する国際語根(51)
+if os.path.exists(lp(_grv)):
+    KANJI_DECOMPOSE |= set(json.load(open(lp(_grv), encoding="utf-8")))
 
 def _kanji_settings(DATA):
     """漢字用設定: KANJI_DECOMPOSEの一体化強制を除去した一時設定を作り、パスを返す。"""

@@ -27,6 +27,8 @@ ROOTS = ["ideologi","ekologi","ideogram","antibiotik","pseudonim","ŝang","austr
          "telefon","efektiv","karakteriz","mir","kiran"]  # vereベンチ由来の国際/語根過分解
 # uk/um(2文字, -um-接尾辞/minimumo等を侵食) と ocel(グロス無) は除外
 OUT = BASE + r"\_analysis_20260625\out"
+# 注釈ルビ=コーパスHTML準拠で国際語は一体保持(全ROOTS強制)。
+# 漢字化のみ apply_kanji の KANJI_DECOMPOSE で gold分解(psik/o/logi等)に委ねる(ユーザー方針)。
 
 # 1) word_anno_ja に注入(冪等: バックアップ→既存読込→更新)
 wa_path = OUT + r"\word_anno_ja.json"
