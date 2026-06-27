@@ -1,0 +1,522 @@
+[
+ {
+  "w": "antaj",
+  "target": "ant/aj"
+ },
+ {
+  "w": "ado",
+  "target": "ad/o"
+ },
+ {
+  "w": "ita",
+  "target": "it/a"
+ },
+ {
+  "w": "facilaĵojn",
+  "target": "facil/aĵ/ojn"
+ },
+ {
+  "w": "adon",
+  "target": "ad/on"
+ },
+ {
+  "w": "ejo",
+  "target": "ej/o"
+ },
+ {
+  "w": "aĵoj",
+  "target": "aĵ/oj"
+ },
+ {
+  "w": "facilaĵon",
+  "target": "facil/aĵ/on"
+ },
+ {
+  "w": "ene",
+  "target": "en/e"
+ },
+ {
+  "w": "uzo",
+  "target": "uz/o"
+ },
+ {
+  "w": "eto",
+  "target": "et/o"
+ },
+ {
+  "w": "antoj",
+  "target": "ant/oj"
+ },
+ {
+  "w": "ilo",
+  "target": "il/o"
+ },
+ {
+  "w": "anoj",
+  "target": "an/oj"
+ },
+ {
+  "w": "iĝo",
+  "target": "iĝ/o"
+ },
+ {
+  "w": "ata",
+  "target": "at/a"
+ },
+ {
+  "w": "eco",
+  "target": "ec/o"
+ },
+ {
+  "w": "enoj",
+  "target": "en/oj"
+ },
+ {
+  "w": "iga",
+  "target": "ig/a"
+ },
+ {
+  "w": "into",
+  "target": "int/o"
+ },
+ {
+  "w": "vortuzaj",
+  "target": "vort/uz/aj"
+ },
+ {
+  "w": "male",
+  "target": "mal/e"
+ },
+ {
+  "w": "igo",
+  "target": "ig/o"
+ },
+ {
+  "w": "isto",
+  "target": "ist/o"
+ },
+ {
+  "w": "aĵo",
+  "target": "aĵ/o"
+ },
+ {
+  "w": "ista",
+  "target": "ist/a"
+ },
+ {
+  "w": "ino",
+  "target": "in/o"
+ },
+ {
+  "w": "file",
+  "target": "fil/e"
+ },
+ {
+  "w": "dua",
+  "target": "du/a"
+ },
+ {
+  "w": "ito",
+  "target": "it/o"
+ },
+ {
+  "w": "igon",
+  "target": "ig/on"
+ },
+ {
+  "w": "ina",
+  "target": "in/a"
+ },
+ {
+  "w": "amo",
+  "target": "am/o"
+ },
+ {
+  "w": "aĵon",
+  "target": "aĵ/on"
+ },
+ {
+  "w": "ŝuojn",
+  "target": "ŝu/ojn"
+ },
+ {
+  "w": "sana",
+  "target": "san/a"
+ },
+ {
+  "w": "amon",
+  "target": "am/on"
+ },
+ {
+  "w": "sole",
+  "target": "sol/e"
+ },
+ {
+  "w": "econ",
+  "target": "ec/on"
+ },
+ {
+  "w": "etojn",
+  "target": "et/ojn"
+ },
+ {
+  "w": "ŝin",
+  "target": "ŝi/n"
+ },
+ {
+  "w": "ame",
+  "target": "am/e"
+ },
+ {
+  "w": "anto",
+  "target": "ant/o"
+ },
+ {
+  "w": "ilon",
+  "target": "il/on"
+ },
+ {
+  "w": "uloj",
+  "target": "ul/oj"
+ },
+ {
+  "w": "aĝan",
+  "target": "aĝ/an"
+ },
+ {
+  "w": "ulojn",
+  "target": "ul/ojn"
+ },
+ {
+  "w": "itaj",
+  "target": "it/aj"
+ },
+ {
+  "w": "iĝon",
+  "target": "iĝ/on"
+ },
+ {
+  "w": "argentan",
+  "target": "argent/an"
+ },
+ {
+  "w": "ovo",
+  "target": "ov/o"
+ },
+ {
+  "w": "istoj",
+  "target": "ist/oj"
+ },
+ {
+  "w": "oro",
+  "target": "or/o"
+ },
+ {
+  "w": "ulo",
+  "target": "ul/o"
+ },
+ {
+  "w": "ante",
+  "target": "ant/e"
+ },
+ {
+  "w": "aro",
+  "target": "ar/o"
+ },
+ {
+  "w": "inoj",
+  "target": "in/oj"
+ },
+ {
+  "w": "aĵojn",
+  "target": "aĵ/ojn"
+ },
+ {
+  "w": "noblega",
+  "target": "nobl/eg/a"
+ },
+ {
+  "w": "ilojn",
+  "target": "il/ojn"
+ },
+ {
+  "w": "duan",
+  "target": "du/an"
+ },
+ {
+  "w": "teren",
+  "target": "ter/en"
+ },
+ {
+  "w": "ora",
+  "target": "or/a"
+ },
+ {
+  "w": "ige",
+  "target": "ig/e"
+ },
+ {
+  "w": "inta",
+  "target": "int/a"
+ },
+ {
+  "w": "inte",
+  "target": "int/e"
+ },
+ {
+  "w": "ŝia",
+  "target": "ŝi/a"
+ },
+ {
+  "w": "tiraĵo",
+  "target": "tir/aĵ/o"
+ },
+ {
+  "w": "etos",
+  "target": "et/os"
+ },
+ {
+  "w": "ados",
+  "target": "ad/os"
+ },
+ {
+  "w": "iro",
+  "target": "ir/o"
+ },
+ {
+  "w": "adi",
+  "target": "ad/i"
+ },
+ {
+  "w": "aĵejo",
+  "target": "aĵ/ej/o"
+ },
+ {
+  "w": "egan",
+  "target": "eg/an"
+ },
+ {
+  "w": "ataj",
+  "target": "at/aj"
+ },
+ {
+  "w": "onta",
+  "target": "ont/a"
+ },
+ {
+  "w": "paroleti",
+  "target": "parol/et/i"
+ },
+ {
+  "w": "anta",
+  "target": "ant/a"
+ },
+ {
+  "w": "ego",
+  "target": "eg/o"
+ },
+ {
+  "w": "ege",
+  "target": "eg/e"
+ },
+ {
+  "w": "etaĵo",
+  "target": "et/aĵ/o"
+ },
+ {
+  "w": "eta",
+  "target": "et/a"
+ },
+ {
+  "w": "ocelo",
+  "target": "o/cel/o"
+ },
+ {
+  "w": "ema",
+  "target": "em/a"
+ },
+ {
+  "w": "larĝanime",
+  "target": "larĝ/anim/e"
+ },
+ {
+  "w": "ŝuoj",
+  "target": "ŝu/oj"
+ },
+ {
+  "w": "temis",
+  "target": "tem/is"
+ },
+ {
+  "w": "grafio",
+  "target": "graf/io"
+ },
+ {
+  "w": "ona",
+  "target": "on/a"
+ },
+ {
+  "w": "parolebla",
+  "target": "parol/ebl/a"
+ },
+ {
+  "w": "adaj",
+  "target": "ad/aj"
+ },
+ {
+  "w": "havaj",
+  "target": "hav/aj"
+ },
+ {
+  "w": "antojn",
+  "target": "ant/ojn"
+ },
+ {
+  "w": "anojn",
+  "target": "an/ojn"
+ },
+ {
+  "w": "tenis",
+  "target": "ten/is"
+ },
+ {
+  "w": "ite",
+  "target": "it/e"
+ },
+ {
+  "w": "itojn",
+  "target": "it/ojn"
+ },
+ {
+  "w": "ejoj",
+  "target": "ej/oj"
+ },
+ {
+  "w": "istojn",
+  "target": "ist/ojn"
+ },
+ {
+  "w": "due",
+  "target": "du/e"
+ },
+ {
+  "w": "faŝismo",
+  "target": "faŝ/ism/o"
+ },
+ {
+  "w": "iteco",
+  "target": "it/ec/o"
+ },
+ {
+  "w": "ada",
+  "target": "ad/a"
+ },
+ {
+  "w": "ega",
+  "target": "eg/a"
+ },
+ {
+  "w": "amas",
+  "target": "am/as"
+ },
+ {
+  "w": "mizeraĵoj",
+  "target": "mizer/aĵ/oj"
+ },
+ {
+  "w": "ontaj",
+  "target": "ont/aj"
+ },
+ {
+  "w": "ŝango",
+  "target": "ŝang/o"
+ },
+ {
+  "w": "pere",
+  "target": "per/e"
+ },
+ {
+  "w": "iloj",
+  "target": "il/oj"
+ },
+ {
+  "w": "ana",
+  "target": "an/a"
+ },
+ {
+  "w": "ate",
+  "target": "at/e"
+ },
+ {
+  "w": "insulego",
+  "target": "insul/eg/o"
+ },
+ {
+  "w": "intoj",
+  "target": "int/oj"
+ },
+ {
+  "w": "finlernintoj",
+  "target": "fin/lern/int/oj"
+ },
+ {
+  "w": "ero",
+  "target": "er/o"
+ },
+ {
+  "w": "dio",
+  "target": "di/o"
+ },
+ {
+  "w": "dion",
+  "target": "di/on"
+ },
+ {
+  "w": "agon",
+  "target": "ag/on"
+ },
+ {
+  "w": "puraĵon",
+  "target": "pur/aĵ/on"
+ },
+ {
+  "w": "adoj",
+  "target": "ad/oj"
+ },
+ {
+  "w": "otaj",
+  "target": "ot/aj"
+ },
+ {
+  "w": "kulturaĵo",
+  "target": "kultur/aĵ/o"
+ },
+ {
+  "w": "intaj",
+  "target": "int/aj"
+ },
+ {
+  "w": "itoj",
+  "target": "it/oj"
+ },
+ {
+  "w": "ara",
+  "target": "ar/a"
+ },
+ {
+  "w": "aĝaj",
+  "target": "aĝ/aj"
+ },
+ {
+  "w": "kore",
+  "target": "kor/e"
+ },
+ {
+  "w": "principe",
+  "target": "princip/e"
+ },
+ {
+  "w": "kreskigante",
+  "target": "kresk/ig/ant/e"
+ }
+]

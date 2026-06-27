@@ -174,13 +174,13 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
     for i, j in pre_replacements_dict_2.items():
         if j[2] == 20000:
             if "名词" in j[1]:
-                for k in ["o", "on", 'oj']:
+                for k in ["o", "on", 'oj', 'ojn']:
                     if not i + k in pre_replacements_dict_2:
                         pre_replacements_dict_3[' ' + i + k] = [' ' + j[0] + k, j[2] + (len(k) + 1) * 10000 - 5000]
                     else:
                         pass
             if "形容词" in j[1]:
-                for k in ["a", "aj", 'an']:
+                for k in ["a", "aj", 'an', 'ajn']:
                     if not i + k in pre_replacements_dict_2:
                         pre_replacements_dict_3[' ' + i + k] = [' ' + j[0] + k, j[2] + (len(k) + 1) * 10000 - 5000]
                     else:
@@ -210,14 +210,14 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                 pre_replacements_dict_3[i] = [j[0], j[2]]
             if j[2] == 60000 or j[2] == 50000 or j[2] == 40000 or j[2] == 30000:
                 if "名词" in j[1]:
-                    for k in ["o", "on", 'oj']:
+                    for k in ["o", "on", 'oj', 'ojn']:
                         if not i + k in pre_replacements_dict_2:
                             pre_replacements_dict_3[i + k] = [j[0] + k, j[2] + len(k) * 10000 - 3000]
                         elif j[0] + k != pre_replacements_dict_2[i + k][0]:
                             pre_replacements_dict_3[i + k] = [j[0] + k, j[2] + len(k) * 10000 - 3000]
                             unchangeable_after_creation_list.append(i + k)
                 if "形容词" in j[1]:
-                    for k in ["a", "aj", 'an']:
+                    for k in ["a", "aj", 'an', 'ajn']:
                         if not i + k in pre_replacements_dict_2:
                             pre_replacements_dict_3[i + k] = [j[0] + k, j[2] + len(k) * 10000 - 3000]
                         elif j[0] + k != pre_replacements_dict_2[i + k][0]:
