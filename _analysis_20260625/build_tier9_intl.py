@@ -52,6 +52,21 @@ for r in PRON_ACC_NOUN:
         wa.pop(k, None); removed_wa.append(k)
 json.dump(wa, open(lp(wa_path), "w", encoding="utf-8"), ensure_ascii=False)
 print(f"word_anno_ja 対格名詞除去: {removed_wa}")
+
+# ZH/KO も同様に対格名詞stemを除去(裸対格を分解・-o名詞はper-root CSVグロスで保持)。
+# 国際語グロスはZH/KOはper-root CSV由来(psikologi=心理学 等)で安定するため注入不要。
+for lang in ["zh", "ko"]:
+    wp = OUT + f"\\word_anno_{lang}.json"
+    if not os.path.exists(lp(wp)): continue
+    bk = wp + ".bak_preTier9"
+    if not os.path.exists(lp(bk)): shutil.copy2(lp(wp), lp(bk))
+    w2 = json.load(open(lp(bk), encoding="utf-8"))
+    rm = []
+    for r in PRON_ACC_NOUN:
+        for k in [k for k in list(w2.keys()) if k.replace('/', '') == r]:
+            w2.pop(k, None); rm.append(k)
+    json.dump(w2, open(lp(wp), "w", encoding="utf-8"), ensure_ascii=False)
+    print(f"word_anno_{lang} 対格名詞除去: {rm}")
 print(f"word_anno_ja 注入 {len(added)}語:")
 for r, g in added.items(): print(f"  {r:12s}-> {g}")
 

@@ -37,9 +37,9 @@ print(f"tier11 採用 {len(picked)} 語根 (len>=4, グロス有), 計{sum(p['co
 # word_anno_ja 注入(冪等: .bak_preTier9 から国際語tier9注入を再現した状態が必要なので、
 #   ここでは現行word_anno_ja を直接更新。tier11専用バックアップで冪等化)
 wa_path = OUT + r"\word_anno_ja.json"
-bak = wa_path + ".bak_preTier11"
-if not os.path.exists(lp(bak)): shutil.copy2(lp(wa_path), lp(bak))
-wa = json.load(open(lp(bak), encoding="utf-8"))   # 常にtier11適用前(=tier9注入済)から
+# build_tier9実行後の現word_anno_jaに積む(inject/sibling除去は冪等)。
+# 必ず build_tier9_intl.py → build_tier11.py の順で実行すること。
+wa = json.load(open(lp(wa_path), encoding="utf-8"))
 for p in picked:
     r = p['root']
     for k in [k for k in list(wa.keys()) if k.replace('/', '') == r and k != r]:
