@@ -29,13 +29,29 @@ STEM=r"\世界语单词词根分解方法の使用者自定义设置.json"; USER
 with open(lp(OUT+r"\word_kanji.json"),encoding='utf-8') as f: word_kanji=json.load(f)
 print(f"word_kanji {len(word_kanji)}語形 / FMT={FMT}")
 
+# 漢字化「偽分解」: ルビ用に一体化強制した語根のうち、漢字マスターで未対応だが
+# 部分語根に漢字がある語(esperant=esper望/ant在)は、漢字モードでは強制を外して
+# 偽分解し漢字を割り当てる(ユーザー方針)。ルビ側(apply_confirmed)は一体のまま不変。
+KANJI_DECOMPOSE = {"esperant"}
+
+def _kanji_settings(DATA):
+    """漢字用設定: KANJI_DECOMPOSEの一体化強制を除去した一時設定を作り、パスを返す。"""
+    with open(lp(DATA+STEM), encoding="utf-8") as f: sett = json.load(f)
+    sett = [e for e in sett if not (isinstance(e, list) and len(e) >= 1
+            and str(e[0]).replace('/', '') in KANJI_DECOMPOSE)]
+    tmp = DATA + r"\_kanji_settings_tmp.json"
+    with open(lp(tmp), "w", encoding="utf-8") as g: json.dump(sett, g, ensure_ascii=False)
+    return tmp
+
 def process(key, write):
     d=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\Appの运行に使用する各类文件"
     # 新漢字CSVを配置
     if write:
         shutil.copy2(lp(KANJI_CSV_SRC), lp(DATA+KANJI_CSV_NAME))
     csvp = DATA+KANJI_CSV_NAME if (write and os.path.exists(lp(DATA+KANJI_CSV_NAME))) else KANJI_CSV_SRC
-    combined=generate(APPDIR,DATA,csvp,DATA+STEM,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_kanji)
+    kset = _kanji_settings(DATA)
+    combined=generate(APPDIR,DATA,csvp,kset,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_kanji)
+    os.remove(lp(kset))
     if write:
         with open(lp(DATA+KANJI_JSON_NAME),'w',encoding='utf-8') as g: json.dump(combined,g,ensure_ascii=False,indent=2)
         print(f"  [{key}] 漢字化JSON書込: ...{KANJI_JSON_NAME}")
