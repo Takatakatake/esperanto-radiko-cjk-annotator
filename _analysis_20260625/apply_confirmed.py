@@ -13,6 +13,14 @@ from gen_replacement import generate, lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 OUT = BASE + r"\_analysis_20260625\out"
 GOLD = r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt"
+if not os.path.exists(lp(GOLD)):
+    # WSL不通時はDownloadsバックアップのgoldを使用
+    import glob
+    _bks=sorted(glob.glob(os.path.join(os.environ['USERPROFILE'],'Downloads','エスペラント_backup_*')))
+    for _b in reversed(_bks):
+        _g=os.path.join(_b,'語根分解辞書_WSL','世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt')
+        if os.path.exists(lp(_g)): GOLD=_g; break
+    print(f"[gold] WSL不通→backup使用: {GOLD[:60]}...")
 TIER=int(sys.argv[1]); WRITE='--write' in sys.argv
 def _norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
 
