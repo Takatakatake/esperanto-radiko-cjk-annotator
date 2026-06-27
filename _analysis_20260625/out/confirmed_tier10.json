@@ -1,0 +1,34 @@
+[
+ {
+  "w": "min",
+  "target": "mi/n"
+ },
+ {
+  "w": "vin",
+  "target": "vi/n"
+ },
+ {
+  "w": "lin",
+  "target": "li/n"
+ },
+ {
+  "w": "ĝin",
+  "target": "ĝi/n"
+ },
+ {
+  "w": "nin",
+  "target": "ni/n"
+ },
+ {
+  "w": "sin",
+  "target": "si/n"
+ },
+ {
+  "w": "tion",
+  "target": "tio/n"
+ },
+ {
+  "w": "ion",
+  "target": "io/n"
+ }
+]

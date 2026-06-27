@@ -44,3 +44,9 @@ _analysis_20260625/out/*.bak*
 Thumbs.db
 
 # 退避した元アプリ.git はDownloads配下(リポジトリ外)
+
+# 京大エス研HTMLコーパス(60MB, ベンチ参照用・ローカル保持)
+京大エス研html文書＿Github/
+# ベンチ実行ログ
+_analysis_20260625/out/corpus_run.txt
+_analysis_20260625/out/vere_run.txt
