@@ -40,9 +40,9 @@ APPS={'JP':(r"\Esperanto-Kanji-Ruby-JA"),
       'KO':(r"\Esperanto-Kanji-Ruby-KO")}
 LATIN=re.compile(r'[a-zĉĝĥĵŝŭ]', re.I)
 for key,d in APPS.items():
-    APPDIR=BASE+d; DATA=APPDIR+r"\Appの运行に使用する各类文件"; sys.path.insert(0,APPDIR)
+    APPDIR=BASE+d; DATA=APPDIR+r"\app_data"; sys.path.insert(0,APPDIR)
     import importlib, esp_text_replacement_module as m; importlib.reload(m)
-    dd=json.load(open(lp(DATA+r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"),encoding='utf-8'))
+    dd=json.load(open(lp(DATA+r"\置換リスト_ルビ.json"),encoding='utf-8'))
     GL=dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
     G2=dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
     GG=dd["全域替换用のリスト(列表)型配列(replacements_final_list)"]

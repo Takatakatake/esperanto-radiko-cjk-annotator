@@ -50,11 +50,11 @@ APPS={'JP':(r"\Esperanto-Kanji-Ruby-JA",r"\エスペラント語根-日本語訳
       'ZH':(r"\Esperanto-Kanji-Ruby-ZH",r"\世界语词根-中文注释对应列表.csv",'zh'),
       'KO':(r"\Esperanto-Kanji-Ruby-KO",r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv",'ko')}
 ESTEM=r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
-ROOTS=r"\世界语全部词根_约11137个_202501.txt"; FINAL=r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
+ROOTS=r"\世界语全部词根_约11137个_202501.txt"; FINAL=r"\置換リスト_ルビ.json"
 STEM=r"\世界语单词词根分解方法の使用者自定义设置.json"; USER=r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"; FMT='HTML格式_Ruby文字_大小调整'
 
 def process(key, write):
-    d,csvn,lang=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\Appの运行に使用する各类文件"
+    d,csvn,lang=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\app_data"
     sp=DATA+STEM
     with open(lp(sp),encoding='utf-8') as f: settings=json.load(f)
     # 競合除去: nosl が remove_nosl に含まれる既存3要素エントリを削除
@@ -86,7 +86,7 @@ def process(key, write):
 combined=process('JP', False)
 sys.path.insert(0, BASE+APPS['JP'][0])
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
-DATA=BASE+APPS['JP'][0]+r"\Appの运行に使用する各类文件"
+DATA=BASE+APPS['JP'][0]+r"\app_data"
 ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
 g_=combined["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l_=combined["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c_=combined["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 def segplain(w): return re.sub(r'<[^>]+>','',orch(w,ps,l_,pl,g_,c_,FMT))

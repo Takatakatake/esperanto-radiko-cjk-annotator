@@ -10,7 +10,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
 
 APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
-DATA = APP + r"\Appの运行に使用する各类文件"
+DATA = APP + r"\app_data"
 OUT = BASE + r"\_analysis_20260625\out"
 sys.path.insert(0, APP)
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement, import_placeholders as imp2
@@ -33,7 +33,7 @@ print("新ソースでJSON生成中...")
 new_combined = build(NEW_ESTEM, NEW_ROOTS)
 
 # 新JSON保存
-with open(lp(OUT + r"\new_最终的な替换用リスト(列表)(合并3个JSON文件).json"), "w", encoding="utf-8") as g:
+with open(lp(OUT + r"\new_置換リスト_ルビ.json"), "w", encoding="utf-8") as g:
     json.dump(new_combined, g, ensure_ascii=False, indent=2)
 
 for name, c in [("旧", old_combined), ("新", new_combined)]:

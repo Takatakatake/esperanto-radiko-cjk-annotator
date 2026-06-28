@@ -26,7 +26,7 @@ APPS = {
 }
 ESTEM_NAME = r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 ROOTS_NAME = r"\世界语全部词根_约11137个_202501.txt"
-FINAL_NAME = r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
+FINAL_NAME = r"\置換リスト_ルビ.json"
 STEM_NAME  = r"\世界语单词词根分解方法の使用者自定义设置.json"
 USER_NAME  = r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 
@@ -43,7 +43,7 @@ def main():
     key, mode = sys.argv[1], sys.argv[2]
     app = APPS[key]
     APPDIR = BASE + app['dir']
-    DATA = APPDIR + r"\Appの运行に使用する各类文件"
+    DATA = APPDIR + r"\app_data"
     csv = DATA + app['csv']
     stem = DATA + STEM_NAME
     user = DATA + USER_NAME

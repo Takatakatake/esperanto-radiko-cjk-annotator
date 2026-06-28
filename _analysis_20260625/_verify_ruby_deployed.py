@@ -9,7 +9,7 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 FMT = 'HTML格式_Ruby文字_大小调整'
-RUBY = r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
+RUBY = r"\置換リスト_ルビ.json"
 APPS = {'JP': r"\Esperanto-Kanji-Ruby-JA",
         'ZH': r"\Esperanto-Kanji-Ruby-ZH",
         'KO': r"\Esperanto-Kanji-Ruby-KO"}
@@ -22,7 +22,7 @@ def pairs(html):
         out.append((m.group(1), m.group(2))); pos=m.end()
     return out
 for key, d in APPS.items():
-    DATA = BASE + d + r"\Appの运行に使用する各类文件"
+    DATA = BASE + d + r"\app_data"
     print(f"=== {key} ===")
     sys.path.insert(0, BASE + d)
     import importlib; m = importlib.import_module('esp_text_replacement_module')

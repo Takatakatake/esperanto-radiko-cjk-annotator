@@ -75,7 +75,7 @@ selected_option = st.radio(
 
 with st.expander("**サンプルJSON(置換用JSONファイル)**"):
     # サンプルファイルのパス
-    json_file_path = './Appの运行に使用する各类文件/最终的な替换用リスト(列表)(合并3个JSON文件).json'
+    json_file_path = './app_data/置換リスト_ルビ.json'
     # JSONファイルを読み込んでダウンロードボタンを生成
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
@@ -90,7 +90,7 @@ replacements_list_for_localized_string: List[Tuple[str, str, str]] = []
 replacements_list_for_2char: List[Tuple[str, str, str]] = []
 
 if selected_option == "デフォルトを使用する":
-    default_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)(合并3个JSON文件).json"
+    default_json_path = "./app_data/置換リスト_ルビ.json"
     try:
         replacements_final_list, replacements_list_for_localized_string, replacements_list_for_2char = load_replacements_lists(default_json_path)
         st.success("デフォルトJSONの読み込みに成功しました。")
@@ -98,7 +98,7 @@ if selected_option == "デフォルトを使用する":
         st.error(f"JSONファイルの読み込みに失敗: {e}")
         st.stop()
 elif selected_option == "漢字化版(新漢字割り当て)を使用する":
-    kanji_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)_漢字化_新割当版.json"
+    kanji_json_path = "./app_data/置換リスト_漢字.json"
     try:
         replacements_final_list, replacements_list_for_localized_string, replacements_list_for_2char = load_replacements_lists(kanji_json_path)
         st.success("漢字化版JSON(新漢字割り当て)の読み込みに成功しました。エスペラント文が漢字(ルビ=語根)に変換されます。")
@@ -126,10 +126,10 @@ else:
 
 # 2) placeholders (占位符) の読み込み
 placeholders_for_skipping_replacements: List[str] = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt'
+    './app_data/占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt'
 )
 placeholders_for_localized_replacement: List[str] = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt'
+    './app_data/占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt'
 )
 
 st.write("---")

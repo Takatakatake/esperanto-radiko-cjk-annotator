@@ -11,8 +11,8 @@ def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip(
 CORP = BASE + r"\京大エス研html文書＿Github"
 appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
-DATA = appdir + r"\Appの运行に使用する各类文件"
-JSONP = lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json")
+DATA = appdir + r"\app_data"
+JSONP = lp(DATA + r"\置換リスト_ルビ.json")
 ps = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
 pl = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
 

@@ -11,7 +11,7 @@ APPS = {'JP': r"\Esperanto-Kanji-Ruby-JA",
         'KO': r"\Esperanto-Kanji-Ruby-KO"}
 WORDS = ['tereno', 'akrediti', 'anemia', 'malsanulejo']
 for key, d in APPS.items():
-    APPDIR = BASE + d; DATA = APPDIR + r"\Appの运行に使用する各类文件"
+    APPDIR = BASE + d; DATA = APPDIR + r"\app_data"
     sys.path.insert(0, APPDIR)
     import importlib, esp_text_replacement_module as m
     importlib.reload(m)
@@ -23,8 +23,8 @@ for key, d in APPS.items():
                 dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"],
                 dd["全域替换用のリスト(列表)型配列(replacements_final_list)"])
     try:
-        RB = load(r"\最终的な替换用リスト(列表)(合并3个JSON文件).json")
-        KJ = load(r"\最终的な替换用リスト(列表)_漢字化_新割当版.json")
+        RB = load(r"\置換リスト_ルビ.json")
+        KJ = load(r"\置換リスト_漢字.json")
     except Exception as e:
         print(f"[{key}] JSON読込失敗: {e}"); continue
     def roots(t, JS, fmt):

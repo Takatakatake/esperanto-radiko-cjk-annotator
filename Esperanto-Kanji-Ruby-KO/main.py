@@ -89,7 +89,7 @@ selected_option = st.radio(
 # Streamlit の折りたたみ (expander) でサンプルJSONのダウンロードを案内
 with st.expander("샘플 JSON(치환용 JSON 파일)"):
     # サンプルファイルのパス
-    json_file_path = './Appの运行に使用する各类文件/最终的な替换用リスト(列表)(合并3个JSON文件).json'
+    json_file_path = './app_data/置換リスト_ルビ.json'
     # JSONファイルを読み込んでダウンロードボタンを生成
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
@@ -109,7 +109,7 @@ replacements_list_for_2char: List[Tuple[str, str, str]] = []
 
 # JSONファイルの読み込み方を分岐
 if selected_option == "기본값 사용":
-    default_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)(合并3个JSON文件).json"
+    default_json_path = "./app_data/置換リスト_ルビ.json"
     try:
         (replacements_final_list,
          replacements_list_for_localized_string,
@@ -119,7 +119,7 @@ if selected_option == "기본값 사용":
         st.error(f"JSON 파일 불러오기에 실패했습니다: {e}")
         st.stop()
 elif selected_option == "한자화 버전(새 한자 배정) 사용":
-    kanji_json_path = "./Appの运行に使用する各类文件/最终的な替换用リスト(列表)_漢字化_新割当版.json"
+    kanji_json_path = "./app_data/置換リスト_漢字.json"
     try:
         (replacements_final_list,
          replacements_list_for_localized_string,
@@ -152,10 +152,10 @@ else:
 #    %...% や @...@ で囲った文字列を守るために使用する文字列群を読み込む
 #=================================================================
 placeholders_for_skipping_replacements: List[str] = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt'
+    './app_data/占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt'
 )
 placeholders_for_localized_replacement: List[str] = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt'
+    './app_data/占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt'
 )
 
 st.write("---")

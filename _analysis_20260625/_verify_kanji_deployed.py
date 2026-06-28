@@ -5,13 +5,13 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 FMT = 'HTML格式_Ruby文字_大小调整_汉字替换'
-KJ = r"\最终的な替换用リスト(列表)_漢字化_新割当版.json"
+KJ = r"\置換リスト_漢字.json"
 APPS = {'JP': r"\Esperanto-Kanji-Ruby-JA",
         'ZH': r"\Esperanto-Kanji-Ruby-ZH",
         'KO': r"\Esperanto-Kanji-Ruby-KO"}
 TEXT = "La juna studento lernas Esperanton kaj diligente legas multajn interesajn librojn pri scienco kaj historio en la universitato."
 for key, d in APPS.items():
-    DATA = BASE + d + r"\Appの运行に使用する各类文件"
+    DATA = BASE + d + r"\app_data"
     path = DATA + KJ
     print(f"=== {key}  ({os.path.getsize(lp(path))//1024//1024}MB) ===")
     sys.path.insert(0, BASE + d)

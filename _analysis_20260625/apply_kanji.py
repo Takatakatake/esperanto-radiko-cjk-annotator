@@ -17,7 +17,7 @@ WRITE = '--write' in sys.argv
 FMT = 'HTML格式_Ruby文字_大小调整_汉字替换'   # 漢字本文・語根ルビ
 KANJI_CSV_SRC = OUT + r"\kanji_root.csv"
 KANJI_CSV_NAME = r"\世界语词根-汉字对应列表_参照2新割当_7791.csv"
-KANJI_JSON_NAME = r"\最终的な替换用リスト(列表)_漢字化_新割当版.json"
+KANJI_JSON_NAME = r"\置換リスト_漢字.json"
 
 APPS={'JP':r"\Esperanto-Kanji-Ruby-JA",
       'ZH':r"\Esperanto-Kanji-Ruby-ZH",
@@ -49,7 +49,7 @@ def _kanji_settings(DATA):
     return tmp
 
 def process(key, write):
-    d=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\Appの运行に使用する各类文件"
+    d=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\app_data"
     # 新漢字CSVを配置
     if write:
         shutil.copy2(lp(KANJI_CSV_SRC), lp(DATA+KANJI_CSV_NAME))
@@ -68,7 +68,7 @@ def process(key, write):
 combined=process('JP', WRITE)
 sys.path.insert(0, BASE+APPS['JP'])
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
-DATA=BASE+APPS['JP']+r"\Appの运行に使用する各类文件"
+DATA=BASE+APPS['JP']+r"\app_data"
 ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
 g_=combined["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l_=combined["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c_=combined["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 def seg(t): return orch(t,ps,l_,pl,g_,c_,FMT)

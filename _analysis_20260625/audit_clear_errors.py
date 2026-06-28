@@ -12,7 +12,7 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
-DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\Appの运行に使用する各类文件"
+DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\app_data"
 GOLD = r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt"
 CSV2890 = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\30_重要語彙CSV_日中対照_2890語\2890 Gravaj Esperantaj Vortoj kun Signifoj en la Japana, Ĉina.csv"
 OUT = BASE + r"\_analysis_20260625\out"
@@ -25,7 +25,7 @@ with open(lp(CSV2890),encoding='utf-8-sig') as f:
     for row in csv.reader(f):
         if row and row[0] and row[0]!='Esperanto': tier1.add(norm(row[0].strip().strip('-')).replace('/',''))
 
-with open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"),encoding='utf-8') as f: d=json.load(f)
+with open(lp(DATA + r"\置換リスト_ルビ.json"),encoding='utf-8') as f: d=json.load(f)
 app_map={e[0]: e[1] for e in d["全域替换用のリスト(列表)型配列(replacements_final_list)"]}
 GL=d["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; G2=d["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 GG=d["全域替换用のリスト(列表)型配列(replacements_final_list)"]

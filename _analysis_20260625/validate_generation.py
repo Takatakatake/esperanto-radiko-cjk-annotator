@@ -11,7 +11,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
 
 APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
-DATA = APP + r"\Appの运行に使用する各类文件"
+DATA = APP + r"\app_data"
 
 combined = generate(
     app_module_dir=APP,
@@ -24,7 +24,7 @@ combined = generate(
     format_type='HTML格式_Ruby文字_大小调整',
 )
 
-with open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding="utf-8") as f:
+with open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8") as f:
     existing = json.load(f)
 
 KEYS = [

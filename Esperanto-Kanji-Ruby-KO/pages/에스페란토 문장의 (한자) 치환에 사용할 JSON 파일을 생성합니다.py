@@ -112,20 +112,20 @@ standalone_2char_roots=['al', 'ci', 'da', 'de', 'di', 'do', 'du', 'el', 'en', 'f
 # それら placeholder文字列を外部ファイルから大量に読み込みます。
 #=====================================================================
 imported_placeholders_for_global_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
+    './app_data/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
 )
 imported_placeholders_for_2char_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
+    './app_data/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
 )
 imported_placeholders_for_local_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
+    './app_data/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
 )
 
 #=====================================================================
 # 事前に作成した "Unicode_BMP全范围文字幅(宽)_Arial16.json" を読み込み
 # (ルビサイズの調整等で使う想定。文字幅に応じた改行などができる)
 #=====================================================================
-with open("./Appの运行に使用する各类文件/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
+with open("./app_data/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
     char_widths_dict = json.load(fp)
 
 #=====================================================================
@@ -167,7 +167,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     이 형식에 맞춰 CSV를 작성하여 업로드하면
     치환용 JSON 파일이 생성됩니다.
     """)
-    file_path0 = './Appの运行に使用する各类文件/에스페란토 어근-한국어 번역 루비 대응 목록.csv'
+    file_path0 = './app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="샘플 CSV1(에스페란토 어근-한국어 번역 루비 대응 목록) 다운로드",
@@ -180,7 +180,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     **샘플 CSV2(에스페란토 어근-한자 대응 목록·知乎상의 에스페란토 사용자인 Mingeo씨의 한자화안)**
     에스페란토 어근과 한자를 대응시킨 CSV 파일입니다.
     """)
-    file_path0 = './Appの运行に使用する各类文件/Mingeo先生版 世界语词根-汉字对应列表.csv'
+    file_path0 = './app_data/Mingeo先生版 世界语词根-汉字对应列表.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="샘플 CSV2(에스페란토 어근-한자 대응 목록·Mingeo) 다운로드",
@@ -193,7 +193,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     **샘플 CSV3(에스페란토 어근-한자 대응 목록)**
     에스페란토 어근과 한자를 대응시킨 CSV 파일입니다.
     """)
-    file_path0 = './Appの运行に使用する各类文件/世界语词根-汉字对应列表.csv'
+    file_path0 = './app_data/世界语词根-汉字对应列表.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="샘플 CSV3(에스페란토 어근-한자 대응 목록) 다운로드",
@@ -209,7 +209,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     세부적으로 설정할 수 있습니다. 샘플 파일 내의 주석을 참고하세요.
     ( 예: `["am", "dflt", ["verbo_s1"]]` 와 같은 형태 )
     """)
-    json_file_path = './Appの运行に使用する各类文件/世界语单词词根分解方法の使用者自定义设置.json'
+    json_file_path = './app_data/世界语单词词根分解方法の使用者自定义设置.json'
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
             label="샘플 JSON1(에스페란토 단어 어근 분해법 사용자 설정) 다운로드",
@@ -224,7 +224,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     독자적인 한자 또는 특수 표기를 할당할 때 사용합니다.
     (기본적으로는 CSV 파일 편집 + 어근 분해법 JSON만으로 충분한 경우가 많음)
     """)
-    json_file_path2 = './Appの运行に使用する各类文件/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json'
+    json_file_path2 = './app_data/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json'
     with open(json_file_path2, "rb") as file_json:
         btn_json = st.download_button(
             label="샘플 JSON2(치환 후 문자열의 사용자 설정) 다운로드",
@@ -238,7 +238,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     **용도**: 번역 루비를 추가할 에스페란토 어근을 커스터마이징하고 싶을 때 등 유용합니다.
     에스페란토-한국어 기본사전을 바탕으로 한 “학습 레벨” 등을 병기해두었습니다.
     """)
-    with open('./Appの运行に使用する各类文件/에스페란토 어근-일본어 번역 루비 대응 목록 (습득 레벨 포함).xlsx', "rb") as file:
+    with open('./app_data/에스페란토 어근-일본어 번역 루비 대응 목록 (습득 레벨 포함).xlsx', "rb") as file:
         st.download_button(
             label="샘플 Excel1(에스페란토 어근-한국어 번역 루비 대응 목록(학습 레벨 포함)) 다운로드",
             data=file,
@@ -252,7 +252,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     franca, germana, araba, hindia, pola, vjetnama, indonezia) kiel priskribaj tradukoj
     aŭ rubioj al ĉirkaŭ 4736 Esperanto-radikoj.
     """)
-    with open('./Appの运行に使用する各类文件/Kreado de rubenaj komentoj en 14 lingvoj (日本語, 中文, 한국어, English, Русский, español, italiano, français, Deutsch, العربية, हिन्दी, polski, Tiếng Việt, Bahasa Indonesia) respondaj al listo de 4736 Esperant.xlsx', "rb") as file:
+    with open('./app_data/Kreado de rubenaj komentoj en 14 lingvoj (日本語, 中文, 한국어, English, Русский, español, italiano, français, Deutsch, العربية, हिन्दी, polski, Tiếng Việt, Bahasa Indonesia) respondaj al listo de 4736 Esperant.xlsx', "rb") as file:
         st.download_button(
             label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
             data=file,
@@ -297,7 +297,7 @@ st.markdown(
 )
 
 csv_choice = st.radio("CSV 파일을 어떻게 하시겠습니까?", ("업로드하기", "기본값 사용"))
-csv_path_default = "./Appの运行に使用する各类文件/에스페란토 어근-한국어 번역 루비 대응 목록.csv"
+csv_path_default = "./app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv"
 
 CSV_data_imported = None
 
@@ -337,7 +337,7 @@ st.markdown("""
 """)
 
 json_choice = st.radio("1. 에스페란토 단어의 어근 분해법을 추가 지정하는 JSON 파일은 어떻게 하시겠습니까?", ("업로드하기", "기본값 사용"))
-json_path_default = "./Appの运行に使用する各类文件/世界语单词词根分解方法の使用者自定义设置.json"
+json_path_default = "./app_data/世界语单词词根分解方法の使用者自定义设置.json"
 custom_stemming_setting_list = None
 
 if json_choice == "업로드하기":
@@ -358,7 +358,7 @@ elif json_choice == "기본값 사용":
         st.stop()
 
 json_choice2 = st.radio("치환 후 문자열을 추가 지정하는 JSON 파일은 어떻게 하시겠습니까?", ("업로드하기", "기본값 사용"))
-json_path_default2 = "./Appの运行に使用する各类文件/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
+json_path_default2 = "./app_data/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 user_replacement_item_setting_list = None
 
 if json_choice2 == "업로드하기":
@@ -399,7 +399,7 @@ if st.button("치환용 JSON 파일 생성하기"):
         # ハイフン複合の各部大文字化、複数対格 -ojn/-ajn 生成 を反映し高精度JSONを生成。
         import os as _os
         import esp_generation_module as _egm
-        _DATA = "./Appの运行に使用する各类文件"
+        _DATA = "./app_data"
         def _is_default(_c):
             _s = str(_c)
             return ("デフォルト" in _s) or ("默认" in _s) or ("기본값" in _s)
@@ -434,16 +434,16 @@ if st.button("치환용 JSON 파일 생성하기"):
         st.download_button(
             label="Download 最终的な替换用リスト(列表)(合并3个JSON文件)",
             data=download_data,
-            file_name="最终的な替换用リスト(列表)(合并3个JSON文件).json",
+            file_name="置換リスト_ルビ.json",
             mime='application/json'
         )
         st.stop()  # 以降の旧インライン生成ロジックは上記generate()版に置換済(温存・到達しない)
         # =============================================================================
-        with open("./Appの运行に使用する各类文件/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
+        with open("./app_data/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
         temporary_replacements_dict = {}
-        with open("./Appの运行に使用する各类文件/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
+        with open("./app_data/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
             E_roots = file.readlines()
             for E_root in E_roots:
                 E_root = E_root.strip()
@@ -1069,6 +1069,6 @@ if st.button("치환용 JSON 파일 생성하기"):
         st.download_button(
             label="Download 最终的な替换用リスト(列表)(合并3个JSON文件)",
             data=download_data,
-            file_name="最终的な替换用リスト(列表)(合并3个JSON文件).json",
+            file_name="置換リスト_ルビ.json",
             mime='application/json'
         )

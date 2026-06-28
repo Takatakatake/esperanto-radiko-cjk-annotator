@@ -11,8 +11,8 @@ def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip(
 HTML = sys.argv[1] if len(sys.argv) > 1 else "vere_aux_fantazie.html"
 appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
-DATA = appdir + r"\Appの运行に使用する各类文件"
-dd = json.load(open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding="utf-8"))
+DATA = appdir + r"\app_data"
+dd = json.load(open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8"))
 GL = dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
 G2 = dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 GG = dd["全域替换用のリスト(列表)型配列(replacements_final_list)"]

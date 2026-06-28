@@ -14,7 +14,7 @@ def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip(
 WRITE = '--write' in sys.argv
 CORP = BASE + r"\京大エス研html文書＿Github"
 APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"
-DATA = APPDIR + r"\Appの运行に使用する各类文件"
+DATA = APPDIR + r"\app_data"
 STEM = DATA + r"\世界语单词词根分解方法の使用者自定义设置.json"
 ESTEMP = glob.glob(DATA + r"\PEJVO*E_stem*list*.json")[0]
 ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"
@@ -90,7 +90,7 @@ combined = generate(APPDIR, DATA, CSV, tmp, USER, ESTEMP, ROOTS, FMT, word_anno=
 if WRITE:
     shutil.copy2(lp(STEM), lp(bak))
     json.dump(settings, open(lp(STEM), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    final = DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
+    final = DATA + r"\置換リスト_ルビ.json"
     ftmp = final + ".tmp"
     json.dump(combined, open(lp(ftmp), 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
     json.load(open(lp(ftmp), encoding='utf-8'))  # 検証

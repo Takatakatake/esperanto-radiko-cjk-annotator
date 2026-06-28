@@ -5,7 +5,7 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
 APP = BASE + r"\Esperanto-Kanji-Ruby-KO"
-DATA = APP + r"\Appの运行に使用する各类文件"
+DATA = APP + r"\app_data"
 combined = generate(APP, DATA,
     DATA + r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv",
     DATA + r"\世界语单词词根分解方法の使用者自定义设置.json",
@@ -13,7 +13,7 @@ combined = generate(APP, DATA,
     DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json",
     DATA + r"\世界语全部词根_约11137个_202501.txt",
     'HTML格式_Ruby文字_大小调整')
-with open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding='utf-8') as f:
+with open(lp(DATA + r"\置換リスト_ルビ.json"), encoding='utf-8') as f:
     ex = json.load(f)
 K = "全域替换用のリスト(列表)型配列(replacements_final_list)"
 mm = {e[0]: e[1] for e in combined[K]}

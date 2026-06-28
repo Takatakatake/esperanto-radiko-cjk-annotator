@@ -15,7 +15,7 @@ APPS = {'JP':r"\Esperanto-Kanji-Ruby-JA",
         'ZH':r"\Esperanto-Kanji-Ruby-ZH",
         'KO':r"\Esperanto-Kanji-Ruby-KO"}
 key = sys.argv[1] if len(sys.argv)>1 else 'JP'
-APPDIR = BASE + APPS[key]; DATA = APPDIR + r"\Appの运行に使用する各类文件"
+APPDIR = BASE + APPS[key]; DATA = APPDIR + r"\app_data"
 with open(lp(DATA + r"\Unicode_BMP全范围文字幅(宽)_Arial16.json"), encoding='utf-8') as f:
     CW = json.load(f)
 def width(t): return sum(CW.get(c,8) for c in t)
@@ -33,7 +33,7 @@ def expected_class(rb, rt_nobr):
     return 'XXL_L'
 BROK = {'XXXS_S':2,'XXS_S':1}  # それ以外は0
 RUBY = re.compile(r'<ruby>(.*?)<rt class="([^"]*)">(.*?)</rt></ruby>')
-with open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding='utf-8') as f:
+with open(lp(DATA + r"\置換リスト_ルビ.json"), encoding='utf-8') as f:
     data = json.load(f)
 g = data["全域替换用のリスト(列表)型配列(replacements_final_list)"]
 total=0; cls_bad=0; br_bad=0; ex_cls=[]; ex_br=[]

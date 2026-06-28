@@ -7,9 +7,9 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625"); from gen_replacement import lp
 APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, APPDIR)
 import esp_text_replacement_module as m
-DATA = APPDIR + r"\Appの运行に使用する各类文件"
+DATA = APPDIR + r"\app_data"
 FMT = 'HTML格式_Ruby文字_大小调整'
-dd = json.load(open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding="utf-8"))
+dd = json.load(open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8"))
 GL = dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
 G2 = dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 GG = dd["全域替换用のリスト(列表)型配列(replacements_final_list)"]

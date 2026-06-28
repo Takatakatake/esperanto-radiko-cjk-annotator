@@ -10,7 +10,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625"); sys.path.insert(0, BASE + r"\
 from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
-DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\Appの运行に使用する各类文件"
+DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\app_data"
 GOLD = r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt"
 CSV2890 = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\30_重要語彙CSV_日中対照_2890語\2890 Gravaj Esperantaj Vortoj kun Signifoj en la Japana, Ĉina.csv"
 FMT='HTML格式_Ruby文字_大小调整'; PEJVO_MAX=44104
@@ -25,7 +25,7 @@ with open(lp(CSV2890),encoding='utf-8-sig') as f:
             tier1.add(norm(row[0].strip().strip('-')).replace('/',''))
 
 # 置換リスト
-with open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"),encoding='utf-8') as f: d=json.load(f)
+with open(lp(DATA + r"\置換リスト_ルビ.json"),encoding='utf-8') as f: d=json.load(f)
 g=d["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l=d["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c=d["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
 

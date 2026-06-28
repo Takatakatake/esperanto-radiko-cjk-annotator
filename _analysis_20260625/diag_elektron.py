@@ -5,7 +5,7 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from extract_lib import lp
 OUT = BASE + r"\_analysis_20260625\out"
-DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\Appの运行に使用する各类文件"
+DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\app_data"
 ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 wa = json.load(open(lp(OUT + r"\word_anno_ja.json"), encoding="utf-8"))
 wn = {}
@@ -21,7 +21,7 @@ print("--- E_stem entries nosl startswith 'komandit' ---")
 for x in es:
     if x[0].replace('/','').startswith('komandit'): print("  ", x)
 print("--- 最終JSONで 'elektrono' を含むkeyの値 ---")
-fj = json.load(open(lp(DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"), encoding="utf-8"))
+fj = json.load(open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8"))
 for e in fj["全域替换用のリスト(列表)型配列(replacements_final_list)"]:
     if e[0]=='elektrono':
         print("  ", e[0], '->', e[1][:120]); break

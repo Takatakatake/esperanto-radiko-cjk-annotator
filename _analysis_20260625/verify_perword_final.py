@@ -7,9 +7,9 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 sys.path.insert(0, BASE + r"\Esperanto-Kanji-Ruby-JA")
 from gen_replacement import lp
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement, import_placeholders as imp
-APP = BASE + r"\Esperanto-Kanji-Ruby-JA"; DATA = APP + r"\Appの运行に使用する各类文件"
-FINAL = DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
-ORIG = sorted(glob.glob(lp(DATA + r"\_backup_before_decomp_update_*\最终的な替换用リスト(列表)(合并3个JSON文件).json")))[0]
+APP = BASE + r"\Esperanto-Kanji-Ruby-JA"; DATA = APP + r"\app_data"
+FINAL = DATA + r"\置換リスト_ルビ.json"
+ORIG = sorted(glob.glob(lp(DATA + r"\_backup_before_decomp_update_*\置換リスト_ルビ.json")))[0]
 FMT='HTML格式_Ruby文字_大小调整'
 def load(p):
     with open(lp(p),encoding='utf-8') as f: d=json.load(f)

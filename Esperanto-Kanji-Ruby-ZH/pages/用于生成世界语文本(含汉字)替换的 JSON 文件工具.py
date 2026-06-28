@@ -207,20 +207,20 @@ standalone_2char_roots = [
 # 下面从文件中读取相应的 placeholder，用于全域替换、二字词根替换、局部替换
 # ---------------------------------------------------------------------
 imported_placeholders_for_global_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
+    './app_data/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
 )
 imported_placeholders_for_2char_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
+    './app_data/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
 )
 imported_placeholders_for_local_replacement = import_placeholders(
-    './Appの运行に使用する各类文件/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
+    './app_data/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
 )
 
 # ---------------------------------------------------------------------
 # 从 JSON 读取“Unicode_BMP全范围字符宽度(Arial16).json”
 # 用于在生成 HTML 形式时，针对文字宽度做精细化处理
 # ---------------------------------------------------------------------
-with open("./Appの运行に使用する各类文件/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
+with open("./app_data/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
     char_widths_dict = json.load(fp)
 
 # ---------------------------------------------------------------------
@@ -261,7 +261,7 @@ with st.expander("示例文件列表（点击下载）"):
     **示例 CSV 1：世界语词根 - 中文含义对应表**  
     （如果您有自定义的 CSV，该 CSV 应有两列，第一列是世界语词根，第二列是对应的翻译/汉字/含义）
     """)
-    file_path0 = './Appの运行に使用する各类文件/世界语词根-中文注释对应列表.csv'
+    file_path0 = './app_data/世界语词根-中文注释对应列表.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="下载示例 CSV 1（词根 → 中文/汉字）",
@@ -275,7 +275,7 @@ with st.expander("示例文件列表（点击下载）"):
     **示例 CSV 2：世界语词根 - 汉字 对应表（知乎 Mingeo 方案）**  
     可作为参考，用杨先生(Mingeo)的汉字化思路。
     """)
-    file_path0 = './Appの运行に使用する各类文件/Mingeo先生版 世界语词根-汉字对应列表.csv'
+    file_path0 = './app_data/Mingeo先生版 世界语词根-汉字对应列表.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="下载示例 CSV 2（知乎 Mingeo 版本）",
@@ -288,7 +288,7 @@ with st.expander("示例文件列表（点击下载）"):
     st.markdown("""
     **示例 CSV 3：世界语词根 - 汉字 对应表**  
     """)
-    file_path0 = './Appの运行に使用する各类文件/世界语词根-汉字对应列表.csv'
+    file_path0 = './app_data/世界语词根-汉字对应列表.csv'
     with open(file_path0, "rb") as file:
         btn = st.download_button(
             label="下载示例 CSV 3（词根 - 汉字）",
@@ -303,7 +303,7 @@ with st.expander("示例文件列表（点击下载）"):
     例如决定某些词是否算作动词，并自动添加(as,is,os)等后缀等。  
     文件内有详细注释，请结合实际需要进行编辑。
     """)
-    json_file_path = './Appの运行に使用する各类文件/世界语单词词根分解方法の使用者自定义设置.json'
+    json_file_path = './app_data/世界语单词词根分解方法の使用者自定义设置.json'
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
             label="下载示例 JSON 1（自定义词根分解）",
@@ -318,7 +318,7 @@ with st.expander("示例文件列表（点击下载）"):
     除了 CSV + 词根分解 JSON，大多数情况不需要此额外文件。  
     仅在极少数场合，用于指定某些特殊词的特殊汉字。
     """)
-    json_file_path2 = './Appの运行に使用する各类文件/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json'
+    json_file_path2 = './app_data/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json'
     with open(json_file_path2, "rb") as file_json:
         btn_json = st.download_button(
             label="下载示例 JSON 2（自定义替换后文字）",
@@ -332,7 +332,7 @@ with st.expander("示例文件列表（点击下载）"):
     **示例 Excel：世界语词根 - 日语 词义+掌握等级  
     （仅作参考，帮助您确定常用/非常用词根，非必需文件）**
     """)
-    with open('./Appの运行に使用する各类文件/エスペラント語根-日本語訳ルビ対応リスト(習得レベル付き).xlsx', "rb") as file:
+    with open('./app_data/エスペラント語根-日本語訳ルビ対応リスト(習得レベル付き).xlsx', "rb") as file:
         st.download_button(
             label="下载示例 Excel（带日语词义、掌握等级）",
             data=file,
@@ -346,7 +346,7 @@ with st.expander("示例文件列表（点击下载）"):
     franca, germana, araba, hindia, pola, vjetnama, indonezia) kiel priskribaj tradukoj
     aŭ rubioj al ĉirkaŭ 4736 Esperanto-radikoj.
     """)
-    with open('./Appの运行に使用する各类文件/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx', "rb") as file:
+    with open('./app_data/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx', "rb") as file:
         st.download_button(
             label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
             data=file,
@@ -398,7 +398,7 @@ st.markdown("""
 """)
 
 csv_choice = st.radio("CSV 文件来源：", ("上传 CSV", "使用默认 CSV"))
-csv_path_default = "./Appの运行に使用する各类文件/世界语词根-中文注释对应列表.csv"
+csv_path_default = "./app_data/世界语词根-中文注释对应列表.csv"
 
 CSV_data_imported = None
 
@@ -442,7 +442,7 @@ st.markdown("""
 
 # 1) 词根分解法 JSON
 json_choice = st.radio("1) 词根分解法 JSON 文件：", ("上传 JSON", "使用默认 JSON"))
-json_path_default = "./Appの运行に使用する各类文件/世界语单词词根分解方法の使用者自定义设置.json"
+json_path_default = "./app_data/世界语单词词根分解方法の使用者自定义设置.json"
 custom_stemming_setting_list = None
 
 if json_choice == "上传 JSON":
@@ -464,7 +464,7 @@ elif json_choice == "使用默认 JSON":
 
 # 2) 自定义替换后文字 JSON
 json_choice2 = st.radio("2) 替换后文字自定义 JSON 文件：", ("上传 JSON", "使用默认 JSON"))
-json_path_default2 = "./Appの运行に使用する各类文件/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
+json_path_default2 = "./app_data/替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 user_replacement_item_setting_list = None
 
 if json_choice2 == "上传 JSON":
@@ -511,7 +511,7 @@ if st.button("生成并下载替换用 JSON 文件"):
         # 並列処理(Streamlit Cloud用)もオプションで使用可。
         import os as _os
         import esp_generation_module as _egm
-        _DATA = "./Appの运行に使用する各类文件"
+        _DATA = "./app_data"
         def _resolve_csv():
             if csv_choice == "デフォルトを使用する" or "默认" in str(csv_choice) or "使用默认" in str(csv_choice):
                 return csv_path_default
@@ -545,7 +545,7 @@ if st.button("生成并下载替换用 JSON 文件"):
         st.download_button(
             label="Download 最终的な替换用リスト(列表)(合并3个JSON文件)",
             data=download_data,
-            file_name="最终的な替换用リスト(列表)(合并3个JSON文件).json",
+            file_name="置換リスト_ルビ.json",
             mime='application/json'
         )
         st.stop()  # 以降の旧インライン生成ロジックは上記generate()版に置換済(温存・到達しない)
@@ -554,12 +554,12 @@ if st.button("生成并下载替换用 JSON 文件"):
         # 1) 读取“大规模世界语词典/列表” (E_stem_with_Part_Of_Speech_list)
         #    内含约数万条世界语单词(含词性信息)
         # -------------------------------------------------------------
-        with open("./Appの运行に使用する各类文件/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
+        with open("./app_data/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
         # 先读取“世界语全部词根(约11137个)”到一个临时字典
         temporary_replacements_dict = {}
-        with open("./Appの运行に使用する各类文件/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
+        with open("./app_data/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
             E_roots = file.readlines()
             for E_root in E_roots:
                 E_root = E_root.strip()
