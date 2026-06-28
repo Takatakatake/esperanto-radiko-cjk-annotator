@@ -8,7 +8,7 @@ from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
 HTML = sys.argv[1] if len(sys.argv) > 1 else "Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
-appdir = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"
 sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
 DATA = appdir + r"\Appの运行に使用する各类文件"

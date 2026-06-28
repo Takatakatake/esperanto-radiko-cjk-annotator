@@ -5,7 +5,7 @@ import re, sys, json, os
 sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625"); from gen_replacement import lp
-APPDIR = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"; sys.path.insert(0, APPDIR)
+APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, APPDIR)
 import esp_text_replacement_module as m
 DATA = APPDIR + r"\Appの运行に使用する各类文件"
 FMT = 'HTML格式_Ruby文字_大小调整'

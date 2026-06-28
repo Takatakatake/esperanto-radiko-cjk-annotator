@@ -6,9 +6,9 @@ sys.stdout.reconfigure(encoding='utf-8')
 sys.path.insert(0, '.')
 from gen_replacement import lp
 BASE = r'd:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624'
-APPS = {'JP': r'\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool',
-        'ZH': r'\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese',
-        'KO': r'\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean'}
+APPS = {'JP': r'\Esperanto-Kanji-Ruby-JA',
+        'ZH': r'\Esperanto-Kanji-Ruby-ZH',
+        'KO': r'\Esperanto-Kanji-Ruby-KO'}
 key = sys.argv[1]
 d = APPS[key]
 sys.path.insert(0, BASE + d)

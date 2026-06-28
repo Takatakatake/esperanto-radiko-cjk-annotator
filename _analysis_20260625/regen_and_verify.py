@@ -9,7 +9,7 @@ BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
 
-APP = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APP + r"\Appの运行に使用する各类文件"
 OUT = BASE + r"\_analysis_20260625\out"
 sys.path.insert(0, APP)

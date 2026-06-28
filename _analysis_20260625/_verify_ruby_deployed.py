@@ -10,9 +10,9 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 FMT = 'HTML格式_Ruby文字_大小调整'
 RUBY = r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
-APPS = {'JP': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool",
-        'ZH': r"\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese",
-        'KO': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean"}
+APPS = {'JP': r"\Esperanto-Kanji-Ruby-JA",
+        'ZH': r"\Esperanto-Kanji-Ruby-ZH",
+        'KO': r"\Esperanto-Kanji-Ruby-KO"}
 TEXT = "La juna studento lernas Esperanton kaj diligente legas multajn interesajn librojn pri scienco kaj historio."
 def pairs(html):
     out=[]; pos=0

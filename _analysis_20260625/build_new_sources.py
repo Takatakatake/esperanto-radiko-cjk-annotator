@@ -18,7 +18,7 @@ OUTDIR = BASE + r"\_analysis_20260625\out"
 os.makedirs(OUTDIR, exist_ok=True)
 
 # 既存(比較用)
-APP = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APP + r"\Appの运行に使用する各类文件"
 OLD_ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 OLD_ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"

@@ -12,9 +12,9 @@ os.makedirs(dest_root, exist_ok=True)
 
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sources = [
-    ("app_JP_日本語版",   BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"),
-    ("app_ZH_中文版",     BASE + r"\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese"),
-    ("app_KO_韓国語版",   BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean"),
+    ("app_JP_日本語版",   BASE + r"\Esperanto-Kanji-Ruby-JA"),
+    ("app_ZH_中文版",     BASE + r"\Esperanto-Kanji-Ruby-ZH"),
+    ("app_KO_韓国語版",   BASE + r"\Esperanto-Kanji-Ruby-KO"),
     ("語根分解辞書_WSL",  r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619"),
     ("漢字割り当てリスト", r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621"),
 ]

@@ -13,7 +13,7 @@ FULL = re.compile(r"[̀-ͯʰ-˿ᴀ-ᶿ⁰-₟Ⱡ-Ɀ]")
 def fs(s): return FULL.sub("", s)
 OUT = BASE + r"\_analysis_20260625\out"
 INJ = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\漢字注入_学習者版_20260620.txt"
-APPDIR = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APPDIR + r"\Appの运行に使用する各类文件"
 FMT = 'HTML格式_Ruby文字_大小调整_汉字替换'
 ESTEM = r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"

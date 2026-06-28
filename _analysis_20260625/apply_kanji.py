@@ -19,9 +19,9 @@ KANJI_CSV_SRC = OUT + r"\kanji_root.csv"
 KANJI_CSV_NAME = r"\世界语词根-汉字对应列表_参照2新割当_7791.csv"
 KANJI_JSON_NAME = r"\最终的な替换用リスト(列表)_漢字化_新割当版.json"
 
-APPS={'JP':r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool",
-      'ZH':r"\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese",
-      'KO':r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean"}
+APPS={'JP':r"\Esperanto-Kanji-Ruby-JA",
+      'ZH':r"\Esperanto-Kanji-Ruby-ZH",
+      'KO':r"\Esperanto-Kanji-Ruby-KO"}
 ESTEM=r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 ROOTS=r"\世界语全部词根_约11137个_202501.txt"
 STEM=r"\世界语单词词根分解方法の使用者自定义设置.json"; USER=r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"

@@ -13,7 +13,7 @@ from extract_lib import hat_to_circumflex, replace_esperanto_chars
 def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
 WRITE = '--write' in sys.argv
 CORP = BASE + r"\京大エス研html文書＿Github"
-APPDIR = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APPDIR + r"\Appの运行に使用する各类文件"
 STEM = DATA + r"\世界语单词词根分解方法の使用者自定义设置.json"
 ESTEMP = glob.glob(DATA + r"\PEJVO*E_stem*list*.json")[0]

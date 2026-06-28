@@ -4,11 +4,11 @@ import json, sys, re, glob, random
 sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625")
-sys.path.insert(0, BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool")
+sys.path.insert(0, BASE + r"\Esperanto-Kanji-Ruby-JA")
 from gen_replacement import lp
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement, import_placeholders as imp
 
-APP = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APP + r"\Appの运行に使用する各类文件"
 FINAL = DATA + r"\最终的な替换用リスト(列表)(合并3个JSON文件).json"
 BK = glob.glob(lp(DATA + r"\_backup_before_decomp_update_*\最终的な替换用リスト(列表)(合并3个JSON文件).json"))

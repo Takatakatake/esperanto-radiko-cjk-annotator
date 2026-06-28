@@ -10,7 +10,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from extract_lib import lp, hat_to_circumflex, replace_esperanto_chars
 
 ANNO = r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416_日中韓注釈版_ドラフト.txt"
-APP = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"
+APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APP + r"\Appの运行に使用する各类文件"
 NEW_ROOTS = BASE + r"\_analysis_20260625\out\new_rootlist.txt"
 OUTDIR = BASE + r"\_analysis_20260625\out"

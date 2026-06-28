@@ -7,7 +7,7 @@ WSL ゴールドスタンダード (学習者版 20260416) の分解と比較し
 import json, sys, io, collections, re
 sys.stdout.reconfigure(encoding="utf-8")
 
-APP_DIR = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool\Appの运行に使用する各类文件"
+APP_DIR = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624\Esperanto-Kanji-Ruby-JA\Appの运行に使用する各类文件"
 ESTEM = APP_DIR + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 ROOTLIST = APP_DIR + r"\世界语全部词根_约11137个_202501.txt"
 

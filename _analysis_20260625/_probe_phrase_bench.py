@@ -11,7 +11,7 @@ def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip(
 INJ = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\漢字注入_学習者版_20260620.txt"
 FULL = re.compile(r"[̀-ͯʰ-˿ᴀ-ᶿ⁰-₟Ⱡ-Ɀ]")
 def fs(s): return FULL.sub("", s)
-appdir = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"; sys.path.insert(0, appdir)
+appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
 DATA = appdir + r"\Appの运行に使用する各类文件"
 dd = json.load(open(lp(DATA + r"\最终的な替换用リスト(列表)_漢字化_新割当版.json"), encoding="utf-8"))

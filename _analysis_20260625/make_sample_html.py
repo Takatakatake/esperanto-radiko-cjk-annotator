@@ -7,9 +7,9 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 FMT = 'HTML格式_Ruby文字_大小调整'
 APPS = {
- 'JP': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool",
- 'ZH': r"\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese",
- 'KO': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean",
+ 'JP': r"\Esperanto-Kanji-Ruby-JA",
+ 'ZH': r"\Esperanto-Kanji-Ruby-ZH",
+ 'KO': r"\Esperanto-Kanji-Ruby-KO",
 }
 DEMO = """Saluton, kara amiko! Mi lernas Esperanton kaj la internacia lingvo estas bona.
 La anestezio kaj la biologio kaj la zoologio estas sciencoj.

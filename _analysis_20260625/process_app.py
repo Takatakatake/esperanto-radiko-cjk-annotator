@@ -17,11 +17,11 @@ NEW_ROOTS = OUT + r"\new_rootlist.txt"
 FMT = 'HTML格式_Ruby文字_大小调整'
 
 APPS = {
- 'JP': {'dir': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool",
+ 'JP': {'dir': r"\Esperanto-Kanji-Ruby-JA",
         'csv': r"\エスペラント語根-日本語訳ルビ対応リスト.csv"},
- 'ZH': {'dir': r"\Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese",
+ 'ZH': {'dir': r"\Esperanto-Kanji-Ruby-ZH",
         'csv': r"\世界语词根-中文注释对应列表.csv"},
- 'KO': {'dir': r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean",
+ 'KO': {'dir': r"\Esperanto-Kanji-Ruby-KO",
         'csv': r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv"},
 }
 ESTEM_NAME = r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"

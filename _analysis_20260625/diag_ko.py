@@ -4,7 +4,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
-APP = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean"
+APP = BASE + r"\Esperanto-Kanji-Ruby-KO"
 DATA = APP + r"\Appの运行に使用する各类文件"
 combined = generate(APP, DATA,
     DATA + r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv",
