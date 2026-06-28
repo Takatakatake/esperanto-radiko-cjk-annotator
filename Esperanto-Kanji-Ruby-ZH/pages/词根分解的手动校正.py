@@ -142,8 +142,39 @@ else:
             st.rerun()
 
     st.download_button(
-        "下载校正列表(user_corrections.json)",
+        "⬇ 下载校正列表(user_corrections.json)",
         data=json.dumps(cors, ensure_ascii=False, indent=1).encode("utf-8"),
         file_name="user_corrections.json",
         mime="application/json",
     )
+
+# ============ 4) 读取校正文件（恢复 / 在3个应用间移植） ============
+st.header("4. 读取校正文件（备份恢复 / 在3个应用间共享）")
+st.markdown(
+    """
+    在此读取第 3 步下载的 `user_corrections.json`,即可**恢复**校正。
+
+    - **Streamlit Cloud 上校正会在重启后丢失**。请下载保存,需要时在此读取
+      (或 commit 到仓库后重新部署)以实现持久化。
+    - 读取时,各词根的译文/汉字会**用本应用的词典重新生成**,因此在日语版制作的校正
+      可直接移植到中文版・한국어版(仅沿用分解方式)。
+    """
+)
+up = st.file_uploader("选择 user_corrections.json", type="json", key="cor_upload")
+if up is not None:
+    try:
+        data = json.load(up)
+        decomps = [c.get("decomp") for c in data if isinstance(c, dict) and c.get("decomp")]
+        st.write(f"将读取的校正: **{len(decomps)} 条**  例: {', '.join(decomps[:8])}")
+        if st.button("⬆ 用此内容恢复（替换当前校正）"):
+            new = []
+            for d in decomps:
+                try:
+                    new.append(ov.build_correction(d, DATA))
+                except Exception:
+                    pass
+            ov.save_corrections(DATA, new)
+            st.success(f"已恢复 {len(new)} 条校正。")
+            st.rerun()
+    except Exception as e:
+        st.error(f"读取失败: {e}")

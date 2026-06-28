@@ -144,8 +144,39 @@ else:
             st.rerun()
 
     st.download_button(
-        "보정 목록(user_corrections.json) 다운로드",
+        "⬇ 보정 목록(user_corrections.json) 다운로드",
         data=json.dumps(cors, ensure_ascii=False, indent=1).encode("utf-8"),
         file_name="user_corrections.json",
         mime="application/json",
     )
+
+# ============ 4) 보정 파일 불러오기（복원 / 3개 앱 간 이식） ============
+st.header("4. 보정 파일 불러오기（백업 복원 / 3개 앱 간 공유）")
+st.markdown(
+    """
+    3.에서 다운로드한 `user_corrections.json` 을 여기서 불러오면 보정을 **복원**할 수 있습니다.
+
+    - **Streamlit Cloud 에서는 보정이 재시작 시 사라집니다**. 다운로드하여 보관하고 필요할 때
+      여기서 불러오거나(또는 저장소에 commit 후 재배포) 영구화할 수 있습니다.
+    - 불러올 때 각 어근의 번역/한자는 **이 앱의 사전으로 다시 생성**하므로, 일본어판에서 만든
+      보정을 중문판・한국어판으로 그대로 이식할 수 있습니다(분해 방식만 활용).
+    """
+)
+up = st.file_uploader("user_corrections.json 선택", type="json", key="cor_upload")
+if up is not None:
+    try:
+        data = json.load(up)
+        decomps = [c.get("decomp") for c in data if isinstance(c, dict) and c.get("decomp")]
+        st.write(f"불러올 보정: **{len(decomps)}건**  예: {', '.join(decomps[:8])}")
+        if st.button("⬆ 이 내용으로 복원（현재 보정을 교체）"):
+            new = []
+            for d in decomps:
+                try:
+                    new.append(ov.build_correction(d, DATA))
+                except Exception:
+                    pass
+            ov.save_corrections(DATA, new)
+            st.success(f"{len(new)}건의 보정을 복원했습니다.")
+            st.rerun()
+    except Exception as e:
+        st.error(f"불러오기 실패: {e}")

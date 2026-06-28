@@ -145,8 +145,39 @@ else:
             st.rerun()
 
     st.download_button(
-        "補正一覧(user_corrections.json)をダウンロード",
+        "⬇ 補正一覧(user_corrections.json)をダウンロード",
         data=json.dumps(cors, ensure_ascii=False, indent=1).encode("utf-8"),
         file_name="user_corrections.json",
         mime="application/json",
     )
+
+# ============ 4) 補正ファイルの読み込み（復元・3アプリ間で移植） ============
+st.header("4. 補正ファイルの読み込み（バックアップ復元 / 3アプリ間で共有）")
+st.markdown(
+    """
+    3. でダウンロードした `user_corrections.json` をここで読み込むと、補正を**復元**できます。
+
+    - **Streamlit Cloud では補正が再起動で消えます**。ダウンロードして保管し、必要なときに
+      ここで読み込む(または リポジトリに commit して再デプロイ)ことで恒久化できます。
+    - 読み込み時、各語根の訳・漢字は **このアプリの辞書で作り直す**ので、日本語版で作った補正を
+      中文版・한국어版へそのまま移植できます(分解だけを流用)。
+    """
+)
+up = st.file_uploader("user_corrections.json を選択", type="json", key="cor_upload")
+if up is not None:
+    try:
+        data = json.load(up)
+        decomps = [c.get("decomp") for c in data if isinstance(c, dict) and c.get("decomp")]
+        st.write(f"読み込む補正: **{len(decomps)} 件**  例: {', '.join(decomps[:8])}")
+        if st.button("⬆ この内容で復元（現在の補正を置き換え）"):
+            new = []
+            for d in decomps:
+                try:
+                    new.append(ov.build_correction(d, DATA))
+                except Exception:
+                    pass
+            ov.save_corrections(DATA, new)
+            st.success(f"{len(new)} 件の補正を復元しました。")
+            st.rerun()
+    except Exception as e:
+        st.error(f"読み込み失敗: {e}")
