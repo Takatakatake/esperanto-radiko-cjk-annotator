@@ -5,7 +5,7 @@
   - kanji_root.csv     : 語根 -> 最頻漢字  (per-root フォールバック)
 を構築。形式: head/with/slashes⟦漢字/語尾⟧:def
 """
-import re, sys, json, collections, csv
+import re, sys, json, collections, csv, os
 sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625")
@@ -60,8 +60,6 @@ with open(lp(INJ), encoding="utf-8") as f:
                 if len(r)>=2 and kj and not re.fullmatch(r'[a-zĉĝĥĵŝŭ!\-]+', kj):
                     root_kanji[r][kj]+=1
 
-with open(lp(OUT+r"\word_kanji.json"),"w",encoding="utf-8") as g:
-    json.dump(word_kanji,g,ensure_ascii=False)
 # per-root CSV: キュレーション済みマスター(_kanji_map_master.tsv)を権威ソースとして直接使用
 # (頻度由来はkaj→码等のアラインメント誤りが出るため。master形式: 種別\t語根\t漢字)
 MASTER = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\_kanji_map_master.tsv"
@@ -80,7 +78,25 @@ with open(lp(OUT+r"\kanji_root.csv"),"w",encoding="utf-8",newline="") as g:
     w=csv.writer(g)
     for r,kj in sorted(master_root.items()):
         w.writerow([r, kj])
-print(f"漢字注入版 行{n} 整合{ok}  word_kanji語形{len(word_kanji)}  master per-root漢字{len(master_root)}")
+# 単一語根の語根忠実揃え: 注入版で漢字が一意(singleton)かつ per-root tsv と食い違う語根を
+# word_kanji(per-word上書き)へ追加。注入版マスター遵守(発明なし)。曖昧語根(同綴り衝突
+# graf=记/伯, mi=我/肌, it=受/炎 等)は singleton ガードで自動除外。さらに広域適用は注入版の
+# 分解粒度の揺れで副作用が出る(uro=原牛 vs ur=尿)ため、検証済み安全語根の allow-list でのみ適用。
+# allow-list(out/_align_roots.json)が無ければ何も追加しない(安全既定)。
+_allow_path = OUT + r"\_align_roots.json"
+_allow = set(json.load(open(lp(_allow_path), encoding="utf-8"))) if os.path.exists(lp(_allow_path)) else None
+_added = 0
+for r, ctr in root_kanji.items():
+    if _allow is None or r not in _allow: continue
+    if len(ctr) != 1 or not r or '/' in r: continue
+    kj = next(iter(ctr))
+    if master_root.get(r) == kj: continue   # tsvと同一なら変更不要
+    if r in word_kanji: continue            # 既存(複合キー)を壊さない
+    word_kanji[r] = [[r, kj]]
+    _added += 1
+with open(lp(OUT+r"\word_kanji.json"),"w",encoding="utf-8") as g:
+    json.dump(word_kanji,g,ensure_ascii=False)
+print(f"漢字注入版 行{n} 整合{ok}  word_kanji語形{len(word_kanji)}(単一語根揃え+{_added})  master per-root漢字{len(master_root)}")
 # サンプル
 for k in ['abel/ej','abel/kultur','akv/o/kultur','elektr/on','mon','an/estez']:
     print(f"  {k} -> {word_kanji.get(k)}")

@@ -8,6 +8,11 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
+# 識別子マーカー(上付きmodifier letter群 + 同綴り根識別の結合ダイアクリティカル)を除去。
+# 漢字「本体」の一致を測るには master/app 双方から対称に除去する必要がある(旧版はapp側のみ
+# 一部除去・master側未除去の非対称比較で、同一漢字を大量に「不一致」誤判定していた)。
+_STRIP_MARK = re.compile(r"[̀-ͯʰ-˿ᴀ-ᶿ⁰-₟Ⱡ-Ɀ]")  # 結合ダイア/spacing修飾/音声拡張(上付き)/上下付き/Latin-Ext-C(ⱽ)
+def strip_mark(s): return _STRIP_MARK.sub("", s)
 INJ = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\漢字化・語彙資料\エスペラント語根＿漢字割り当て＿20260621\漢字注入_学習者版_20260620.txt"
 appdir = BASE + r"\Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
@@ -30,8 +35,7 @@ def app_kanji_batch(words, chunk=2000):
             continue
         for w, ln in zip(b, lines):
             kj = re.sub(r'<rt[^>]*>.*?</rt>', '', ln); kj = re.sub(r'<[^>]+>', '', kj).strip()
-            kj = re.sub(r'[ᴬ-ᵪʰ-˿]', '', kj)  # 上付き識別子マーカー除去
-            out[w] = kj
+            out[w] = kj  # マーカーは保持(比較時に双方から対称除去する)
     return out
 # 漢字注入パース: decomp⟦kanji⟧:gloss
 LINE = re.compile(r'^(.*?)⟦(.*?)⟧')
@@ -51,15 +55,21 @@ print(f"漢字注入マスター 語数 {len(pairs)}")
 uniq = sorted(pairs)
 print("バッチ漢字化中...")
 appres = app_kanji_batch(uniq)
-total = match = 0; mis = []
+total = exact = content = marker_only = 0; mis = []
 for w, mk in pairs.items():
     ak = appres.get(w)
     if ak is None: continue
     total += 1
-    if ak == mk: match += 1
-    elif len(mis) < 100000: mis.append((w, mk, ak))
-print(f"\n=== 漢字マスター一致 {match}/{total} ({match*1000//max(total,1)/10}%)  不一致 {total-match} ===")
-print("不一致 上位40(語: master漢字 != app漢字):")
-for w, mk, ak in mis[:40]:
-    print(f"  {w:16s} master={mk:14s} app={ak}")
+    if ak == mk:
+        exact += 1; content += 1
+    elif strip_mark(ak) == strip_mark(mk):
+        content += 1; marker_only += 1   # 漢字本体一致・識別子マーカーのみ差
+    elif len(mis) < 100000:
+        mis.append((w, strip_mark(mk), strip_mark(ak)))   # 真の漢字内容差
+print(f"\n=== 漢字内容一致(マーカー対称除去) {content}/{total} ({content*1000//max(total,1)/10}%) ===")
+print(f"    内訳: 完全一致 {exact}, マーカー差のみ {marker_only}, 真の内容差 {len(mis)}")
+print(f"    (参考: 識別子マーカー込みの完全一致は {exact}/{total} = {exact*1000//max(total,1)/10}%)")
+print("\n真の漢字内容差 上位40(語: master漢字 != app漢字, マーカー除去後):")
+for w, mk2, ak2 in mis[:40]:
+    print(f"  {w:16s} master={mk2:14s} app={ak2}")
 json.dump(mis, open(lp(BASE + r"\_analysis_20260625\out\kanji_mismatch.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

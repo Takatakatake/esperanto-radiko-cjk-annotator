@@ -235,11 +235,6 @@
   2
  ],
  [
-  "lig/ant/a",
-  "l/ig/ant/a",
-  2
- ],
- [
   "fi/e",
   "fie",
   2
@@ -390,8 +385,8 @@
   2
  ],
  [
-  "ident/ig/i",
-  "i/dent/ig/i",
+  "okcident/ig/o",
+  "okc/ident/ig/o",
   2
  ],
  [
@@ -485,11 +480,6 @@
   1
  ],
  [
-  "ident/ig/is",
-  "i/dent/ig/is",
-  1
- ],
- [
   "polietilen/a",
   "poli/etilen/a",
   1
@@ -537,6 +527,11 @@
  [
   "geologi/o",
   "geo/logi/o",
+  1
+ ],
+ [
+  "ebl/ig/ant/aj",
+  "eb/lig/ant/aj",
   1
  ],
  [
@@ -772,6 +767,11 @@
  [
   "japan/ion",
   "japan/io/n",
+  1
+ ],
+ [
+  "evident/ig/is",
+  "ev/ident/ig/is",
   1
  ],
  [

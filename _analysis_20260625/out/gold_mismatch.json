@@ -28,10 +28,6 @@
   "agronom/o"
  ],
  [
-  "akredit/i",
-  "a/kred/it/i"
- ],
- [
   "akrid/ed/oj",
   "akrided/oj"
  ],
@@ -114,10 +110,6 @@
  [
   "antrop/o/log/o",
   "antropolog/o"
- ],
- [
-  "apart/ig/i",
-  "a/part/ig/i"
  ],
  [
   "api/ac/oj",
@@ -388,14 +380,6 @@
   "diplomat/io"
  ],
  [
-  "diskont/i",
-  "dis/kon/ti"
- ],
- [
-  "diskont/o",
-  "dis/kon/to"
- ],
- [
   "divid/end/o",
   "dividend/o"
  ],
@@ -476,10 +460,6 @@
   "engl/io"
  ],
  [
-  "erekt/iĝ/i",
-  "e/rekt/iĝ/i"
- ],
- [
   "esperant/i/o",
   "esperant/io"
  ],
@@ -510,6 +490,10 @@
  [
   "eŭsk/i/o",
   "eŭsk/io"
+ ],
+ [
+  "evident/ig/i",
+  "ev/ident/ig/i"
  ],
  [
   "fab/ac/oj",
@@ -632,10 +616,6 @@
   "fot/o/tip/io"
  ],
  [
-  "frajt/ig/i",
-  "f/rajt/ig/i"
- ],
- [
   "franc/i/o",
   "franc/io"
  ],
@@ -650,14 +630,6 @@
  [
   "fris/i/o",
   "fris/io"
- ],
- [
-  "frost/ig/i",
-  "f/rost/ig/i"
- ],
- [
-  "frost/iĝ/i",
-  "f/rost/iĝ/i"
  ],
  [
   "galat/i/o",
@@ -838,10 +810,6 @@
  [
   "iber/i/o",
   "iber/io"
- ],
- [
-  "ident/ig/i",
-  "i/dent/ig/i"
  ],
  [
   "ide/o/grafi/a",
@@ -1052,10 +1020,6 @@
   "kloroform/o"
  ],
  [
-  "knokaŭt/i",
-  "k/nokaŭt/i"
- ],
- [
   "koĉinĉin/i/o",
   "koĉinĉin/io"
  ],
@@ -1110,10 +1074,6 @@
  [
   "kron/o/metr/i",
   "kron/o/metri"
- ],
- [
-  "krust/iĝ/i",
-  "k/rust/iĝ/i"
  ],
  [
   "ksil/o/graf/i",
@@ -1236,36 +1196,8 @@
   "mal/dekstr/en"
  ],
  [
-  "mal/fiks/i",
-  "m/al/fiks/i"
- ],
- [
   "mal/i/o",
   "mal/io"
- ],
- [
-  "mal/jung/i",
-  "m/al/jung/i"
- ],
- [
-  "mal/kroĉ/i",
-  "m/al/kroĉ/i"
- ],
- [
-  "mal/kudr/i",
-  "m/al/kudr/i"
- ],
- [
-  "mal/miks/i",
-  "m/al/miks/i"
- ],
- [
-  "mal/munt/i",
-  "m/al/munt/i"
- ],
- [
-  "mal/najl/i",
-  "m/al/najl/i"
  ],
  [
   "mal/supr/e/n",
@@ -1454,14 +1386,6 @@
  [
   "numid/i/o",
   "numid/io"
- ],
- [
-  "ofend/et/i",
-  "o/fend/et/i"
- ],
- [
-  "ofend/iĝ/i",
-  "o/fend/iĝ/i"
  ],
  [
   "oksi/gen/o",
@@ -2108,10 +2032,6 @@
   "trigonometri/o"
  ],
  [
-  "tromp/iĝ/i",
-  "t/romp/iĝ/i"
- ],
- [
   "trust/ig/i",
   "t/rust/ig/i"
  ],
@@ -2170,10 +2090,6 @@
  [
   "vask/i/o",
   "vask/io"
- ],
- [
-  "vend/instig/o",
-  "vend/inst/ig/o"
  ],
  [
   "vest/iĝ/i",
@@ -2916,10 +2832,6 @@
   "homed/oj"
  ],
  [
-  "honorat/o",
-  "honor/at/o"
- ],
- [
   "ĥilopod/oj",
   "ĥilopodoj"
  ],
@@ -3444,10 +3356,6 @@
   "pretor/ano"
  ],
  [
-  "prezerv/i",
-  "p/rezerv/i"
- ],
- [
   "procelari/ed/oj",
   "procelaried/oj"
  ],
@@ -3850,10 +3758,6 @@
  [
   "vespertilion/ed/oj",
   "vespertilioned/oj"
- ],
- [
-  "vestiĝ/o",
-  "vest/iĝ/o"
  ],
  [
   "vide/aĵ/o",
