@@ -204,27 +204,32 @@ def orchestrate_comprehensive_esperanto_text_replacement(
         if old in text:
             text = text.replace(old, placeholder)# 置換前の文字列を一旦プレースホルダーに置き換える。
             valid_replacements[placeholder] = new
-    # 6)ここで、2文字の語根の文字列(漢字)置換を(2回)実施することとした。Placeholderに隣接した2文字語根については置換可能と考えたためである。(202412の変更)。
-    valid_replacements_for_2char_roots = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            text = text.replace(old, placeholder)
-            valid_replacements_for_2char_roots[placeholder] = new
-    # 2周目用に別のplaceholderを割り当てる
-    valid_replacements_for_2char_roots_2 = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            place_holder_second="!"+placeholder+"!"# 2回目のplace_holderは少し変更を加えたほうが良いはず。
-            text = text.replace(old, place_holder_second)
-            valid_replacements_for_2char_roots_2[place_holder_second] = new
+    # 6) 2文字語根の置換。Placeholderに隣接した2文字語根のみ置換する設計(202412)。
+    #    旧実装は固定2周(2回)だったが、3つ以上連続する2文字接辞(例: san/ig/ej/et, lern/ej/et/ar)を
+    #    取りこぼし、偽語根(jet=ジェット機, tar=風袋, jar=年 等)を生んでいた。
+    #    → 「マッチしなくなるまで反復(fixpoint)」へ一般化。各ラウンドは "!" の数で一意化し、
+    #      round0 は旧pass1・round1 は旧pass2 と完全に後方互換(2周以内の挙動は不変)。
+    two_char_rounds = []
+    _round = 0
+    while _round < 12:  # 安全上限(通常2〜3ラウンドで収束)
+        _d = {}
+        _mk = "!" * _round  # round0="" (旧pass1と同一), round1="!" (旧pass2と同一), ...
+        for old, new, placeholder in replacements_list_for_2char:
+            if old in text:
+                ph = _mk + placeholder + _mk
+                text = text.replace(old, ph)
+                _d[ph] = new
+        if not _d:
+            break
+        two_char_rounds.append(_d)
+        _round += 1
 
     # print(text)# ⇑ここまでがplaceholderによる置換作業。以降⇓は、placeholderを置換後の文字列に置き換える作業。
 
-    # 7) ここからplaceholderを最終的な文字列に復元していく
-    for place_holder_second, new in reversed(valid_replacements_for_2char_roots_2.items()):# ここで、reverseにすることがポイント。 但し、完璧な対策ではない？
-        text = text.replace(place_holder_second, new)# プレースホルダーを置換後の文字列に置き換える。
-    for placeholder, new in reversed(valid_replacements_for_2char_roots.items()):
-        text = text.replace(placeholder, new)# プレースホルダーを置換後の文字列に置き換える。
+    # 7) ここからplaceholderを最終的な文字列に復元していく(後のラウンドから=挿入の逆順がポイント)
+    for _d in reversed(two_char_rounds):
+        for placeholder, new in reversed(_d.items()):
+            text = text.replace(placeholder, new)
     for placeholder, new in valid_replacements.items():
         text = text.replace(placeholder, new)
     # 7) 局所置換箇所(@...@)・置換禁止箇所(%...%)も復元

@@ -210,25 +210,28 @@ def orchestrate_comprehensive_esperanto_text_replacement(
             text = text.replace(old, placeholder)
             valid_replacements[placeholder] = new
 
-    # 2 字母词根，两次替换
-    valid_replacements_for_2char_roots = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            text = text.replace(old, placeholder)
-            valid_replacements_for_2char_roots[placeholder] = new
+    # 2 字母词根：从「固定两遍」改为「反复到不再匹配为止(fixpoint)」。
+    #   固定两遍会漏掉连续 3 个以上的 2 字母词缀(如 san/ig/ej/et)，从而产生伪词根。
+    #   每一轮用 "!" 的个数唯一化；round0 与旧 pass1、round1 与旧 pass2 完全后向兼容。
+    two_char_rounds = []
+    _round = 0
+    while _round < 12:  # 安全上限(通常 2〜3 轮收敛)
+        _d = {}
+        _mk = "!" * _round
+        for old, new, placeholder in replacements_list_for_2char:
+            if old in text:
+                ph = _mk + placeholder + _mk
+                text = text.replace(old, ph)
+                _d[ph] = new
+        if not _d:
+            break
+        two_char_rounds.append(_d)
+        _round += 1
 
-    valid_replacements_for_2char_roots_2 = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            place_holder_second = "!"+placeholder+"!"
-            text = text.replace(old, place_holder_second)
-            valid_replacements_for_2char_roots_2[place_holder_second] = new
-
-    # 恢复 placeholder
-    for place_holder_second, new in reversed(valid_replacements_for_2char_roots_2.items()):
-        text = text.replace(place_holder_second, new)
-    for placeholder, new in reversed(valid_replacements_for_2char_roots.items()):
-        text = text.replace(placeholder, new)
+    # 恢复 placeholder（从后面的轮次开始＝插入逆序）
+    for _d in reversed(two_char_rounds):
+        for placeholder, new in reversed(_d.items()):
+            text = text.replace(placeholder, new)
     for placeholder, new in valid_replacements.items():
         text = text.replace(placeholder, new)
 

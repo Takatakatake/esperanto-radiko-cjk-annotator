@@ -216,26 +216,28 @@ def orchestrate_comprehensive_esperanto_text_replacement(
             text = text.replace(old, placeholder)
             valid_replacements[placeholder] = new
 
-    # 6) 2文字語根置換(2回)
-    valid_replacements_for_2char_roots = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            text = text.replace(old, placeholder)
-            valid_replacements_for_2char_roots[placeholder] = new
+    # 6) 2문자 어근 치환: 고정 2회 → "더 이상 매칭되지 않을 때까지 반복(fixpoint)"으로 일반화.
+    #    고정 2회는 3개 이상 연속된 2문자 접사(예: san/ig/ej/et)를 놓쳐 가짜 어근을 만들었음.
+    #    각 라운드는 "!" 개수로 유일화하며, round0=구 pass1, round1=구 pass2 와 완전 후방 호환.
+    two_char_rounds = []
+    _round = 0
+    while _round < 12:  # 안전 상한(보통 2〜3 라운드로 수렴)
+        _d = {}
+        _mk = "!" * _round
+        for old, new, placeholder in replacements_list_for_2char:
+            if old in text:
+                ph = _mk + placeholder + _mk
+                text = text.replace(old, ph)
+                _d[ph] = new
+        if not _d:
+            break
+        two_char_rounds.append(_d)
+        _round += 1
 
-    valid_replacements_for_2char_roots_2 = {}
-    for old, new, placeholder in replacements_list_for_2char:
-        if old in text:
-            place_holder_second = "!" + placeholder + "!"
-            text = text.replace(old, place_holder_second)
-            valid_replacements_for_2char_roots_2[place_holder_second] = new
-
-    # 7) placeholderを最終的な文字列に戻す
-    for place_holder_second, new in reversed(valid_replacements_for_2char_roots_2.items()):
-        text = text.replace(place_holder_second, new)
-
-    for placeholder, new in reversed(valid_replacements_for_2char_roots.items()):
-        text = text.replace(placeholder, new)
+    # 7) placeholder를 최종 문자열로 복원(뒤 라운드부터＝삽입 역순)
+    for _d in reversed(two_char_rounds):
+        for placeholder, new in reversed(_d.items()):
+            text = text.replace(placeholder, new)
 
     for placeholder, new in valid_replacements.items():
         text = text.replace(placeholder, new)
