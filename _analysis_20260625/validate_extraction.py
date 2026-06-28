@@ -12,8 +12,8 @@ from extract_lib import normalize_lines, extract_estem, extract_roots, lp
 APP = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624\Esperanto-Kanji-Ruby-JA"
 OLD_PEJVO = APP + r"\20250215_汉字化_世界语文本を汉字替换、或いはHTML格式の翻译rubyを添加するAPPの制作过程を明确に(分かりやすく)整理したFolder\世界语全部单词列表_约44700个(原pejvo.txt)_utf8转换_第二部分以后重点修正_追加2024年版PEJVO更新项目_最终版202501.txt"
 DATA = APP + r"\app_data"
-EXIST_ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
-EXIST_ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"
+EXIST_ESTEM = DATA + r"\E_stem.json"
+EXIST_ROOTS = DATA + r"\root_list.txt"
 
 lines = normalize_lines(OLD_PEJVO, skip_marker_lines=False)
 

@@ -31,7 +31,7 @@ GL=d["局部文字替换用のリスト(列表)型配列(replacements_list_for_l
 GG=d["全域替换用のリスト(列表)型配列(replacements_final_list)"]
 sys.path.insert(0, BASE + r"\Esperanto-Kanji-Ruby-JA")
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as _orch, import_placeholders as _imp
-_ps=_imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); _pl=_imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+_ps=_imp(lp(DATA+r"\placeholders_skip.txt")); _pl=_imp(lp(DATA+r"\placeholders_localcapture.txt"))
 FALLBACK = ('--full' in sys.argv)
 
 _batch={}   # 未収録語を1回のorchestrateで処理した結果(word->html)

@@ -12,7 +12,7 @@ from extract_lib import lp, hat_to_circumflex, replace_esperanto_chars
 GOLD = r"\\wsl.localhost\Ubuntu\home\y\エスペラント辞書徹底語根分解_20260619\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt"
 APP = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APP + r"\app_data"
-OLD_ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
+OLD_ESTEM = DATA + r"\E_stem.json"
 
 ENDINGS = {'o','a','e','i','u','oj','aj','on','an','ojn','ajn','as','is','os','us','n'}
 MARKERS = ['##偽分解(PIV正式分解)','##偽分解','##強語根分解','##エス的分解']

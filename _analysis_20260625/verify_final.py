@@ -22,8 +22,8 @@ def load(p):
             d["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"])
 new_g,new_l,new_2 = load(FINAL)
 old_g,old_l,old_2 = load(ORIG)
-ph_skip = imp(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-ph_local = imp(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ph_skip = imp(lp(DATA + r"\placeholders_skip.txt"))
+ph_local = imp(lp(DATA + r"\placeholders_localcapture.txt"))
 def run(t,g,l,c): return orchestrate_comprehensive_esperanto_text_replacement(t,ph_skip,l,ph_local,g,c,FMT)
 def segs(h): return re.findall(r'<rt[^>]*>(.*?)</rt>', h)
 def plain(h): return re.sub(r'<[^>]+>','',h)
@@ -43,7 +43,7 @@ for ln in lines:
 
 print("\n【訳カバレッジ: ランダム400語で訳セグメントが空(=訳なし)の割合】")
 random.seed(7)
-with open(lp(DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"), encoding='utf-8') as f:
+with open(lp(DATA + r"\E_stem.json"), encoding='utf-8') as f:
     estem=json.load(f)
 words=list({x[0].replace('/','')+'o' for x in estem if len(x)==2})
 sample=random.sample(words,400)

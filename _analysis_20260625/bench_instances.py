@@ -16,8 +16,8 @@ dd = json.load(open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8"
 GL = dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
 G2 = dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 GG = dd["全域替换用のリスト(列表)型配列(replacements_final_list)"]
-ps = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-pl = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ps = m.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
+pl = m.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
 def app_roots(word):
     h = m.orchestrate_comprehensive_esperanto_text_replacement(word, ps, GL, pl, GG, G2, "HTML格式_Ruby文字_大小调整")
     toks = []; pos = 0

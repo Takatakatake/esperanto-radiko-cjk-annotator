@@ -30,8 +30,8 @@ for key, d in APPS.items():
     GL = dd['局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)']
     G2 = dd['二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)']
     GG = dd['全域替换用のリスト(列表)型配列(replacements_final_list)']
-    ps = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-    pl = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+    ps = m.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
+    pl = m.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
     def seg(t): return m.orchestrate_comprehensive_esperanto_text_replacement(t,ps,GL,pl,GG,G2,FMT)
     h = seg(TEXT)
     print("  [長文 語根/訳]:", ' '.join(f'{b}={g}' if g else b for b,g in pairs(h)))

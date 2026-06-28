@@ -152,10 +152,10 @@ else:
 #    %...% や @...@ で囲った文字列を守るために使用する文字列群を読み込む
 #=================================================================
 placeholders_for_skipping_replacements: List[str] = import_placeholders(
-    './app_data/占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt'
+    './app_data/placeholders_skip.txt'
 )
 placeholders_for_localized_replacement: List[str] = import_placeholders(
-    './app_data/占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt'
+    './app_data/placeholders_localcapture.txt'
 )
 
 st.write("---")

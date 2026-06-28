@@ -19,8 +19,8 @@ combined = generate(
     csv_path=DATA + r"\エスペラント語根-日本語訳ルビ対応リスト.csv",
     stemming_json_path=DATA + r"\分解設定.json",
     user_repl_json_path=DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json",
-    estem_path=DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json",
-    rootlist_path=DATA + r"\世界语全部词根_约11137个_202501.txt",
+    estem_path=DATA + r"\E_stem.json",
+    rootlist_path=DATA + r"\root_list.txt",
     format_type='HTML格式_Ruby文字_大小调整',
 )
 

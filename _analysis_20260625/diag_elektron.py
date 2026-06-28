@@ -6,7 +6,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from extract_lib import lp
 OUT = BASE + r"\_analysis_20260625\out"
 DATA = BASE + r"\Esperanto-Kanji-Ruby-JA\app_data"
-ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
+ESTEM = DATA + r"\E_stem.json"
 wa = json.load(open(lp(OUT + r"\word_anno_ja.json"), encoding="utf-8"))
 wn = {}
 for k,v in wa.items(): wn.setdefault(k.replace('/',''), v)

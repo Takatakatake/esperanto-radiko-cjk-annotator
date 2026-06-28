@@ -18,8 +18,8 @@ from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text
 CSV = DATA + r"\エスペラント語根-日本語訳ルビ対応リスト.csv"
 STEM = DATA + r"\分解設定.json"
 USER = DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
-OLD_ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
-OLD_ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"
+OLD_ESTEM = DATA + r"\E_stem.json"
+OLD_ROOTS = DATA + r"\root_list.txt"
 NEW_ESTEM = OUT + r"\new_E_stem_with_Part_Of_Speech_list.json"
 NEW_ROOTS = OUT + r"\new_rootlist.txt"
 FMT = 'HTML格式_Ruby文字_大小调整'
@@ -42,8 +42,8 @@ for name, c in [("旧", old_combined), ("新", new_combined)]:
           f"局部={len(c['局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)'])}")
 
 # --- エンドツーエンド比較 ---
-ph_skip = imp2(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-ph_local = imp2(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ph_skip = imp2(lp(DATA + r"\placeholders_skip.txt"))
+ph_local = imp2(lp(DATA + r"\placeholders_localcapture.txt"))
 
 def run(text, combined):
     return orchestrate_comprehensive_esperanto_text_replacement(

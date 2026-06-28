@@ -17,7 +17,7 @@ APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"
 DATA = APPDIR + r"\app_data"
 STEM = DATA + r"\分解設定.json"
 ESTEMP = glob.glob(DATA + r"\PEJVO*E_stem*list*.json")[0]
-ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"
+ROOTS = DATA + r"\root_list.txt"
 USER = DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 CSV = DATA + r"\エスペラント語根-日本語訳ルビ対応リスト.csv"
 FMT = 'HTML格式_Ruby文字_大小调整'
@@ -103,8 +103,8 @@ import esp_text_replacement_module as m
 GL = combined['局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)']
 G2 = combined['二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)']
 GG = combined['全域替换用のリスト(列表)型配列(replacements_final_list)']
-ps = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-pl = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ps = m.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
+pl = m.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
 def show(t):
     h = m.orchestrate_comprehensive_esperanto_text_replacement(t, ps, GL, pl, GG, G2, FMT)
     return ' '.join(f'{x.group(1)}[{re.sub("<br>","/",x.group(2))}]' for x in re.finditer(r'<ruby>(.*?)<rt[^>]*>(.*?)</rt></ruby>', h))

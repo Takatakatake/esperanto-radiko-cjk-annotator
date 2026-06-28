@@ -51,11 +51,11 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
     safe_replace = mod_safe_replace
     _LATIN = re.compile(r'^[a-zĉĝĥĵŝŭ!\-]+$')
 
-    imported_placeholders_for_global_replacement = import_placeholders(os.path.join(data_dir, '占位符(placeholders)_$20987$-$499999$_全域替换用.txt'))
-    imported_placeholders_for_2char_replacement = import_placeholders(os.path.join(data_dir, '占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'))
-    imported_placeholders_for_local_replacement = import_placeholders(os.path.join(data_dir, '占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'))
+    imported_placeholders_for_global_replacement = import_placeholders(os.path.join(data_dir, 'placeholders_global.txt'))
+    imported_placeholders_for_2char_replacement = import_placeholders(os.path.join(data_dir, 'placeholders_2char.txt'))
+    imported_placeholders_for_local_replacement = import_placeholders(os.path.join(data_dir, 'placeholders_local.txt'))
 
-    with open(lp(os.path.join(data_dir, 'Unicode_BMP全范围文字幅(宽)_Arial16.json')), 'r', encoding='utf-8') as fp:
+    with open(lp(os.path.join(data_dir, 'char_widths.json')), 'r', encoding='utf-8') as fp:
         char_widths_dict = json.load(fp)
 
     # CSV 読み込み (デフォルト使用パス相当)

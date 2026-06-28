@@ -43,13 +43,13 @@ suffix_2char_roots=['ad', 'ag', 'am', 'ar', 'as', 'at', 'av', 'di', 'ec', 'eg', 
 prefix_2char_roots=['al', 'am', 'av', 'bo', 'di', 'du', 'ek', 'el', 'en', 'fi', 'ge', 'ir', 'lu', 'ne', 'ok', 'or', 'ov', 'pi', 're', 'te', 'uz','ĝu','aĉ','aĝ','ŝu','eĥ']
 standalone_2char_roots=['al', 'ci', 'da', 'de', 'di', 'do', 'du', 'el', 'en', 'fi', 'ha', 'he', 'ho', 'ia', 'ie', 'io', 'iu', 'ja', 'je', 'ju','ke', 'la', 'li', 'mi', 'ne', 'ni', 'nu', 'ok', 'ol', 'po', 'se', 'si', 've', 'vi','ŭa','aŭ','ĉe','ĝi','ŝi','ĉu']
 # an,onはなしにする。
-imported_placeholders_for_global_replacement = import_placeholders('./app_data/占位符(placeholders)_$20987$-$499999$_全域替换用.txt')
-imported_placeholders_for_2char_replacement = import_placeholders('./app_data/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt')# 文字列(漢字)置換時に用いる"placeholder"ファイルを予め読み込んでおく。
-imported_placeholders_for_local_replacement = import_placeholders('./app_data/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt')
+imported_placeholders_for_global_replacement = import_placeholders('./app_data/placeholders_global.txt')
+imported_placeholders_for_2char_replacement = import_placeholders('./app_data/placeholders_2char.txt')# 文字列(漢字)置換時に用いる"placeholder"ファイルを予め読み込んでおく。
+imported_placeholders_for_local_replacement = import_placeholders('./app_data/placeholders_local.txt')
 
 
-# 事前に作成した Unicode_BMP全范围文字幅(宽)_Arial16.json ファイルを読み込み
-with open("./app_data/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
+# 事前に作成した char_widths.json ファイルを読み込み
+with open("./app_data/char_widths.json", "r", encoding="utf-8") as fp:
     char_widths_dict = json.load(fp)   
 
 # ====== 1) ページ設定 & タイトル ======
@@ -381,8 +381,8 @@ if st.button("置換用JSONファイルを作成する"):
         _csv = _resolve_csv()
         _settings = _resolve_json(json_choice, json_path_default, custom_stemming_setting_list, "_uploaded_settings_tmp.json")
         _user = _resolve_json(json_choice2, json_path_default2, user_replacement_item_setting_list, "_uploaded_user_tmp.json")
-        _estem = _os.path.join(_DATA, "PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json")
-        _roots = _os.path.join(_DATA, "世界语全部词根_约11137个_202501.txt")
+        _estem = _os.path.join(_DATA, "E_stem.json")
+        _roots = _os.path.join(_DATA, "root_list.txt")
         _word_anno = None
         _wa = _os.path.join(_DATA, "word_anno.json")
         if csv_choice == "デフォルトを使用する" and "汉字替换" not in format_type and _os.path.exists(_wa):
@@ -402,7 +402,7 @@ if st.button("置換用JSONファイルを作成する"):
         st.stop()  # 以降の旧インライン生成ロジックは上記generate()版に置換済(温存のため残置・到達しない)
         # =============================================================================
 
-        with open("./app_data/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
+        with open("./app_data/E_stem.json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
         # 上の作業で抽出した、'PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表'(E_stem_with_Part_Of_Speech_list)を文字列(漢字)置換するための、置換リストを作成していく。
@@ -412,8 +412,8 @@ if st.button("置換用JSONファイルを作成する"):
 
         # 一旦辞書型を使う。(後で内容(value)を更新するため)
         temporary_replacements_dict={}
-        with open("./app_data/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
-            # "世界语全部词根_约11137个_202501.txt"は"世界语全部单词列表_约44700个(原pejvo.txt)_utf8转换_第二部分以后重点修正_追加2024年版PEJVO更新项目_最终版202501.txt"から"世界语全部单词列表_约44700个(原pejvo.txt)_utf8转换_第二部分以后重点修正_追加2024年版PEJVO更新项目_最终版202501.txt＿から＿世界语全部词根_约11137个_202501.txt＿を抽出.ipynb"を用いて抽出したエスペラントの全語根である。
+        with open("./app_data/root_list.txt", 'r', encoding='utf-8') as file:
+            # "root_list.txt"は"世界语全部单词列表_约44700个(原pejvo.txt)_utf8转换_第二部分以后重点修正_追加2024年版PEJVO更新项目_最终版202501.txt"から"世界语全部单词列表_约44700个(原pejvo.txt)_utf8转换_第二部分以后重点修正_追加2024年版PEJVO更新项目_最终版202501.txt＿から＿root_list.txt＿を抽出.ipynb"を用いて抽出したエスペラントの全語根である。
             E_roots = file.readlines()
             for E_root in E_roots:
                 E_root = E_root.strip()

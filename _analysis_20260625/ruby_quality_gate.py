@@ -16,7 +16,7 @@ APPS = {'JP':r"\Esperanto-Kanji-Ruby-JA",
         'KO':r"\Esperanto-Kanji-Ruby-KO"}
 key = sys.argv[1] if len(sys.argv)>1 else 'JP'
 APPDIR = BASE + APPS[key]; DATA = APPDIR + r"\app_data"
-with open(lp(DATA + r"\Unicode_BMP全范围文字幅(宽)_Arial16.json"), encoding='utf-8') as f:
+with open(lp(DATA + r"\char_widths.json"), encoding='utf-8') as f:
     CW = json.load(f)
 def width(t): return sum(CW.get(c,8) for c in t)
 def expected_class(rb, rt_nobr):

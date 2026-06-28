@@ -207,20 +207,20 @@ standalone_2char_roots = [
 # 下面从文件中读取相应的 placeholder，用于全域替换、二字词根替换、局部替换
 # ---------------------------------------------------------------------
 imported_placeholders_for_global_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
+    './app_data/placeholders_global.txt'
 )
 imported_placeholders_for_2char_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
+    './app_data/placeholders_2char.txt'
 )
 imported_placeholders_for_local_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
+    './app_data/placeholders_local.txt'
 )
 
 # ---------------------------------------------------------------------
 # 从 JSON 读取“Unicode_BMP全范围字符宽度(Arial16).json”
 # 用于在生成 HTML 形式时，针对文字宽度做精细化处理
 # ---------------------------------------------------------------------
-with open("./app_data/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
+with open("./app_data/char_widths.json", "r", encoding="utf-8") as fp:
     char_widths_dict = json.load(fp)
 
 # ---------------------------------------------------------------------
@@ -530,8 +530,8 @@ if st.button("生成并下载替换用 JSON 文件"):
         _csv = _resolve_csv()
         _settings = _resolve_json(json_choice, json_path_default, custom_stemming_setting_list, "_uploaded_settings_tmp.json")
         _user = _resolve_json(json_choice2, json_path_default2, user_replacement_item_setting_list, "_uploaded_user_tmp.json")
-        _estem = _os.path.join(_DATA, "PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json")
-        _roots = _os.path.join(_DATA, "世界语全部词根_约11137个_202501.txt")
+        _estem = _os.path.join(_DATA, "E_stem.json")
+        _roots = _os.path.join(_DATA, "root_list.txt")
         _word_anno = None
         _wa = _os.path.join(_DATA, "word_anno.json")
         if _is_default(csv_choice) and "汉字替换" not in format_type and _os.path.exists(_wa):
@@ -554,12 +554,12 @@ if st.button("生成并下载替换用 JSON 文件"):
         # 1) 读取“大规模世界语词典/列表” (E_stem_with_Part_Of_Speech_list)
         #    内含约数万条世界语单词(含词性信息)
         # -------------------------------------------------------------
-        with open("./app_data/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
+        with open("./app_data/E_stem.json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
         # 先读取“世界语全部词根(约11137个)”到一个临时字典
         temporary_replacements_dict = {}
-        with open("./app_data/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
+        with open("./app_data/root_list.txt", 'r', encoding='utf-8') as file:
             E_roots = file.readlines()
             for E_root in E_roots:
                 E_root = E_root.strip()

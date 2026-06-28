@@ -33,8 +33,8 @@ for key, d in APPS.items():
     g = cmb["全域替换用のリスト(列表)型配列(replacements_final_list)"]
     l = cmb["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
     c = cmb["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
-    ps = M.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-    pl = M.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+    ps = M.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
+    pl = M.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
     out = M.orchestrate_comprehensive_esperanto_text_replacement(DEMO, ps, l, pl, g, c, FMT)
     html = M.apply_ruby_html_header_and_footer(out, FMT)
     path = os.path.join(dl, f"sample_{key}.html")

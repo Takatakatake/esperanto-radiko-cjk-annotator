@@ -22,8 +22,8 @@ KANJI_JSON_NAME = r"\置換リスト_漢字.json"
 APPS={'JP':r"\Esperanto-Kanji-Ruby-JA",
       'ZH':r"\Esperanto-Kanji-Ruby-ZH",
       'KO':r"\Esperanto-Kanji-Ruby-KO"}
-ESTEM=r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
-ROOTS=r"\世界语全部词根_约11137个_202501.txt"
+ESTEM=r"\E_stem.json"
+ROOTS=r"\root_list.txt"
 STEM=r"\分解設定.json"; USER=r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 
 with open(lp(OUT+r"\word_kanji.json"),encoding='utf-8') as f: word_kanji=json.load(f)
@@ -69,7 +69,7 @@ combined=process('JP', WRITE)
 sys.path.insert(0, BASE+APPS['JP'])
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
 DATA=BASE+APPS['JP']+r"\app_data"
-ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ps=imp(lp(DATA+r"\placeholders_skip.txt")); pl=imp(lp(DATA+r"\placeholders_localcapture.txt"))
 g_=combined["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l_=combined["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c_=combined["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 def seg(t): return orch(t,ps,l_,pl,g_,c_,FMT)
 def plain(t): return re.sub(r'<[^>]+>','',seg(t))

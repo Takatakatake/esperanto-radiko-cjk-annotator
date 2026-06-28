@@ -10,8 +10,8 @@ combined = generate(APP, DATA,
     DATA + r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv",
     DATA + r"\分解設定.json",
     DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json",
-    DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json",
-    DATA + r"\世界语全部词根_约11137个_202501.txt",
+    DATA + r"\E_stem.json",
+    DATA + r"\root_list.txt",
     'HTML格式_Ruby文字_大小调整')
 with open(lp(DATA + r"\置換リスト_ルビ.json"), encoding='utf-8') as f:
     ex = json.load(f)

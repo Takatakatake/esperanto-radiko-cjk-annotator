@@ -112,20 +112,20 @@ standalone_2char_roots=['al', 'ci', 'da', 'de', 'di', 'do', 'du', 'el', 'en', 'f
 # それら placeholder文字列を外部ファイルから大量に読み込みます。
 #=====================================================================
 imported_placeholders_for_global_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_$20987$-$499999$_全域替换用.txt'
+    './app_data/placeholders_global.txt'
 )
 imported_placeholders_for_2char_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_$13246$-$19834$_二文字词根替换用.txt'
+    './app_data/placeholders_2char.txt'
 )
 imported_placeholders_for_local_replacement = import_placeholders(
-    './app_data/占位符(placeholders)_@20374@-@97648@_局部文字列替换用.txt'
+    './app_data/placeholders_local.txt'
 )
 
 #=====================================================================
-# 事前に作成した "Unicode_BMP全范围文字幅(宽)_Arial16.json" を読み込み
+# 事前に作成した "char_widths.json" を読み込み
 # (ルビサイズの調整等で使う想定。文字幅に応じた改行などができる)
 #=====================================================================
-with open("./app_data/Unicode_BMP全范围文字幅(宽)_Arial16.json", "r", encoding="utf-8") as fp:
+with open("./app_data/char_widths.json", "r", encoding="utf-8") as fp:
     char_widths_dict = json.load(fp)
 
 #=====================================================================
@@ -419,8 +419,8 @@ if st.button("치환용 JSON 파일 생성하기"):
         _csv = _resolve_csv()
         _settings = _resolve_json(json_choice, json_path_default, custom_stemming_setting_list, "_uploaded_settings_tmp.json")
         _user = _resolve_json(json_choice2, json_path_default2, user_replacement_item_setting_list, "_uploaded_user_tmp.json")
-        _estem = _os.path.join(_DATA, "PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json")
-        _roots = _os.path.join(_DATA, "世界语全部词根_约11137个_202501.txt")
+        _estem = _os.path.join(_DATA, "E_stem.json")
+        _roots = _os.path.join(_DATA, "root_list.txt")
         _word_anno = None
         _wa = _os.path.join(_DATA, "word_anno.json")
         if _is_default(csv_choice) and "汉字替换" not in format_type and _os.path.exists(_wa):
@@ -439,11 +439,11 @@ if st.button("치환용 JSON 파일 생성하기"):
         )
         st.stop()  # 以降の旧インライン生成ロジックは上記generate()版に置換済(温存・到達しない)
         # =============================================================================
-        with open("./app_data/PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json", "r", encoding="utf-8") as g:
+        with open("./app_data/E_stem.json", "r", encoding="utf-8") as g:
             E_stem_with_Part_Of_Speech_list = json.load(g)
 
         temporary_replacements_dict = {}
-        with open("./app_data/世界语全部词根_约11137个_202501.txt", 'r', encoding='utf-8') as file:
+        with open("./app_data/root_list.txt", 'r', encoding='utf-8') as file:
             E_roots = file.readlines()
             for E_root in E_roots:
                 E_root = E_root.strip()

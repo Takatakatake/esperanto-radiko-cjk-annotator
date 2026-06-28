@@ -24,8 +24,8 @@ def load(p):
 
 new_g, new_l, new_2 = load(FINAL)
 old_g, old_l, old_2 = load(BK)
-ph_skip = imp(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-ph_local = imp(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ph_skip = imp(lp(DATA + r"\placeholders_skip.txt"))
+ph_local = imp(lp(DATA + r"\placeholders_localcapture.txt"))
 
 def run(text, g, l, t):
     return orchestrate_comprehensive_esperanto_text_replacement(text, ph_skip, l, ph_local, g, t, FMT)
@@ -61,7 +61,7 @@ print(f"  変化 {chg}/{len(TESTS)}")
 print("\n" + "="*72)
 print("【ランダム抽出: 旧→新で分解(セグメント)が変化した割合】")
 random.seed(42)
-with open(lp(DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"), encoding='utf-8') as f:
+with open(lp(DATA + r"\E_stem.json"), encoding='utf-8') as f:
     estem = json.load(f)
 words = list({x[0].replace('/','')+'o' for x in estem if len(x)==2})
 sample = random.sample(words, 300)

@@ -9,8 +9,8 @@ from gen_replacement import lp
 appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
 DATA = appdir + r"\app_data"
-ps = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt"))
-pl = m.import_placeholders(lp(DATA + r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+ps = m.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
+pl = m.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
 def load(name):
     dd = json.load(open(lp(DATA + name), encoding="utf-8"))
     return (dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"],
