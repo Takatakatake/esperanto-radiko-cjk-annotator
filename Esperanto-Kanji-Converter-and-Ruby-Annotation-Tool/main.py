@@ -178,18 +178,19 @@ if source_option == "ファイルアップロード":
         st.warning("テキストファイルがアップロードされていません。手動入力に切り替えるかファイルをアップロードしてください。")
 
 
-with st.form(key='profile_form'):
-    # アップロードの有無で text_area の value を切り替える
-    if uploaded_text:
-        initial_text = uploaded_text
-    else:
-        initial_text = st.session_state.get("text0_value", "")
+# アップロードがあれば、フォーム生成前に session_state へ反映(key バインドの初期値として)
+if uploaded_text:
+    st.session_state["text0_value"] = uploaded_text
 
-    # テキストエリアの初期値に "initial_text" を使う
+with st.form(key='profile_form'):
+    # text_area を key="text0_value" で session_state と双方向バインドする。
+    # 旧方式(value=initial_text で session_state を初期値にする)は、送信時にウィジェットが
+    # value= で前回値に戻され「1つ前の入力で変換される(1ステップ遅延)」バグの原因だった。
+    # key= 方式では送信時に現在の入力がそのまま反映される。
     text0 = st.text_area(
         "エスペラントの文章を入力してください",
         height=150,
-        value=initial_text  # <-- 変更部分: セッションステートからの値をデフォルトに
+        key="text0_value"
     )
 
     st.markdown("""「%」で前後を囲む(「%<50文字以内の文字列>%」形式)と、
@@ -208,9 +209,8 @@ with st.form(key='profile_form'):
         st.stop()  # ここで処理が終了するので、下の行は実行されない
 
     if submit_btn:
-        # 入力されたテキストをセッションステートに保存
-        st.session_state["text0_value"] = text0  # <-- 変更部分
-    
+        # text0 は key="text0_value" で session_state と双方向バインド済み。
+        # ここで手動代入するとウィジェット生成後の session_state 変更となりエラーになるため行わない。
 
         if use_parallel:
             processed_text = parallel_process(

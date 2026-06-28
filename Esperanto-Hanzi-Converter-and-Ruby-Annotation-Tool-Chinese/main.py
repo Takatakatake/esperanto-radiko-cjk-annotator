@@ -197,17 +197,18 @@ if source_option == "上传文件":
 # --------------------------------------------------------------------
 # 使用表单的方式，让用户输入文本并提交
 # --------------------------------------------------------------------
-with st.form(key='profile_form'):
-    # 如果上传了文本，则在 text_area 中默认填充
-    if uploaded_text:
-        initial_text = uploaded_text
-    else:
-        initial_text = st.session_state.get("text0_value", "")
+# 如果上传了文本，则在生成表单前写入 session_state（作为 key 绑定的初始值）
+if uploaded_text:
+    st.session_state["text0_value"] = uploaded_text
 
+with st.form(key='profile_form'):
+    # 用 key="text0_value" 将 text_area 与 session_state 双向绑定。
+    # 旧方式(value=initial_text)会在提交时把控件重置为上一次的值，导致
+    # “提交后使用的是上一次输入(滞后一步)”的 bug；key= 方式可让提交时立即反映当前输入。
     text0 = st.text_area(
         "请输入世界语文章",
         height=150,
-        value=initial_text  
+        key="text0_value"
     )
 
     st.markdown("""如果您使用“%”包裹文本（例如“%这段文本%”），则这部分内容将**跳过替换**。""")
@@ -227,8 +228,8 @@ with st.form(key='profile_form'):
 
     # 如果点击了“提交”
     if submit_btn:
-        # 将本次输入保存到会话状态
-        st.session_state["text0_value"] = text0  
+        # text0 已通过 key="text0_value" 与 session_state 双向绑定，
+        # 此处手动赋值会在控件实例化后修改 session_state 而报错，故不再赋值。
 
         # 根据是否勾选并行处理，调用不同函数
         if use_parallel:

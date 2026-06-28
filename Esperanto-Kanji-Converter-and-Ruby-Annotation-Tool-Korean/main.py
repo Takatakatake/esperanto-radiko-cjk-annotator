@@ -220,17 +220,20 @@ if source_option == "파일 업로드":
 # フォーム: 実行ボタン(送信/キャンセル)を配置
 #  - テキストエリアにエスペラント文を入力してもらう
 #=================================================================
+# 업로드가 있으면 폼 생성 전에 session_state 에 반영 (key 바인딩의 초기값으로)
+if uploaded_text:
+    st.session_state["text0_value"] = uploaded_text
+
 with st.form(key='profile_form'):
 
-    if uploaded_text:
-        initial_text = uploaded_text
-    else:
-        initial_text = st.session_state.get("text0_value", "")
-
+    # text_area 를 key="text0_value" 로 session_state 와 양방향 바인딩한다.
+    # 기존 방식(value=initial_text)은 제출 시 위젯이 이전 값으로 되돌려져
+    # "제출하면 한 번은 이전 입력으로 변환된다(한 스텝 지연)" 버그의 원인이었다.
+    # key= 방식은 제출 시 현재 입력이 즉시 반영된다.
     text0 = st.text_area(
         "에스페란토 문장을 입력해 주십시오",
         height=150,
-        value=initial_text
+        key="text0_value"
     )
 
     st.markdown("""「%」로 앞뒤를 감싸는(「%<50자 이내의 문자열>%」 형식) 경우,  
@@ -250,7 +253,8 @@ with st.form(key='profile_form'):
         st.stop()
 
     if submit_btn:
-        st.session_state["text0_value"] = text0
+        # text0 는 key="text0_value" 로 session_state 와 양방향 바인딩되어 있다.
+        # 여기서 수동 대입하면 위젯 생성 후 session_state 변경이 되어 오류가 나므로 하지 않는다.
 
         if use_parallel:
             processed_text = parallel_process(
