@@ -9,6 +9,8 @@ from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
 CORP = BASE + r"\京大エス研html文書＿Github"
+if not os.path.isdir(CORP):  # 軽量化でfuyouへ退避済の場合のフォールバック
+    CORP = os.path.normpath(BASE + r"\..\fuyou\_project_root_misc\京大エス研html文書＿Github")
 appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
 DATA = appdir + r"\app_data"

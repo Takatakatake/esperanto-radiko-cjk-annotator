@@ -133,6 +133,19 @@ else:
         st.warning("尚未上传 JSON 文件，无法继续执行。")
         st.stop()
 
+# 1.5) 手动校正(轻量 overlay)以最高优先级应用
+#   在「语根分解手动校正」页面保存的校正(app_data/user_corrections.json),
+#   无需重新生成替换用JSON即可在运行时反映。
+try:
+    import esp_overlay_module as _ov
+    _ov_mode = "kanji" if selected_option == "使用汉字化版(新汉字分配)" else "ruby"
+    _ov_entries = _ov.load_overlay_entries("./app_data", _ov_mode)
+    if _ov_entries:
+        replacements_final_list = _ov.merge_overlay(replacements_final_list, _ov_entries)
+        st.info(f"正在应用 {len(_ov.load_corrections('./app_data'))} 条手动校正(可在「语根分解手动校正」页面编辑)。")
+except Exception:
+    pass
+
 # --------------------------------------------------------------------
 # 2) 读取一些与替换相关的 placeholder(占位符) 文件
 # --------------------------------------------------------------------

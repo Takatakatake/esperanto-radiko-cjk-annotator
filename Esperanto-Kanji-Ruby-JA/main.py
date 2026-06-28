@@ -124,6 +124,19 @@ else:
         st.warning("JSONファイルがアップロードされていません。処理を停止します。")
         st.stop()
 
+# 1.5) 手動補正(軽量オーバーレイ)を最優先で適用
+#   「語根分解の手動補正」ページで保存した補正(app_data/user_corrections.json)を、
+#   置換用JSONを再生成せずに実行時へ反映する。補正語より長い語を先に置換するよう安全挿入。
+try:
+    import esp_overlay_module as _ov
+    _ov_mode = "kanji" if selected_option == "漢字化版(新漢字割り当て)を使用する" else "ruby"
+    _ov_entries = _ov.load_overlay_entries("./app_data", _ov_mode)
+    if _ov_entries:
+        replacements_final_list = _ov.merge_overlay(replacements_final_list, _ov_entries)
+        st.info(f"手動補正 {len(_ov.load_corrections('./app_data'))} 件を適用中(「語根分解の手動補正」ページで編集できます)。")
+except Exception:
+    pass  # オーバーレイは任意機能。失敗しても通常の置換は継続する。
+
 # 2) placeholders (占位符) の読み込み
 placeholders_for_skipping_replacements: List[str] = import_placeholders(
     './app_data/placeholders_skip.txt'

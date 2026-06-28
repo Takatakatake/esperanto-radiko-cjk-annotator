@@ -147,6 +147,19 @@ else:
         st.warning("JSON 파일이 업로드되지 않았습니다. 처리를 중단합니다.")
         st.stop()
 
+# 1.5) 수동 보정(경량 overlay)을 최우선으로 적용
+#   「어근 분해 수동 보정」페이지에서 저장한 보정(app_data/user_corrections.json)을,
+#   치환용 JSON을 재생성하지 않고 실행 시점에 반영한다.
+try:
+    import esp_overlay_module as _ov
+    _ov_mode = "kanji" if selected_option == "한자화 버전(새 한자 배정) 사용" else "ruby"
+    _ov_entries = _ov.load_overlay_entries("./app_data", _ov_mode)
+    if _ov_entries:
+        replacements_final_list = _ov.merge_overlay(replacements_final_list, _ov_entries)
+        st.info(f"수동 보정 {len(_ov.load_corrections('./app_data'))}건 적용 중(「어근 분해 수동 보정」페이지에서 편집 가능).")
+except Exception:
+    pass
+
 #=================================================================
 # 2) placeholders (占位符) の読み込み
 #    %...% や @...@ で囲った文字列を守るために使用する文字列群を読み込む
