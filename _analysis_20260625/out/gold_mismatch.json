@@ -20,6 +20,14 @@
   "afor/ismo"
  ],
  [
+  "agres/iv/a",
+  "agresiv/a"
+ ],
+ [
+  "agr/o/nom/o",
+  "agronom/o"
+ ],
+ [
   "akredit/i",
   "a/kred/it/i"
  ],
@@ -46,6 +54,14 @@
  [
   "alt/e/n",
   "alt/en"
+ ],
+ [
+  "altern/at/iv/a",
+  "alternativ/a"
+ ],
+ [
+  "altern/at/iv/o",
+  "alternativ/o"
  ],
  [
   "al/vent/e/n",
@@ -90,6 +106,14 @@
  [
   "antaŭ/e/n/puŝ/o",
   "antaŭ/en/puŝ/o"
+ ],
+ [
+  "anti/bio/tik/o",
+  "antibiotik/o"
+ ],
+ [
+  "antrop/o/log/o",
+  "antropolog/o"
  ],
  [
   "apart/ig/i",
@@ -145,7 +169,7 @@
  ],
  [
   "aŭstr/i/o",
-  "aŭstr/io"
+  "aŭstri/o"
  ],
  [
   "aŭt/o/mobil/o",
@@ -300,6 +324,10 @@
   "dekstr/en"
  ],
  [
+  "dem/o/grafi/o",
+  "demografi/o"
+ ],
+ [
   "des/infekt/ad/o",
   "desinfekt/ad/o"
  ],
@@ -316,6 +344,22 @@
   "desinfekt/il/o"
  ],
  [
+  "detekt/iv/o",
+  "detektiv/o"
+ ],
+ [
+  "dia/log/a",
+  "dialog/a"
+ ],
+ [
+  "dia/log/i",
+  "dialog/i"
+ ],
+ [
+  "dia/log/o",
+  "dialog/o"
+ ],
+ [
   "dia/magnet/a",
   "diamagnet/a"
  ],
@@ -328,8 +372,12 @@
   "diamagnet/o"
  ],
  [
-  "diferenc/i",
-  "diferenci"
+  "dia/metr/o",
+  "diametr/o"
+ ],
+ [
+  "diferenci/i",
+  "diferenc/ii"
  ],
  [
   "diplomat/i/a",
@@ -348,6 +396,10 @@
   "dis/kon/to"
  ],
  [
+  "divid/end/o",
+  "dividend/o"
+ ],
+ [
   "dom/e/n",
   "domen"
  ],
@@ -362,6 +414,14 @@
  [
   "ebur/i/o",
   "ebur/io"
+ ],
+ [
+  "efekt/iv/a",
+  "efektiv/a"
+ ],
+ [
+  "efekt/iv/e",
+  "efektiv/e"
  ],
  [
   "efekt/iv/ig/i",
@@ -380,8 +440,12 @@
   "ekde"
  ],
  [
+  "eko/logi/a",
+  "ekologi/a"
+ ],
+ [
   "eko/logi/o",
-  "ek/ologi/o"
+  "ekologi/o"
  ],
  [
   "eks/sovet/i/a",
@@ -428,6 +492,10 @@
   "estrad/o"
  ],
  [
+  "etim/o/logi/o",
+  "etimologi/o"
+ ],
+ [
   "etiop/i/o",
   "etiop/io"
  ],
@@ -470,6 +538,14 @@
  [
   "felis/ed/oj",
   "felised/oj"
+ ],
+ [
+  "femin/ism/o",
+  "feminism/o"
+ ],
+ [
+  "femin/ist/o",
+  "feminist/o"
  ],
  [
   "fenic/i/o",
@@ -632,6 +708,14 @@
   "gaŭl/io"
  ],
  [
+  "geo/grafi/a",
+  "geografi/a"
+ ],
+ [
+  "geo/grafi/o",
+  "geografi/o"
+ ],
+ [
   "geo/metr/ed/oj",
   "geometred/oj"
  ],
@@ -712,8 +796,28 @@
   "hes/io"
  ],
  [
+  "hidr/o/gen/i",
+  "hidrogen/i"
+ ],
+ [
+  "hidr/o/gen/o",
+  "hidrogen/o"
+ ],
+ [
   "hind/i/o",
   "hind/io"
+ ],
+ [
+  "hipo/tez/a",
+  "hipotez/a"
+ ],
+ [
+  "hipo/tez/i",
+  "hipotez/i"
+ ],
+ [
+  "hipo/tez/o",
+  "hipotez/o"
  ],
  [
   "hispan/i/o",
@@ -740,12 +844,32 @@
   "i/dent/ig/i"
  ],
  [
+  "ide/o/grafi/a",
+  "ideografi/a"
+ ],
+ [
+  "ide/o/grafi/o",
+  "ideografi/o"
+ ],
+ [
+  "ide/o/gram/o",
+  "ideogram/o"
+ ],
+ [
+  "ide/o/logi/a",
+  "ideologi/a"
+ ],
+ [
   "ide/o/logi/o",
-  "ide/ologi/o"
+  "ideologi/o"
  ],
  [
   "idiot/ism/o",
   "idiotism/o"
+ ],
+ [
+  "imperial/ism/o",
+  "imperialism/o"
  ],
  [
   "ind/ig/i",
@@ -768,12 +892,12 @@
   "infrastruktur/o"
  ],
  [
-  "inter/indukt/anc/o",
-  "inter/induktanc/o"
+  "intens/iv/a",
+  "intensiv/a"
  ],
  [
-  "inter/pol/i",
-  "interpol/i"
+  "inter/indukt/anc/o",
+  "inter/induktanc/o"
  ],
  [
   "iris/o",
@@ -800,16 +924,12 @@
   "japan/io"
  ],
  [
-  "jesu/o",
-  "jes/uo"
- ],
- [
   "jordan/i/o",
   "jordan/io"
  ],
  [
   "jugoslav/i/o",
-  "jugoslav/io"
+  "jugoslavi/o"
  ],
  [
   "kamerun/i/o",
@@ -826,6 +946,10 @@
  [
   "kap/et/o",
   "kapet/o"
+ ],
+ [
+  "karakter/iz/a",
+  "karakteriz/a"
  ],
  [
   "karakter/iz/i",
@@ -872,12 +996,20 @@
   "kilocikl/o"
  ],
  [
+  "kilo/gram/o",
+  "kilogram/o"
+ ],
+ [
   "kilo/herc/o",
   "kiloherc/o"
  ],
  [
   "kilo/kalori/o",
   "kilokalorio"
+ ],
+ [
+  "kilo/metr/o",
+  "kilometr/o"
  ],
  [
   "kilo/om/o",
@@ -1000,6 +1132,10 @@
   "kuvajt/io"
  ],
  [
+  "kvar/on/o",
+  "kvar/ono"
+ ],
+ [
   "labi/ac/oj",
   "labiac/oj"
  ],
@@ -1074,6 +1210,10 @@
  [
   "luksemburg/i/o",
   "luksemburg/io"
+ ],
+ [
+  "lun/du/on/o",
+  "lun/duon/o"
  ],
  [
   "makedon/i/o",
@@ -1168,6 +1308,18 @@
   "mari/o"
  ],
  [
+  "markot/o",
+  "mark/ot/o"
+ ],
+ [
+  "mas/iv/a",
+  "masiv/a"
+ ],
+ [
+  "mas/iv/o",
+  "masiv/o"
+ ],
+ [
   "maŭric/i/o",
   "maŭric/io"
  ],
@@ -1216,12 +1368,20 @@
   "moldav/io"
  ],
  [
+  "mon/don/a",
+  "mond/ona"
+ ],
+ [
   "mongol/i/o",
   "mongol/io"
  ],
  [
   "montajn/o",
   "mont/ajno"
+ ],
+ [
+  "mont/an/o",
+  "mont/ano"
  ],
  [
   "morav/i/o",
@@ -1238,6 +1398,14 @@
  [
   "ne/forges/u/mi/n/o",
   "ne/forges/u/mi/no"
+ ],
+ [
+  "nekr/o/log/o",
+  "nekrolog/o"
+ ],
+ [
+  "neo/log/ism/o",
+  "neologism/o"
  ],
  [
   "ne/produkt/iv/a",
@@ -1296,6 +1464,10 @@
   "o/fend/iĝ/i"
  ],
  [
+  "oksi/gen/o",
+  "oksigen/o"
+ ],
+ [
   "ole/ac/oj",
   "oleac/oj"
  ],
@@ -1304,12 +1476,24 @@
   "o/ni/n"
  ],
  [
+  "optim/ism/o",
+  "optimism/o"
+ ],
+ [
+  "organ/ism/o",
+  "organism/o"
+ ],
+ [
   "organ/iz/a",
   "organiz/a"
  ],
  [
   "organ/iz/ad/o",
   "organiz/ad/o"
+ ],
+ [
+  "organ/iz/aĵ/o",
+  "organiz/aĵ/o"
  ],
  [
   "organ/iz/ant/o",
@@ -1326,6 +1510,10 @@
  [
   "organ/iz/o",
   "organiz/o"
+ ],
+ [
+  "oriental/ism/o",
+  "orientalism/o"
  ],
  [
   "orto/grafi/o",
@@ -1354,6 +1542,10 @@
  [
   "para/magnet/ism/o",
   "paramagnet/ism/o"
+ ],
+ [
+  "paran/o",
+  "p/ar/an/o"
  ],
  [
   "para/tif/o",
@@ -1476,6 +1668,18 @@
   "prus/io"
  ],
  [
+  "pseŭdo/nim/o",
+  "pseŭdonim/o"
+ ],
+ [
+  "psik/o/logi/a",
+  "psikologi/a"
+ ],
+ [
+  "psik/o/logi/o",
+  "psikologi/o"
+ ],
+ [
   "radi/ator/o",
   "radiator/o"
  ],
@@ -1485,7 +1689,7 @@
  ],
  [
   "radi/o/foni/o",
-  "radio/foni/o"
+  "radiofoni/o"
  ],
  [
   "radi/o/graf/i",
@@ -1508,6 +1712,10 @@
   "ranunkolac/oj"
  ],
  [
+  "ras/ist/o",
+  "rasist/o"
+ ],
+ [
   "re/e/n",
   "re/en"
  ],
@@ -1524,6 +1732,22 @@
   "re/organiz/i"
  ],
  [
+  "re/prezent/ant/o",
+  "reprezent/ant/o"
+ ],
+ [
+  "re/sum/e",
+  "resum/e"
+ ],
+ [
+  "re/sum/i",
+  "resum/i"
+ ],
+ [
+  "re/sum/o",
+  "resum/o"
+ ],
+ [
   "rezist/anc/o",
   "rezistanc/o"
  ],
@@ -1533,7 +1757,7 @@
  ],
  [
   "rom/i/o",
-  "rom/io"
+  "romi/o"
  ],
  [
   "ruĝ/e/n/ŝov/iĝ/o",
@@ -1541,7 +1765,7 @@
  ],
  [
   "ruman/i/o",
-  "ruman/io"
+  "rumani/o"
  ],
  [
   "rus/i/a",
@@ -1560,16 +1784,16 @@
   "saks/io"
  ],
  [
-  "sam/o",
-  "s/am/o"
- ],
- [
   "sarmat/i/o",
   "sarmat/io"
  ],
  [
   "saturn/ism/o",
   "saturn/ismo"
+ ],
+ [
+  "sen/dot/a",
+  "send/ot/a"
  ],
  [
   "sen/egal/a",
@@ -1598,6 +1822,18 @@
  [
   "silog/ism/o",
   "silogism/o"
+ ],
+ [
+  "si/n/gard/a",
+  "sin/gard/a"
+ ],
+ [
+  "sin/onim/o",
+  "sinonim/o"
+ ],
+ [
+  "si/n/prezent/o",
+  "sin/prezent/o"
  ],
  [
   "si/n/sekv/a",
@@ -1636,6 +1872,10 @@
   "sloven/io"
  ],
  [
+  "soci/an/o",
+  "soci/ano"
+ ],
+ [
   "solan/ac/oj",
   "solanac/oj"
  ],
@@ -1654,6 +1894,10 @@
  [
   "sovet/i/o",
   "sovet/io"
+ ],
+ [
+  "sovet/uni/o",
+  "sovetuni/o"
  ],
  [
   "spektr/o/skop/i/o",
@@ -1776,12 +2020,24 @@
   "taĝik/io"
  ],
  [
+  "tele/fon/a",
+  "telefon/a"
+ ],
+ [
   "tele/fon/ad/o",
   "telefon/ad/o"
  ],
  [
   "tele/fon/i",
   "telefon/i"
+ ],
+ [
+  "tele/fon/o",
+  "telefon/o"
+ ],
+ [
+  "tele/fon/vok/o",
+  "telefon/vok/o"
  ],
  [
   "tele/graf/i",
@@ -1814,6 +2070,10 @@
  [
   "term/ik/a",
   "termik/a"
+ ],
+ [
+  "tip/o/graf/o",
+  "tipograf/o"
  ],
  [
   "ton/al/o",
@@ -2264,6 +2524,10 @@
   "citrat/o"
  ],
  [
+  "civil/iz/aci/a",
+  "civilizaci/a"
+ ],
+ [
   "ĉad/land/o",
   "ĉadland/o"
  ],
@@ -2310,6 +2574,14 @@
  [
   "dent/in/o",
   "dentin/o"
+ ],
+ [
+  "detekt/iv/a",
+  "detektiv/a"
+ ],
+ [
+  "detekt/iv/i",
+  "detektiv/i"
  ],
  [
   "detrojt/river/o",
@@ -2398,6 +2670,14 @@
  [
   "eskal/imun/a",
   "eskalimun/a"
+ ],
+ [
+  "etan/ol/at/o",
+  "etanol/at/o"
+ ],
+ [
+  "etim/o/logi/a",
+  "etimologi/a"
  ],
  [
   "ezofag/o/skop/i/o",
@@ -2600,6 +2880,10 @@
   "hidrid/i"
  ],
  [
+  "hidr/o/gen/a",
+  "hidrogen/a"
+ ],
+ [
   "hidr/oksi/l/o",
   "hidr/oksi/lo"
  ],
@@ -2610,6 +2894,10 @@
  [
   "hiper/estez/i/o",
   "hiper/estez/io"
+ ],
+ [
+  "hipo/centr/o",
+  "hipocentr/o"
  ],
  [
   "hipo/glos/o",
@@ -2626,6 +2914,10 @@
  [
   "hom/ed/oj",
   "homed/oj"
+ ],
+ [
+  "honorat/o",
+  "honor/at/o"
  ],
  [
   "ĥilopod/oj",
@@ -2661,7 +2953,7 @@
  ],
  [
   "jugoslav/i/a",
-  "jugoslav/ia"
+  "jugoslavi/a"
  ],
  [
   "juĝ/ot/o",
@@ -2980,6 +3272,14 @@
   "ojstred/oj"
  ],
  [
+  "oksi/gen/i",
+  "oksigen/i"
+ ],
+ [
+  "oksi/gen/a",
+  "oksigen/a"
+ ],
+ [
   "okul/er/o",
   "okuler/o"
  ],
@@ -2990,6 +3290,10 @@
  [
   "oratori/an/o",
   "oratori/ano"
+ ],
+ [
+  "organ/ism/a",
+  "organism/a"
  ],
  [
   "organ/iz/iĝ/i",
@@ -3042,6 +3346,10 @@
  [
   "paser/ed/oj",
   "pasered/oj"
+ ],
+ [
+  "pazi/grafi/o",
+  "pazigrafi/o"
  ],
  [
   "pelag/an/o",
@@ -3160,6 +3468,10 @@
   "provirus/o"
  ],
  [
+  "pseŭdo/nim/a",
+  "pseŭdonim/a"
+ ],
+ [
   "psik/o/pat/o",
   "psikopat/o"
  ],
@@ -3229,7 +3541,7 @@
  ],
  [
   "rom/i/a",
-  "rom/ia"
+  "romi/a"
  ],
  [
   "sakar/id/o",
@@ -3544,6 +3856,10 @@
   "vest/iĝ/o"
  ],
  [
+  "vide/aĵ/o",
+  "vid/e/aĵ/o"
+ ],
+ [
   "viper/ed/oj",
   "vipered/oj"
  ],
@@ -3586,6 +3902,10 @@
  [
   "tio/karb/oksi/amid/o",
   "tiokarboksi/amid/o"
+ ],
+ [
+  "limf/angi/om/o",
+  "limf/angiom/o"
  ],
  [
   "butilhidroksi/aniz/ol/o",
@@ -3646,6 +3966,10 @@
  [
   "tri/konus/dent/ul/oj",
   "trikonus/dent/ul/oj"
+ ],
+ [
+  "vitr/o/dent/in/o",
+  "vitr/o/dentin/o"
  ],
  [
   "supr/e/n/fald/i",
@@ -3800,12 +4124,20 @@
   "ĉurov/o"
  ],
  [
+  "fiŝ/ov/ar/o",
+  "fiŝ/ovar/o"
+ ],
+ [
   "patr/in/patr/o",
   "patrin/patr/o"
  ],
  [
   "enter/o/peptid/az/o",
   "enter/o/peptidaz/o"
+ ],
+ [
+  "roz/et/plant/o",
+  "rozet/plant/o"
  ],
  [
   "klor/platen/at/o",
@@ -3826,6 +4158,10 @@
  [
   "fiks/radik/et/oj",
   "fiks/radiket/oj"
+ ],
+ [
+  "fe/in/rakont/o",
+  "fein/rakont/o"
  ],
  [
   "di/sakar/id/o",
@@ -3902,6 +4238,10 @@
  [
   "ter/pom/skab/o",
   "terpom/skab/o"
+ ],
+ [
+  "motor/skut/il/o",
+  "motor/skutil/o"
  ],
  [
   "palatal/alveol/son/o",

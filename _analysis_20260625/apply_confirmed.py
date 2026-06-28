@@ -135,21 +135,19 @@ def process(key, write):
         os.remove(lp(tmp)); print(f"  [{key}] 除去{removed} 追加{len(corrs)} (未書込)")
     return combined
 
-# JP検証
-combined=process('JP', False)
-sys.path.insert(0, BASE+APPS['JP'][0])
-from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
-DATA=BASE+APPS['JP'][0]+r"\Appの运行に使用する各类文件"
-ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
-g_=combined["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l_=combined["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c_=combined["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
-def segplain(w): return re.sub(r'<[^>]+>','',orch(w,ps,l_,pl,g_,c_,FMT))
-print("\n  検証(確定語の再分解):")
-ok=0; ng=[]
-for e in confirmed:
-    full=''.join(p for p in e['target'].split('/') if p)
-    got=segplain(full)
-    # 期待: targetの各片(語尾処理後)が分離。ざっくり「偽語根が消えたか」を目視
-    print(f"    {full:20s} -> {got}")
+# JP検証 (SKIP_VERIFY=1 で省略=反復高速化)
+if not os.environ.get('SKIP_VERIFY'):
+    combined=process('JP', False)
+    sys.path.insert(0, BASE+APPS['JP'][0])
+    from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement as orch, import_placeholders as imp
+    DATA=BASE+APPS['JP'][0]+r"\Appの运行に使用する各类文件"
+    ps=imp(lp(DATA+r"\占位符(placeholders)_%1854%-%4934%_文字列替换skip用.txt")); pl=imp(lp(DATA+r"\占位符(placeholders)_@5134@-@9728@_局部文字列替换结果捕捉用.txt"))
+    g_=combined["全域替换用のリスト(列表)型配列(replacements_final_list)"]; l_=combined["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]; c_=combined["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
+    def segplain(w): return re.sub(r'<[^>]+>','',orch(w,ps,l_,pl,g_,c_,FMT))
+    print("\n  検証(確定語の再分解):")
+    for e in confirmed[:40]:
+        full=''.join(p for p in e['target'].split('/') if p)
+        print(f"    {full:20s} -> {segplain(full)}")
 if WRITE:
     process('ZH', True); process('KO', True); process('JP', True)
     print("\n3アプリ書込完了")

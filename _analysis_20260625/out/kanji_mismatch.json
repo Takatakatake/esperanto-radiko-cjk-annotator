@@ -897,7 +897,7 @@
  [
   "agronomo",
   "农o学ᴺᴼo",
-  "农o学o"
+  "农o名o"
  ],
  [
   "aĝdiferenco",
@@ -2222,7 +2222,7 @@
  [
   "anestezi",
   "无ᴬ感ᴱi",
-  "无感i"
+  "员感i"
  ],
  [
   "anestezilo",
@@ -3163,6 +3163,11 @@
   "arkeopterigo",
   "古ᴬᴼ翅ᴾᴳo",
   "古翅o"
+ ],
+ [
+  "arkiduko",
+  "首ᴬ公爵o",
+  "arkiduko"
  ],
  [
   "arkitekturo",
@@ -5510,6 +5515,21 @@
   "吹乐o"
  ],
  [
+  "blufanto",
+  "骗ᴮ在o",
+  "唬在o"
+ ],
+ [
+  "blufi",
+  "骗ᴮi",
+  "唬i"
+ ],
+ [
+  "blufo",
+  "骗ᴮo",
+  "唬o"
+ ],
+ [
   "blukopio",
   "蓝复ᴷo",
   "蓝复o"
@@ -7535,6 +7555,11 @@
   "销o"
  ],
  [
+  "decibelo",
+  "分ᴰᶜbelo",
+  "decibelo"
+ ],
+ [
   "decidkapabla",
   "决能ᴷa",
   "决能a"
@@ -8597,7 +8622,7 @@
  [
   "diametro",
   "通ᴰ测ᴹᴱo",
-  "通测o"
+  "通米o"
  ],
  [
   "dianto",
@@ -8707,7 +8732,7 @@
  [
   "diferenci",
   "异ᴰi",
-  "diferenci"
+  "异i"
  ],
  [
   "diferencialo",
@@ -9598,6 +9623,16 @@
   "domano",
   "屋员ᴬo",
   "屋员o"
+ ],
+ [
+  "domen",
+  "屋en",
+  "屋内"
+ ],
+ [
+  "domeno",
+  "骨牌o",
+  "屋内o"
  ],
  [
   "domina",
@@ -12630,6 +12665,11 @@
   "ergo计o"
  ],
  [
+  "ergotino",
+  "麦角ino",
+  "ergotino"
+ ],
+ [
   "ermenfelo",
   "鼠ᴱ皮ᶠo",
   "鼠皮ᶠo"
@@ -13028,6 +13068,11 @@
   "etŝpura",
   "小距ˢ̂a",
   "小距̂a"
+ ],
+ [
+  "eŭfemisme",
+  "eu^fem主义e",
+  "eŭfem主义e"
  ],
  [
   "eŭforbiacoj",
@@ -28595,6 +28640,11 @@
   "月o"
  ],
  [
+  "lunduono",
+  "月二分o",
+  "月duono"
+ ],
+ [
   "luneklipso",
   "月食ᴱo",
   "月食o"
@@ -30892,7 +30942,7 @@
  [
   "meningito",
   "脑膜炎ᵀo",
-  "脑膜炎o"
+  "脑膜受o"
  ],
  [
   "mensa",
@@ -34137,7 +34187,7 @@
  [
   "nitrato",
   "氮盐ᴬo",
-  "氮盐o"
+  "氮被o"
  ],
  [
   "nitrido",
@@ -35227,7 +35277,7 @@
  [
   "organizaĵo",
   "器ᴼ化物o",
-  "器化物o"
+  "组物o"
  ],
  [
   "organizanto",
@@ -36708,6 +36758,21 @@
   "patrostita",
   "锅烤ᴿ受a",
   "锅烤受a"
+ ],
+ [
+  "paŭsaĵo",
+  "复ᴾ物o",
+  "摹物o"
+ ],
+ [
+  "paŭsi",
+  "复ᴾi",
+  "摹i"
+ ],
+ [
+  "paŭspapero",
+  "复ᴾ纸o",
+  "摹纸o"
  ],
  [
   "pavilono",
@@ -42380,6 +42445,11 @@
   "再求i"
  ],
  [
+  "reprezentanto",
+  "再呈在o",
+  "表在o"
+ ],
+ [
   "repudii",
   "离ᴿi",
   "离i"
@@ -44635,6 +44705,11 @@
   "无律a"
  ],
  [
+  "sendota",
+  "无嫁妆a",
+  "送待a"
+ ],
+ [
   "sendrata",
   "无线ᴰa",
   "无线a"
@@ -45685,6 +45760,11 @@
   "己n表o"
  ],
  [
+  "singarda",
+  "己n守a",
+  "怀守a"
+ ],
+ [
   "singulara",
   "单ˢa",
   "单a"
@@ -45737,7 +45817,7 @@
  [
   "sinonimo",
   "共ˢ名ᴼo",
-  "共名o"
+  "怀名o"
  ],
  [
   "sinoptika",
@@ -45753,6 +45833,11 @@
   "sinovio",
   "滑ˢᴺo",
   "滑o"
+ ],
+ [
+  "sinprezento",
+  "己n呈o",
+  "怀呈o"
  ],
  [
   "sinpropono",
@@ -48013,6 +48098,11 @@
   "striglilo",
   "刷ˢ具o",
   "刷具o"
+ ],
+ [
+  "striknino",
+  "木ˢᴺino",
+  "striknino"
  ],
  [
   "strikokomitato",
@@ -50837,7 +50927,7 @@
  [
   "telefonvoko",
   "远声ᶠᴼ呼o",
-  "远声ᶠ呼o"
+  "远底呼o"
  ],
  [
   "telefotografi",
@@ -55310,6 +55400,11 @@
   "腺似炎o"
  ],
  [
+  "adenomo",
+  "腺ᴬ瘤o",
+  "adenomo"
+ ],
+ [
   "adenpatio",
   "腺ᴬ病ᴾo",
   "腺病o"
@@ -56020,6 +56115,11 @@
   "虫ⱽ科oj"
  ],
  [
+  "amanitino",
+  "鹅膏ino",
+  "amanitino"
+ ],
+ [
   "amaraĵo",
   "苦ᴬ物o",
   "苦物o"
@@ -56302,7 +56402,7 @@
  [
   "anestezanto",
   "无ᴬ感ᴱ在o",
-  "无感在o"
+  "员感在o"
  ],
  [
   "anestezantaĵo",
@@ -58135,6 +58235,11 @@
   "木o"
  ],
  [
+  "boldino",
+  "木ᴮᴸino",
+  "boldino"
+ ],
+ [
   "boletacoj",
   "菇科ᴬoj",
   "菇科oj"
@@ -58248,6 +58353,11 @@
   "botulo",
   "菌ᴮᵀo",
   "菌o"
+ ],
+ [
+  "botulino",
+  "菌ᴮᵀino",
+  "botulino"
  ],
  [
   "botulismo",
@@ -59600,6 +59710,11 @@
   "草o"
  ],
  [
+  "dioskoreino",
+  "草ᴰᴵino",
+  "dioskoreino"
+ ],
+ [
   "diospiro",
   "柿ᴰo",
   "柿o"
@@ -59663,6 +59778,11 @@
   "dipterokarpacoj",
   "木ᴰᵀ科ᴬoj",
   "木科oj"
+ ],
+ [
+  "disdegni",
+  "蔑i",
+  "散degni"
  ],
  [
   "diskejo",
@@ -59978,6 +60098,11 @@
   "efedro",
   "木ᴱᶠo",
   "木o"
+ ],
+ [
+  "efedrino",
+  "木ᴱᶠino",
+  "麻黄碱o"
  ],
  [
   "efektivo",
@@ -60760,6 +60885,11 @@
   "信a"
  ],
  [
+  "epiteliomo",
+  "上皮瘤o",
+  "epiteliomo"
+ ],
+ [
   "epitomi",
   "概ᴱi",
   "概i"
@@ -60873,6 +61003,11 @@
   "eskulo",
   "木ᴱˢo",
   "木o"
+ ],
+ [
+  "eskulino",
+  "木ᴱˢino",
+  "eskulino"
  ],
  [
   "esperantano",
@@ -61895,6 +62030,11 @@
   "胃a"
  ],
  [
+  "gastrino",
+  "胃ᴳino",
+  "gastrino"
+ ],
+ [
   "gastrito",
   "胃ᴳ炎ᵀo",
   "胃炎o"
@@ -62243,6 +62383,11 @@
   "glutamato",
   "谷氨盐ᴬo",
   "谷氨盐o"
+ ],
+ [
+  "glutenino",
+  "面筋ino",
+  "glutenino"
  ],
  [
   "gnafalio",
@@ -62900,6 +63045,11 @@
   "木o"
  ],
  [
+  "hematoksilino",
+  "木ᴴᵀino",
+  "hematoksilino"
+ ],
+ [
   "hematopo",
   "鸟ᴴᴹo",
   "鸟o"
@@ -63298,6 +63448,11 @@
   "hirtulo",
   "蓬ᴴ者o",
   "蓬者o"
+ ],
+ [
+  "hirudino",
+  "吸血虫ino",
+  "hirudino"
  ],
  [
   "hirundedoj",
@@ -64090,6 +64245,16 @@
   "ismail员o"
  ],
  [
+  "iteracio",
+  "复ᴵo",
+  "迭o"
+ ],
+ [
+  "iteracii",
+  "复ᴵi",
+  "迭i"
+ ],
+ [
   "izatido",
   "草ᴵᶻo",
   "草o"
@@ -64278,6 +64443,11 @@
   "johimbo",
   "木ᴶᴴo",
   "木o"
+ ],
+ [
+  "johimbino",
+  "木ᴶᴴino",
+  "johimbino"
  ],
  [
   "jonosfero",
@@ -64725,6 +64895,11 @@
   "鹿女o"
  ],
  [
+  "kapsikino",
+  "辣ino",
+  "kapsikino"
+ ],
+ [
   "kapucenaĵo",
   "帽ᴷᶜ物o",
   "帽ᶜ物o"
@@ -65168,6 +65343,11 @@
   "kerato",
   "角ᴷᵀo",
   "角o"
+ ],
+ [
+  "keratino",
+  "角ᴷᵀino",
+  "keratino"
  ],
  [
   "keratito",
@@ -65762,7 +65942,7 @@
  [
   "komunumano",
   "共ᴷᴹum员ᴬo",
-  "共um员o"
+  "共umano"
  ],
  [
   "konceda",
@@ -65893,6 +66073,11 @@
   "kongro",
   "鱼ᴷᴺo",
   "鱼o"
+ ],
+ [
+  "koniino",
+  "毒参ino",
+  "koniino"
  ],
  [
   "konikoido",
@@ -66605,6 +66790,11 @@
   "木盐o"
  ],
  [
+  "kumarino",
+  "木ᴷᴹino",
+  "kumarino"
+ ],
+ [
   "kupreso",
   "木ᴷˢo",
   "木o"
@@ -66673,6 +66863,11 @@
   "kvasio",
   "木ᴷᴬo",
   "木o"
+ ],
+ [
+  "kvasiino",
+  "木ᴷᴬino",
+  "kvasiino"
  ],
  [
   "kvecalo",
@@ -67155,6 +67350,11 @@
   "草o"
  ],
  [
+  "lignino",
+  "木ino",
+  "lignino"
+ ],
+ [
   "liĝeo",
   "虫ᴸᴳ̂o",
   "虫o"
@@ -67233,6 +67433,11 @@
   "lineara",
   "线ᴸᴿa",
   "线a"
+ ],
+ [
+  "lipomo",
+  "lip瘤o",
+  "lipomo"
  ],
  [
   "lipido",
@@ -67810,6 +68015,11 @@
   "黑血o"
  ],
  [
+  "melanino",
+  "黑ᴹino",
+  "melanino"
+ ],
+ [
   "meloo",
   "虫ᴹo",
   "虫o"
@@ -68030,6 +68240,11 @@
   "蛛o"
  ],
  [
+  "migdalino",
+  "扁桃ino",
+  "migdalino"
+ ],
+ [
   "mikobakterio",
   "菌ᴹ菌ᴮo",
   "菌菌o"
@@ -68213,6 +68428,11 @@
   "mitrito",
   "冠ᴹ炎ᵀo",
   "冠受o"
+ ],
+ [
+  "mjelino",
+  "髓ino",
+  "mjelino"
  ],
  [
   "mjelopatio",
@@ -68763,6 +68983,11 @@
   "neŭrologo",
   "神经ᴺᵁ̆o学家o",
   "神经̆o学家o"
+ ],
+ [
+  "neŭromo",
+  "神经ᴺᵁ̆瘤o",
+  "neŭromo"
  ],
  [
   "neŭrastenia",
@@ -69650,6 +69875,11 @@
   "草o"
  ],
  [
+  "pankreatino",
+  "胰ino",
+  "pankreatino"
+ ],
+ [
   "pankreatito",
   "胰炎ᵀo",
   "胰炎o"
@@ -69680,6 +69910,11 @@
   "panto记o"
  ],
  [
+  "papajino",
+  "木瓜ino",
+  "papajino"
+ ],
+ [
   "papaŭo",
   "木ᴾᴾo",
   "木o"
@@ -69693,6 +69928,11 @@
   "papavero",
   "草ᴾⱽo",
   "草o"
+ ],
+ [
+  "papaverino",
+  "草ᴾⱽino",
+  "papaverino"
  ],
  [
   "papilomozo",
@@ -69943,6 +70183,11 @@
   "paŭlovnio",
   "木ᴾⱽo",
   "木o"
+ ],
+ [
+  "paŭso",
+  "复ᴾo",
+  "摹o"
  ],
  [
   "pavimisto",
@@ -70385,6 +70630,11 @@
   "木o"
  ],
  [
+  "pilokarpino",
+  "木ᴾᴷino",
+  "pilokarpino"
+ ],
+ [
   "pilozelo",
   "草ᴾᴸo",
   "草o"
@@ -70488,6 +70738,11 @@
   "piretro",
   "草ᴾᴵo",
   "草o"
+ ],
+ [
+  "piretrino",
+  "草ᴾᴵino",
+  "piretrino"
  ],
  [
   "pirgeometro",
@@ -70628,6 +70883,11 @@
   "platenato",
   "白金盐ᴬo",
   "白金被o"
+ ],
+ [
+  "platformo",
+  "纲领o",
+  "扁形o"
  ],
  [
   "platicerio",
@@ -72090,6 +72350,11 @@
   "醋栗糖o"
  ],
  [
+  "ricinino",
+  "麻ᴿino",
+  "ricinino"
+ ],
+ [
   "ricinlektino",
   "麻ᴿlektino",
   "麻lektino"
@@ -72448,6 +72713,11 @@
   "saldado",
   "余ˢ行o",
   "余行o"
+ ],
+ [
+  "salikino",
+  "柳ino",
+  "salikino"
  ],
  [
   "salikato",
@@ -73268,6 +73538,11 @@
   "simieska",
   "猿风ᴱa",
   "猿风a"
+ ],
+ [
+  "simpatino",
+  "交感ino",
+  "simpatino"
  ],
  [
   "simpatektomio",
@@ -74285,6 +74560,11 @@
   "木o"
  ],
  [
+  "strofantino",
+  "木ˢᴼino",
+  "strofantino"
+ ],
+ [
   "strofario",
   "菌ˢᵀo",
   "菌o"
@@ -74343,6 +74623,11 @@
   "suedoj",
   "猪ˢ科ᴱoj",
   "猪科oj"
+ ],
+ [
+  "suberino",
+  "木栓ino",
+  "suberino"
  ],
  [
   "suberozo",
@@ -75063,6 +75348,11 @@
   "terbio",
   "金ᵀᴮo",
   "金o"
+ ],
+ [
+  "terebintino",
+  "木ᵀᴿ女o",
+  "terebintino"
  ],
  [
   "teredo",
@@ -76090,6 +76380,11 @@
   "虫o"
  ],
  [
+  "vanilino",
+  "香兰ino",
+  "vanilino"
+ ],
+ [
   "vara",
   "内ⱽa",
   "货a"
@@ -76258,6 +76553,11 @@
   "vibrafono",
   "振a声ᶠᴼo",
   "振a声ᶠo"
+ ],
+ [
+  "videaĵo",
+  "视ⱽ物o",
+  "见e物o"
  ],
  [
   "viglado",
@@ -81575,6 +81875,11 @@
   "内渗o"
  ],
  [
+  "fiŝovaro",
+  "鱼卵群o",
+  "鱼ovaro"
+ ],
+ [
   "aldozo",
   "中音糖ᴼo",
   "中音糖o"
@@ -82433,6 +82738,11 @@
   "pasrajto",
   "过ᴾ权o",
   "过权o"
+ ],
+ [
+  "feinrakonto",
+  "妖精女述o",
+  "fein述o"
  ],
  [
   "superrangeco",

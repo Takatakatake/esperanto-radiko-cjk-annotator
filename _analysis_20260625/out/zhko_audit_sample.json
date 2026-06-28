@@ -1,0 +1,1962 @@
+[
+ {
+  "root": "Di##",
+  "ja": "神(唯一神)",
+  "zh": "Di##",
+  "ko": "Di##",
+  "core": false
+ },
+ {
+  "root": "acer",
+  "ja": "[植]カエデ",
+  "zh": "枫树",
+  "ko": "단풍나무",
+  "core": false
+ },
+ {
+  "root": "adrian",
+  "ja": "アドリアン",
+  "zh": "阿德里安",
+  "ko": "아드리안",
+  "core": false
+ },
+ {
+  "root": "agamemnon",
+  "ja": "アガメムノン",
+  "zh": "阿伽门农",
+  "ko": "아가멤논",
+  "core": false
+ },
+ {
+  "root": "ajun",
+  "ja": "アイウン",
+  "zh": "阿尤恩",
+  "ko": "엘아이운",
+  "core": false
+ },
+ {
+  "root": "akson",
+  "ja": "軸索",
+  "zh": "轴突",
+  "ko": "축삭",
+  "core": false
+ },
+ {
+  "root": "albumin",
+  "ja": "アルブミン",
+  "zh": "白蛋白",
+  "ko": "알부민",
+  "core": false
+ },
+ {
+  "root": "alicikl",
+  "ja": "脂環式",
+  "zh": "脂环",
+  "ko": "지환식",
+  "core": false
+ },
+ {
+  "root": "alp",
+  "ja": "アルプス",
+  "zh": "阿尔卑斯",
+  "ko": "알프스",
+  "core": false
+ },
+ {
+  "root": "ambivalenc",
+  "ja": "両価性",
+  "zh": "矛盾心理",
+  "ko": "양가감정",
+  "core": false
+ },
+ {
+  "root": "amonit",
+  "ja": "アンモナイト",
+  "zh": "菊石",
+  "ko": "암모나이트",
+  "core": false
+ },
+ {
+  "root": "anastigmat",
+  "ja": "無非点収差",
+  "zh": "无像散",
+  "ko": "비점수차없음",
+  "core": false
+ },
+ {
+  "root": "anhidrid",
+  "ja": "無水物",
+  "zh": "酸酐",
+  "ko": "무수물",
+  "core": false
+ },
+ {
+  "root": "antidot",
+  "ja": "解毒剤",
+  "zh": "解毒剂",
+  "ko": "해독제",
+  "core": false
+ },
+ {
+  "root": "aparten",
+  "ja": "(に)所属する",
+  "zh": "属于",
+  "ko": "속하다",
+  "core": false
+ },
+ {
+  "root": "aproksim",
+  "ja": "近似",
+  "zh": "近似",
+  "ko": "근사",
+  "core": false
+ },
+ {
+  "root": "argus",
+  "ja": "アルゴス",
+  "zh": "阿耳戈斯",
+  "ko": "아르고스",
+  "core": false
+ },
+ {
+  "root": "arm",
+  "ja": "武器;武装",
+  "zh": "武器",
+  "ko": "무기",
+  "core": false
+ },
+ {
+  "root": "arĥeolog",
+  "ja": "考古学者",
+  "zh": "考古学家",
+  "ko": "고고학자",
+  "core": false
+ },
+ {
+  "root": "aspirator",
+  "ja": "吸引器",
+  "zh": "吸引器",
+  "ko": "흡인기",
+  "core": false
+ },
+ {
+  "root": "ating",
+  "ja": "(に)着く",
+  "zh": "达成",
+  "ko": "도달하다",
+  "core": false
+ },
+ {
+  "root": "avogadr",
+  "ja": "アボガドロ",
+  "zh": "阿伏伽德罗",
+  "ko": "아보가드로",
+  "core": false
+ },
+ {
+  "root": "aŭgmentativ",
+  "ja": "増大辞",
+  "zh": "增大词",
+  "ko": "확대사",
+  "core": false
+ },
+ {
+  "root": "ba",
+  "ja": "へっ",
+  "zh": "呸",
+  "ko": "흥",
+  "core": false
+ },
+ {
+  "root": "balaton",
+  "ja": "バラトン湖",
+  "zh": "巴拉顿湖",
+  "ko": "벌러톤호",
+  "core": false
+ },
+ {
+  "root": "banus",
+  "ja": "総督",
+  "zh": "总督",
+  "ko": "총독",
+  "core": false
+ },
+ {
+  "root": "baskul",
+  "ja": "傾動",
+  "zh": "翻转",
+  "ko": "기울임",
+  "core": false
+ },
+ {
+  "root": "bef",
+  "ja": "ベルギーフラン",
+  "zh": "比利时法郎",
+  "ko": "벨기에프랑",
+  "core": false
+ },
+ {
+  "root": "beot",
+  "ja": "ボイオティア",
+  "zh": "彼奥提亚",
+  "ko": "보이오티아",
+  "core": false
+ },
+ {
+  "root": "bigarad",
+  "ja": "ダイダイ",
+  "zh": "酸橙",
+  "ko": "쓴귤",
+  "core": false
+ },
+ {
+  "root": "biv",
+  "ja": "琵琶",
+  "zh": "琵琶",
+  "ko": "비파",
+  "core": false
+ },
+ {
+  "root": "bob",
+  "ja": "ボブスレー",
+  "zh": "雪车",
+  "ko": "봅슬레이",
+  "core": false
+ },
+ {
+  "root": "borag",
+  "ja": "ルリジサ",
+  "zh": "琉璃苣",
+  "ko": "보리지",
+  "core": false
+ },
+ {
+  "root": "bran",
+  "ja": "[農]ふすま",
+  "zh": "麸皮",
+  "ko": "겨",
+  "core": false
+ },
+ {
+  "root": "brn",
+  "ja": "ブルノ",
+  "zh": "布尔诺",
+  "ko": "브르노",
+  "core": false
+ },
+ {
+  "root": "bugenvili",
+  "ja": "ブーゲンビル",
+  "zh": "布干维尔",
+  "ko": "부건빌",
+  "core": false
+ },
+ {
+  "root": "bus",
+  "ja": "バス",
+  "zh": "公共汽车",
+  "ko": "버스",
+  "core": false
+ },
+ {
+  "root": "celsius",
+  "ja": "セルシウス",
+  "zh": "摄氏",
+  "ko": "섭씨",
+  "core": false
+ },
+ {
+  "root": "cerumen",
+  "ja": "耳垢",
+  "zh": "耳垢",
+  "ko": "귀지",
+  "core": false
+ },
+ {
+  "root": "ciklosporin",
+  "ja": "シクロスポリン",
+  "zh": "环孢素",
+  "ko": "사이클로스포린",
+  "core": false
+ },
+ {
+  "root": "cirkuler",
+  "ja": "回覧状",
+  "zh": "通知书",
+  "ko": "회람",
+  "core": false
+ },
+ {
+  "root": "dak",
+  "ja": "ダッカ",
+  "zh": "达卡",
+  "ko": "다카",
+  "core": false
+ },
+ {
+  "root": "daŭlagir",
+  "ja": "ダウラギリ",
+  "zh": "道拉吉里",
+  "ko": "다울라기리",
+  "core": false
+ },
+ {
+  "root": "dekstrin",
+  "ja": "デキストリン",
+  "zh": "糊精",
+  "ko": "덱스트린",
+  "core": false
+ },
+ {
+  "root": "deodar",
+  "ja": "ヒマラヤ杉",
+  "zh": "喜马拉雅杉",
+  "ko": "히말라야삼나무",
+  "core": false
+ },
+ {
+  "root": "deŭteri",
+  "ja": "重水素",
+  "zh": "氘",
+  "ko": "중수소",
+  "core": false
+ },
+ {
+  "root": "difekt",
+  "ja": "(を)損傷する",
+  "zh": "损坏",
+  "ko": "손상하다",
+  "core": false
+ },
+ {
+  "root": "diod",
+  "ja": "ダイオード",
+  "zh": "二极管",
+  "ko": "다이오드",
+  "core": false
+ },
+ {
+  "root": "disk",
+  "ja": "円盤",
+  "zh": "圆盘",
+  "ko": "원반",
+  "core": false
+ },
+ {
+  "root": "docent",
+  "ja": "講師",
+  "zh": "讲师",
+  "ko": "강사",
+  "core": false
+ },
+ {
+  "root": "dors",
+  "ja": "背",
+  "zh": "背部",
+  "ko": "등",
+  "core": false
+ },
+ {
+  "root": "duar",
+  "ja": "遊牧宿営",
+  "zh": "游牧营地",
+  "ko": "유목천막",
+  "core": false
+ },
+ {
+  "root": "edelvejs",
+  "ja": "エーデルワイス",
+  "zh": "雪绒花",
+  "ko": "에델바이스",
+  "core": false
+ },
+ {
+  "root": "ek!",
+  "ja": "開始!",
+  "zh": "开始!",
+  "ko": "시작!",
+  "core": false
+ },
+ {
+  "root": "eksponencial",
+  "ja": "指数関数",
+  "zh": "指数函数",
+  "ko": "지수함수",
+  "core": false
+ },
+ {
+  "root": "ekzoftalmi",
+  "ja": "眼球突出",
+  "zh": "眼球突出",
+  "ko": "안구돌출",
+  "core": false
+ },
+ {
+  "root": "elizabet",
+  "ja": "[女子名]エリザベス",
+  "zh": "伊丽莎白",
+  "ko": "엘리자베스",
+  "core": false
+ },
+ {
+  "root": "empetr",
+  "ja": "ガンコウラン属",
+  "zh": "岩高兰属",
+  "ko": "시로미속",
+  "core": false
+ },
+ {
+  "root": "entjer",
+  "ja": "整数",
+  "zh": "整数",
+  "ko": "정수",
+  "core": false
+ },
+ {
+  "root": "episkop",
+  "ja": "[宗]司教",
+  "zh": "主教",
+  "ko": "주교",
+  "core": false
+ },
+ {
+  "root": "eritren",
+  "ja": "デイゴ属",
+  "zh": "刺桐属",
+  "ko": "데이고속",
+  "core": false
+ },
+ {
+  "root": "esper",
+  "ja": "(を)希望する",
+  "zh": "期望",
+  "ko": "희망하다",
+  "core": false
+ },
+ {
+  "root": "etuz",
+  "ja": "ドクゼリモドキ属",
+  "zh": "毒芹属",
+  "ko": "개독미나리속",
+  "core": false
+ },
+ {
+  "root": "eŭpne",
+  "ja": "正常呼吸",
+  "zh": "正常呼吸",
+  "ko": "정상호흡",
+  "core": false
+ },
+ {
+  "root": "falarop",
+  "ja": "ヒレアシシギ",
+  "zh": "瓣蹼鹬",
+  "ko": "지느러미발도요",
+  "core": false
+ },
+ {
+  "root": "farĉ",
+  "ja": "詰め物",
+  "zh": "馅料",
+  "ko": "소",
+  "core": false
+ },
+ {
+  "root": "fenacetin",
+  "ja": "フェナセチン",
+  "zh": "非那西汀",
+  "ko": "페나세틴",
+  "core": false
+ },
+ {
+  "root": "fibul",
+  "ja": "腓骨",
+  "zh": "腓骨",
+  "ko": "종아리뼈",
+  "core": false
+ },
+ {
+  "root": "fimoz",
+  "ja": "包茎",
+  "zh": "包茎",
+  "ko": "포경",
+  "core": false
+ },
+ {
+  "root": "flar",
+  "ja": "(を)嗅ぐ",
+  "zh": "嗅闻",
+  "ko": "냄새맡다",
+  "core": false
+ },
+ {
+  "root": "foj",
+  "ja": "回",
+  "zh": "回",
+  "ko": "번",
+  "core": false
+ },
+ {
+  "root": "fortalez",
+  "ja": "フォルタレザ",
+  "zh": "福塔莱萨",
+  "ko": "포르탈레자",
+  "core": false
+ },
+ {
+  "root": "franĉ",
+  "ja": "外陰舐め",
+  "zh": "舔阴",
+  "ko": "외음애무",
+  "core": false
+ },
+ {
+  "root": "frost",
+  "ja": "厳寒",
+  "zh": "严寒",
+  "ko": "혹한",
+  "core": false
+ },
+ {
+  "root": "furor",
+  "ja": "大流行",
+  "zh": "流行",
+  "ko": "대유행",
+  "core": false
+ },
+ {
+  "root": "galen",
+  "ja": "方鉛鉱",
+  "zh": "方铅矿",
+  "ko": "방연석",
+  "core": false
+ },
+ {
+  "root": "gari",
+  "ja": "ガリア属",
+  "zh": "丝缨花属",
+  "ko": "가리아속",
+  "core": false
+ },
+ {
+  "root": "generaci",
+  "ja": "世代",
+  "zh": "世代",
+  "ko": "세대",
+  "core": false
+ },
+ {
+  "root": "geŭz",
+  "ja": "ゴイセン",
+  "zh": "海乞丐",
+  "ko": "호이즌",
+  "core": false
+ },
+ {
+  "root": "glat",
+  "ja": "なめらかな",
+  "zh": "光滑",
+  "ko": "매끄러운",
+  "core": false
+ },
+ {
+  "root": "glut",
+  "ja": "(を)飲み込む",
+  "zh": "吞咽",
+  "ko": "삼키다",
+  "core": false
+ },
+ {
+  "root": "gotik",
+  "ja": "ゴシック式の",
+  "zh": "哥特式",
+  "ko": "고딕풍의",
+  "core": false
+ },
+ {
+  "root": "graŭvak",
+  "ja": "硬砂岩",
+  "zh": "杂砂岩",
+  "ko": "그레이와케",
+  "core": false
+ },
+ {
+  "root": "guanin",
+  "ja": "グアニン",
+  "zh": "鸟嘌呤",
+  "ko": "구아닌",
+  "core": false
+ },
+ {
+  "root": "habel",
+  "ja": "アベル",
+  "zh": "亚伯",
+  "ko": "아벨",
+  "core": false
+ },
+ {
+  "root": "handbal",
+  "ja": "ハンドボール",
+  "zh": "手球",
+  "ko": "핸드볼",
+  "core": false
+ },
+ {
+  "root": "haŭsier",
+  "ja": "強気筋",
+  "zh": "看涨投机者",
+  "ko": "강세투기자",
+  "core": false
+ },
+ {
+  "root": "helium",
+  "ja": "ヘリウム",
+  "zh": "氦",
+  "ko": "헬륨",
+  "core": false
+ },
+ {
+  "root": "herkulan",
+  "ja": "ヘルクラネウム",
+  "zh": "赫库兰尼姆",
+  "ko": "헤르쿨라네움",
+  "core": false
+ },
+ {
+  "root": "hidrast",
+  "ja": "ヒドラスチス",
+  "zh": "北美黄连",
+  "ko": "히드라스티스",
+  "core": false
+ },
+ {
+  "root": "hindoĉin",
+  "ja": "インドシナ",
+  "zh": "印度支那",
+  "ko": "인도차이나",
+  "core": false
+ },
+ {
+  "root": "hipurid",
+  "ja": "スギナモ属",
+  "zh": "杉叶藻属",
+  "ko": "말즘속",
+  "core": false
+ },
+ {
+  "root": "homeopat",
+  "ja": "同毒療法士",
+  "zh": "同种疗法医师",
+  "ko": "동종요법사",
+  "core": false
+ },
+ {
+  "root": "hoĝkin",
+  "ja": "ホジキン",
+  "zh": "霍奇金",
+  "ko": "호지킨",
+  "core": false
+ },
+ {
+  "root": "idempotent",
+  "ja": "冪等",
+  "zh": "幂等",
+  "ko": "멱등",
+  "core": false
+ },
+ {
+  "root": "ilumin",
+  "ja": "(を)照明する",
+  "zh": "照亮",
+  "ko": "조명하다",
+  "core": false
+ },
+ {
+  "root": "ind",
+  "ja": "値する",
+  "zh": "值得",
+  "ko": "가치",
+  "core": false
+ },
+ {
+  "root": "infra",
+  "ja": "下位",
+  "zh": "下",
+  "ko": "하위",
+  "core": false
+ },
+ {
+  "root": "instruktor",
+  "ja": "教官",
+  "zh": "教官",
+  "ko": "교관",
+  "core": false
+ },
+ {
+  "root": "invenci",
+  "ja": "発想法",
+  "zh": "立意",
+  "ko": "착상법",
+  "core": false
+ },
+ {
+  "root": "iss",
+  "ja": "イッソス",
+  "zh": "伊苏斯",
+  "ko": "이소스",
+  "core": false
+ },
+ {
+  "root": "jakarand",
+  "ja": "ジャカランダ属",
+  "zh": "蓝花楹属",
+  "ko": "자카란다속",
+  "core": false
+ },
+ {
+  "root": "jerobeam",
+  "ja": "ヤロブアム",
+  "zh": "耶罗波安",
+  "ko": "여로보암",
+  "core": false
+ },
+ {
+  "root": "jueŝan",
+  "ja": "玉山",
+  "zh": "玉山",
+  "ko": "위산",
+  "core": false
+ },
+ {
+  "root": "kadastr",
+  "ja": "地籍",
+  "zh": "地籍",
+  "ko": "지적",
+  "core": false
+ },
+ {
+  "root": "kalandra",
+  "ja": "コクゾウムシ",
+  "zh": "米象",
+  "ko": "쌀바구미",
+  "core": false
+ },
+ {
+  "root": "kalmuki",
+  "ja": "カルムイク",
+  "zh": "卡尔梅克",
+  "ko": "칼미키야",
+  "core": false
+ },
+ {
+  "root": "kampuĉi",
+  "ja": "カンプチア",
+  "zh": "柬埔寨",
+  "ko": "캄푸치아",
+  "core": false
+ },
+ {
+  "root": "kantin",
+  "ja": "売店",
+  "zh": "小卖部",
+  "ko": "매점",
+  "core": false
+ },
+ {
+  "root": "karab",
+  "ja": "オサムシ属",
+  "zh": "步甲属",
+  "ko": "딱정벌레속",
+  "core": false
+ },
+ {
+  "root": "kardon",
+  "ja": "カルドン",
+  "zh": "刺苞菜蓟",
+  "ko": "카르둔",
+  "core": false
+ },
+ {
+  "root": "karpentari",
+  "ja": "カーペンタリア",
+  "zh": "卡奔塔利亚",
+  "ko": "카펀테리아",
+  "core": false
+ },
+ {
+  "root": "katalekt",
+  "ja": "欠脚",
+  "zh": "缺音步",
+  "ko": "결각",
+  "core": false
+ },
+ {
+  "root": "kaz",
+  "ja": "[文]格",
+  "zh": "格;案件",
+  "ko": "격",
+  "core": false
+ },
+ {
+  "root": "kelti",
+  "ja": "ケルト",
+  "zh": "凯尔特",
+  "ko": "켈트",
+  "core": false
+ },
+ {
+  "root": "kil",
+  "ja": "[海]竜骨",
+  "zh": "龙骨",
+  "ko": "용골",
+  "core": false
+ },
+ {
+  "root": "kiti",
+  "ja": "ミツユビカモメ",
+  "zh": "三趾鸥",
+  "ko": "세가락갈매기",
+  "core": false
+ },
+ {
+  "root": "klematit",
+  "ja": "クレマチス属",
+  "zh": "铁线莲属",
+  "ko": "으아리속",
+  "core": false
+ },
+ {
+  "root": "klupe",
+  "ja": "ニシン",
+  "zh": "鲱鱼",
+  "ko": "청어",
+  "core": false
+ },
+ {
+  "root": "koka",
+  "ja": "コカ",
+  "zh": "古柯",
+  "ko": "코카",
+  "core": false
+ },
+ {
+  "root": "kolob",
+  "ja": "コロブス属",
+  "zh": "疣猴属",
+  "ko": "콜로부스속",
+  "core": false
+ },
+ {
+  "root": "komeni",
+  "ja": "コメニウス",
+  "zh": "夸美纽斯",
+  "ko": "코메니우스",
+  "core": false
+ },
+ {
+  "root": "komsomol",
+  "ja": "コムソモール",
+  "zh": "共青团",
+  "ko": "콤소몰",
+  "core": false
+ },
+ {
+  "root": "konform",
+  "ja": "適合した",
+  "zh": "符合",
+  "ko": "적합한",
+  "core": false
+ },
+ {
+  "root": "konskript",
+  "ja": "徴集兵",
+  "zh": "应征兵",
+  "ko": "징집병",
+  "core": false
+ },
+ {
+  "root": "kontumac",
+  "ja": "欠席審理",
+  "zh": "缺席审判",
+  "ko": "궐석재판",
+  "core": false
+ },
+ {
+  "root": "korbikul",
+  "ja": "シジミ",
+  "zh": "蚬",
+  "ko": "재첩",
+  "core": false
+ },
+ {
+  "root": "korpulent",
+  "ja": "肥満",
+  "zh": "肥胖",
+  "ko": "비만",
+  "core": false
+ },
+ {
+  "root": "koŝi",
+  "ja": "コーシー",
+  "zh": "柯西",
+  "ko": "코시",
+  "core": false
+ },
+ {
+  "root": "krepit",
+  "ja": "爆ぜる",
+  "zh": "噼啪响",
+  "ko": "딱딱대다",
+  "core": false
+ },
+ {
+  "root": "krizalid",
+  "ja": "さなぎ",
+  "zh": "蛹",
+  "ko": "번데기",
+  "core": false
+ },
+ {
+  "root": "ksant",
+  "ja": "クサントス",
+  "zh": "克桑托斯",
+  "ko": "크산토스",
+  "core": false
+ },
+ {
+  "root": "kultivator",
+  "ja": "耕耘機",
+  "zh": "耕耘机",
+  "ko": "경운기",
+  "core": false
+ },
+ {
+  "root": "kus",
+  "ja": "コソノキ",
+  "zh": "苦苏",
+  "ko": "쿠소나무",
+  "core": false
+ },
+ {
+  "root": "kvik",
+  "ja": "カモジグサ",
+  "zh": "偃麦草",
+  "ko": "개밀",
+  "core": false
+ },
+ {
+  "root": "lagri",
+  "ja": "ハムシダマシ",
+  "zh": "伪叶甲",
+  "ko": "잎벌레붙이",
+  "core": false
+ },
+ {
+  "root": "lantan",
+  "ja": "ランタン",
+  "zh": "镧",
+  "ko": "란타넘",
+  "core": false
+ },
+ {
+  "root": "lavsoni",
+  "ja": "ヘナノキ",
+  "zh": "指甲花",
+  "ko": "헤나",
+  "core": false
+ },
+ {
+  "root": "lem",
+  "ja": "補助定理",
+  "zh": "引理",
+  "ko": "보조정리",
+  "core": false
+ },
+ {
+  "root": "levkoj",
+  "ja": "[植]アラセイトウ",
+  "zh": "紫罗兰",
+  "ko": "꽃무우",
+  "core": false
+ },
+ {
+  "root": "liken",
+  "ja": "[植]地衣",
+  "zh": "地衣",
+  "ko": "지의류",
+  "core": false
+ },
+ {
+  "root": "liofiliz",
+  "ja": "凍結乾燥",
+  "zh": "冷冻干燥",
+  "ko": "동결건조",
+  "core": false
+ },
+ {
+  "root": "liĥtenŝtejn",
+  "ja": "リヒテンシュタイン",
+  "zh": "列支敦士登",
+  "ko": "리히텐슈타인",
+  "core": false
+ },
+ {
+  "root": "lordoz",
+  "ja": "脊柱前弯",
+  "zh": "脊柱前凸",
+  "ko": "전만증",
+  "core": false
+ },
+ {
+  "root": "luminesk",
+  "ja": "冷光",
+  "zh": "冷光",
+  "ko": "냉광",
+  "core": false
+ },
+ {
+  "root": "magelan",
+  "ja": "マゼラン",
+  "zh": "麦哲伦",
+  "ko": "마젤란",
+  "core": false
+ },
+ {
+  "root": "makinlej",
+  "ja": "マッキンリー",
+  "zh": "麦金利",
+  "ko": "매킨리",
+  "core": false
+ },
+ {
+  "root": "manam",
+  "ja": "マナーマ",
+  "zh": "麦纳麦",
+  "ko": "마나마",
+  "core": false
+ },
+ {
+  "root": "manĉuri",
+  "ja": "満州",
+  "zh": "满洲",
+  "ko": "만주",
+  "core": false
+ },
+ {
+  "root": "marten",
+  "ja": "マルティン",
+  "zh": "马丁",
+  "ko": "마르틴",
+  "core": false
+ },
+ {
+  "root": "mazda",
+  "ja": "マズダ",
+  "zh": "马兹达",
+  "ko": "마즈다",
+  "core": false
+ },
+ {
+  "root": "mejs",
+  "ja": "中欧青年週間",
+  "zh": "中欧青年周",
+  "ko": "중유럽청년주간",
+  "core": false
+ },
+ {
+  "root": "menestrel",
+  "ja": "吟遊楽人",
+  "zh": "游吟诗人",
+  "ko": "음유시인",
+  "core": false
+ },
+ {
+  "root": "mesin",
+  "ja": "メッシーナ",
+  "zh": "墨西拿",
+  "ko": "메시나",
+  "core": false
+ },
+ {
+  "root": "mezostik",
+  "ja": "中 acrostic",
+  "zh": "中嵌诗",
+  "ko": "중간시",
+  "core": false
+ },
+ {
+  "root": "mileni",
+  "ja": "千年",
+  "zh": "千年",
+  "ko": "천년",
+  "core": false
+ },
+ {
+  "root": "mirh",
+  "ja": "[植]ミルラ",
+  "zh": "没药",
+  "ko": "미르라",
+  "core": false
+ },
+ {
+  "root": "moab",
+  "ja": "モアブ",
+  "zh": "摩押",
+  "ko": "모압",
+  "core": false
+ },
+ {
+  "root": "moned",
+  "ja": "コクマルガラス",
+  "zh": "寒鸦",
+  "ko": "갈가마귀",
+  "core": false
+ },
+ {
+  "root": "morgan",
+  "ja": "モーガン",
+  "zh": "摩尔根",
+  "ko": "모건",
+  "core": false
+ },
+ {
+  "root": "mugil",
+  "ja": "ボラ",
+  "zh": "鲻鱼",
+  "ko": "숭어",
+  "core": false
+ },
+ {
+  "root": "muzik",
+  "ja": "音楽",
+  "zh": "音乐",
+  "ko": "음악",
+  "core": false
+ },
+ {
+  "root": "narteks",
+  "ja": "ナルテックス",
+  "zh": "前厅",
+  "ko": "나르텍스",
+  "core": false
+ },
+ {
+  "root": "negeb",
+  "ja": "ネゲブ砂漠",
+  "zh": "内盖夫",
+  "ko": "네게브",
+  "core": false
+ },
+ {
+  "root": "ness",
+  "ja": "ネス",
+  "zh": "内斯",
+  "ko": "네스",
+  "core": false
+ },
+ {
+  "root": "nimeg",
+  "ja": "ネイメーヘン",
+  "zh": "奈梅亨",
+  "ko": "네이메헌",
+  "core": false
+ },
+ {
+  "root": "non",
+  "ja": "九時課",
+  "zh": "九时祷",
+  "ko": "제9시과",
+  "core": false
+ },
+ {
+  "root": "numerator",
+  "ja": "分子",
+  "zh": "分子",
+  "ko": "분자",
+  "core": false
+ },
+ {
+  "root": "odr",
+  "ja": "オーデル川",
+  "zh": "奥得河",
+  "ko": "오데르강",
+  "core": false
+ },
+ {
+  "root": "oktant",
+  "ja": "八分儀",
+  "zh": "八分仪",
+  "ko": "팔분의",
+  "core": false
+ },
+ {
+  "root": "omnibus",
+  "ja": "乗合馬車",
+  "zh": "公共马车",
+  "ko": "합승마차",
+  "core": false
+ },
+ {
+  "root": "opunti",
+  "ja": "ウチワサボテン属",
+  "zh": "仙人掌属",
+  "ko": "부채선인장속",
+  "core": false
+ },
+ {
+  "root": "oriz",
+  "ja": "イネ属",
+  "zh": "稻属",
+  "ko": "벼속",
+  "core": false
+ },
+ {
+  "root": "ostracism",
+  "ja": "[史]陶片追放",
+  "zh": "放逐",
+  "ko": "도편추방",
+  "core": false
+ },
+ {
+  "root": "pajn",
+  "ja": "パン",
+  "zh": "面包",
+  "ko": "빵",
+  "core": false
+ },
+ {
+  "root": "pampar",
+  "ja": "パンパ",
+  "zh": "潘帕斯",
+  "ko": "팜파스",
+  "core": false
+ },
+ {
+  "root": "papavin",
+  "ja": "パパベリン",
+  "zh": "罂粟碱",
+  "ko": "파파베린",
+  "core": false
+ },
+ {
+  "root": "parietal",
+  "ja": "頭頂骨",
+  "zh": "顶骨",
+  "ko": "두정골",
+  "core": false
+ },
+ {
+  "root": "pasteĉ",
+  "ja": "[料](肉;魚の)パイ",
+  "zh": "肉馅饼",
+  "ko": "파이",
+  "core": false
+ },
+ {
+  "root": "paŭs",
+  "ja": "トレース",
+  "zh": "描摹",
+  "ko": "투사",
+  "core": false
+ },
+ {
+  "root": "pen",
+  "ja": "努力する",
+  "zh": "努力",
+  "ko": "노력하다",
+  "core": false
+ },
+ {
+  "root": "periferi",
+  "ja": "周辺",
+  "zh": "周边",
+  "ko": "주변",
+  "core": false
+ },
+ {
+  "root": "persvad",
+  "ja": "説得",
+  "zh": "说服",
+  "ko": "설득",
+  "core": false
+ },
+ {
+  "root": "pigr",
+  "ja": "怠惰",
+  "zh": "懒惰",
+  "ko": "나태",
+  "core": false
+ },
+ {
+  "root": "pinktad",
+  "ja": "アコヤガイ属",
+  "zh": "珠母贝属",
+  "ko": "진주조개속",
+  "core": false
+ },
+ {
+  "root": "pit",
+  "ja": "ちっぽけ",
+  "zh": "微小",
+  "ko": "자잘한",
+  "core": false
+ },
+ {
+  "root": "plastid",
+  "ja": "色素体",
+  "zh": "质体",
+  "ko": "색소체",
+  "core": false
+ },
+ {
+  "root": "plot",
+  "ja": "[魚]ウグイ",
+  "zh": "乌鳢",
+  "ko": "잉어과鱼",
+  "core": false
+ },
+ {
+  "root": "polar",
+  "ja": "極性",
+  "zh": "极性",
+  "ko": "극성",
+  "core": false
+ },
+ {
+  "root": "pomerihund",
+  "ja": "ポメラニアン",
+  "zh": "博美犬",
+  "ko": "포메라니안",
+  "core": false
+ },
+ {
+  "root": "potentil",
+  "ja": "キジムシロ属",
+  "zh": "委陵菜属",
+  "ko": "양지꽃속",
+  "core": false
+ },
+ {
+  "root": "premis",
+  "ja": "前提",
+  "zh": "前提",
+  "ko": "전제",
+  "core": false
+ },
+ {
+  "root": "prion",
+  "ja": "プリオン",
+  "zh": "朊病毒",
+  "ko": "프리온",
+  "core": false
+ },
+ {
+  "root": "prokust",
+  "ja": "プロクルステス",
+  "zh": "普洛克鲁斯忒斯",
+  "ko": "프로크루스테스",
+  "core": false
+ },
+ {
+  "root": "protagonist",
+  "ja": "[劇]主役",
+  "zh": "主角",
+  "ko": "주인공",
+  "core": false
+ },
+ {
+  "root": "psikiatr",
+  "ja": "精神科医",
+  "zh": "精神科医生",
+  "ko": "정신과의",
+  "core": false
+ },
+ {
+  "root": "pulkv",
+  "ja": "プルケ",
+  "zh": "普尔克酒",
+  "ko": "풀케",
+  "core": false
+ },
+ {
+  "root": "rabdomanci",
+  "ja": "ダウジング",
+  "zh": "占杖术",
+  "ko": "다우징",
+  "core": false
+ },
+ {
+  "root": "ramp",
+  "ja": "這って進む",
+  "zh": "爬行",
+  "ko": "기다",
+  "core": false
+ },
+ {
+  "root": "reaŭmur",
+  "ja": "レオミュール",
+  "zh": "列氏",
+  "ko": "레오뮈르",
+  "core": false
+ },
+ {
+  "root": "regulus",
+  "ja": "レグルス",
+  "zh": "轩辕十四",
+  "ko": "레굴루스",
+  "core": false
+ },
+ {
+  "root": "renin",
+  "ja": "レニン",
+  "zh": "肾素",
+  "ko": "레닌",
+  "core": false
+ },
+ {
+  "root": "revelaci",
+  "ja": "[宗]啓示",
+  "zh": "启示",
+  "ko": "계시",
+  "core": false
+ },
+ {
+  "root": "rilaks",
+  "ja": "緩和",
+  "zh": "弛豫",
+  "ko": "완화",
+  "core": false
+ },
+ {
+  "root": "robini",
+  "ja": "ハリエンジュ属",
+  "zh": "刺槐属",
+  "ko": "아까시나무속",
+  "core": false
+ },
+ {
+  "root": "ross",
+  "ja": "ロス",
+  "zh": "罗斯",
+  "ko": "로스",
+  "core": false
+ },
+ {
+  "root": "rupi",
+  "ja": "ルピー",
+  "zh": "卢比",
+  "ko": "루피",
+  "core": false
+ },
+ {
+  "root": "saksifrag",
+  "ja": "ユキノシタ",
+  "zh": "虎耳草",
+  "ko": "범의귀",
+  "core": false
+ },
+ {
+  "root": "samotrac",
+  "ja": "サモトラキ",
+  "zh": "萨莫色雷斯",
+  "ko": "사모트라케",
+  "core": false
+ },
+ {
+  "root": "sardes",
+  "ja": "サルディス",
+  "zh": "萨第斯",
+  "ko": "사르디스",
+  "core": false
+ },
+ {
+  "root": "scifozo",
+  "ja": "鉢虫類",
+  "zh": "钵水母纲",
+  "ko": "해파리강",
+  "core": false
+ },
+ {
+  "root": "selekt",
+  "ja": "選択",
+  "zh": "选择",
+  "ko": "선택",
+  "core": false
+ },
+ {
+  "root": "serasalm",
+  "ja": "ピラニア属",
+  "zh": "锯脂鲤属",
+  "ko": "피라냐속",
+  "core": false
+ },
+ {
+  "root": "sfing",
+  "ja": "スズメガ",
+  "zh": "天蛾",
+  "ko": "박각시",
+  "core": false
+ },
+ {
+  "root": "silog",
+  "ja": "三段論法",
+  "zh": "三段论",
+  "ko": "삼단논법",
+  "core": false
+ },
+ {
+  "root": "singapur",
+  "ja": "シンガポール",
+  "zh": "新加坡",
+  "ko": "싱가포르",
+  "core": false
+ },
+ {
+  "root": "sizigi",
+  "ja": "朔望",
+  "zh": "朔望",
+  "ko": "삭망",
+  "core": false
+ },
+ {
+  "root": "skiti",
+  "ja": "スキタイ",
+  "zh": "斯基泰",
+  "ko": "스키티아",
+  "core": false
+ },
+ {
+  "root": "slang",
+  "ja": "スラング",
+  "zh": "俚语",
+  "ko": "속어",
+  "core": false
+ },
+ {
+  "root": "solen",
+  "ja": "荘厳な",
+  "zh": "庄严隆重",
+  "ko": "장엄한",
+  "core": false
+ },
+ {
+  "root": "spad",
+  "ja": "剣",
+  "zh": "细剑",
+  "ko": "검",
+  "core": false
+ },
+ {
+  "root": "spinak",
+  "ja": "スピンネーカー",
+  "zh": "球帆",
+  "ko": "스피니커",
+  "core": false
+ },
+ {
+  "root": "stabil",
+  "ja": "安定した",
+  "zh": "稳定的",
+  "ko": "안정된",
+  "core": false
+ },
+ {
+  "root": "steb",
+  "ja": "合わせ縫いする",
+  "zh": "缝合",
+  "ko": "꿰매다",
+  "core": false
+ },
+ {
+  "root": "stiren",
+  "ja": "スチレン",
+  "zh": "苯乙烯",
+  "ko": "스타이렌",
+  "core": false
+ },
+ {
+  "root": "strob",
+  "ja": "ストローブマツ",
+  "zh": "北美白松",
+  "ko": "스트로브잣나무",
+  "core": false
+ },
+ {
+  "root": "sued",
+  "ja": "イノシシ科",
+  "zh": "猪科",
+  "ko": "멧돼지과",
+  "core": false
+ },
+ {
+  "root": "suplement",
+  "ja": "補足",
+  "zh": "补充",
+  "ko": "보충",
+  "core": false
+ },
+ {
+  "root": "tabu",
+  "ja": "タブー",
+  "zh": "禁忌",
+  "ko": "금기",
+  "core": false
+ },
+ {
+  "root": "tam",
+  "ja": "タムス属",
+  "zh": "薯蓣属",
+  "ko": "타무스속",
+  "core": false
+ },
+ {
+  "root": "tarŝiŝ",
+  "ja": "タルシシュ",
+  "zh": "他施",
+  "ko": "다시스",
+  "core": false
+ },
+ {
+  "root": "teknopati",
+  "ja": "職業病",
+  "zh": "职业病",
+  "ko": "직업병",
+  "core": false
+ },
+ {
+  "root": "tenno",
+  "ja": "天皇",
+  "zh": "天皇",
+  "ko": "천황",
+  "core": false
+ },
+ {
+  "root": "termidor",
+  "ja": "テルミドール",
+  "zh": "热月",
+  "ko": "테르미도르",
+  "core": false
+ },
+ {
+  "root": "tibet",
+  "ja": "チベット",
+  "zh": "西藏",
+  "ko": "티베트",
+  "core": false
+ },
+ {
+  "root": "tionat",
+  "ja": "チオン酸塩",
+  "zh": "硫代酸盐",
+  "ko": "티온산염",
+  "core": false
+ },
+ {
+  "root": "tokantinz",
+  "ja": "トカンティンス川",
+  "zh": "托坎廷斯河",
+  "ko": "토칸칭스강",
+  "core": false
+ },
+ {
+  "root": "tormentil",
+  "ja": "タチキジムシロ",
+  "zh": "直立委陵菜",
+  "ko": "토르멘틸",
+  "core": false
+ },
+ {
+  "root": "trankvil",
+  "ja": "平静な",
+  "zh": "安静",
+  "ko": "평온한",
+  "core": false
+ },
+ {
+  "root": "tribrak",
+  "ja": "三短格",
+  "zh": "三短格",
+  "ko": "삼단음보",
+  "core": false
+ },
+ {
+  "root": "tritet",
+  "ja": "三重奏",
+  "zh": "三重奏",
+  "ko": "삼중주",
+  "core": false
+ },
+ {
+  "root": "trust",
+  "ja": "[商]トラスト",
+  "zh": "信托",
+  "ko": "트러스트",
+  "core": false
+ },
+ {
+  "root": "turkmenistan",
+  "ja": "トルクメニスタン",
+  "zh": "土库曼斯坦",
+  "ko": "투르크메니스탄",
+  "core": false
+ },
+ {
+  "root": "umbilikari",
+  "ja": "イワタケ属",
+  "zh": "石耳属",
+  "ko": "석이버섯속",
+  "core": false
+ },
+ {
+  "root": "uri",
+  "ja": "ウミガラス属",
+  "zh": "海鸠属",
+  "ko": "바다오리속",
+  "core": false
+ },
+ {
+  "root": "vagner",
+  "ja": "ワーグナー",
+  "zh": "瓦格纳",
+  "ko": "바그너",
+  "core": false
+ },
+ {
+  "root": "vanil",
+  "ja": "[植]バニラ",
+  "zh": "香草",
+  "ko": "바닐라",
+  "core": false
+ },
+ {
+  "root": "vehikl",
+  "ja": "媒介物",
+  "zh": "载体",
+  "ko": "매개체",
+  "core": false
+ },
+ {
+  "root": "vernaliz",
+  "ja": "春化",
+  "zh": "春化",
+  "ko": "춘화",
+  "core": false
+ },
+ {
+  "root": "vici",
+  "ja": "ソラマメ",
+  "zh": "蚕豆",
+  "ko": "잠두",
+  "core": false
+ },
+ {
+  "root": "virt",
+  "ja": "徳",
+  "zh": "德性",
+  "ko": "덕",
+  "core": false
+ },
+ {
+  "root": "vol.",
+  "ja": "意志.",
+  "zh": "想要.",
+  "ko": "의지.",
+  "core": false
+ },
+ {
+  "root": "zakari",
+  "ja": "ザカリア",
+  "zh": "匝加利亚",
+  "ko": "즈가리야",
+  "core": false
+ },
+ {
+  "root": "zoil",
+  "ja": "ゾイロス",
+  "zh": "佐伊罗斯",
+  "ko": "조일로스",
+  "core": false
+ },
+ {
+  "root": "ĉeest##",
+  "ja": "(に)出席する",
+  "zh": "ĉe/est##",
+  "ko": "ĉe/est##",
+  "core": false
+ },
+ {
+  "root": "ĉiz",
+  "ja": "彫刻する",
+  "zh": "雕刻",
+  "ko": "조각하다",
+  "core": false
+ },
+ {
+  "root": "ĝest",
+  "ja": "武勲詩",
+  "zh": "武功歌",
+  "ko": "무훈시",
+  "core": false
+ },
+ {
+  "root": "ĥimen",
+  "ja": "ヒメナ",
+  "zh": "希梅娜",
+  "ko": "히메나",
+  "core": false
+ },
+ {
+  "root": "ĵur",
+  "ja": "(を)誓う",
+  "zh": "誓言",
+  "ko": "맹세하다",
+  "core": false
+ },
+ {
+  "root": "ŝejk",
+  "ja": "シャイフ",
+  "zh": "谢赫",
+  "ko": "셰이크",
+  "core": false
+ },
+ {
+  "root": "adiaŭ",
+  "ja": "さようなら",
+  "zh": "告别",
+  "ko": "안녕",
+  "core": true
+ },
+ {
+  "root": "apenaŭ",
+  "ja": "かろうじて",
+  "zh": "几乎不",
+  "ko": "하자마자",
+  "core": true
+ },
+ {
+  "root": "des",
+  "ja": "ますます",
+  "zh": "更",
+  "ko": "그만큼",
+  "core": true
+ },
+ {
+  "root": "fermi",
+  "ja": "閉める",
+  "zh": "关闭",
+  "ko": "닫다",
+  "core": true
+ },
+ {
+  "root": "fotografi",
+  "ja": "写真術",
+  "zh": "摄影术",
+  "ko": "사진술",
+  "core": true
+ },
+ {
+  "root": "homo",
+  "ja": "同",
+  "zh": "同",
+  "ko": "동일",
+  "core": true
+ },
+ {
+  "root": "iom",
+  "ja": "多少",
+  "zh": "一些",
+  "ko": "약간",
+  "core": true
+ },
+ {
+  "root": "kanti",
+  "ja": "歌う",
+  "zh": "唱",
+  "ko": "노래하다",
+  "core": true
+ },
+ {
+  "root": "kies",
+  "ja": "だれの(所有)",
+  "zh": "谁的",
+  "ko": "누구의",
+  "core": true
+ },
+ {
+  "root": "kun",
+  "ja": "(~と)共に",
+  "zh": "与…一起",
+  "ko": "함께",
+  "core": true
+ },
+ {
+  "root": "li",
+  "ja": "彼",
+  "zh": "他",
+  "ko": "그",
+  "core": true
+ },
+ {
+  "root": "minus",
+  "ja": "マイナス",
+  "zh": "减",
+  "ko": "마이너스",
+  "core": true
+ },
+ {
+  "root": "nenie",
+  "ja": "どこにも~ない",
+  "zh": "无处",
+  "ko": "어디에도 않다",
+  "core": true
+ },
+ {
+  "root": "nun",
+  "ja": "今",
+  "zh": "现在",
+  "ko": "지금",
+  "core": true
+ },
+ {
+  "root": "plej",
+  "ja": "最も",
+  "zh": "最",
+  "ko": "가장",
+  "core": true
+ },
+ {
+  "root": "prezidi",
+  "ja": "議長を務める",
+  "zh": "主持",
+  "ko": "회의나 모임을 주재하다",
+  "core": true
+ },
+ {
+  "root": "sana",
+  "ja": "健康な",
+  "zh": "健康的",
+  "ko": "건강한",
+  "core": true
+ },
+ {
+  "root": "sugesti",
+  "ja": "暗示",
+  "zh": "暗示",
+  "ko": "암시",
+  "core": true
+ },
+ {
+  "root": "tiam",
+  "ja": "その時;あの時",
+  "zh": "那时",
+  "ko": "그때",
+  "core": true
+ },
+ {
+  "root": "tri",
+  "ja": "三",
+  "zh": "三",
+  "ko": "삼",
+  "core": true
+ }
+]
