@@ -8,7 +8,7 @@ sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
 APPDIR = BASE + r"\Esperanto-Kanji-Ruby-JA"; DATA = APPDIR + r"\app_data"
 ESTEM=r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
-ROOTS=r"\世界语全部词根_约11137个_202501.txt"; STEM=r"\世界语单词词根分解方法の使用者自定义设置.json"
+ROOTS=r"\世界语全部词根_约11137个_202501.txt"; STEM=r"\分解設定.json"
 USER=r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"; CSV=r"\エスペラント語根-日本語訳ルビ対応リスト.csv"; FMT='HTML格式_Ruby文字_大小调整'
 # 現行設定(tier18) + per-word「ne」エントリ
 with open(lp(DATA+STEM), encoding="utf-8") as f: settings = json.load(f)

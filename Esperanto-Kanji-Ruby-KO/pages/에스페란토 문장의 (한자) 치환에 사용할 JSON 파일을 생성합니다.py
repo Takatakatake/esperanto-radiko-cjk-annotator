@@ -209,7 +209,7 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     세부적으로 설정할 수 있습니다. 샘플 파일 내의 주석을 참고하세요.
     ( 예: `["am", "dflt", ["verbo_s1"]]` 와 같은 형태 )
     """)
-    json_file_path = './app_data/世界语单词词根分解方法の使用者自定义设置.json'
+    json_file_path = './app_data/分解設定.json'
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
             label="샘플 JSON1(에스페란토 단어 어근 분해법 사용자 설정) 다운로드",
@@ -337,7 +337,7 @@ st.markdown("""
 """)
 
 json_choice = st.radio("1. 에스페란토 단어의 어근 분해법을 추가 지정하는 JSON 파일은 어떻게 하시겠습니까?", ("업로드하기", "기본값 사용"))
-json_path_default = "./app_data/世界语单词词根分解方法の使用者自定义设置.json"
+json_path_default = "./app_data/分解設定.json"
 custom_stemming_setting_list = None
 
 if json_choice == "업로드하기":

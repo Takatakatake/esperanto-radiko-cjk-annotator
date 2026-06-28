@@ -19,7 +19,7 @@ APPS = {
 ESTEM = r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 ROOTS = r"\世界语全部词根_约11137个_202501.txt"
 FINAL = r"\置換リスト_ルビ.json"
-STEM  = r"\世界语单词词根分解方法の使用者自定义设置.json"
+STEM  = r"\分解設定.json"
 USER  = r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 
 key = sys.argv[1]; write = '--write' in sys.argv

@@ -16,7 +16,7 @@ sys.path.insert(0, APP)
 from esp_text_replacement_module import orchestrate_comprehensive_esperanto_text_replacement, import_placeholders as imp2
 
 CSV = DATA + r"\エスペラント語根-日本語訳ルビ対応リスト.csv"
-STEM = DATA + r"\世界语单词词根分解方法の使用者自定义设置.json"
+STEM = DATA + r"\分解設定.json"
 USER = DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"
 OLD_ESTEM = DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json"
 OLD_ROOTS = DATA + r"\世界语全部词根_约11137个_202501.txt"

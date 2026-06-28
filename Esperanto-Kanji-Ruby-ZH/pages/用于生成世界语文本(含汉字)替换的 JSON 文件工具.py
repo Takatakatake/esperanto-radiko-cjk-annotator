@@ -303,7 +303,7 @@ with st.expander("示例文件列表（点击下载）"):
     例如决定某些词是否算作动词，并自动添加(as,is,os)等后缀等。  
     文件内有详细注释，请结合实际需要进行编辑。
     """)
-    json_file_path = './app_data/世界语单词词根分解方法の使用者自定义设置.json'
+    json_file_path = './app_data/分解設定.json'
     with open(json_file_path, "rb") as file_json:
         btn_json = st.download_button(
             label="下载示例 JSON 1（自定义词根分解）",
@@ -442,7 +442,7 @@ st.markdown("""
 
 # 1) 词根分解法 JSON
 json_choice = st.radio("1) 词根分解法 JSON 文件：", ("上传 JSON", "使用默认 JSON"))
-json_path_default = "./app_data/世界语单词词根分解方法の使用者自定义设置.json"
+json_path_default = "./app_data/分解設定.json"
 custom_stemming_setting_list = None
 
 if json_choice == "上传 JSON":

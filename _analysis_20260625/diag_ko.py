@@ -8,7 +8,7 @@ APP = BASE + r"\Esperanto-Kanji-Ruby-KO"
 DATA = APP + r"\app_data"
 combined = generate(APP, DATA,
     DATA + r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv",
-    DATA + r"\世界语单词词根分解方法の使用者自定义设置.json",
+    DATA + r"\分解設定.json",
     DATA + r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json",
     DATA + r"\PEJVO(世界语全部单词列表)'全部'について、词尾(a,i,u,e,o,n等)をcutし、comma(,)で隔てて词性と併せて记录した列表(E_stem_with_Part_Of_Speech_list).json",
     DATA + r"\世界语全部词根_约11137个_202501.txt",
