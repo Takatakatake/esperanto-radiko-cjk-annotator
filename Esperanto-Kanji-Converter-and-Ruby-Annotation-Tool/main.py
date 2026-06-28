@@ -244,42 +244,62 @@ with st.form(key='profile_form'):
 
         processed_text = apply_ruby_html_header_and_footer(processed_text, format_type)
 
-# =========================================
-# フォーム外の処理: 結果表示・ダウンロード
-# =========================================
-if processed_text:
-    # -- ここから追加: 巨大テキスト対策ロジック（行数ベース）--
-    MAX_PREVIEW_LINES = 250  # 250行まで表示
-    lines = processed_text.splitlines()  # 改行で分割
+        # 結果を session_state に保存（再実行で消えない＋結果を編集可能にするため）
+        st.session_state["result_html"] = processed_text
+        st.session_state["edited_html"] = processed_text          # 編集用の初期値＝生成結果
+        st.session_state["result_is_html"] = ("HTML" in format_type)
 
+# =========================================
+# フォーム外の処理: 結果のプレビュー・編集・ダウンロード
+# =========================================
+def _reset_edited_html():
+    # 「編集を破棄」用コールバック（ウィジェット生成後に session_state を変更すると
+    #  エラーになるため、コールバック内で生成結果へ戻す）
+    st.session_state["edited_html"] = st.session_state.get("result_html", "")
+
+if st.session_state.get("result_html"):
+    st.caption("「HTMLソース（編集可）」タブで出力を直接修正できます。"
+               "修正はプレビューとダウンロードに反映されます（再変換すると生成結果に戻ります）。")
+
+    # 編集後の内容（なければ生成結果）。プレビュー・ダウンロードとも、この内容を使う。
+    current_html = st.session_state.get("edited_html", st.session_state["result_html"])
+
+    # 長文時はプレビューのみ一部省略（編集とダウンロードは常に全文が対象）
+    MAX_PREVIEW_LINES = 250
+    lines = current_html.splitlines()
     if len(lines) > MAX_PREVIEW_LINES:
-        # たとえば先頭47行 + "..." + 末尾3行の形でプレビューを作る
-        first_part = lines[:247]
-        last_part = lines[-3:]
-        preview_text = "\n".join(first_part) + "\n...\n" + "\n".join(last_part)
+        preview_text = "\n".join(lines[:247]) + "\n...\n" + "\n".join(lines[-3:])
         st.warning(
-            f"テキストが長いため（総行数 {len(lines)} 行）、"
-            "全文プレビューを一部省略しています。末尾3行も表示します。"
+            f"テキストが長いため（総行数 {len(lines)} 行）、プレビューは一部省略しています"
+            "（編集・ダウンロードは全文が対象です）。"
         )
     else:
-        preview_text = processed_text
+        preview_text = current_html
 
-    if "HTML" in format_type:
-        tab1, tab2 = st.tabs(["HTMLプレビュー", "置換結果（HTML ソースコード）"])
+    if st.session_state.get("result_is_html"):
+        tab1, tab2 = st.tabs(["HTMLプレビュー", "HTMLソース（編集可）"])
         with tab1:
             components.html(preview_text, height=500, scrolling=True)
         with tab2:
-            st.text_area("", preview_text, height=300)
+            st.text_area(
+                "出力HTMLを直接編集できます（編集後、プレビューとダウンロードに反映されます）",
+                key="edited_html",
+                height=300
+            )
+            st.button("編集を破棄して生成結果に戻す", on_click=_reset_edited_html)
+        download_name = "置換結果.html"
     else:
-        tab3_list = st.tabs(["置換結果テキスト"])
+        tab3_list = st.tabs(["置換結果テキスト（編集可）"])
         with tab3_list[0]:
-            st.text_area("", preview_text, height=300)
+            st.text_area("出力を直接編集できます", key="edited_html", height=300)
+            st.button("編集を破棄して生成結果に戻す", on_click=_reset_edited_html)
+        download_name = "置換結果.txt"
 
-    download_data = processed_text.encode('utf-8')
+    download_data = current_html.encode('utf-8')
     st.download_button(
-        label="置換結果のダウンロード",
+        label="置換結果のダウンロード（編集を反映）",
         data=download_data,
-        file_name="置換結果.html",
+        file_name=download_name,
         mime="text/html"
     )
 

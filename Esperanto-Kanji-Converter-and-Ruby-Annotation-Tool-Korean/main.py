@@ -288,41 +288,60 @@ with st.form(key='profile_form'):
 
         processed_text = apply_ruby_html_header_and_footer(processed_text, format_type)
 
-#=================================================================
-# =========================================
-# フォーム外の処理: 結果表示・ダウンロード
-# =========================================
-#=================================================================
-if processed_text:
-    MAX_PREVIEW_LINES = 250
-    lines = processed_text.splitlines()
+        # 결과를 session_state 에 저장(재실행 시 사라지지 않도록＋결과를 편집 가능하게)
+        st.session_state["result_html"] = processed_text
+        st.session_state["edited_html"] = processed_text          # 편집용 초기값＝생성 결과
+        st.session_state["result_is_html"] = ("HTML" in format_type)
 
+#=================================================================
+# フォーム外의 処理: 結果 미리보기・편집・다운로드
+#=================================================================
+def _reset_edited_html():
+    # “편집 취소” 콜백(위젯 생성 후 session_state 변경은 오류가 나므로 콜백에서 생성 결과로 되돌림)
+    st.session_state["edited_html"] = st.session_state.get("result_html", "")
+
+if st.session_state.get("result_html"):
+    st.caption("「치환 결과(HTML 소스, 편집 가능)」탭에서 출력을 직접 수정할 수 있습니다. "
+               "수정은 미리보기와 다운로드에 반영됩니다(다시 변환하면 생성 결과로 돌아갑니다).")
+
+    # 편집 후 내용(없으면 생성 결과). 미리보기・다운로드 모두 이 내용을 사용.
+    current_html = st.session_state.get("edited_html", st.session_state["result_html"])
+
+    # 본문이 길면 미리보기만 일부 생략(편집과 다운로드는 항상 전체)
+    MAX_PREVIEW_LINES = 250
+    lines = current_html.splitlines()
     if len(lines) > MAX_PREVIEW_LINES:
-        first_part = lines[:247]
-        last_part = lines[-3:]
-        preview_text = "\n".join(first_part) + "\n...\n" + "\n".join(last_part)
+        preview_text = "\n".join(lines[:247]) + "\n...\n" + "\n".join(lines[-3:])
         st.warning(
-            f"텍스트가 길기 때문에(총 {len(lines)}줄), 본문 전체 프리뷰를 일부만 표시합니다. 마지막 3줄도 함께 표시합니다."
+            f"텍스트가 길기 때문에(총 {len(lines)}줄), 미리보기는 일부만 표시합니다(편집・다운로드는 전체)."
         )
     else:
-        preview_text = processed_text
+        preview_text = current_html
 
-    if "HTML" in format_type:
-        tab1, tab2 = st.tabs(["HTML 미리보기", "치환 결과(HTML 소스 코드)"])
+    if st.session_state.get("result_is_html"):
+        tab1, tab2 = st.tabs(["HTML 미리보기", "치환 결과(HTML 소스, 편집 가능)"])
         with tab1:
             components.html(preview_text, height=500, scrolling=True)
         with tab2:
-            st.text_area("", preview_text, height=300)
+            st.text_area(
+                "출력 HTML을 직접 편집할 수 있습니다(편집 후 미리보기와 다운로드에 반영됩니다)",
+                key="edited_html",
+                height=300
+            )
+            st.button("편집을 취소하고 생성 결과로 되돌리기", on_click=_reset_edited_html)
+        download_name = "치환결과.html"
     else:
-        tab3_list = st.tabs(["치환 결과 텍스트"])
+        tab3_list = st.tabs(["치환 결과 텍스트(편집 가능)"])
         with tab3_list[0]:
-            st.text_area("", preview_text, height=300)
+            st.text_area("출력을 직접 편집할 수 있습니다", key="edited_html", height=300)
+            st.button("편집을 취소하고 생성 결과로 되돌리기", on_click=_reset_edited_html)
+        download_name = "치환결과.txt"
 
-    download_data = processed_text.encode('utf-8')
+    download_data = current_html.encode('utf-8')
     st.download_button(
-        label="치환 결과 다운로드",
+        label="치환 결과 다운로드(편집 반영)",
         data=download_data,
-        file_name="치환결과.html",
+        file_name=download_name,
         mime="text/html"
     )
 

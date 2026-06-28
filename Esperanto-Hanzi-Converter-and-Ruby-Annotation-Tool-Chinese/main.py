@@ -264,41 +264,59 @@ with st.form(key='profile_form'):
 
         processed_text = apply_ruby_html_header_and_footer(processed_text, format_type)
 
-# --------------------------------------------------------------------
-# 表单外：若已经生成 processed_text，则展示结果
-# --------------------------------------------------------------------
-if processed_text:
-    # 如果文本过大，仅显示部分行：例如先显示前 47 行 + "..." + 后 3 行
-    MAX_PREVIEW_LINES = 250  
-    lines = processed_text.splitlines()
+        # 将结果保存到 session_state（避免重跑时丢失，并使结果可编辑）
+        st.session_state["result_html"] = processed_text
+        st.session_state["edited_html"] = processed_text          # 编辑用初始值＝生成结果
+        st.session_state["result_is_html"] = ("HTML" in format_type)
 
+# --------------------------------------------------------------------
+# 表单外：结果预览 / 编辑 / 下载
+# --------------------------------------------------------------------
+def _reset_edited_html():
+    # “放弃编辑”回调（控件实例化后修改 session_state 会报错，故在回调里恢复为生成结果）
+    st.session_state["edited_html"] = st.session_state.get("result_html", "")
+
+if st.session_state.get("result_html"):
+    st.caption("可在「HTML 源码（可编辑）」标签页直接修改输出，修改会反映到预览与下载（重新转换则恢复生成结果）。")
+
+    # 编辑后的内容（没有则为生成结果）。预览与下载都使用该内容。
+    current_html = st.session_state.get("edited_html", st.session_state["result_html"])
+
+    # 文本过长时仅预览省略（编辑与下载始终针对全文）
+    MAX_PREVIEW_LINES = 250
+    lines = current_html.splitlines()
     if len(lines) > MAX_PREVIEW_LINES:
-        first_part = lines[:247]
-        last_part = lines[-3:]
-        preview_text = "\n".join(first_part) + "\n...\n" + "\n".join(last_part)
+        preview_text = "\n".join(lines[:247]) + "\n...\n" + "\n".join(lines[-3:])
         st.warning(
-            f"文本行数较多（共 {len(lines)} 行），只显示部分内容（前 247 行 + 后 3 行）。"
+            f"文本行数较多（共 {len(lines)} 行），预览仅显示部分内容（编辑与下载为全文）。"
         )
     else:
-        preview_text = processed_text
+        preview_text = current_html
 
-    # 如果输出中带有 HTML，则分两个 Tab：一个用于渲染，一个用于查看源码
-    if "HTML" in format_type:
-        tab1, tab2 = st.tabs(["HTML 预览", "HTML 源码"])
+    if st.session_state.get("result_is_html"):
+        tab1, tab2 = st.tabs(["HTML 预览", "HTML 源码（可编辑）"])
         with tab1:
             components.html(preview_text, height=500, scrolling=True)
         with tab2:
-            st.text_area("HTML源码", preview_text, height=300)
+            st.text_area(
+                "可直接编辑输出的 HTML（编辑后会反映到预览与下载）",
+                key="edited_html",
+                height=300
+            )
+            st.button("放弃编辑，恢复生成结果", on_click=_reset_edited_html)
+        download_name = "转换结果.html"
     else:
-        tab3_list = st.tabs(["转换结果"])
+        tab3_list = st.tabs(["转换结果（可编辑）"])
         with tab3_list[0]:
-            st.text_area("", preview_text, height=300)
+            st.text_area("可直接编辑输出", key="edited_html", height=300)
+            st.button("放弃编辑，恢复生成结果", on_click=_reset_edited_html)
+        download_name = "转换结果.txt"
 
-    download_data = processed_text.encode('utf-8')
+    download_data = current_html.encode('utf-8')
     st.download_button(
-        label="下载转换结果 (HTML)",
+        label="下载转换结果（已反映编辑）",
         data=download_data,
-        file_name="转换结果.html",
+        file_name=download_name,
         mime="text/html"
     )
 
