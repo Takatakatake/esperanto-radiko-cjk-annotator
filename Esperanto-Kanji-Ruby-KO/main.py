@@ -291,6 +291,35 @@ with st.form(key='profile_form'):
                 format_type=format_type
             )
 
+        # 1차 결과에 「어두 1자 고립」 과분해(자음 1자 고립: fero->f/er/o 등)가 있으면,
+        # 자동 보정을 최우선으로 merge 하여 2차 렌더링(메커니즘 차원에서 결함 클래스 제거). 고립 없으면 미처리.
+        try:
+            import esp_overlay_module as _ovx
+            _afmode = "kanji" if selected_option == "한자화 버전(새 한자 배정) 사용" else "ruby"
+            _auto = _ovx.auto_overlay_entries(processed_text, "./app_data", _afmode)
+            if _auto:
+                _GGx = _ovx.merge_overlay(replacements_final_list, _auto)
+                if use_parallel:
+                    processed_text = parallel_process(
+                        text=text0, num_processes=num_processes,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+                else:
+                    processed_text = orchestrate_comprehensive_esperanto_text_replacement(
+                        text=text0,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+        except Exception:
+            pass
+
         # letter_type에 따라 최종 에스페란토 문자 표기를 변환
         if letter_type == '상단 첨자':
             processed_text = replace_esperanto_chars(processed_text, x_to_circumflex)

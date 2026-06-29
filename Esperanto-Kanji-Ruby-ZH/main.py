@@ -267,6 +267,35 @@ with st.form(key='profile_form'):
                 format_type=format_type
             )
 
+        # 第1遍若出现「词首单字游离」过度分解(辅音单字游离: fero->f/er/o 等),
+        # 以最高优先级 merge 自动校正并渲染第2遍(在机制层面清除该缺陷类)。无游离则不处理。
+        try:
+            import esp_overlay_module as _ovx
+            _afmode = "kanji" if selected_option == "使用汉字化版(新汉字分配)" else "ruby"
+            _auto = _ovx.auto_overlay_entries(processed_text, "./app_data", _afmode)
+            if _auto:
+                _GGx = _ovx.merge_overlay(replacements_final_list, _auto)
+                if use_parallel:
+                    processed_text = parallel_process(
+                        text=text0, num_processes=num_processes,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+                else:
+                    processed_text = orchestrate_comprehensive_esperanto_text_replacement(
+                        text=text0,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+        except Exception:
+            pass
+
         # 将上标形式等应用到结果中
         if letter_type == '上标形式':
             processed_text = replace_esperanto_chars(processed_text, x_to_circumflex)

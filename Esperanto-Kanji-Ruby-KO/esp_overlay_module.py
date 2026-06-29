@@ -14,7 +14,7 @@ GUI(ページ「語根分解の手動補正」)でユーザが「この単語は
     補正語 W を「W より長い old を持つGGエントリの後ろ」に挿入することで、W を部分文字列として
     含む長い語(例: sporti ⊂ sportisto)が先に置換され、壊れない。
 """
-import os, json
+import os, json, re
 from typing import List
 
 OVERLAY_FILE = "user_corrections.json"        # app_data 直下に置く
@@ -176,3 +176,139 @@ def merge_overlay(GG: List[list], overlay: List[list]) -> List[list]:
     while i < n:
         out.append(ov[i]); i += 1
     return out
+
+
+# ============================================================================
+# 先頭1字孤立(first-char isolation) の自動補正
+#   placeholder貪欲置換が語頭1文字を遊離させる過分解(例 fero->f/er/o, sporti->s/port/i)を、
+#   orchestrate出力から検出し、語頭から再分解して機構レベルで一掃する。
+#   - 検出: 裸の1文字が <ruby> の直前に残る = エスペラントに語頭1字の形態素は存在しない
+#           (接頭辞も語根も最短2字、1字は末尾の文法語尾のみ)ので、100%確実な誤りシグナル。
+#   - 再分解: 大文字始まり(固有名詞)=幹を丸ごと / 小文字で「≤3個・各≥3字の訳付き語根」に
+#           綺麗に割れる=その分解 / それ以外=幹を丸ごと(誤った訳を付けない)。
+#   - 適用: 自動算出した分解を build_correction → merge_overlay に流す(手動補正と同一機構)。
+# ============================================================================
+
+_SEG_END = ["ojn", "oj", "on", "o", "ajn", "aj", "an", "a", "en", "e", "jn", "j", "n",
+            "as", "is", "os", "us", "u", "i"]
+_SEG_ENDSET = set(_SEG_END)
+_LATIN_CLASS = "a-zĉĝĥĵŝŭA-ZĈĜĤĴŜŬ"
+_RUBY_BLOCK = re.compile(r"<ruby>(.*?)<rt[^>]*>(.*?)</rt></ruby>", re.S)
+_LATIN_RE = re.compile(r"[" + _LATIN_CLASS + "]")
+
+
+def _glossed_rootset(data_dir):
+    """訳/漢字が付いた語根(=表示可能)の集合。ルビCSV基準(言語非依存の語根集合)。"""
+    rd = _build_root_dict(data_dir, _ruby_csv(data_dir), RUBY_FMT)
+    return frozenset(r for r in rd if len(r) >= 2)
+
+
+def _clean_split(word, rootset):
+    """word を『訳付き語根(>=2字) + 文法語尾』で全被覆する最少片の分解。先頭は語根。
+       採用条件: 語根片が 1〜3 個 かつ 各語根片が >=3字(偶然の短語根合体=固有名詞の粉砕を排除)。
+       条件を満たさなければ None。"""
+    n = len(word)
+    ends = sorted(_SEG_ENDSET, key=len, reverse=True)
+    memo = {}
+
+    def soln(i):
+        if i == n:
+            return []
+        if i in memo:
+            return memo[i]
+        cands = []
+        for L in range(min(18, n - i), 1, -1):
+            if word[i:i + L] in rootset:
+                r = soln(i + L)
+                if r is not None:
+                    cands.append([word[i:i + L]] + r)
+        if i > 0:
+            for e in ends:
+                if word.startswith(e, i):
+                    r = soln(i + len(e))
+                    if r is not None:
+                        cands.append([e] + r)
+        memo[i] = min(cands, key=len) if cands else None
+        return memo[i]
+
+    s = soln(0)
+    if not s or s[0] in _SEG_ENDSET or len(s[0]) < 2:
+        return None
+    roots = [p for p in s if p not in _SEG_ENDSET]
+    if 1 <= len(roots) <= 3 and all(len(r) >= 3 for r in roots):
+        return "/".join(s)
+    return None
+
+
+def autofix_decomp(word, data_dir):
+    """先頭1字孤立した word の『正しい分解』を返す。改善できなければ None。
+       戻り値はスラッシュ区切り(例 'fer/o', 'kor/lig', 'kvedlinburg/o')。"""
+    low = word.lower()
+    if len(low) < 3 or not re.fullmatch(r"[a-zĉĝĥĵŝŭ]+", low):
+        return None
+    if not word[:1].isupper():  # 小文字: 訳付き語根で綺麗に割れるなら分解
+        cs = _clean_split(low, _glossed_rootset(data_dir))
+        if cs and cs.replace("/", "") == low:
+            return cs
+    for e in ("jn", "j", "n"):  # フォールバック(固有名詞・外来語): 屈折語尾を剥がし幹を丸ごと
+        if low.endswith(e) and len(low) - len(e) >= 3:
+            return low[:-len(e)] + "/" + "/".join(list(e))
+    return low  # 幹を丸ごと(剥がせる語尾なし)
+
+
+def _latin_of(base, rt):
+    """ruby/漢字 どちらのモードでも、その語根のラテン綴りを返す(baseがラテンならbase, 否ならrt)。"""
+    return base if _LATIN_RE.search(base) else rt
+
+
+def find_stranded_words(html):
+    """orchestrate出力から『裸1文字 + <ruby>』で始まる語を検出し、その表層(ラテン綴り)集合を返す。
+       ruby/漢字 両モード対応(漢字モードでは語根が<rt>側にあるため _latin_of で吸収)。"""
+    def repl(m):
+        return "\x02" + _latin_of(m.group(1), m.group(2)) + "\x03"
+    s = _RUBY_BLOCK.sub(repl, html)
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = s.replace("&nbsp;", " ")
+    out = set()
+    for run in re.findall(r"(?:[" + _LATIN_CLASS + r"]|\x02[^\x03]*\x03)+", s):
+        pieces = re.findall(r"\x02([^\x03]*)\x03|([" + _LATIN_CLASS + r"]+)", run)
+        seq = [("R", a) if a != "" else ("B", b) for a, b in pieces if (a != "" or b)]
+        # 真の欠陥 = 先頭が「子音1文字」の遊離のみ。先頭が母音(a/e/i/o/u)1字は
+        # 正当な文法語尾(名詞-o/形容詞-a/副詞-e等)で、前語尾が連結したトークンに頻出する
+        # (例 o/pren, a/opini/e)ため除外しないと正しい分解を壊して回帰する。
+        if len(seq) >= 2 and seq[0][0] == "B" and len(seq[0][1]) == 1 \
+                and seq[0][1].lower() not in "aeiou" and seq[1][0] == "R":
+            surface = "".join(p[1] for p in seq)
+            if 3 <= len(surface) <= 30:
+                out.add(surface)
+    return out
+
+
+def auto_overlay_entries(html_pass1, data_dir, mode):
+    """pass1のhtmlから孤立語を検出 → 各語の正しい分解を自動算出 → build_correctionでmode別
+       エントリ化。返り値は merge_overlay 用 [old, new, placeholder] のリスト($911NNNN$帯)。"""
+    entries = []
+    for w in sorted(find_stranded_words(html_pass1)):
+        try:
+            d = autofix_decomp(w, data_dir)
+            if not d or d.replace("/", "").lower() != w.lower():
+                continue
+            corr = build_correction(d, data_dir)
+            for pair in corr.get(mode, []):
+                if len(pair) >= 2 and pair[0] and pair[1]:
+                    entries.append(pair)
+        except Exception:
+            continue
+    return [[old, new, f"${9110000 + i}$"] for i, (old, new) in enumerate(entries)]
+
+
+def autofix_render(text, ps, GL, pl, GG, G2, fmt, data_dir, mode, orchestrate_fn):
+    """1パス目を描画し、先頭1字孤立語があれば自動補正をmerge_overlayして2パス目を描画して返す。
+       孤立語が無ければ1パスのみ(通常テキストは大半がこれ=高速)。"""
+    html = orchestrate_fn(text, ps, GL, pl, GG, G2, fmt)
+    if "<ruby>" not in html:
+        return html
+    auto = auto_overlay_entries(html, data_dir, mode)
+    if not auto:
+        return html
+    return orchestrate_fn(text, ps, GL, pl, merge_overlay(GG, auto), G2, fmt)

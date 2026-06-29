@@ -247,6 +247,36 @@ with st.form(key='profile_form'):
                 format_type=format_type
             )
 
+        # 1パス目に「先頭1字孤立」過分解(子音1字の遊離: fero->f/er/o 等)があれば、
+        # 自動補正を最優先でmergeして2パス目を描画(機構レベルで欠陥クラスを一掃)。
+        # 孤立が無ければ何もしない(通常テキストは大半がこれ)。
+        try:
+            import esp_overlay_module as _ovx
+            _afmode = "kanji" if selected_option == "漢字化版(新漢字割り当て)を使用する" else "ruby"
+            _auto = _ovx.auto_overlay_entries(processed_text, "./app_data", _afmode)
+            if _auto:
+                _GGx = _ovx.merge_overlay(replacements_final_list, _auto)
+                if use_parallel:
+                    processed_text = parallel_process(
+                        text=text0, num_processes=num_processes,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+                else:
+                    processed_text = orchestrate_comprehensive_esperanto_text_replacement(
+                        text=text0,
+                        placeholders_for_skipping_replacements=placeholders_for_skipping_replacements,
+                        replacements_list_for_localized_string=replacements_list_for_localized_string,
+                        placeholders_for_localized_replacement=placeholders_for_localized_replacement,
+                        replacements_final_list=_GGx,
+                        replacements_list_for_2char=replacements_list_for_2char,
+                        format_type=format_type)
+        except Exception:
+            pass  # 自動補正は任意。失敗しても1パス目の結果をそのまま使う。
+
         # letter_typeに応じて再変換
         if letter_type == '上付き文字':
             processed_text = replace_esperanto_chars(processed_text, x_to_circumflex)
