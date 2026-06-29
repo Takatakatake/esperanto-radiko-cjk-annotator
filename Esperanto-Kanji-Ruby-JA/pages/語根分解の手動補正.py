@@ -14,6 +14,9 @@
 import streamlit as st
 import json, re, os
 
+# CWDがリポジトリルートでも './app_data/...' を解決できるよう、アプリ(pagesの親)へ固定。
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from esp_text_replacement_module import (
     import_placeholders,
     orchestrate_comprehensive_esperanto_text_replacement,

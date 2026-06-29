@@ -13,6 +13,9 @@
 import streamlit as st
 import json, re, os
 
+# 即使 CWD 是仓库根目录,也能解析 './app_data/...':固定到应用(pages的父)目录。
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from esp_text_replacement_module import (
     import_placeholders,
     orchestrate_comprehensive_esperanto_text_replacement,

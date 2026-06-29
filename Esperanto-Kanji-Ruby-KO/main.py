@@ -8,6 +8,13 @@ import json
 import pandas as pd  # 必要なら使う
 from typing import List, Dict, Tuple, Optional
 import streamlit.components.v1 as components
+import os
+
+# Streamlit Cloud 등에서는 작업 디렉터리가 저장소 루트(여러 앱의 상위)가 되어
+# './app_data/...' 상대 경로를 해석하지 못해 FileNotFound가 발생한다. 이 스크립트(앱)가
+# 있는 디렉터리로 작업 디렉터리를 고정하여 로컬/클라우드 모두에서 상대 경로를 해석한다.
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 import multiprocessing
 
 #=================================================================

@@ -13,6 +13,10 @@ import re
 import json
 import streamlit as st
 from typing import List, Dict, Tuple, Optional
+
+# 即使 CWD 是仓库根目录,也能解析 './app_data/...':固定到应用(pages的父)目录。
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import multiprocessing
 from io import StringIO
 import streamlit.components.v1 as components

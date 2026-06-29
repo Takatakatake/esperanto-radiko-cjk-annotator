@@ -39,6 +39,10 @@ import re
 import json
 import streamlit as st
 from typing import List, Dict, Tuple, Optional
+
+# CWD가 저장소 루트여도 './app_data/...'를 해석할 수 있도록 앱(pages의 상위) 디렉터리로 고정.
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import multiprocessing
 from io import StringIO
 import streamlit.components.v1 as components

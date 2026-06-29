@@ -9,6 +9,9 @@ from typing import List, Dict, Tuple, Optional
 from io import StringIO
 import streamlit.components.v1 as components
 
+# CWDがリポジトリルートでも './app_data/...' を解決できるよう、アプリ(pagesの親)ディレクトリへ固定。
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import multiprocessing
 # multiprocessing時のPicklingError回避のため 'spawn' を明示: streamlitでは必ず必要。
 try:

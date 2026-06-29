@@ -6,10 +6,16 @@
 import streamlit as st
 import re
 import io
+import os
 import json
 import pandas as pd  # 如果需要的话使用
 from typing import List, Dict, Tuple, Optional
 import streamlit.components.v1 as components
+
+# 在 Streamlit Cloud 等环境中,工作目录会是仓库根目录(多应用的父目录),
+# 导致 './app_data/...' 相对路径无法解析而 FileNotFound。将工作目录固定到本脚本
+# (应用)所在目录,使本地/云端都能正确解析相对路径。
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 import multiprocessing
 # 在使用 multiprocessing 时，为避免 PicklingError，必须在 streamlit 中显式指定 "spawn"：

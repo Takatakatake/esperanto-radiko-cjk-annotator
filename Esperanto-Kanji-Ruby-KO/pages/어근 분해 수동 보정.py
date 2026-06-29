@@ -15,6 +15,9 @@
 import streamlit as st
 import json, re, os
 
+# CWD가 저장소 루트여도 './app_data/...'를 해석할 수 있도록 앱(pages의 상위) 디렉터리로 고정.
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from esp_text_replacement_module import (
     import_placeholders,
     orchestrate_comprehensive_esperanto_text_replacement,

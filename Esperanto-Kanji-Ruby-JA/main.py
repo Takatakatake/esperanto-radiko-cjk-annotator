@@ -3,10 +3,16 @@
 import streamlit as st
 import re
 import io
+import os
 import json
 import pandas as pd  # 必要なら使う
 from typing import List, Dict, Tuple, Optional
 import streamlit.components.v1 as components
+
+# Streamlit Cloud等では作業ディレクトリがリポジトリのルート(複数アプリの親)になるため、
+# './app_data/...' の相対パスが解決できずFileNotFoundになる。このスクリプト(アプリ)の
+# 置かれたディレクトリへCWDを固定し、ローカル/Cloudどちらでも相対パスを正しく解決する。
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 import multiprocessing
 # multiprocessing時のPicklingError回避のため 'spawn' を明示: streamlitでは必ず必要。
