@@ -12,7 +12,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
+from _important_stems import load_important_stems
 OUT = BASE + r"\_analysis_20260625\out"
+IMP = load_important_stems()
 WRITE = '--write' in sys.argv
 FMT = 'HTML格式_Ruby文字_大小调整_汉字替换'   # 漢字本文・語根ルビ
 KANJI_CSV_SRC = OUT + r"\kanji_root.csv"
@@ -55,7 +57,7 @@ def process(key, write):
         shutil.copy2(lp(KANJI_CSV_SRC), lp(DATA+KANJI_CSV_NAME))
     csvp = DATA+KANJI_CSV_NAME if (write and os.path.exists(lp(DATA+KANJI_CSV_NAME))) else KANJI_CSV_SRC
     kset = _kanji_settings(DATA)
-    combined=generate(APPDIR,DATA,csvp,kset,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_kanji)
+    combined=generate(APPDIR,DATA,csvp,kset,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_kanji,important_stems=IMP)
     os.remove(lp(kset))
     if write:
         with open(lp(DATA+KANJI_JSON_NAME),'w',encoding='utf-8') as g: json.dump(combined,g,ensure_ascii=False,indent=2)

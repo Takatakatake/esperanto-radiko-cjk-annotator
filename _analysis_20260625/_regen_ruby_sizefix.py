@@ -7,7 +7,10 @@ sys.stdout.reconfigure(encoding="utf-8")
 BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
 sys.path.insert(0, BASE + r"\_analysis_20260625")
 from gen_replacement import generate, lp
+from _important_stems import load_important_stems
 OUT = BASE + r"\_analysis_20260625\out"; WRITE = '--write' in sys.argv
+IMP = load_important_stems()
+print(f"重要語幹 {len(IMP)} 件で同長タイ優先")
 APPS = {'JP': (r"\Esperanto-Kanji-Ruby-JA", r"\エスペラント語根-日本語訳ルビ対応リスト.csv", 'ja'),
         'ZH': (r"\Esperanto-Kanji-Ruby-ZH", r"\世界语词根-中文注释对应列表.csv", 'zh'),
         'KO': (r"\Esperanto-Kanji-Ruby-KO", r"\에스페란토 어근-한국어 번역 루비 대응 목록.csv", 'ko')}
@@ -18,7 +21,7 @@ for key, (d, csvn, lang) in APPS.items():
     APPDIR = BASE + d; DATA = APPDIR + r"\app_data"
     with open(lp(OUT + f"\\word_anno_{lang}.json"), encoding='utf-8') as f: wa = json.load(f)
     print(f"[{key}] 再生成中...")
-    combined = generate(APPDIR, DATA, DATA + csvn, DATA + STEM, DATA + USER, DATA + ESTEM, DATA + ROOTS, FMT, word_anno=wa)
+    combined = generate(APPDIR, DATA, DATA + csvn, DATA + STEM, DATA + USER, DATA + ESTEM, DATA + ROOTS, FMT, word_anno=wa, important_stems=IMP)
     n = len(combined["全域替换用のリスト(列表)型配列(replacements_final_list)"])
     if WRITE:
         tgt = DATA + FINAL

@@ -39,7 +39,7 @@ standalone_2char_roots=['al', 'ci', 'da', 'de', 'di', 'do', 'du', 'el', 'en', 'f
 def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
              user_repl_json_path, estem_path, rootlist_path,
              format_type='HTML格式_Ruby文字_大小调整', word_anno=None,
-             use_parallel=False, num_processes=4):
+             use_parallel=False, num_processes=4, important_stems=None):
     import pandas as pd
     sys.path.insert(0, app_module_dir)
     from esp_replacement_json_make_module import (
@@ -401,7 +401,24 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
     for old, new in pre_replacements_dict_3.items():
         if isinstance(new[1], int):
             pre_replacements_list_1.append((old, new[0], new[1]))
-    pre_replacements_list_2 = sorted(pre_replacements_list_1, key=lambda x: x[2], reverse=True)
+    # 重要語彙(2890+派生)の同長タイ優先: 優先度(=文字数ベース)を一切跨がず、完全同値の
+    # タイの時だけ重要語を勝たせる(タプルキー)。greedy最長一致・POS補正は不変。
+    _imp = important_stems or set()
+    _GSUF = ("ojn", "oj", "on", "o", "ajn", "aj", "an", "a", "en", "e", "jn", "j", "n",
+             "as", "is", "os", "us", "u", "i")
+    def _destem(w):
+        w = w.strip()
+        for s in _GSUF:
+            if w.endswith(s) and len(w) - len(s) >= 2:
+                return w[:-len(s)]
+        return w
+    def _is_important(old):
+        if not _imp:
+            return False
+        o = old.strip()
+        return o in _imp or _destem(o) in _imp
+    pre_replacements_list_2 = sorted(pre_replacements_list_1,
+                                     key=lambda x: (x[2], _is_important(x[0])), reverse=True)
 
     pre_replacements_list_3 = []
     for kk in range(len(pre_replacements_list_2)):
