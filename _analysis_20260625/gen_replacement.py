@@ -408,21 +408,29 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
         if len(pre_replacements_list_2[kk][0]) >= 3:
             pre_replacements_list_3.append([pre_replacements_list_2[kk][0], remove_redundant_ruby_if_identical(pre_replacements_list_2[kk][1]), imported_placeholders_for_global_replacement[kk]])
 
+    # 大文字化で rb(語根)の幅が変わる(例 v=8→V=10.7, ĉ=8→Ĉ=11.6)ため、大文字/先頭大文字
+    # 変種はルビサイズ(rtのCSSクラス)を「実際のcased rb」で output_format により再計算する。
+    # これをしないと、小文字語根の幅で決めたサイズを流用し、短語根で最大3段ずれる(要件7.4)。
+    _RUBYFIX = re.compile(r'<ruby>([^<]+)<rt class="[^"]+">((?:[^<]|<br>)*)</rt></ruby>', re.IGNORECASE)
+    def _resize_caps(h):
+        return _RUBYFIX.sub(lambda mo: output_format(mo.group(1), mo.group(2).replace('<br>', ''), format_type, char_widths_dict), h)
+
     pre_replacements_list_4 = []
     if format_type in ('HTML格式_Ruby文字_大小调整', 'HTML格式_Ruby文字_大小调整_汉字替换', 'HTML格式', 'HTML格式_汉字替换'):
         for old, new, place_holder in pre_replacements_list_3:
             pre_replacements_list_4.append((old, new, place_holder))
-            pre_replacements_list_4.append((old.upper(), new.upper(), place_holder[:-1] + 'up$'))
+            pre_replacements_list_4.append((old.upper(), _resize_caps(new.upper()), place_holder[:-1] + 'up$'))
             if old[0] == ' ':
                 cap_old = old[0] + old[1:].capitalize(); cap_new = new[0] + capitalize_ruby_and_rt(new[1:])
             else:
                 cap_old = old.capitalize(); cap_new = capitalize_ruby_and_rt(new)
+            cap_new = _resize_caps(cap_new)
             pre_replacements_list_4.append((cap_old, cap_new, place_holder[:-1] + 'cap$'))
             # ハイフン複合の各部大文字変種(固有名詞 Abu-Dabi 等。実テキストはこの形)
             if '-' in old.strip().strip('-'):
                 pc_old = _cap_after_hyphen(cap_old)
                 if pc_old != cap_old:
-                    pre_replacements_list_4.append((pc_old, _cap_after_hyphen(cap_new), place_holder[:-1] + 'pc$'))
+                    pre_replacements_list_4.append((pc_old, _resize_caps(_cap_after_hyphen(cap_new)), place_holder[:-1] + 'pc$'))
     elif format_type in ('括弧(号)格式', '括弧(号)格式_汉字替换'):
         for old, new, place_holder in pre_replacements_list_3:
             pre_replacements_list_4.append((old, new, place_holder))
@@ -457,22 +465,22 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
     for i in range(len(suffix_2char_roots)):
         replaced_suffix = remove_redundant_ruby_if_identical(safe_replace(suffix_2char_roots[i], temporary_replacements_list_final))
         replacements_list_for_suffix_2char_roots.append(["$" + suffix_2char_roots[i], "$" + replaced_suffix, "$" + imported_placeholders_for_2char_replacement[i]])
-        replacements_list_for_suffix_2char_roots.append(["$" + suffix_2char_roots[i].upper(), "$" + replaced_suffix.upper(), "$" + imported_placeholders_for_2char_replacement[i][:-1] + 'up$'])
-        replacements_list_for_suffix_2char_roots.append(["$" + suffix_2char_roots[i].capitalize(), "$" + capitalize_ruby_and_rt(replaced_suffix), "$" + imported_placeholders_for_2char_replacement[i][:-1] + 'cap$'])
+        replacements_list_for_suffix_2char_roots.append(["$" + suffix_2char_roots[i].upper(), "$" + _resize_caps(replaced_suffix.upper()), "$" + imported_placeholders_for_2char_replacement[i][:-1] + 'up$'])
+        replacements_list_for_suffix_2char_roots.append(["$" + suffix_2char_roots[i].capitalize(), "$" + _resize_caps(capitalize_ruby_and_rt(replaced_suffix)), "$" + imported_placeholders_for_2char_replacement[i][:-1] + 'cap$'])
 
     replacements_list_for_prefix_2char_roots = []
     for i in range(len(prefix_2char_roots)):
         replaced_prefix = remove_redundant_ruby_if_identical(safe_replace(prefix_2char_roots[i], temporary_replacements_list_final))
         replacements_list_for_prefix_2char_roots.append([prefix_2char_roots[i] + "$", replaced_prefix + "$", imported_placeholders_for_2char_replacement[i + 1000] + "$"])
-        replacements_list_for_prefix_2char_roots.append([prefix_2char_roots[i].upper() + "$", replaced_prefix.upper() + "$", imported_placeholders_for_2char_replacement[i + 1000][:-1] + 'up$' + "$"])
-        replacements_list_for_prefix_2char_roots.append([prefix_2char_roots[i].capitalize() + "$", capitalize_ruby_and_rt(replaced_prefix) + "$", imported_placeholders_for_2char_replacement[i + 1000][:-1] + 'cap$' + "$"])
+        replacements_list_for_prefix_2char_roots.append([prefix_2char_roots[i].upper() + "$", _resize_caps(replaced_prefix.upper()) + "$", imported_placeholders_for_2char_replacement[i + 1000][:-1] + 'up$' + "$"])
+        replacements_list_for_prefix_2char_roots.append([prefix_2char_roots[i].capitalize() + "$", _resize_caps(capitalize_ruby_and_rt(replaced_prefix)) + "$", imported_placeholders_for_2char_replacement[i + 1000][:-1] + 'cap$' + "$"])
 
     replacements_list_for_standalone_2char_roots = []
     for i in range(len(standalone_2char_roots)):
         replaced_standalone = remove_redundant_ruby_if_identical(safe_replace(standalone_2char_roots[i], temporary_replacements_list_final))
         replacements_list_for_standalone_2char_roots.append([" " + standalone_2char_roots[i] + " ", " " + replaced_standalone + " ", " " + imported_placeholders_for_2char_replacement[i + 2000] + " "])
-        replacements_list_for_standalone_2char_roots.append([" " + standalone_2char_roots[i].upper() + " ", " " + replaced_standalone.upper() + " ", " " + imported_placeholders_for_2char_replacement[i + 2000][:-1] + 'up$' + " "])
-        replacements_list_for_standalone_2char_roots.append([" " + standalone_2char_roots[i].capitalize() + " ", " " + capitalize_ruby_and_rt(replaced_standalone) + " ", " " + imported_placeholders_for_2char_replacement[i + 2000][:-1] + 'cap$' + " "])
+        replacements_list_for_standalone_2char_roots.append([" " + standalone_2char_roots[i].upper() + " ", " " + _resize_caps(replaced_standalone.upper()) + " ", " " + imported_placeholders_for_2char_replacement[i + 2000][:-1] + 'up$' + " "])
+        replacements_list_for_standalone_2char_roots.append([" " + standalone_2char_roots[i].capitalize() + " ", " " + _resize_caps(capitalize_ruby_and_rt(replaced_standalone)) + " ", " " + imported_placeholders_for_2char_replacement[i + 2000][:-1] + 'cap$' + " "])
 
     replacements_list_for_2char = replacements_list_for_standalone_2char_roots + replacements_list_for_suffix_2char_roots + replacements_list_for_prefix_2char_roots
 
