@@ -400,72 +400,13 @@ if st.session_state.get("result_html"):
 #=================================================================
 
 st.write("---")
-st.title("Ligilo-oj(URL-oj)")
+st.title("Ligilo-oj (URL-oj) / 言語版・语言版本・언어판")
 st.markdown("""
-#### Ligilo-oj de la aplikaĵo en aliaj lingvaj versioj (Esperanto, English, 日本語, 中文, 한국어, Русский, español, italiano, français, Deutsch, العربية, हिन्दी, polski, Tiếng Việt, Bahasa Indonesia; entute 14 lingvoj) ⇓  
-              
-Esperanta versio    
-https://esperanto-kanji-converter-and-ruby-annotation-tool-esperanto.streamlit.app/  
-English version  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-english.streamlit.app/  
-日本語版    
-https://esperanto-kanji-converter-and-ruby-annotation-tool.streamlit.app/  
-中文版  
-https://esperanto-hanzi-converter-and-ruby-annotation-tool-chinese-dgw.streamlit.app/  
-**한국어 버전**    
-https://esperanto-kanji-converter-and-ruby-annotation-tool-korean-yrrx.streamlit.app/    
-Русская версия  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-russian.streamlit.app/  
-Versión en español  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-spanish.streamlit.app/  
-Versione italiana  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-italian.streamlit.app/  
-Version française  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-french.streamlit.app/  
-Deutsche Version  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-german.streamlit.app/  
-إصدار عربي  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-arabic.streamlit.app/  
-हिन्दी संस्करण  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-hindi.streamlit.app/  
-Polska wersja  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-polish.streamlit.app/  
-Phiên bản tiếng Việt  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-vietnamese.streamlit.app/  
-Versi Bahasa Indonesia  
-https://esperanto-kanji-converter-and-ruby-annotation-tool-indonesian.streamlit.app/  
+#### 日中韓 三言語版 ⇓ (Japana / Ĉina / Korea)
+- **日本語版 (Japana)**: https://esperanto-radiko-cjk-annotator.streamlit.app/
+- **中文版 (Ĉina)**: https://esperanto-radiko-cjk-annotator-zh.streamlit.app/
+- **한국어판 (Korea)**: https://esperanto-radiko-cjk-annotator-ko.streamlit.app/
 
-#### Uzadaj instrukcioj de la aplikaĵo (README.md en la GitHub-deponejo) ⇓    
-  
-Esperanta versio  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Esperanto  
-English version  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-English  
-日本語版    
-https://github.com/Takatakatake/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-  
-中文版  
-https://github.com/Takatakatake/Esperanto-Hanzi-Converter-and-Ruby-Annotation-Tool-Chinese  
-**한국어 버전**    
-https://github.com/Takatakatake/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Korean  
-Русская версия  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Russian  
-Versión en español  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Spanish  
-Versione italiana  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Italian  
-Version française  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-French  
-Deutsche Version  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-German  
-إصدار عربي  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Arabic  
-हिन्दी संस्करण  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Hindi  
-Polska wersja  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Polish  
-Phiên bản tiếng Việt  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Vietnamese  
-Versi Bahasa Indonesia  
-https://github.com/TakafumiYamauchi/Esperanto-Kanji-Converter-and-Ruby-Annotation-Tool-Indonesian  
+#### GitHub-deponejo (fontkodo & uzadaj instrukcioj) ⇓
+https://github.com/Takatakatake/esperanto-radiko-cjk-annotator
 """)
-
