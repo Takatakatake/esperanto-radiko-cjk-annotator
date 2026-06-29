@@ -100,13 +100,14 @@ with st.expander("サンプルファイル一覧(ダウンロード用)"):
     # サンプルファイルのパス
     file_path0 = './app_data/Mingeo先生版 世界语词根-汉字对应列表.csv'
     # ファイルを読み込む
-    with open(file_path0, "rb") as file:
-        btn = st.download_button(
-                label="サンプルCSV２(エスペラント語根-漢字対応リスト＿楊氏(Mingeo))ダウンロード",
-                data=file,
-                file_name="エスペラント語根-漢字対応リスト＿楊氏(Mingeo).csv",
-                mime="text/csv"
-            )
+    if os.path.exists(file_path0):  # Mingeo版は軽量化で未同梱の場合あり→スキップ(クラッシュ防止)
+        with open(file_path0, "rb") as file:
+            btn = st.download_button(
+                    label="サンプルCSV２(エスペラント語根-漢字対応リスト＿楊氏(Mingeo))ダウンロード",
+                    data=file,
+                    file_name="エスペラント語根-漢字対応リスト＿楊氏(Mingeo).csv",
+                    mime="text/csv"
+                )
 
 
     st.markdown("""
@@ -180,13 +181,15 @@ with st.expander("サンプルファイル一覧(ダウンロード用)"):
     franca, germana, araba, hindia, pola, vjetnama, indonezia) kiel priskribaj tradukoj
     aŭ rubioj al ĉirkaŭ 4736 Esperanto-radikoj.
     """)
-    with open('./app_data/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx', "rb") as file:
-        st.download_button(
-            label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
-            data=file,
-            file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        )
+    _xlsx14 = './app_data/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx'
+    if os.path.exists(_xlsx14):  # 軽量化で未同梱の場合はスキップ(ページのクラッシュ防止)
+        with open(_xlsx14, "rb") as file:
+            st.download_button(
+                label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
+                data=file,
+                file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
 
 st.write("---")
 # ユーザーに見せる選択肢（韓国語）→これを日本語表記に変更

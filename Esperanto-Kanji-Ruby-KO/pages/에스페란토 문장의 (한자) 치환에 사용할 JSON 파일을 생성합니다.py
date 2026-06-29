@@ -181,13 +181,14 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     에스페란토 어근과 한자를 대응시킨 CSV 파일입니다.
     """)
     file_path0 = './app_data/Mingeo先生版 世界语词根-汉字对应列表.csv'
-    with open(file_path0, "rb") as file:
-        btn = st.download_button(
-            label="샘플 CSV2(에스페란토 어근-한자 대응 목록·Mingeo) 다운로드",
-            data=file,
-            file_name="에스페란토어근-한자대응목록_Mingeo.csv",
-            mime="text/csv"
-        )
+    if os.path.exists(file_path0):  # Mingeo판은 경량화로 미동봉일 수 있음→건너뜀(크래시 방지)
+        with open(file_path0, "rb") as file:
+            btn = st.download_button(
+                label="샘플 CSV2(에스페란토 어근-한자 대응 목록·Mingeo) 다운로드",
+                data=file,
+                file_name="에스페란토어근-한자대응목록_Mingeo.csv",
+                mime="text/csv"
+            )
 
     st.markdown("""
     **샘플 CSV3(에스페란토 어근-한자 대응 목록)**
@@ -252,13 +253,15 @@ with st.expander("샘플 파일 목록(다운로드용)"):
     franca, germana, araba, hindia, pola, vjetnama, indonezia) kiel priskribaj tradukoj
     aŭ rubioj al ĉirkaŭ 4736 Esperanto-radikoj.
     """)
-    with open('./app_data/Kreado de rubenaj komentoj en 14 lingvoj (日本語, 中文, 한국어, English, Русский, español, italiano, français, Deutsch, العربية, हिन्दी, polski, Tiếng Việt, Bahasa Indonesia) respondaj al listo de 4736 Esperant.xlsx', "rb") as file:
-        st.download_button(
-            label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
-            data=file,
-            file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        )
+    _xlsx14 = './app_data/Kreado de rubenaj komentoj en 14 lingvoj (日本語, 中文, 한국어, English, Русский, español, italiano, français, Deutsch, العربية, हिन्दी, polski, Tiếng Việt, Bahasa Indonesia) respondaj al listo de 4736 Esperant.xlsx'
+    if os.path.exists(_xlsx14):  # 경량화로 미동봉 시 건너뜀(페이지 크래시 방지)
+        with open(_xlsx14, "rb") as file:
+            st.download_button(
+                label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
+                data=file,
+                file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
 
 
 st.write("---")

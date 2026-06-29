@@ -276,13 +276,14 @@ with st.expander("示例文件列表（点击下载）"):
     可作为参考，用杨先生(Mingeo)的汉字化思路。
     """)
     file_path0 = './app_data/Mingeo先生版 世界语词根-汉字对应列表.csv'
-    with open(file_path0, "rb") as file:
-        btn = st.download_button(
-            label="下载示例 CSV 2（知乎 Mingeo 版本）",
-            data=file,
-            file_name="世界语词根_汉字对应_Mingeo.csv",
-            mime="text/csv"
-        )
+    if os.path.exists(file_path0):  # Mingeo版可能因轻量化未同捆→跳过(防止崩溃)
+        with open(file_path0, "rb") as file:
+            btn = st.download_button(
+                label="下载示例 CSV 2（知乎 Mingeo 版本）",
+                data=file,
+                file_name="世界语词根_汉字对应_Mingeo.csv",
+                mime="text/csv"
+            )
 
     # 示例 CSV 3
     st.markdown("""
@@ -346,13 +347,15 @@ with st.expander("示例文件列表（点击下载）"):
     franca, germana, araba, hindia, pola, vjetnama, indonezia) kiel priskribaj tradukoj
     aŭ rubioj al ĉirkaŭ 4736 Esperanto-radikoj.
     """)
-    with open('./app_data/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx', "rb") as file:
-        st.download_button(
-            label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
-            data=file,
-            file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        )
+    _xlsx14 = './app_data/RubenajKomentoj-14-[ja-zh-ko-en-ru-es-it-fr-de-ar-hi-pl-vi-id]-Listo4736-EO.xlsx'
+    if os.path.exists(_xlsx14):  # 轻量化未同捆时跳过(防止页面崩溃)
+        with open(_xlsx14, "rb") as file:
+            st.download_button(
+                label="Elŝuti Specimenan Excel n-ro 1 (14-lingva listo de Esperantaj radikoj & tradukoj)",
+                data=file,
+                file_name="ListoDe14LingvojPorEsperantajRadikoj_TradukRubioj.xlsx",  # ★ファイル名をエスペラント化
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
 
 st.write("---")
 
