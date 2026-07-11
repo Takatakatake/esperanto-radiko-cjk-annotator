@@ -1,0 +1,83 @@
+﻿verdict,severity,issue_type,root,example_word,langs,current_ja,current_zh,current_ko,recommend_ja,recommend_zh,recommend_ko,reason
+confirmed,high,mistranslation,german,alt/german,ko,ドイツの,德,도덕적 선,,,독일의/게르만,KOの「도덕적 선(道徳的善)」はgerman(ドイツ/ゲルマン)と全く無関係な誤訳で、例語alt/german(高地ドイツ語)にも合わない。
+confirmed,high,mistranslation,cikl,po/cikl,ja,ポー,周期,주기,周期/サイクル,,,JAの「ポー」はcikl(周期・サイクル)の訳として無意味で、ZH/KOの「周期/주기」と乖離した明らかな誤り。
+confirmed,high,mistranslation,mal,po/mal/grand,ja,ポー,相反,정반대,反対(逆/正反対),,,JAの「ポー」は例語 po/mal/grand の先頭「po」を誤って音写したもので、超高頻度(883)の反対接頭辞 mal の意味になっておらず、正しいZH「相反」KO「정반대」と乖離している。
+confirmed,high,mistranslation,gen,gen/manipul/ad,ja|zh|ko,天才,天才,천재,遺伝子,基因,유전자,例語 gen/manipul/ad(遺伝子操作)の語根 gen は「遺伝子(geno)」であり、「天才(genio)」ではないため全言語で誤訳。
+confirmed,high,mistranslation,ŝos,suk/ŝos,zh|ko,若枝を伸ばす,公路,포장도로,若枝/新芽を出す,嫩芽/新枝,새순/어린싹,ŝos は「若枝・新芽(ŝoso)」の意。ZH「公路」・KO「포장도로」は「舗装道路(ŝoseo)」と取り違えた誤訳で、JAのみ正しい。
+confirmed,high,mistranslation,drag,drag/il,zh|ko,浚渫する,龙,용,浚渫する,疏浚/挖泥,준설하다,drag は「浚渫する(dragi)」の意(例 drag/il=浚渫機)だが、ZH「龙」・KO「용」は音写で「竜(dragon)」と混同した誤訳。
+confirmed,high,mistranslation,tin,tin/ist,zh,桶,蛾,통,,桶/大缸/木盆,,tin は「桶・大桶(tino)」(例 tin/ist=桶職人)だが、ZH「蛾」は「蛾(tineo)」と取り違えた誤訳。JA/KO は正しい。
+confirmed,high,mistranslation,part,urb/o/part,ja|zh|ko,党,政党,정당,部分,部分,부분,例語 urb/o/part(=都市の一部)が示すとおり part は「部分」を表す語根であり、「党/政党」は別語根 parti(政党)の意味を当てた誤り。
+confirmed,high,jck_inconsistency,lit,lit,zh|ko,ベッド,可溶,가용,ベッド,床,침대,lito=「ベッド」でJAは正しいが、ZH「可溶」・KO「가용(可溶)」は無関係な語義で、3言語が分裂した明白な誤り。
+confirmed,high,jck_inconsistency,hum,hum/iĝ,zh|ko,腐植土,人类,인간,腐植土,腐殖质/腐殖土,부식토,例語 hum/iĝ(=腐植化)からJA「腐植土」が正しく、ZH「人类」KO「인간」は human(人間)と取り違えた誤り。
+confirmed,high,mistranslation,rad,muel/rad,ja|zh|ko,光線,光线,광선,車輪,车轮,바퀴,例語 muel/rad(=水車の輪)が示すとおり rad は「車輪」であり、「光線」は別語根 radi(光線)の意味を当てた誤り。
+confirmed,high,jck_inconsistency,morf,meta/morf,zh|ko,形,超,초,形,形,형,morf は「形・形態」を意味し JA 形 は正しいが、ZH「超」・KO「초」は隣接語根 meta(4-92 超/超/초)の意味が誤って混入しており、形とは全く無関係。
+confirmed,high,mistranslation,hor,po/hor,ja,ポー,小时,한 시간,時間,,,hor は「時間」の意味で ZH 小时・KO 한 시간 は正しいが、JA「ポー」は例語 po/hor の接頭辞 po を音写したもので、語根 hor の訳になっていない。
+confirmed,high,mistranslation,grand,po/mal/grand,ja,正反対,大的,큰,大きい,大,큰,grand は「大きい」で ZH 大的・KO 큰 は正しいが、JA「正反対」は意味が全く逆・無関係で明らかな誤り。
+confirmed,high,root_faithfulness,ad,odise/ad,ja|zh|ko,叙事詩,史诗,서사시,継続/反復,持续/反复,계속/반복,「-ad」は継続・反復の行為を表す接辞なのに、例語 odise/ad(オデュッセイア)全体の訳『叙事詩』を当てており語根忠実でない。
+confirmed,high,root_faithfulness,ar,mont/ar,ja|zh|ko,脈,脉,맥,群/集合,群/集合,무리/집합,「-ar」は集合を表す接辞なのに、mont/ar(山脈)の『脈』を語義に当てており全体語由来で語根忠実でない。
+confirmed,high,mistranslation,grand,po/grand,ja,ポー,大的,큰,大きい/大,,,grand の中核義は『大きい』だが JA 欄が『ポー』となっており意味を成さない誤り(前置詞 po の混入と思われる)。
+confirmed,mid,root_faithfulness,glan,mar/glan,ja|zh|ko,フジツボ,藤壶,따개비,どんぐり/亀頭,橡实/龟头,도토리/귀두,「フジツボ」はmar/glan(海のドングリ＝フジツボ)の合成的全体語訳であり、語根glan自身は「ドングリ/亀頭」を意味する。
+confirmed,mid,root_faithfulness,mari,mari/best,ja|zh|ko,テントウムシ,瓢虫,무당벌레,マリア,玛丽,마리아,「テントウムシ」はmari/best(マリアの虫)の全体語訳で、語根mari自身は人名「マリア」を指す。
+confirmed,mid,root_faithfulness,lapon,lapon/i,ja|zh|ko,ラップランド,拉普兰,라플란드,ラップ人/サーミ人,拉普人/萨米人,라프인/사미인,「ラップランド」は地名でlapon/i(＋国-i)の全体語訳であり、語根lapon自身は民族「ラップ人/サーミ人」を指す。
+confirmed,mid,root_faithfulness,fon,anti/fon,ja|zh|ko,唱,唱,창,音/声,音/声,소리/음,「唱(歌う)」はanti/fon(交唱)の全体語義で、語根fon自身は「音・声」(別行0-298のfon=音と不整合)。
+confirmed,mid,root_faithfulness,moder,moder/ig/aĵ,ja|zh|ko,減速,慢化,감속,和らげる/加減する,缓和/使适度,완화하다/조절하다,「減速/慢化」はmoder/ig/aĵ(減速材=モデレーター)の応用義で、語根moder自身は「和らげる・適度にする」を意味する。
+confirmed,mid,mistranslation,fakultat,fakultat/estr,ko,学部,学院,학술원,,,학부/단과대학,KOの「학술원(学術院＝アカデミー)」は大学のfakultat(学部)とは別物で、例語fakultat/estr(学部長)にも合わない。
+confirmed,mid,mistranslation,tapiŝ,tapiŝ/bomb/ad,zh,絨毯,挂毯,카펫,,地毯,,ZHの「挂毯(壁掛けタペストリー)」は床の敷物tapiŝ(絨毯)と異なり、例語tapiŝ/bomb/ad(絨毯爆撃=地毯式轰炸)にも合わない。
+confirmed,mid,mistranslation,ĉel,sun/ĉel,ja|ko,独居房,小室,독방,細胞/電池セル/小室,,세포/전지/칸,JA「独居房」KO「독방」は監獄の独房を指し、例語sun/ĉel(太陽電池のセル)に不適切かつZH「小室」とも不整合。
+confirmed,mid,root_faithfulness,muŝ,muŝ/bugr/ad,ja|zh|ko,些細,细枝,사소,蝿(ハエ),苍蝇,파리,語根 muŝ の中核義は昆虫の「蝿」だが、全体語 muŝ/bugr/ad(重箱の隅をつつく=瑣末)の合成的ニュアンス「些細」を語根に当てており語根忠実性違反。
+confirmed,mid,mistranslation,bar,mal/bar,ja|zh|ko,圧,压,압,妨げる(塞ぐ/障壁),阻挡,막다,例語 mal/bar(=閉塞を除く・開く)から bar は「遮る/塞ぐ」の意であり、圧力単位由来の「圧」は語根義として誤り。
+confirmed,mid,jck_inconsistency,hidr,hidr/oid,zh|ko,ヒドラ,水,물,,水螅(ヒドラ),히드라,例語 hidr/oid(ヒドロ虫)の文脈では hidr=動物のヒドラを指し、JAは正しく「ヒドラ」だがZH/KOは別義「水」を当てており言語間で不整合。
+confirmed,mid,mistranslation,oranĝ,oranĝ/uj,ja|zh|ko,オランジュ,奥朗日,오랑주,オレンジ(橙),橙,오렌지,例語 oranĝ/uj(=オレンジの木)から oranĝ は果物「オレンジ」の意だが、フランスの地名「オランジュ市」の音写を当てており例語と矛盾している。
+confirmed,mid,root_faithfulness,maŭr,maŭr/uj,ja|zh|ko,マウレタニア,毛里塔尼亚,마우레타니아,ムーア人,摩尔人,무어인,語根 maŭr は「ムーア人」。例語 maŭr/uj は maŭr+uj(=ムーア人の国=マウレタニア)であり、接尾辞ujの「国」まで含めた全体語義を語根に当てている。
+confirmed,mid,root_faithfulness,saturn,saturn/ism,ja|zh|ko,鉛中毒,铅中毒,납중독,鉛,铅,납,例語 saturn/ism(鉛中毒=saturnism)の「中毒」は接尾辞ism由来であり、語根 saturn(錬金術のサターン=鉛)は「鉛」であるべき。全体語義を語根に含めている。
+confirmed,mid,jck_inconsistency,kanton,kanton,ja,広東,州郡,칸톤,州/カントン(行政区),,,kanton の共通義は行政区の「カントン」で、ZH「州郡」KO「칸톤」は行政区を指すが、JA「広東」は中国の地名Canton(広州)と取り違えており不整合。
+confirmed,mid,root_faithfulness,kultur,infan/kultur,ja|zh|ko,育児,育儿,육아,養育(育成),养育(培育),양육(육성),例語 infan/kultur の「育児=子どもの養育」の「児(子ども)」部分は infan 由来。語根 kultur は「養育/栽培/文化」であり、子ども概念を含めるのは全体語義で語根忠実性違反。
+confirmed,mid,mistranslation,ĥam,ĥam/id,zh|ko,ハム,火腿,햄,,含(ノアの子),함(노아의 아들),例語 ĥam/id(ハム族)の ĥam は聖書のノアの子「ハム」であり、ZH「火腿」・KO「햄」の食品ハム(=ŝinko)は誤訳。
+confirmed,mid,mistranslation,kontraŭ,kontraŭ/sifilis,ja,向かって,对抗,반대,に反対して/抗-,,,kontraŭ は「～に反対して・抗-」の意(例 kontraŭ/sifilis=抗梅毒)。JA「向かって」は方向(～へ)を示し、ZH「对抗」KO「반대」の対立義とズレる。
+confirmed,mid,jck_inconsistency,kard,felt/o/kard,zh,すく,蓟,머리카락을 빗다,,梳理/梳(羊毛),,例語(フェルトの梳毛)では kard=「梳く(kardi)」の動作。JA「すく」KO「머리카락을 빗다」は動作を示すが、ZH「蓟(アザミ)」は植物名で不一致。
+confirmed,mid,learning_quality,pseŭd,pseŭd,ja,=kaŝ-,伪,가짜,偽/擬(にせ),,,pseŭd は「偽・擬(pseudo)」の意。JAの「=kaŝ-」は他語根への参照表記で訳になっておらず、kaŝ(隠す)とも意味が異なり学習上不適切。
+confirmed,mid,mistranslation,ĉar,sid/ĉar/et,ja|zh|ko,~だから,因为,…이기 때문에,車/荷車,车/大车,수레,例語 sid/ĉar/et(乳母車)の ĉar は「車(ĉaro)」だが、全言語が接続詞「~だから(ĉar)」と訳しており例語の語義と不一致。
+confirmed,mid,mistranslation,kaze,kaze/ig/il,ko,カード,酪,카드,,,응유/커드,kaze は「凝乳・カゼイン(kazeo)」の意(例 kaze/ig/il=凝乳剤)。KO「카드」は「カード(card)」を意味し誤りで、「커드/응유」とすべき。
+confirmed,mid,learning_quality,ism,peon/ism,ja|zh|ko,ism,ism,ism,主義,主义,주의,接尾辞 ism がラテン語のまま未訳で全言語に残っており、「主義/-ism」等に訳すべき。
+confirmed,mid,jck_inconsistency,bast,bast,zh|ko,靭皮,棒,막대기,靭皮,韧皮/树皮纤维,인피,basto=「靭皮(樹皮繊維)」でJAは正しいが、ZH「棒」KO「막대기」は bastono(棒)と混同した誤り。
+confirmed,mid,mistranslation,pod,a/pod,ja|zh|ko,演壇,讲台,연단,足,足,발,例語 a/pod(=無足の)では pod は「足」の意味だが、訳「演壇/讲台」は別語根 podi(演壇)の意味を当てた誤り(cf 3-131 pod=足)。
+confirmed,mid,mistranslation,rod,el/rod/iĝ,ja|zh|ko,錨地,锚地,묘박지,齧る/侵食する,啃蚀/侵蚀,갉다/침식하다,例語 el/rod/iĝ(=侵食され去る)では rodi は「齧る/侵食する」の意味だが、訳は同綴異義の「錨地(roado)」で不一致。
+confirmed,mid,mistranslation,nobel,ne/nobel,ja|zh|ko,ノーベル,诺贝尔,노벨,貴族,贵族,귀족,例語 ne/nobel(=非貴族の)が示すとおり nobelo は「貴族」であり、固有名「ノーベル」を当てるのは誤り。
+confirmed,mid,mistranslation,kanel,ŝraŭb/in/kanel,ja|zh|ko,シナモン,肉桂,계피,溝/縦溝,凹槽/沟槽,홈,例語 ŝraŭb/in/kanel(=ねじの溝)では kanelo は「溝/縦溝」の意味だが、訳「シナモン(cinamo)」は別語で語義不一致。
+confirmed,mid,mistranslation,il,form/i/il,ja|zh|ko,基,基,기,道具/器具,工具/器具,도구/기구,"頻度1159の道具接尾辞 -il(例 gut/ig/il=点滴器, lamp/ŝirm/il=電灯傘)であり中核義は「道具/器具」、「基(化学基)」は誤り。"
+confirmed,mid,root_faithfulness,ec,vandal/ec,ja|zh|ko,行為,行为,행위,性質/状態,性质/状态,성질/상태,接尾辞 -ec は「性質/状態」を表す語根(cf 3-55=性質)であり、vandal/ec 全体の「行為」を当てるのは合成義で語根不忠実。
+confirmed,mid,jck_inconsistency,ĉiel,ĉiel,ja|zh|ko,空,各种,온갖,あらゆる方法で/どの点でも,无论如何/以各种方式,어떻게든/온갖 방법으로,JAは「空(ĉielo)」だがZH「各种」KO「온갖」は相関詞 ĉiel(あらゆる方法で)寄りで、3言語が別語義に分裂している。
+confirmed,mid,jck_inconsistency,fart,fart,ja|zh,暮らす,感觉,건강 상태가 어떻다,(体調が)～である,过得(如何)/健康状况如何,,farti=「(健康・体調が)～である」だが、JA「暮らす」・ZH「感觉(=senti)」がKOの健康状態義とズレて3言語が不揃い。
+confirmed,mid,root_faithfulness,buf,akuŝ/buf,ja|zh|ko,助産ヒキガエル,产婆蟾,산파두꺼비,ヒキガエル,蟾蜍,두꺼비,buf 自体は「ヒキガエル」であり、訳の「助産/产婆/산파」の部分は併合語根 akuŝ(出産)由来で、全体語 akuŝ/buf(助産ヒキガエル)の意味を当ててしまっている。
+confirmed,mid,root_faithfulness,cist,kole/cist,ja|zh|ko,胆嚢,胆囊,쓸개,膀胱/嚢,膀胱/囊,방광/낭,cist 自体は「膀胱・嚢(cyst)」であり、「胆」の意は併合語根 kole 由来で、全体語 kole/cist(胆嚢)の意味を語根に当ててしまっている。
+confirmed,mid,mistranslation,hipo,hipo/tenar,ja|zh|ko,小,小,소,下/低,下/低,하/저,接頭辞 hipo は「下・低・不足」の意味(例 hipo/plazi=発育不全)であり、「小/小/소(小さい)」は不正確で hypo- の中核義とずれている。
+confirmed,mid,mistranslation,lin,lin/sem,ja|zh|ko,線,线,선,亜麻,亚麻,아마,lin は『亜麻』(lin/sem=亜麻仁)を意味するのに『線』と訳しており、linio(線)と取り違えた誤訳。
+confirmed,mid,root_faithfulness,elektr,elektr/on/mikro/skop,ja|ko,電子,电,전자,電気,,전기,語根 elektr は『電気(の)』で、JA『電子』・KO『전자』は elektr/on(electron)の全体語義を当てており語根忠実でない(ZH『电』は適切)。
+confirmed,mid,jck_inconsistency,golf,golf/lud,zh|ko,ゴルフ,海湾,바다에 깊게 들어간 만,,高尔夫,골프,例語 golf/lud はゴルフ競技を指すのに、ZH『海湾』・KO は『湾(gulf)』と訳し JA『ゴルフ』と意味がずれている。
+confirmed,mid,mistranslation,palanken,palanken,ko,かご,轿,바구니,,,가마,palanken は『輿(palanquin)』で ZH『轿』は正しいが、KO『바구니』は『籠(basket)』であり誤り。
+confirmed,mid,root_faithfulness,etil,etil/ism,ja|zh|ko,アルコール,酒精,알코올,エチル,乙基,에틸,語根 etil は『エチル(基)』で、例語 etil/ism(アルコール依存)全体の義『アルコール』を当てるのは語根忠実でない。
+confirmed,mid,root_faithfulness,logi,taŭt/o/logi,ja|zh|ko,反復,反复,반복,論/言,论述,논/말,「-logi」は『学・言説』を表し、taŭt/o/logi(同語反復)の『反復』は taŭt 由来であって logi の語義ではない。
+confirmed,mid,root_faithfulness,pod,skaf/o/pod,ja|zh|ko,類,类,류,足,足,발,pod は『足』(skaf/o/pod=掘足類の足)を意味するのに『類(class)』と訳しており、分類接尾の全体機能を当てた誤り。
+confirmed,low,root_faithfulness,agrip,agrip/in,ja|zh|ko,アグリッピナ,阿格里庇娜,아그리피나,アグリッパ,阿格里帕,아그리파,「アグリッピナ」は女性形でagrip/in(＋女性-in)の全体語訳であり、語根agrip自身は男性名「アグリッパ」を指す。
+confirmed,low,root_faithfulness,ruten,ruten/uj,ja|zh|ko,ルテニア,鲁塞尼亚,루테니아,ルテニア人,鲁塞尼亚人,루테니아인,「ルテニア」は地域名でruten/uj(＋国-uj)の全体語訳であり、語根ruten自身は民族「ルテニア人」を指す。
+confirmed,low,malformed,redakt,tekst/o/redakt/il,ko,書く,草拟,문서나 기사를 작성하고 정,編集する/起草する,,문서를 작성·편집하다,KO欄が「…작성하고 정」で途中欠落しており学習補助として不完全（本来は「작성·편집하다」）。
+confirmed,low,mistranslation,sklerot,sklerot,ja|zh|ko,強膜菌核,巩膜菌核,공막균핵,,,,「強膜(sclera)」と「菌核(sclerotium)」という無関係な2語義を1語に無理に合成しており、実在しない不整合な複合ルビになっている。
+confirmed,low,root_faithfulness,fen,fen/o/tip,zh,表現,表型,표현,,表现,,語根 fen(pheno=現れる/示す)はJA「表現」KO「표현」が適切だが、ZH「表型」は tip(型)まで含んだ全体語 phenotype の訳であり、語根に接尾辞義を取り込んでいる。
+confirmed,low,learning_quality,oz,celul/oz,ja|zh|ko,oz,oz,oz,～に富む/-症,富含/-症,풍부/-증,接尾辞 oz(-osus「～に富む」/-osis)がラテン語のまま未訳で全言語に残っており学習上不適切。
+confirmed,low,jck_inconsistency,muk,muk/oz,zh,粘液,粘,점액,,黏液,,muk は名詞「粘液(muko)」。JA「粘液」KO「점액」は正しいが、ZH「粘」は形容詞「粘い」で不完全、「黏液」とすべき。
+confirmed,low,root_faithfulness,ileks,ileks/kverk,ja|zh|ko,トキワガシ,冬青栎,상록참나무,ヒイラギ/モチノキ属,冬青,호랑가시나무,ileks 単独は「ヒイラギ属(Ilex)」の意だが、全言語が合成語 ileks/kverk(トキワガシ=常緑オーク)の全体義で訳しており語根忠実性に反する。
+confirmed,low,malformed,oj-kant,majstr/oj-kant/ist,ja|zh|ko,oj-歌う,oj-唱,oj-노래하다,歌う,唱,노래하다,複数語尾「oj」が語根 kant(歌う)に付いたまま「oj-歌う」とルビ化されており不正形。語根訳は「歌う」のみとすべき。
+confirmed,low,malformed,a-komik,hero/a-komik,ja|zh|ko,a-こっけいな,a-可笑,a-우스운,こっけいな,可笑/滑稽,우스운,形容詞語尾「a」が語根 komik(こっけいな)に付いたまま「a-こっけいな」とルビ化されており不正形。語根訳は「こっけいな」のみとすべき。
+confirmed,low,learning_quality,pseŭdo,pseŭdo/sufiks,ja,=kaŝ-,伪,가짜,偽/擬似,,,JA欄がエスペラント「=kaŝ-」への参照のみで日本語訳になっておらず、意味(偽/擬似)としても不正確。
+confirmed,low,mistranslation,fart,bon/fart,zh,~の健康状態である,感觉,건강 상태가 어떻다,,过得(如何)/健康状况如何,,JA/KOは健康状態義で正しいが、ZH「感觉(feel=senti)」は farti の「(健康が)～である」からズレている。
+confirmed,low,root_faithfulness,mars,mars/o/kamp,ja|zh|ko,練兵場,练兵场,연병장,(軍神)マルス,玛尔斯(战神),마르스(군신),例語 mars/o/kamp(=マルスの野)全体が持つ「練兵場」を当てているが、語根 mars 自身は軍神「マルス」。
+confirmed,low,jck_inconsistency,bit,bit/et,ko,係柱,缆桩,비트,,,계선주,JA「係柱」ZH「缆桩」は繋船柱の意味だが、KO「비트」は音写のみで係柱の語義を伝えていない。
+confirmed,low,jck_inconsistency,koregon,koregon,ko,コクチマス,白鲑,송어,,,백송어류/시스코,JA「コクチマス」ZH「白鲑」はコレゴヌス属(白鮭類)を指すが、KO「송어(マス)」は別属でズレる。
+confirmed,low,learning_quality,nov,nov/riĉ/ul,ja|ko,ニュー,新,뉴,新しい,新,새로운,nov は「新しい」で ZH 新 は語義を示すが、JA「ニュー」・KO「뉴」は英語 new の音写にすぎず、学習用ルビとして中核義(新しい/새로운)を伝えていない。
+confirmed,low,malformed,sekund,sekund,ja,o 秒,秒,초,秒,,,JA 訳欄が「o 秒」となっており、エスペラント語尾 o が混入した不整形。ZH/KO は「秒/초」で正しく、JA も本来「秒」であるべき。
+confirmed,low,root_faithfulness,ko,ko/valent,zh,共有,共价,공유,,共/共同,,ko は接頭辞『共・co-』だが ZH『共价』は ko/valent 全体(共有結合)で価数部分を含み語根忠実でない。
+confirmed,low,mistranslation,muslin,muslin,ko,モスリン,薄纱,튈,,,모슬린,muslin(モスリン)は KO で『모슬린』が適切だが、別素材の『튈(チュール)』を当てており誤り。
+uncertain,mid,learning_quality,it,komand/it/ant,ja|zh|ko,(合資語根の一部),(合资词根),(합자 어근),受動完了(～された),被动完成,수동완료,高頻度(746)の受動完了分詞 -it- を表す項目にもかかわらず、komandit 特有の「合資語根の一部」という意味を持たないメタ注釈を当てており、学習者に語根義(受動完了)を伝えていない。
+rejected,mid,root_faithfulness,oro,oro/genez,ja|zh|ko,金,金,금,山,山,산,例語 oro/genez(=造山運動)では oro は接頭辞「山(oro-)」の意味だが、訳「金」は同綴の別語根で語義不一致。
+rejected,mid,root_faithfulness,anti,anti/fon,ja|zh|ko,応,应,응,反対/対,反/抗,반/대항,接頭辞 anti は「反・対抗」の意味だが、訳「応/应/응(応答)」は全体語 anti/fon(交唱=応唱)から派生した合成的意味で、語根本来の意を反映していない。
+uncertain,low,learning_quality,it,kred/it/ig,ja|zh|ko,(信用語根の一部),(信贷词根),(신용 어근),,,,訳語ではなく「信用語根の一部」という説明注記のみで、学習用の語義を提供していない。

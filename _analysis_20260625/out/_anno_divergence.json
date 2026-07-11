@@ -1,0 +1,3546 @@
+[
+ {
+  "w": "agresiva",
+  "JA": "agresiv",
+  "ZH": "agres/iv",
+  "KO": "agres/iv",
+  "JA_g": [
+   [
+    "agresiv",
+    "侵略的"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "agres",
+    "攻击"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "agres",
+    "공격"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "ahimsano",
+  "JA": "ahims/an",
+  "ZH": "ahims/an",
+  "KO": "ahims",
+  "JA_g": [
+   [
+    "ahims",
+    "非暴力"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ahims",
+    "非暴力"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ahims",
+    "비폭력"
+   ]
+  ]
+ },
+ {
+  "w": "alternativa",
+  "JA": "alternativ",
+  "ZH": "altern/at/iv",
+  "KO": "altern/at/iv",
+  "JA_g": [
+   [
+    "alternativ",
+    "代替の"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "altern",
+    "交替"
+   ],
+   [
+    "at",
+    "被动进行"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "altern",
+    "번갈아 일어나다"
+   ],
+   [
+    "at",
+    "수동진행"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "alzacano",
+  "JA": "alzac/an",
+  "ZH": "alzac/an",
+  "KO": "alzac",
+  "JA_g": [
+   [
+    "alzac",
+    "アルザス"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "alzac",
+    "阿尔萨斯"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "alzac",
+    "알자스"
+   ]
+  ]
+ },
+ {
+  "w": "antibiotiko",
+  "JA": "antibiotik",
+  "ZH": "anti/bio/tik",
+  "KO": "anti/bio/tik",
+  "JA_g": [
+   [
+    "antibiotik",
+    "抗生物質"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "anti",
+    "反"
+   ],
+   [
+    "bio",
+    "生命"
+   ],
+   [
+    "tik",
+    "被套布"
+   ]
+  ],
+  "KO_g": [
+   [
+    "anti",
+    "반"
+   ],
+   [
+    "bio",
+    "생명"
+   ],
+   [
+    "tik",
+    "티킹"
+   ]
+  ]
+ },
+ {
+  "w": "asiriano",
+  "JA": "asir/an",
+  "ZH": "asir/an",
+  "KO": "asir",
+  "JA_g": [
+   [
+    "asir",
+    "アッシリア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "asir",
+    "亚述"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "asir",
+    "아시리아"
+   ]
+  ]
+ },
+ {
+  "w": "aŭstriano",
+  "JA": "aŭstr/an",
+  "ZH": "aŭstr/an",
+  "KO": "aŭstr",
+  "JA_g": [
+   [
+    "aŭstr",
+    "オーストリア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "aŭstr",
+    "奥地利"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "aŭstr",
+    "오스트리아"
+   ]
+  ]
+ },
+ {
+  "w": "babilonano",
+  "JA": "babilon/an",
+  "ZH": "babilon/an",
+  "KO": "babilon",
+  "JA_g": [
+   [
+    "babilon",
+    "バビロン"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "babilon",
+    "巴比伦"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "babilon",
+    "바빌론"
+   ]
+  ]
+ },
+ {
+  "w": "brazilano",
+  "JA": "brazil/an",
+  "ZH": "brazil/an",
+  "KO": "brazil",
+  "JA_g": [
+   [
+    "brazil",
+    "ブラジル"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "brazil",
+    "巴西"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "brazil",
+    "브라질"
+   ]
+  ]
+ },
+ {
+  "w": "brunejano",
+  "JA": "brunej/an",
+  "ZH": "brunej/an",
+  "KO": "brunej",
+  "JA_g": [
+   [
+    "brunej",
+    "ブルネイ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "brunej",
+    "文莱"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "brunej",
+    "브루나이"
+   ]
+  ]
+ },
+ {
+  "w": "civilizacia",
+  "JA": "civilizaci",
+  "ZH": "civil/iz/aci",
+  "KO": "civil/iz/aci",
+  "JA_g": [
+   [
+    "civilizaci",
+    "文明"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "civil",
+    "市民"
+   ],
+   [
+    "iz",
+    "化"
+   ],
+   [
+    "aci",
+    "名词化"
+   ]
+  ],
+  "KO_g": [
+   [
+    "civil",
+    "시민"
+   ],
+   [
+    "iz",
+    "화"
+   ],
+   [
+    "aci",
+    "명사화"
+   ]
+  ]
+ },
+ {
+  "w": "demografio",
+  "JA": "demografi",
+  "ZH": "dem/grafi",
+  "KO": "dem/grafi",
+  "JA_g": [
+   [
+    "demografi",
+    "人口統計"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "dem",
+    "人口"
+   ],
+   [
+    "grafi",
+    "记述"
+   ]
+  ],
+  "KO_g": [
+   [
+    "dem",
+    "인구"
+   ],
+   [
+    "grafi",
+    "기술"
+   ]
+  ]
+ },
+ {
+  "w": "detektiva",
+  "JA": "detektiv",
+  "ZH": "detekt/iv",
+  "KO": "detekt/iv",
+  "JA_g": [
+   [
+    "detektiv",
+    "探偵"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "detekt",
+    "侦测"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "detekt",
+    "탐지"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "detektivi",
+  "JA": "detektiv",
+  "ZH": "detekt/iv",
+  "KO": "detekt/iv",
+  "JA_g": [
+   [
+    "detektiv",
+    "探偵"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "detekt",
+    "侦测"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "detekt",
+    "탐지"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "detektivo",
+  "JA": "detektiv",
+  "ZH": "detekt/iv",
+  "KO": "detekt/iv",
+  "JA_g": [
+   [
+    "detektiv",
+    "探偵"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "detekt",
+    "侦测"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "detekt",
+    "탐지"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "dialoga",
+  "JA": "dialog",
+  "ZH": "dia/log",
+  "KO": "dia/log",
+  "JA_g": [
+   [
+    "dialog",
+    "対話"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "dia",
+    "通过"
+   ],
+   [
+    "log",
+    "言"
+   ]
+  ],
+  "KO_g": [
+   [
+    "dia",
+    "통과"
+   ],
+   [
+    "log",
+    "말"
+   ]
+  ]
+ },
+ {
+  "w": "dialogi",
+  "JA": "dialog",
+  "ZH": "dia/log",
+  "KO": "dia/log",
+  "JA_g": [
+   [
+    "dialog",
+    "対話"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "dia",
+    "通过"
+   ],
+   [
+    "log",
+    "言"
+   ]
+  ],
+  "KO_g": [
+   [
+    "dia",
+    "통과"
+   ],
+   [
+    "log",
+    "말"
+   ]
+  ]
+ },
+ {
+  "w": "dividendo",
+  "JA": "dividend",
+  "ZH": "divid/end",
+  "KO": "divid/end",
+  "JA_g": [
+   [
+    "dividend",
+    "配当金"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "divid",
+    "分割"
+   ],
+   [
+    "end",
+    "必要"
+   ]
+  ],
+  "KO_g": [
+   [
+    "divid",
+    "나누다"
+   ],
+   [
+    "end",
+    "해야 할"
+   ]
+  ]
+ },
+ {
+  "w": "efektiva",
+  "JA": "efektiv",
+  "ZH": "efekt/iv",
+  "KO": "efekt/iv",
+  "JA_g": [
+   [
+    "efektiv",
+    "現実の"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "efekt",
+    "效果"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "efekt",
+    "강한 인상"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "efektive",
+  "JA": "efektiv",
+  "ZH": "efekt/iv",
+  "KO": "efekt/iv",
+  "JA_g": [
+   [
+    "efektiv",
+    "現実の"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "efekt",
+    "效果"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "efekt",
+    "강한 인상"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "egiptano",
+  "JA": "egipt/an",
+  "ZH": "egipt/an",
+  "KO": "egipt",
+  "JA_g": [
+   [
+    "egipt",
+    "エジプト"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "egipt",
+    "埃及"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "egipt",
+    "이집트"
+   ]
+  ]
+ },
+ {
+  "w": "ekologia",
+  "JA": "ekologi",
+  "ZH": "eko/logi",
+  "KO": "eko/logi",
+  "JA_g": [
+   [
+    "ekologi",
+    "エコロジー"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "eko",
+    "环境"
+   ],
+   [
+    "logi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "eko",
+    "환경"
+   ],
+   [
+    "logi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "ekologio",
+  "JA": "ekologi",
+  "ZH": "ek/ologi",
+  "KO": "ek/ologi",
+  "JA_g": [
+   [
+    "ekologi",
+    "エコロジー"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ek",
+    "开始"
+   ],
+   [
+    "ologi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ek",
+    "시작"
+   ],
+   [
+    "ologi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "epikurano",
+  "JA": "epikur/an",
+  "ZH": "epikur/an",
+  "KO": "epikur",
+  "JA_g": [
+   [
+    "epikur",
+    "エピクロス"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "epikur",
+    "伊壁鸠鲁"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "epikur",
+    "에피쿠로스"
+   ]
+  ]
+ },
+ {
+  "w": "esperantano",
+  "JA": "esperant/an",
+  "ZH": "esperant/an",
+  "KO": "esperant",
+  "JA_g": [
+   [
+    "esperant",
+    "国際補助語"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "esperant",
+    "世界语"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "esperant",
+    "중립적 국제어"
+   ]
+  ]
+ },
+ {
+  "w": "etimologia",
+  "JA": "etimologi",
+  "ZH": "etim/logi",
+  "KO": "etim/logi",
+  "JA_g": [
+   [
+    "etimologi",
+    "語源学"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "etim",
+    "词源"
+   ],
+   [
+    "logi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "etim",
+    "어원"
+   ],
+   [
+    "logi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "etimologio",
+  "JA": "etimologi",
+  "ZH": "etim/ologi",
+  "KO": "etim/ologi",
+  "JA_g": [
+   [
+    "etimologi",
+    "語源学"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "etim",
+    "词源"
+   ],
+   [
+    "ologi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "etim",
+    "어원"
+   ],
+   [
+    "ologi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "friulano",
+  "JA": "friul/an",
+  "ZH": "friul/an",
+  "KO": "friul",
+  "JA_g": [
+   [
+    "friul",
+    "フリウリ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "friul",
+    "弗留利"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "friul",
+    "프리울리"
+   ]
+  ]
+ },
+ {
+  "w": "geografia",
+  "JA": "geografi",
+  "ZH": "geo/grafi",
+  "KO": "geo/grafi",
+  "JA_g": [
+   [
+    "geografi",
+    "地理学"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "geo",
+    "地"
+   ],
+   [
+    "grafi",
+    "记述"
+   ]
+  ],
+  "KO_g": [
+   [
+    "geo",
+    "지구"
+   ],
+   [
+    "grafi",
+    "기술"
+   ]
+  ]
+ },
+ {
+  "w": "golfofluo",
+  "JA": "flu",
+  "ZH": "golfo/flu",
+  "KO": "golfo/flu",
+  "JA_g": [
+   [
+    "flu",
+    "流れる"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "golfo",
+    "海湾"
+   ],
+   [
+    "flu",
+    "流"
+   ]
+  ],
+  "KO_g": [
+   [
+    "golfo",
+    "바다에 깊게 들어간 만"
+   ],
+   [
+    "flu",
+    "흐르다"
+   ]
+  ]
+ },
+ {
+  "w": "gvineano",
+  "JA": "gvine/an",
+  "ZH": "gvine/an",
+  "KO": "gvine",
+  "JA_g": [
+   [
+    "gvine",
+    "ギニア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "gvine",
+    "几内亚"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "gvine",
+    "기니"
+   ]
+  ]
+ },
+ {
+  "w": "haitiano",
+  "JA": "haiti/an",
+  "ZH": "haiti/an",
+  "KO": "haiti",
+  "JA_g": [
+   [
+    "haiti",
+    "ハイチ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "haiti",
+    "海地"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "haiti",
+    "아이티"
+   ]
+  ]
+ },
+ {
+  "w": "havajano",
+  "JA": "havaj/an",
+  "ZH": "havaj/an",
+  "KO": "havaj",
+  "JA_g": [
+   [
+    "havaj",
+    "ハワイ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "havaj",
+    "夏威夷"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "havaj",
+    "하와이"
+   ]
+  ]
+ },
+ {
+  "w": "hidratigi",
+  "JA": "hidrat/ig",
+  "ZH": "drat/ig",
+  "KO": "drat/ig",
+  "JA_g": [
+   [
+    "hidrat",
+    "水和物"
+   ],
+   [
+    "ig",
+    "させる"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "drat",
+    "金属线"
+   ],
+   [
+    "ig",
+    "使役"
+   ]
+  ],
+  "KO_g": [
+   [
+    "drat",
+    "금속선"
+   ],
+   [
+    "ig",
+    "시키다"
+   ]
+  ]
+ },
+ {
+  "w": "hidrogena",
+  "JA": "hidrogen",
+  "ZH": "hidr/gen",
+  "KO": "hidr/gen",
+  "JA_g": [
+   [
+    "hidrogen",
+    "[化]水素"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hidr",
+    "水"
+   ],
+   [
+    "gen",
+    "生成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hidr",
+    "수"
+   ],
+   [
+    "gen",
+    "생성"
+   ]
+  ]
+ },
+ {
+  "w": "hidrogeni",
+  "JA": "hidrogen",
+  "ZH": "hidr/gen",
+  "KO": "hidr/gen",
+  "JA_g": [
+   [
+    "hidrogen",
+    "[化]水素"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hidr",
+    "水"
+   ],
+   [
+    "gen",
+    "生成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hidr",
+    "수"
+   ],
+   [
+    "gen",
+    "생성"
+   ]
+  ]
+ },
+ {
+  "w": "hipocentro",
+  "JA": "hipocentr",
+  "ZH": "hipo/centr",
+  "KO": "hipo/centr",
+  "JA_g": [
+   [
+    "hipocentr",
+    "爆心地"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hipo",
+    "低"
+   ],
+   [
+    "centr",
+    "中心"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hipo",
+    "저"
+   ],
+   [
+    "centr",
+    "중심"
+   ]
+  ]
+ },
+ {
+  "w": "hipoteza",
+  "JA": "hipotez",
+  "ZH": "hipo/tez",
+  "KO": "hipo/tez",
+  "JA_g": [
+   [
+    "hipotez",
+    "仮説"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hipo",
+    "低"
+   ],
+   [
+    "tez",
+    "主张"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hipo",
+    "저"
+   ],
+   [
+    "tez",
+    "주장"
+   ]
+  ]
+ },
+ {
+  "w": "hipotezi",
+  "JA": "hipotez",
+  "ZH": "hipo/tez",
+  "KO": "hipo/tez",
+  "JA_g": [
+   [
+    "hipotez",
+    "仮説"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hipo",
+    "低"
+   ],
+   [
+    "tez",
+    "主张"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hipo",
+    "저"
+   ],
+   [
+    "tez",
+    "주장"
+   ]
+  ]
+ },
+ {
+  "w": "hitlerano",
+  "JA": "hitler/an",
+  "ZH": "hitler/an",
+  "KO": "hitler",
+  "JA_g": [
+   [
+    "hitler",
+    "ヒトラー"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "hitler",
+    "希特勒"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "hitler",
+    "히틀러"
+   ]
+  ]
+ },
+ {
+  "w": "ideografia",
+  "JA": "ideografi",
+  "ZH": "ide/grafi",
+  "KO": "ide/grafi",
+  "JA_g": [
+   [
+    "ideografi",
+    "表意文字方式"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ide",
+    "观念"
+   ],
+   [
+    "grafi",
+    "记述"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ide",
+    "관념"
+   ],
+   [
+    "grafi",
+    "기술"
+   ]
+  ]
+ },
+ {
+  "w": "ideogramo",
+  "JA": "ideogram",
+  "ZH": "ide/gram",
+  "KO": "ide/gram",
+  "JA_g": [
+   [
+    "ideogram",
+    "表意文字"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ide",
+    "观念"
+   ],
+   [
+    "gram",
+    "克"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ide",
+    "관념"
+   ],
+   [
+    "gram",
+    "그램"
+   ]
+  ]
+ },
+ {
+  "w": "ideologia",
+  "JA": "ideologi",
+  "ZH": "ide/logi",
+  "KO": "ide/logi",
+  "JA_g": [
+   [
+    "ideologi",
+    "イデオロギー"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ide",
+    "观念"
+   ],
+   [
+    "logi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ide",
+    "관념"
+   ],
+   [
+    "logi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "ideologio",
+  "JA": "ideologi",
+  "ZH": "ide/ologi",
+  "KO": "ide/ologi",
+  "JA_g": [
+   [
+    "ideologi",
+    "イデオロギー"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ide",
+    "观念"
+   ],
+   [
+    "ologi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ide",
+    "관념"
+   ],
+   [
+    "ologi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "iliriano",
+  "JA": "iliri/an",
+  "ZH": "iliri/an",
+  "KO": "iliri",
+  "JA_g": [
+   [
+    "iliri",
+    "イリュリア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "iliri",
+    "伊利里亚"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "iliri",
+    "일리리아"
+   ]
+  ]
+ },
+ {
+  "w": "inflamigi",
+  "JA": "inflam/ig",
+  "ZH": "flam/ig",
+  "KO": "flam/ig",
+  "JA_g": [
+   [
+    "inflam",
+    "炎症"
+   ],
+   [
+    "ig",
+    "させる"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "flam",
+    "火焰"
+   ],
+   [
+    "ig",
+    "使役"
+   ]
+  ],
+  "KO_g": [
+   [
+    "flam",
+    "불꽃"
+   ],
+   [
+    "ig",
+    "시키다"
+   ]
+  ]
+ },
+ {
+  "w": "intensiva",
+  "JA": "intensiv",
+  "ZH": "intens/iv",
+  "KO": "intens/iv",
+  "JA_g": [
+   [
+    "intensiv",
+    "集中的"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "intens",
+    "强烈的"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "intens",
+    "강렬한"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "irlandano",
+  "JA": "irland/an",
+  "ZH": "irland/an",
+  "KO": "irland",
+  "JA_g": [
+   [
+    "irland",
+    "アイルランド"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "irland",
+    "爱尔兰"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "irland",
+    "아일랜드"
+   ]
+  ]
+ },
+ {
+  "w": "islamano",
+  "JA": "islam/an",
+  "ZH": "islam/an",
+  "KO": "islam",
+  "JA_g": [
+   [
+    "islam",
+    "イスラム教"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "islam",
+    "伊斯兰教"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "islam",
+    "이슬람교"
+   ]
+  ]
+ },
+ {
+  "w": "islandano",
+  "JA": "island/an",
+  "ZH": "island/an",
+  "KO": "island",
+  "JA_g": [
+   [
+    "island",
+    "アイスランド"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "island",
+    "冰岛"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "island",
+    "아이슬란드"
+   ]
+  ]
+ },
+ {
+  "w": "israelano",
+  "JA": "israel/an",
+  "ZH": "israel/an",
+  "KO": "israel",
+  "JA_g": [
+   [
+    "israel",
+    "イスラエル"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "israel",
+    "以色列"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "israel",
+    "이스라엘"
+   ]
+  ]
+ },
+ {
+  "w": "jamajkano",
+  "JA": "jamajk/an",
+  "ZH": "jamajk/an",
+  "KO": "jamajk",
+  "JA_g": [
+   [
+    "jamajk",
+    "ジャマイカ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "jamajk",
+    "牙买加"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "jamajk",
+    "자메이카"
+   ]
+  ]
+ },
+ {
+  "w": "kanadano",
+  "JA": "kanad/an",
+  "ZH": "kanad/an",
+  "KO": "kanad",
+  "JA_g": [
+   [
+    "kanad",
+    "カナダ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "kanad",
+    "加拿大"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "kanad",
+    "캐나다"
+   ]
+  ]
+ },
+ {
+  "w": "karakteriza",
+  "JA": "karakteriz",
+  "ZH": "karakter/iz",
+  "KO": "karakter/iz",
+  "JA_g": [
+   [
+    "karakteriz",
+    "(を)特色づける"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "karakter",
+    "性格"
+   ],
+   [
+    "iz",
+    "化"
+   ]
+  ],
+  "KO_g": [
+   [
+    "karakter",
+    "성질"
+   ],
+   [
+    "iz",
+    "화"
+   ]
+  ]
+ },
+ {
+  "w": "kaŝmirano",
+  "JA": "kaŝmir/an",
+  "ZH": "kaŝmir/an",
+  "KO": "kaŝmir",
+  "JA_g": [
+   [
+    "kaŝmir",
+    "カシミール"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "kaŝmir",
+    "克什米尔"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "kaŝmir",
+    "카슈미르"
+   ]
+  ]
+ },
+ {
+  "w": "koloniano",
+  "JA": "koloni/an",
+  "ZH": "koloni/an",
+  "KO": "koloni",
+  "JA_g": [
+   [
+    "koloni",
+    "植民地"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "koloni",
+    "殖民地"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "koloni",
+    "식민지"
+   ]
+  ]
+ },
+ {
+  "w": "komorano",
+  "JA": "komor/an",
+  "ZH": "komor/an",
+  "KO": "komor",
+  "JA_g": [
+   [
+    "komor",
+    "コモロ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "komor",
+    "科摩罗"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "komor",
+    "코모로"
+   ]
+  ]
+ },
+ {
+  "w": "komunano",
+  "JA": "komun/an",
+  "ZH": "komun/an",
+  "KO": "komun",
+  "JA_g": [
+   [
+    "komun",
+    "共通の"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "komun",
+    "共同的"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "komun",
+    "공통의"
+   ]
+  ]
+ },
+ {
+  "w": "komunumano",
+  "JA": "komun/um/an",
+  "ZH": "komun/um/an",
+  "KO": "komun/um",
+  "JA_g": [
+   [
+    "komun",
+    "共通の"
+   ],
+   [
+    "um",
+    "不定"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "komun",
+    "共同的"
+   ],
+   [
+    "um",
+    "不定"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "komun",
+    "공통의"
+   ],
+   [
+    "um",
+    "없음"
+   ]
+  ]
+ },
+ {
+  "w": "korintano",
+  "JA": "korint/an",
+  "ZH": "korint/an",
+  "KO": "korint",
+  "JA_g": [
+   [
+    "korint",
+    "コリント"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "korint",
+    "科林斯"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "korint",
+    "코린토스"
+   ]
+  ]
+ },
+ {
+  "w": "korsikano",
+  "JA": "korsik/an",
+  "ZH": "korsik/an",
+  "KO": "korsik",
+  "JA_g": [
+   [
+    "korsik",
+    "コルシカ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "korsik",
+    "科西嘉"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "korsik",
+    "코르시카"
+   ]
+  ]
+ },
+ {
+  "w": "kortegano",
+  "JA": "kort/eg/an",
+  "ZH": "kort/eg/an",
+  "KO": "kort/eg",
+  "JA_g": [
+   [
+    "kort",
+    "中庭"
+   ],
+   [
+    "eg",
+    "強大"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "kort",
+    "庭院"
+   ],
+   [
+    "eg",
+    "强大"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "kort",
+    "집 안의 뜰"
+   ],
+   [
+    "eg",
+    "강대"
+   ]
+  ]
+ },
+ {
+  "w": "malaviano",
+  "JA": "malavi/an",
+  "ZH": "malavi/an",
+  "KO": "malavi",
+  "JA_g": [
+   [
+    "malavi",
+    "マラウイ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "malavi",
+    "马拉维"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "malavi",
+    "말라위"
+   ]
+  ]
+ },
+ {
+  "w": "maldivano",
+  "JA": "maldiv/an",
+  "ZH": "maldiv/an",
+  "KO": "maldiv",
+  "JA_g": [
+   [
+    "maldiv",
+    "モルディブ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "maldiv",
+    "马尔代夫"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "maldiv",
+    "몰디브"
+   ]
+  ]
+ },
+ {
+  "w": "marŝalano",
+  "JA": "marŝal/an",
+  "ZH": "marŝal/an",
+  "KO": "marŝal",
+  "JA_g": [
+   [
+    "marŝal",
+    "マーシャル"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "marŝal",
+    "马绍尔"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "marŝal",
+    "마셜"
+   ]
+  ]
+ },
+ {
+  "w": "masiva",
+  "JA": "masiv",
+  "ZH": "mas/iv",
+  "KO": "mas/iv",
+  "JA_g": [
+   [
+    "masiv",
+    "どっしり重い"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "mas",
+    "团块"
+   ],
+   [
+    "iv",
+    "性质"
+   ]
+  ],
+  "KO_g": [
+   [
+    "mas",
+    "덩어리"
+   ],
+   [
+    "iv",
+    "성질"
+   ]
+  ]
+ },
+ {
+  "w": "maŭriciano",
+  "JA": "maŭrici/an",
+  "ZH": "maŭrici/an",
+  "KO": "maŭrici",
+  "JA_g": [
+   [
+    "maŭrici",
+    "モーリシャス"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "maŭrici",
+    "毛里求斯"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "maŭrici",
+    "모리셔스"
+   ]
+  ]
+ },
+ {
+  "w": "meksikano",
+  "JA": "meksik/an",
+  "ZH": "meksik/an",
+  "KO": "meksik",
+  "JA_g": [
+   [
+    "meksik",
+    "メキシコ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "meksik",
+    "墨西哥"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "meksik",
+    "멕시코"
+   ]
+  ]
+ },
+ {
+  "w": "montenegrano",
+  "JA": "mont/negr/an",
+  "ZH": "mont/negr/an",
+  "KO": "montenegr",
+  "JA_g": [
+   [
+    "mont",
+    "山"
+   ],
+   [
+    "negr",
+    "黒"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "mont",
+    "山"
+   ],
+   [
+    "negr",
+    "黑"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "montenegr",
+    "몬테네그로"
+   ]
+  ]
+ },
+ {
+  "w": "napolano",
+  "JA": "napol/an",
+  "ZH": "napol/an",
+  "KO": "napol",
+  "JA_g": [
+   [
+    "napol",
+    "ナポリ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "napol",
+    "那不勒斯"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "napol",
+    "나폴리"
+   ]
+  ]
+ },
+ {
+  "w": "nebuligi",
+  "JA": "nebul/ig",
+  "ZH": "ne/bul/ig",
+  "KO": "ne/bul/ig",
+  "JA_g": [
+   [
+    "nebul",
+    "霧"
+   ],
+   [
+    "ig",
+    "させる"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ne",
+    "不"
+   ],
+   [
+    "bul",
+    "球"
+   ],
+   [
+    "ig",
+    "使役"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ne",
+    "아니"
+   ],
+   [
+    "bul",
+    "둥근 덩어리"
+   ],
+   [
+    "ig",
+    "시키다"
+   ]
+  ]
+ },
+ {
+  "w": "nepalano",
+  "JA": "nepal/an",
+  "ZH": "nepal/an",
+  "KO": "nepal",
+  "JA_g": [
+   [
+    "nepal",
+    "ネパール"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "nepal",
+    "尼泊尔"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "nepal",
+    "네팔"
+   ]
+  ]
+ },
+ {
+  "w": "ofendita",
+  "JA": "ofend/it",
+  "ZH": "fend/it",
+  "KO": "fend/it",
+  "JA_g": [
+   [
+    "ofend",
+    "侮辱する"
+   ],
+   [
+    "it",
+    "受動完了"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "fend",
+    "劈开"
+   ],
+   [
+    "it",
+    "被动完成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "fend",
+    "쪼개다"
+   ],
+   [
+    "it",
+    "수동완료"
+   ]
+  ]
+ },
+ {
+  "w": "okinavano",
+  "JA": "okinav/an",
+  "ZH": "okinav/an",
+  "KO": "okinav",
+  "JA_g": [
+   [
+    "okinav",
+    "沖縄"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "okinav",
+    "冲绳"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "okinav",
+    "오키나와"
+   ]
+  ]
+ },
+ {
+  "w": "oksigena",
+  "JA": "oksigen",
+  "ZH": "oksi/gen",
+  "KO": "oksi/gen",
+  "JA_g": [
+   [
+    "oksigen",
+    "[化]酸素"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "oksi",
+    "氧"
+   ],
+   [
+    "gen",
+    "生成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "oksi",
+    "산소"
+   ],
+   [
+    "gen",
+    "생성"
+   ]
+  ]
+ },
+ {
+  "w": "oksigeni",
+  "JA": "oksigen",
+  "ZH": "oksi/gen",
+  "KO": "oksi/gen",
+  "JA_g": [
+   [
+    "oksigen",
+    "[化]酸素"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "oksi",
+    "氧"
+   ],
+   [
+    "gen",
+    "生成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "oksi",
+    "산소"
+   ],
+   [
+    "gen",
+    "생성"
+   ]
+  ]
+ },
+ {
+  "w": "organisma",
+  "JA": "organism",
+  "ZH": "organ/ism",
+  "KO": "organ/ism",
+  "JA_g": [
+   [
+    "organism",
+    "[生]有機体"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "organ",
+    "器官"
+   ],
+   [
+    "ism",
+    "主义"
+   ]
+  ],
+  "KO_g": [
+   [
+    "organ",
+    "기관"
+   ],
+   [
+    "ism",
+    "주의"
+   ]
+  ]
+ },
+ {
+  "w": "organiza",
+  "JA": "organiz",
+  "ZH": "organ/iz",
+  "KO": "organ/iz",
+  "JA_g": [
+   [
+    "organiz",
+    "(を)組織する"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "organ",
+    "器官"
+   ],
+   [
+    "iz",
+    "化"
+   ]
+  ],
+  "KO_g": [
+   [
+    "organ",
+    "기관"
+   ],
+   [
+    "iz",
+    "화"
+   ]
+  ]
+ },
+ {
+  "w": "organizo",
+  "JA": "organiz",
+  "ZH": "organ/iz",
+  "KO": "organ/iz",
+  "JA_g": [
+   [
+    "organiz",
+    "(を)組織する"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "organ",
+    "器官"
+   ],
+   [
+    "iz",
+    "化"
+   ]
+  ],
+  "KO_g": [
+   [
+    "organ",
+    "기관"
+   ],
+   [
+    "iz",
+    "화"
+   ]
+  ]
+ },
+ {
+  "w": "orientalismo",
+  "JA": "orientalism",
+  "ZH": "oriental/ism",
+  "KO": "oriental/ism",
+  "JA_g": [
+   [
+    "orientalism",
+    "オリエンタリズム"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "oriental",
+    "东方"
+   ],
+   [
+    "ism",
+    "主义"
+   ]
+  ],
+  "KO_g": [
+   [
+    "oriental",
+    "동양"
+   ],
+   [
+    "ism",
+    "주의"
+   ]
+  ]
+ },
+ {
+  "w": "palaŭano",
+  "JA": "palaŭ/an",
+  "ZH": "palaŭ/an",
+  "KO": "palaŭ",
+  "JA_g": [
+   [
+    "palaŭ",
+    "パラオ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "palaŭ",
+    "帕劳"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "palaŭ",
+    "팔라우"
+   ]
+  ]
+ },
+ {
+  "w": "paroĥano",
+  "JA": "paroĥ/an",
+  "ZH": "paroĥ/an",
+  "KO": "paroĥ",
+  "JA_g": [
+   [
+    "paroĥ",
+    "小教区"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "paroĥ",
+    "教区"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "paroĥ",
+    "본당"
+   ]
+  ]
+ },
+ {
+  "w": "pazigrafio",
+  "JA": "pazigrafi",
+  "ZH": "pazi/grafi",
+  "KO": "pazi/grafi",
+  "JA_g": [
+   [
+    "pazigrafi",
+    "普遍文字法"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "pazi",
+    "普遍"
+   ],
+   [
+    "grafi",
+    "记述"
+   ]
+  ],
+  "KO_g": [
+   [
+    "pazi",
+    "보편"
+   ],
+   [
+    "grafi",
+    "기술"
+   ]
+  ]
+ },
+ {
+  "w": "plaŭdigi",
+  "JA": "plaŭd/ig",
+  "ZH": "aŭd/ig",
+  "KO": "aŭd/ig",
+  "JA_g": [
+   [
+    "plaŭd",
+    "バシャリと音を立てる"
+   ],
+   [
+    "ig",
+    "させる"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "aŭd",
+    "听见"
+   ],
+   [
+    "ig",
+    "使役"
+   ]
+  ],
+  "KO_g": [
+   [
+    "aŭd",
+    "듣다"
+   ],
+   [
+    "ig",
+    "시키다"
+   ]
+  ]
+ },
+ {
+  "w": "pseŭdonima",
+  "JA": "pseŭdonim",
+  "ZH": "pseŭdo/nim",
+  "KO": "pseŭdo/nim",
+  "JA_g": [
+   [
+    "pseŭdonim",
+    "偽名"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "pseŭdo",
+    "伪"
+   ],
+   [
+    "nim",
+    "名"
+   ]
+  ],
+  "KO_g": [
+   [
+    "pseŭdo",
+    "가짜"
+   ],
+   [
+    "nim",
+    "이름"
+   ]
+  ]
+ },
+ {
+  "w": "psikologia",
+  "JA": "psikologi",
+  "ZH": "psik/logi",
+  "KO": "psik/logi",
+  "JA_g": [
+   [
+    "psikologi",
+    "心理学"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "psik",
+    "心理"
+   ],
+   [
+    "logi",
+    "学"
+   ]
+  ],
+  "KO_g": [
+   [
+    "psik",
+    "심리"
+   ],
+   [
+    "logi",
+    "학"
+   ]
+  ]
+ },
+ {
+  "w": "radiofonio",
+  "JA": "radiofoni",
+  "ZH": "radio/foni",
+  "KO": "radio/foni",
+  "JA_g": [
+   [
+    "radiofoni",
+    "ラジオで"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "radio",
+    "光线"
+   ],
+   [
+    "foni",
+    "无线电话"
+   ]
+  ],
+  "KO_g": [
+   [
+    "radio",
+    "광선"
+   ],
+   [
+    "foni",
+    "무선전화"
+   ]
+  ]
+ },
+ {
+  "w": "resume",
+  "JA": "resum",
+  "ZH": "re/sum",
+  "KO": "re/sum",
+  "JA_g": [
+   [
+    "resum",
+    "要約"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "re",
+    "再次"
+   ],
+   [
+    "sum",
+    "总和"
+   ]
+  ],
+  "KO_g": [
+   [
+    "re",
+    "다시"
+   ],
+   [
+    "sum",
+    "합계"
+   ]
+  ]
+ },
+ {
+  "w": "resumi",
+  "JA": "resum",
+  "ZH": "re/sum",
+  "KO": "re/sum",
+  "JA_g": [
+   [
+    "resum",
+    "要約"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "re",
+    "再次"
+   ],
+   [
+    "sum",
+    "总和"
+   ]
+  ],
+  "KO_g": [
+   [
+    "re",
+    "다시"
+   ],
+   [
+    "sum",
+    "합계"
+   ]
+  ]
+ },
+ {
+  "w": "reuniano",
+  "JA": "reuni/an",
+  "ZH": "reuni/an",
+  "KO": "reuni",
+  "JA_g": [
+   [
+    "reuni",
+    "レユニオン"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "reuni",
+    "留尼汪"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "reuni",
+    "레위니옹"
+   ]
+  ]
+ },
+ {
+  "w": "siberiano",
+  "JA": "siberi/an",
+  "ZH": "siberi/an",
+  "KO": "siberi",
+  "JA_g": [
+   [
+    "siberi",
+    "シベリア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "siberi",
+    "西伯利亚"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "siberi",
+    "시베리아"
+   ]
+  ]
+ },
+ {
+  "w": "siciliano",
+  "JA": "sicili/an",
+  "ZH": "sicili/an",
+  "KO": "sicili",
+  "JA_g": [
+   [
+    "sicili",
+    "シチリア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "sicili",
+    "西西里"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "sicili",
+    "시칠리아"
+   ]
+  ]
+ },
+ {
+  "w": "sileziano",
+  "JA": "silezi/an",
+  "ZH": "silezi/an",
+  "KO": "silezi",
+  "JA_g": [
+   [
+    "silezi",
+    "シレジア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "silezi",
+    "西里西亚"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "silezi",
+    "실레시아"
+   ]
+  ]
+ },
+ {
+  "w": "somaliano",
+  "JA": "somal/an",
+  "ZH": "somal/an",
+  "KO": "somal",
+  "JA_g": [
+   [
+    "somal",
+    "ソマリ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "somal",
+    "索马里"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "somal",
+    "소말리"
+   ]
+  ]
+ },
+ {
+  "w": "sovetano",
+  "JA": "sovet/an",
+  "ZH": "sovet/an",
+  "KO": "sovet",
+  "JA_g": [
+   [
+    "sovet",
+    "ソビエト"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "sovet",
+    "苏维埃"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "sovet",
+    "소비에트"
+   ]
+  ]
+ },
+ {
+  "w": "sovetiano",
+  "JA": "sovet/an",
+  "ZH": "sovet/an",
+  "KO": "sovet",
+  "JA_g": [
+   [
+    "sovet",
+    "ソビエト"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "sovet",
+    "苏维埃"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "sovet",
+    "소비에트"
+   ]
+  ]
+ },
+ {
+  "w": "sovetunio",
+  "JA": "sovetuni",
+  "ZH": "sovet/uni",
+  "KO": "sovet/uni",
+  "JA_g": [
+   [
+    "sovetuni",
+    "[地名]ソビエト連邦"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "sovet",
+    "苏维埃"
+   ],
+   [
+    "uni",
+    "同盟"
+   ]
+  ],
+  "KO_g": [
+   [
+    "sovet",
+    "소비에트"
+   ],
+   [
+    "uni",
+    "동맹"
+   ]
+  ]
+ },
+ {
+  "w": "spartano",
+  "JA": "spart/an",
+  "ZH": "spart/an",
+  "KO": "spart",
+  "JA_g": [
+   [
+    "spart",
+    "スパルタ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "spart",
+    "斯巴达"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "spart",
+    "스파르타"
+   ]
+  ]
+ },
+ {
+  "w": "sumerano",
+  "JA": "sumer/an",
+  "ZH": "sumer/an",
+  "KO": "sumer",
+  "JA_g": [
+   [
+    "sumer",
+    "シュメール"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "sumer",
+    "苏美尔"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "sumer",
+    "수메르"
+   ]
+  ]
+ },
+ {
+  "w": "telefona",
+  "JA": "telefon",
+  "ZH": "tele/fon",
+  "KO": "tele/fon",
+  "JA_g": [
+   [
+    "telefon",
+    "電話"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "tele",
+    "远"
+   ],
+   [
+    "fon",
+    "音"
+   ]
+  ],
+  "KO_g": [
+   [
+    "tele",
+    "원격"
+   ],
+   [
+    "fon",
+    "음"
+   ]
+  ]
+ },
+ {
+  "w": "telefono",
+  "JA": "telefon",
+  "ZH": "tele/fon",
+  "KO": "tele/fon",
+  "JA_g": [
+   [
+    "telefon",
+    "電話"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "tele",
+    "远"
+   ],
+   [
+    "fon",
+    "音"
+   ]
+  ],
+  "KO_g": [
+   [
+    "tele",
+    "원격"
+   ],
+   [
+    "fon",
+    "음"
+   ]
+  ]
+ },
+ {
+  "w": "tibetano",
+  "JA": "tibet/an",
+  "ZH": "tibet/an",
+  "KO": "tibet",
+  "JA_g": [
+   [
+    "tibet",
+    "チベット"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "tibet",
+    "西藏"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "tibet",
+    "티베트"
+   ]
+  ]
+ },
+ {
+  "w": "togolano",
+  "JA": "togol/an",
+  "ZH": "togol/an",
+  "KO": "togol",
+  "JA_g": [
+   [
+    "togol",
+    "トーゴ"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "togol",
+    "多哥"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "togol",
+    "토고"
+   ]
+  ]
+ },
+ {
+  "w": "trompita",
+  "JA": "tromp/it",
+  "ZH": "romp/it",
+  "KO": "romp/it",
+  "JA_g": [
+   [
+    "tromp",
+    "だます"
+   ],
+   [
+    "it",
+    "受動完了"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "romp",
+    "打破"
+   ],
+   [
+    "it",
+    "被动完成"
+   ]
+  ],
+  "KO_g": [
+   [
+    "romp",
+    "깨뜨리다"
+   ],
+   [
+    "it",
+    "수동완료"
+   ]
+  ]
+ },
+ {
+  "w": "tuvalano",
+  "JA": "tuval/an",
+  "ZH": "tuval/an",
+  "KO": "tuval",
+  "JA_g": [
+   [
+    "tuval",
+    "ツバル"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "tuval",
+    "图瓦卢"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "tuval",
+    "투발루"
+   ]
+  ]
+ },
+ {
+  "w": "veneciano",
+  "JA": "veneci/an",
+  "ZH": "veneci/an",
+  "KO": "veneci",
+  "JA_g": [
+   [
+    "veneci",
+    "ベネチア"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "veneci",
+    "威尼斯"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "veneci",
+    "베네치아"
+   ]
+  ]
+ },
+ {
+  "w": "volterano",
+  "JA": "volter/an",
+  "ZH": "volter/an",
+  "KO": "volter",
+  "JA_g": [
+   [
+    "volter",
+    "ボルテール"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "volter",
+    "伏尔泰"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "volter",
+    "볼테르"
+   ]
+  ]
+ },
+ {
+  "w": "ŝintoano",
+  "JA": "ŝinto/an",
+  "ZH": "ŝinto/an",
+  "KO": "ŝinto",
+  "JA_g": [
+   [
+    "ŝinto",
+    "神道"
+   ],
+   [
+    "an",
+    "成員"
+   ]
+  ],
+  "ZH_g": [
+   [
+    "ŝinto",
+    "神道"
+   ],
+   [
+    "an",
+    "成员"
+   ]
+  ],
+  "KO_g": [
+   [
+    "ŝinto",
+    "신토"
+   ]
+  ]
+ }
+]

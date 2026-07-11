@@ -1,0 +1,426 @@
+[
+ {
+  "w": "Abu-Dabi/o",
+  "target": "abu-dabi/o"
+ },
+ {
+  "w": "Adis-Abeb/o",
+  "target": "adis-abeb/o"
+ },
+ {
+  "w": "alfa-partikl/oj",
+  "target": "alfa/-/partikl/oj"
+ },
+ {
+  "w": "alt/e/n",
+  "target": "alt/e/n"
+ },
+ {
+  "w": "Amu-Darj/o",
+  "target": "amu-darj/o"
+ },
+ {
+  "w": "Amu-River/o",
+  "target": "amu-river/o"
+ },
+ {
+  "w": "Andora-la-Vel/o",
+  "target": "andora-la-vel/o"
+ },
+ {
+  "w": "Avinjon/o",
+  "target": "avinjon/o"
+ },
+ {
+  "w": "Babilon/a",
+  "target": "babilon/a"
+ },
+ {
+  "w": "Babilon/o",
+  "target": "babilon/o"
+ },
+ {
+  "w": "Balaton/o",
+  "target": "balaton/o"
+ },
+ {
+  "w": "Bandar-Seri-Begavan/o",
+  "target": "bandar-seri-begavan/o"
+ },
+ {
+  "w": "bariton/o",
+  "target": "bariton/o"
+ },
+ {
+  "w": "blanket/o",
+  "target": "blanket/o"
+ },
+ {
+  "w": "bolet/o",
+  "target": "bolet/o"
+ },
+ {
+  "w": "brokant/e",
+  "target": "brokant/e"
+ },
+ {
+  "w": "Brunej-Darusalam/o",
+  "target": "brunej-darusalam/o"
+ },
+ {
+  "w": "Burkina-Fas/o",
+  "target": "burkina-fas/o"
+ },
+ {
+  "w": "Ciceron/o",
+  "target": "ciceron/o"
+ },
+ {
+  "w": "Dancig/o",
+  "target": "dancig/o"
+ },
+ {
+  "w": "datum/o",
+  "target": "datum/o"
+ },
+ {
+  "w": "kalkulus/o",
+  "target": "kalkulus/o"
+ },
+ {
+  "w": "mal/pli",
+  "target": "mal/pli"
+ },
+ {
+  "w": "esperant/e",
+  "target": "esperant/e"
+ },
+ {
+  "w": "fermion/o",
+  "target": "fermion/o"
+ },
+ {
+  "w": "for/kant/i",
+  "target": "for/kant/i"
+ },
+ {
+  "w": "Gaza-stri/o",
+  "target": "gaza/-/strio"
+ },
+ {
+  "w": "grafiti/o",
+  "target": "grafiti/o"
+ },
+ {
+  "w": "G^ingis-H^an/o",
+  "target": "ĝingis-ĥan/o"
+ },
+ {
+  "w": "Har-Magedon/o",
+  "target": "har-magedon/o"
+ },
+ {
+  "w": "Ho-C^i-Min-urb/o",
+  "target": "ho-ĉi-min/-/urb/o"
+ },
+ {
+  "w": "indig/a",
+  "target": "indig/a"
+ },
+ {
+  "w": "indig/o",
+  "target": "indig/o"
+ },
+ {
+  "w": "ir/o-re/ir/o",
+  "target": "ir/o-/re/ir/o"
+ },
+ {
+  "w": "kalkane/o",
+  "target": "kalkane/o"
+ },
+ {
+  "w": "Kolonja-Ponape/o",
+  "target": "kolonja/-/ponape/o"
+ },
+ {
+  "w": "Koloradi/o",
+  "target": "koloradi/o"
+ },
+ {
+  "w": "Kuala-Lumpur/o",
+  "target": "kuala-lumpur/o"
+ },
+ {
+  "w": "kumulus/o",
+  "target": "kumulus/o"
+ },
+ {
+  "w": "Kupidon/o",
+  "target": "kupidon/o"
+ },
+ {
+  "w": "kvar/cent",
+  "target": "kvar/cent"
+ },
+ {
+  "w": "kvar/dek",
+  "target": "kvar/dek"
+ },
+ {
+  "w": "kvin/cent",
+  "target": "kvin/cent"
+ },
+ {
+  "w": "La-Paz/o",
+  "target": "la-paz/o"
+ },
+ {
+  "w": "leksikon/o",
+  "target": "leksikon/o"
+ },
+ {
+  "w": "Lob-Nor/o",
+  "target": "lob-nor/o"
+ },
+ {
+  "w": "Los-Ang^eles/o",
+  "target": "los-anĝeles/o"
+ },
+ {
+  "w": "mal/abon/i",
+  "target": "mal/abon/i"
+ },
+ {
+  "w": "mal/abon/o",
+  "target": "mal/abon/o"
+ },
+ {
+  "w": "Min-river/o",
+  "target": "min/-/river/o"
+ },
+ {
+  "w": "Nanga-Parbat/o",
+  "target": "nanga-parbat/o"
+ },
+ {
+  "w": "nau^/dek",
+  "target": "naŭ/dek"
+ },
+ {
+  "w": "Nij^ni-Novgorod/o",
+  "target": "niĵni-novgorod/o"
+ },
+ {
+  "w": "Nizni-Novgorod/o",
+  "target": "nizni-novgorod/o"
+ },
+ {
+  "w": "nomad/i",
+  "target": "nomad/i"
+ },
+ {
+  "w": "Traktat-Organ/iz/aj^/o",
+  "target": "traktat/-/organ/iz/aĵ/o"
+ },
+ {
+  "w": "Nova-Zeml/o",
+  "target": "nova-zeml/o"
+ },
+ {
+  "w": "Nov-Hamps^ir/o",
+  "target": "nov/-/hampŝir/o"
+ },
+ {
+  "w": "Oven-Stanlej/a",
+  "target": "oven-stanlej/a"
+ },
+ {
+  "w": "papilion/o",
+  "target": "papilion/o"
+ },
+ {
+  "w": "paranoj/o",
+  "target": "paranoj/o"
+ },
+ {
+  "w": "patrici/o",
+  "target": "patrici/o"
+ },
+ {
+  "w": "patrini/o",
+  "target": "patrini/o"
+ },
+ {
+  "w": "Plata-river/o",
+  "target": "plata/-/river/o"
+ },
+ {
+  "w": "pli-mal/pli",
+  "target": "pli/-/mal/pli"
+ },
+ {
+  "w": "port/ant/o",
+  "target": "port/ant/o"
+ },
+ {
+  "w": "Port-Moresb/o",
+  "target": "port/-/moresb/o"
+ },
+ {
+  "w": "Porto-Algr/o",
+  "target": "porto/-/algr/o"
+ },
+ {
+  "w": "Porto-Rik/o",
+  "target": "porto/-/rik/o"
+ },
+ {
+  "w": "Port-Said/o",
+  "target": "port/-/said/o"
+ },
+ {
+  "w": "predikat/a",
+  "target": "predikat/a"
+ },
+ {
+  "w": "te/on",
+  "target": "te/on"
+ },
+ {
+  "w": "princ/o-elekt/ist/o",
+  "target": "princ/o/-/elekt/ist/o"
+ },
+ {
+  "w": "rest/ant/a",
+  "target": "rest/ant/a"
+ },
+ {
+  "w": "re/vizit/i",
+  "target": "re/vizit/i"
+ },
+ {
+  "w": "Rio-de-J^anejr/o",
+  "target": "rio-de-ĵanejr/o"
+ },
+ {
+  "w": "San-Gotard/o",
+  "target": "san-gotard/o"
+ },
+ {
+  "w": "San-Jose/o",
+  "target": "san-jose/o"
+ },
+ {
+  "w": "Sankta-Deniz/o",
+  "target": "sankta-deniz/o"
+ },
+ {
+  "w": "Sankta-Helen/o",
+  "target": "sankta-helen/o"
+ },
+ {
+  "w": "Sankta-Lau^renc/o",
+  "target": "sankta-laŭrenc/o"
+ },
+ {
+  "w": "Sankta-Luiz/o",
+  "target": "sankta-luiz/o"
+ },
+ {
+  "w": "San-Tome/o",
+  "target": "san-tome/o"
+ },
+ {
+  "w": "Sao-Tome/o",
+  "target": "sao-tome/o"
+ },
+ {
+  "w": "Saudi-Arab/i/o",
+  "target": "saudi/-/arab/i/o"
+ },
+ {
+  "w": "Sent-Kristofo",
+  "target": "sent/-/kristofo"
+ },
+ {
+  "w": "Siera-Leon/o",
+  "target": "siera/-/leon/o"
+ },
+ {
+  "w": "Siera-Nevad/o",
+  "target": "siera/-/nevad/o"
+ },
+ {
+  "w": "si/n/g^en/i",
+  "target": "si/n/ĝen/i"
+ },
+ {
+  "w": "Sir-Darj/o",
+  "target": "sir/-/darj/o"
+ },
+ {
+  "w": "spontan/a",
+  "target": "spontan/a"
+ },
+ {
+  "w": "Sri-J^ajavardanepur/o",
+  "target": "sri/-/ĵajavardanepur/o"
+ },
+ {
+  "w": "Sud-Oset/i/o",
+  "target": "sud/-/oset/i/o"
+ },
+ {
+  "w": "sugesti/a",
+  "target": "sugesti/a"
+ },
+ {
+  "w": "sugesti/i",
+  "target": "sugesti/i"
+ },
+ {
+  "w": "sugesti/o",
+  "target": "sugesti/o"
+ },
+ {
+  "w": "Tag^-Mahal/o",
+  "target": "taĝ-mahal/o"
+ },
+ {
+  "w": "Tamil-Nad/o",
+  "target": "tamil-nad/o"
+ },
+ {
+  "w": "Tel-Aviv/o",
+  "target": "tel-aviv/o"
+ },
+ {
+  "w": "tram/et/o",
+  "target": "tram/et/o"
+ },
+ {
+  "w": "trilion/o",
+  "target": "trilion/o"
+ },
+ {
+  "w": "Utar-Prades^/o",
+  "target": "utar-pradeŝ/o"
+ },
+ {
+  "w": "Van-Dejk/o",
+  "target": "van-dejk/o"
+ },
+ {
+  "w": "Bet-Leh^em/o",
+  "target": "bet-leĥem/o"
+ },
+ {
+  "w": "C^omo-Langm/o",
+  "target": "ĉomo-langm/o"
+ },
+ {
+  "w": "Kuku-Nor/o",
+  "target": "kuku-nor/o"
+ }
+]

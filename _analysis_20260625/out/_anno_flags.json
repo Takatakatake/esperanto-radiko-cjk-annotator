@@ -1,0 +1,3300 @@
+{
+ "過長グロス(合成語義疑い)": [
+  {
+   "root": "abstin",
+   "lang": "KO",
+   "gloss": "술·담배 등을 끊다"
+  },
+  {
+   "root": "afabl",
+   "lang": "KO",
+   "gloss": "상냥하고 친절한"
+  },
+  {
+   "root": "aflikt",
+   "lang": "KO",
+   "gloss": "깊이 괴롭혀 고통스럽게 하"
+  },
+  {
+   "root": "afrank",
+   "lang": "KO",
+   "gloss": "우편요금을 내다"
+  },
+  {
+   "root": "agrabl",
+   "lang": "KO",
+   "gloss": "기분 좋고 유쾌한"
+  },
+  {
+   "root": "agvara",
+   "lang": "JA",
+   "gloss": "タテガミオオカミ"
+  },
+  {
+   "root": "ais",
+   "lang": "JA",
+   "gloss": "国際科学アカデミー"
+  },
+  {
+   "root": "akte",
+   "lang": "JA",
+   "gloss": "ルイヨウショウマ"
+  },
+  {
+   "root": "aktiv",
+   "lang": "KO",
+   "gloss": "활동적이고 활발한"
+  },
+  {
+   "root": "akurat",
+   "lang": "JA",
+   "gloss": "時間・期限を正確に守"
+  },
+  {
+   "root": "akvifoli",
+   "lang": "JA",
+   "gloss": "セイヨウヒイラギ"
+  },
+  {
+   "root": "albert",
+   "lang": "JA",
+   "gloss": "アルベルティーヌ"
+  },
+  {
+   "root": "ale",
+   "lang": "KO",
+   "gloss": "가로수가 늘어선 길"
+  },
+  {
+   "root": "aleksandri",
+   "lang": "JA",
+   "gloss": "アレクサンドリア"
+  },
+  {
+   "root": "alfonsin",
+   "lang": "JA",
+   "gloss": "アルフォンシーヌ"
+  },
+  {
+   "root": "alopekur",
+   "lang": "JA",
+   "gloss": "スズメノテッポウ"
+  },
+  {
+   "root": "altern",
+   "lang": "KO",
+   "gloss": "번갈아 일어나다"
+  },
+  {
+   "root": "alud",
+   "lang": "KO",
+   "gloss": "넌지시 언급하다"
+  },
+  {
+   "root": "amfitrion",
+   "lang": "JA",
+   "gloss": "アンフィトリュオン"
+  },
+  {
+   "root": "ampelopraz",
+   "lang": "JA",
+   "gloss": "ジャンボニンニク"
+  },
+  {
+   "root": "amuz",
+   "lang": "KO",
+   "gloss": "남을 즐겁게 하다"
+  },
+  {
+   "root": "anafilaksi",
+   "lang": "JA",
+   "gloss": "アナフィラキシー"
+  },
+  {
+   "root": "andrapradeŝ",
+   "lang": "JA",
+   "gloss": "アンドラプラデシ"
+  },
+  {
+   "root": "angiotensin",
+   "lang": "JA",
+   "gloss": "アンジオテンシン"
+  },
+  {
+   "root": "angstrom",
+   "lang": "JA",
+   "gloss": "オングストローム"
+  },
+  {
+   "root": "anstrom",
+   "lang": "JA",
+   "gloss": "オングストローム"
+  },
+  {
+   "root": "antidork",
+   "lang": "JA",
+   "gloss": "スプリングボック"
+  },
+  {
+   "root": "apartament",
+   "lang": "KO",
+   "gloss": "아파트 한 세대"
+  },
+  {
+   "root": "apocinac",
+   "lang": "JA",
+   "gloss": "キョウチクトウ科"
+  },
+  {
+   "root": "aristofan",
+   "lang": "JA",
+   "gloss": "アリストファネス"
+  },
+  {
+   "root": "artakserks",
+   "lang": "JA",
+   "gloss": "アルタクセルクセス"
+  },
+  {
+   "root": "artiŝok",
+   "lang": "JA",
+   "gloss": "アーティチョーク"
+  },
+  {
+   "root": "arunk",
+   "lang": "JA",
+   "gloss": "ヤマブキショウマ"
+  },
+  {
+   "root": "asteried",
+   "lang": "JA",
+   "gloss": "イトマキヒトデ科"
+  },
+  {
+   "root": "asterolin",
+   "lang": "JA",
+   "gloss": "アステロリノン属"
+  },
+  {
+   "root": "astianaks",
+   "lang": "JA",
+   "gloss": "アステュアナクス"
+  },
+  {
+   "root": "asturi",
+   "lang": "JA",
+   "gloss": "アストゥーリアス"
+  },
+  {
+   "root": "aventin",
+   "lang": "JA",
+   "gloss": "アウェンティヌス"
+  },
+  {
+   "root": "avenu",
+   "lang": "KO",
+   "gloss": "가로수가 있는 큰길"
+  },
+  {
+   "root": "avocet",
+   "lang": "JA",
+   "gloss": "ソリハシセイタカシギ"
+  },
+  {
+   "root": "azerbajĝan",
+   "lang": "JA",
+   "gloss": "アゼルバイジャン"
+  },
+  {
+   "root": "aŭgusten",
+   "lang": "JA",
+   "gloss": "アウグスティヌス"
+  },
+  {
+   "root": "aŭk",
+   "lang": "JA",
+   "gloss": "オオハシウミガラス"
+  },
+  {
+   "root": "aŭreomicin",
+   "lang": "JA",
+   "gloss": "オーレオマイシン"
+  },
+  {
+   "root": "aŭrignaci",
+   "lang": "JA",
+   "gloss": "オーリニャック期"
+  },
+  {
+   "root": "aŭrikul",
+   "lang": "JA",
+   "gloss": "アツバサクラソウ"
+  },
+  {
+   "root": "aŭstralazi",
+   "lang": "JA",
+   "gloss": "オーストララシア"
+  },
+  {
+   "root": "aŭstralopitek",
+   "lang": "JA",
+   "gloss": "アウストラロピテクス"
+  },
+  {
+   "root": "aŭstri",
+   "lang": "JA",
+   "gloss": "[地名]オーストリア"
+  },
+  {
+   "root": "aŭstronezi",
+   "lang": "JA",
+   "gloss": "オーストロネシア"
+  },
+  {
+   "root": "bacil",
+   "lang": "KO",
+   "gloss": "막대 모양 세균"
+  },
+  {
+   "root": "bagavadgit",
+   "lang": "JA",
+   "gloss": "バガバッド・ギーター"
+  },
+  {
+   "root": "banal",
+   "lang": "KO",
+   "gloss": "진부하고 평범한"
+  },
+  {
+   "root": "bant",
+   "lang": "KO",
+   "gloss": "리본 모양 매듭"
+  },
+  {
+   "root": "basketbal",
+   "lang": "JA",
+   "gloss": "バスケットボール"
+  },
+  {
+   "root": "baŝkiri",
+   "lang": "JA",
+   "gloss": "バシコルトスタン"
+  },
+  {
+   "root": "benzodiazepin",
+   "lang": "JA",
+   "gloss": "ベンゾジアゼピン"
+  },
+  {
+   "root": "betonik",
+   "lang": "JA",
+   "gloss": "カッコウチョロギ"
+  },
+  {
+   "root": "bezon",
+   "lang": "KO",
+   "gloss": "…을 필요로 하다"
+  },
+  {
+   "root": "bhagavadgit",
+   "lang": "JA",
+   "gloss": "バガヴァッドギーター"
+  },
+  {
+   "root": "bifstek",
+   "lang": "KO",
+   "gloss": "쇠고기 스테이크"
+  },
+  {
+   "root": "bignoni",
+   "lang": "JA",
+   "gloss": "ツリガネカズラ属"
+  },
+  {
+   "root": "bilanc",
+   "lang": "JA",
+   "gloss": "貸借対照表を作る"
+  },
+  {
+   "root": "bkd",
+   "lang": "ZH",
+   "gloss": "二进制编码十进制"
+  },
+  {
+   "root": "bonaventur",
+   "lang": "JA",
+   "gloss": "ボナヴェントゥラ"
+  },
+  {
+   "root": "bonifac",
+   "lang": "JA",
+   "gloss": "ボニファティウス"
+  },
+  {
+   "root": "brakin",
+   "lang": "JA",
+   "gloss": "ホソクビゴミムシ属"
+  },
+  {
+   "root": "brandenburg",
+   "lang": "JA",
+   "gloss": "ブランデンブルク"
+  },
+  {
+   "root": "brandenburgi",
+   "lang": "JA",
+   "gloss": "ブランデンブルク"
+  },
+  {
+   "root": "braĥin",
+   "lang": "JA",
+   "gloss": "ホソクビゴミムシ"
+  },
+  {
+   "root": "briliant",
+   "lang": "JA",
+   "gloss": "ブリリアントカット"
+  },
+  {
+   "root": "brokant",
+   "lang": "KO",
+   "gloss": "고물을 사고팔다"
+  },
+  {
+   "root": "bromus",
+   "lang": "JA",
+   "gloss": "スズメノチャヒキ属"
+  },
+  {
+   "root": "brontosaŭr",
+   "lang": "JA",
+   "gloss": "ブロントサウルス"
+  },
+  {
+   "root": "brunfelsi",
+   "lang": "JA",
+   "gloss": "ブルンフェルシア"
+  },
+  {
+   "root": "brunsvik",
+   "lang": "JA",
+   "gloss": "ブラウンシュバイク"
+  },
+  {
+   "root": "bukl",
+   "lang": "KO",
+   "gloss": "곱슬머리의 한 가닥"
+  },
+  {
+   "root": "bulk",
+   "lang": "KO",
+   "gloss": "작은 둥근 롤빵"
+  },
+  {
+   "root": "butilhidroksi",
+   "lang": "JA",
+   "gloss": "ブチルヒドロキシ"
+  },
+  {
+   "root": "ceb",
+   "lang": "KO",
+   "gloss": "꼬리감는원숭이속"
+  },
+  {
+   "root": "cebed",
+   "lang": "KO",
+   "gloss": "꼬리감는원숭이과"
+  },
+  {
+   "root": "celastr",
+   "lang": "JA",
+   "gloss": "ツルウメモドキ属"
+  },
+  {
+   "root": "centaŭri",
+   "lang": "JA",
+   "gloss": "ベニバナセンブリ属"
+  },
+  {
+   "root": "central",
+   "lang": "KO",
+   "gloss": "노동조합 등의 연합체"
+  },
+  {
+   "root": "centrant",
+   "lang": "JA",
+   "gloss": "ベニカノコソウ属"
+  },
+  {
+   "root": "cepol",
+   "lang": "JA",
+   "gloss": "リュウグウノヒメ属"
+  },
+  {
+   "root": "cerast",
+   "lang": "JA",
+   "gloss": "ツノクサリヘビ属"
+  },
+  {
+   "root": "cezalpini",
+   "lang": "JA",
+   "gloss": "ジャケツイバラ属"
+  },
+  {
+   "root": "cibernetik",
+   "lang": "JA",
+   "gloss": "サイバネティクス"
+  },
+  {
+   "root": "cimbalari",
+   "lang": "JA",
+   "gloss": "ツタバウンラン属"
+  },
+  {
+   "root": "cimicifug",
+   "lang": "JA",
+   "gloss": "サラシナショウマ属"
+  },
+  {
+   "root": "cinar",
+   "lang": "JA",
+   "gloss": "チョウセンアザミ"
+  },
+  {
+   "root": "civetikt",
+   "lang": "JA",
+   "gloss": "アフリカシベット"
+  },
+  {
+   "root": "daresalam",
+   "lang": "JA",
+   "gloss": "ダルエスサラーム"
+  },
+  {
+   "root": "datur",
+   "lang": "JA",
+   "gloss": "チョウセンアサガオ"
+  },
+  {
+   "root": "degel",
+   "lang": "KO",
+   "gloss": "눈·얼음이 녹다"
+  },
+  {
+   "root": "deleg",
+   "lang": "KO",
+   "gloss": "대표로 파견하다"
+  },
+  {
+   "root": "delikat",
+   "lang": "KO",
+   "gloss": "섬세하고 세련된"
+  },
+  {
+   "root": "densteti",
+   "lang": "JA",
+   "gloss": "コバノイシカグマ"
+  },
+  {
+   "root": "deput",
+   "lang": "JA",
+   "gloss": "選出して送り出す"
+  },
+  {
+   "root": "dermest",
+   "lang": "JA",
+   "gloss": "カツオブシムシ属"
+  },
+  {
+   "root": "desmod",
+   "lang": "JA",
+   "gloss": "チスイコウモリ属"
+  },
+  {
+   "root": "destin",
+   "lang": "KO",
+   "gloss": "용도를 정해 두다"
+  },
+  {
+   "root": "difenbaki",
+   "lang": "JA",
+   "gloss": "ディフェンバキア"
+  },
+  {
+   "root": "digest",
+   "lang": "KO",
+   "gloss": "음식이나 지식을 소화·흡수"
+  },
+  {
+   "root": "diofant",
+   "lang": "JA",
+   "gloss": "ディオファントス"
+  },
+  {
+   "root": "dioklecian",
+   "lang": "JA",
+   "gloss": "ディオクレティアヌス"
+  },
+  {
+   "root": "dionizi",
+   "lang": "JA",
+   "gloss": "ディオニュシオス"
+  },
+  {
+   "root": "diskut",
+   "lang": "KO",
+   "gloss": "의견을 주고받으며 토론하다"
+  },
+  {
+   "root": "dispon",
+   "lang": "KO",
+   "gloss": "자유롭게 사용·처분하다"
+  },
+  {
+   "root": "disput",
+   "lang": "KO",
+   "gloss": "격렬히 논쟁하거나 논박하다"
+  },
+  {
+   "root": "diven",
+   "lang": "KO",
+   "gloss": "짐작해 알아맞히다"
+  },
+  {
+   "root": "dorlot",
+   "lang": "KO",
+   "gloss": "응석받이로 키우다"
+  },
+  {
+   "root": "dres",
+   "lang": "KO",
+   "gloss": "동물을 조련하다"
+  },
+  {
+   "root": "drozofil",
+   "lang": "JA",
+   "gloss": "ショウジョウバエ属"
+  },
+  {
+   "root": "drozofiled",
+   "lang": "JA",
+   "gloss": "ショウジョウバエ科"
+  },
+  {
+   "root": "duseldorf",
+   "lang": "JA",
+   "gloss": "デュッセルドルフ"
+  },
+  {
+   "root": "eglanteri",
+   "lang": "JA",
+   "gloss": "スイートブライア"
+  },
+  {
+   "root": "ejnŝtejn",
+   "lang": "JA",
+   "gloss": "アインシュタイン"
+  },
+  {
+   "root": "ejnŝtejni",
+   "lang": "JA",
+   "gloss": "アインスタイニウム"
+  },
+  {
+   "root": "ekaterinburg",
+   "lang": "JA",
+   "gloss": "エカテリンブルク"
+  },
+  {
+   "root": "eki",
+   "lang": "JA",
+   "gloss": "シャゼンムラサキ"
+  },
+  {
+   "root": "eklezi",
+   "lang": "KO",
+   "gloss": "기독교 교회 조직"
+  },
+  {
+   "root": "ekzempler",
+   "lang": "KO",
+   "gloss": "책·신문 등의 한 부"
+  },
+  {
+   "root": "elast",
+   "lang": "KO",
+   "gloss": "탄력 있고 신축성 있는"
+  },
+  {
+   "root": "elefantin",
+   "lang": "JA",
+   "gloss": "エレファンティネ"
+  },
+  {
+   "root": "elegant",
+   "lang": "KO",
+   "gloss": "품위 있고 우아한"
+  },
+  {
+   "root": "elna",
+   "lang": "JA",
+   "gloss": "北米エスペラント連盟"
+  },
+  {
+   "root": "emerit",
+   "lang": "ZH",
+   "gloss": "荣誉退休并领取养老金"
+  },
+  {
+   "root": "eminent",
+   "lang": "KO",
+   "gloss": "뛰어나고 저명한"
+  },
+  {
+   "root": "endos",
+   "lang": "KO",
+   "gloss": "어음·수표에 배서하다"
+  },
+  {
+   "root": "energetik",
+   "lang": "JA",
+   "gloss": "エネルゲティーク"
+  },
+  {
+   "root": "entablement",
+   "lang": "JA",
+   "gloss": "エンタブレチュア"
+  },
+  {
+   "root": "entel",
+   "lang": "JA",
+   "gloss": "ハヌマンラングール"
+  },
+  {
+   "root": "entolom",
+   "lang": "JA",
+   "gloss": "イッポンシメジ属"
+  },
+  {
+   "root": "epaminond",
+   "lang": "JA",
+   "gloss": "エパメイノンダス"
+  },
+  {
+   "root": "epidendr",
+   "lang": "JA",
+   "gloss": "エピデンドラム属"
+  },
+  {
+   "root": "ergosterol",
+   "lang": "JA",
+   "gloss": "エルゴステロール"
+  },
+  {
+   "root": "eritropoezin",
+   "lang": "JA",
+   "gloss": "エリスロポエチン"
+  },
+  {
+   "root": "erodi",
+   "lang": "JA",
+   "gloss": "オランダフウロ属"
+  },
+  {
+   "root": "esting",
+   "lang": "KO",
+   "gloss": "불이나 빛을 끄다"
+  },
+  {
+   "root": "estradiol",
+   "lang": "JA",
+   "gloss": "エストラジオール"
+  },
+  {
+   "root": "etap",
+   "lang": "KO",
+   "gloss": "여정의 한 구간"
+  },
+  {
+   "root": "etuz",
+   "lang": "JA",
+   "gloss": "ドクゼリモドキ属"
+  },
+  {
+   "root": "event",
+   "lang": "KO",
+   "gloss": "중요한 사건이나 일"
+  },
+  {
+   "root": "eventual",
+   "lang": "JA",
+   "gloss": "場合によっては起こり"
+  },
+  {
+   "root": "evolu",
+   "lang": "KO",
+   "gloss": "점차 변화하며 발전하다"
+  },
+  {
+   "root": "eŭdiometr",
+   "lang": "JA",
+   "gloss": "ユージオメーター"
+  },
+  {
+   "root": "fajenc",
+   "lang": "JA",
+   "gloss": "ファイアンス陶器"
+  },
+  {
+   "root": "fald",
+   "lang": "KO",
+   "gloss": "종이나 옷을 접다"
+  },
+  {
+   "root": "familiar",
+   "lang": "KO",
+   "gloss": "친숙하고 허물없는"
+  },
+  {
+   "root": "fart",
+   "lang": "JA",
+   "gloss": "~の健康状態である"
+  },
+  {
+   "root": "farun",
+   "lang": "KO",
+   "gloss": "곡물·콩 등을 빻은 가루"
+  },
+  {
+   "root": "fason",
+   "lang": "KO",
+   "gloss": "옷의 재단과 모양"
+  },
+  {
+   "root": "fenciklidin",
+   "lang": "JA",
+   "gloss": "フェンシクリジン"
+  },
+  {
+   "root": "ferdinand",
+   "lang": "JA",
+   "gloss": "フェルディナンド"
+  },
+  {
+   "root": "festen",
+   "lang": "JA",
+   "gloss": "ごちそうを食べる"
+  },
+  {
+   "root": "festival",
+   "lang": "KO",
+   "gloss": "음악·예술 축제"
+  },
+  {
+   "root": "fikari",
+   "lang": "JA",
+   "gloss": "ヒメリュウキンカ"
+  },
+  {
+   "root": "filadelfi",
+   "lang": "JA",
+   "gloss": "フィラデルフィア"
+  },
+  {
+   "root": "filharmoni",
+   "lang": "JA",
+   "gloss": "フィルハーモニー"
+  },
+  {
+   "root": "film",
+   "lang": "KO",
+   "gloss": "사진·영화용 필름"
+  },
+  {
+   "root": "filodendr",
+   "lang": "JA",
+   "gloss": "フィロデンドロン"
+  },
+  {
+   "root": "fitis",
+   "lang": "JA",
+   "gloss": "キタヤナギムシクイ"
+  },
+  {
+   "root": "fitoftor",
+   "lang": "JA",
+   "gloss": "エキビョウキン属"
+  },
+  {
+   "root": "fitolak",
+   "lang": "JA",
+   "gloss": "ヨウシュヤマゴボウ属"
+  },
+  {
+   "root": "flagr",
+   "lang": "KO",
+   "gloss": "불꽃이 너울거리다"
+  },
+  {
+   "root": "flaŭn",
+   "lang": "JA",
+   "gloss": "カスタードプリン"
+  },
+  {
+   "root": "fle",
+   "lang": "JA",
+   "gloss": "オオアワガエリ属"
+  },
+  {
+   "root": "flebotom",
+   "lang": "JA",
+   "gloss": "サシチョウバエ属"
+  },
+  {
+   "root": "floroglucinol",
+   "lang": "JA",
+   "gloss": "フロログルシノール"
+  },
+  {
+   "root": "fokstrot",
+   "lang": "JA",
+   "gloss": "フォックストロット"
+  },
+  {
+   "root": "fontanbel",
+   "lang": "JA",
+   "gloss": "フォンテンブロー"
+  },
+  {
+   "root": "foradendr",
+   "lang": "JA",
+   "gloss": "アメリカヤドリギ属"
+  },
+  {
+   "root": "fork",
+   "lang": "JA",
+   "gloss": "フォーク状の道具"
+  },
+  {
+   "root": "formaldehid",
+   "lang": "JA",
+   "gloss": "ホルムアルデヒド"
+  },
+  {
+   "root": "format",
+   "lang": "KO",
+   "gloss": "책이나 종이의 판형"
+  },
+  {
+   "root": "fortunat",
+   "lang": "JA",
+   "gloss": "フォルトゥナトゥス"
+  },
+  {
+   "root": "fragari",
+   "lang": "JA",
+   "gloss": "オランダイチゴ属"
+  },
+  {
+   "root": "frakas",
+   "lang": "JA",
+   "gloss": "音をたてて打ち砕く"
+  },
+  {
+   "root": "frand",
+   "lang": "JA",
+   "gloss": "美味として楽しむ"
+  },
+  {
+   "root": "franĉkonte",
+   "lang": "JA",
+   "gloss": "フランシュコンテ"
+  },
+  {
+   "root": "fuegi",
+   "lang": "JA",
+   "gloss": "ティエラデルフエゴ"
+  },
+  {
+   "root": "gage",
+   "lang": "JA",
+   "gloss": "キバナノアマナ属"
+  },
+  {
+   "root": "galoŝ",
+   "lang": "JA",
+   "gloss": "オーバーシューズ"
+  },
+  {
+   "root": "gamb",
+   "lang": "KO",
+   "gloss": "사람이나 동물의 다리"
+  },
+  {
+   "root": "gimnazi",
+   "lang": "KO",
+   "gloss": "대학 진학 준비용 인문계"
+  },
+  {
+   "root": "giromitr",
+   "lang": "JA",
+   "gloss": "シャグマアミガサタケ"
+  },
+  {
+   "root": "glad",
+   "lang": "JA",
+   "gloss": "アイロンをかける"
+  },
+  {
+   "root": "glikogenoliz",
+   "lang": "JA",
+   "gloss": "グリコーゲン分解"
+  },
+  {
+   "root": "glosopterid",
+   "lang": "JA",
+   "gloss": "グロッソプテリス属"
+  },
+  {
+   "root": "gmo",
+   "lang": "JA",
+   "gloss": "遺伝子組換え生物"
+  },
+  {
+   "root": "gmt",
+   "lang": "JA",
+   "gloss": "グリニッジ標準時"
+  },
+  {
+   "root": "gobi",
+   "lang": "KO",
+   "gloss": "모샘치류의 물고기"
+  },
+  {
+   "root": "golf",
+   "lang": "KO",
+   "gloss": "바다에 깊게 들어간 만"
+  },
+  {
+   "root": "golfo",
+   "lang": "KO",
+   "gloss": "바다에 깊게 들어간 만"
+  },
+  {
+   "root": "grandioz",
+   "lang": "KO",
+   "gloss": "웅장하고 장엄한"
+  },
+  {
+   "root": "grapfrukt",
+   "lang": "JA",
+   "gloss": "グレープフルーツ"
+  },
+  {
+   "root": "graveti",
+   "lang": "JA",
+   "gloss": "グラヴェット文化"
+  },
+  {
+   "root": "graŭbind",
+   "lang": "JA",
+   "gloss": "グラウビュンデン"
+  },
+  {
+   "root": "grizon",
+   "lang": "JA",
+   "gloss": "グラウビュンデン"
+  },
+  {
+   "root": "grotesk",
+   "lang": "KO",
+   "gloss": "기괴하고 이상한"
+  },
+  {
+   "root": "grumbl",
+   "lang": "KO",
+   "gloss": "작게 투덜거리며 불평하다"
+  },
+  {
+   "root": "guberni",
+   "lang": "KO",
+   "gloss": "러시아·일본 등의 행정 구"
+  },
+  {
+   "root": "haliker",
+   "lang": "JA",
+   "gloss": "ハイイロアザラシ"
+  },
+  {
+   "root": "haliĥer",
+   "lang": "JA",
+   "gloss": "ハイイロアザラシ"
+  },
+  {
+   "root": "harpagofit",
+   "lang": "JA",
+   "gloss": "ハルパゴフィツム属"
+  },
+  {
+   "root": "hematop",
+   "lang": "KO",
+   "gloss": "검은머리물떼새속"
+  },
+  {
+   "root": "hezit",
+   "lang": "KO",
+   "gloss": "주저하거나 망설이다"
+  },
+  {
+   "root": "hieraci",
+   "lang": "JA",
+   "gloss": "ヤナギタンポポ属"
+  },
+  {
+   "root": "hindukuŝ",
+   "lang": "JA",
+   "gloss": "ヒンドゥークシュ"
+  },
+  {
+   "root": "hipeastr",
+   "lang": "JA",
+   "gloss": "ヒッペアストルム属"
+  },
+  {
+   "root": "hipergonar",
+   "lang": "JA",
+   "gloss": "アナモルフレンズ"
+  },
+  {
+   "root": "hipofe",
+   "lang": "JA",
+   "gloss": "シーバックソーン属"
+  },
+  {
+   "root": "hohencolern",
+   "lang": "JA",
+   "gloss": "ホーエンツォレルン"
+  },
+  {
+   "root": "hohenstaŭf",
+   "lang": "JA",
+   "gloss": "ホーエンシュタウフェ"
+  },
+  {
+   "root": "honest",
+   "lang": "KO",
+   "gloss": "정직하고 성실한"
+  },
+  {
+   "root": "human",
+   "lang": "KO",
+   "gloss": "인도적이고 자비로운"
+  },
+  {
+   "root": "ignor",
+   "lang": "KO",
+   "gloss": "일부러 무시하다"
+  },
+  {
+   "root": "ilustr",
+   "lang": "KO",
+   "gloss": "삽화를 넣어 설명하다"
+  },
+  {
+   "root": "impet",
+   "lang": "KO",
+   "gloss": "격렬히 돌진하다"
+  },
+  {
+   "root": "implik",
+   "lang": "KO",
+   "gloss": "복잡한 일에 얽히게 하다"
+  },
+  {
+   "root": "impon",
+   "lang": "JA",
+   "gloss": "強い印象を与える"
+  },
+  {
+   "root": "inaŭgur",
+   "lang": "KO",
+   "gloss": "개막식·취임식 등 공식 의"
+  },
+  {
+   "root": "indign",
+   "lang": "KO",
+   "gloss": "부정이나 비열한 행위에 분"
+  },
+  {
+   "root": "indulg",
+   "lang": "KO",
+   "gloss": "너그럽게 용서하다"
+  },
+  {
+   "root": "iniciat",
+   "lang": "KO",
+   "gloss": "새로운 일을 시작하다"
+  },
+  {
+   "root": "inklin",
+   "lang": "KO",
+   "gloss": "어떤 쪽으로 기우는"
+  },
+  {
+   "root": "insist",
+   "lang": "KO",
+   "gloss": "자신의 주장이나 요구를 굳"
+  },
+  {
+   "root": "inspir",
+   "lang": "KO",
+   "gloss": "영감이나 감정을 불러일으키"
+  },
+  {
+   "root": "instru",
+   "lang": "KO",
+   "gloss": "지식이나 기술을 가르치다"
+  },
+  {
+   "root": "insult",
+   "lang": "KO",
+   "gloss": "말로 모욕하거나 욕하다"
+  },
+  {
+   "root": "inteligent",
+   "lang": "KO",
+   "gloss": "총명하고 머리가 좋은"
+  },
+  {
+   "root": "intenc",
+   "lang": "KO",
+   "gloss": "어떤 일을 하려고 마음먹다"
+  },
+  {
+   "root": "interes",
+   "lang": "KO",
+   "gloss": "흥미를 갖게 하다"
+  },
+  {
+   "root": "interferon",
+   "lang": "JA",
+   "gloss": "インターフェロン"
+  },
+  {
+   "root": "interleŭkin",
+   "lang": "JA",
+   "gloss": "インターロイキン"
+  },
+  {
+   "root": "interpelaci",
+   "lang": "KO",
+   "gloss": "국회에서 질의하다"
+  },
+  {
+   "root": "intonaci",
+   "lang": "JA",
+   "gloss": "イントネーション"
+  },
+  {
+   "root": "irit",
+   "lang": "KO",
+   "gloss": "짜증 나게 하다"
+  },
+  {
+   "root": "israfil",
+   "lang": "JA",
+   "gloss": "イスラーフィール"
+  },
+  {
+   "root": "izatis",
+   "lang": "JA",
+   "gloss": "ホッキョクギツネ"
+  },
+  {
+   "root": "izopropol",
+   "lang": "JA",
+   "gloss": "イソプロパノール"
+  },
+  {
+   "root": "jakv",
+   "lang": "JA",
+   "gloss": "ジャックフルーツ"
+  },
+  {
+   "root": "jekaterinburg",
+   "lang": "JA",
+   "gloss": "エカテリンブルク"
+  },
+  {
+   "root": "jubile",
+   "lang": "KO",
+   "gloss": "25·50·100주년 등의"
+  },
+  {
+   "root": "jugoslavi",
+   "lang": "JA",
+   "gloss": "[地名]ユーゴスラビア"
+  },
+  {
+   "root": "justinian",
+   "lang": "JA",
+   "gloss": "ユスティニアヌス"
+  },
+  {
+   "root": "kaban",
+   "lang": "KO",
+   "gloss": "허름한 오두막집"
+  },
+  {
+   "root": "kad",
+   "lang": "JA",
+   "gloss": "ケードビャクシン"
+  },
+  {
+   "root": "kalceolari",
+   "lang": "JA",
+   "gloss": "カルセオラリア属"
+  },
+  {
+   "root": "kalciferol",
+   "lang": "JA",
+   "gloss": "カルシフェロール"
+  },
+  {
+   "root": "kaliningrad",
+   "lang": "JA",
+   "gloss": "カリーニングラード"
+  },
+  {
+   "root": "kalumni",
+   "lang": "KO",
+   "gloss": "근거 없이 남을 중상하다"
+  },
+  {
+   "root": "kalun",
+   "lang": "JA",
+   "gloss": "ギョリュウモドキ"
+  },
+  {
+   "root": "kalvil",
+   "lang": "JA",
+   "gloss": "カルヴィルリンゴ"
+  },
+  {
+   "root": "kamerops",
+   "lang": "JA",
+   "gloss": "チャボトウジュロ属"
+  },
+  {
+   "root": "kanĉenĵung",
+   "lang": "JA",
+   "gloss": "カンチェンジュンガ"
+  },
+  {
+   "root": "kapot",
+   "lang": "JA",
+   "gloss": "フード付きの長い外套"
+  },
+  {
+   "root": "kapriol",
+   "lang": "KO",
+   "gloss": "까불며 장난치다"
+  },
+  {
+   "root": "karakteriz",
+   "lang": "JA",
+   "gloss": "(を)特色づける"
+  },
+  {
+   "root": "kard",
+   "lang": "KO",
+   "gloss": "머리카락을 빗다"
+  },
+  {
+   "root": "kares",
+   "lang": "KO",
+   "gloss": "부드럽게 쓰다듬다"
+  },
+  {
+   "root": "kaserol",
+   "lang": "KO",
+   "gloss": "자루 달린 깊은 냄비"
+  },
+  {
+   "root": "kaset",
+   "lang": "KO",
+   "gloss": "암상자(카세트)"
+  },
+  {
+   "root": "kasked",
+   "lang": "KO",
+   "gloss": "챙 달린 제복 모자"
+  },
+  {
+   "root": "katart",
+   "lang": "JA",
+   "gloss": "コンドルモドキ属"
+  },
+  {
+   "root": "kavi",
+   "lang": "JA",
+   "gloss": "テンジクネズミ属"
+  },
+  {
+   "root": "kavied",
+   "lang": "JA",
+   "gloss": "テンジクネズミ科"
+  },
+  {
+   "root": "kaŭr",
+   "lang": "JA",
+   "gloss": "うずくまっている"
+  },
+  {
+   "root": "kaŭri",
+   "lang": "JA",
+   "gloss": "うずくまっている"
+  },
+  {
+   "root": "keir",
+   "lang": "JA",
+   "gloss": "ニオイアラセイトウ"
+  },
+  {
+   "root": "keirant",
+   "lang": "JA",
+   "gloss": "ニオイアラセイトウ"
+  },
+  {
+   "root": "kenigsberg",
+   "lang": "JA",
+   "gloss": "ケーニヒスベルク"
+  },
+  {
+   "root": "kibernetik",
+   "lang": "JA",
+   "gloss": "サイバネティクス"
+  },
+  {
+   "root": "kilogram",
+   "lang": "JA",
+   "gloss": "[単]キログラム"
+  },
+  {
+   "root": "kilometr",
+   "lang": "JA",
+   "gloss": "[単]キロメートル"
+  },
+  {
+   "root": "klaĉ",
+   "lang": "JA",
+   "gloss": "悪口をいいふらす"
+  },
+  {
+   "root": "klaŭdian",
+   "lang": "JA",
+   "gloss": "クラウディアヌス"
+  },
+  {
+   "root": "kleom",
+   "lang": "JA",
+   "gloss": "フウチョウソウ属"
+  },
+  {
+   "root": "klitemnestr",
+   "lang": "JA",
+   "gloss": "クリュタイムネストラ"
+  },
+  {
+   "root": "kloramfenikol",
+   "lang": "JA",
+   "gloss": "クロラムフェニコール"
+  },
+  {
+   "root": "klostridi",
+   "lang": "JA",
+   "gloss": "クロストリジウム"
+  },
+  {
+   "root": "koendu",
+   "lang": "JA",
+   "gloss": "キノボリヤマアラシ属"
+  },
+  {
+   "root": "kokl",
+   "lang": "JA",
+   "gloss": "アオツヅラフジ属"
+  },
+  {
+   "root": "koldkrem",
+   "lang": "JA",
+   "gloss": "コールドクリーム"
+  },
+  {
+   "root": "kolibi",
+   "lang": "JA",
+   "gloss": "モリノカレバタケ属"
+  },
+  {
+   "root": "komb",
+   "lang": "KO",
+   "gloss": "머리카락을 빗다"
+  },
+  {
+   "root": "komerc",
+   "lang": "KO",
+   "gloss": "장사하거나 거래하다"
+  },
+  {
+   "root": "komisi",
+   "lang": "KO",
+   "gloss": "위임하거나 맡기다"
+  },
+  {
+   "root": "komision",
+   "lang": "KO",
+   "gloss": "특정 업무를 맡은 위원회"
+  },
+  {
+   "root": "kompetent",
+   "lang": "KO",
+   "gloss": "유능하고 자격을 갖춘"
+  },
+  {
+   "root": "kompliment",
+   "lang": "KO",
+   "gloss": "칭찬이나 아첨의 말"
+  },
+  {
+   "root": "kompromit",
+   "lang": "KO",
+   "gloss": "평판 등을 손상시키다"
+  },
+  {
+   "root": "koncertin",
+   "lang": "JA",
+   "gloss": "コンサーティーナ"
+  },
+  {
+   "root": "konciz",
+   "lang": "KO",
+   "gloss": "간결하고 명료한"
+  },
+  {
+   "root": "kondamn",
+   "lang": "KO",
+   "gloss": "유죄를 선고하다"
+  },
+  {
+   "root": "kondolenc",
+   "lang": "KO",
+   "gloss": "유족에게 조의를 표하다"
+  },
+  {
+   "root": "kondrostom",
+   "lang": "JA",
+   "gloss": "コンドロストマ属"
+  },
+  {
+   "root": "konfidenc",
+   "lang": "KO",
+   "gloss": "비밀스러운 이야기"
+  },
+  {
+   "root": "konfit",
+   "lang": "KO",
+   "gloss": "과일을 설탕에 절이다"
+  },
+  {
+   "root": "konsist",
+   "lang": "KO",
+   "gloss": "…으로 이루어지다"
+  },
+  {
+   "root": "konsol",
+   "lang": "KO",
+   "gloss": "슬픔을 위로하다"
+  },
+  {
+   "root": "konstanci",
+   "lang": "JA",
+   "gloss": "コンスタンティウス"
+  },
+  {
+   "root": "konstanten",
+   "lang": "JA",
+   "gloss": "コンスタンティヌス"
+  },
+  {
+   "root": "konstantin",
+   "lang": "JA",
+   "gloss": "コンスタンティーヌ"
+  },
+  {
+   "root": "konstat",
+   "lang": "KO",
+   "gloss": "조사해 사실 여부를 확인하"
+  },
+  {
+   "root": "kontrakt",
+   "lang": "KO",
+   "gloss": "계약을 체결하다"
+  },
+  {
+   "root": "kontratenor",
+   "lang": "JA",
+   "gloss": "カウンターテナー"
+  },
+  {
+   "root": "kontrol",
+   "lang": "KO",
+   "gloss": "점검하거나 확인하다"
+  },
+  {
+   "root": "konvenci",
+   "lang": "KO",
+   "gloss": "국가 간 협정·조약"
+  },
+  {
+   "root": "konvink",
+   "lang": "KO",
+   "gloss": "논리와 증거로 남을 설득하"
+  },
+  {
+   "root": "kopris",
+   "lang": "JA",
+   "gloss": "ダイコクコガネ属"
+  },
+  {
+   "root": "korekt",
+   "lang": "KO",
+   "gloss": "틀린 것을 바로잡고 수정하"
+  },
+  {
+   "root": "korespond",
+   "lang": "KO",
+   "gloss": "편지를 주고받다"
+  },
+  {
+   "root": "kornik",
+   "lang": "KO",
+   "gloss": "등이 회색인 까마귀"
+  },
+  {
+   "root": "kortikosteron",
+   "lang": "JA",
+   "gloss": "コルチコステロン"
+  },
+  {
+   "root": "kotiz",
+   "lang": "ZH",
+   "gloss": "缴纳会费或分担金"
+  },
+  {
+   "root": "koĉoide",
+   "lang": "JA",
+   "gloss": "カイガラムシ上科"
+  },
+  {
+   "root": "krasnojarsk",
+   "lang": "JA",
+   "gloss": "クラスノヤルスク"
+  },
+  {
+   "root": "kraterel",
+   "lang": "JA",
+   "gloss": "クロラッパタケ属"
+  },
+  {
+   "root": "krepusk",
+   "lang": "KO",
+   "gloss": "새벽·황혼의 어스름"
+  },
+  {
+   "root": "krescenti",
+   "lang": "JA",
+   "gloss": "ヒョウタンノキ属"
+  },
+  {
+   "root": "kripl",
+   "lang": "JA",
+   "gloss": "身体に障害のある"
+  },
+  {
+   "root": "kriptogram",
+   "lang": "JA",
+   "gloss": "クリプトグラムマ属"
+  },
+  {
+   "root": "krizostom",
+   "lang": "JA",
+   "gloss": "クリュソストモス"
+  },
+  {
+   "root": "kronŝtad",
+   "lang": "JA",
+   "gloss": "クロンシュタット"
+  },
+  {
+   "root": "krotonal",
+   "lang": "JA",
+   "gloss": "クロトンアルデヒド"
+  },
+  {
+   "root": "krur",
+   "lang": "KO",
+   "gloss": "사람·동물의 다리"
+  },
+  {
+   "root": "ksantip",
+   "lang": "JA",
+   "gloss": "クサンティッポス"
+  },
+  {
+   "root": "ksestobi",
+   "lang": "JA",
+   "gloss": "キセストビウム属"
+  },
+  {
+   "root": "ksiloste",
+   "lang": "JA",
+   "gloss": "欧州ヒョウタンボク"
+  },
+  {
+   "root": "kuir",
+   "lang": "KO",
+   "gloss": "가열해 조리하다"
+  },
+  {
+   "root": "kunikl",
+   "lang": "KO",
+   "gloss": "집에서 기르는 토끼"
+  },
+  {
+   "root": "kurioz",
+   "lang": "KO",
+   "gloss": "진기하고 이상한"
+  },
+  {
+   "root": "kuruk",
+   "lang": "JA",
+   "gloss": "コノドジロムシクイ"
+  },
+  {
+   "root": "kvankam",
+   "lang": "JA",
+   "gloss": "(~だ)けれども"
+  },
+  {
+   "root": "kviet",
+   "lang": "KO",
+   "gloss": "조용하고 평온한"
+  },
+  {
+   "root": "kvinsland",
+   "lang": "JA",
+   "gloss": "クイーンズランド"
+  },
+  {
+   "root": "kvintilian",
+   "lang": "JA",
+   "gloss": "クインティリアヌス"
+  },
+  {
+   "root": "kvitanc",
+   "lang": "KO",
+   "gloss": "영수증·수령증을 발급하다"
+  },
+  {
+   "root": "lafonten",
+   "lang": "JA",
+   "gloss": "ラ・フォンテーヌ"
+  },
+  {
+   "root": "lagotrik",
+   "lang": "JA",
+   "gloss": "ウーリーモンキー属"
+  },
+  {
+   "root": "leceburg",
+   "lang": "JA",
+   "gloss": "ルクセンブルク語"
+  },
+  {
+   "root": "lentisk",
+   "lang": "JA",
+   "gloss": "マスティックノキ"
+  },
+  {
+   "root": "leontodon",
+   "lang": "JA",
+   "gloss": "タンポポモドキ属"
+  },
+  {
+   "root": "lepidi",
+   "lang": "JA",
+   "gloss": "マメグンバイナズナ属"
+  },
+  {
+   "root": "lepiot",
+   "lang": "JA",
+   "gloss": "キツネノカラカサ属"
+  },
+  {
+   "root": "lepist",
+   "lang": "JA",
+   "gloss": "ムラサキシメジ属"
+  },
+  {
+   "root": "leptinotars",
+   "lang": "KO",
+   "gloss": "콜로라도감자잎벌레"
+  },
+  {
+   "root": "leptocefal",
+   "lang": "JA",
+   "gloss": "レプトケファルス"
+  },
+  {
+   "root": "leŭkoj",
+   "lang": "JA",
+   "gloss": "スノーフレーク属"
+  },
+  {
+   "root": "liberal",
+   "lang": "KO",
+   "gloss": "관대하고 편견이 없는"
+  },
+  {
+   "root": "lice",
+   "lang": "ZH",
+   "gloss": "后期中等教育学校"
+  },
+  {
+   "root": "likopodiac",
+   "lang": "JA",
+   "gloss": "ヒカゲノカズラ科"
+  },
+  {
+   "root": "likopodiopsid",
+   "lang": "JA",
+   "gloss": "ヒカゲノカズラ綱"
+  },
+  {
+   "root": "liĥtenŝtejn",
+   "lang": "JA",
+   "gloss": "リヒテンシュタイン"
+  },
+  {
+   "root": "lubrik",
+   "lang": "KO",
+   "gloss": "기름을 쳐 윤활하게 하다"
+  },
+  {
+   "root": "madjapradeŝ",
+   "lang": "JA",
+   "gloss": "マディヤプラデシュ"
+  },
+  {
+   "root": "magot",
+   "lang": "JA",
+   "gloss": "バーバリーマカク"
+  },
+  {
+   "root": "mahoni",
+   "lang": "JA",
+   "gloss": "ヒイラギナンテン"
+  },
+  {
+   "root": "majest",
+   "lang": "KO",
+   "gloss": "위엄 있고 장엄한"
+  },
+  {
+   "root": "majn",
+   "lang": "JA",
+   "gloss": "キュウカンチョウ"
+  },
+  {
+   "root": "malgraŭ",
+   "lang": "JA",
+   "gloss": "~にもかかわらず"
+  },
+  {
+   "root": "manifestaci",
+   "lang": "KO",
+   "gloss": "정치적 주장을 위한 시위"
+  },
+  {
+   "root": "manipulator",
+   "lang": "JA",
+   "gloss": "マニピュレーター"
+  },
+  {
+   "root": "marmoz",
+   "lang": "JA",
+   "gloss": "ネズミオポッサム属"
+  },
+  {
+   "root": "marseljez",
+   "lang": "JA",
+   "gloss": "ラ・マルセイエーズ"
+  },
+  {
+   "root": "masaĉusec",
+   "lang": "JA",
+   "gloss": "マサチューセッツ"
+  },
+  {
+   "root": "masaŝusec",
+   "lang": "JA",
+   "gloss": "マサチューセッツ"
+  },
+  {
+   "root": "mason",
+   "lang": "KO",
+   "gloss": "돌·벽돌을 쌓다"
+  },
+  {
+   "root": "mefistofel",
+   "lang": "JA",
+   "gloss": "メフィストフェレス"
+  },
+  {
+   "root": "melo",
+   "lang": "JA",
+   "gloss": "ツチハンミョウ属"
+  },
+  {
+   "root": "melopsitak",
+   "lang": "JA",
+   "gloss": "セキセイインコ属"
+  },
+  {
+   "root": "merkurokrom",
+   "lang": "JA",
+   "gloss": "マーキュロクロム"
+  },
+  {
+   "root": "mezostik",
+   "lang": "JA",
+   "gloss": "中 acrostic"
+  },
+  {
+   "root": "mezur",
+   "lang": "KO",
+   "gloss": "길이·양 등을 재다"
+  },
+  {
+   "root": "miaŭ",
+   "lang": "KO",
+   "gloss": "고양이가 야옹 울다"
+  },
+  {
+   "root": "midŝipman",
+   "lang": "ZH",
+   "gloss": "英国海军候补军官"
+  },
+  {
+   "root": "mild",
+   "lang": "KO",
+   "gloss": "부드럽고 온화한"
+  },
+  {
+   "root": "mistifik",
+   "lang": "KO",
+   "gloss": "남을 속여 놀리다"
+  },
+  {
+   "root": "modest",
+   "lang": "KO",
+   "gloss": "겸손하고 소박한"
+  },
+  {
+   "root": "moldavik",
+   "lang": "JA",
+   "gloss": "ニオイリュウノウギク"
+  },
+  {
+   "root": "monodelf",
+   "lang": "JA",
+   "gloss": "モノデルフィス属"
+  },
+  {
+   "root": "moru",
+   "lang": "JA",
+   "gloss": "タイセイヨウマダラ"
+  },
+  {
+   "root": "murmur",
+   "lang": "ZH",
+   "gloss": "发低沉连续的声音"
+  },
+  {
+   "root": "muskarden",
+   "lang": "JA",
+   "gloss": "ヨーロッパヤマネ"
+  },
+  {
+   "root": "muzel",
+   "lang": "KO",
+   "gloss": "동물의 코와 입 부분"
+  },
+  {
+   "root": "nardostaki",
+   "lang": "JA",
+   "gloss": "ナルドスタキス属"
+  },
+  {
+   "root": "nasturti",
+   "lang": "JA",
+   "gloss": "オランダガラシ属"
+  },
+  {
+   "root": "naŭz",
+   "lang": "JA",
+   "gloss": "吐き気を催させる"
+  },
+  {
+   "root": "neandertal",
+   "lang": "JA",
+   "gloss": "ネアンデルタール"
+  },
+  {
+   "root": "negund",
+   "lang": "JA",
+   "gloss": "トネリコバノカエデ"
+  },
+  {
+   "root": "neni",
+   "lang": "JA",
+   "gloss": "どんな~も~ない"
+  },
+  {
+   "root": "nenia",
+   "lang": "JA",
+   "gloss": "どんな~も~ない"
+  },
+  {
+   "root": "nenial",
+   "lang": "JA",
+   "gloss": "どんな理由もない"
+  },
+  {
+   "root": "neniel",
+   "lang": "JA",
+   "gloss": "どうしても~ない"
+  },
+  {
+   "root": "nenies",
+   "lang": "KO",
+   "gloss": "아무의 것도 아닌"
+  },
+  {
+   "root": "neofron",
+   "lang": "JA",
+   "gloss": "エジプトハゲワシ"
+  },
+  {
+   "root": "nervoz",
+   "lang": "KO",
+   "gloss": "신경질적이고 예민한"
+  },
+  {
+   "root": "nlg",
+   "lang": "JA",
+   "gloss": "オランダギルダー"
+  },
+  {
+   "root": "noktu",
+   "lang": "JA",
+   "gloss": "コキンメフクロウ"
+  },
+  {
+   "root": "notofag",
+   "lang": "JA",
+   "gloss": "ナンキョクブナ属"
+  },
+  {
+   "root": "novland",
+   "lang": "JA",
+   "gloss": "ニューファンドランド"
+  },
+  {
+   "root": "numeni",
+   "lang": "JA",
+   "gloss": "ダイシャクシギ属"
+  },
+  {
+   "root": "obligaci",
+   "lang": "KO",
+   "gloss": "남에게 의무를 지우다"
+  },
+  {
+   "root": "oceani",
+   "lang": "KO",
+   "gloss": "오세아니아 지역"
+  },
+  {
+   "root": "oestradiol",
+   "lang": "JA",
+   "gloss": "エストラジオール"
+  },
+  {
+   "root": "oksford",
+   "lang": "JA",
+   "gloss": "オックスフォード"
+  },
+  {
+   "root": "onopord",
+   "lang": "JA",
+   "gloss": "オオヒレアザミ属"
+  },
+  {
+   "root": "opon",
+   "lang": "KO",
+   "gloss": "어떤 일에 반대하다"
+  },
+  {
+   "root": "opunti",
+   "lang": "JA",
+   "gloss": "ウチワサボテン属"
+  },
+  {
+   "root": "orbit",
+   "lang": "JA",
+   "gloss": "軌道を描いて回る"
+  },
+  {
+   "root": "orientalism",
+   "lang": "JA",
+   "gloss": "オリエンタリズム"
+  },
+  {
+   "root": "oriol",
+   "lang": "JA",
+   "gloss": "コウライウグイス"
+  },
+  {
+   "root": "orioled",
+   "lang": "JA",
+   "gloss": "コウライウグイス科"
+  },
+  {
+   "root": "orkestrion",
+   "lang": "JA",
+   "gloss": "オーケストリオン"
+  },
+  {
+   "root": "oronti",
+   "lang": "JA",
+   "gloss": "オロンティウム属"
+  },
+  {
+   "root": "panak",
+   "lang": "JA",
+   "gloss": "トチバニンジン属"
+  },
+  {
+   "root": "pane",
+   "lang": "KO",
+   "gloss": "고장으로 인한 정지"
+  },
+  {
+   "root": "pankrati",
+   "lang": "JA",
+   "gloss": "パンクラチウム属"
+  },
+  {
+   "root": "pantagruel",
+   "lang": "JA",
+   "gloss": "パンタグリュエル"
+  },
+  {
+   "root": "paraf",
+   "lang": "JA",
+   "gloss": "飾り書きをつけて署名"
+  },
+  {
+   "root": "parget",
+   "lang": "JA",
+   "gloss": "寄せ木張りにする"
+  },
+  {
+   "root": "pask",
+   "lang": "KO",
+   "gloss": "기독교의 부활절"
+  },
+  {
+   "root": "patienc",
+   "lang": "JA",
+   "gloss": "パティエンスギシギシ"
+  },
+  {
+   "root": "pea",
+   "lang": "JA",
+   "gloss": "ポーランドE協会"
+  },
+  {
+   "root": "penetr",
+   "lang": "KO",
+   "gloss": "속으로 깊이 들어가다"
+  },
+  {
+   "root": "peron",
+   "lang": "JA",
+   "gloss": "玄関前の階段・ポーチ"
+  },
+  {
+   "root": "persist",
+   "lang": "KO",
+   "gloss": "끈질기게 계속하다"
+  },
+  {
+   "root": "petol",
+   "lang": "KO",
+   "gloss": "까불며 장난치다"
+  },
+  {
+   "root": "pice",
+   "lang": "KO",
+   "gloss": "가문비나무속 식물"
+  },
+  {
+   "root": "pierid",
+   "lang": "JA",
+   "gloss": "モンシロチョウ属"
+  },
+  {
+   "root": "pieris",
+   "lang": "JA",
+   "gloss": "モンシロチョウ属"
+  },
+  {
+   "root": "pingvikul",
+   "lang": "JA",
+   "gloss": "ムシトリスミレ属"
+  },
+  {
+   "root": "pinikol",
+   "lang": "JA",
+   "gloss": "ギンザンマシコ属"
+  },
+  {
+   "root": "pipistrel",
+   "lang": "JA",
+   "gloss": "アブラコウモリ属"
+  },
+  {
+   "root": "pirakant",
+   "lang": "JA",
+   "gloss": "トキワサンザシ属"
+  },
+  {
+   "root": "pirokorak",
+   "lang": "JA",
+   "gloss": "ベニハシガラス属"
+  },
+  {
+   "root": "pizistrat",
+   "lang": "JA",
+   "gloss": "ペイシストラトス"
+  },
+  {
+   "root": "platan",
+   "lang": "KO",
+   "gloss": "플라타너스 나무"
+  },
+  {
+   "root": "platform",
+   "lang": "JA",
+   "gloss": "プラットフォーム"
+  },
+  {
+   "root": "plaŭd",
+   "lang": "JA",
+   "gloss": "バシャリと音を立てる"
+  },
+  {
+   "root": "pled",
+   "lang": "KO",
+   "gloss": "재판에서 변호하다"
+  },
+  {
+   "root": "plektrant",
+   "lang": "JA",
+   "gloss": "プレクトランサス属"
+  },
+  {
+   "root": "plend",
+   "lang": "KO",
+   "gloss": "고통을 호소하다"
+  },
+  {
+   "root": "poliant",
+   "lang": "JA",
+   "gloss": "チューベローズ属"
+  },
+  {
+   "root": "poliklit",
+   "lang": "JA",
+   "gloss": "ポリュクレイトス"
+  },
+  {
+   "root": "portluis",
+   "lang": "JA",
+   "gloss": "ポートルイス（モーリシャス首都）"
+  },
+  {
+   "root": "portoprinc",
+   "lang": "JA",
+   "gloss": "ポルトープランス（ハイチ首都）"
+  },
+  {
+   "root": "portospen",
+   "lang": "JA",
+   "gloss": "ポートオブスペイン"
+  },
+  {
+   "root": "pozitiv",
+   "lang": "KO",
+   "gloss": "적극적이고 건설적인"
+  },
+  {
+   "root": "pranc",
+   "lang": "KO",
+   "gloss": "까불며 장난치다"
+  },
+  {
+   "root": "preciz",
+   "lang": "KO",
+   "gloss": "매우 정확하고 정밀한"
+  },
+  {
+   "root": "prefer",
+   "lang": "KO",
+   "gloss": "다른 것보다 더 좋아하다"
+  },
+  {
+   "root": "prezid",
+   "lang": "KO",
+   "gloss": "회의나 모임을 주재하다"
+  },
+  {
+   "root": "prezidi",
+   "lang": "KO",
+   "gloss": "회의나 모임을 주재하다"
+  },
+  {
+   "root": "preĝ",
+   "lang": "KO",
+   "gloss": "신에게 기도하다"
+  },
+  {
+   "root": "problem",
+   "lang": "KO",
+   "gloss": "해결해야 할 문제"
+  },
+  {
+   "root": "proced",
+   "lang": "JA",
+   "gloss": "一定の方法で進める"
+  },
+  {
+   "root": "profesor",
+   "lang": "KO",
+   "gloss": "대학 등에서 가르치는 교수"
+  },
+  {
+   "root": "prokrast",
+   "lang": "KO",
+   "gloss": "일을 뒤로 미루다"
+  },
+  {
+   "root": "proletari",
+   "lang": "KO",
+   "gloss": "무산 계급의 사람"
+  },
+  {
+   "root": "propionlakton",
+   "lang": "JA",
+   "gloss": "プロピオラクトン"
+  },
+  {
+   "root": "prostaglandin",
+   "lang": "JA",
+   "gloss": "プロスタグランジン"
+  },
+  {
+   "root": "protaktini",
+   "lang": "JA",
+   "gloss": "プロトアクチニウム"
+  },
+  {
+   "root": "protest",
+   "lang": "KO",
+   "gloss": "항의하거나 반대의 뜻을 나"
+  },
+  {
+   "root": "prudent",
+   "lang": "KO",
+   "gloss": "분별 있고 사려 깊은"
+  },
+  {
+   "root": "prunel",
+   "lang": "JA",
+   "gloss": "スピノサスモモの実"
+  },
+  {
+   "root": "psilofit",
+   "lang": "JA",
+   "gloss": "プシロフィトン属"
+  },
+  {
+   "root": "pterodaktil",
+   "lang": "JA",
+   "gloss": "プテロダクチルス"
+  },
+  {
+   "root": "purpur",
+   "lang": "KO",
+   "gloss": "붉은 기가 도는 자주색"
+  },
+  {
+   "root": "ramforink",
+   "lang": "JA",
+   "gloss": "ランフォリンクス"
+  },
+  {
+   "root": "ramn",
+   "lang": "JA",
+   "gloss": "クロウメモドキ属"
+  },
+  {
+   "root": "raĝastan",
+   "lang": "JA",
+   "gloss": "ラージャスターン"
+  },
+  {
+   "root": "raŭvolfi",
+   "lang": "JA",
+   "gloss": "ラウウォルフィア属"
+  },
+  {
+   "root": "recenz",
+   "lang": "KO",
+   "gloss": "책·공연 등을 비평하다"
+  },
+  {
+   "root": "redakt",
+   "lang": "KO",
+   "gloss": "문서나 기사를 작성하고 정"
+  },
+  {
+   "root": "regensburg",
+   "lang": "JA",
+   "gloss": "レーゲンスブルク"
+  },
+  {
+   "root": "rekompenc",
+   "lang": "KO",
+   "gloss": "보답하거나 보상을 주다"
+  },
+  {
+   "root": "remi",
+   "lang": "KO",
+   "gloss": "노로 배를 젓다"
+  },
+  {
+   "root": "rent",
+   "lang": "KO",
+   "gloss": "지대·임대료 수입"
+  },
+  {
+   "root": "rezult",
+   "lang": "KO",
+   "gloss": "어떤 일의 결과로 생기다"
+  },
+  {
+   "root": "ribel",
+   "lang": "KO",
+   "gloss": "반란을 일으키다"
+  },
+  {
+   "root": "rifuĝ",
+   "lang": "KO",
+   "gloss": "피난하거나 피신하다"
+  },
+  {
+   "root": "riproĉ",
+   "lang": "KO",
+   "gloss": "꾸짖거나 탓하며 비난하다"
+  },
+  {
+   "root": "risk",
+   "lang": "KO",
+   "gloss": "위험을 무릅쓰다"
+  },
+  {
+   "root": "rover",
+   "lang": "JA",
+   "gloss": "ローバースカウト"
+  },
+  {
+   "root": "rubekol",
+   "lang": "JA",
+   "gloss": "ヨーロッパコマドリ"
+  },
+  {
+   "root": "rubetr",
+   "lang": "JA",
+   "gloss": "マミジロノビタキ"
+  },
+  {
+   "root": "rubrik",
+   "lang": "KO",
+   "gloss": "신문·잡지의 란"
+  },
+  {
+   "root": "rumani",
+   "lang": "JA",
+   "gloss": "[地名]ルーマニア"
+  },
+  {
+   "root": "saarbruk",
+   "lang": "JA",
+   "gloss": "ザールブリュッケン"
+  },
+  {
+   "root": "sabelik",
+   "lang": "JA",
+   "gloss": "チリメンキャベツ"
+  },
+  {
+   "root": "sagac",
+   "lang": "KO",
+   "gloss": "명민하고 영리한"
+  },
+  {
+   "root": "sangvin",
+   "lang": "KO",
+   "gloss": "명랑하고 쾌활한"
+  },
+  {
+   "root": "sekvojadendr",
+   "lang": "KO",
+   "gloss": "세쿼이아덴드론속"
+  },
+  {
+   "root": "seren",
+   "lang": "KO",
+   "gloss": "날씨가 맑고 평온한"
+  },
+  {
+   "root": "serioz",
+   "lang": "KO",
+   "gloss": "진지하고 근엄한"
+  },
+  {
+   "root": "serp",
+   "lang": "KO",
+   "gloss": "머리나 털을 깎다"
+  },
+  {
+   "root": "serpil",
+   "lang": "JA",
+   "gloss": "イブキジャコウソウ"
+  },
+  {
+   "root": "sesterc",
+   "lang": "JA",
+   "gloss": "セステルティウス"
+  },
+  {
+   "root": "sesterci",
+   "lang": "JA",
+   "gloss": "千セステルティウス"
+  },
+  {
+   "root": "sikomor",
+   "lang": "JA",
+   "gloss": "エジプトイチジク"
+  },
+  {
+   "root": "silent",
+   "lang": "KO",
+   "gloss": "입을 다물고 조용히 있다"
+  },
+  {
+   "root": "simfalang",
+   "lang": "JA",
+   "gloss": "フクロテナガザル"
+  },
+  {
+   "root": "simul",
+   "lang": "JA",
+   "gloss": "シミュレーション"
+  },
+  {
+   "root": "sincer",
+   "lang": "KO",
+   "gloss": "성실하고 솔직한"
+  },
+  {
+   "root": "sindikat",
+   "lang": "KO",
+   "gloss": "경제적 이익 단체"
+  },
+  {
+   "root": "sinkrociklotron",
+   "lang": "JA",
+   "gloss": "シンクロサイクロトロ"
+  },
+  {
+   "root": "situ",
+   "lang": "KO",
+   "gloss": "어느 곳에 있다"
+  },
+  {
+   "root": "sium",
+   "lang": "JA",
+   "gloss": "ムカゴニンジン属"
+  },
+  {
+   "root": "sizimbri",
+   "lang": "JA",
+   "gloss": "キバナハタザオ属"
+  },
+  {
+   "root": "skamandr",
+   "lang": "JA",
+   "gloss": "スカマンドロス川"
+  },
+  {
+   "root": "sklerant",
+   "lang": "JA",
+   "gloss": "スクレランサス属"
+  },
+  {
+   "root": "smilak",
+   "lang": "JA",
+   "gloss": "サルトリイバラ属"
+  },
+  {
+   "root": "solen",
+   "lang": "KO",
+   "gloss": "장엄하고 성대한"
+  },
+  {
+   "root": "solidag",
+   "lang": "JA",
+   "gloss": "アキノキリンソウ"
+  },
+  {
+   "root": "sonor",
+   "lang": "KO",
+   "gloss": "종 등이 울리다"
+  },
+  {
+   "root": "sovetuni",
+   "lang": "JA",
+   "gloss": "[地名]ソビエト連邦"
+  },
+  {
+   "root": "spergulari",
+   "lang": "JA",
+   "gloss": "ウシオツメクサ属"
+  },
+  {
+   "root": "spert",
+   "lang": "KO",
+   "gloss": "경험이 많고 숙련된"
+  },
+  {
+   "root": "spic",
+   "lang": "KO",
+   "gloss": "요리에 쓰는 양념"
+  },
+  {
+   "root": "spicberg",
+   "lang": "JA",
+   "gloss": "スピッツベルゲン"
+  },
+  {
+   "root": "spit",
+   "lang": "KO",
+   "gloss": "…에도 불구하고"
+  },
+  {
+   "root": "sprit",
+   "lang": "KO",
+   "gloss": "재치 있고 기지 있는"
+  },
+  {
+   "root": "stadi",
+   "lang": "KO",
+   "gloss": "발전 과정의 한 단계"
+  },
+  {
+   "root": "stadion",
+   "lang": "KO",
+   "gloss": "관람석이 있는 경기장"
+  },
+  {
+   "root": "stamp",
+   "lang": "KO",
+   "gloss": "도장·소인을 찍다"
+  },
+  {
+   "root": "stan",
+   "lang": "KO",
+   "gloss": "금속 원소 주석"
+  },
+  {
+   "root": "standard",
+   "lang": "KO",
+   "gloss": "국가·군대를 상징하는 깃발"
+  },
+  {
+   "root": "stativ",
+   "lang": "KO",
+   "gloss": "사람·동물의 다리"
+  },
+  {
+   "root": "sterk",
+   "lang": "KO",
+   "gloss": "가축 분뇨 거름"
+  },
+  {
+   "root": "stiri",
+   "lang": "JA",
+   "gloss": "シュタイアーマルク"
+  },
+  {
+   "root": "stramoni",
+   "lang": "JA",
+   "gloss": "チョウセンアサガオ"
+  },
+  {
+   "root": "streptomicet",
+   "lang": "JA",
+   "gloss": "ストレプトミセス"
+  },
+  {
+   "root": "streptomicin",
+   "lang": "JA",
+   "gloss": "ストレプトマイシン"
+  },
+  {
+   "root": "strofant",
+   "lang": "JA",
+   "gloss": "ストロファントゥス"
+  },
+  {
+   "root": "strofantin",
+   "lang": "JA",
+   "gloss": "ストロファンチン"
+  },
+  {
+   "root": "stromatolit",
+   "lang": "JA",
+   "gloss": "ストロマトライト"
+  },
+  {
+   "root": "stroncianit",
+   "lang": "JA",
+   "gloss": "ストロンチアン石"
+  },
+  {
+   "root": "strudl",
+   "lang": "JA",
+   "gloss": "シュトゥルーデル"
+  },
+  {
+   "root": "studi",
+   "lang": "KO",
+   "gloss": "연구하거나 학문을 공부하다"
+  },
+  {
+   "root": "stump",
+   "lang": "KO",
+   "gloss": "잘린 뒤 남은 부분"
+  },
+  {
+   "root": "stutgart",
+   "lang": "JA",
+   "gloss": "シュトゥットガルト"
+  },
+  {
+   "root": "subtrah",
+   "lang": "KO",
+   "gloss": "수에서 수를 빼다"
+  },
+  {
+   "root": "sumer",
+   "lang": "JA",
+   "gloss": "シュメール（古代メソポタミアの地方）"
+  },
+  {
+   "root": "surd",
+   "lang": "KO",
+   "gloss": "귀가 들리지 않는"
+  },
+  {
+   "root": "surealist",
+   "lang": "JA",
+   "gloss": "シュルレアリスト"
+  },
+  {
+   "root": "surpriz",
+   "lang": "KO",
+   "gloss": "남을 놀라게 하다"
+  },
+  {
+   "root": "suspekt",
+   "lang": "KO",
+   "gloss": "수상히 여기거나 의심하다"
+  },
+  {
+   "root": "susur",
+   "lang": "KO",
+   "gloss": "바스락 소리를 내다"
+  },
+  {
+   "root": "taget",
+   "lang": "JA",
+   "gloss": "マリーゴールド属"
+  },
+  {
+   "root": "tangar",
+   "lang": "JA",
+   "gloss": "フウキンチョウ属"
+  },
+  {
+   "root": "taps",
+   "lang": "JA",
+   "gloss": "ビロードモウズイカ"
+  },
+  {
+   "root": "tartar",
+   "lang": "JA",
+   "gloss": "セーカーハヤブサ"
+  },
+  {
+   "root": "tazet",
+   "lang": "JA",
+   "gloss": "フサザキスイセン"
+  },
+  {
+   "root": "taĝet",
+   "lang": "JA",
+   "gloss": "マリーゴールド属"
+  },
+  {
+   "root": "televid",
+   "lang": "KO",
+   "gloss": "텔레비전을 보다"
+  },
+  {
+   "root": "temper",
+   "lang": "JA",
+   "gloss": "テンペラ(画法)"
+  },
+  {
+   "root": "tenebri",
+   "lang": "JA",
+   "gloss": "ゴミムシダマシ属"
+  },
+  {
+   "root": "tener",
+   "lang": "KO",
+   "gloss": "상냥하고 다정한"
+  },
+  {
+   "root": "terafoz",
+   "lang": "JA",
+   "gloss": "ゴライアスグモ属"
+  },
+  {
+   "root": "teraplan",
+   "lang": "JA",
+   "gloss": "エアクッション車"
+  },
+  {
+   "root": "teren",
+   "lang": "KO",
+   "gloss": "특정 용도의 땅"
+  },
+  {
+   "root": "tertulian",
+   "lang": "JA",
+   "gloss": "テルトゥリアヌス"
+  },
+  {
+   "root": "tetraklin",
+   "lang": "JA",
+   "gloss": "テトラクリニス属"
+  },
+  {
+   "root": "tibuŝen",
+   "lang": "JA",
+   "gloss": "シコンノボタン属"
+  },
+  {
+   "root": "tiroidstimulin",
+   "lang": "KO",
+   "gloss": "갑상샘자극호르몬"
+  },
+  {
+   "root": "tlasp",
+   "lang": "JA",
+   "gloss": "グンバイナズナ属"
+  },
+  {
+   "root": "tokantinz",
+   "lang": "JA",
+   "gloss": "トカンティンス川"
+  },
+  {
+   "root": "tond",
+   "lang": "KO",
+   "gloss": "머리나 털을 깎다"
+  },
+  {
+   "root": "tradeskanti",
+   "lang": "JA",
+   "gloss": "ムラサキツユクサ属"
+  },
+  {
+   "root": "tragelaf",
+   "lang": "JA",
+   "gloss": "ブッシュバック属"
+  },
+  {
+   "root": "trakeli",
+   "lang": "JA",
+   "gloss": "イラクサギキョウ"
+  },
+  {
+   "root": "transilvani",
+   "lang": "JA",
+   "gloss": "トランシルバニア"
+  },
+  {
+   "root": "trismegist",
+   "lang": "JA",
+   "gloss": "トリスメギストス"
+  },
+  {
+   "root": "trud",
+   "lang": "KO",
+   "gloss": "억지로 강요하다"
+  },
+  {
+   "root": "tucidid",
+   "lang": "JA",
+   "gloss": "トゥキュディデス"
+  },
+  {
+   "root": "turkmenistan",
+   "lang": "JA",
+   "gloss": "トルクメニスタン"
+  },
+  {
+   "root": "turment",
+   "lang": "JA",
+   "gloss": "激しい苦痛を与える"
+  },
+  {
+   "root": "turnir",
+   "lang": "JA",
+   "gloss": "トーナメントに参加す"
+  },
+  {
+   "root": "udmurti",
+   "lang": "JA",
+   "gloss": "ウドムルト共和国"
+  },
+  {
+   "root": "unaŭ",
+   "lang": "JA",
+   "gloss": "フタユビナマケモノ"
+  },
+  {
+   "root": "urogal",
+   "lang": "JA",
+   "gloss": "ヨーロッパオオライチ"
+  },
+  {
+   "root": "valentinian",
+   "lang": "JA",
+   "gloss": "ヴァレンティニアン"
+  },
+  {
+   "root": "valet",
+   "lang": "JA",
+   "gloss": "バレッタ(マルタの首都)"
+  },
+  {
+   "root": "varb",
+   "lang": "KO",
+   "gloss": "회원 등을 모집하다"
+  },
+  {
+   "root": "vart",
+   "lang": "KO",
+   "gloss": "보살피며 기르다"
+  },
+  {
+   "root": "vendemier",
+   "lang": "JA",
+   "gloss": "ヴァンデミエール"
+  },
+  {
+   "root": "verticili",
+   "lang": "JA",
+   "gloss": "バーティシリウム"
+  },
+  {
+   "root": "vesp",
+   "lang": "JA",
+   "gloss": "スズメバチ・アシナガ"
+  },
+  {
+   "root": "vespazian",
+   "lang": "JA",
+   "gloss": "ウェスパシアヌス"
+  },
+  {
+   "root": "vestfali",
+   "lang": "JA",
+   "gloss": "ウェストファリア"
+  },
+  {
+   "root": "vestminstr",
+   "lang": "JA",
+   "gloss": "ウェストミンスター"
+  },
+  {
+   "root": "vetur",
+   "lang": "KO",
+   "gloss": "탈것을 타고 가다"
+  },
+  {
+   "root": "vilemurb",
+   "lang": "JA",
+   "gloss": "ウィレムスタード"
+  },
+  {
+   "root": "vink",
+   "lang": "JA",
+   "gloss": "ツルニチニチソウ"
+  },
+  {
+   "root": "vintertur",
+   "lang": "JA",
+   "gloss": "ヴィンタートゥール"
+  },
+  {
+   "root": "virtemberg",
+   "lang": "JA",
+   "gloss": "ヴュルテンベルク"
+  },
+  {
+   "root": "viskonsin",
+   "lang": "JA",
+   "gloss": "ウィスコンシン州"
+  },
+  {
+   "root": "vitruvi",
+   "lang": "JA",
+   "gloss": "ウィトルウィウス"
+  },
+  {
+   "root": "vjel",
+   "lang": "JA",
+   "gloss": "ハーディガーディ"
+  },
+  {
+   "root": "vojvodin",
+   "lang": "JA",
+   "gloss": "ヴォイヴォディナ"
+  },
+  {
+   "root": "vorarlberg",
+   "lang": "JA",
+   "gloss": "フォアアールベルク"
+  },
+  {
+   "root": "vulgar",
+   "lang": "KO",
+   "gloss": "통속적이고 일상적인"
+  },
+  {
+   "root": "vurtemberg",
+   "lang": "JA",
+   "gloss": "ビュルテンベルク州"
+  },
+  {
+   "root": "zaratuŝtr",
+   "lang": "JA",
+   "gloss": "ツァラトゥストラ"
+  },
+  {
+   "root": "zink",
+   "lang": "KO",
+   "gloss": "금속 원소 아연"
+  },
+  {
+   "root": "ĉagren",
+   "lang": "KO",
+   "gloss": "마음을 괴롭히고 불쾌하게"
+  },
+  {
+   "root": "ĉastuŝk",
+   "lang": "JA",
+   "gloss": "チャストゥーシカ"
+  },
+  {
+   "root": "ĉatelperoni",
+   "lang": "JA",
+   "gloss": "シャテルペロン期"
+  },
+  {
+   "root": "ĉatobriand",
+   "lang": "JA",
+   "gloss": "シャトーブリアン"
+  },
+  {
+   "root": "ĉaŭdefon",
+   "lang": "JA",
+   "gloss": "ラショードフォン"
+  },
+  {
+   "root": "ĉies",
+   "lang": "KO",
+   "gloss": "모든 사람의 것"
+  },
+  {
+   "root": "ĝemel",
+   "lang": "KO",
+   "gloss": "쌍둥이 중 한 사람"
+  },
+  {
+   "root": "ĥondrostom",
+   "lang": "JA",
+   "gloss": "コンドロストマ属"
+  },
+  {
+   "root": "ĵuri",
+   "lang": "KO",
+   "gloss": "엄숙히 맹세하다"
+  },
+  {
+   "root": "ŝajn",
+   "lang": "KO",
+   "gloss": "...처럼 보이다"
+  },
+  {
+   "root": "ŝlos",
+   "lang": "KO",
+   "gloss": "자물쇠로 잠그다"
+  },
+  {
+   "root": "ŝmir",
+   "lang": "KO",
+   "gloss": "기름 등을 바르다"
+  },
+  {
+   "root": "ŝpat",
+   "lang": "KO",
+   "gloss": "머리카락을 빗다"
+  },
+  {
+   "root": "ŝtel",
+   "lang": "KO",
+   "gloss": "남의 것을 훔치다"
+  },
+  {
+   "root": "ŝvarcvald",
+   "lang": "JA",
+   "gloss": "シュバルツバルト"
+  }
+ ],
+ "一部言語のみ欠落": [
+  {
+   "root": "aci",
+   "ja": null,
+   "zh": "名词化",
+   "ko": "명사화"
+  },
+  {
+   "root": "agresiv",
+   "ja": "侵略的",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "antibiotik",
+   "ja": "抗生物質",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "aŭstri",
+   "ja": "[地名]オーストリア",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "ddt",
+   "ja": null,
+   "zh": "滴滴涕",
+   "ko": null
+  },
+  {
+   "root": "demografi",
+   "ja": "人口統計",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "detektiv",
+   "ja": "探偵",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "dividend",
+   "ja": "配当金",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "ekologi",
+   "ja": "エコロジー",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "etimologi",
+   "ja": "語源学",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "golfo",
+   "ja": null,
+   "zh": "海湾",
+   "ko": "바다에 깊게 들어간 만"
+  },
+  {
+   "root": "hipocentr",
+   "ja": "爆心地",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "hiv",
+   "ja": null,
+   "zh": "艾滋病毒",
+   "ko": null
+  },
+  {
+   "root": "ideogram",
+   "ja": "表意文字",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "ideologi",
+   "ja": "イデオロギー",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "intensiv",
+   "ja": "集中的",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "jugoslavi",
+   "ja": "[地名]ユーゴスラビア",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "khz",
+   "ja": null,
+   "zh": "千赫",
+   "ko": null
+  },
+  {
+   "root": "kilobit",
+   "ja": null,
+   "zh": "千比特",
+   "ko": null
+  },
+  {
+   "root": "kilokalori",
+   "ja": null,
+   "zh": "千卡",
+   "ko": null
+  },
+  {
+   "root": "mhz",
+   "ja": null,
+   "zh": "兆赫",
+   "ko": null
+  },
+  {
+   "root": "orientalism",
+   "ja": "オリエンタリズム",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "pazi",
+   "ja": null,
+   "zh": "普遍",
+   "ko": "보편"
+  },
+  {
+   "root": "pazigrafi",
+   "ja": "普遍文字法",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "radiofoni",
+   "ja": "ラジオで",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "rasist",
+   "ja": "人種差別",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "romi",
+   "ja": "ローマ",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "rumani",
+   "ja": "[地名]ルーマニア",
+   "zh": null,
+   "ko": null
+  },
+  {
+   "root": "sovetuni",
+   "ja": "[地名]ソビエト連邦",
+   "zh": null,
+   "ko": null
+  }
+ ]
+}

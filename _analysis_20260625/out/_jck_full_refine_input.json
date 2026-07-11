@@ -1,0 +1,8215 @@
+[
+ {
+  "root": "vetur",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "行く"
+   ],
+   "ZH": [
+    "乘"
+   ],
+   "KO": [
+    "탈것을 타고 가다"
+   ]
+  },
+  "csv": {
+   "JA": "(乗り物で)行く",
+   "ZH": "乘坐",
+   "KO": "타다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "乗り物で行く"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "aer/vetur/ad",
+   "aer/vetur",
+   "akv/o/vetur",
+   "akv/o/vetur/il",
+   "vetur/il",
+   "ĉel/vetur/il",
+   "ĉerk/vetur/il",
+   "ĉirkaŭ/vetur",
+   "dom/vetur/il",
+   "ek/vetur",
+   "el/vetur",
+   "en/vetur/ej"
+  ],
+  "context_count": 64,
+  "reason": "veturは「乗り物で行く」の意でZH乘/KO탈것을 타고 가다は乗物要素を保つが、JA「行く」だけが単なる移動でiriと区別できない。"
+ },
+ {
+  "root": "korekt",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "訂正する"
+   ],
+   "ZH": [
+    "改正"
+   ],
+   "KO": [
+    "틀린 것을 바로잡고 수정하"
+   ]
+  },
+  "csv": {
+   "JA": "(を)訂正する",
+   "ZH": "纠正",
+   "KO": "수정하다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "고치다/수정하다"
+   ]
+  },
+  "context_words": [
+   "korekt",
+   "korekt/ec",
+   "korekt/end",
+   "korekt/iĝ",
+   "korekt/ind/aĵ",
+   "korekt/ist",
+   "korekt/it",
+   "korekt/o/dom",
+   "mal/korekt",
+   "mal/korekt/aĵ",
+   "mis/korekt",
+   "ne/korekt/it"
+  ],
+  "context_count": 18,
+  "reason": "KO欄「틀린 것을 바로잡고 수정하」が語尾「다」を欠いて途中で切れており不完全(수정하→수정하다)。"
+ },
+ {
+  "root": "cindr",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "灰"
+   ],
+   "ZH": [
+    "余烬"
+   ],
+   "KO": [
+    "재"
+   ]
+  },
+  "csv": {
+   "JA": "灰",
+   "ZH": "灰烬",
+   "KO": "재"
+  },
+  "master": {
+   "ja": "灰",
+   "zh": "余烬",
+   "ko": "재"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "灰/灰烬"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "cindr",
+   "cindr/ej",
+   "cindr/ig/ej",
+   "cindr/ig",
+   "cindr/iĝ",
+   "cindr/o/blond",
+   "cindr/o/griz",
+   "cindr/o/kolor",
+   "cindr/o/merkred",
+   "cindr/o/nub",
+   "cindr/o/urn",
+   "cindr/uj"
+  ],
+  "context_count": 16,
+  "reason": "cindrは「灰」(例cindr/o/griz=灰色)でJA灰/KO재は正だが、ZH「余烬(まだ熱いおき火)」は灰の中核義とずれる。"
+ },
+ {
+  "root": "ser",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "連続"
+   ],
+   "ZH": [
+    "系列"
+   ],
+   "KO": [
+    "연속"
+   ]
+  },
+  "csv": {
+   "JA": "連続",
+   "ZH": "系列",
+   "KO": "연속"
+  },
+  "master": {
+   "ja": "連続",
+   "zh": "系列",
+   "ko": "연속"
+  },
+  "rec": {
+   "JA": [
+    "血清/乳清"
+   ],
+   "ZH": [
+    "血清/乳清"
+   ],
+   "KO": [
+    "혈청/유청"
+   ]
+  },
+  "context_words": [
+   "ser/aĵ",
+   "ser",
+   "ser/o/diagnoz",
+   "ser/o/terapi",
+   "ser/um",
+   "vakcin/ser",
+   "ser/o/logi",
+   "ser/o/negativ",
+   "ser/o/pozitiv",
+   "ser/albumin",
+   "ser/o/membran",
+   "lakt/o/ser"
+  ],
+  "context_count": 15,
+  "reason": "語根serは「血清・乳清(serum/whey)」であり(例lakt/o/ser=乳清)、seri(系列)と取り違えて「連続/系列/연속」と訳しているのは誤り。"
+ },
+ {
+  "root": "gazet",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "雑誌"
+   ],
+   "ZH": [
+    "报纸"
+   ],
+   "KO": [
+    "신문"
+   ]
+  },
+  "csv": {
+   "JA": "雑誌",
+   "ZH": "刊物",
+   "KO": "잡지"
+  },
+  "master": {
+   "ja": "雑誌",
+   "zh": "报纸",
+   "ko": "신문"
+  },
+  "rec": {
+   "JA": [
+    "新聞/定期刊行物"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "gazet",
+   "gazet/ar",
+   "gazet/bud",
+   "gazet/el/tranĉ",
+   "gazet/ist/ar",
+   "gazet/ist",
+   "gazet/kampanj",
+   "gazet/serv",
+   "klaĉ/gazet",
+   "kultur/gazet",
+   "mur/gazet",
+   "ret/gazet"
+  ],
+  "context_count": 15,
+  "reason": "gazetoは「新聞・定期刊行物」でZH报纸/KO신문は正だが、JAだけ「雑誌(=revuo)」となっており不整合かつ不正確。"
+ },
+ {
+  "root": "flar",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "感じる"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "csv": {
+   "JA": "(を)嗅ぐ",
+   "ZH": "嗅闻",
+   "KO": "냄새맡다"
+  },
+  "master": {
+   "ja": "感じる",
+   "zh": "嗅到",
+   "ko": "냄새를 맡다"
+  },
+  "rec": {
+   "JA": [
+    "嗅ぐ・においをかぐ"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "antaŭ/flar",
+   "el/flar",
+   "en/flar",
+   "flar/ad",
+   "flar/esplor",
+   "flar",
+   "flar/il",
+   "flar/sens",
+   "flar/sent",
+   "flar/tabak",
+   "gas/flar/il",
+   "pri/flar"
+  ],
+  "context_count": 13,
+  "reason": "flar=「嗅ぐ」なのにJAのみ「感じる」と過度に曖昧で、ZH嗅到/KO냄새를 맡다(嗅ぐ)と意味がずれている。"
+ },
+ {
+  "root": "maŝ",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "機械"
+   ],
+   "ZH": [
+    "机器"
+   ],
+   "KO": [
+    "기계"
+   ]
+  },
+  "csv": {
+   "JA": "編目",
+   "ZH": "机器",
+   "KO": "코"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "網目・編み目"
+   ],
+   "ZH": [
+    "网眼・线圈"
+   ],
+   "KO": [
+    "그물코・코"
+   ]
+  },
+  "context_words": [
+   "dis/maŝ/ig",
+   "dis/maŝ/iĝ",
+   "maŝ/ar",
+   "maŝ/kapt/il",
+   "maŝ/kiras",
+   "maŝ/nod",
+   "maŝ",
+   "maŝ/kut",
+   "ne/dis/maŝ/iĝ",
+   "maŝ/ten/il"
+  ],
+  "context_count": 10,
+  "reason": "maŝ(=網目/編み目/コ)を別語根maŝin(機械)と取り違えた全言語共通の誤訳で、例maŝ/nod(網目の結び)とも整合しない。"
+ },
+ {
+  "root": "kotiz",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "払う"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "csv": {
+   "JA": "払う",
+   "ZH": "缴费",
+   "KO": "회비 내다"
+  },
+  "master": {
+   "ja": "払う",
+   "zh": "缴纳会费或分担金",
+   "ko": "회비나 분담금을 내다"
+  },
+  "rec": {
+   "JA": [
+    "会費を払う"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "abon/kotiz",
+   "al/iĝ/kotiz",
+   "kotiz",
+   "kotiz/ad",
+   "kotiz/per/ant",
+   "kotiz/tabel",
+   "lern/o/kotiz",
+   "membr/o/kotiz",
+   "part/o/pren/kotiz",
+   "re/kotiz"
+  ],
+  "context_count": 10,
+  "reason": "kotiz=「会費/分担金を払う」の核が、JAでは単なる「払う」で特定性を欠きZH/KO(会費を納める)より曖昧。"
+ },
+ {
+  "root": "kran",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "頭蓋"
+   ],
+   "ZH": [
+    "颅"
+   ],
+   "KO": [
+    "두개골"
+   ]
+  },
+  "csv": {
+   "JA": "[機]コック",
+   "ZH": "阀门",
+   "KO": "꼭지"
+  },
+  "master": {
+   "ja": "頭蓋",
+   "zh": "颅",
+   "ko": "두개골"
+  },
+  "rec": {
+   "JA": [
+    "蛇口・コック"
+   ],
+   "ZH": [
+    "水龙头・龙头"
+   ],
+   "KO": [
+    "수도꼭지"
+   ]
+  },
+  "context_words": [
+   "dren/kran",
+   "el/kran",
+   "gas/kran",
+   "gaŭĝ/kran",
+   "akv/o/kran",
+   "kran/akv",
+   "kran",
+   "pinĉ/kran",
+   "kran/ar"
+  ],
+  "context_count": 9,
+  "reason": "kran(=蛇口/栓)を別語根krani(頭蓋)と混同しており、頭蓋は既に1-237のkraniで正しく登録済み。"
+ },
+ {
+  "root": "negativ",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "消極的な"
+   ],
+   "ZH": [
+    "消极的"
+   ],
+   "KO": [
+    "소극적인"
+   ]
+  },
+  "csv": {
+   "JA": "消極的の",
+   "ZH": "否定",
+   "KO": "부정적인"
+  },
+  "master": {
+   "ja": "消極的な",
+   "zh": "消极的",
+   "ko": "소극적인"
+  },
+  "rec": {
+   "JA": [
+    "負の・否定的な"
+   ],
+   "ZH": [
+    "负的・否定的"
+   ],
+   "KO": [
+    "음의・부정적인"
+   ]
+  },
+  "context_words": [
+   "negativ",
+   "negativ/ec",
+   "gram/negativ",
+   "negativ/aĵ",
+   "negativ/ism",
+   "negativ/ist",
+   "ser/o/negativ",
+   "elektr/o/negativ"
+  ],
+  "context_count": 8,
+  "reason": "negativの中核義は「負/陰性/否定」だが、態度面の「消極的」に狭めており、自身の例elektr/o/negativ(電気陰性)とも合わない。"
+ },
+ {
+  "root": "hirt",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "逆立った"
+   ],
+   "ZH": [
+    "毛"
+   ],
+   "KO": [
+    "털"
+   ]
+  },
+  "csv": {
+   "JA": "逆立った",
+   "ZH": "竖立的",
+   "KO": "곧추선"
+  },
+  "master": {
+   "ja": "逆立った",
+   "zh": "毛",
+   "ko": "털"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "竖立的/蓬乱的"
+   ],
+   "KO": [
+    "곤두선/부스스한"
+   ]
+  },
+  "context_words": [
+   "har/hirt/ig",
+   "hirt",
+   "hirt/ig",
+   "hirt/iĝ",
+   "hirt/ec",
+   "hirt/ism",
+   "hirt/ul"
+  ],
+  "context_count": 7,
+  "reason": "hirtは『逆立った・ぼさぼさの』の意だが、ZH『毛』・KO『털』は単に『毛』で語根の中核義を取り違えている(JA『逆立った』は正)。"
+ },
+ {
+  "root": "envi",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "欲しがる"
+   ],
+   "ZH": [
+    "羡慕"
+   ],
+   "KO": [
+    "원하다"
+   ]
+  },
+  "csv": {
+   "JA": "(を)うらやむ",
+   "ZH": "嫉妒",
+   "KO": "부러워하다"
+  },
+  "master": {
+   "ja": "欲しがる",
+   "zh": "羡慕",
+   "ko": "원하다"
+  },
+  "rec": {
+   "JA": [
+    "羨む/妬む"
+   ],
+   "ZH": [],
+   "KO": [
+    "부러워하다"
+   ]
+  },
+  "context_words": [
+   "envi",
+   "envi/em",
+   "envi/ind",
+   "envi/ig",
+   "envi/ul",
+   "mal/envi",
+   "sen/envi"
+  ],
+  "context_count": 7,
+  "reason": "enviは『羨む・妬む』だが、JA『欲しがる』・KO『원하다(欲する)』は単なる『欲する』で嫉妬の中核義を欠く(ZH『羡慕』は正)。"
+ },
+ {
+  "root": "rigl",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "差し錠をかける"
+   ],
+   "ZH": [
+    "锁"
+   ],
+   "KO": [
+    "자물쇠"
+   ]
+  },
+  "csv": {
+   "JA": "かんぬきをかける",
+   "ZH": "闩上",
+   "KO": "빗장 지르다"
+  },
+  "master": {
+   "ja": "差し錠をかける",
+   "zh": "锁",
+   "ko": "자물쇠"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "门闩/插销"
+   ],
+   "KO": [
+    "빗장/걸쇠"
+   ]
+  },
+  "context_words": [
+   "kulas/rigl/il",
+   "mal/rigl",
+   "rigl",
+   "rigl/il/et",
+   "rigl/il",
+   "rigl/o/buton",
+   "rigl/ad"
+  ],
+  "context_count": 7,
+  "reason": "riglは『差し錠・かんぬき(閂)』だが、ZH『锁』・KO『자물쇠』は錠前全体(serurと同一訳)で語根義がずれている(JA『差し錠をかける』は正)。"
+ },
+ {
+  "root": "stimul",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "激励する"
+   ],
+   "ZH": [
+    "刺激"
+   ],
+   "KO": [
+    "자극하다"
+   ]
+  },
+  "csv": {
+   "JA": "(を)激励する",
+   "ZH": "激励",
+   "KO": "자극하다"
+  },
+  "master": {
+   "ja": "激励する",
+   "zh": "刺激",
+   "ko": "자극하다"
+  },
+  "rec": {
+   "JA": [
+    "刺激する"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "kor/stimul/il",
+   "stimul/ad",
+   "stimul",
+   "stimul/il",
+   "stimul/aĵ",
+   "stimul/ant",
+   "tiroid/o/stimul"
+  ],
+  "context_count": 7,
+  "reason": "stimulの中核義は『刺激する』だが、JA『激励する』は感情的激励に偏り、心臓刺激器(kor/stimul/il)等の物理的刺激を外し、ZH『刺激』・KO『자극하다』と不整合。"
+ },
+ {
+  "root": "konvink",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "説得する"
+   ],
+   "ZH": [
+    "说服"
+   ],
+   "KO": [
+    "논리와 증거로 남을 설득하"
+   ]
+  },
+  "csv": {
+   "JA": "(を)説得する",
+   "ZH": "说服",
+   "KO": "설득하다"
+  },
+  "master": {
+   "ja": "説得する",
+   "zh": "说服",
+   "ko": "논리와 증거로 남을 설득하"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "설득하다"
+   ]
+  },
+  "context_words": [
+   "konvink",
+   "konvink/ad",
+   "konvink/ebl",
+   "konvink/iĝ",
+   "konvink/it",
+   "konvink/it/ec",
+   "ne/konvink/ebl"
+  ],
+  "context_count": 7,
+  "reason": "KO欄『논리와 증거로 남을 설득하』が語尾途中で切れており不完全(『설득하다』の語尾脱落)。"
+ },
+ {
+  "root": "avar",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "欲の深い"
+   ],
+   "ZH": [
+    "吝啬"
+   ],
+   "KO": [
+    "인색한"
+   ]
+  },
+  "csv": {
+   "JA": "欲の深い",
+   "ZH": "贪婪",
+   "KO": "인색한"
+  },
+  "master": {
+   "ja": "欲の深い",
+   "zh": "吝啬",
+   "ko": "인색한"
+  },
+  "rec": {
+   "JA": [
+    "けちな/吝嗇な"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "avar",
+   "avar/ul",
+   "mal/avar",
+   "avar/ec",
+   "mal/avar/ec",
+   "mal/avar/ul"
+  ],
+  "context_count": 6,
+  "reason": "avarは『けち・吝嗇な』(mal/avar=気前が良い)だが、JA『欲の深い』は『貪欲』寄りに意味がずれ、ZH『吝啬』・KO『인색한』と不整合。"
+ },
+ {
+  "root": "kejl",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "くさび"
+   ],
+   "ZH": [
+    "楔形木钉"
+   ],
+   "KO": [
+    "쐐기"
+   ]
+  },
+  "csv": {
+   "JA": "木釘",
+   "ZH": "楔钉",
+   "KO": "쐐기"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "だぼ/込み栓/木釘"
+   ],
+   "ZH": [],
+   "KO": [
+    "나무못/장부촉"
+   ]
+  },
+  "context_words": [
+   "agord/o/kejl",
+   "kejl",
+   "ŝtop/kejl",
+   "kejl/aĵ",
+   "kejl/it/aĵ",
+   "kejl/o/fiks"
+  ],
+  "context_count": 6,
+  "reason": "kejlは『栓・だぼ(木釘)』でありkojn『くさび』とは別語根だが、JA『くさび』・KO『쐐기』はkojnと同じ『くさび』にして取り違えている。"
+ },
+ {
+  "root": "plaŭd",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "バシャリと音を立てる"
+   ],
+   "ZH": [
+    "鼓掌"
+   ],
+   "KO": [
+    "박수갈채하다"
+   ]
+  },
+  "csv": {
+   "JA": "ばしゃりと音を立てる",
+   "ZH": "拍水声",
+   "KO": "철썩거리다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "溅水/水花飞溅"
+   ],
+   "KO": [
+    "첨벙거리다/철벅이다"
+   ]
+  },
+  "context_words": [
+   "plaŭd/ad",
+   "plaŭd/ej",
+   "plaŭd/et",
+   "plaŭd",
+   "plaŭd/ig",
+   "plaŭd/iĝ"
+  ],
+  "context_count": 6,
+  "reason": "plaŭdは『水がバシャリと音を立てる(飛沫)』だが、ZH『鼓掌』・KO『박수갈채하다』はaplaŭd(拍手喝采)と混同した誤訳(JA『バシャリと音を立てる』は正)。"
+ },
+ {
+  "root": "ran",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "トノサマガエル"
+   ],
+   "ZH": [
+    "蛙"
+   ],
+   "KO": [
+    "개구리"
+   ]
+  },
+  "csv": {
+   "JA": "カエル",
+   "ZH": "蛙类",
+   "KO": "개구리"
+  },
+  "master": {
+   "ja": "トノサマガエル",
+   "zh": "蛙",
+   "ko": "개구리"
+  },
+  "rec": {
+   "JA": [
+    "カエル"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ran/hom",
+   "ran/id",
+   "ran/mord",
+   "ran",
+   "ran/salt/ad",
+   "ran/et"
+  ],
+  "context_count": 6,
+  "reason": "ranは一般名『カエル』だが、JAは特定種『トノサマガエル』と過度に限定し、ZH『蛙』・KO『개구리』(一般)と不整合。"
+ },
+ {
+  "root": "protest",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "抗議する"
+   ],
+   "ZH": [
+    "抗议"
+   ],
+   "KO": [
+    "항의하거나 반대의 뜻을 나"
+   ]
+  },
+  "csv": {
+   "JA": "抗議する",
+   "ZH": "抗议",
+   "KO": "항의하다"
+  },
+  "master": {
+   "ja": "抗議する",
+   "zh": "抗议",
+   "ko": "항의하거나 반대의 뜻을 나"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "항의하다"
+   ]
+  },
+  "context_words": [
+   "protest",
+   "mal/protest",
+   "protest/ag/ad",
+   "protest/ant",
+   "protest/ant/ism",
+   "protest/leter"
+  ],
+  "context_count": 6,
+  "reason": "KO欄『항의하거나 반대의 뜻을 나』が語尾途中で切れており不完全(『나타내다』の脱落)。"
+ },
+ {
+  "root": "muf",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "ミトン"
+   ],
+   "ZH": [
+    "连指手套"
+   ],
+   "KO": [
+    "벙어리장갑"
+   ]
+  },
+  "csv": {
+   "JA": "[服]マフ",
+   "ZH": "羊毛织物",
+   "KO": "토시"
+  },
+  "master": {
+   "ja": "ミトン",
+   "zh": "连指手套",
+   "ko": "벙어리장갑"
+  },
+  "rec": {
+   "JA": [
+    "マフ/手筒"
+   ],
+   "ZH": [
+    "手筒/暖手筒"
+   ],
+   "KO": [
+    "토시/머프"
+   ]
+  },
+  "context_words": [
+   "gas/muf",
+   "muf/gant",
+   "muf",
+   "kabl/o/muf",
+   "man/muf"
+  ],
+  "context_count": 5,
+  "reason": "mufは『マフ(両手を入れて温める筒状の手温め)』だが、JA『ミトン』・ZH『连指手套』・KO『벙어리장갑』は合成語muf/gant(ミトン)の全体義で語根自身の義でない。"
+ },
+ {
+  "root": "inspir",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "吹き込む"
+   ],
+   "ZH": [
+    "引起"
+   ],
+   "KO": [
+    "영감이나 감정을 불러일으키"
+   ]
+  },
+  "csv": {
+   "JA": "(を)心に吹き込む",
+   "ZH": "激发",
+   "KO": "영감 주다"
+  },
+  "master": {
+   "ja": "吹き込む",
+   "zh": "引起",
+   "ko": "영감이나 감정을 불러일으키"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "영감을 불러일으키다"
+   ]
+  },
+  "context_words": [
+   "inspir",
+   "inspir/iĝ",
+   "inspir/it",
+   "inspir/ad",
+   "inspir/it/ec"
+  ],
+  "context_count": 5,
+  "reason": "KO欄『영감이나 감정을 불러일으키』が語尾途中で切れており不完全(『일으키다』の脱落)。"
+ },
+ {
+  "root": "kegl",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "柱"
+   ],
+   "ZH": [
+    "立柱"
+   ],
+   "KO": [
+    "기둥"
+   ]
+  },
+  "csv": {
+   "JA": "九柱戯の柱",
+   "ZH": "柱子",
+   "KO": "핀"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "ボウリングのピン/九柱"
+   ],
+   "ZH": [
+    "木瓶/柱状球瓶"
+   ],
+   "KO": [
+    "볼링핀/구주"
+   ]
+  },
+  "context_words": [
+   "kegl",
+   "kegl/ar",
+   "kegl/ej",
+   "kegl/o/lud",
+   "kegl/o/pilk"
+  ],
+  "context_count": 5,
+  "reason": "keglo=ボウリングのピン/九柱戯の柱だが、三言語とも単なる「柱/立柱/기둥(=建築の柱)」と一般化した誤訳。"
+ },
+ {
+  "root": "koleg",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "カレッジ"
+   ],
+   "ZH": [
+    "学院"
+   ],
+   "KO": [
+    "단과대학"
+   ]
+  },
+  "csv": {
+   "JA": "同僚",
+   "ZH": "同事",
+   "KO": "동료"
+  },
+  "master": {
+   "ja": "カレッジ",
+   "zh": "学院",
+   "ko": "단과대학"
+  },
+  "rec": {
+   "JA": [
+    "同僚"
+   ],
+   "ZH": [
+    "同事"
+   ],
+   "KO": [
+    "동료"
+   ]
+  },
+  "context_words": [
+   "koleg/am",
+   "koleg/ar",
+   "koleg/ec",
+   "koleg/em",
+   "koleg"
+  ],
+  "context_count": 5,
+  "reason": "kolego=同僚だが「大学(カレッジ)」と訳しており、college意のkolegioと取り違えた偽の友。"
+ },
+ {
+  "root": "halter",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "重量挙げ"
+   ],
+   "ZH": [
+    "举重"
+   ],
+   "KO": [
+    "역도"
+   ]
+  },
+  "csv": {
+   "JA": "重量挙げ",
+   "ZH": "举重",
+   "KO": "역도"
+  },
+  "master": {
+   "ja": "重量挙げ",
+   "zh": "举重",
+   "ko": "역도"
+  },
+  "rec": {
+   "JA": [
+    "亜鈴/ダンベル"
+   ],
+   "ZH": [
+    "哑铃/杠铃"
+   ],
+   "KO": [
+    "아령/역기"
+   ]
+  },
+  "context_words": [
+   "halter/ad",
+   "halter",
+   "halter/ist",
+   "halter/lev"
+  ],
+  "context_count": 4,
+  "reason": "halter単独の中核義は亜鈴/ダンベルだが、合成語halter/lev(重量挙げ)の全体義を語根訳に当てている。"
+ },
+ {
+  "root": "absorb",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "夢中にさせる"
+   ],
+   "ZH": [
+    "吸"
+   ],
+   "KO": [
+    "빨다"
+   ]
+  },
+  "csv": {
+   "JA": "(を)夢中にさせる",
+   "ZH": "吸引",
+   "KO": "흡수하다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "吸収する"
+   ],
+   "ZH": [
+    "吸收"
+   ],
+   "KO": [
+    "흡수하다"
+   ]
+  },
+  "context_words": [
+   "absorb",
+   "absorb/iĝ",
+   "absorb/it",
+   "absorb/it/ec"
+  ],
+  "context_count": 4,
+  "reason": "absorb(吸収する)の訳がJA「夢中にさせる」(比喩義)・ZH「吸」/KO「빨다」(吸う・しゃぶる)とバラつき、中核の吸収義が三言語で不一致。"
+ },
+ {
+  "root": "u",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "u"
+   ],
+   "ZH": [
+    "u"
+   ],
+   "KO": [
+    "u"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "u",
+   "zh": "u",
+   "ko": "u"
+  },
+  "rec": {
+   "JA": [
+    "〜せよ(命令・意志)"
+   ],
+   "ZH": [
+    "祈使/意愿"
+   ],
+   "KO": [
+    "명령·청유형 어미"
+   ]
+  },
+  "context_words": [
+   "ne/forges/u/mi/n",
+   "ne/tuŝ/u/mi/n",
+   "viv/u",
+   "viv/u/kri"
+  ],
+  "context_count": 4,
+  "reason": "命令・意志の語尾-uを三言語とも「u」と丸写しし、訳語がなく学習補助として機能していない。"
+ },
+ {
+  "root": "rabi",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "略奪"
+   ],
+   "ZH": [
+    "抢劫"
+   ],
+   "KO": [
+    "강탈"
+   ]
+  },
+  "csv": {
+   "JA": "[病]狂犬病",
+   "ZH": "狂犬病",
+   "KO": "광견병"
+  },
+  "master": {
+   "ja": "略奪",
+   "zh": "抢劫",
+   "ko": "강탈"
+  },
+  "rec": {
+   "JA": [
+    "狂犬病"
+   ],
+   "ZH": [
+    "狂犬病"
+   ],
+   "KO": [
+    "광견병"
+   ]
+  },
+  "context_words": [
+   "kontraŭ/rabi",
+   "rabi",
+   "rabi/ul",
+   "anti/rabi"
+  ],
+  "context_count": 4,
+  "reason": "例語anti/rabi(抗狂犬病)が示す通り語根rabi=「狂犬病(rabio)」だが、全言語が別語根rab「略奪/robbery」と取り違えている。"
+ },
+ {
+  "root": "sod",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ソーダの"
+   ],
+   "ZH": [
+    "钠"
+   ],
+   "KO": [
+    "나트륨"
+   ]
+  },
+  "csv": {
+   "JA": "ソーダ",
+   "ZH": "苏打",
+   "KO": "소다"
+  },
+  "master": {
+   "ja": "ソーダの",
+   "zh": "钠",
+   "ko": "나트륨"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "苏打"
+   ],
+   "KO": [
+    "소다"
+   ]
+  },
+  "context_words": [
+   "bak/sod",
+   "sod",
+   "sod/akv",
+   "sod/herb"
+  ],
+  "context_count": 4,
+  "reason": "sodo=「ソーダ(炭酸ソーダ等)」で例sod/akv=ソーダ水。JA「ソーダ」は正だがZH「钠」・KO「나트륨」は元素ナトリウム(=別語根natrio)との取り違え。"
+ },
+ {
+  "root": "divizi",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "師団"
+   ],
+   "ZH": [
+    "军团"
+   ],
+   "KO": [
+    "군단"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]師団",
+   "ZH": "师团",
+   "KO": "사단"
+  },
+  "master": {
+   "ja": "師団",
+   "zh": "军团",
+   "ko": "군단"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "师"
+   ],
+   "KO": [
+    "사단"
+   ]
+  },
+  "context_words": [
+   "divizi/estr",
+   "divizi",
+   "tank/divizi",
+   "sub/divizi"
+  ],
+  "context_count": 4,
+  "reason": "divizio=師団(division)でJA「師団」は正しいが、ZH「军团」・KO「군단」は上位単位corps(=別語根korpus 4-454)の訳で誤り、両者と訳が衝突する。"
+ },
+ {
+  "root": "spron",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "拍車をかける"
+   ],
+   "ZH": [
+    "刺"
+   ],
+   "KO": [
+    "가시"
+   ]
+  },
+  "csv": {
+   "JA": "拍車",
+   "ZH": "马刺",
+   "KO": "박차"
+  },
+  "master": {
+   "ja": "拍車をかける",
+   "zh": "刺",
+   "ko": "가시"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "马刺"
+   ],
+   "KO": [
+    "박차"
+   ]
+  },
+  "context_words": [
+   "alaŭd/o/spron",
+   "spron",
+   "spron/rad/et",
+   "kavalir/spron"
+  ],
+  "context_count": 4,
+  "reason": "語根sprono=「拍車(spur)」でJAは正しいが、ZH「刺(突く)」・KO「가시(とげ)」は拍車の中核義から外れ相互に不整合。"
+ },
+ {
+  "root": "gros",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "セイヨウ"
+   ],
+   "ZH": [
+    "醋栗"
+   ],
+   "KO": [
+    "까치밥"
+   ]
+  },
+  "csv": {
+   "JA": "グースベリー",
+   "ZH": "醋栗",
+   "KO": "구스베리"
+  },
+  "master": {
+   "ja": "セイヨウ",
+   "zh": "醋栗",
+   "ko": "까치밥"
+  },
+  "rec": {
+   "JA": [
+    "セイヨウスグリ"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "gros/ber",
+   "gros",
+   "gros/uj",
+   "gros/arbust"
+  ],
+  "context_count": 4,
+  "reason": "JA訳「セイヨウ」は「セイヨウスグリ(gooseberry)」が途中で切れた不完全語で、単独では語義を成さない。"
+ },
+ {
+  "root": "obligaci",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "義務を負わせる"
+   ],
+   "ZH": [
+    "债券"
+   ],
+   "KO": [
+    "남에게 의무를 지우다"
+   ]
+  },
+  "csv": {
+   "JA": "[商]債券",
+   "ZH": "债券",
+   "KO": "채권"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "債券"
+   ],
+   "ZH": [
+    "债券"
+   ],
+   "KO": [
+    "채권"
+   ]
+  },
+  "context_words": [
+   "obligaci",
+   "obligaci/ul",
+   "ŝtat/obligaci"
+  ],
+  "context_count": 3,
+  "reason": "例語ŝtat/obligaci(国債)が示す通りobligacio=「債券」だが、JA/KOは「義務を負わせる/의무를 지우다」と別概念(obligation)を訳しており、正しいZH(债券)および例語とズレている。"
+ },
+ {
+  "root": "volan",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "羽根"
+   ],
+   "ZH": [
+    "羽毛"
+   ],
+   "KO": [
+    "깃털"
+   ]
+  },
+  "csv": {
+   "JA": "羽根",
+   "ZH": "羽毛",
+   "KO": "깃털"
+  },
+  "master": {
+   "ja": "羽根",
+   "zh": "羽毛",
+   "ko": "깃털"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "羽毛球（毽）"
+   ],
+   "KO": [
+    "셔틀콕"
+   ]
+  },
+  "context_words": [
+   "volan/lud",
+   "volan",
+   "volan/bat/il"
+  ],
+  "context_count": 3,
+  "reason": "例語volan/bat/il(バドミントンのラケット)が示す通りvolan=「シャトル(羽根つき球)」であり、ZH羽毛/KO깃털=単なる「羽毛」は誤訳(JA羽根はバドミントンの球を指し許容)。"
+ },
+ {
+  "root": "emerit",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "退職者"
+   ],
+   "ZH": [
+    "荣誉退休并领取养老金"
+   ],
+   "KO": [
+    "명예롭게 퇴직해 연금을 받"
+   ]
+  },
+  "csv": {
+   "JA": "定年退職者",
+   "ZH": "退休者",
+   "KO": "정년퇴직자"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "名誉退職者"
+   ],
+   "ZH": [
+    "荣誉退休者"
+   ],
+   "KO": [
+    "명예퇴직자"
+   ]
+  },
+  "context_words": [
+   "emerit",
+   "emerit/ec",
+   "emerit/iĝ"
+  ],
+  "context_count": 3,
+  "reason": "KO欄が「…연금을 받」で途中切れの未完文(malformed)。加えてZH/KOは説明文で冗長、JAは「退職者」で名誉退職(emeritus)の含意を欠く。"
+ },
+ {
+  "root": "eventual",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "場合によっては起こり"
+   ],
+   "ZH": [
+    "可能发生的"
+   ],
+   "KO": [
+    "경우에 따라 일어날 수 있"
+   ]
+  },
+  "csv": {
+   "JA": "起こり得る",
+   "ZH": "可能",
+   "KO": "가능한"
+  },
+  "master": {
+   "ja": "場合によっては起こり",
+   "zh": "可能发生的",
+   "ko": "경우에 따라 일어날 수 있"
+  },
+  "rec": {
+   "JA": [
+    "起こり得る"
+   ],
+   "ZH": [
+    "可能发生的"
+   ],
+   "KO": [
+    "우발적인"
+   ]
+  },
+  "context_words": [
+   "eventual",
+   "eventual/aĵ",
+   "eventual/ec"
+  ],
+  "context_count": 3,
+  "reason": "JA「…起こり」・KO「…있」がともに途中で切れた未完文で、簡潔な訳語に修正すべき。"
+ },
+ {
+  "root": "insist",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "固執する"
+   ],
+   "ZH": [
+    "坚持"
+   ],
+   "KO": [
+    "자신의 주장이나 요구를 굳"
+   ]
+  },
+  "csv": {
+   "JA": "固執する",
+   "ZH": "坚持",
+   "KO": "고집하다"
+  },
+  "master": {
+   "ja": "固執する",
+   "zh": "坚持",
+   "ko": "자신의 주장이나 요구를 굳"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "고집하다"
+   ]
+  },
+  "context_words": [
+   "insist",
+   "insist/ad",
+   "sen/insist"
+  ],
+  "context_count": 3,
+  "reason": "KO欄が「…요구를 굳」で途中切れの未完文で、簡潔な訳語(고집하다)に修正すべき。"
+ },
+ {
+  "root": "frank",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "フラン"
+   ],
+   "ZH": [
+    "法郎"
+   ],
+   "KO": [
+    "퓨란"
+   ]
+  },
+  "csv": {
+   "JA": "[貨]フラン",
+   "ZH": "法郎",
+   "KO": "프랑"
+  },
+  "master": {
+   "ja": "フラン",
+   "zh": "法郎",
+   "ko": "퓨란"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "프랑"
+   ]
+  },
+  "context_words": [
+   "frank/i",
+   "frank",
+   "frank/uj"
+  ],
+  "context_count": 3,
+  "reason": "通貨フラン(frank)の韓国語が「퓨란」=furan(化学物質)になっており綴り取り違えで誤り、正しくは「프랑」。"
+ },
+ {
+  "root": "raben",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ラビ"
+   ],
+   "ZH": [
+    "乌鸦"
+   ],
+   "KO": [
+    "라비"
+   ]
+  },
+  "csv": {
+   "JA": "[宗]ラビ",
+   "ZH": "拉比",
+   "KO": "랍비"
+  },
+  "master": {
+   "ja": "ラビ",
+   "zh": "乌鸦",
+   "ko": "라비"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "拉比"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "raben",
+   "raben/ism",
+   "ĉef/raben"
+  ],
+  "context_count": 3,
+  "reason": "raben=ラビ(ユダヤ教師)だが中国語のみ英語ravenと混同して「乌鸦(カラス)」となっており誤訳。"
+ },
+ {
+  "root": "ermen",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "オコジョ"
+   ],
+   "ZH": [
+    "貂"
+   ],
+   "KO": [
+    "담비"
+   ]
+  },
+  "csv": {
+   "JA": "[動]エゾイタチ",
+   "ZH": "艾鼬",
+   "KO": "담비"
+  },
+  "master": {
+   "ja": "オコジョ",
+   "zh": "貂",
+   "ko": "담비"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "白鼬"
+   ],
+   "KO": [
+    "어민(흰담비)"
+   ]
+  },
+  "context_words": [
+   "ermen/fel",
+   "ermen",
+   "kontraŭ/ermen"
+  ],
+  "context_count": 3,
+  "reason": "ermen=オコジョ(白鼬)なのに中韓が「貂/담비(テン)」と別種の動物を当てており不正確。"
+ },
+ {
+  "root": "pampelmus",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "ザボン"
+   ],
+   "ZH": [
+    "柚子"
+   ],
+   "KO": [
+    "문단"
+   ]
+  },
+  "csv": {
+   "JA": "ザボン",
+   "ZH": "柚子",
+   "KO": "문단"
+  },
+  "master": {
+   "ja": "ザボン",
+   "zh": "柚子",
+   "ko": "문단"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "포멜로"
+   ]
+  },
+  "context_words": [
+   "pampelmus/arb",
+   "pampelmus",
+   "pampelmus/uj"
+  ],
+  "context_count": 3,
+  "reason": "ザボン(pomelo)の韓国語「문단」は「段落」と同綴りで曖昧かつ稀な字音語のため学習用に不適、標準は「포멜로/왕귤」。"
+ },
+ {
+  "root": "partikular",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "排他的"
+   ],
+   "ZH": [
+    "特殊"
+   ],
+   "KO": [
+    "특수"
+   ]
+  },
+  "csv": {
+   "JA": "排他的",
+   "ZH": "特殊",
+   "KO": "특수"
+  },
+  "master": {
+   "ja": "排他的",
+   "zh": "特殊",
+   "ko": "특수"
+  },
+  "rec": {
+   "JA": [
+    "特殊な/個別の"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "partikular",
+   "partikular/ism",
+   "partikular/aĵ"
+  ],
+  "context_count": 3,
+  "reason": "partikular語根自体は「特殊/個別」だが日本語は派生語particularism(排他主義)由来の「排他的」を当てており全体語訳になっている。"
+ },
+ {
+  "root": "lice",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "リセ"
+   ],
+   "ZH": [
+    "后期中等教育学校"
+   ],
+   "KO": [
+    "프랑스·이탈리아 등의 후기"
+   ]
+  },
+  "csv": {
+   "JA": "リセー",
+   "ZH": "中学",
+   "KO": "리세"
+  },
+  "master": {
+   "ja": "リセ",
+   "zh": "后期中等教育学校",
+   "ko": "프랑스·이탈리아 등의 후기"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "리세(고등학교)"
+   ]
+  },
+  "context_words": [
+   "lice/an",
+   "lice/estr",
+   "lice"
+  ],
+  "context_count": 3,
+  "reason": "リセ(lice)の韓国語注が「프랑스·이탈리아 등의 후기」で途中で切れて未完のため学習用ルビとして不適。"
+ },
+ {
+  "root": "porto-rik",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ポルト-あざける"
+   ],
+   "ZH": [
+    "波尔图-嘲笑"
+   ],
+   "KO": [
+    "포르투-조롱하다"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "プエルトリコ"
+   ],
+   "ZH": [
+    "波多黎各"
+   ],
+   "KO": [
+    "푸에르토리코"
+   ]
+  },
+  "context_words": [
+   "porto-rik",
+   "porto-rik/an"
+  ],
+  "context_count": 2,
+  "reason": "Puerto Rico(porto-rik)が「rik→嘲笑」と誤分解され三言語とも「ポルト-あざける」等の無意味な地名破綻訳になっている。"
+ },
+ {
+  "root": "kvast",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ふさ飾り"
+   ],
+   "ZH": [
+    "穗"
+   ],
+   "KO": [
+    "이삭"
+   ]
+  },
+  "csv": {
+   "JA": "ふさ飾り",
+   "ZH": "穗饰",
+   "KO": "술장식"
+  },
+  "master": {
+   "ja": "ふさ飾り",
+   "zh": "穗",
+   "ko": "이삭"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "술(술장식)"
+   ]
+  },
+  "context_words": [
+   "bul/kvast",
+   "kvast"
+  ],
+  "context_count": 2,
+  "reason": "kvast=房飾り(tassel)だが韓国語「이삭」は穀物の穂を指し誤り、正しくは「술」。"
+ },
+ {
+  "root": "adjudant",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "准尉"
+   ],
+   "ZH": [
+    "副官"
+   ],
+   "KO": [
+    "준위"
+   ]
+  },
+  "csv": {
+   "JA": "准尉",
+   "ZH": "副官",
+   "KO": "준위"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "准尉"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "adjudant",
+   "ĉef/adjudant"
+  ],
+  "context_count": 2,
+  "reason": "日韓が「准尉/준위(下士官最上級)」なのに中国語のみ「副官(参謀補佐)」と別義でズレている。"
+ },
+ {
+  "root": "jubile",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "記念祭"
+   ],
+   "ZH": [
+    "周年纪念庆典"
+   ],
+   "KO": [
+    "25·50·100주년 등의"
+   ]
+  },
+  "csv": {
+   "JA": "記念祭",
+   "ZH": "纪念日",
+   "KO": "기념제"
+  },
+  "master": {
+   "ja": "記念祭",
+   "zh": "周年纪念庆典",
+   "ko": "25·50·100주년 등의"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "기념제(주년제)"
+   ]
+  },
+  "context_words": [
+   "jubile",
+   "jubile/ul"
+  ],
+  "context_count": 2,
+  "reason": "記念祭(jubile)の韓国語注が「25·50·100주년 등의」で途中で切れ未完になっている。"
+ },
+ {
+  "root": "inaŭgur",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "式を行う"
+   ],
+   "ZH": [
+    "举行开幕典礼"
+   ],
+   "KO": [
+    "개막식·취임식 등 공식 의"
+   ]
+  },
+  "csv": {
+   "JA": "(の開始)式を行う",
+   "ZH": "揭幕式",
+   "KO": "개막식하다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "취임식·개회식을 거행하다"
+   ]
+  },
+  "context_words": [
+   "inaŭgur/ad",
+   "inaŭgur"
+  ],
+  "context_count": 2,
+  "reason": "式を行う(inaŭgur)の韓国語注が「…등 공식 의」で途切れて未完になっている。"
+ },
+ {
+  "root": "kiropraktik",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "カイロプラク"
+   ],
+   "ZH": [
+    "脊椎疗法"
+   ],
+   "KO": [
+    "카이로프랙틱"
+   ]
+  },
+  "csv": {
+   "JA": "カイロプラク",
+   "ZH": "脊椎疗法",
+   "KO": "카이로프랙틱"
+  },
+  "master": {
+   "ja": "カイロプラク",
+   "zh": "脊椎疗法",
+   "ko": "카이로프랙틱"
+  },
+  "rec": {
+   "JA": [
+    "カイロプラクティック"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "kiropraktik",
+   "kiropraktik/ist"
+  ],
+  "context_count": 2,
+  "reason": "日本語が「カイロプラク」と語末が欠落し未完の語形になっている。"
+ },
+ {
+  "root": "reflektor",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "ヘッドライト"
+   ],
+   "ZH": [
+    "反射灯"
+   ],
+   "KO": [
+    "전조등"
+   ]
+  },
+  "csv": {
+   "JA": "ヘッドライト",
+   "ZH": "反射灯",
+   "KO": "전조등"
+  },
+  "master": {
+   "ja": "ヘッドライト",
+   "zh": "反射灯",
+   "ko": "전조등"
+  },
+  "rec": {
+   "JA": [
+    "反射器/反射鏡"
+   ],
+   "ZH": [],
+   "KO": [
+    "반사경"
+   ]
+  },
+  "context_words": [
+   "reflektor",
+   "nub/reflektor"
+  ],
+  "context_count": 2,
+  "reason": "reflektorの中核義は「反射器/反射鏡」だが日韓が具体製品の「ヘッドライト/전조등」に狭く限定している。"
+ },
+ {
+  "root": "alte",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "タチアオイ"
+   ],
+   "ZH": [
+    "高地"
+   ],
+   "KO": [
+    "접시꽃"
+   ]
+  },
+  "csv": {
+   "JA": "タチアオイ",
+   "ZH": "蜀葵",
+   "KO": "양아욱"
+  },
+  "master": {
+   "ja": "タチアオイ",
+   "zh": "高地",
+   "ko": "접시꽃"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "药蜀葵"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "alte",
+   "roz/alte"
+  ],
+  "context_count": 2,
+  "reason": "ZHが植物語根alte(ビロードアオイ/タチアオイ属)を副詞alt-e「高く」と取り違え「高地」と誤訳し、JA/KO(タチアオイ/접시꽃)と別物になっている。"
+ },
+ {
+  "root": "vinkt",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "留める"
+   ],
+   "ZH": [
+    "括号"
+   ],
+   "KO": [
+    "괄호"
+   ]
+  },
+  "csv": {
+   "JA": "留め金",
+   "ZH": "扣件",
+   "KO": "조임쇠"
+  },
+  "master": {
+   "ja": "留める",
+   "zh": "括号",
+   "ko": "괄호"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "夹紧"
+   ],
+   "KO": [
+    "죄어 묶다"
+   ]
+  },
+  "context_words": [
+   "vinkt",
+   "vinkt/it"
+  ],
+  "context_count": 2,
+  "reason": "語根vinktは「締め付けて縛る/留める」の意だが、ZH/KOは「括弧」と全く別義で訳しJAの「留める」と不一致。"
+ },
+ {
+  "root": "okzal",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "スイバ"
+   ],
+   "ZH": [
+    "酢浆草"
+   ],
+   "KO": [
+    "수영"
+   ]
+  },
+  "csv": {
+   "JA": "[植]スイバ",
+   "ZH": "酸模",
+   "KO": "승아"
+  },
+  "master": {
+   "ja": "スイバ",
+   "zh": "酸模",
+   "ko": "수영"
+  },
+  "rec": {
+   "JA": [
+    "カタバミ"
+   ],
+   "ZH": [],
+   "KO": [
+    "괭이밥"
+   ]
+  },
+  "context_words": [
+   "okzal/at",
+   "okzal"
+  ],
+  "context_count": 2,
+  "reason": "okzaloはカタバミ属(Oxalis)でZHの酢浆草が正しいが、JA/KOはギシギシ属のスイバ/수영という別属植物にしている。"
+ },
+ {
+  "root": "mizantrop",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "人間嫌い"
+   ],
+   "ZH": [
+    "厌世者"
+   ],
+   "KO": [
+    "염세가"
+   ]
+  },
+  "csv": {
+   "JA": "人間嫌い",
+   "ZH": "厌世者",
+   "KO": "염세가"
+  },
+  "master": {
+   "ja": "人間嫌い",
+   "zh": "厌世者",
+   "ko": "염세가"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "厌恶人类者"
+   ],
+   "KO": [
+    "인간혐오자"
+   ]
+  },
+  "context_words": [
+   "mizantrop/ec",
+   "mizantrop"
+  ],
+  "context_count": 2,
+  "reason": "語根は「人間嫌い(人類憎悪)」だがZH/KOは「厭世家/悲観論者」寄りでJAの人間嫌いと意味がずれる。"
+ },
+ {
+  "root": "skadr",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "騎兵中隊"
+   ],
+   "ZH": [
+    "队"
+   ],
+   "KO": [
+    "기병중대"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]騎兵中隊",
+   "ZH": "中队",
+   "KO": "기병대"
+  },
+  "master": {
+   "ja": "騎兵中隊",
+   "zh": "队",
+   "ko": "기병중대"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "骑兵中队"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "skadr/estr",
+   "skadr"
+  ],
+  "context_count": 2,
+  "reason": "ZHの「队」は曖昧すぎて「(騎兵)中隊=squadron」の語義が伝わらない。"
+ },
+ {
+  "root": "konstat",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "確認する"
+   ],
+   "ZH": [
+    "确认"
+   ],
+   "KO": [
+    "조사해 사실 여부를 확인하"
+   ]
+  },
+  "csv": {
+   "JA": "(を)確認する",
+   "ZH": "确认",
+   "KO": "확인하다"
+  },
+  "master": {
+   "ja": "確認する",
+   "zh": "确认",
+   "ko": "조사해 사실 여부를 확인하"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "확인하다"
+   ]
+  },
+  "context_words": [
+   "konstat/ebl",
+   "konstat"
+  ],
+  "context_count": 2,
+  "reason": "KO欄が「조사해 사실 여부를 확인하」で語尾が途切れ未完成(다欠落)。"
+ },
+ {
+  "root": "akurat",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "時間・期限を正確に守"
+   ],
+   "ZH": [
+    "准时的"
+   ],
+   "KO": [
+    "시간·약속을 정확히 지키는"
+   ]
+  },
+  "csv": {
+   "JA": "時間厳守の",
+   "ZH": "准时",
+   "KO": "정확한"
+  },
+  "master": {
+   "ja": "時間・期限を正確に守",
+   "zh": "准时的",
+   "ko": "시간·약속을 정확히 지키는"
+  },
+  "rec": {
+   "JA": [
+    "時間に正確な"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "akurat",
+   "akurat/ec"
+  ],
+  "context_count": 2,
+  "reason": "JA欄が「時間・期限を正確に守」で語尾が途切れ未完成(る欠落)。"
+ },
+ {
+  "root": "damp",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "制音"
+   ],
+   "ZH": [
+    "阻尼"
+   ],
+   "KO": [
+    "제동"
+   ]
+  },
+  "csv": {
+   "JA": "制音",
+   "ZH": "阻尼",
+   "KO": "제동"
+  },
+  "master": {
+   "ja": "制音",
+   "zh": "阻尼",
+   "ko": "제동"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "감쇠"
+   ]
+  },
+  "context_words": [
+   "damp",
+   "damp/il"
+  ],
+  "context_count": 2,
+  "reason": "dampiは「振動・音を減衰させる」意でZHの阻尼が適切だが、KOの「제동(制動)」は別概念。"
+ },
+ {
+  "root": "fol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "葉"
+   ],
+   "ZH": [
+    "叶"
+   ],
+   "KO": [
+    "식물의 잎"
+   ]
+  },
+  "csv": {
+   "JA": "葉",
+   "ZH": "叶",
+   "KO": "식물의 잎"
+  },
+  "master": {
+   "ja": "葉",
+   "zh": "叶",
+   "ko": "식물의 잎"
+  },
+  "rec": {
+   "JA": [
+    "狂気の/愚かな"
+   ],
+   "ZH": [
+    "疯狂的/愚蠢"
+   ],
+   "KO": [
+    "미친/어리석은"
+   ]
+  },
+  "context_words": [
+   "fol",
+   "fol/ul"
+  ],
+  "context_count": 2,
+  "reason": "語根folは「狂った・愚かな」(fola)で例語folul=愚か者を指すのに、葉(foli-)と取り違えて誤訳している。"
+ },
+ {
+  "root": "cibet",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "麝香"
+   ],
+   "ZH": [
+    "灵猫香"
+   ],
+   "KO": [
+    "사향"
+   ]
+  },
+  "csv": {
+   "JA": "麝香",
+   "ZH": "灵猫香",
+   "KO": "사향"
+  },
+  "master": {
+   "ja": "麝香",
+   "zh": "灵猫香",
+   "ko": "사향"
+  },
+  "rec": {
+   "JA": [
+    "霊猫香(シベット)"
+   ],
+   "ZH": [
+    "灵猫香"
+   ],
+   "KO": [
+    "사향고양이향(시벳)"
+   ]
+  },
+  "context_words": [
+   "cibet/kat",
+   "cibet"
+  ],
+  "context_count": 2,
+  "reason": "cibetはジャコウネコ由来のシベット香なのに、JA/KOは鹿の麝香(musk)と誤り、正しいZHの灵猫香(civet)と食い違う。"
+ },
+ {
+  "root": "kvaranten",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "隔離中である"
+   ],
+   "ZH": [
+    "隔离"
+   ],
+   "KO": [
+    "분리"
+   ]
+  },
+  "csv": {
+   "JA": "[海]検疫停船",
+   "ZH": "检疫隔离",
+   "KO": "검역정선"
+  },
+  "master": {
+   "ja": "隔離中である",
+   "zh": "隔离",
+   "ko": "분리"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "격리"
+   ]
+  },
+  "context_words": [
+   "kvaranten",
+   "kvaranten/ig"
+  ],
+  "context_count": 2,
+  "reason": "KOの「분리」は「分離」の意で検疫・隔離(quarantine)を表さず誤訳(正:격리)。"
+ },
+ {
+  "root": "diafragm",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "絞る"
+   ],
+   "ZH": [
+    "隔膜"
+   ],
+   "KO": [
+    "비틀어짜다"
+   ]
+  },
+  "csv": {
+   "JA": "[解]横隔膜",
+   "ZH": "膈膜",
+   "KO": "횡경막"
+  },
+  "master": {
+   "ja": "絞る",
+   "zh": "隔膜",
+   "ko": "비틀어짜다"
+  },
+  "rec": {
+   "JA": [
+    "隔膜/横隔膜"
+   ],
+   "ZH": [
+    "隔膜"
+   ],
+   "KO": [
+    "가로막/횡격막"
+   ]
+  },
+  "context_words": [
+   "diafragm",
+   "mal/diafragm"
+  ],
+  "context_count": 2,
+  "reason": "ZHは名詞「隔膜」だがJAは「絞る」、KOは「비틀어짜다(絞り上げる)」で三言語の意味がばらつき、特にKOはdiaphragmと無関係。"
+ },
+ {
+  "root": "aflikt",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "深く悲しませる"
+   ],
+   "ZH": [
+    "使痛苦"
+   ],
+   "KO": [
+    "깊이 괴롭혀 고통스럽게 하"
+   ]
+  },
+  "csv": {
+   "JA": "(を)悩ませる",
+   "ZH": "苦恼",
+   "KO": "괴롭히다"
+  },
+  "master": {
+   "ja": "深く悲しませる",
+   "zh": "使痛苦",
+   "ko": "깊이 괴롭혀 고통스럽게 하"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "깊이 괴롭혀 고통스럽게 하다"
+   ]
+  },
+  "context_words": [
+   "aflikt",
+   "aflikt/iĝ"
+  ],
+  "context_count": 2,
+  "reason": "KO訳が語尾「다」を欠いて語中で途切れており未完成の破損文字列になっている。"
+ },
+ {
+  "root": "kape",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "漂ちゅう"
+   ],
+   "ZH": [
+    "顶风停船"
+   ],
+   "KO": [
+    "라이투"
+   ]
+  },
+  "csv": {
+   "JA": "漂ちゅう",
+   "ZH": "顶风停船",
+   "KO": "라이투"
+  },
+  "master": {
+   "ja": "漂ちゅう",
+   "zh": "顶风停船",
+   "ko": "라이투"
+  },
+  "rec": {
+   "JA": [
+    "(帆船を)風上に立てて停船する"
+   ],
+   "ZH": [],
+   "KO": [
+    "배를 바람 쪽으로 세워 정선하다"
+   ]
+  },
+  "context_words": [
+   "kape",
+   "kape/ig"
+  ],
+  "context_count": 2,
+  "reason": "JAの「漂ちゅう」は漢字仮名混じりで文字化け同然、KOの「라이투」は英語lay-toの音写で未翻訳。"
+ },
+ {
+  "root": "kak",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "うんちをする"
+   ],
+   "ZH": [
+    "可可"
+   ],
+   "KO": [
+    "카카오콩"
+   ]
+  },
+  "csv": {
+   "JA": "うんちをする",
+   "ZH": "可可",
+   "KO": "카카오콩"
+  },
+  "master": {
+   "ja": "うんちをする",
+   "zh": "可可",
+   "ko": "카카오콩"
+  },
+  "rec": {
+   "JA": [
+    "悪い/劣悪"
+   ],
+   "ZH": [
+    "坏/劣"
+   ],
+   "KO": [
+    "나쁜/열악한"
+   ]
+  },
+  "context_words": [
+   "kak",
+   "kak/o/grafi"
+  ],
+  "context_count": 2,
+  "reason": "例語kakografi(=悪筆)の語根kakはギリシャ語「悪」なのに、JAは排便、ZH/KOはカカオと三言語がばらばらで例語とも合わない。"
+ },
+ {
+  "root": "l",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "l"
+   ],
+   "ZH": [
+    "l"
+   ],
+   "KO": [
+    "l"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "l",
+   "zh": "l",
+   "ko": "l"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "hidr/oksi/l",
+   "karb/oksi/l"
+  ],
+  "context_count": 2,
+  "reason": "JA/ZH/KOすべて「l」の一文字のみで実質未翻訳(化学基語根と思われるが説明が全くない)。"
+ },
+ {
+  "root": "o-re",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "再び"
+   ],
+   "ZH": [
+    "再次"
+   ],
+   "KO": [
+    "다시"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ir/o-re/ir",
+   "karaktr/o-re/kon"
+  ],
+  "context_count": 2,
+  "reason": "語根「o-re」は連結母音oと接頭辞reを誤って一体化した不正な語根形(語尾混入)で、本来はre=再びとすべき。"
+ },
+ {
+  "root": "a-japan",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "日本人"
+   ],
+   "ZH": [
+    "日本人"
+   ],
+   "KO": [
+    "일본인"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ĉin/a-japan",
+   "rus/a-japan"
+  ],
+  "context_count": 2,
+  "reason": "語根「a-japan」は形容詞語尾a(ĉina)を巻き込んだ不正な分割で、語根はjapan(日本)であるべき。"
+ },
+ {
+  "root": "izrael",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "イスラエル"
+   ],
+   "ZH": [
+    "未対応"
+   ],
+   "KO": [
+    "이스라엘"
+   ]
+  },
+  "csv": {
+   "JA": "[男子名]イスラエル",
+   "ZH": "以色列",
+   "KO": "이스라엘"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "以色列"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "izrael/id",
+   "izrael"
+  ],
+  "context_count": 2,
+  "reason": "ZH欄が「未対応」という未翻訳プレースホルダーで、訳語が欠落している。"
+ },
+ {
+  "root": "ŝpat",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "すく"
+   ],
+   "ZH": [
+    "铲"
+   ],
+   "KO": [
+    "머리카락을 빗다"
+   ]
+  },
+  "csv": {
+   "JA": "[農]すき",
+   "ZH": "犁",
+   "KO": "삽"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "삽/삽으로 파다"
+   ]
+  },
+  "context_words": [
+   "ŝpat",
+   "ŝpat/kruc"
+  ],
+  "context_count": 2,
+  "reason": "ŝpatは『鋤・シャベル(で掘る)』の意だがKOが『머리카락을 빗다(髪をとかす)』と全く無関係な誤訳になっている。"
+ },
+ {
+  "root": "barit",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "重晶石"
+   ],
+   "ZH": [
+    "男中音"
+   ],
+   "KO": [
+    "바리톤"
+   ]
+  },
+  "csv": {
+   "JA": "重晶石",
+   "ZH": "男中音",
+   "KO": "바리톤"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "重晶石"
+   ],
+   "KO": [
+    "중정석"
+   ]
+  },
+  "context_words": [
+   "barit",
+   "barit/paper"
+  ],
+  "context_count": 2,
+  "reason": "baritは鉱物『重晶石(baryte)』だがZH『男中音』KO『바리톤』はbaritono(バリトン声)との同綴り異義語の取り違え。"
+ },
+ {
+  "root": "citr",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "チター"
+   ],
+   "ZH": [
+    "柠檬"
+   ],
+   "KO": [
+    "레몬"
+   ]
+  },
+  "csv": {
+   "JA": "[楽]チター",
+   "ZH": "齐特琴",
+   "KO": "치터"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "齐特琴"
+   ],
+   "KO": [
+    "치터"
+   ]
+  },
+  "context_words": [
+   "citr/ist",
+   "citr"
+  ],
+  "context_count": 2,
+  "reason": "citrは楽器『チター(citro)』でJAは正しいが、ZH『柠檬』KO『레몬』はcitrono(レモン)と取り違えた誤訳。"
+ },
+ {
+  "root": "putor",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ケナガイタチ"
+   ],
+   "ZH": [
+    "臭鼬"
+   ],
+   "KO": [
+    "스컹크"
+   ]
+  },
+  "csv": {
+   "JA": "[動]ニオイネコ",
+   "ZH": "臭鼬",
+   "KO": "스컹크"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "艾鼬"
+   ],
+   "KO": [
+    "유럽족제비"
+   ]
+  },
+  "context_words": [
+   "putor",
+   "ĉas/putor"
+  ],
+  "context_count": 2,
+  "reason": "putorは『ケナガイタチ(polecat)』だがZH『臭鼬』KO『스컹크』は分類上別種のスカンクとする誤訳。"
+ },
+ {
+  "root": "turban",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ターバン"
+   ],
+   "ZH": [
+    "头巾"
+   ],
+   "KO": [
+    "보닛"
+   ]
+  },
+  "csv": {
+   "JA": "[服]ターバン",
+   "ZH": "头巾",
+   "KO": "터번"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "터번"
+   ]
+  },
+  "context_words": [
+   "turban",
+   "turban/kukurb"
+  ],
+  "context_count": 2,
+  "reason": "turbanは『ターバン』だがKO『보닛(ボンネット帽)』は別種の被り物で誤訳。"
+ },
+ {
+  "root": "rot",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "中隊"
+   ],
+   "ZH": [
+    "队"
+   ],
+   "KO": [
+    "운동팀"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]中隊",
+   "ZH": "连队",
+   "KO": "중대"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "중대"
+   ]
+  },
+  "context_words": [
+   "rot/estr",
+   "rot"
+  ],
+  "context_count": 2,
+  "reason": "rotは軍事の『中隊』だがKO『운동팀(スポーツチーム)』は語根の中核義から外れた誤訳。"
+ },
+ {
+  "root": "taĉment",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "分遣する"
+   ],
+   "ZH": [
+    "队"
+   ],
+   "KO": [
+    "운동팀"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]分遣隊",
+   "ZH": "分遣队",
+   "KO": "부대"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "분견대"
+   ]
+  },
+  "context_words": [
+   "nokt/o/taĉment",
+   "taĉment"
+  ],
+  "context_count": 2,
+  "reason": "taĉmentは軍事の『分遣(隊)』だがKO『운동팀(スポーツチーム)』は無関係な誤訳。"
+ },
+ {
+  "root": "nobel-premi",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ノーベル-押える"
+   ],
+   "ZH": [
+    "诺贝尔-压"
+   ],
+   "KO": [
+    "노벨-누르다"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "賞"
+   ],
+   "ZH": [
+    "奖"
+   ],
+   "KO": [
+    "상"
+   ]
+  },
+  "context_words": [
+   "nobel-premi/it",
+   "nobel-premi"
+  ],
+  "context_count": 2,
+  "reason": "Nobel-premioは『ノーベル賞』で-premi要素はpremio(賞)だが、動詞premi(押す)と取り違え全言語が『押す』系に誤訳。"
+ },
+ {
+  "root": "talmud",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "タルムード"
+   ],
+   "ZH": [
+    "法典"
+   ],
+   "KO": [
+    "법전"
+   ]
+  },
+  "csv": {
+   "JA": "[宗]タルムード",
+   "ZH": "塔木德",
+   "KO": "탈무드"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "塔木德"
+   ],
+   "KO": [
+    "탈무드"
+   ]
+  },
+  "context_words": [
+   "talmud/ist",
+   "talmud"
+  ],
+  "context_count": 2,
+  "reason": "talmudは固有名詞『タルムード』でJAは正しいが、ZH『法典』KO『법전』は一般名詞に矮小化され固有性が失われている。"
+ },
+ {
+  "root": "flan",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "フラン"
+   ],
+   "ZH": [
+    "饼"
+   ],
+   "KO": [
+    "퓨란"
+   ]
+  },
+  "csv": {
+   "JA": "[菓]フラン",
+   "ZH": "奶油布丁",
+   "KO": "플란"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "플랑"
+   ]
+  },
+  "context_words": [
+   "flan",
+   "frukt/o/flan"
+  ],
+  "context_count": 2,
+  "reason": "flanは菓子『フラン(カスタード)』でJA/ZHは食品を示すが、KO『퓨란』は化学物質フランの音訳で誤り。"
+ },
+ {
+  "root": "ta",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "道"
+   ],
+   "ZH": [
+    "路"
+   ],
+   "KO": [
+    "길"
+   ]
+  },
+  "csv": {
+   "JA": "道",
+   "ZH": "路",
+   "KO": "길"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "道"
+   ],
+   "KO": [
+    "도(道)"
+   ]
+  },
+  "context_words": [
+   "ta",
+   "ta/o/ist"
+  ],
+  "context_count": 2,
+  "reason": "ta(道・タオ)はJAが概念語『道』を用いるがZH『路』KO『길』は一般語の『道路/道』で哲学概念のニュアンスが失われている。"
+ },
+ {
+  "root": "fob",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "疎水"
+   ],
+   "ZH": [
+    "疏水"
+   ],
+   "KO": [
+    "소수성"
+   ]
+  },
+  "csv": {
+   "JA": "疎水",
+   "ZH": "疏水",
+   "KO": "소수성"
+  },
+  "master": {
+   "ja": "疎水",
+   "zh": "疏水",
+   "ko": "소수성"
+  },
+  "rec": {
+   "JA": [
+    "嫌悪/～恐怖"
+   ],
+   "ZH": [
+    "厌恶/恐惧"
+   ],
+   "KO": [
+    "혐오/공포"
+   ]
+  },
+  "context_words": [
+   "hidr/o/fob"
+  ],
+  "context_count": 1,
+  "reason": "fobは「嫌悪・恐怖(-phobe)」の語根なのに、hidro(水)を取り込んだ合成語hidrofob全体の意味「疎水」で訳している。"
+ },
+ {
+  "root": "bugr",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "詮索"
+   ],
+   "ZH": [
+    "吹毛求疵"
+   ],
+   "KO": [
+    "트집"
+   ]
+  },
+  "csv": {
+   "JA": "肛門性交",
+   "ZH": "鸡奸",
+   "KO": "남색"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "男色/鶏姦する"
+   ],
+   "ZH": [
+    "鸡奸"
+   ],
+   "KO": [
+    "남색(비역)"
+   ]
+  },
+  "context_words": [
+   "muŝ/bugr/ad"
+  ],
+  "context_count": 1,
+  "reason": "語根bugr=男色(鶏姦)なのに、例語muŝbugrado(=あら探し)という合成語全体の意味「詮索/あら探し」で訳している。"
+ },
+ {
+  "root": "natr",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ナトロン"
+   ],
+   "ZH": [
+    "钠"
+   ],
+   "KO": [
+    "나트륨"
+   ]
+  },
+  "csv": {
+   "JA": "ナトロン",
+   "ZH": "钠",
+   "KO": "나트륨"
+  },
+  "master": {
+   "ja": "ナトロン",
+   "zh": "钠",
+   "ko": "나트륨"
+  },
+  "rec": {
+   "JA": [
+    "ナトリウム"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "natr"
+  ],
+  "context_count": 1,
+  "reason": "JAの「ナトロン」は鉱物ナトロン(炭酸ナトリウム水和物)を指し、語根natr=ナトリウム元素(ZH钠/KO나트륨と一致)と食い違う。"
+ },
+ {
+  "root": "etuz",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ドクゼリモドキ属"
+   ],
+   "ZH": [
+    "毒芹属"
+   ],
+   "KO": [
+    "개독미나리속"
+   ]
+  },
+  "csv": {
+   "JA": "ドクゼリモドキ属",
+   "ZH": "毒芹属",
+   "KO": "개독미나리속"
+  },
+  "master": {
+   "ja": "ドクゼリモドキ属",
+   "zh": "毒芹属",
+   "ko": "개독미나리속"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "毒欧芹属"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "etuz"
+  ],
+  "context_count": 1,
+  "reason": "ZHの「毒芹属」はCicuta(ドクゼリ)属を指し、語根etuz=Aethusa(ドクゼリモドキ/개독미나리、JA・KOと一致)属とは別属で誤り。"
+ },
+ {
+  "root": "korazi",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "風食"
+   ],
+   "ZH": [
+    "磨蚀"
+   ],
+   "KO": [
+    "마식"
+   ]
+  },
+  "csv": {
+   "JA": "風食",
+   "ZH": "磨蚀",
+   "KO": "마식"
+  },
+  "master": {
+   "ja": "風食",
+   "zh": "磨蚀",
+   "ko": "마식"
+  },
+  "rec": {
+   "JA": [
+    "磨食"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "korazi"
+  ],
+  "context_count": 1,
+  "reason": "語根korazi=削磨(コラシオン、粒子摩擦による侵食)で、ZH磨蚀/KO마식(摩耗)と一致するが、JAの「風食」は風による侵食に限定され語義がずれている。"
+ },
+ {
+  "root": "gutaperk",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "グッタペルカ"
+   ],
+   "ZH": [
+    "胶"
+   ],
+   "KO": [
+    "풀"
+   ]
+  },
+  "csv": {
+   "JA": "[化]グタペルカ",
+   "ZH": "树胶",
+   "KO": "구타페르카"
+  },
+  "master": {
+   "ja": "グッタペルカ",
+   "zh": "胶",
+   "ko": "풀"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "古塔波胶(杜仲胶)"
+   ],
+   "KO": [
+    "구타페르카"
+   ]
+  },
+  "context_words": [
+   "gutaperk"
+  ],
+  "context_count": 1,
+  "reason": "gutaperk はガタパーチャ(特定の植物ラテックス素材)だがZHが「胶」(汎用の糊)、KOが「풀」(のり/ペースト)と一般的な接着剤に誤訳され、JA(グッタペルカ)と不整合。"
+ },
+ {
+  "root": "bilion",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "十億"
+   ],
+   "ZH": [
+    "十亿"
+   ],
+   "KO": [
+    "십억"
+   ]
+  },
+  "csv": {
+   "JA": "十億",
+   "ZH": "十亿",
+   "KO": "십억"
+  },
+  "master": {
+   "ja": "十億",
+   "zh": "十亿",
+   "ko": "십억"
+  },
+  "rec": {
+   "JA": [
+    "兆"
+   ],
+   "ZH": [
+    "万亿(兆)"
+   ],
+   "KO": [
+    "조"
+   ]
+  },
+  "context_words": [
+   "bilion"
+  ],
+  "context_count": 1,
+  "reason": "エスペラントの biliono は長スケールで10^12(=兆)だが、三言語とも10^9(十億/십억)= miliardo の値を与えており誤り。"
+ },
+ {
+  "root": "fumari",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "カラクサケマン"
+   ],
+   "ZH": [
+    "紫堇属"
+   ],
+   "KO": [
+    "현호색속"
+   ]
+  },
+  "csv": {
+   "JA": "カラクサケマン",
+   "ZH": "紫堇属",
+   "KO": "현호색속"
+  },
+  "master": {
+   "ja": "カラクサケマン",
+   "zh": "紫堇属",
+   "ko": "현호색속"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "烟堇属"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "fumari"
+  ],
+  "context_count": 1,
+  "reason": "fumari は Fumaria(カラクサケマン属)だが、ZH「紫堇属」・KO「현호색속」はいずれも別属 Corydalis を指しており、JA(Fumaria)と属レベルで不整合。"
+ },
+ {
+  "root": "ker",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ハート"
+   ],
+   "ZH": [
+    "心"
+   ],
+   "KO": [
+    "심장"
+   ]
+  },
+  "csv": {
+   "JA": "ハート",
+   "ZH": "红心",
+   "KO": "하트"
+  },
+  "master": {
+   "ja": "ハート",
+   "zh": "心",
+   "ko": "심장"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "红桃(红心)"
+   ],
+   "KO": [
+    "하트"
+   ]
+  },
+  "context_words": [
+   "ker"
+  ],
+  "context_count": 1,
+  "reason": "kero はトランプの「ハート(の組札)」を指し JA「ハート」は正しいが、KO「심장」(心臓=臓器)・ZH「心」は臓器/心の意で、カード記号としての語義とズレる。"
+ },
+ {
+  "root": "leŭko",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "ロイコ"
+   ],
+   "ZH": [
+    "无色"
+   ],
+   "KO": [
+    "류코"
+   ]
+  },
+  "csv": {
+   "JA": "ロイコ",
+   "ZH": "无色",
+   "KO": "류코"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "白/無色"
+   ],
+   "ZH": [],
+   "KO": [
+    "백/무색"
+   ]
+  },
+  "context_words": [
+   "leŭko"
+  ],
+  "context_count": 1,
+  "reason": "leŭko- は「白/無色」を意味する接頭要素だが、JA「ロイコ」・KO「류코」は音写のみで語義を示さず、意味を与えたZH「无色」と学習上不整合。"
+ },
+ {
+  "root": "skovel",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "筒ブラシ"
+   ],
+   "ZH": [
+    "管刷"
+   ],
+   "KO": [
+    "관솔"
+   ]
+  },
+  "csv": {
+   "JA": "筒ブラシ",
+   "ZH": "管刷",
+   "KO": "관솔"
+  },
+  "master": {
+   "ja": "筒ブラシ",
+   "zh": "管刷",
+   "ko": "관솔"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "병솔(관 세척솔)"
+   ]
+  },
+  "context_words": [
+   "skovel"
+  ],
+  "context_count": 1,
+  "reason": "skovel は筒状ブラシで JA「筒ブラシ」・ZH「管刷」は正しいが、KO「관솔」は同綴りの別語(松脂の多い焚き付け材=fatwood)と衝突し、管洗浄ブラシの意として誤解を招く。"
+ },
+ {
+  "root": "puerto-rik",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "プエルト-あざける"
+   ],
+   "ZH": [
+    "波多-嘲笑"
+   ],
+   "KO": [
+    "푸에르토-조롱하다"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "プエルトリコ"
+   ],
+   "ZH": [
+    "波多黎各"
+   ],
+   "KO": [
+    "푸에르토리코"
+   ]
+  },
+  "context_words": [
+   "puerto-rik"
+  ],
+  "context_count": 1,
+  "reason": "固有名詞Puerto Ricoの「rik」部分を三言語とも「あざける/嘲笑/조롱하다」と誤解釈しており、全体でプエルトリコを表すべき。"
+ },
+ {
+  "root": "barĉ",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ボルシチ"
+   ],
+   "ZH": [
+    "汤"
+   ],
+   "KO": [
+    "수프"
+   ]
+  },
+  "csv": {
+   "JA": "[料]ボルシチ",
+   "ZH": "罗宋汤",
+   "KO": "보르시치"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "罗宋汤"
+   ],
+   "KO": [
+    "보르시"
+   ]
+  },
+  "context_words": [
+   "barĉ"
+  ],
+  "context_count": 1,
+  "reason": "barĉはボルシチだが、JAのみ特定的で、ZH「汤」KO「수프」は単に「スープ」と過度に一般化し語根義を失っている。"
+ },
+ {
+  "root": "potas",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "灰汁"
+   ],
+   "ZH": [
+    "钾"
+   ],
+   "KO": [
+    "칼륨"
+   ]
+  },
+  "csv": {
+   "JA": "[化]灰汁(あく)",
+   "ZH": "灰汁",
+   "KO": "잿물"
+  },
+  "master": {
+   "ja": "灰汁",
+   "zh": "钾",
+   "ko": "칼륨"
+  },
+  "rec": {
+   "JA": [
+    "炭酸カリ"
+   ],
+   "ZH": [
+    "钾碱"
+   ],
+   "KO": [
+    "칼리"
+   ]
+  },
+  "context_words": [
+   "potas"
+  ],
+  "context_count": 1,
+  "reason": "potasはポタシ(炭酸カリウム)を指すが、JAは「灰汁」ZH/KOは元素カリウム「钾/칼륨」と三言語で意味がずれている。"
+ },
+ {
+  "root": "didelf",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "オポッサム"
+   ],
+   "ZH": [
+    "袋鼠"
+   ],
+   "KO": [
+    "주머니쥐"
+   ]
+  },
+  "csv": {
+   "JA": "[動]フクロネズミ",
+   "ZH": "负鼠",
+   "KO": "주머니쥐"
+  },
+  "master": {
+   "ja": "オポッサム",
+   "zh": "袋鼠",
+   "ko": "주머니쥐"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "负鼠"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "didelf"
+  ],
+  "context_count": 1,
+  "reason": "中文「袋鼠」はカンガルーの意味で誤り、didelf(Didelphis)はオポッサムなので「负鼠」とすべき(JA/KOは正しい)。"
+ },
+ {
+  "root": "ukaz",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "勅命"
+   ],
+   "ZH": [
+    "令"
+   ],
+   "KO": [
+    "연"
+   ]
+  },
+  "csv": {
+   "JA": "[史]勅命",
+   "ZH": "诏令",
+   "KO": "칙령"
+  },
+  "master": {
+   "ja": "勅命",
+   "zh": "令",
+   "ko": "연"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "칙령"
+   ]
+  },
+  "context_words": [
+   "ukaz"
+  ],
+  "context_count": 1,
+  "reason": "韓国語「연」は勅令(ukase)の意味をなさず誤りで、「칙령」等とすべき(JA勅命・ZH令は妥当)。"
+ },
+ {
+  "root": "kolubr",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "コルブラ"
+   ],
+   "ZH": [
+    "蛇"
+   ],
+   "KO": [
+    "뱀"
+   ]
+  },
+  "csv": {
+   "JA": "[動]コルブラ",
+   "ZH": "蛇",
+   "KO": "뱀"
+  },
+  "master": {
+   "ja": "コルブラ",
+   "zh": "蛇",
+   "ko": "뱀"
+  },
+  "rec": {
+   "JA": [
+    "ヘビ(ナミヘビ)"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "kolubr"
+  ],
+  "context_count": 1,
+  "reason": "kolubr(ナミヘビ/蛇)はZH「蛇」KO「뱀」が意味を与えるのにJAだけ音訳「コルブラ」で意味を示さない。"
+ },
+ {
+  "root": "ozan",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "オザン"
+   ],
+   "ZH": [
+    "聚糖"
+   ],
+   "KO": [
+    "오잔"
+   ]
+  },
+  "csv": {
+   "JA": "オザン",
+   "ZH": "聚糖",
+   "KO": "오잔"
+  },
+  "master": {
+   "ja": "オザン",
+   "zh": "聚糖",
+   "ko": "오잔"
+  },
+  "rec": {
+   "JA": [
+    "多糖(グリカン)"
+   ],
+   "ZH": [],
+   "KO": [
+    "다당류"
+   ]
+  },
+  "context_words": [
+   "pent/ozan"
+  ],
+  "context_count": 1,
+  "reason": "接尾辞-ozan(多糖類)はZH「聚糖」が意味を示すのにJA/KOは音訳のみで学習上の意味が伝わらない。"
+ },
+ {
+  "root": "adjutant",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "副官"
+   ],
+   "ZH": [
+    "副官"
+   ],
+   "KO": [
+    "준위"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]副官",
+   "ZH": "副官",
+   "KO": "부관"
+  },
+  "master": {
+   "ja": "副官",
+   "zh": "副官",
+   "ko": "준위"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "부관"
+   ]
+  },
+  "context_words": [
+   "adjutant"
+  ],
+  "context_count": 1,
+  "reason": "adjutanto は「副官(aide)」で日中は副官と正しいが、韓国語だけ「준위(准尉=warrant officer)」という別の軍階級に誤訳している。"
+ },
+ {
+  "root": "petri",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "ペトリ"
+   ],
+   "ZH": [
+    "培养皿"
+   ],
+   "KO": [
+    "페트리"
+   ]
+  },
+  "csv": {
+   "JA": "ペトリ",
+   "ZH": "培养皿",
+   "KO": "페트리"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "佩特里"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "petri/plad"
+  ],
+  "context_count": 1,
+  "reason": "語根 petri は人名 Petri を指す(例語 petri/plad=ペトリ皿)のに、中国語だけ合成語全体の意味「培养皿(ペトリ皿)」を当て、語根自身でなく全体語訳になっている。"
+ },
+ {
+  "root": "kontraŭ-manifestaci",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "向かって-デモ"
+   ],
+   "ZH": [
+    "对抗-示威游行"
+   ],
+   "KO": [
+    "반대-정치적 주장을 위한 시위"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "対抗/反対-デモ"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "kontraŭ-manifestaci"
+  ],
+  "context_count": 1,
+  "reason": "kontraŭ は「反対・対抗」の意で中韓は对抗/반대だが、日本語だけ「向かって(toward)」で意味がズレ、反対・対抗のニュアンスが伝わらない。"
+ },
+ {
+  "root": "haŭl",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "引綱"
+   ],
+   "ZH": [
+    "拖曳"
+   ],
+   "KO": [
+    "끌기"
+   ]
+  },
+  "csv": {
+   "JA": "引綱",
+   "ZH": "拖曳",
+   "KO": "끌기"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "曳く/曳航"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "haŭl"
+  ],
+  "context_count": 1,
+  "reason": "haŭl は「引く・曳航する」という動作(中韩は拖曳/끌기)だが、日本語だけ「引綱(綱=物体)」と物体名を当てており品詞・語義がズレる。"
+ },
+ {
+  "root": "gratifik",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "与える"
+   ],
+   "ZH": [
+    "给"
+   ],
+   "KO": [
+    "주다"
+   ]
+  },
+  "csv": {
+   "JA": "与える",
+   "ZH": "给",
+   "KO": "주다"
+  },
+  "master": {
+   "ja": "与える",
+   "zh": "给",
+   "ko": "주다"
+  },
+  "rec": {
+   "JA": [
+    "報奨を与える"
+   ],
+   "ZH": [
+    "赏赐"
+   ],
+   "KO": [
+    "상여를 주다"
+   ]
+  },
+  "context_words": [
+   "gratifik"
+  ],
+  "context_count": 1,
+  "reason": "gratifiki は「賞与・心付けを与える」で、単なる「与える/给/주다(doni)」では中核義である報奨・臨時給付のニュアンスが完全に欠落している。"
+ },
+ {
+  "root": "alpini",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ハナミョウガ"
+   ],
+   "ZH": [
+    "山姜"
+   ],
+   "KO": [
+    "양하"
+   ]
+  },
+  "csv": {
+   "JA": "ハナミョウガ",
+   "ZH": "山姜",
+   "KO": "양하"
+  },
+  "master": {
+   "ja": "ハナミョウガ",
+   "zh": "山姜",
+   "ko": "양하"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "꽃양하"
+   ]
+  },
+  "context_words": [
+   "alpini"
+  ],
+  "context_count": 1,
+  "reason": "alpini は Alpinia 属(日ハナミョウガ/中山姜)だが、韓国語「양하」は別属 Zingiber mioga(miog=14-386 と同一訳)を指しており属が食い違う。"
+ },
+ {
+  "root": "anafilaksi",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "アナフィラキシー"
+   ],
+   "ZH": [
+    "过敏反应"
+   ],
+   "KO": [
+    "아나필락시스"
+   ]
+  },
+  "csv": {
+   "JA": "アナフィラキシー",
+   "ZH": "过敏反应",
+   "KO": "아나필락시스"
+  },
+  "master": {
+   "ja": "アナフィラキシー",
+   "zh": "过敏反应",
+   "ko": "아나필락시스"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "过敏性休克/速发过敏"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "anafilaksi"
+  ],
+  "context_count": 1,
+  "reason": "anafilaksio は「アナフィラキシー(全身性即時型過敏)」だが、中国語だけ「过敏反应(一般的アレルギー反応)」と広すぎ、日韓の専門訳と精度がズレる。"
+ },
+ {
+  "root": "sars",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "SARS"
+   ],
+   "ZH": [
+    "非典"
+   ],
+   "KO": [
+    "사스"
+   ]
+  },
+  "csv": {
+   "JA": "SARS",
+   "ZH": "非典",
+   "KO": "사스"
+  },
+  "master": {
+   "ja": "SARS",
+   "zh": "非典",
+   "ko": "사스"
+  },
+  "rec": {
+   "JA": [
+    "サーズ"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "sars"
+  ],
+  "context_count": 1,
+  "reason": "日本語欄だけラテン字略語「SARS」を未訳のまま残しており、中韓の非典/사스のように現地語表記化されていない。"
+ },
+ {
+  "root": "rom-german",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ローマ-ドイツの"
+   ],
+   "ZH": [
+    "罗马-德"
+   ],
+   "KO": [
+    "로마-도덕적 선"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "로마-게르만(독일)"
+   ]
+  },
+  "context_words": [
+   "rom-german"
+  ],
+  "context_count": 1,
+  "reason": "german(ゲルマン/ドイツ)の韓国語訳が「도덕적 선(道徳的善)」と全く無関係な語になっており明白な誤訳・破損である。"
+ },
+ {
+  "root": "sankta-helen",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "神聖な-ギリシア"
+   ],
+   "ZH": [
+    "圣的-希腊"
+   ],
+   "KO": [
+    "신성한-그리스"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "神聖な-ヘレナ(聖ヘレナ)"
+   ],
+   "ZH": [
+    "圣-赫勒拿"
+   ],
+   "KO": [
+    "성-헬레나(세인트헬레나)"
+   ]
+  },
+  "context_words": [
+   "sankta-helen"
+  ],
+  "context_count": 1,
+  "reason": "これは聖ヘレナ(Saint Helena)であり語根helenは人名Helenaだが、同綴りのhelen(o)=ギリシア人と取り違え三言語とも「神聖なギリシア」と誤訳している。"
+ },
+ {
+  "root": "loes",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "黄土"
+   ],
+   "ZH": [
+    "赭石"
+   ],
+   "KO": [
+    "황토"
+   ]
+  },
+  "csv": {
+   "JA": "黄土",
+   "ZH": "赭石",
+   "KO": "황토"
+  },
+  "master": {
+   "ja": "黄土",
+   "zh": "赭石",
+   "ko": "황토"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "黄土"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "loes"
+  ],
+  "context_count": 1,
+  "reason": "loesは黄土(風成堆積物)でありJA黄土/KO황토は正しいが、ZHのみ「赭石(オーカー/赤鉄鉱顔料)」と別物に誤訳している。"
+ },
+ {
+  "root": "naftalin",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ナフタリン"
+   ],
+   "ZH": [
+    "樟脑"
+   ],
+   "KO": [
+    "장뇌"
+   ]
+  },
+  "csv": {
+   "JA": "[化]ナフタリン",
+   "ZH": "萘丸",
+   "KO": "나프탈렌"
+  },
+  "master": {
+   "ja": "ナフタリン",
+   "zh": "樟脑",
+   "ko": "장뇌"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "萘"
+   ],
+   "KO": [
+    "나프탈렌"
+   ]
+  },
+  "context_words": [
+   "naftalin"
+  ],
+  "context_count": 1,
+  "reason": "naftalinはナフタレン(萘)だがZH「樟脑」KO「장뇌」はいずれも別化合物の樟脳(camphor)で、JAナフタリンと不整合かつ誤訳である。"
+ },
+ {
+  "root": "kvartan",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "四日熱"
+   ],
+   "ZH": [
+    "三日疟"
+   ],
+   "KO": [
+    "사일열"
+   ]
+  },
+  "csv": {
+   "JA": "四日熱",
+   "ZH": "三日疟",
+   "KO": "사일열"
+  },
+  "master": {
+   "ja": "四日熱",
+   "zh": "三日疟",
+   "ko": "사일열"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "四日疟(四日热)"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "kvartan"
+  ],
+  "context_count": 1,
+  "reason": "kvartanは四日熱(72時間周期)でJA四日熱/KO사일열は正しいが、ZHのみ「三日疟(三日熱/tertian)」と周期の異なる別疾患に誤訳している。"
+ },
+ {
+  "root": "taban",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "アブ"
+   ],
+   "ZH": [
+    "虻"
+   ],
+   "KO": [
+    "아부"
+   ]
+  },
+  "csv": {
+   "JA": "[虫]アブ",
+   "ZH": "虻",
+   "KO": "등에"
+  },
+  "master": {
+   "ja": "アブ",
+   "zh": "虻",
+   "ko": "아부"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "등에"
+   ]
+  },
+  "context_words": [
+   "taban"
+  ],
+  "context_count": 1,
+  "reason": "tabanはアブ(等蜂/horsefly、韓国語では등에)だが、KO「아부」は日本語アブの音写もしくは韓国語では阿附(へつらい)を意味し虫名として誤りである。"
+ },
+ {
+  "root": "trilion",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "一兆"
+   ],
+   "ZH": [
+    "万亿"
+   ],
+   "KO": [
+    "조"
+   ]
+  },
+  "csv": {
+   "JA": "一兆",
+   "ZH": "万亿",
+   "KO": "조"
+  },
+  "master": {
+   "ja": "一兆",
+   "zh": "万亿",
+   "ko": "조"
+  },
+  "rec": {
+   "JA": [
+    "10^18"
+   ],
+   "ZH": [
+    "10^18"
+   ],
+   "KO": [
+    "10^18"
+   ]
+  },
+  "context_words": [
+   "trilion"
+  ],
+  "context_count": 1,
+  "reason": "エスペラントは長進法でtriliono=10^18であり(同バッチのkvinilion=10^30が長進法を裏付ける)、三言語とも10^12(一兆/万亿/조)と誤って一桁分低く訳している。"
+ },
+ {
+  "root": "alkov",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "アルコーブ"
+   ],
+   "ZH": [
+    "壁龛"
+   ],
+   "KO": [
+    "도코노마"
+   ]
+  },
+  "csv": {
+   "JA": "アルコーブ",
+   "ZH": "小房间",
+   "KO": "벽감"
+  },
+  "master": {
+   "ja": "アルコーブ",
+   "zh": "壁龛",
+   "ko": "도코노마"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "벽감(알코브)"
+   ]
+  },
+  "context_words": [
+   "alkov"
+  ],
+  "context_count": 1,
+  "reason": "alkov=アルコーブ(壁の窪み)だが、KOのみ日本固有の「도코노마(床の間)」と訳しJAアルコーブ/ZH壁龛と文化特化的にズレている。"
+ },
+ {
+  "root": "faŭv",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "野獣派"
+   ],
+   "ZH": [
+    "野兽派"
+   ],
+   "KO": [
+    "야수파"
+   ]
+  },
+  "csv": {
+   "JA": "野獣派",
+   "ZH": "野兽派",
+   "KO": "야수파"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "野獣"
+   ],
+   "ZH": [
+    "野兽"
+   ],
+   "KO": [
+    "야수"
+   ]
+  },
+  "context_words": [
+   "faŭv/ism"
+  ],
+  "context_count": 1,
+  "reason": "語根faŭvの中核義は「野獣(フォーヴ)」であり、-ism付き全体語faŭvismの意味「野獣派(フォーヴィスム)」を三言語とも語根訳に併合してしまっている。"
+ },
+ {
+  "root": "ĥin",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "[地名]中国"
+   ],
+   "ZH": [
+    "中国人"
+   ],
+   "KO": [
+    "중국인"
+   ]
+  },
+  "csv": {
+   "JA": "中国人",
+   "ZH": "中国人",
+   "KO": "중국인"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "中国人"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ĥin"
+  ],
+  "context_count": 1,
+  "reason": "語根「ĥin」は中国人(民族/成員)を核心義とするが、JAのみ「[地名]中国」と派生語(ĥinio=国名)の意味を当てており、ZH/KO(中国人/중국인)と不整合。"
+ },
+ {
+  "root": "monarĥ",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "君主"
+   ],
+   "ZH": [
+    "君主制"
+   ],
+   "KO": [
+    "군주"
+   ]
+  },
+  "csv": {
+   "JA": "君主",
+   "ZH": "君主",
+   "KO": "군주"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "君主"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "monarĥ"
+  ],
+  "context_count": 1,
+  "reason": "「monarĥ」は君主(人)なのにZHのみ「君主制」(制度=monarĥioの全体語義)と訳し、JA(君主)/KO(군주)とズレている。"
+ },
+ {
+  "root": "triolet",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "トリオレ"
+   ],
+   "ZH": [
+    "三连音"
+   ],
+   "KO": [
+    "트리올레"
+   ]
+  },
+  "csv": {
+   "JA": "トリオレ",
+   "ZH": "三连音",
+   "KO": "트리올레"
+  },
+  "master": {
+   "ja": "トリオレ",
+   "zh": "三连音",
+   "ko": "트리올레"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "特里奥莱（八行诗）"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "triolet"
+  ],
+  "context_count": 1,
+  "reason": "「triolet」は八行の定型詩(トリオレ)だが、ZHのみ「三连音」(音楽の三連符=triolo)と同義取り違えでJA(トリオレ)/KO(트리올레)と不整合。"
+ },
+ {
+  "root": "omatidi",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "個眼"
+   ],
+   "ZH": [
+    "小眼"
+   ],
+   "KO": [
+    "홑눈"
+   ]
+  },
+  "csv": {
+   "JA": "個眼",
+   "ZH": "小眼",
+   "KO": "홑눈"
+  },
+  "master": {
+   "ja": "個眼",
+   "zh": "小眼",
+   "ko": "홑눈"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "낱눈"
+   ]
+  },
+  "context_words": [
+   "omatidi"
+  ],
+  "context_count": 1,
+  "reason": "「omatidi」は複眼を構成する個眼(낱눈)だが、KOの「홑눈」は単眼(ocel, 16-270と同語)を指し誤りで、JA個眼/ZH小眼と不整合。"
+ },
+ {
+  "root": "bilanc",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "貸借対照表を作る"
+   ],
+   "ZH": [
+    "平衡"
+   ],
+   "KO": [
+    "평형"
+   ]
+  },
+  "csv": {
+   "JA": "[商]貸借対照表",
+   "ZH": "资产负债表",
+   "KO": "대차대조표"
+  },
+  "master": {
+   "ja": "貸借対照表を作る",
+   "zh": "平衡",
+   "ko": "평형"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "结算/资产负债表"
+   ],
+   "KO": [
+    "결산/대차대조표"
+   ]
+  },
+  "context_words": [
+   "bilanc"
+  ],
+  "context_count": 1,
+  "reason": "「bilanc」は決算・貸借対照(会計上のバランス)を核心義とするが、ZH/KOは「平衡/평형」(物理的均衡=ekvilibro)と別義に流れ、JA(貸借対照表を作る)と不整合。"
+ },
+ {
+  "root": "centaŭri",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ベニバナセンブリ属"
+   ],
+   "ZH": [
+    "百金花属"
+   ],
+   "KO": [
+    "홍백합속"
+   ]
+  },
+  "csv": {
+   "JA": "ベニバナセンブリ属",
+   "ZH": "百金花属",
+   "KO": "홍백합속"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "센타우리움속(백금화속)"
+   ]
+  },
+  "context_words": [
+   "centaŭri"
+  ],
+  "context_count": 1,
+  "reason": "「centaŭri」はベニバナセンブリ属(Centaurium)で、JA/ZH(百金花属)は一致するが、KOの「홍백합속」(赤いユリ)は別植物を指し不整合。"
+ },
+ {
+  "root": "hipurid",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "スギナモ属"
+   ],
+   "ZH": [
+    "杉叶藻属"
+   ],
+   "KO": [
+    "말즘속"
+   ]
+  },
+  "csv": {
+   "JA": "スギナモ属",
+   "ZH": "杉叶藻属",
+   "KO": "말즘속"
+  },
+  "master": {
+   "ja": "スギナモ属",
+   "zh": "杉叶藻属",
+   "ko": "말즘속"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "쇠뜨기말속"
+   ]
+  },
+  "context_words": [
+   "hipurid"
+  ],
+  "context_count": 1,
+  "reason": "「hipurid」はスギナモ属(Hippuris)で、JA/ZH(杉叶藻属)は一致するが、KOの「말즘속」はヒルムシロ(Potamogeton)属で別属を指し不整合。"
+ },
+ {
+  "root": "balote",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ヤマガラシ属"
+   ],
+   "ZH": [
+    "夏至草属"
+   ],
+   "KO": [
+    "발로타속"
+   ]
+  },
+  "csv": {
+   "JA": "ヤマガラシ属",
+   "ZH": "夏至草属",
+   "KO": "발로타속"
+  },
+  "master": {
+   "ja": "ヤマガラシ属",
+   "zh": "夏至草属",
+   "ko": "발로타속"
+  },
+  "rec": {
+   "JA": [
+    "バロータ属"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "balote"
+  ],
+  "context_count": 1,
+  "reason": "「balote」はシソ科Ballota属だが、JAの「ヤマガラシ属」はアブラナ科Barbarea属で科が異なり誤り、KO(발로타속)と不整合。"
+ },
+ {
+  "root": "skabi",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "かいせん"
+   ],
+   "ZH": [
+    "癣"
+   ],
+   "KO": [
+    "백선"
+   ]
+  },
+  "csv": {
+   "JA": "[病]かいせん",
+   "ZH": "疥癣",
+   "KO": "옴"
+  },
+  "master": {
+   "ja": "かいせん",
+   "zh": "癣",
+   "ko": "백선"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "疥疮"
+   ],
+   "KO": [
+    "옴"
+   ]
+  },
+  "context_words": [
+   "skabi"
+  ],
+  "context_count": 1,
+  "reason": "skabiは疥癬(ダニ寄生症)だが、ZH「癣」・KO「백선(白癬)」は真菌性の水虫/たむしを指す別疾患の誤訳(JA「かいせん=疥癬」は正)。"
+ },
+ {
+  "root": "benzoil-glicin",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ベンゾイル-ダイズ属"
+   ],
+   "ZH": [
+    "苯甲酰-大豆属"
+   ],
+   "KO": [
+    "벤조일-콩속"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "ベンゾイル-ダイズ属",
+   "zh": "苯甲酰-大豆属",
+   "ko": "벤조일-콩속"
+  },
+  "rec": {
+   "JA": [
+    "ベンゾイル-グリシン"
+   ],
+   "ZH": [
+    "苯甲酰-甘氨酸"
+   ],
+   "KO": [
+    "벤조일-글리신"
+   ]
+  },
+  "context_words": [
+   "benzoil-glicin"
+  ],
+  "context_count": 1,
+  "reason": "glicinはここで馬尿酸(ベンゾイルグリシン)を成すアミノ酸グリシンだが、同綴異義の植物「ダイズ属(Glycine)」と取り違えている。"
+ },
+ {
+  "root": "d",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "d"
+   ],
+   "ZH": [
+    "d"
+   ],
+   "KO": [
+    "d"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "d",
+   "zh": "d",
+   "ko": "d"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "miria/d"
+  ],
+  "context_count": 1,
+  "reason": "訳語が全言語で裸のラテン文字「d」のままで意味を持たず、学習補助にならない(KO欄もハングルでない)。"
+ },
+ {
+  "root": "sium",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ムカゴニンジン属"
+   ],
+   "ZH": [
+    "水芹属"
+   ],
+   "KO": [
+    "개발나물속"
+   ]
+  },
+  "csv": {
+   "JA": "ムカゴニンジン属",
+   "ZH": "水芹属",
+   "KO": "개발나물속"
+  },
+  "master": {
+   "ja": "ムカゴニンジン属",
+   "zh": "水芹属",
+   "ko": "개발나물속"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "泽芹属"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "sium"
+  ],
+  "context_count": 1,
+  "reason": "siumはムカゴニンジン属(泽芹属)で、JA・KOは正しくSiumを指すが、ZH「水芹属」はOenanthe(セリ属)という別属の誤り。"
+ },
+ {
+  "root": "klatr",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "カゴタケ属"
+   ],
+   "ZH": [
+    "笼头菌属"
+   ],
+   "KO": [
+    "말뚝버섯속"
+   ]
+  },
+  "csv": {
+   "JA": "カゴタケ属",
+   "ZH": "笼头菌属",
+   "KO": "말뚝버섯속"
+  },
+  "master": {
+   "ja": "カゴタケ属",
+   "zh": "笼头菌属",
+   "ko": "말뚝버섯속"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "바구니버섯속"
+   ]
+  },
+  "context_words": [
+   "klatr"
+  ],
+  "context_count": 1,
+  "reason": "klatrはカゴタケ属(Clathrus)で、JA「カゴタケ属」・ZH「笼头菌属」は一致するが、KO「말뚝버섯속」はPhallus(スッポンタケ属)という別属の誤り。"
+ },
+ {
+  "root": "simplon",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "シンプロン峠"
+   ],
+   "ZH": [
+    "辛普朗峠"
+   ],
+   "KO": [
+    "심플론고개"
+   ]
+  },
+  "csv": {
+   "JA": "シンプロン峠",
+   "ZH": "辛普朗峠",
+   "KO": "심플론고개"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "辛普朗山口"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "simplon"
+  ],
+  "context_count": 1,
+  "reason": "ZH訳「辛普朗峠」の「峠」は日本の国字であり中国語には存在しない文字で、誤った文字体系が混入している。"
+ },
+ {
+  "root": "sinagog",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "シナゴーグ"
+   ],
+   "ZH": [
+    "教堂"
+   ],
+   "KO": [
+    "교회당"
+   ]
+  },
+  "csv": {
+   "JA": "[宗]ユダヤ教会",
+   "ZH": "犹太会堂",
+   "KO": "유대교회당"
+  },
+  "master": {
+   "ja": "シナゴーグ",
+   "zh": "教堂",
+   "ko": "교회당"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "犹太会堂"
+   ],
+   "KO": [
+    "유대교 회당"
+   ]
+  },
+  "context_words": [
+   "sinagog"
+  ],
+  "context_count": 1,
+  "reason": "sinagog はユダヤ教の会堂を指すが、ZH「教堂」・KO「교회당」は一般的な(キリスト教)教会を意味しており誤り。"
+ },
+ {
+  "root": "ĵerz",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ジャージー"
+   ],
+   "ZH": [
+    "泽西"
+   ],
+   "KO": [
+    "저지"
+   ]
+  },
+  "csv": {
+   "JA": "ジャージー",
+   "ZH": "泽西",
+   "KO": "저지"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "针织运动衫"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "ĵerz"
+  ],
+  "context_count": 1,
+  "reason": "ĵerzo は編物の上着(ジャージー)を指す語だが、ZH「泽西」は地名のジャージー島を指しており取り違えている(JA/KOは衣類で正)。"
+ },
+ {
+  "root": "sardel",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "塩イワシ"
+   ],
+   "ZH": [
+    "沙丁鱼"
+   ],
+   "KO": [
+    "정어리"
+   ]
+  },
+  "csv": {
+   "JA": "[料]塩アンチョービ",
+   "ZH": "咸鳀鱼",
+   "KO": "절인멸치"
+  },
+  "master": {
+   "ja": "塩イワシ",
+   "zh": "沙丁鱼",
+   "ko": "정어리"
+  },
+  "rec": {
+   "JA": [
+    "カタクチイワシ／アンチョビ"
+   ],
+   "ZH": [
+    "鳀鱼"
+   ],
+   "KO": [
+    "멸치"
+   ]
+  },
+  "context_words": [
+   "sardel"
+  ],
+  "context_count": 1,
+  "reason": "sardelo は「アンチョビ(カタクチイワシ)」を指す語だが、三言語とも「イワシ/沙丁鱼/정어리(sardine)」と別種のイワシに取り違えている。"
+ },
+ {
+  "root": "imput",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "計上"
+   ],
+   "ZH": [
+    "归咎"
+   ],
+   "KO": [
+    "귀속"
+   ]
+  },
+  "csv": {
+   "JA": "計上",
+   "ZH": "归咎",
+   "KO": "귀속"
+  },
+  "master": {
+   "ja": "計上",
+   "zh": "归咎",
+   "ko": "귀속"
+  },
+  "rec": {
+   "JA": [
+    "帰する／転嫁する"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "imput"
+  ],
+  "context_count": 1,
+  "reason": "imputi は「(責任を)帰属させる」意でZH「归咎」KO「귀속」は合致するが、JA「計上」は簿記の記帳を意味し語義がずれている。"
+ },
+ {
+  "root": "staniol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "スズ箔"
+   ],
+   "ZH": [
+    "锡箔"
+   ],
+   "KO": [
+    "은박"
+   ]
+  },
+  "csv": {
+   "JA": "スズ箔",
+   "ZH": "锡箔",
+   "KO": "은박"
+  },
+  "master": {
+   "ja": "スズ箔",
+   "zh": "锡箔",
+   "ko": "은박"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "주석박"
+   ]
+  },
+  "context_words": [
+   "staniol"
+  ],
+  "context_count": 1,
+  "reason": "staniolo は「スズ箔(tin)」を指すが、KO「은박」は字義上「銀箔(silver)」で金属名がJA/ZH(锡=スズ)とずれている。"
+ },
+ {
+  "root": "makaron",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "マカロン"
+   ],
+   "ZH": [
+    "通心粉"
+   ],
+   "KO": [
+    "마카로니"
+   ]
+  },
+  "csv": {
+   "JA": "[菓]マカロン",
+   "ZH": "马卡龙",
+   "KO": "마카롱"
+  },
+  "master": {
+   "ja": "マカロン",
+   "zh": "通心粉",
+   "ko": "마카로니"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "马卡龙"
+   ],
+   "KO": [
+    "마카롱"
+   ]
+  },
+  "context_words": [
+   "makaron"
+  ],
+  "context_count": 1,
+  "reason": "makaron(マカロン菓子)をZH「通心粉」・KO「마카로니」が別語根makaroni(マカロニ/パスタ)の訳に取り違えており、実際19-481makaroniのZH訳と同一で混同が明白。"
+ },
+ {
+  "root": "zuav",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ズアーヴ兵"
+   ],
+   "ZH": [
+    "兵"
+   ],
+   "KO": [
+    "폰"
+   ]
+  },
+  "csv": {
+   "JA": "アルジェリア歩兵",
+   "ZH": "阿尔及利亚兵",
+   "KO": "주아브병"
+  },
+  "master": {
+   "ja": "ズアーヴ兵",
+   "zh": "兵",
+   "ko": "폰"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "佐阿夫兵"
+   ],
+   "KO": [
+    "주아브병"
+   ]
+  },
+  "context_words": [
+   "zuav"
+  ],
+  "context_count": 1,
+  "reason": "zuav(ズアーヴ兵)に対しZHは「兵」と過度に一般化し、KOは「폰(ポーン/電話)」で語義と全く無関係の誤訳。"
+ },
+ {
+  "root": "sinkrociklotron",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "シンクロサイクロトロ"
+   ],
+   "ZH": [
+    "同步回旋器"
+   ],
+   "KO": [
+    "싱크로사이클로트론"
+   ]
+  },
+  "csv": {
+   "JA": "シンクロサイクロトロ",
+   "ZH": "同步回旋器",
+   "KO": "싱크로사이클로트론"
+  },
+  "master": {
+   "ja": "シンクロサイクロトロ",
+   "zh": "同步回旋器",
+   "ko": "싱크로사이클로트론"
+  },
+  "rec": {
+   "JA": [
+    "シンクロサイクロトロン"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "sinkrociklotron"
+  ],
+  "context_count": 1,
+  "reason": "JA訳が「シンクロサイクロトロ」と末尾の「ン」が欠落し途中で切れている。"
+ },
+ {
+  "root": "medalion",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ロケット"
+   ],
+   "ZH": [
+    "大奖章"
+   ],
+   "KO": [
+    "로켓"
+   ]
+  },
+  "csv": {
+   "JA": "大メダル",
+   "ZH": "大勋章",
+   "KO": "메달리온"
+  },
+  "master": {
+   "ja": "ロケット",
+   "zh": "大奖章",
+   "ko": "로켓"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "圆形浮雕饰牌／挂坠盒"
+   ],
+   "KO": [
+    "로켓목걸이(펜던트)"
+   ]
+  },
+  "context_words": [
+   "medalion"
+  ],
+  "context_count": 1,
+  "reason": "medalion(ロケット/円形装飾牌)でZHが「大奖章(賞メダル)」と別義に振れ、KOの「로켓」は通常「ロケット(飛翔体)」と読まれ学習者を誤解させる。"
+ },
+ {
+  "root": "lapis",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "硝酸銀棒"
+   ],
+   "ZH": [
+    "石笔"
+   ],
+   "KO": [
+    "석필"
+   ]
+  },
+  "csv": {
+   "JA": "[化]硝石",
+   "ZH": "硝石",
+   "KO": "질산은"
+  },
+  "master": {
+   "ja": "硝酸銀棒",
+   "zh": "石笔",
+   "ko": "석필"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "硝酸银棒"
+   ],
+   "KO": [
+    "질산은봉"
+   ]
+  },
+  "context_words": [
+   "lapis"
+  ],
+  "context_count": 1,
+  "reason": "エスペラントの「lapiso」は硝酸銀棒(消石)を指しJAは正しいが、ZH/KOは石板用筆記具(grifelo)である石筆と訳しており別義で誤り。"
+ },
+ {
+  "root": "nav",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ネーブ"
+   ],
+   "ZH": [
+    "船"
+   ],
+   "KO": [
+    "배"
+   ]
+  },
+  "csv": {
+   "JA": "ネーブ",
+   "ZH": "船舶",
+   "KO": "본당"
+  },
+  "master": {
+   "ja": "ネーブ",
+   "zh": "船",
+   "ko": "배"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "中殿(身廊)"
+   ],
+   "KO": [
+    "신랑(회중석)"
+   ]
+  },
+  "context_words": [
+   "nav"
+  ],
+  "context_count": 1,
+  "reason": "「navo」は教会の身廊(ネーブ)を意味しJAは正しいが、ZH/KOは語源の「船」と訳しており実際の語根義を外している。"
+ },
+ {
+  "root": "legumen",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "さや"
+   ],
+   "ZH": [
+    "套"
+   ],
+   "KO": [
+    "꽂이"
+   ]
+  },
+  "csv": {
+   "JA": "さや",
+   "ZH": "套",
+   "KO": "꽂이"
+  },
+  "master": {
+   "ja": "さや",
+   "zh": "套",
+   "ko": "꽂이"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "荚果"
+   ],
+   "KO": [
+    "꼬투리"
+   ]
+  },
+  "context_words": [
+   "legumen"
+  ],
+  "context_count": 1,
+  "reason": "「legumeno」は豆果(さや)の意でJAは妥当だが、ZHの「套」(覆い)・KOの「꽂이」(挿し立て具)は語根の意味を成さず誤訳。"
+ },
+ {
+  "root": "franc-jozef",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "フランスの-ヨセフ"
+   ],
+   "ZH": [
+    "法-约瑟夫"
+   ],
+   "KO": [
+    "법-요셉"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "프랑스-요셉"
+   ]
+  },
+  "context_words": [
+   "franc-jozef"
+  ],
+  "context_count": 1,
+  "reason": "KOの「법」は中国語「法(フランス)」をそのまま音写したもので韓国語では「法律」の意になり、フランツ・ヨーゼフの語を表せず誤り。"
+ },
+ {
+  "root": "hord",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "遊牧民の群れ"
+   ],
+   "ZH": [
+    "大麦"
+   ],
+   "KO": [
+    "보리"
+   ]
+  },
+  "csv": {
+   "JA": "遊牧民の群れ",
+   "ZH": "大麦",
+   "KO": "보리"
+  },
+  "master": {
+   "ja": "遊牧民の群れ",
+   "zh": "大麦",
+   "ko": "보리"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "游牧部落/大群"
+   ],
+   "KO": [
+    "유목민 무리"
+   ]
+  },
+  "context_words": [
+   "hord"
+  ],
+  "context_count": 1,
+  "reason": "語根hord(=hordo「遊牧民の群れ/大群」)なのにZH・KOは別語根hordeo「大麦」の訳になっており、同綴り異義語の取り違え(JAのみ正)。"
+ },
+ {
+  "root": "peoni",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ボタン"
+   ],
+   "ZH": [
+    "芍药"
+   ],
+   "KO": [
+    "단추"
+   ]
+  },
+  "csv": {
+   "JA": "[植]シャクヤク",
+   "ZH": "芍药",
+   "KO": "작약"
+  },
+  "master": {
+   "ja": "ボタン",
+   "zh": "芍药",
+   "ko": "단추"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "작약(모란)"
+   ]
+  },
+  "context_words": [
+   "peoni"
+  ],
+  "context_count": 1,
+  "reason": "peoni=牡丹/芍薬(JA・ZH正)なのにKO「단추」は「ボタン(釦)」の意で、JAのカタカナ「ボタン」を留め具のbuttonと誤読した取り違え。"
+ },
+ {
+  "root": "prelat",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "高位聖職者"
+   ],
+   "ZH": [
+    "高僧"
+   ],
+   "KO": [
+    "고위성직자"
+   ]
+  },
+  "csv": {
+   "JA": "[宗]高位聖職者",
+   "ZH": "高位神职",
+   "KO": "고위 성직자"
+  },
+  "master": {
+   "ja": "高位聖職者",
+   "zh": "高僧",
+   "ko": "고위성직자"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "高级教士"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "prelat"
+  ],
+  "context_count": 1,
+  "reason": "prelatはキリスト教の高位聖職者だが、ZH「高僧」は仏教僧の含意が強く、JA「高位聖職者」・KO「고위성직자」と宗教的にズレる。"
+ },
+ {
+  "root": "skerc",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "軽快に"
+   ],
+   "ZH": [
+    "小品"
+   ],
+   "KO": [
+    "짧은 연극"
+   ]
+  },
+  "csv": {
+   "JA": "[楽]スケルツォ",
+   "ZH": "诙谐曲",
+   "KO": "스케르초"
+  },
+  "master": {
+   "ja": "軽快に",
+   "zh": "小品",
+   "ko": "짧은 연극"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "skerc"
+  ],
+  "context_count": 1,
+  "reason": "JA「軽快に」は副詞(様態)、ZH「小品」・KO「짧은 연극」は演劇的短編の名詞で品詞・意味が三者で分裂し、語根の核義(諧謔曲/戯れ)が明確に示されていない。"
+ },
+ {
+  "root": "gatj",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ガチャ"
+   ],
+   "ZH": [
+    "匈牙利裤"
+   ],
+   "KO": [
+    "가차바지"
+   ]
+  },
+  "csv": {
+   "JA": "ガチャ",
+   "ZH": "匈牙利裤",
+   "KO": "가차바지"
+  },
+  "master": {
+   "ja": "ガチャ",
+   "zh": "匈牙利裤",
+   "ko": "가차바지"
+  },
+  "rec": {
+   "JA": [
+    "ハンガリー風ズボン"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "gatj"
+  ],
+  "context_count": 1,
+  "reason": "gatj=ハンガリー風のゆったりズボン(gatya)で、ZH「匈牙利裤」KO「가차바지」は正しいが、JAだけ「ガチャ(カプセルトイ)」で無関係の誤り。"
+ },
+ {
+  "root": "kumin",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "クミン"
+   ],
+   "ZH": [
+    "茴香"
+   ],
+   "KO": [
+    "아니스"
+   ]
+  },
+  "csv": {
+   "JA": "[植]クミン",
+   "ZH": "孜然",
+   "KO": "커민"
+  },
+  "master": {
+   "ja": "クミン",
+   "zh": "茴香",
+   "ko": "아니스"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "孜然"
+   ],
+   "KO": [
+    "쿠민"
+   ]
+  },
+  "context_words": [
+   "kumin"
+  ],
+  "context_count": 1,
+  "reason": "kumin=クミン(JA正)。ZH「茴香」はウイキョウ、KO「아니스」はアニスで別植物、いずれもクミン(ZH孜然/KO쿠민)への誤訳。"
+ },
+ {
+  "root": "liturgi",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "礼拝の"
+   ],
+   "ZH": [
+    "礼仪"
+   ],
+   "KO": [
+    "예절"
+   ]
+  },
+  "csv": {
+   "JA": "[宗]礼拝式",
+   "ZH": "礼拜仪式",
+   "KO": "의식"
+  },
+  "master": {
+   "ja": "礼拝の",
+   "zh": "礼仪",
+   "ko": "예절"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "전례"
+   ]
+  },
+  "context_words": [
+   "liturgi"
+  ],
+  "context_count": 1,
+  "reason": "liturgi=典礼/礼拝。KO「예절」は「礼儀作法」で典礼(전례/예배)の誤り、JA礼拝/ZH礼仪と意味がずれる。"
+ },
+ {
+  "root": "stekio",
+  "issue": "root_faithfulness",
+  "wrong": {
+   "JA": [
+    "化学量論"
+   ],
+   "ZH": [
+    "化学计量"
+   ],
+   "KO": [
+    "화학량론"
+   ]
+  },
+  "csv": {
+   "JA": "化学量論",
+   "ZH": "化学计量",
+   "KO": "화학량론"
+  },
+  "master": {
+   "ja": "化学量論",
+   "zh": "化学计量",
+   "ko": "화학량론"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "stekio/metri"
+  ],
+  "context_count": 1,
+  "reason": "stekio単独の語根義(要素/比)でなく合成語stekiometri全体の「化学量論」を当てており全体語訳になっている。"
+ },
+ {
+  "root": "okuler",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "個眼"
+   ],
+   "ZH": [
+    "小眼"
+   ],
+   "KO": [
+    "홑눈"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "個眼",
+   "zh": "小眼",
+   "ko": "홑눈"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "낱눈"
+   ]
+  },
+  "context_words": [
+   "okuler"
+  ],
+  "context_count": 1,
+  "reason": "JA個眼/ZH小眼(=ommatidium個眼)に対しKO「홑눈」は単眼(ocellus)で別構造。個眼ならKOは「낱눈」であるべき。"
+ },
+ {
+  "root": "valenc",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "バランス"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "csv": {
+   "JA": "バランス",
+   "ZH": "瓦朗斯",
+   "KO": "발랑스"
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "ヴァランス"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "valenc"
+  ],
+  "context_count": 1,
+  "reason": "valencはフランスの都市ヴァランス(ZH瓦朗斯・KO발랑스は音写)だが、JA「バランス(balance)」は無関係な語で誤り。"
+ },
+ {
+  "root": "kiloherc",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "kHz"
+   ],
+   "ZH": [],
+   "KO": [
+    "kHz"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "kHz",
+   "zh": "千赫",
+   "ko": "kHz"
+  },
+  "rec": {
+   "JA": [
+    "キロヘルツ"
+   ],
+   "ZH": [],
+   "KO": [
+    "킬로헤르츠"
+   ]
+  },
+  "context_words": [
+   "kiloherc"
+  ],
+  "context_count": 1,
+  "reason": "同種のgigaherc行がギガヘルツと読みを示すのに対し、JA・KOが記号「kHz」のままで学習ルビとして読みになっていない。"
+ },
+ {
+  "root": "teleoste",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "硬骨魚類"
+   ],
+   "ZH": [
+    "真骨鱼类"
+   ],
+   "KO": [
+    "경골어류"
+   ]
+  },
+  "csv": {
+   "JA": "硬骨魚類",
+   "ZH": "真骨鱼类",
+   "KO": "경골어류"
+  },
+  "master": {
+   "ja": "硬骨魚類",
+   "zh": "真骨鱼类",
+   "ko": "경골어류"
+  },
+  "rec": {
+   "JA": [
+    "真骨魚類"
+   ],
+   "ZH": [],
+   "KO": [
+    "진골어류"
+   ]
+  },
+  "context_words": [
+   "teleoste"
+  ],
+  "context_count": 1,
+  "reason": "teleosteoは「真骨類」を指すが、JA硬骨魚類・KO경골어류は上位分類(硬骨魚綱/Osteichthyes)を指しており、正確なZH真骨鱼类と範囲がずれている。"
+ },
+ {
+  "root": "depozici",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "証言する"
+   ],
+   "ZH": [
+    "证明"
+   ],
+   "KO": [
+    "증언하다"
+   ]
+  },
+  "csv": {
+   "JA": "証言する",
+   "ZH": "证明",
+   "KO": "증언하다"
+  },
+  "master": {
+   "ja": "証言する",
+   "zh": "证明",
+   "ko": "증언하다"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "作证"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "depozici"
+  ],
+  "context_count": 1,
+  "reason": "JA/KOは「証言する」だがZH证明は「証明する」で、法廷証言(deposition)の語義から意味がずれている。"
+ },
+ {
+  "root": "kilovolt",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "kV"
+   ],
+   "ZH": [
+    "千伏"
+   ],
+   "KO": [
+    "kV"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "kV",
+   "zh": "千伏",
+   "ko": "kV"
+  },
+  "rec": {
+   "JA": [
+    "キロボルト"
+   ],
+   "ZH": [],
+   "KO": [
+    "킬로볼트"
+   ]
+  },
+  "context_words": [
+   "kilovolt"
+  ],
+  "context_count": 1,
+  "reason": "JA/KOがラテン記号「kV」のまま未翻訳で、ZHの千伏と不整合、学習ルビとして意味を伝えていない。"
+ },
+ {
+  "root": "akvari",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "水槽"
+   ],
+   "ZH": [
+    "水族箱"
+   ],
+   "KO": [
+    "저수조"
+   ]
+  },
+  "csv": {
+   "JA": "水槽",
+   "ZH": "鱼缸",
+   "KO": "수족관"
+  },
+  "master": {
+   "ja": "水槽",
+   "zh": "水族箱",
+   "ko": "저수조"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "수족관"
+   ]
+  },
+  "context_words": [
+   "akvari"
+  ],
+  "context_count": 1,
+  "reason": "akvario=水族館/水槽の意だが、韓国語のみ「저수조(貯水槽・貯水タンク)」で魚を飼う水槽ではなく貯水設備を指し誤訳、日中(水槽/水族箱)とズレている。"
+ },
+ {
+  "root": "leŭs",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "黄土"
+   ],
+   "ZH": [
+    "赭石"
+   ],
+   "KO": [
+    "황토"
+   ]
+  },
+  "csv": {
+   "JA": "黄土",
+   "ZH": "赭石",
+   "KO": "황토"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "黄土"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "leŭs"
+  ],
+  "context_count": 1,
+  "reason": "leŭso=黄土(レス、風成堆積物)で日韓は黄土/황토と正しいが、中国語のみ「赭石(オーカー・赤鉄鉱顔料)」となっており別物で誤り。"
+ },
+ {
+  "root": "kup",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "吸い玉"
+   ],
+   "ZH": [
+    "车厢"
+   ],
+   "KO": [
+    "철도 차량"
+   ]
+  },
+  "csv": {
+   "JA": "吸い玉",
+   "ZH": "拔罐器",
+   "KO": "부항"
+  },
+  "master": {
+   "ja": "吸い玉",
+   "zh": "车厢",
+   "ko": "철도 차량"
+  },
+  "rec": {
+   "JA": [
+    "客車"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "kup"
+  ],
+  "context_count": 1,
+  "reason": "中韓は「车厢/철도 차량(鉄道客車・区画)」で一致するのに、日本語だけ「吸い玉(吸角)」と全く無関係の別義になっており著しくズレている。"
+ },
+ {
+  "root": "embrokaci",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "湿布薬"
+   ],
+   "ZH": [
+    "涂擦剂"
+   ],
+   "KO": [
+    "도찰제"
+   ]
+  },
+  "csv": {
+   "JA": "湿布薬",
+   "ZH": "涂擦剂",
+   "KO": "도찰제"
+  },
+  "master": {
+   "ja": "湿布薬",
+   "zh": "涂擦剂",
+   "ko": "도찰제"
+  },
+  "rec": {
+   "JA": [
+    "塗擦剤"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "embrokaci"
+  ],
+  "context_count": 1,
+  "reason": "embrokacio=擦り込む外用液(塗擦剤)で中韓は涂擦剂/도찰제と正しいが、日本語のみ「湿布薬(貼付・湿布)」で適用法の異なる別概念になっている。"
+ },
+ {
+  "root": "batalion",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "大隊"
+   ],
+   "ZH": [
+    "队"
+   ],
+   "KO": [
+    "운동팀"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]大隊",
+   "ZH": "营",
+   "KO": "대대"
+  },
+  "master": {
+   "ja": "大隊",
+   "zh": "队",
+   "ko": "운동팀"
+  },
+  "rec": {
+   "JA": [
+    "大隊"
+   ],
+   "ZH": [
+    "营"
+   ],
+   "KO": [
+    "대대"
+   ]
+  },
+  "context_words": [
+   "batalion"
+  ],
+  "context_count": 1,
+  "reason": "batalionは軍の「大隊」なのにKOは「운동팀(スポーツチーム)」で完全な誤り、ZHも「队」で汎用的すぎ、JAの正しい「大隊」と不整合。"
+ },
+ {
+  "root": "kuku-nor",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "カッコウ-ノル"
+   ],
+   "ZH": [
+    "布谷-降碳"
+   ],
+   "KO": [
+    "뻐꾸기-노르"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "布谷-淖尔"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "kuku-nor"
+  ],
+  "context_count": 1,
+  "reason": "「nor」部分をZHが「降碳(炭素削減)」と無意味に訳しており、JA「ノル」/KO「노르」の音写と全く不整合。"
+ },
+ {
+  "root": "sibil",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "シビュラ"
+   ],
+   "ZH": [
+    "女巫"
+   ],
+   "KO": [
+    "시빌라"
+   ]
+  },
+  "csv": {
+   "JA": "シビュラ",
+   "ZH": "女巫",
+   "KO": "시빌라"
+  },
+  "master": {
+   "ja": "シビュラ",
+   "zh": "女巫",
+   "ko": "시빌라"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "西比拉"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "sibil"
+  ],
+  "context_count": 1,
+  "reason": "sibilは古代の女預言者「シビュラ」でありZHの「女巫(魔女)」は別概念で誤り、JA/KOの音写と不整合。"
+ },
+ {
+  "root": "arbalest",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "大弓"
+   ],
+   "ZH": [
+    "大弩"
+   ],
+   "KO": [
+    "쇠뇌"
+   ]
+  },
+  "csv": {
+   "JA": "大弓",
+   "ZH": "弩炮",
+   "KO": "쇠뇌"
+  },
+  "master": {
+   "ja": "大弓",
+   "zh": "大弩",
+   "ko": "쇠뇌"
+  },
+  "rec": {
+   "JA": [
+    "石弓"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "arbalest"
+  ],
+  "context_count": 1,
+  "reason": "arbalestは「石弓/弩(クロスボウ)」なのにJAは「大弓(和弓の長弓)」で別物、ZH「大弩」・KO「쇠뇌」と不整合。"
+ },
+ {
+  "root": "susceptibl",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "感受性"
+   ],
+   "ZH": [
+    "磁化率"
+   ],
+   "KO": [
+    "감수율"
+   ]
+  },
+  "csv": {
+   "JA": "感受性",
+   "ZH": "磁化率",
+   "KO": "감수율"
+  },
+  "master": {
+   "ja": "感受性",
+   "zh": "磁化率",
+   "ko": "감수율"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "susceptibl"
+  ],
+  "context_count": 1,
+  "reason": "同一語根なのにZHは「磁化率(磁気限定)」、JAは「感受性(一般的感受)」、KOは「감수율(物理の感受率)」で指す意味範囲が三者バラバラ。"
+ },
+ {
+  "root": "kraz",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "母音融合"
+   ],
+   "ZH": [
+    "音融合"
+   ],
+   "KO": [
+    "모음융합"
+   ]
+  },
+  "csv": {
+   "JA": "母音融合",
+   "ZH": "音融合",
+   "KO": "모음융합"
+  },
+  "master": {
+   "ja": "母音融合",
+   "zh": "音融合",
+   "ko": "모음융합"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "元音融合"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "kraz"
+  ],
+  "context_count": 1,
+  "reason": "krazoは母音融合(crasis)でJA「母音融合」/KO「모음융합」に対しZH「音融合」は「母音」の限定が欠落し不正確。"
+ },
+ {
+  "root": "-gen",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "-天才"
+   ],
+   "ZH": [
+    "-天才"
+   ],
+   "KO": [
+    "-천재"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "-生成/発生"
+   ],
+   "ZH": [
+    "-生成"
+   ],
+   "KO": [
+    "-생성"
+   ]
+  },
+  "context_words": [
+   "-gen"
+  ],
+  "context_count": 1,
+  "reason": "「-gen」は水素・抗原・アレルゲン等に見る「生成・発生」を表す接尾辞なのに、日中韓とも同源異義のgenio「天才」と取り違えた明白な誤訳。"
+ },
+ {
+  "root": "ter-butanol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "地球-ブタノール"
+   ],
+   "ZH": [
+    "地球-丁醇"
+   ],
+   "KO": [
+    "지구-부탄올"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "地球-ブタノール",
+   "zh": "地球-丁醇",
+   "ko": "지구-부탄올"
+  },
+  "rec": {
+   "JA": [
+    "第三級-ブタノール(tert-)"
+   ],
+   "ZH": [
+    "叔-丁醇"
+   ],
+   "KO": [
+    "삼차-부탄올(tert-)"
+   ]
+  },
+  "context_words": [
+   "ter-butanol"
+  ],
+  "context_count": 1,
+  "reason": "「ter」を大地(tero)と解し「地球」と訳しているが、ここは第三級(tert-)を示す化学接頭辞であり三言語すべて誤訳(地球-ブタノールは無意味)。"
+ },
+ {
+  "root": "lob-nor",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "葉-ノル"
+   ],
+   "ZH": [
+    "瓣-降碳"
+   ],
+   "KO": [
+    "식물의 잎-노르"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [
+    "ロプノール(湖)"
+   ],
+   "ZH": [
+    "罗布泊"
+   ],
+   "KO": [
+    "롭노르"
+   ]
+  },
+  "context_words": [
+   "lob-nor"
+  ],
+  "context_count": 1,
+  "reason": "実際は塩湖ロプノール(罗布泊)の固有名なのに「葉/瓣(lobe)」+「nor」に誤分解しており、特に中文「降碳」は無意味で三言語とも訳が破綻している。"
+ },
+ {
+  "root": "patric",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "極印を打つ"
+   ],
+   "ZH": [
+    "贵族"
+   ],
+   "KO": [
+    "귀족"
+   ]
+  },
+  "csv": {
+   "JA": "極印を打つ",
+   "ZH": "贵族",
+   "KO": "귀족"
+  },
+  "master": {
+   "ja": "極印を打つ",
+   "zh": "贵族",
+   "ko": "귀족"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "父型/阳模"
+   ],
+   "KO": [
+    "부형(父型)"
+   ]
+  },
+  "context_words": [
+   "patric"
+  ],
+  "context_count": 1,
+  "reason": "語根patricは母型matricoに対する「父型(打刻用の凸型)」で日本語は正しい領域だが、中韓は同綴り近似のpatricio「貴族」と混同した別義になっている。"
+ },
+ {
+  "root": "pastel",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ドロップ"
+   ],
+   "ZH": [
+    "粉彩"
+   ],
+   "KO": [
+    "드롭스"
+   ]
+  },
+  "csv": {
+   "JA": "[菓]ドロップ",
+   "ZH": "糖果",
+   "KO": "드롭스"
+  },
+  "master": {
+   "ja": "ドロップ",
+   "zh": "粉彩",
+   "ko": "드롭스"
+  },
+  "rec": {
+   "JA": [
+    "パステル"
+   ],
+   "ZH": [],
+   "KO": [
+    "파스텔"
+   ]
+  },
+  "context_words": [
+   "pastel"
+  ],
+  "context_count": 1,
+  "reason": "pastelは画材の「パステル」を指し中文「粉彩」が正しいが、日韓はpastilo「ドロップ(飴)」と混同した別義になっている。"
+ },
+ {
+  "root": "rezignaci",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "甘受して"
+   ],
+   "ZH": [
+    "辞职"
+   ],
+   "KO": [
+    "사임"
+   ]
+  },
+  "csv": {
+   "JA": "あきらめ",
+   "ZH": "放弃",
+   "KO": "체념"
+  },
+  "master": {
+   "ja": "甘受して",
+   "zh": "辞职",
+   "ko": "사임"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "顺从/听天由命"
+   ],
+   "KO": [
+    "체념"
+   ]
+  },
+  "context_words": [
+   "rezignaci"
+  ],
+  "context_count": 1,
+  "reason": "rezignacioは運命への「甘受・諦観」で日本語が正しいが、中韓は職を辞す「辞職・辞任」と取り違えており別義になっている。"
+ },
+ {
+  "root": "angol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "アンゴラ"
+   ],
+   "ZH": [
+    "安哥拉"
+   ],
+   "KO": [
+    "앙고라"
+   ]
+  },
+  "csv": {
+   "JA": "アンゴラ",
+   "ZH": "安哥拉",
+   "KO": "앙고라"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "앙골라"
+   ]
+  },
+  "context_words": [
+   "angol"
+  ],
+  "context_count": 1,
+  "reason": "語根angolは国名アンゴラ(日中は正)だが、韓国語「앙고라」はAngora(アンゴラ織/山羊)であり国名としては誤りで、正しくは「앙골라」。"
+ },
+ {
+  "root": "menad",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "マイナス"
+   ],
+   "ZH": [
+    "酒神女徒"
+   ],
+   "KO": [
+    "마이나스"
+   ]
+  },
+  "csv": {
+   "JA": "マイナス",
+   "ZH": "酒神女徒",
+   "KO": "마이나스"
+  },
+  "master": {
+   "ja": "マイナス",
+   "zh": "酒神女徒",
+   "ko": "마이나스"
+  },
+  "rec": {
+   "JA": [
+    "酒神の女信者(メナス)"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "menad"
+  ],
+  "context_count": 1,
+  "reason": "menadは酒神ディオニュソスの女信者(マイナス)だが、日本語「マイナス」は数学の「minus(負)」と誤読されやすく学習補助として不適切。"
+ },
+ {
+  "root": "andora-la-vel",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "アンドラ-the-帆"
+   ],
+   "ZH": [
+    "安道尔-定冠词-帆"
+   ],
+   "KO": [
+    "안도라-정관사-돛"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "andora-la-vel"
+  ],
+  "context_count": 1,
+  "reason": "「andora-la-vel」はアンドラの首都「アンドラ・ラ・ベリャ(Andorra la Vella、カタルーニャ語 vella=古い)」の地名要素であり、vel を「帆/帆/돛(sail)」と訳すのは固有名詞の誤訳(JA欄の英語「the」も不統一)。"
+ },
+ {
+  "root": "ginseng",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ニンジン"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "csv": {
+   "JA": "ニンジン",
+   "ZH": "人参",
+   "KO": "인삼"
+  },
+  "master": {
+   "ja": "ニンジン",
+   "zh": "人参",
+   "ko": "인삼"
+  },
+  "rec": {
+   "JA": [
+    "朝鮮人参"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ginseng"
+  ],
+  "context_count": 1,
+  "reason": "語根 ginseng は「朝鮮人参(オタネニンジン)」を指すが、JA「ニンジン」は現代日本語では通常セリ科の人参(carrot)を意味し、ZH「人参」・KO「인삼」と齟齬し誤解を招く。"
+ },
+ {
+  "root": "ditiramb",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "酒神賛歌の"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "csv": {
+   "JA": "[詩]酒神賛歌",
+   "ZH": "酒神赞歌",
+   "KO": "찬가"
+  },
+  "master": {
+   "ja": "酒神賛歌の",
+   "zh": "颂歌",
+   "ko": "찬가"
+  },
+  "rec": {
+   "JA": [
+    "酒神賛歌"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ditiramb"
+  ],
+  "context_count": 1,
+  "reason": "JA「酒神賛歌の」に不要な助詞「の」が語尾混入しており、名詞ditiramb(酒神賛歌/ディテュランボス)の訳として不適切。"
+ },
+ {
+  "root": "ace",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "アセ"
+   ],
+   "ZH": [
+    "ace"
+   ],
+   "KO": [
+    "아세"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "ace"
+  ],
+  "context_count": 1,
+  "reason": "ZH欄が未翻訳のラテン文字「ace」のまま残っており中国語訳になっておらず、JA/KOも意味不明の音写のみで語義が示されていない。"
+ },
+ {
+  "root": "dragon",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "竜騎兵"
+   ],
+   "ZH": [
+    "龙"
+   ],
+   "KO": [
+    "용"
+   ]
+  },
+  "csv": {
+   "JA": "[史]竜騎兵",
+   "ZH": "龙骑兵",
+   "KO": "용기병"
+  },
+  "master": {
+   "ja": "竜騎兵",
+   "zh": "龙",
+   "ko": "용"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "龙骑兵"
+   ],
+   "KO": [
+    "용기병"
+   ]
+  },
+  "context_words": [
+   "dragon"
+  ],
+  "context_count": 1,
+  "reason": "「dragono」の語根義は「竜騎兵(騎兵)」で、JA 竜騎兵は正しいが、ZH 龙・KO 용は神話の竜(drako)と取り違えた誤訳。"
+ },
+ {
+  "root": "ladin",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "ラディン語"
+   ],
+   "ZH": [
+    "拉丁语"
+   ],
+   "KO": [
+    "라딘어"
+   ]
+  },
+  "csv": {
+   "JA": "ラディン語",
+   "ZH": "拉丁语",
+   "KO": "라딘어"
+  },
+  "master": {
+   "ja": "ラディン語",
+   "zh": "拉丁语",
+   "ko": "라딘어"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "拉登语(拉丁诺语,雷托罗曼语支)"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "ladin"
+  ],
+  "context_count": 1,
+  "reason": "「ladin」はレト・ロマンス語群のラディン語で、JA ラディン語・KO 라딘어は正しいが、ZH 拉丁语は「ラテン語」を意味し取り違えた誤訳。"
+ },
+ {
+  "root": "kontribuci",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "戦争賠償金"
+   ],
+   "ZH": [
+    "贡献"
+   ],
+   "KO": [
+    "기여하다"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]賠償金",
+   "ZH": "赔款",
+   "KO": "기여금"
+  },
+  "master": {
+   "ja": "戦争賠償金",
+   "zh": "贡献",
+   "ko": "기여하다"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "战争赋金/军事献金"
+   ],
+   "KO": [
+    "전쟁 부담금/징발금"
+   ]
+  },
+  "context_words": [
+   "kontribuci"
+  ],
+  "context_count": 1,
+  "reason": "「kontribucio」は占領地に課す戦争賦課金/軍事献金の意で、JA 戦争賠償金は妥当だが、ZH 贡献・KO 기여하다は一般的「貢献/寄与する」で誤り(併せてKOは動詞形)。"
+ },
+ {
+  "root": "stativ",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "脚"
+   ],
+   "ZH": [
+    "腿"
+   ],
+   "KO": [
+    "사람·동물의 다리"
+   ]
+  },
+  "csv": {
+   "JA": "脚",
+   "ZH": "腿",
+   "KO": "사람·동물의 다리"
+  },
+  "master": {
+   "ja": "脚",
+   "zh": "腿",
+   "ko": "사람·동물의 다리"
+  },
+  "rec": {
+   "JA": [
+    "三脚台/スタンド"
+   ],
+   "ZH": [
+    "三脚架/支架"
+   ],
+   "KO": [
+    "삼각대/받침대"
+   ]
+  },
+  "context_words": [
+   "stativ"
+  ],
+  "context_count": 1,
+  "reason": "「stativo」は器具を載せる三脚・スタンド(支持台)の意なのに、三言語とも「脚/腿/사람·동물의 다리(人・動物の脚)」と解剖学的な脚に誤訳している。"
+ },
+ {
+  "root": "kapot",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "フード付きの長い外套"
+   ],
+   "ZH": [
+    "兜帽"
+   ],
+   "KO": [
+    "두건"
+   ]
+  },
+  "csv": {
+   "JA": "頭巾付き外套",
+   "ZH": "斗篷",
+   "KO": "보닛"
+  },
+  "master": {
+   "ja": "フード付きの長い外套",
+   "zh": "兜帽",
+   "ko": "두건"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "带帽长外套/斗篷"
+   ],
+   "KO": [
+    "후드 달린 긴 외투/망토"
+   ]
+  },
+  "context_words": [
+   "kapot"
+  ],
+  "context_count": 1,
+  "reason": "「kapoto」はフード付きの長い外套/マントで、JAは正しいが、ZH 兜帽・KO 두건は頭巾(=kapuĉo)のみを指し語義が狭すぎる誤り。"
+ },
+ {
+  "root": "doĝ",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "総督"
+   ],
+   "ZH": [
+    "督主教"
+   ],
+   "KO": [
+    "총독"
+   ]
+  },
+  "csv": {
+   "JA": "総督",
+   "ZH": "督主教",
+   "KO": "총독"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "总督(威尼斯执政官)"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "doĝ"
+  ],
+  "context_count": 1,
+  "reason": "ヴェネツィア/ジェノヴァの元首(Doge)はJA 総督・KO 총독が妥当だが、ZH 督主教は該当語ではない不正な訳。"
+ },
+ {
+  "root": "mezostik",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "中 acrostic"
+   ],
+   "ZH": [
+    "中嵌诗"
+   ],
+   "KO": [
+    "중간시"
+   ]
+  },
+  "csv": {
+   "JA": "中 acrostic",
+   "ZH": "中嵌诗",
+   "KO": "중간시"
+  },
+  "master": {
+   "ja": "中 acrostic",
+   "zh": "中嵌诗",
+   "ko": "중간시"
+  },
+  "rec": {
+   "JA": [
+    "中央折句/中間行詩"
+   ],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "mezostik"
+  ],
+  "context_count": 1,
+  "reason": "JAの「中 acrostic」は漢字1字と未訳の英語が混在した壊れた表記で学習語として不適切(ZH 中嵌诗・KO 중간시は成立)。"
+ },
+ {
+  "root": "fuk",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "ヒバマタ"
+   ],
+   "ZH": [
+    "墨角藻"
+   ],
+   "KO": [
+    "모자반"
+   ]
+  },
+  "csv": {
+   "JA": "ヒバマタ",
+   "ZH": "海带",
+   "KO": "해초"
+  },
+  "master": {
+   "ja": "ヒバマタ",
+   "zh": "墨角藻",
+   "ko": "모자반"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "푸쿠스속"
+   ]
+  },
+  "context_words": [
+   "fuk"
+  ],
+  "context_count": 1,
+  "reason": "「fuko」はヒバマタ属(Fucus)でJA・ZHは一致するが、KO 모자반は別属のホンダワラ属(Sargassum)を指しズレている。"
+ },
+ {
+  "root": "kilobit",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [
+    "kb"
+   ],
+   "ZH": [
+    "千比特"
+   ],
+   "KO": [
+    "kb"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "kb",
+   "zh": "千比特",
+   "ko": "kb"
+  },
+  "rec": {
+   "JA": [
+    "キロビット"
+   ],
+   "ZH": [],
+   "KO": [
+    "킬로비트"
+   ]
+  },
+  "context_words": [
+   "kilobit"
+  ],
+  "context_count": 1,
+  "reason": "ZHは千比特と訳出しているのに、JA・KOは記号「kb」のまま未訳で学習補助として不十分。"
+ },
+ {
+  "root": "cend",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "セント"
+   ],
+   "ZH": [
+    "分"
+   ],
+   "KO": [
+    "데시"
+   ]
+  },
+  "csv": {
+   "JA": "[貨]セント",
+   "ZH": "分币",
+   "KO": "센트"
+  },
+  "master": {
+   "ja": "セント",
+   "zh": "分",
+   "ko": "데시"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "센트"
+   ]
+  },
+  "context_words": [
+   "cend"
+  ],
+  "context_count": 1,
+  "reason": "cend(セント=通貨の1/100)の韓国語訳が『데시』=deci接頭辞になっており(JAセント/ZH分は正)、正しくは『센트』であるべき明確な誤訳。"
+ },
+ {
+  "root": "ej-inaŭgur",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [
+    "場所-式を行う"
+   ],
+   "ZH": [
+    "场所-举行开幕典礼"
+   ],
+   "KO": [
+    "장소-개막식·취임식 등 공식 의"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "장소-개막식·취임식 등 공식 의식을 거행하다"
+   ]
+  },
+  "context_words": [
+   "fajr/ej-inaŭgur"
+  ],
+  "context_count": 1,
+  "reason": "韓国語訳が『…공식 의』で語中切断されており(『공식 의식』等が欠落)、未完成で不正な記述となっている。"
+ },
+ {
+  "root": "karet",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "カレッタ"
+   ],
+   "ZH": [
+    "蠵龟"
+   ],
+   "KO": [
+    "붉은바다거북"
+   ]
+  },
+  "csv": {
+   "JA": "カレッタ",
+   "ZH": "蠵龟",
+   "KO": "붉은바다거북"
+  },
+  "master": {
+   "ja": "カレッタ",
+   "zh": "蠵龟",
+   "ko": "붉은바다거북"
+  },
+  "rec": {
+   "JA": [
+    "タイマイ"
+   ],
+   "ZH": [
+    "玳瑁"
+   ],
+   "KO": [
+    "매부리바다거북"
+   ]
+  },
+  "context_words": [
+   "karet"
+  ],
+  "context_count": 1,
+  "reason": "kareto(タイマイ/Eretmochelys、鼈甲karetŝeloを産する海亀)を、綴りの似たラテン属名Caretta(アカウミガメ=loggerhead)と取り違え三言語とも別種に誤訳している。"
+ },
+ {
+  "root": "sarong",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "サロン"
+   ],
+   "ZH": [
+    "纱笼"
+   ],
+   "KO": [
+    "살롱"
+   ]
+  },
+  "csv": {
+   "JA": "[服]サロン(腰布)",
+   "ZH": "腰布",
+   "KO": "사롱"
+  },
+  "master": {
+   "ja": "サロン",
+   "zh": "纱笼",
+   "ko": "살롱"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "사롱"
+   ]
+  },
+  "context_words": [
+   "sarong"
+  ],
+  "context_count": 1,
+  "reason": "sarong(腰布の民族衣装)の韓国語訳『살롱』は『サロン(応接室・店)』を指し衣装のsarongではなく(ZH纱笼は正)、正しくは『사롱』である。"
+ },
+ {
+  "root": "fiteŭm",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "タマシャジン属"
+   ],
+   "ZH": [
+    "蓝钟花属"
+   ],
+   "KO": [
+    "피테우마속"
+   ]
+  },
+  "csv": {
+   "JA": "タマシャジン属",
+   "ZH": "蓝钟花属",
+   "KO": "피테우마속"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "牧根草属"
+   ],
+   "KO": []
+  },
+  "context_words": [
+   "fiteŭm"
+  ],
+  "context_count": 1,
+  "reason": "fiteŭm(Phyteuma/タマシャジン属)の中国語訳『蓝钟花属』は別属Jasione(27-291)の中国名で、Phyteumaは『牧根草属』が正しく属を混同している。"
+ },
+ {
+  "root": "sensac",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [
+    "感覚"
+   ],
+   "ZH": [
+    "轰动"
+   ],
+   "KO": [
+    "감각"
+   ]
+  },
+  "csv": {
+   "JA": "感覚",
+   "ZH": "轰动",
+   "KO": "감각"
+  },
+  "master": {
+   "ja": "感覚",
+   "zh": "轰动",
+   "ko": "감각"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": []
+  },
+  "context_words": [
+   "sensac"
+  ],
+  "context_count": 1,
+  "reason": "sensac(sensacio)は『世間の反響=センセーション』と『感覚的印象』の両義を持つが、中国語のみ『轰动(反響)』を採り日本語『感覚』・韓国語『감각』と意味がズレている。"
+ },
+ {
+  "root": "franc",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "法"
+   ],
+   "KO": [
+    "법"
+   ]
+  },
+  "csv": {
+   "JA": "フランス",
+   "ZH": "法国",
+   "KO": "프랑스인"
+  },
+  "master": {
+   "ja": "フランスの",
+   "zh": "法",
+   "ko": "법"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "法国的・法语"
+   ],
+   "KO": [
+    "프랑스의"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "KO「법」は漢字「法(法律)」の音写変換ミスで『フランス』を意味せず、ZH「法」も単独では法律/方法と紛らわしくJA(フランスの)と乖離する。"
+ },
+ {
+  "root": "brigad",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "운동팀"
+   ]
+  },
+  "csv": {
+   "JA": "[軍]旅団",
+   "ZH": "旅团",
+   "KO": "여단"
+  },
+  "master": {
+   "ja": "旅団",
+   "zh": "队",
+   "ko": "운동팀"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "여단・작업반"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "brigad=旅団/作業班だがKOのみ「운동팀(スポーツチーム)」と誤訳し、JA旅団/ZH队と乖離している。"
+ },
+ {
+  "root": "forst",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "조림림"
+   ]
+  },
+  "csv": {
+   "JA": "育成林",
+   "ZH": "人工林",
+   "KO": "조림림"
+  },
+  "master": {
+   "ja": "育成林",
+   "zh": "人工林",
+   "ko": "조림림"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "산림・조림지"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "KO「조림림」は「림」が重複した綴り誤りで、正しい単語を成していない。"
+ },
+ {
+  "root": "ostr",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "감"
+   ]
+  },
+  "csv": {
+   "JA": "[貝]カキ",
+   "ZH": "牡蛎",
+   "KO": "굴"
+  },
+  "master": {
+   "ja": "カキ",
+   "zh": "牡蛎",
+   "ko": "감"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "굴"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "KO「감」は柿の意味で、ostr(牡蠣)の訳として全くの誤り。例perl/ostr(真珠貝)からも굴が正しい。"
+ },
+ {
+  "root": "pol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "波"
+   ],
+   "KO": [
+    "물결"
+   ]
+  },
+  "csv": {
+   "JA": "ポーランド",
+   "ZH": "波兰",
+   "KO": "폴란드인"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "波兰人/波兰的"
+   ],
+   "KO": [
+    "폴란드(사람)"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "pol=ポーランド/ポーランド人だが、ZH「波」・KO「물결」は波・さざ波の意でondoと取り違えた重大な誤訳(例pol/uj=ポーランド)。"
+ },
+ {
+  "root": "franĝ",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "이삭"
+   ]
+  },
+  "csv": {
+   "JA": "[服]房飾り",
+   "ZH": "流苏",
+   "KO": "술 장식"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "술(장식)"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "franĝo=房飾り/フリンジだが、KO「이삭」は穀物の穂を意味しJA/ZH(房飾り/穗)とズレた誤訳。"
+ },
+ {
+  "root": "artifik",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "人工"
+   ],
+   "KO": [
+    "인공"
+   ]
+  },
+  "csv": {
+   "JA": "術策",
+   "ZH": "诡计",
+   "KO": "술책"
+  },
+  "master": {
+   "ja": "作為",
+   "zh": "人工",
+   "ko": "인공"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "诡计/巧计"
+   ],
+   "KO": [
+    "책략/술책"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "artifiko=策略/巧妙な手管(例artifik/ul=策士)だが、ZH「人工」・KO「인공」は人工的という別義に訳している。"
+ },
+ {
+  "root": "privat",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "非官方的"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "私的な",
+   "ZH": "私人",
+   "KO": "사적인"
+  },
+  "master": {
+   "ja": "私的な",
+   "zh": "非官方的",
+   "ko": "사적인"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "私人的/私有的"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "privata=私的な/私有のだが、ZH「非官方的」は非公式のの意で、JA/KO(私的/사적)や例privat/ig(私有化)とズレる。"
+ },
+ {
+  "root": "manipul",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "使用"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "(を)操作する",
+   "ZH": "操控",
+   "KO": "조작하다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "操作/操纵"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "manipuli=操作する/操るだが、ZH「使用」は単に使うの意で弱く、JA「操作する」・KO「조작하다」とズレる。"
+ },
+ {
+  "root": "murd",
+  "issue": "learning_quality",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "살"
+   ]
+  },
+  "csv": {
+   "JA": "(を)殺害する",
+   "ZH": "杀害",
+   "KO": "살해하다"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "살해하다/죽이다"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "KO「살」は単独では肉/矢等を指し殺害の語義を成さず、語義不成立の不完全な訳(殺害はJA/ZHのように明示すべき)。"
+ },
+ {
+  "root": "neon",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "霓虹"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "ネオン",
+   "ZH": "霓虹",
+   "KO": "네온"
+  },
+  "master": {
+   "ja": "ネオン",
+   "zh": "霓虹",
+   "ko": "네온"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "氖"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "neon=元素ネオンでJA/KOは音写だが、ZH「霓虹」はネオン管/虹の意で元素(氖)とズレる。"
+ },
+ {
+  "root": "handikap",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "让步"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "ハンデ",
+   "ZH": "让步",
+   "KO": "핸디"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "障碍/劣势/让分"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "handikapo=ハンデ/障害だが、ZH「让步」は譲歩の意で、JA「ハンデ」・KO「핸디」とズレる。"
+ },
+ {
+  "root": "lob",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "식물의 잎"
+   ]
+  },
+  "csv": {
+   "JA": "[解]葉",
+   "ZH": "叶片",
+   "KO": "엽(葉)"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "열편/(둥근) 돌출부"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "lobo=(丸い)裂片/葉状部だが、KO「식물의 잎」は植物の葉そのものを指す誤訳。"
+ },
+ {
+  "root": "helik",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "螺旋"
+   ],
+   "KO": [
+    "나선"
+   ]
+  },
+  "csv": {
+   "JA": "[動]カタツムリ",
+   "ZH": "蜗牛",
+   "KO": "달팽이"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "蜗牛"
+   ],
+   "KO": [
+    "달팽이"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "heliko=カタツムリ(例helik/poŝt=カタツムリ郵便)だが、ZH「螺旋」・KO「나선」は螺旋という別義に寄り、JA「カタツムリ」とズレる。"
+ },
+ {
+  "root": "egid",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "동"
+   ]
+  },
+  "csv": {
+   "JA": "アテナの盾",
+   "ZH": "神盾",
+   "KO": "방패"
+  },
+  "master": {
+   "ja": "アイギス",
+   "zh": "盾",
+   "ko": "동"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "아이기스"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "KO欄「동」はアイギス(egido=盾)の意味を持たず、切り詰め・破損と思われる無意味な単字。"
+ },
+ {
+  "root": "centim",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "데시"
+   ]
+  },
+  "csv": {
+   "JA": "[貨]サンチーム",
+   "ZH": "分币",
+   "KO": "상팀"
+  },
+  "master": {
+   "ja": "サンチーム",
+   "zh": "分",
+   "ko": "데시"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "상팀"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "centimはフランの補助通貨サンチームだが、KOはSI接頭辞「데시(deci)」となっており全くの別義で誤り。"
+ },
+ {
+  "root": "fenkol",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "아니스"
+   ]
+  },
+  "csv": {
+   "JA": "[植]ウイキョウ",
+   "ZH": "茴香",
+   "KO": "회향풀"
+  },
+  "master": {
+   "ja": "ウイキョウ",
+   "zh": "茴香",
+   "ko": "아니스"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "회향"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "fenkolはウイキョウ(fennel)だが、KOは「아니스(anise)」と別植物に取り違えている(JA/ZHは正しく茴香)。"
+ },
+ {
+  "root": "traduk-program",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [
+    "プログラム"
+   ],
+   "ZH": [
+    "节目单"
+   ],
+   "KO": [
+    "프로그램"
+   ]
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "翻訳する-プログラム",
+   "zh": "翻译-节目单",
+   "ko": "번역하다-프로그램"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "程序"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "例語は「翻訳ソフト(program=ソフトウェア)」の意なのに、中国語だけ「节目单(番組表/演目リスト)」という別義を選んでおり、日韓のプログラム(汎用)とズレる。"
+ },
+ {
+  "root": "dali",
+  "issue": "malformed",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "未対応"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "[植]ダリア",
+   "ZH": "大丽花",
+   "KO": "달리아"
+  },
+  "master": {
+   "ja": "ダリア",
+   "zh": "未対応",
+   "ko": "달리아"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "大丽花"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "ZH欄が「未対応」という日本語の未翻訳プレースホルダーになっており、Dahlia(ダリア)の中国語訳が欠落している。"
+ },
+ {
+  "root": "magazin",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "报纸"
+   ],
+   "KO": [
+    "신문"
+   ]
+  },
+  "csv": {
+   "JA": "雑誌",
+   "ZH": "报纸",
+   "KO": "신문"
+  },
+  "master": {
+   "ja": "雑誌",
+   "zh": "报纸",
+   "ko": "신문"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "杂志"
+   ],
+   "KO": [
+    "잡지"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "magazinは「雑誌」の意(JA雑誌が正)だが、ZH「报纸」・KO「신문」はいずれも新聞で、gazeto/新聞と取り違えた誤訳。"
+ },
+ {
+  "root": "ŝalup",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "목장"
+   ]
+  },
+  "csv": {
+   "JA": "[海]ランチ",
+   "ZH": "艇",
+   "KO": "보트"
+  },
+  "master": {},
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "거룻배"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "ŝalupは小型帆船(スループ/はしけ)を指すが、KO「목장」は牧場を意味しており全く無関係の誤訳。"
+ },
+ {
+  "root": "cikori",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "엔다이브"
+   ]
+  },
+  "csv": {
+   "JA": "[植]キクヂシャ",
+   "ZH": "菊苣",
+   "KO": "치커리"
+  },
+  "master": {
+   "ja": "チコリー",
+   "zh": "菊苣",
+   "ko": "엔다이브"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "치커리"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "cikoriはチコリー(JAチコリー・ZH菊苣)だが、KO「엔다이브」は別種のエンダイブ(Cichorium endivia)を指しており種がずれている。"
+ },
+ {
+  "root": "merlang",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "鳕鱼"
+   ],
+   "KO": [
+    "대구"
+   ]
+  },
+  "csv": {
+   "JA": "[魚]メルラン",
+   "ZH": "鱈鱼",
+   "KO": "메를랑"
+  },
+  "master": {
+   "ja": "メルラン",
+   "zh": "鳕鱼",
+   "ko": "대구"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "牙鳕"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "merlangはメルラン(ホワイティング、Merlangius)を指すが、ZH「鳕鱼」・KO「대구」はいずれも総称的なタラで種がずれ、JAメルランと不整合。"
+ },
+ {
+  "root": "elektuari",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "연고약"
+   ]
+  },
+  "csv": {
+   "JA": "舐剤",
+   "ZH": "糖浆药剂",
+   "KO": "연고약"
+  },
+  "master": {
+   "ja": "舐剤",
+   "zh": "糖浆药剂",
+   "ko": "연고약"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [],
+   "KO": [
+    "연약"
+   ]
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "electuaryは舐めて服用する内服練り薬でJA「舐剤」・ZH「糖浆药剂」は経口だが、KO「연고약」は塗る軟膏を指し内服/外用が食い違っている。"
+ },
+ {
+  "root": "fant",
+  "issue": "mistranslation",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "插孔"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "ジャック",
+   "ZH": "插孔",
+   "KO": "잭"
+  },
+  "master": {
+   "ja": "ジャック",
+   "zh": "插孔",
+   "ko": "잭"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "(纸牌的)杰克/J"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "fanto はトランプの「ジャック(絵札)/従者」の意で、ZH「插孔」は電子端子の jack と取り違えた同綴り異義語の誤訳。"
+ },
+ {
+  "root": "inkvizitor",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "审判官"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "[史]宗教裁判官",
+   "ZH": "宗教审判官",
+   "KO": "종교재판관"
+  },
+  "master": {
+   "ja": "異端審問官",
+   "zh": "审判官",
+   "ko": "종교재판관"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "宗教裁判官/异端审判官"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "ZH「审判官」は一般的な裁判官の意で、JA「異端審問官」・KO「종교재판관」が持つ宗教審問官(inquisitor)の含意が欠落している。"
+ },
+ {
+  "root": "lent",
+  "issue": "jck_inconsistency",
+  "wrong": {
+   "JA": [],
+   "ZH": [
+    "扁豆"
+   ],
+   "KO": []
+  },
+  "csv": {
+   "JA": "レンズマメ",
+   "ZH": "小扁豆",
+   "KO": "렌즈콩"
+  },
+  "master": {
+   "ja": "レンズ豆",
+   "zh": "扁豆",
+   "ko": "렌즈콩"
+  },
+  "rec": {
+   "JA": [],
+   "ZH": [
+    "小扁豆"
+   ],
+   "KO": []
+  },
+  "context_words": [],
+  "context_count": 0,
+  "reason": "ZHの扁豆は主にフジマメ(Lablab)や平たい豆一般を指して曖昧で、JAレンズ豆・KO렌즈콩(いずれもlentil=レンズ豆)と不整合。小扁豆が語根に忠実。"
+ }
+]

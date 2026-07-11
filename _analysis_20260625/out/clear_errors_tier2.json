@@ -1,0 +1,1317 @@
+[
+ {
+  "word": "adenozin-tri/fosf/at/a",
+  "gold": "adenozin-tri/fosf/at/a",
+  "app": "adenozin/-/tri/fosf/at/a"
+ },
+ {
+  "word": "advokat-konsil/ant/o",
+  "gold": "advokat-konsil/ant/o",
+  "app": "advokat/-/konsil/ant/o"
+ },
+ {
+  "word": "alfa-dis/er/ig^/o",
+  "gold": "alfa-dis/er/iĝ/o",
+  "app": "alfa/-/dis/er/iĝ/o"
+ },
+ {
+  "word": "alfa-korpuskl/oj",
+  "gold": "alfa-korpuskl/oj",
+  "app": "alfa/-/korpuskl/oj"
+ },
+ {
+  "word": "alfa-partikl/oj",
+  "gold": "alfa-partikl/oj",
+  "app": "alfa/-/partikl/oj"
+ },
+ {
+  "word": "ananas-suk/o",
+  "gold": "ananas-suk/o",
+  "app": "ananas/-/suk/o"
+ },
+ {
+  "word": "Antigv/o-Barbud/o",
+  "gold": "antigv/o-barbud/o",
+  "app": "antigv/o-/barbud/o"
+ },
+ {
+  "word": "as-temp/o",
+  "gold": "as-temp/o",
+  "app": "as-/temp/o"
+ },
+ {
+  "word": "AU^-kombin/il/o",
+  "gold": "aŭ-kombin/il/o",
+  "app": "aŭ-/kombin/il/o"
+ },
+ {
+  "word": "Au^str/i/o-Hungari/o",
+  "gold": "aŭstr/i/o-hungari/o",
+  "app": "aŭstr/io-/hungar/io"
+ },
+ {
+  "word": "a-vort/o",
+  "gold": "a-vort/o",
+  "app": "a-/vort/o"
+ },
+ {
+  "word": "Bel-Insul/o",
+  "gold": "bel-insul/o",
+  "app": "bel/-/insul/o"
+ },
+ {
+  "word": "Film-Festival/o",
+  "gold": "film-festival/o",
+  "app": "film/-/festival/o"
+ },
+ {
+  "word": "beta-dis/er/ig^/o",
+  "gold": "beta-dis/er/iĝ/o",
+  "app": "beta/-/dis/er/iĝ/o"
+ },
+ {
+  "word": "Bosni/o-Hercegovin/o",
+  "gold": "bosni/o-hercegovin/o",
+  "app": "bosni/o-/hercegovin/o"
+ },
+ {
+  "word": "centi-",
+  "gold": "centi-",
+  "app": "cent/i-"
+ },
+ {
+  "word": "Centr-Afrik/a",
+  "gold": "centr-afrik/a",
+  "app": "centr/-/afrik/a"
+ },
+ {
+  "word": "Centr-Afrik/o",
+  "gold": "centr-afrik/o",
+  "app": "centr/-/afrik/o"
+ },
+ {
+  "word": "Cseh-kurs/o",
+  "gold": "cseh-kurs/o",
+  "app": "cseh-/kurs/o"
+ },
+ {
+  "word": "c^ef-",
+  "gold": "ĉef-",
+  "app": "ĉef/-"
+ },
+ {
+  "word": "C^e-metod/o",
+  "gold": "ĉe-metod/o",
+  "app": "ĉe-/metod/o"
+ },
+ {
+  "word": "c^i-flank/e",
+  "gold": "ĉi-flank/e",
+  "app": "ĉi-/flank/e"
+ },
+ {
+  "word": "c^i-foj/e",
+  "gold": "ĉi-foj/e",
+  "app": "ĉi-/foj/e"
+ },
+ {
+  "word": "c^i-jar/a",
+  "gold": "ĉi-jar/a",
+  "app": "ĉi-/jar/a"
+ },
+ {
+  "word": "c^i-jar/e",
+  "gold": "ĉi-jar/e",
+  "app": "ĉi-/jar/e"
+ },
+ {
+  "word": "c^i-kun/e",
+  "gold": "ĉi-kun/e",
+  "app": "ĉi-/kun/e"
+ },
+ {
+  "word": "c^i-land/a",
+  "gold": "ĉi-land/a",
+  "app": "ĉi-/land/a"
+ },
+ {
+  "word": "c^i-maten/e",
+  "gold": "ĉi-maten/e",
+  "app": "ĉi-/maten/e"
+ },
+ {
+  "word": "c^i-moment/e",
+  "gold": "ĉi-moment/e",
+  "app": "ĉi-/moment/e"
+ },
+ {
+  "word": "C^in/a-Japan/a",
+  "gold": "ĉin/a-japan/a",
+  "app": "ĉin/a-/japan/a"
+ },
+ {
+  "word": "c^i-nokt/e",
+  "gold": "ĉi-nokt/e",
+  "app": "ĉi-/nokt/e"
+ },
+ {
+  "word": "c^i-okaz/e",
+  "gold": "ĉi-okaz/e",
+  "app": "ĉi-/okaz/e"
+ },
+ {
+  "word": "c^i-pri/e",
+  "gold": "ĉi-pri/e",
+  "app": "ĉi-/pri/e"
+ },
+ {
+  "word": "c^i-rilat/e",
+  "gold": "ĉi-rilat/e",
+  "app": "ĉi-/rilat/e"
+ },
+ {
+  "word": "c^i-semajn/e",
+  "gold": "ĉi-semajn/e",
+  "app": "ĉi-/semajn/e"
+ },
+ {
+  "word": "c^i-sub/e",
+  "gold": "ĉi-sub/e",
+  "app": "ĉi-/sub/e"
+ },
+ {
+  "word": "c^i-supr/e",
+  "gold": "ĉi-supr/e",
+  "app": "ĉi-/supr/e"
+ },
+ {
+  "word": "c^i-tie/a",
+  "gold": "ĉi-tie/a",
+  "app": "ĉi-/tie/a"
+ },
+ {
+  "word": "c^i-tie/ul/o",
+  "gold": "ĉi-tie/ul/o",
+  "app": "ĉi-/tie/ul/o"
+ },
+ {
+  "word": "c^i-vesper/e",
+  "gold": "ĉi-vesper/e",
+  "app": "ĉi-/vesper/e"
+ },
+ {
+  "word": "Dalai-lama/o",
+  "gold": "dalai-lama/o",
+  "app": "dalai-/lama/o"
+ },
+ {
+  "word": "deci-",
+  "gold": "deci-",
+  "app": "dec/i-"
+ },
+ {
+  "word": "deka-",
+  "gold": "deka-",
+  "app": "dek/a-"
+ },
+ {
+  "word": "dek-du/a",
+  "gold": "dek-du/a",
+  "app": "dek/-dua"
+ },
+ {
+  "word": "dek-kvar/a",
+  "gold": "dek-kvar/a",
+  "app": "dek/-/kvar/a"
+ },
+ {
+  "word": "dek-kvin/a",
+  "gold": "dek-kvin/a",
+  "app": "dek/-/kvin/a"
+ },
+ {
+  "word": "dek-ses/a",
+  "gold": "dek-ses/a",
+  "app": "dek/-/ses/a"
+ },
+ {
+  "word": "dek-tri/a",
+  "gold": "dek-tri/a",
+  "app": "dek/-/tri/a"
+ },
+ {
+  "word": "dis-",
+  "gold": "dis-",
+  "app": "dis/-"
+ },
+ {
+  "word": "du/on-",
+  "gold": "du/on-",
+  "app": "du/on/-"
+ },
+ {
+  "word": "-ebl-",
+  "gold": "-ebl-",
+  "app": "-/ebl/-"
+ },
+ {
+  "word": "Ebur-Bord/o",
+  "gold": "ebur-bord/o",
+  "app": "ebur/-/bord/o"
+ },
+ {
+  "word": "Edo-epok/o",
+  "gold": "edo-epok/o",
+  "app": "edo-/epok/o"
+ },
+ {
+  "word": "E-Dom/o",
+  "gold": "e-dom/o",
+  "app": "e-/dom/o"
+ },
+ {
+  "word": "eks-",
+  "gold": "eks-",
+  "app": "eks/-"
+ },
+ {
+  "word": "eksport-import/a",
+  "gold": "eksport-import/a",
+  "app": "eksport/-/import/a"
+ },
+ {
+  "word": "e-libr/o",
+  "gold": "e-libr/o",
+  "app": "e-/libr/o"
+ },
+ {
+  "word": "El-Salvador/o",
+  "gold": "el-salvador/o",
+  "app": "el-/salvador/o"
+ },
+ {
+  "word": "-em/ul/o",
+  "gold": "-em/ul/o",
+  "app": "-/em/ul/o"
+ },
+ {
+  "word": "-end-",
+  "gold": "-end-",
+  "app": "-/end/-"
+ },
+ {
+  "word": "ekster-land/e",
+  "gold": "ekster-land/e",
+  "app": "ekster/-/land/e"
+ },
+ {
+  "word": "en/spez/o-font/o",
+  "gold": "en/spez/o-font/o",
+  "app": "en/spez/o-/font/o"
+ },
+ {
+  "word": "Esperant/o-mov/ad/o",
+  "gold": "esperant/o-mov/ad/o",
+  "app": "esperant/o-/mov/ad/o"
+ },
+ {
+  "word": "Esperant/o-tip/ar/o",
+  "gold": "esperant/o-tip/ar/o",
+  "app": "esperant/o-/tip/ar/o"
+ },
+ {
+  "word": "-estr-",
+  "gold": "-estr-",
+  "app": "-/estr/-"
+ },
+ {
+  "word": "event/o-entrepren/o",
+  "gold": "event/o-entrepren/o",
+  "app": "event/o-/entrepren/o"
+ },
+ {
+  "word": "e-vort/o",
+  "gold": "e-vort/o",
+  "app": "e-/vort/o"
+ },
+ {
+  "word": "foli/o-elektr/o/skop/o",
+  "gold": "foli/o-elektr/o/skop/o",
+  "app": "foli/o-/elektr/o/skop/o"
+ },
+ {
+  "word": "for-",
+  "gold": "for-",
+  "app": "for/-"
+ },
+ {
+  "word": "-form/a",
+  "gold": "-form/a",
+  "app": "-/form/a"
+ },
+ {
+  "word": "Franc-Jozef/a",
+  "gold": "franc-jozef/a",
+  "app": "franc/-/jozef/a"
+ },
+ {
+  "word": "Fuj^i-mont/o",
+  "gold": "fuĵi-mont/o",
+  "app": "fuĵi-/mont/o"
+ },
+ {
+  "word": "gama-dis/er/ig^/o",
+  "gold": "gama-dis/er/iĝ/o",
+  "app": "gama/-/dis/er/iĝ/o"
+ },
+ {
+  "word": "Gaza-stri/o",
+  "gold": "gaza-stri/o",
+  "app": "gaza/-/stri/o"
+ },
+ {
+  "word": "general-/leu^tenant/o",
+  "gold": "general-/leŭtenant/o",
+  "app": "general/-/leŭtenant/o"
+ },
+ {
+  "word": "giga-",
+  "gold": "giga-",
+  "app": "gig/a-"
+ },
+ {
+  "word": "Mont/e-Krist/o",
+  "gold": "mont/e-krist/o",
+  "app": "mont/e-/krist/o"
+ },
+ {
+  "word": "San-Bernard/o",
+  "gold": "san-bernard/o",
+  "app": "san/-/bernard/o"
+ },
+ {
+  "word": "Gvine/o-Bisau^/o",
+  "gold": "gvine/o-bisaŭ/o",
+  "app": "gvine/o-/bisaŭ/o"
+ },
+ {
+  "word": "g^is-",
+  "gold": "ĝis-",
+  "app": "ĝis/-"
+ },
+ {
+  "word": "-hav/a",
+  "gold": "-hav/a",
+  "app": "-/hav/a"
+ },
+ {
+  "word": "H-bomb/o",
+  "gold": "h-bomb/o",
+  "app": "h-/bomb/o"
+ },
+ {
+  "word": "HIV-infekt/it/o",
+  "gold": "hiv-infekt/it/o",
+  "app": "hiv-/infekt/it/o"
+ },
+ {
+  "word": "iel/e-tiel/e",
+  "gold": "iel/e-tiel/e",
+  "app": "iel/e-/tiel/e"
+ },
+ {
+  "word": "iel/e-tra/pel/e",
+  "gold": "iel/e-tra/pel/e",
+  "app": "iel/e-/tra/pel/e"
+ },
+ {
+  "word": "-iliard-",
+  "gold": "-iliard-",
+  "app": "-/ili/ard-"
+ },
+ {
+  "word": "-ilion-",
+  "gold": "-ilion-",
+  "app": "-/ili/on-"
+ },
+ {
+  "word": "-ind-",
+  "gold": "-ind-",
+  "app": "-/ind/-"
+ },
+ {
+  "word": "-ing-",
+  "gold": "-ing-",
+  "app": "-/ing/-"
+ },
+ {
+  "word": "Insekt/o-vek/ig^/o",
+  "gold": "insekt/o-vek/iĝ/o",
+  "app": "insekt/o-/vek/iĝ/o"
+ },
+ {
+  "word": "inter-",
+  "gold": "inter-",
+  "app": "inter/-"
+ },
+ {
+  "word": "Inter/ret-per/ant/o",
+  "gold": "inter/ret-per/ant/o",
+  "app": "inter/ret/-/per/ant/o"
+ },
+ {
+  "word": "ir/o-re/ir/o",
+  "gold": "ir/o-re/ir/o",
+  "app": "ir/o-/re/ir/o"
+ },
+ {
+  "word": "-ism-",
+  "gold": "-ism-",
+  "app": "-/ism/-"
+ },
+ {
+  "word": "is-temp/o",
+  "gold": "is-temp/o",
+  "app": "is-/temp/o"
+ },
+ {
+  "word": "i-vort/o",
+  "gold": "i-vort/o",
+  "app": "i-/vort/o"
+ },
+ {
+  "word": "Japan-Brit/a",
+  "gold": "japan-brit/a",
+  "app": "japan/-/brit/a"
+ },
+ {
+  "word": "-jar/a",
+  "gold": "-jar/a",
+  "app": "-/jar/a"
+ },
+ {
+  "word": "-jar/ag^/a",
+  "gold": "-jar/aĝ/a",
+  "app": "-/jar/aĝ/a"
+ },
+ {
+  "word": "kabl/o-ret/o",
+  "gold": "kabl/o-ret/o",
+  "app": "kabl/o-/ret/o"
+ },
+ {
+  "word": "Kab/o-Verd/o",
+  "gold": "kab/o-verd/o",
+  "app": "kab/o-/verd/o"
+ },
+ {
+  "word": "KAJ-kombin/il/o",
+  "gold": "kaj-kombin/il/o",
+  "app": "kaj/-/kombin/il/o"
+ },
+ {
+  "word": "kaj-sign/o",
+  "gold": "kaj-sign/o",
+  "app": "kaj/-/sign/o"
+ },
+ {
+  "word": "-kap/a",
+  "gold": "-kap/a",
+  "app": "-/kap/a"
+ },
+ {
+  "word": "kilo-",
+  "gold": "kilo-",
+  "app": "kil/o-"
+ },
+ {
+  "word": "Kiot/o-protokol/o",
+  "gold": "kiot/o-protokol/o",
+  "app": "kiot/o-/protokol/o"
+ },
+ {
+  "word": "kontrau^-",
+  "gold": "kontraŭ-",
+  "app": "kontraŭ/-"
+ },
+ {
+  "word": "kontrau^-manifestaci/o",
+  "gold": "kontraŭ-manifestaci/o",
+  "app": "kontraŭ/-/manifestaci/o"
+ },
+ {
+  "word": "Kopenhag/o-inter/konsent/o",
+  "gold": "kopenhag/o-inter/konsent/o",
+  "app": "kopenhag/o-/inter/konsent/o"
+ },
+ {
+  "word": "krom-",
+  "gold": "krom-",
+  "app": "krom/-"
+ },
+ {
+  "word": "Kuk-Insul/ar/o",
+  "gold": "kuk-insul/ar/o",
+  "app": "kuk/-/insul/ar/o"
+ },
+ {
+  "word": "Kuku-Lag/o",
+  "gold": "kuku-lag/o",
+  "app": "kuku/-/lag/o"
+ },
+ {
+  "word": "kulmin-konferenc/o",
+  "gold": "kulmin-konferenc/o",
+  "app": "kulmin/-/konferenc/o"
+ },
+ {
+  "word": "kun-",
+  "gold": "kun-",
+  "app": "kun/-"
+ },
+ {
+  "word": "Kun-Lun/o",
+  "gold": "kun-lun/o",
+  "app": "kun/-/lun/o"
+ },
+ {
+  "word": "kvazau^-",
+  "gold": "kvazaŭ-",
+  "app": "kvazaŭ/-"
+ },
+ {
+  "word": "La-Plat/o",
+  "gold": "la-plat/o",
+  "app": "la-/plat/o"
+ },
+ {
+  "word": "lau^-",
+  "gold": "laŭ-",
+  "app": "laŭ/-"
+ },
+ {
+  "word": "La-Valet/o",
+  "gold": "la-valet/o",
+  "app": "la-/valet/o"
+ },
+ {
+  "word": "Liberal-Demokrat/a",
+  "gold": "liberal-demokrat/a",
+  "app": "liberal/-/demokrat/a"
+ },
+ {
+  "word": "liter-cifer/a",
+  "gold": "liter-cifer/a",
+  "app": "liter/-/cifer/a"
+ },
+ {
+  "word": "liti/o-jon/a",
+  "gold": "liti/o-jon/a",
+  "app": "liti/o-/jon/a"
+ },
+ {
+  "word": "Lob-Lag/o",
+  "gold": "lob-lag/o",
+  "app": "lob/-/lag/o"
+ },
+ {
+  "word": "mal-",
+  "gold": "mal-",
+  "app": "mal/-"
+ },
+ {
+  "word": "mal-vort/o",
+  "gold": "mal-vort/o",
+  "app": "mal/-/vort/o"
+ },
+ {
+  "word": "Meksik-urb/o",
+  "gold": "meksik-urb/o",
+  "app": "meksik/-/urb/o"
+ },
+ {
+  "word": "mem-",
+  "gold": "mem-",
+  "app": "mem/-"
+ },
+ {
+  "word": "-metr-",
+  "gold": "-metr-",
+  "app": "-/metr/-"
+ },
+ {
+  "word": "-metri-",
+  "gold": "-metri-",
+  "app": "-/metri/-"
+ },
+ {
+  "word": "Mic^igan-Lag/o",
+  "gold": "miĉigan-lag/o",
+  "app": "miĉigan/-/lag/o"
+ },
+ {
+  "word": "mili-",
+  "gold": "mili-",
+  "app": "mili/-"
+ },
+ {
+  "word": "mis-",
+  "gold": "mis-",
+  "app": "mis/-"
+ },
+ {
+  "word": "nano-",
+  "gold": "nano-",
+  "app": "nan/o-"
+ },
+ {
+  "word": "ne-esperant/lingv/a",
+  "gold": "ne-esperant/lingv/a",
+  "app": "ne-/esperant/lingv/a"
+ },
+ {
+  "word": "NE-kombin/il/o",
+  "gold": "ne-kombin/il/o",
+  "app": "ne-/kombin/il/o"
+ },
+ {
+  "word": "nikel-kadmi/a",
+  "gold": "nikel-kadmi/a",
+  "app": "nikel/-/kadmi/a"
+ },
+ {
+  "word": "nj/o-knab/o",
+  "gold": "nj/o-knab/o",
+  "app": "njo-/knab/o"
+ },
+ {
+  "word": "Nobel-premi/it/o",
+  "gold": "nobel-premi/it/o",
+  "app": "nobel/-/premi/it/o"
+ },
+ {
+  "word": "Nobel-premi/o",
+  "gold": "nobel-premi/o",
+  "app": "nobel/-/premi/o"
+ },
+ {
+  "word": "Nord-Atlantik/a",
+  "gold": "nord-atlantik/a",
+  "app": "nord/-/atlantik/a"
+ },
+ {
+  "word": "Traktat-Organ/iz/aj^/o",
+  "gold": "traktat-organ/iz/aĵ/o",
+  "app": "traktat/-/organ/iz/aĵ/o"
+ },
+ {
+  "word": "Nord-Brabant/o",
+  "gold": "nord-brabant/o",
+  "app": "nord/-/brabant/o"
+ },
+ {
+  "word": "Nord-Dakot/o",
+  "gold": "nord-dakot/o",
+  "app": "nord/-/dakot/o"
+ },
+ {
+  "word": "Nord-Irland/o",
+  "gold": "nord-irland/o",
+  "app": "nord/-/irland/o"
+ },
+ {
+  "word": "Nord-Karolin/o",
+  "gold": "nord-karolin/o",
+  "app": "nord/-/karolin/o"
+ },
+ {
+  "word": "Nord-Kore/i/o",
+  "gold": "nord-kore/i/o",
+  "app": "nord/-/kore/io"
+ },
+ {
+  "word": "Nord-Kore/uj/o",
+  "gold": "nord-kore/uj/o",
+  "app": "nord/-/kore/uj/o"
+ },
+ {
+  "word": "Nord-Pacifik/o",
+  "gold": "nord-pacifik/o",
+  "app": "nord/-/pacifik/o"
+ },
+ {
+  "word": "Nova-Skoti/o",
+  "gold": "nova-skoti/o",
+  "app": "nov/a-/skot/io"
+ },
+ {
+  "word": "Sud-Kimr/i/o",
+  "gold": "sud-kimr/i/o",
+  "app": "sud/-/kimr/io"
+ },
+ {
+  "word": "Nov-Brunsvik/o",
+  "gold": "nov-brunsvik/o",
+  "app": "nov/-/brunsvik/o"
+ },
+ {
+  "word": "Nov-Delhi/o",
+  "gold": "nov-delhi/o",
+  "app": "nov/-/delhi/o"
+ },
+ {
+  "word": "Nov-Gvine/o",
+  "gold": "nov-gvine/o",
+  "app": "nov/-/gvine/o"
+ },
+ {
+  "word": "Nov-Jorki/o",
+  "gold": "nov-jorki/o",
+  "app": "nov/-/jork/io"
+ },
+ {
+  "word": "Nov-Jork/o",
+  "gold": "nov-jork/o",
+  "app": "nov/-/jork/o"
+ },
+ {
+  "word": "Nov-J^erzej/o",
+  "gold": "nov-ĵerzej/o",
+  "app": "nov/-/ĵerzej/o"
+ },
+ {
+  "word": "Nov-Kaledoni/o",
+  "gold": "nov-kaledoni/o",
+  "app": "nov/-/kaledoni/o"
+ },
+ {
+  "word": "Nov-Meksiki/o",
+  "gold": "nov-meksiki/o",
+  "app": "nov/-/meksik/io"
+ },
+ {
+  "word": "Nov-Orlean/o",
+  "gold": "nov-orlean/o",
+  "app": "nov/-/orlean/o"
+ },
+ {
+  "word": "Nov-Zeland/o",
+  "gold": "nov-zeland/o",
+  "app": "nov/-/zeland/o"
+ },
+ {
+  "word": "Nu-River/o",
+  "gold": "nu-river/o",
+  "app": "nu-/river/o"
+ },
+ {
+  "word": "-obl-",
+  "gold": "-obl-",
+  "app": "-/obl/-"
+ },
+ {
+  "word": "-obl/a",
+  "gold": "-obl/a",
+  "app": "-/obl/a"
+ },
+ {
+  "word": "-obl/e",
+  "gold": "-obl/e",
+  "app": "-/obl/e"
+ },
+ {
+  "word": "Okcident-Au^strali/o",
+  "gold": "okcident-aŭstrali/o",
+  "app": "okcident/-/aŭstrali/o"
+ },
+ {
+  "word": "Okcident-Bengali/o",
+  "gold": "okcident-bengali/o",
+  "app": "okcident/-/bengali/o"
+ },
+ {
+  "word": "Okcident-Virgini/o",
+  "gold": "okcident-virgini/o",
+  "app": "okcident/-/virgini/o"
+ },
+ {
+  "word": "-olog-",
+  "gold": "-olog-",
+  "app": "-o/log/-"
+ },
+ {
+  "word": "-ologi-",
+  "gold": "-ologi-",
+  "app": "-/ologi/-"
+ },
+ {
+  "word": "karaktr/o-re/kon/o",
+  "gold": "karaktr/o-re/kon/o",
+  "app": "karaktr/o-/re/kon/o"
+ },
+ {
+  "word": "Petrol-Eksport/aj",
+  "gold": "petrol-eksport/aj",
+  "app": "petrol/-/eksport/aj"
+ },
+ {
+  "word": "Orient-C^in/a",
+  "gold": "orient-ĉin/a",
+  "app": "orient/-/ĉin/a"
+ },
+ {
+  "word": "os-temp/o",
+  "gold": "os-temp/o",
+  "app": "os-/temp/o"
+ },
+ {
+  "word": "o-vort/o",
+  "gold": "o-vort/o",
+  "app": "o-/vort/o"
+ },
+ {
+  "word": "Papu/o-Nov-Gvine/o",
+  "gold": "papu/o-nov-gvine/o",
+  "app": "papu/o-/nov/-/gvine/o"
+ },
+ {
+  "word": "Paragvaj-river/o",
+  "gold": "paragvaj-river/o",
+  "app": "paragvaj/-/river/o"
+ },
+ {
+  "word": "Pasteu^r-institut/o",
+  "gold": "pasteŭr-institut/o",
+  "app": "pasteŭr/-/institut/o"
+ },
+ {
+  "word": "per-",
+  "gold": "per-",
+  "app": "per/-"
+ },
+ {
+  "word": "piko-",
+  "gold": "piko-",
+  "app": "pik/o-"
+ },
+ {
+  "word": "pli-",
+  "gold": "pli-",
+  "app": "pli/-"
+ },
+ {
+  "word": "pli-mal/pli",
+  "gold": "pli-mal/pli",
+  "app": "pli/-/mal/pli"
+ },
+ {
+  "word": "pli-ol-unu",
+  "gold": "pli-ol-unu",
+  "app": "pli/-ol-/unu"
+ },
+ {
+  "word": "Port-Luis/o",
+  "gold": "port-luis/o",
+  "app": "port/-/luis/o"
+ },
+ {
+  "word": "Porto-Nov/o",
+  "gold": "porto-nov/o",
+  "app": "port/o-/nov/o"
+ },
+ {
+  "word": "Port-Vila/o",
+  "gold": "port-vila/o",
+  "app": "port/-/vila/o"
+ },
+ {
+  "word": "post-",
+  "gold": "post-",
+  "app": "post/-"
+ },
+ {
+  "word": "-pov-",
+  "gold": "-pov-",
+  "app": "-/pov/-"
+ },
+ {
+  "word": "pra-",
+  "gold": "pra-",
+  "app": "pra/-"
+ },
+ {
+  "word": "preter-",
+  "gold": "preter-",
+  "app": "preter/-"
+ },
+ {
+  "word": "pri-",
+  "gold": "pri-",
+  "app": "pri/-"
+ },
+ {
+  "word": "princ/o-elekt/ist/o",
+  "gold": "princ/o-elekt/ist/o",
+  "app": "princ/o-/elekt/ist/o"
+ },
+ {
+  "word": "pro-",
+  "gold": "pro-",
+  "app": "pro/-"
+ },
+ {
+  "word": "Proksim-Orient/o",
+  "gold": "proksim-orient/o",
+  "app": "proksim/-/orient/o"
+ },
+ {
+  "word": "pseu^do-",
+  "gold": "pseŭdo-",
+  "app": "pseŭd/o-"
+ },
+ {
+  "word": "retro-",
+  "gold": "retro-",
+  "app": "retro/-"
+ },
+ {
+  "word": "Rod-Insul/o",
+  "gold": "rod-insul/o",
+  "app": "rod/-/insul/o"
+ },
+ {
+  "word": "Rom-Katolik/a",
+  "gold": "rom-katolik/a",
+  "app": "rom/-/katolik/a"
+ },
+ {
+  "word": "Rus/a-Japan/a",
+  "gold": "rus/a-japan/a",
+  "app": "rus/a-/japan/a"
+ },
+ {
+  "word": "Salomon-Insul/oj",
+  "gold": "salomon-insul/oj",
+  "app": "salomon/-/insul/oj"
+ },
+ {
+  "word": "San-Francisk/a",
+  "gold": "san-francisk/a",
+  "app": "san/-/francisk/a"
+ },
+ {
+  "word": "San-Francisk/o",
+  "gold": "san-francisk/o",
+  "app": "san/-/francisk/o"
+ },
+ {
+  "word": "San-Juan/o",
+  "gold": "san-juan/o",
+  "app": "san/-/juan/o"
+ },
+ {
+  "word": "Sankt-Peterburg/o",
+  "gold": "sankt-peterburg/o",
+  "app": "sankt/-/peterburg/o"
+ },
+ {
+  "word": "San-Marin/o",
+  "gold": "san-marin/o",
+  "app": "san/-/marin/o"
+ },
+ {
+  "word": "San-Pau^l/o",
+  "gold": "san-paŭl/o",
+  "app": "san/-/paŭl/o"
+ },
+ {
+  "word": "San-Rem/o",
+  "gold": "san-rem/o",
+  "app": "san/-/rem/o"
+ },
+ {
+  "word": "San-Salvador/o",
+  "gold": "san-salvador/o",
+  "app": "san/-/salvador/o"
+ },
+ {
+  "word": "Santo-Doming/o",
+  "gold": "santo-doming/o",
+  "app": "santo-/doming/o"
+ },
+ {
+  "word": "San-Tome/o",
+  "gold": "san-tome/o",
+  "app": "san/-tomeo"
+ },
+ {
+  "word": "Saud-Arab/i/o",
+  "gold": "saud-arab/i/o",
+  "app": "saud/-/arab/io"
+ },
+ {
+  "word": "Sent-Kristofo",
+  "gold": "sent-kristofo",
+  "app": "sent/-/krist/o/fo"
+ },
+ {
+  "word": "Sent-Luci/o",
+  "gold": "sent-luci/o",
+  "app": "sent/-/luci/o"
+ },
+ {
+  "word": "Sent-Vincent/o",
+  "gold": "sent-vincent/o",
+  "app": "sent/-/vincent/o"
+ },
+ {
+  "word": "Sir-River/o",
+  "gold": "sir-river/o",
+  "app": "sir/-/river/o"
+ },
+ {
+  "word": "ski-semajn/o",
+  "gold": "ski-semajn/o",
+  "app": "ski/-/semajn/o"
+ },
+ {
+  "word": "-skop-",
+  "gold": "-skop-",
+  "app": "-/skop/-"
+ },
+ {
+  "word": "-skopi-",
+  "gold": "-skopi-",
+  "app": "-/skopi/-"
+ },
+ {
+  "word": "sol-",
+  "gold": "sol-",
+  "app": "sol/-"
+ },
+ {
+  "word": "sovag^-",
+  "gold": "sovaĝ-",
+  "app": "sovaĝ/-"
+ },
+ {
+  "word": "Sovet-Uni/o",
+  "gold": "sovet-uni/o",
+  "app": "sovet/-/uni/o"
+ },
+ {
+  "word": "Sri-Lank/o",
+  "gold": "sri-lank/o",
+  "app": "sri-/lank/o"
+ },
+ {
+  "word": "student/o-asist/ant/o",
+  "gold": "student/o-asist/ant/o",
+  "app": "student/o-/asist/ant/o"
+ },
+ {
+  "word": "sub-",
+  "gold": "sub-",
+  "app": "sub/-"
+ },
+ {
+  "word": "Sud-Afrik/o",
+  "gold": "sud-afrik/o",
+  "app": "sud/-/afrik/o"
+ },
+ {
+  "word": "Sud-Au^strali/o",
+  "gold": "sud-aŭstrali/o",
+  "app": "sud/-/aŭstrali/o"
+ },
+ {
+  "word": "Sud-C^in/a",
+  "gold": "sud-ĉin/a",
+  "app": "sud/-/ĉin/a"
+ },
+ {
+  "word": "Sud-Dakot/o",
+  "gold": "sud-dakot/o",
+  "app": "sud/-/dakot/o"
+ },
+ {
+  "word": "Sud-Karolin/o",
+  "gold": "sud-karolin/o",
+  "app": "sud/-/karolin/o"
+ },
+ {
+  "word": "Sud-Kore/i/o",
+  "gold": "sud-kore/i/o",
+  "app": "sud/-/kore/io"
+ },
+ {
+  "word": "Sud-Kore/uj/o",
+  "gold": "sud-kore/uj/o",
+  "app": "sud/-/kore/uj/o"
+ },
+ {
+  "word": "Sud-Oset/i/o",
+  "gold": "sud-oset/i/o",
+  "app": "sud/-/oset/io"
+ },
+ {
+  "word": "super-",
+  "gold": "super-",
+  "app": "super/-"
+ },
+ {
+  "word": "sur-",
+  "gold": "sur-",
+  "app": "sur/-"
+ },
+ {
+  "word": "S^ak/mat!",
+  "gold": "ŝak/mat!",
+  "app": "ŝak/mat/!"
+ },
+ {
+  "word": "S^lesvig-Holstini/o",
+  "gold": "ŝlesvig-holstini/o",
+  "app": "ŝlesvig/-/holstini/o"
+ },
+ {
+  "word": "T-c^el/a",
+  "gold": "t-ĉel/a",
+  "app": "t-/ĉel/a"
+ },
+ {
+  "word": "T-c^emiz/o",
+  "gold": "t-ĉemiz/o",
+  "app": "t-/ĉemiz/o"
+ },
+ {
+  "word": "tele-",
+  "gold": "tele-",
+  "app": "t/el/e-"
+ },
+ {
+  "word": "tera-",
+  "gold": "tera-",
+  "app": "ter/a-"
+ },
+ {
+  "word": "tial,",
+  "gold": "tial,",
+  "app": "tial/,"
+ },
+ {
+  "word": "T-ort/il/o",
+  "gold": "t-ort/il/o",
+  "app": "t-/ort/il/o"
+ },
+ {
+  "word": "tra-",
+  "gold": "tra-",
+  "app": "tra/-"
+ },
+ {
+  "word": "traduk-program/o",
+  "gold": "traduk-program/o",
+  "app": "traduk/-/program/o"
+ },
+ {
+  "word": "trans-",
+  "gold": "trans-",
+  "app": "trans/-"
+ },
+ {
+  "word": "Trans/port-Sekur/ec/a",
+  "gold": "trans/port-sekur/ec/a",
+  "app": "trans/port/-/sekur/ec/a"
+ },
+ {
+  "word": "tro-",
+  "gold": "tro-",
+  "app": "tro/-"
+ },
+ {
+  "word": "TTT-pag^/o",
+  "gold": "ttt-paĝ/o",
+  "app": "ttt/-/paĝ/o"
+ },
+ {
+  "word": "tut-",
+  "gold": "tut-",
+  "app": "tut/-"
+ },
+ {
+  "word": "Tut-Ter/a",
+  "gold": "tut-ter/a",
+  "app": "tut/-/ter/a"
+ },
+ {
+  "word": "TV-el/send/o",
+  "gold": "tv-el/send/o",
+  "app": "tv-/el/send/o"
+ },
+ {
+  "word": "TV-staci/o",
+  "gold": "tv-staci/o",
+  "app": "tv-/staci/o"
+ },
+ {
+  "word": "U-form/a",
+  "gold": "u-form/a",
+  "app": "u-/form/a"
+ },
+ {
+  "word": "ultra-",
+  "gold": "ultra-",
+  "app": "ul/tra/-"
+ },
+ {
+  "word": "u-mod/o",
+  "gold": "u-mod/o",
+  "app": "u-/mod/o"
+ },
+ {
+  "word": "Esperant/o-Asoci/o",
+  "gold": "esperant/o-asoci/o",
+  "app": "esperant/o-/asoci/o"
+ },
+ {
+  "word": "us-mod/o",
+  "gold": "us-mod/o",
+  "app": "us-/mod/o"
+ },
+ {
+  "word": "Vandegraf-generator/o",
+  "gold": "vandegraf-generator/o",
+  "app": "vandegraf/-/generator/o"
+ },
+ {
+  "word": "Van-Lag/o",
+  "gold": "van-lag/o",
+  "app": "van/-/lag/o"
+ },
+ {
+  "word": "Varm-re/tir/ig^/o",
+  "gold": "varm-re/tir/iĝ/o",
+  "app": "varm/-/re/tir/iĝ/o"
+ },
+ {
+  "word": "vic-",
+  "gold": "vic-",
+  "app": "vic/-"
+ },
+ {
+  "word": "vid/at/e-pres/ot/e",
+  "gold": "vid/at/e-pres/ot/e",
+  "app": "vid/at/e-/pres/ot/e"
+ },
+ {
+  "word": "vid/at/e-vid/ot/e",
+  "gold": "vid/at/e-vid/ot/e",
+  "app": "vid/at/e-/vid/ot/e"
+ },
+ {
+  "word": "vir-",
+  "gold": "vir-",
+  "app": "vir/-"
+ }
+]

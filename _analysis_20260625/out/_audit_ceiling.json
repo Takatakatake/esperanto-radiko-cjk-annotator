@@ -1,0 +1,135 @@
+[
+ {
+  "word": "ĉinio",
+  "corpus": "ĉini/o",
+  "app": "ĉin/io",
+  "gold": "ĉin/i/o",
+  "count": 21
+ },
+ {
+  "word": "teren",
+  "corpus": "ter/en",
+  "app": "teren",
+  "gold": "ter/e/n",
+  "count": 14
+ },
+ {
+  "word": "ĉeĥio",
+  "corpus": "ĉeĥi/o",
+  "app": "ĉeĥ/io",
+  "gold": "ĉeĥ/i/o",
+  "count": 5
+ },
+ {
+  "word": "britio",
+  "corpus": "briti/o",
+  "app": "brit/io",
+  "gold": "brit/i/o",
+  "count": 5
+ },
+ {
+  "word": "radiofonio",
+  "corpus": "radio/fon/io",
+  "app": "radiofoni/o",
+  "gold": "radi/o/foni/o",
+  "count": 2
+ },
+ {
+  "word": "bulgario",
+  "corpus": "bulgari/o",
+  "app": "bulgar/io",
+  "gold": "bulgar/i/o",
+  "count": 2
+ },
+ {
+  "word": "hungario",
+  "corpus": "hungari/o",
+  "app": "hungar/io",
+  "gold": "hungar/i/o",
+  "count": 2
+ },
+ {
+  "word": "italio",
+  "corpus": "itali/o",
+  "app": "ital/io",
+  "gold": "ital/i/o",
+  "count": 2
+ },
+ {
+  "word": "koreio",
+  "corpus": "korei/o",
+  "app": "kore/io",
+  "gold": "kore/i/o",
+  "count": 2
+ },
+ {
+  "word": "diplomatio",
+  "corpus": "diplomati/o",
+  "app": "diplomat/io",
+  "gold": "diplomat/i/o",
+  "count": 2
+ },
+ {
+  "word": "etiopio",
+  "corpus": "etiopi/o",
+  "app": "etiop/io",
+  "gold": "etiop/i/o",
+  "count": 1
+ },
+ {
+  "word": "pomerio",
+  "corpus": "pomeri/o",
+  "app": "pomer/io",
+  "gold": "pomer/i/o",
+  "count": 1
+ },
+ {
+  "word": "bohemio",
+  "corpus": "bohemi/o",
+  "app": "bohem/io",
+  "gold": "bohem/i/o",
+  "count": 1
+ },
+ {
+  "word": "moravio",
+  "corpus": "moravi/o",
+  "app": "morav/io",
+  "gold": "morav/i/o",
+  "count": 1
+ },
+ {
+  "word": "kroatio",
+  "corpus": "kroati/o",
+  "app": "kroat/io",
+  "gold": "kroat/i/o",
+  "count": 1
+ },
+ {
+  "word": "sovetia",
+  "corpus": "soveti/a",
+  "app": "sovet/ia",
+  "gold": "sovet/i/a",
+  "count": 1
+ },
+ {
+  "word": "ukrainio",
+  "corpus": "ukraini/o",
+  "app": "ukrain/io",
+  "gold": "ukrain/i/o",
+  "count": 1
+ },
+ {
+  "word": "katalunio",
+  "corpus": "kataluni/o",
+  "app": "katalun/io",
+  "gold": "katalun/i/o",
+  "count": 1
+ },
+ {
+  "word": "vjetnamio",
+  "corpus": "vjetnami/o",
+  "app": "vjetnam/io",
+  "gold": "vjetnam/i/o",
+  "count": 1
+ }
+]

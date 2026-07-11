@@ -1,0 +1,1164 @@
+{
+ "NOTINGOLD_app粗(同綴り候補)": [
+  {
+   "word": "etos",
+   "corpus": "et/os",
+   "app": "etos",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "havaj",
+   "corpus": "hav/aj",
+   "app": "havaj",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "adon",
+   "corpus": "ad/on",
+   "app": "adon",
+   "gold": null,
+   "count": 29
+  },
+  {
+   "word": "amon",
+   "corpus": "am/on",
+   "app": "amon",
+   "gold": null,
+   "count": 17
+  },
+  {
+   "word": "argentan",
+   "corpus": "argent/an",
+   "app": "argentan",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "tenis",
+   "corpus": "ten/is",
+   "app": "tenis",
+   "gold": null,
+   "count": 9
+  },
+  {
+   "word": "amas",
+   "corpus": "am/as",
+   "app": "amas",
+   "gold": null,
+   "count": 30
+  },
+  {
+   "word": "dion",
+   "corpus": "di/on",
+   "app": "dion",
+   "gold": null,
+   "count": 14
+  },
+  {
+   "word": "elzan",
+   "corpus": "elza/n",
+   "app": "elzan",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "areopologio",
+   "corpus": "are/op/o/log/io",
+   "app": "are/op/ologi/o",
+   "gold": null,
+   "count": 11
+  },
+  {
+   "word": "areopologia",
+   "corpus": "are/op/o/log/ia",
+   "app": "are/op/ologi/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "areopologiajn",
+   "corpus": "are/op/o/log/iajn",
+   "app": "are/op/ologi/ajn",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "areopologion",
+   "corpus": "are/op/o/log/ion",
+   "app": "are/op/ologi/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "legata",
+   "corpus": "leg/at/a",
+   "app": "legat/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "antoni",
+   "corpus": "anton/i",
+   "app": "antoni",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "fie",
+   "corpus": "fi/e",
+   "app": "fie",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "pense",
+   "corpus": "pen/se",
+   "app": "pense",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "eti",
+   "corpus": "et/i",
+   "app": "eti",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "anon",
+   "corpus": "an/on",
+   "app": "anon",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "anton",
+   "corpus": "ant/on",
+   "app": "anton",
+   "gold": null,
+   "count": 10
+  },
+  {
+   "word": "aĝe",
+   "corpus": "aĝ/e",
+   "app": "aĝe",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "adone",
+   "corpus": "a/don/e",
+   "app": "adon/e",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "pense",
+   "corpus": "pens/e",
+   "app": "pense",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "vortoscion",
+   "corpus": "vort/o/sci/on",
+   "app": "vort/os/cion",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "are",
+   "corpus": "ar/e",
+   "app": "are",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "davaon",
+   "corpus": "davao/n",
+   "app": "davaon",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "honorata",
+   "corpus": "honor/at/a",
+   "app": "honorat/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "tiba",
+   "corpus": "tib/a",
+   "app": "tiba",
+   "gold": null,
+   "count": 3
+  },
+  {
+   "word": "kantataj",
+   "corpus": "kant/at/aj",
+   "app": "kantat/aj",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "kantata",
+   "corpus": "kant/at/a",
+   "app": "kantat/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "faradis",
+   "corpus": "far/ad/is",
+   "app": "farad/is",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "junuliĉoj",
+   "corpus": "jun/ul/iĉ/oj",
+   "app": "jun/ul/iĉoj",
+   "gold": null,
+   "count": 10
+  },
+  {
+   "word": "iĉoj",
+   "corpus": "iĉ/oj",
+   "app": "iĉoj",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "iĉa",
+   "corpus": "iĉ/a",
+   "app": "iĉa",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "iĉaj",
+   "corpus": "iĉ/aj",
+   "app": "iĉaj",
+   "gold": null,
+   "count": 2
+  }
+ ],
+ "NOTINGOLD_その他": [
+  {
+   "word": "japanion",
+   "corpus": "japanio/n",
+   "app": "japan/io/n",
+   "gold": null,
+   "count": 14
+  },
+  {
+   "word": "koreion",
+   "corpus": "koreio/n",
+   "app": "kore/io/n",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "idon",
+   "corpus": "ido/n",
+   "app": "id/on",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "japanologio",
+   "corpus": "japan/o/logi/o",
+   "app": "japan/o/log/io",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "gerdan",
+   "corpus": "gerda/n",
+   "app": "gerd/an",
+   "gold": null,
+   "count": 10
+  },
+  {
+   "word": "tradiciojn",
+   "corpus": "tradici/ojn",
+   "app": "tr/adici/ojn",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "sportocentro",
+   "corpus": "sport/o/centr/o",
+   "app": "sp/ort/o/centr/o",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "ĉoĉangaĉa",
+   "corpus": "ĉoĉangaĉ/a",
+   "app": "ĉo/ĉan/g/aĉ/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "butanon",
+   "corpus": "butano/n",
+   "app": "butan/on",
+   "gold": null,
+   "count": 12
+  },
+  {
+   "word": "tokiponuloj",
+   "corpus": "tokipon/ul/oj",
+   "app": "toki/po/nul/oj",
+   "gold": null,
+   "count": 13
+  },
+  {
+   "word": "tokiponistoj",
+   "corpus": "tokipon/ist/oj",
+   "app": "toki/pon/ist/oj",
+   "gold": null,
+   "count": 3
+  },
+  {
+   "word": "tokiponularo",
+   "corpus": "tokipon/ul/ar/o",
+   "app": "toki/pon/ul/ar/o",
+   "gold": null,
+   "count": 3
+  },
+  {
+   "word": "tokiponulojn",
+   "corpus": "tokipon/ul/ojn",
+   "app": "toki/po/nul/ojn",
+   "gold": null,
+   "count": 3
+  },
+  {
+   "word": "kantoa",
+   "corpus": "kanto/a",
+   "app": "kant/oa",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "polietilena",
+   "corpus": "polietilen/a",
+   "app": "poli/etilen/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "tereftalato",
+   "corpus": "tereftalat/o",
+   "app": "ter/e/ftal/at/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "nociveco",
+   "corpus": "nociv/ec/o",
+   "app": "noc/iv/ec/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "grifita",
+   "corpus": "grifit/a",
+   "app": "grif/it/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "piastdinastia",
+   "corpus": "piast/dinasti/a",
+   "app": "pi/ast/dinasti/a",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "toruno",
+   "corpus": "torun/o",
+   "app": "to/run/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "vroclavanoj",
+   "corpus": "vroclav/an/oj",
+   "app": "vrocl/avan/oj",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "ebligantaj",
+   "corpus": "ebl/ig/ant/aj",
+   "app": "eb/lig/ant/aj",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "baltikon",
+   "corpus": "baltik/on",
+   "app": "bal/tik/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "bonŝanĉulo",
+   "corpus": "bon/ŝanĉ/ul/o",
+   "app": "bon/ŝ/anĉ/ul/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "fronantaj",
+   "corpus": "fron/ant/aj",
+   "app": "fro/nant/aj",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "kaŝtelestro",
+   "corpus": "kaŝtel/estr/o",
+   "app": "kaŝ/te/lestr/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "invigilserva",
+   "corpus": "invigil/serv/a",
+   "app": "in/vigil/serv/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "invigilservo",
+   "corpus": "invigil/serv/o",
+   "app": "in/vigil/serv/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "ekscepta",
+   "corpus": "ekscept/a",
+   "app": "eks/cep/ta",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "kriptologiajn",
+   "corpus": "kript/o/log/iajn",
+   "app": "kript/o/log/i/ajn",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "informatika",
+   "corpus": "informatik/a",
+   "app": "inform/at/ika",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "ursulanina",
+   "corpus": "ursulan/in/a",
+   "app": "ursul/an/in/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "boleslaon",
+   "corpus": "boleslao/n",
+   "app": "bol/eslaon",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "ĉeĥion",
+   "corpus": "ĉeĥi/on",
+   "app": "ĉeĥ/ion",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "revenĝe",
+   "corpus": "revenĝ/e",
+   "app": "re/ven/ĝe",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "milsko",
+   "corpus": "milsk/o",
+   "app": "mil/sko",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "kievon",
+   "corpus": "kievo/n",
+   "app": "kiev/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "antiseptiko",
+   "corpus": "antiseptik/o",
+   "app": "anti/sept/ik/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "lecjonojn",
+   "corpus": "lecjon/ojn",
+   "app": "lec/jon/ojn",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "gastroskopon",
+   "corpus": "gastroskop/on",
+   "app": "gastr/o/skop/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "vroclava",
+   "corpus": "vroclav/a",
+   "app": "vroc/lav/a",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "oomoton",
+   "corpus": "oomoto/n",
+   "app": "oomot/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "tibetologo",
+   "corpus": "tibetolog/o",
+   "app": "tibet/o/log/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "jurnalisto",
+   "corpus": "jurnalist/o",
+   "app": "jur/na/list/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "sociologion",
+   "corpus": "sociologi/on",
+   "app": "soci/o/logi/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "rubaŝka",
+   "corpus": "rubaŝk/a",
+   "app": "rub/aŝka",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "enteroviruso",
+   "corpus": "enterovirus/o",
+   "app": "enter/o/virus/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "rinoviruso",
+   "corpus": "rinovirus/o",
+   "app": "rin/o/virus/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "rotaviruso",
+   "corpus": "rotavirus/o",
+   "app": "rot/a/virus/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "dojmis",
+   "corpus": "dojm/is",
+   "app": "doj/mis",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "anjon",
+   "corpus": "anjo/n",
+   "app": "anj/on",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "peĉjon",
+   "corpus": "peĉjo/n",
+   "app": "peĉj/on",
+   "gold": null,
+   "count": 4
+  },
+  {
+   "word": "jajon",
+   "corpus": "jajo/n",
+   "app": "ja/jon",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "kvardeko",
+   "corpus": "kvardek/o",
+   "app": "kvar/dek/o",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "trekado",
+   "corpus": "trek/ad/o",
+   "app": "tr/ek/ad/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "trekadon",
+   "corpus": "trek/ad/on",
+   "app": "tre/kad/on",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "metalingvistika",
+   "corpus": "metalingvistik/a",
+   "app": "meta/lingvistik/a",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "sendependemon",
+   "corpus": "sen/depend/em/on",
+   "app": "sen/de/pend/em/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "japanion",
+   "corpus": "japan/ion",
+   "app": "japan/io/n",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "evidentigis",
+   "corpus": "evident/ig/is",
+   "app": "ev/ident/ig/is",
+   "gold": null,
+   "count": 1
+  }
+ ],
+ "gold第三分解_コーパス寄り": [
+  {
+   "word": "teren",
+   "corpus": "ter/en",
+   "app": "teren",
+   "gold": "ter/e/n",
+   "count": 14
+  },
+  {
+   "word": "domen",
+   "corpus": "dom/en",
+   "app": "domen",
+   "gold": "dom/e/n",
+   "count": 2
+  }
+ ],
+ "コーパス誤り_app正(gold一致)": [
+  {
+   "word": "ocelo",
+   "corpus": "o/cel/o",
+   "app": "ocel/o",
+   "gold": "ocel/o",
+   "count": 2
+  },
+  {
+   "word": "zoologia",
+   "corpus": "zoologi/a",
+   "app": "zo/o/logi/a",
+   "gold": "zo/o/logi/a",
+   "count": 1
+  },
+  {
+   "word": "esperante",
+   "corpus": "esper/ant/e",
+   "app": "esperant/e",
+   "gold": "esperant/e",
+   "count": 9
+  },
+  {
+   "word": "etnologo",
+   "corpus": "etno/log/o",
+   "app": "etn/o/log/o",
+   "gold": "etn/o/log/o",
+   "count": 1
+  },
+  {
+   "word": "etnologio",
+   "corpus": "etno/log/io",
+   "app": "etn/o/logi/o",
+   "gold": "etn/o/logi/o",
+   "count": 1
+  },
+  {
+   "word": "anestezi",
+   "corpus": "anestez/i",
+   "app": "an/estez/i",
+   "gold": "an/estez/i",
+   "count": 1
+  },
+  {
+   "word": "meningito",
+   "corpus": "meningit/o",
+   "app": "mening/it/o",
+   "gold": "mening/it/o",
+   "count": 1
+  },
+  {
+   "word": "geologio",
+   "corpus": "geologi/o",
+   "app": "geo/logi/o",
+   "gold": "geo/logi/o",
+   "count": 1
+  },
+  {
+   "word": "platformo",
+   "corpus": "plat/form/o",
+   "app": "platform/o",
+   "gold": "platform/o",
+   "count": 3
+  },
+  {
+   "word": "nitrato",
+   "corpus": "nitrat/o",
+   "app": "nitr/at/o",
+   "gold": "nitr/at/o",
+   "count": 1
+  },
+  {
+   "word": "biografio",
+   "corpus": "biografi/o",
+   "app": "bio/grafi/o",
+   "gold": "bio/grafi/o",
+   "count": 1
+  },
+  {
+   "word": "neŭrokirurgio",
+   "corpus": "neŭro/kirurgi/o",
+   "app": "neŭr/o/kirurgi/o",
+   "gold": "neŭr/o/kirurgi/o",
+   "count": 1
+  },
+  {
+   "word": "urologio",
+   "corpus": "urologi/o",
+   "app": "uro/logi/o",
+   "gold": "uro/logi/o",
+   "count": 1
+  },
+  {
+   "word": "laringologio",
+   "corpus": "laring/o/log/io",
+   "app": "laring/o/logi/o",
+   "gold": "laring/o/logi/o",
+   "count": 1
+  },
+  {
+   "word": "ginekologio",
+   "corpus": "ginekologi/o",
+   "app": "ginek/o/logi/o",
+   "gold": "ginek/o/logi/o",
+   "count": 1
+  },
+  {
+   "word": "kronologia",
+   "corpus": "kronologi/a",
+   "app": "kron/o/logi/a",
+   "gold": "kron/o/logi/a",
+   "count": 1
+  },
+  {
+   "word": "lingvisto",
+   "corpus": "lingvist/o",
+   "app": "lingv/ist/o",
+   "gold": "lingv/ist/o",
+   "count": 1
+  },
+  {
+   "word": "anarkisto",
+   "corpus": "anarkist/o",
+   "app": "anark/ist/o",
+   "gold": "anark/ist/o",
+   "count": 1
+  },
+  {
+   "word": "biologio",
+   "corpus": "biologi/o",
+   "app": "bio/logi/o",
+   "gold": "bio/logi/o",
+   "count": 1
+  },
+  {
+   "word": "fonologio",
+   "corpus": "fon/o/log/io",
+   "app": "fon/o/logi/o",
+   "gold": "fon/o/logi/o",
+   "count": 1
+  },
+  {
+   "word": "lastatempe",
+   "corpus": "lastatemp/e",
+   "app": "last/a/temp/e",
+   "gold": "last/a/temp/e",
+   "count": 1
+  },
+  {
+   "word": "komunumo",
+   "corpus": "komunum/o",
+   "app": "komun/um/o",
+   "gold": "komun/um/o",
+   "count": 2
+  },
+  {
+   "word": "mitologio",
+   "corpus": "mitologi/o",
+   "app": "mit/o/logi/o",
+   "gold": "mit/o/logi/o",
+   "count": 1
+  },
+  {
+   "word": "iniciatoro",
+   "corpus": "iniciat/or/o",
+   "app": "iniciator/o",
+   "gold": "iniciator/o",
+   "count": 1
+  },
+  {
+   "word": "eŭfemisme",
+   "corpus": "eŭfemism/e",
+   "app": "eŭfem/ism/e",
+   "gold": "eŭfem/ism/e",
+   "count": 1
+  },
+  {
+   "word": "indonezio",
+   "corpus": "indonez/io",
+   "app": "indonezi/o",
+   "gold": "indonezi/o",
+   "count": 6
+  },
+  {
+   "word": "malajzio",
+   "corpus": "malajz/io",
+   "app": "malajzi/o",
+   "gold": "malajzi/o",
+   "count": 2
+  },
+  {
+   "word": "disdegni",
+   "corpus": "dis/degn/i",
+   "app": "disdegn/i",
+   "gold": "disdegn/i",
+   "count": 2
+  }
+ ],
+ "gold第三分解_app寄り": [
+  {
+   "word": "radiofonio",
+   "corpus": "radio/fon/io",
+   "app": "radiofoni/o",
+   "gold": "radi/o/foni/o",
+   "count": 2
+  },
+  {
+   "word": "bulgario",
+   "corpus": "bulgari/o",
+   "app": "bulgar/io",
+   "gold": "bulgar/i/o",
+   "count": 2
+  },
+  {
+   "word": "etiopio",
+   "corpus": "etiopi/o",
+   "app": "etiop/io",
+   "gold": "etiop/i/o",
+   "count": 1
+  },
+  {
+   "word": "ĉinio",
+   "corpus": "ĉini/o",
+   "app": "ĉin/io",
+   "gold": "ĉin/i/o",
+   "count": 21
+  },
+  {
+   "word": "italio",
+   "corpus": "itali/o",
+   "app": "ital/io",
+   "gold": "ital/i/o",
+   "count": 2
+  },
+  {
+   "word": "pomerio",
+   "corpus": "pomeri/o",
+   "app": "pomer/io",
+   "gold": "pomer/i/o",
+   "count": 1
+  },
+  {
+   "word": "ĉeĥio",
+   "corpus": "ĉeĥi/o",
+   "app": "ĉeĥ/io",
+   "gold": "ĉeĥ/i/o",
+   "count": 5
+  },
+  {
+   "word": "bohemio",
+   "corpus": "bohemi/o",
+   "app": "bohem/io",
+   "gold": "bohem/i/o",
+   "count": 1
+  },
+  {
+   "word": "moravio",
+   "corpus": "moravi/o",
+   "app": "morav/io",
+   "gold": "morav/i/o",
+   "count": 1
+  },
+  {
+   "word": "britio",
+   "corpus": "briti/o",
+   "app": "brit/io",
+   "gold": "brit/i/o",
+   "count": 5
+  },
+  {
+   "word": "kroatio",
+   "corpus": "kroati/o",
+   "app": "kroat/io",
+   "gold": "kroat/i/o",
+   "count": 1
+  },
+  {
+   "word": "sovetia",
+   "corpus": "soveti/a",
+   "app": "sovet/ia",
+   "gold": "sovet/i/a",
+   "count": 1
+  },
+  {
+   "word": "ukrainio",
+   "corpus": "ukraini/o",
+   "app": "ukrain/io",
+   "gold": "ukrain/i/o",
+   "count": 1
+  },
+  {
+   "word": "katalunio",
+   "corpus": "kataluni/o",
+   "app": "katalun/io",
+   "gold": "katalun/i/o",
+   "count": 1
+  },
+  {
+   "word": "vjetnamio",
+   "corpus": "vjetnami/o",
+   "app": "vjetnam/io",
+   "gold": "vjetnam/i/o",
+   "count": 1
+  },
+  {
+   "word": "koreio",
+   "corpus": "korei/o",
+   "app": "kore/io",
+   "gold": "kore/i/o",
+   "count": 2
+  },
+  {
+   "word": "sinteno",
+   "corpus": "sinten/o",
+   "app": "sin/ten/o",
+   "gold": "si/n/ten/o",
+   "count": 1
+  },
+  {
+   "word": "diplomatio",
+   "corpus": "diplomati/o",
+   "app": "diplomat/io",
+   "gold": "diplomat/i/o",
+   "count": 2
+  }
+ ],
+ "app誤り_真欠陥(gold=コーパス)": [
+  {
+   "word": "faŝismo",
+   "corpus": "faŝ/ism/o",
+   "app": "faŝism/o",
+   "gold": "faŝ/ism/o",
+   "count": 2
+  },
+  {
+   "word": "ekde",
+   "corpus": "ek/de",
+   "app": "ekde",
+   "gold": "ek/de",
+   "count": 55
+  },
+  {
+   "word": "fero",
+   "corpus": "fer/o",
+   "app": "f/er/o",
+   "gold": "fer/o",
+   "count": 2
+  },
+  {
+   "word": "progresi",
+   "corpus": "progres/i",
+   "app": "progresi",
+   "gold": "progres/i",
+   "count": 6
+  },
+  {
+   "word": "milfoje",
+   "corpus": "mil/foj/e",
+   "app": "milfoj/e",
+   "gold": "mil/foj/e",
+   "count": 1
+  },
+  {
+   "word": "farado",
+   "corpus": "far/ad/o",
+   "app": "farad/o",
+   "gold": "far/ad/o",
+   "count": 1
+  }
+ ],
+ "NOTINGOLD_先頭1字孤立": [
+  {
+   "word": "kvedlinburgo",
+   "corpus": "kvedlinburg/o",
+   "app": "k/ved/li/n/burg/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "katederalo",
+   "corpus": "katederal/o",
+   "app": "k/at/ede/ral/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "cintamanio",
+   "corpus": "cintamani/o",
+   "app": "c/int/a/mani/o",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "baron",
+   "corpus": "bar/on",
+   "app": "b/ar/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "janĉjon",
+   "corpus": "janĉjo/n",
+   "app": "j/anĉ/jon",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "reblu",
+   "corpus": "re/blu",
+   "app": "r/ebl/u",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "paran",
+   "corpus": "par/an",
+   "app": "p/ar/an",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "fredon",
+   "corpus": "fredo/n",
+   "app": "f/re/don",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "korlig",
+   "corpus": "kor/lig",
+   "app": "k/orl/ig",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "sporti",
+   "corpus": "sport/i",
+   "app": "s/port/i",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "sulen",
+   "corpus": "sule/n",
+   "app": "s/ul/en",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "blisa",
+   "corpus": "blis/a",
+   "app": "b/lis/a",
+   "gold": null,
+   "count": 2
+  },
+  {
+   "word": "ŝonaan",
+   "corpus": "ŝona/an",
+   "app": "ŝ/on/aan",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "kamakuron",
+   "corpus": "kamakuro/n",
+   "app": "k/am/a/kur/on",
+   "gold": null,
+   "count": 1
+  },
+  {
+   "word": "memeon",
+   "corpus": "meme/on",
+   "app": "m/em/eon",
+   "gold": null,
+   "count": 2
+  }
+ ]
+}

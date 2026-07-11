@@ -1,0 +1,1493 @@
+[
+ {
+  "root": "tokipon",
+  "count": 122,
+  "gloss": "トキポナ",
+  "atomic": 122,
+  "split": 0
+ },
+ {
+  "root": "feminism",
+  "count": 48,
+  "gloss": "フェミニズム",
+  "atomic": 48,
+  "split": 0
+ },
+ {
+  "root": "jilan",
+  "count": 26,
+  "gloss": "宜蘭",
+  "atomic": 26,
+  "split": 0
+ },
+ {
+  "root": "ideografi",
+  "count": 20,
+  "gloss": "表意文字方式",
+  "atomic": 20,
+  "split": 0
+ },
+ {
+  "root": "aŭstri",
+  "count": 19,
+  "gloss": "[地名]オーストリア",
+  "atomic": 21,
+  "split": 0
+ },
+ {
+  "root": "krat",
+  "count": 19,
+  "gloss": "支配",
+  "atomic": 31,
+  "split": 0
+ },
+ {
+  "root": "kampus",
+  "count": 14,
+  "gloss": "キャンパス",
+  "atomic": 18,
+  "split": 0
+ },
+ {
+  "root": "ist",
+  "count": 13,
+  "gloss": "従事者",
+  "atomic": 1178,
+  "split": 1
+ },
+ {
+  "root": "butano",
+  "count": 12,
+  "gloss": "[地名]ブータン",
+  "atomic": 12,
+  "split": 0
+ },
+ {
+  "root": "ret",
+  "count": 12,
+  "gloss": "網",
+  "atomic": 115,
+  "split": 45
+ },
+ {
+  "root": "psikologi",
+  "count": 12,
+  "gloss": "心理学",
+  "atomic": 12,
+  "split": 0
+ },
+ {
+  "root": "organiz",
+  "count": 11,
+  "gloss": "(を)組織する",
+  "atomic": 129,
+  "split": 0
+ },
+ {
+  "root": "reprezent",
+  "count": 11,
+  "gloss": "(を)代表する",
+  "atomic": 13,
+  "split": 3
+ },
+ {
+  "root": "gerda",
+  "count": 10,
+  "gloss": "[人名]ゲルダ",
+  "atomic": 10,
+  "split": 0
+ },
+ {
+  "root": "alternativ",
+  "count": 10,
+  "gloss": "代替の",
+  "atomic": 10,
+  "split": 0
+ },
+ {
+  "root": "koronavirus",
+  "count": 9,
+  "gloss": "コロナウイルス",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "tiu",
+  "count": 9,
+  "gloss": "その;あのひと",
+  "atomic": 683,
+  "split": 0
+ },
+ {
+  "root": "poznan",
+  "count": 9,
+  "gloss": "[地名]ポズナン",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "gvid",
+  "count": 9,
+  "gloss": "(を)案内する",
+  "atomic": 72,
+  "split": 0
+ },
+ {
+  "root": "sitelenpon",
+  "count": 9,
+  "gloss": "シテレンポナ",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "lok",
+  "count": 8,
+  "gloss": "場所",
+  "atomic": 423,
+  "split": 3
+ },
+ {
+  "root": "pli",
+  "count": 8,
+  "gloss": "より",
+  "atomic": 180,
+  "split": 18
+ },
+ {
+  "root": "resum",
+  "count": 8,
+  "gloss": "要約",
+  "atomic": 8,
+  "split": 0
+ },
+ {
+  "root": "parol",
+  "count": 7,
+  "gloss": "話しをする",
+  "atomic": 523,
+  "split": 0
+ },
+ {
+  "root": "ramen",
+  "count": 7,
+  "gloss": "[日]ラーメン",
+  "atomic": 8,
+  "split": 0
+ },
+ {
+  "root": "jutub",
+  "count": 7,
+  "gloss": "ユーチューブ",
+  "atomic": 8,
+  "split": 4
+ },
+ {
+  "root": "ism",
+  "count": 7,
+  "gloss": "主義",
+  "atomic": 164,
+  "split": 0
+ },
+ {
+  "root": "neologism",
+  "count": 6,
+  "gloss": "[文]新語",
+  "atomic": 6,
+  "split": 0
+ },
+ {
+  "root": "vespert",
+  "count": 6,
+  "gloss": "[動]コウモリ",
+  "atomic": 86,
+  "split": 0
+ },
+ {
+  "root": "ĉeĥi",
+  "count": 6,
+  "gloss": "[地名]チェコ",
+  "atomic": 6,
+  "split": 2
+ },
+ {
+  "root": "sup",
+  "count": 6,
+  "gloss": "スープ",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "roman",
+  "count": 6,
+  "gloss": "長編小説",
+  "atomic": 43,
+  "split": 2
+ },
+ {
+  "root": "hipotez",
+  "count": 6,
+  "gloss": "仮説",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "alt",
+  "count": 6,
+  "gloss": "高い",
+  "atomic": 221,
+  "split": 32
+ },
+ {
+  "root": "pen",
+  "count": 6,
+  "gloss": "努力する",
+  "atomic": 51,
+  "split": 0
+ },
+ {
+  "root": "dialog",
+  "count": 6,
+  "gloss": "対話",
+  "atomic": 6,
+  "split": 0
+ },
+ {
+  "root": "sabat",
+  "count": 5,
+  "gloss": "土曜日",
+  "atomic": 7,
+  "split": 0
+ },
+ {
+  "root": "feminicid",
+  "count": 5,
+  "gloss": "女性殺害",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "ĥin",
+  "count": 5,
+  "gloss": "[地名]中国",
+  "atomic": 12,
+  "split": 0
+ },
+ {
+  "root": "vroclav",
+  "count": 5,
+  "gloss": "[地名]ヴロツワフ",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "karaĵ",
+  "count": 5,
+  "gloss": "カラジャ",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "animaci",
+  "count": 5,
+  "gloss": "アニメーション",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "sign",
+  "count": 4,
+  "gloss": "符号",
+  "atomic": 49,
+  "split": 0
+ },
+ {
+  "root": "posten",
+  "count": 4,
+  "gloss": "部署",
+  "atomic": 17,
+  "split": 0
+ },
+ {
+  "root": "star",
+  "count": 4,
+  "gloss": "立っている",
+  "atomic": 169,
+  "split": 63
+ },
+ {
+  "root": "rid",
+  "count": 4,
+  "gloss": "笑う",
+  "atomic": 93,
+  "split": 21
+ },
+ {
+  "root": "fort",
+  "count": 4,
+  "gloss": "強い",
+  "atomic": 348,
+  "split": 8
+ },
+ {
+  "root": "dorm",
+  "count": 4,
+  "gloss": "眠っている",
+  "atomic": 104,
+  "split": 0
+ },
+ {
+  "root": "peĉjo",
+  "count": 4,
+  "gloss": "[人名]ペーチョ",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "etimologi",
+  "count": 4,
+  "gloss": "語源学",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "manga",
+  "count": 4,
+  "gloss": "漫画",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "soci",
+  "count": 4,
+  "gloss": "社会",
+  "atomic": 131,
+  "split": 0
+ },
+ {
+  "root": "klas",
+  "count": 4,
+  "gloss": "クラス",
+  "atomic": 51,
+  "split": 4
+ },
+ {
+  "root": "organism",
+  "count": 4,
+  "gloss": "[生]有機体",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "ven",
+  "count": 4,
+  "gloss": "(に)来る",
+  "atomic": 668,
+  "split": 0
+ },
+ {
+  "root": "dojm",
+  "count": 4,
+  "gloss": "印象づける",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "mont",
+  "count": 4,
+  "gloss": "山",
+  "atomic": 113,
+  "split": 1
+ },
+ {
+  "root": "nom",
+  "count": 4,
+  "gloss": "名前",
+  "atomic": 316,
+  "split": 1
+ },
+ {
+  "root": "vir",
+  "count": 4,
+  "gloss": "男",
+  "atomic": 390,
+  "split": 0
+ },
+ {
+  "root": "ver",
+  "count": 4,
+  "gloss": "本当の",
+  "atomic": 547,
+  "split": 2
+ },
+ {
+  "root": "kilogram",
+  "count": 4,
+  "gloss": "[単]キログラム",
+  "atomic": 6,
+  "split": 0
+ },
+ {
+  "root": "asociaci",
+  "count": 4,
+  "gloss": "協会",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "demografi",
+  "count": 4,
+  "gloss": "人口統計",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "romi",
+  "count": 4,
+  "gloss": "ローマ",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "orientalism",
+  "count": 3,
+  "gloss": "オリエンタリズム",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "antropolog",
+  "count": 3,
+  "gloss": "人類学者",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "fart",
+  "count": 3,
+  "gloss": "暮らす",
+  "atomic": 35,
+  "split": 0
+ },
+ {
+  "root": "tipograf",
+  "count": 3,
+  "gloss": "活版印刷技術者",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "pragmatik",
+  "count": 3,
+  "gloss": "語用論的な",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "rifuĝ",
+  "count": 3,
+  "gloss": "避難する",
+  "atomic": 8,
+  "split": 0
+ },
+ {
+  "root": "sudet",
+  "count": 3,
+  "gloss": "[地名]ズデーテン",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "ĉifr",
+  "count": 3,
+  "gloss": "暗号",
+  "atomic": 20,
+  "split": 0
+ },
+ {
+  "root": "buro",
+  "count": 3,
+  "gloss": "事務局",
+  "atomic": 7,
+  "split": 0
+ },
+ {
+  "root": "rumani",
+  "count": 3,
+  "gloss": "[地名]ルーマニア",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "tviter",
+  "count": 3,
+  "gloss": "ツイッター",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "minibus",
+  "count": 3,
+  "gloss": "ミニバス",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "revizi",
+  "count": 3,
+  "gloss": "(を)校閲する",
+  "atomic": 6,
+  "split": 2
+ },
+ {
+  "root": "pandemi",
+  "count": 3,
+  "gloss": "パンデミック",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "hipocentr",
+  "count": 3,
+  "gloss": "爆心地",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "afer",
+  "count": 3,
+  "gloss": "物事",
+  "atomic": 253,
+  "split": 0
+ },
+ {
+  "root": "ebl",
+  "count": 3,
+  "gloss": "可能",
+  "atomic": 1054,
+  "split": 2
+ },
+ {
+  "root": "tag",
+  "count": 3,
+  "gloss": "日",
+  "atomic": 319,
+  "split": 1
+ },
+ {
+  "root": "trek",
+  "count": 3,
+  "gloss": "トレッキング",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "fejsbuk",
+  "count": 3,
+  "gloss": "[SNS]フェイスブック",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "cebu",
+  "count": 3,
+  "gloss": "[地名]セブ",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "sam",
+  "count": 3,
+  "gloss": "同一の",
+  "atomic": 414,
+  "split": 0
+ },
+ {
+  "root": "apart",
+  "count": 3,
+  "gloss": "別々の",
+  "atomic": 89,
+  "split": 0
+ },
+ {
+  "root": "ident",
+  "count": 3,
+  "gloss": "同一の",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "aŭtobiografi",
+  "count": 3,
+  "gloss": "自伝",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "jugoslavi",
+  "count": 2,
+  "gloss": "[地名]ユーゴスラビア",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "kvar",
+  "count": 2,
+  "gloss": "四",
+  "atomic": 26,
+  "split": 0
+ },
+ {
+  "root": "foj",
+  "count": 2,
+  "gloss": "回",
+  "atomic": 421,
+  "split": 27
+ },
+ {
+  "root": "psikanalizist",
+  "count": 2,
+  "gloss": "[医]精神分析家",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "psikoterapeŭt",
+  "count": 2,
+  "gloss": "[医]心理療法士",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "pseŭdonim",
+  "count": 2,
+  "gloss": "偽名",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "blind",
+  "count": 2,
+  "gloss": "盲目の",
+  "atomic": 21,
+  "split": 0
+ },
+ {
+  "root": "tradici",
+  "count": 2,
+  "gloss": "伝統",
+  "atomic": 75,
+  "split": 0
+ },
+ {
+  "root": "pec",
+  "count": 2,
+  "gloss": "一片",
+  "atomic": 44,
+  "split": 5
+ },
+ {
+  "root": "ĝem",
+  "count": 2,
+  "gloss": "うめく",
+  "atomic": 8,
+  "split": 4
+ },
+ {
+  "root": "tŝangl",
+  "count": 2,
+  "gloss": "[語]ツァンラ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "timpu",
+  "count": 2,
+  "gloss": "[地名]ティンプー",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "telefon",
+  "count": 2,
+  "gloss": "電話",
+  "atomic": 30,
+  "split": 0
+ },
+ {
+  "root": "piast",
+  "count": 2,
+  "gloss": "[史]ピアスト",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "geografi",
+  "count": 2,
+  "gloss": "地理学",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "ĉiel",
+  "count": 2,
+  "gloss": "空",
+  "atomic": 50,
+  "split": 0
+ },
+ {
+  "root": "masiv",
+  "count": 2,
+  "gloss": "どっしり重い",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "velet",
+  "count": 2,
+  "gloss": "[民族]ヴェレティ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "pian",
+  "count": 2,
+  "gloss": "ピアノ",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "seoul",
+  "count": 2,
+  "gloss": "[地名]ソウル",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "kap",
+  "count": 2,
+  "gloss": "頭",
+  "atomic": 98,
+  "split": 0
+ },
+ {
+  "root": "kilometr",
+  "count": 2,
+  "gloss": "[単]キロメートル",
+  "atomic": 15,
+  "split": 0
+ },
+ {
+  "root": "kar",
+  "count": 2,
+  "gloss": "親愛な",
+  "atomic": 97,
+  "split": 3
+ },
+ {
+  "root": "hotel",
+  "count": 2,
+  "gloss": "ホテル",
+  "atomic": 26,
+  "split": 0
+ },
+ {
+  "root": "har",
+  "count": 2,
+  "gloss": "毛",
+  "atomic": 33,
+  "split": 0
+ },
+ {
+  "root": "tond",
+  "count": 2,
+  "gloss": "刈る",
+  "atomic": 16,
+  "split": 0
+ },
+ {
+  "root": "janĉjo",
+  "count": 2,
+  "gloss": "[人名]ヤンチョ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "pikarid",
+  "count": 2,
+  "gloss": "[人名]ピカリド",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "ĝust",
+  "count": 2,
+  "gloss": "正しい",
+  "atomic": 164,
+  "split": 0
+ },
+ {
+  "root": "blu",
+  "count": 2,
+  "gloss": "青い",
+  "atomic": 35,
+  "split": 12
+ },
+ {
+  "root": "sat",
+  "count": 2,
+  "gloss": "満腹した",
+  "atomic": 58,
+  "split": 6
+ },
+ {
+  "root": "plej",
+  "count": 2,
+  "gloss": "最も",
+  "atomic": 21,
+  "split": 0
+ },
+ {
+  "root": "plan",
+  "count": 2,
+  "gloss": "計画",
+  "atomic": 89,
+  "split": 21
+ },
+ {
+  "root": "ŝanĝ",
+  "count": 2,
+  "gloss": "(を)変える",
+  "atomic": 156,
+  "split": 0
+ },
+ {
+  "root": "aŭd",
+  "count": 2,
+  "gloss": "(を)聞く",
+  "atomic": 171,
+  "split": 22
+ },
+ {
+  "root": "brik",
+  "count": 2,
+  "gloss": "れんが",
+  "atomic": 8,
+  "split": 0
+ },
+ {
+  "root": "kaf",
+  "count": 2,
+  "gloss": "コーヒー",
+  "atomic": 56,
+  "split": 2
+ },
+ {
+  "root": "fredo",
+  "count": 2,
+  "gloss": "[人名]フレド",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "kor",
+  "count": 2,
+  "gloss": "心",
+  "atomic": 223,
+  "split": 0
+ },
+ {
+  "root": "leon",
+  "count": 2,
+  "gloss": "[動]ライオン",
+  "atomic": 63,
+  "split": 5
+ },
+ {
+  "root": "far",
+  "count": 2,
+  "gloss": "(を)する",
+  "atomic": 688,
+  "split": 4
+ },
+ {
+  "root": "gren",
+  "count": 2,
+  "gloss": "穀物",
+  "atomic": 12,
+  "split": 0
+ },
+ {
+  "root": "urb",
+  "count": 2,
+  "gloss": "市",
+  "atomic": 367,
+  "split": 7
+ },
+ {
+  "root": "foli",
+  "count": 2,
+  "gloss": "葉",
+  "atomic": 51,
+  "split": 0
+ },
+ {
+  "root": "plast",
+  "count": 2,
+  "gloss": "プラスチック",
+  "atomic": 24,
+  "split": 0
+ },
+ {
+  "root": "vagon",
+  "count": 2,
+  "gloss": "[鉄]車両",
+  "atomic": 26,
+  "split": 0
+ },
+ {
+  "root": "bat",
+  "count": 2,
+  "gloss": "(を)打つ",
+  "atomic": 59,
+  "split": 1
+ },
+ {
+  "root": "apud",
+  "count": 2,
+  "gloss": "(の)そばに",
+  "atomic": 37,
+  "split": 0
+ },
+ {
+  "root": "lit",
+  "count": 2,
+  "gloss": "ベッド",
+  "atomic": 49,
+  "split": 19
+ },
+ {
+  "root": "labor",
+  "count": 2,
+  "gloss": "働く",
+  "atomic": 393,
+  "split": 0
+ },
+ {
+  "root": "ŝat",
+  "count": 2,
+  "gloss": "価値を認める",
+  "atomic": 135,
+  "split": 1
+ },
+ {
+  "root": "varm",
+  "count": 2,
+  "gloss": "暑い",
+  "atomic": 114,
+  "split": 0
+ },
+ {
+  "root": "fer",
+  "count": 2,
+  "gloss": "鉄",
+  "atomic": 45,
+  "split": 0
+ },
+ {
+  "root": "mov",
+  "count": 2,
+  "gloss": "動かす",
+  "atomic": 233,
+  "split": 0
+ },
+ {
+  "root": "bon",
+  "count": 2,
+  "gloss": "良い",
+  "atomic": 866,
+  "split": 67
+ },
+ {
+  "root": "kurac",
+  "count": 2,
+  "gloss": "(を)治療する",
+  "atomic": 50,
+  "split": 0
+ },
+ {
+  "root": "spic",
+  "count": 2,
+  "gloss": "[料]香辛料",
+  "atomic": 14,
+  "split": 0
+ },
+ {
+  "root": "region",
+  "count": 2,
+  "gloss": "[地]地方",
+  "atomic": 108,
+  "split": 0
+ },
+ {
+  "root": "soif",
+  "count": 2,
+  "gloss": "喉が乾く",
+  "atomic": 28,
+  "split": 0
+ },
+ {
+  "root": "jajo",
+  "count": 2,
+  "gloss": "[人名]ヤヨ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "sid",
+  "count": 2,
+  "gloss": "座っている",
+  "atomic": 137,
+  "split": 0
+ },
+ {
+  "root": "sci",
+  "count": 2,
+  "gloss": "知っている",
+  "atomic": 476,
+  "split": 0
+ },
+ {
+  "root": "nekrolog",
+  "count": 2,
+  "gloss": "死亡記事",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "jesu",
+  "count": 2,
+  "gloss": "[宗]イエス",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "nov",
+  "count": 2,
+  "gloss": "新しい",
+  "atomic": 606,
+  "split": 0
+ },
+ {
+  "root": "instagram",
+  "count": 2,
+  "gloss": "インスタグラム",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "oksigen",
+  "count": 2,
+  "gloss": "[化]酸素",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "hibisk",
+  "count": 2,
+  "gloss": "ハイビスカス",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "kiropterolog",
+  "count": 2,
+  "gloss": "コウモリ学者",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "mond",
+  "count": 2,
+  "gloss": "世界",
+  "atomic": 332,
+  "split": 0
+ },
+ {
+  "root": "imperialism",
+  "count": 2,
+  "gloss": "帝国主義",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "atajal",
+  "count": 2,
+  "gloss": "アタヤル",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "distrik",
+  "count": 2,
+  "gloss": "[政]地区",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "kanton",
+  "count": 2,
+  "gloss": "広東",
+  "atomic": 20,
+  "split": 5
+ },
+ {
+  "root": "pazigrafi",
+  "count": 2,
+  "gloss": "普遍文字法",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "part",
+  "count": 2,
+  "gloss": "部分",
+  "atomic": 328,
+  "split": 0
+ },
+ {
+  "root": "konkurenciv",
+  "count": 2,
+  "gloss": "競争力ある",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "pup",
+  "count": 2,
+  "gloss": "人形",
+  "atomic": 28,
+  "split": 0
+ },
+ {
+  "root": "dekstr",
+  "count": 2,
+  "gloss": "右の",
+  "atomic": 89,
+  "split": 0
+ },
+ {
+  "root": "enket",
+  "count": 2,
+  "gloss": "(を)調査する",
+  "atomic": 16,
+  "split": 0
+ },
+ {
+  "root": "polus",
+  "count": 2,
+  "gloss": "[理]極",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "feminist",
+  "count": 2,
+  "gloss": "フェミニスト",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "rasist",
+  "count": 2,
+  "gloss": "人種差別",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "analiz",
+  "count": 2,
+  "gloss": "(を)分析する",
+  "atomic": 13,
+  "split": 0
+ },
+ {
+  "root": "etno",
+  "count": 2,
+  "gloss": "民族",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "borelioz",
+  "count": 2,
+  "gloss": "[医]ボレリア症",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "invigil",
+  "count": 2,
+  "gloss": "諜報",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "luzaci",
+  "count": 2,
+  "gloss": "[地名]ラウジッツ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "aseptik",
+  "count": 2,
+  "gloss": "[医]無菌の",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "hokkajd",
+  "count": 2,
+  "gloss": "[地名]北海道",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "glu",
+  "count": 1,
+  "gloss": "糊",
+  "atomic": 5,
+  "split": 0
+ },
+ {
+  "root": "mark",
+  "count": 1,
+  "gloss": "しるし",
+  "atomic": 41,
+  "split": 0
+ },
+ {
+  "root": "butan",
+  "count": 1,
+  "gloss": "[地名]ブータン",
+  "atomic": 13,
+  "split": 0
+ },
+ {
+  "root": "amar",
+  "count": 1,
+  "gloss": "苦い",
+  "atomic": 4,
+  "split": 0
+ },
+ {
+  "root": "suspekt",
+  "count": 1,
+  "gloss": "(を)怪しむ",
+  "atomic": 32,
+  "split": 0
+ },
+ {
+  "root": "sever",
+  "count": 1,
+  "gloss": "厳しい",
+  "atomic": 25,
+  "split": 0
+ },
+ {
+  "root": "lim",
+  "count": 1,
+  "gloss": "境界",
+  "atomic": 85,
+  "split": 27
+ },
+ {
+  "root": "period",
+  "count": 1,
+  "gloss": "期間",
+  "atomic": 44,
+  "split": 0
+ },
+ {
+  "root": "mank",
+  "count": 1,
+  "gloss": "欠けている",
+  "atomic": 76,
+  "split": 0
+ },
+ {
+  "root": "akv",
+  "count": 1,
+  "gloss": "水",
+  "atomic": 121,
+  "split": 0
+ },
+ {
+  "root": "civilizaci",
+  "count": 1,
+  "gloss": "文明",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "skip",
+  "count": 1,
+  "gloss": "組",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "lup",
+  "count": 1,
+  "gloss": "[動]狼",
+  "atomic": 40,
+  "split": 3
+ },
+ {
+  "root": "kod",
+  "count": 1,
+  "gloss": "コード",
+  "atomic": 9,
+  "split": 0
+ },
+ {
+  "root": "romp",
+  "count": 1,
+  "gloss": "(を)破壊する",
+  "atomic": 47,
+  "split": 0
+ },
+ {
+  "root": "epistol",
+  "count": 1,
+  "gloss": "書簡",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "jar",
+  "count": 1,
+  "gloss": "年",
+  "atomic": 773,
+  "split": 0
+ },
+ {
+  "root": "pretend",
+  "count": 1,
+  "gloss": "(を)要求する",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "nobel",
+  "count": 1,
+  "gloss": "貴族",
+  "atomic": 17,
+  "split": 0
+ },
+ {
+  "root": "reg",
+  "count": 1,
+  "gloss": "統治する",
+  "atomic": 90,
+  "split": 19
+ },
+ {
+  "root": "respekt",
+  "count": 1,
+  "gloss": "(を)尊敬する",
+  "atomic": 22,
+  "split": 0
+ },
+ {
+  "root": "instru",
+  "count": 1,
+  "gloss": "(を)教える",
+  "atomic": 155,
+  "split": 0
+ },
+ {
+  "root": "fabrik",
+  "count": 1,
+  "gloss": "工場",
+  "atomic": 27,
+  "split": 0
+ },
+ {
+  "root": "popular",
+  "count": 1,
+  "gloss": "人気のある",
+  "atomic": 38,
+  "split": 0
+ },
+ {
+  "root": "ind",
+  "count": 1,
+  "gloss": "値する",
+  "atomic": 327,
+  "split": 10
+ },
+ {
+  "root": "vegan",
+  "count": 1,
+  "gloss": "ヴィーガン",
+  "atomic": 3,
+  "split": 0
+ },
+ {
+  "root": "duoling",
+  "count": 1,
+  "gloss": "デュオリンゴ",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "ord",
+  "count": 1,
+  "gloss": "順序",
+  "atomic": 51,
+  "split": 8
+ },
+ {
+  "root": "video",
+  "count": 1,
+  "gloss": "ビデオ",
+  "atomic": 3,
+  "split": 1
+ },
+ {
+  "root": "hidrogen",
+  "count": 1,
+  "gloss": "[化]水素",
+  "atomic": 8,
+  "split": 0
+ },
+ {
+  "root": "mojos",
+  "count": 1,
+  "gloss": "素晴らしい",
+  "atomic": 2,
+  "split": 0
+ },
+ {
+  "root": "vic",
+  "count": 1,
+  "gloss": "列",
+  "atomic": 47,
+  "split": 0
+ },
+ {
+  "root": "bank",
+  "count": 1,
+  "gloss": "銀行",
+  "atomic": 20,
+  "split": 2
+ },
+ {
+  "root": "fal",
+  "count": 1,
+  "gloss": "落ちる",
+  "atomic": 60,
+  "split": 0
+ }
+]

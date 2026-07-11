@@ -1,0 +1,23 @@
+[
+ {
+  "word": "novjorko",
+  "corpus": "nov/jork/o",
+  "app": "novjorko",
+  "gold": "nov/jork/o",
+  "count": 13
+ },
+ {
+  "word": "firmao",
+  "corpus": "firma/o",
+  "app": "firmao",
+  "gold": "firma/o",
+  "count": 11
+ },
+ {
+  "word": "onin",
+  "corpus": "oni/n",
+  "app": "o/ni/n",
+  "gold": "oni/n",
+  "count": 2
+ }
+]

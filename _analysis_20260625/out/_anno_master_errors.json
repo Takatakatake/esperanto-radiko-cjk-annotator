@@ -1,0 +1,709 @@
+[
+ {
+  "root": "ec",
+  "dominant": "性質",
+  "wrong": "行為",
+  "word": "vandaleco",
+  "def": "（文化財の）破壊行為,蛮行,=vandalismo"
+ },
+ {
+  "root": "il",
+  "dominant": "道具",
+  "wrong": "イル",
+  "word": "benzoilo",
+  "def": "【化】【PIV】Radiko C 6 H 5-CO-: benzoilaj kombinaj^oj; dibenzoilo . -> hipurata acido.##偽分解"
+ },
+ {
+  "root": "ad",
+  "dominant": "継続",
+  "wrong": "叙事詩",
+  "word": "Odiseado",
+  "def": "【文】『オデュッセイア』（ホメロス作の叙事詩）"
+ },
+ {
+  "root": "ad",
+  "dominant": "継続",
+  "wrong": "癖",
+  "word": "mus^bugrado",
+  "def": "【PIV】(f (figurasence)) Harfendado."
+ },
+ {
+  "root": "ist",
+  "dominant": "従事者",
+  "wrong": "者",
+  "word": "protagonisto",
+  "def": "{Ｏ}【劇】主役;【文】主人公,=c^efrolulo##偽分解"
+ },
+ {
+  "root": "ist",
+  "dominant": "従事者",
+  "wrong": "信者",
+  "word": "Adventisto",
+  "def": "【PIV】Ano de grupo de komunumoj, kiuj kredas je la baldau^a reveno de Kristo."
+ },
+ {
+  "root": "ist",
+  "dominant": "従事者",
+  "wrong": "信者",
+  "word": "Mitraisto",
+  "def": "【PIV】Adepto de Mitraismo."
+ },
+ {
+  "root": "ist",
+  "dominant": "従事者",
+  "wrong": "論者",
+  "word": "monisto",
+  "def": "【PIV】Adepto de monismo.##偽分解##過細分解 m/o/n/ist/o"
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "半島",
+  "word": "Arabujo",
+  "def": "【PIV】Granda duoninsulo, trovig^anta inter la Rug^a Maro, la Hinda Oceano k la Persa Golfo (45°E, 25°N). Vd Saud-Arabio."
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "植物",
+  "word": "arorutujo",
+  "def": "【PIV】Aroruto 1."
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "地方",
+  "word": "Beotujo",
+  "def": "【PIV】Helena lando (Tebo, 23°19′E, 38°19′N)."
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "低木",
+  "word": "loganberujo",
+  "def": "【PIV】Tufarbusta rubuso (Rubus loganobaccus) kun longaj, maldikaj, kus^antaj s^osoj k kun 4−5 cm (centimetro) longaj, malhele violrug^aj fruktoj, kiuj havas guston akvece dolc^etan; kultivata, precipe en Ameriko, por fruktoj tau^gaj por konservaj^oj."
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "王国",
+  "word": "Longobardujo",
+  "def": "【PIV】Regno fondita de la longobardoj en N-Italio."
+ },
+ {
+  "root": "uj",
+  "dominant": "容器",
+  "wrong": "国",
+  "word": "Mariujo",
+  "def": "【PIV】Respubliko ene de la Rusia Federacio, nord-okcidente de Tatario."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "競技",
+  "word": "atletismo",
+  "def": "運動競技,陸上競技"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "語法",
+  "word": "galicismo",
+  "def": "ガリシズム（フランス語特有の語法）,=francismo##偽分解"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "仕組み",
+  "word": "mekanismo",
+  "def": "{Ｂ}機械装置,仕掛け,メカニズム;機構,構造,仕組み;【芸】技巧,テクニック##偽分解"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "症",
+  "word": "meteorismo",
+  "def": "【医】鼓腸##偽分解##過細分解 m/e/t/e/o/r/ism/o"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "症",
+  "word": "priapismo",
+  "def": "【医】【PIV】Forta k dolora penis-erektig^o pro toksig^o, infektig^o au^ lezo de nervaj centroj. Vd afrodizio."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "追放",
+  "word": "ostracismo",
+  "def": "{Ｏ}【史】（古代ギリシアの）陶片追放,オストラシズム##偽分解"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "状態",
+  "word": "pau^perismo",
+  "def": "（社会の）貧困状態##偽分解"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "行為",
+  "word": "vampirismo",
+  "def": "吸血,=sangosuc^ado"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "行為",
+  "word": "vandalismo",
+  "def": "（文化財の）破壊行為,蛮行,=vandaleco"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "論",
+  "word": "vitalismo",
+  "def": "【哲】生気論"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "論",
+  "word": "plattektonismo",
+  "def": "【PIV】Teorio (tre vers^ajna), lau^ kiu la supra tavolego de Tero (litosfero) konsistas el platoj (kontinentaj k oceanaj), kiuj povas horizontale movig^i sur la astenosfero."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "習俗",
+  "word": "antropofagismo",
+  "def": "【PIV】Tiu aparta kutimo de la antropofagoj: la antropofagismo havas samtempe ekonomiajn k magiajn kau^zojn.##偽分解"
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "中毒",
+  "word": "barbiturismo",
+  "def": "【医】【PIV】Toksig^o per barbituraj^o."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "中毒",
+  "word": "bismutismo",
+  "def": "【医】【PIV】Toksig^o per bismuto."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "依存",
+  "word": "etilismo",
+  "def": "【PIV】= alkoholismo."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "現象",
+  "word": "magmismo",
+  "def": "【PIV】Tuto de la magmaj fenomenoj (estig^o, movig^o, kristalig^o)."
+ },
+ {
+  "root": "ism",
+  "dominant": "主義",
+  "wrong": "教",
+  "word": "Mitraismo",
+  "def": "【PIV】La religio de tiu dio: la tau^r-ofero estis la c^efa rito Mitraisma."
+ },
+ {
+  "root": "mon",
+  "dominant": "かね",
+  "wrong": "一元",
+  "word": "monisto",
+  "def": "【PIV】Adepto de monismo.##偽分解##過細分解 m/o/n/ist/o"
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "反",
+  "word": "antonimo",
+  "def": "【語】反意語##偽分解##過細分解 a/n/t/onim/o"
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "反",
+  "word": "invarianto",
+  "def": "【理】不変量##偽分解##過細分解 i/n/vari/ant/o"
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "剤",
+  "word": "anestezanto",
+  "def": "【PIV】Anesteza substanco.##偽分解##過細分解 a/n/estez/ant/o"
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "剤",
+  "word": "anestezantaj^o",
+  "def": "【PIV】Anesteza substanco.##偽分解##過細分解 a/n/estez/ant/aj^/o"
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "信者",
+  "word": "Bakh^anto",
+  "def": "【宗】【PIV】Pastro au^ aktiva partoprenanto en la mistik-ekstaza kultado de Bakh^o."
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "信者",
+  "word": "bakh^antino",
+  "def": "【PIV】Kultantino, posedata de Bakh^o en ties orgia kulto: Orfeo estis diss^irita de la Bakh^antinoj. Vd menado."
+ },
+ {
+  "root": "ant",
+  "dominant": "能動継続",
+  "wrong": "者",
+  "word": "komunihelpanto",
+  "def": "【PIV】Akolito au^ kredanto, komisiita de la episkopo por helpi al la ordinara komunianto en disdono de la eu^karistio."
+ },
+ {
+  "root": "et",
+  "dominant": "弱小",
+  "wrong": "小",
+  "word": "biteto",
+  "def": "【PIV】Paro da fostetoj arang^ita je la boatrando, servanta por fiksi al g^i s^nuregojn."
+ },
+ {
+  "root": "ton",
+  "dominant": "楽音",
+  "wrong": "調",
+  "word": "atonala",
+  "def": "【PIV】Sentonala.##偽分解"
+ },
+ {
+  "root": "en",
+  "dominant": "中で",
+  "wrong": "En",
+  "word": "En",
+  "def": "［間］オーケー！,よし！"
+ },
+ {
+  "root": "fon",
+  "dominant": "背景",
+  "wrong": "音",
+  "word": "alofono",
+  "def": "【語】【PIV】Parolsono, kiu estas libera au^ kondic^ita varianto de iu fonemo, ekz. (ekzemple) en E. la tri specoj de k (antau^a en «kilo», meza en «kalo», malantau^a en «kulo»), la (mal)fermitaj e, o k.a. (kaj aliaj).##偽分解"
+ },
+ {
+  "root": "fon",
+  "dominant": "背景",
+  "wrong": "音",
+  "word": "alofona",
+  "def": "【PIV】(pp (se paroli pri) transskribo) Inkluzivanta specialajn simbolojn, por figuri alofonojn.##偽分解"
+ },
+ {
+  "root": "plat",
+  "dominant": "平たい",
+  "wrong": "プレート",
+  "word": "plattektonismo",
+  "def": "【PIV】Teorio (tre vers^ajna), lau^ kiu la supra tavolego de Tero (litosfero) konsistas el platoj (kontinentaj k oceanaj), kiuj povas horizontale movig^i sur la astenosfero."
+ },
+ {
+  "root": "nom",
+  "dominant": "名前",
+  "wrong": "学者",
+  "word": "astronomo",
+  "def": "{Ｏ}天文学者##偽分解##過細分解 astr/o/n/o/m/o"
+ },
+ {
+  "root": "akr",
+  "dominant": "鋭い",
+  "wrong": "肢端",
+  "word": "akromegalio",
+  "def": "【医】【PIV】Malsano de la cerba hipofizo, karakterizata de hipertrofio de manoj, fingroj, piedoj.##偽分解"
+ },
+ {
+  "root": "cikl",
+  "dominant": "周期",
+  "wrong": "ポー",
+  "word": "pociklo",
+  "def": "【理】サイクル毎秒（周波数の単位，c/s）,=herco"
+ },
+ {
+  "root": "plant",
+  "dominant": "植える",
+  "wrong": "植物",
+  "word": "arorutplanto",
+  "def": "【PIV】Aroruto 1."
+ },
+ {
+  "root": "al",
+  "dominant": "方へ",
+  "wrong": "性",
+  "word": "atonala",
+  "def": "【PIV】Sentonala.##偽分解"
+ },
+ {
+  "root": "du",
+  "dominant": "二",
+  "wrong": "半",
+  "word": "Duoninsulo",
+  "def": "【地名】タイミル半島（シベリア）"
+ },
+ {
+  "root": "on",
+  "dominant": "分数",
+  "wrong": "子",
+  "word": "antiprotono",
+  "def": "【理】反陽子##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "on",
+  "dominant": "分数",
+  "wrong": "子",
+  "word": "protono",
+  "def": "【理】陽子,>>atomo,>>elektrono,>>neu^trono##偽分解"
+ },
+ {
+  "root": "on",
+  "dominant": "分数",
+  "wrong": "分",
+  "word": "Duoninsulo",
+  "def": "【地名】タイミル半島（シベリア）"
+ },
+ {
+  "root": "ter",
+  "dominant": "地球",
+  "wrong": "土",
+  "word": "aluntero",
+  "def": "【PIV】Naturaj teraj masoj ric^aj je aluno 3."
+ },
+ {
+  "root": "mal",
+  "dominant": "正反対",
+  "wrong": "ポー",
+  "word": "pomalgranda",
+  "def": "小売商品"
+ },
+ {
+  "root": "mal",
+  "dominant": "正反対",
+  "wrong": "ポー",
+  "word": "pomalgranda",
+  "def": "小売"
+ },
+ {
+  "root": "logi",
+  "dominant": "学",
+  "wrong": "反復",
+  "word": "tau^tologio",
+  "def": "【論】同語反復;【修】類語反復##偽分解"
+ },
+ {
+  "root": "logi",
+  "dominant": "学",
+  "wrong": "論",
+  "word": "teleologio",
+  "def": "【哲】目的論##偽分解"
+ },
+ {
+  "root": "morf",
+  "dominant": "形",
+  "wrong": "形態",
+  "word": "alomorfo",
+  "def": "【語】【PIV】Varianto de morfemo (precipe en aglutinaj lingvoj).##偽分解"
+ },
+ {
+  "root": "hor",
+  "dominant": "一時間",
+  "wrong": "ポー",
+  "word": "pohora",
+  "def": "時間給"
+ },
+ {
+  "root": "anti",
+  "dominant": "反",
+  "wrong": "対蹠",
+  "word": "antipoda",
+  "def": "【地理】対蹠的な;《転》正反対の##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "anti",
+  "dominant": "反",
+  "wrong": "対蹠",
+  "word": "antipodo",
+  "def": "{Ｏ}【地理】対蹠地（たいせきち）##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "oz",
+  "dominant": "症",
+  "wrong": "糖",
+  "word": "arabinozo",
+  "def": "【化】【PIV】Pentozo, C 5 H 10 O 5, konsistiganto de la polisakarido de la araba gumo."
+ },
+ {
+  "root": "oz",
+  "dominant": "症",
+  "wrong": "糖",
+  "word": "stakiozo",
+  "def": "【化】【PIV】Sukero, tetrasakarido trovig^anta en plantoj, precipe el la fam. (familio) lamiacoj, sed ankau^ en la semoj de fabacoj."
+ },
+ {
+  "root": "oz",
+  "dominant": "症",
+  "wrong": "含有",
+  "word": "bitumoza",
+  "def": "【PIV】= bitumohava."
+ },
+ {
+  "root": "meti",
+  "dominant": "置く",
+  "wrong": "職業",
+  "word": "metia",
+  "def": "【PIV】Rilata al metio(j): metia korporacio; la metiaj moroj."
+ },
+ {
+  "root": "san",
+  "dominant": "健康な",
+  "wrong": "健康",
+  "word": "mlasano",
+  "def": "重い病気"
+ },
+ {
+  "root": "mobil",
+  "dominant": "移動",
+  "wrong": "モビール",
+  "word": "mobilo",
+  "def": "【PIV】Artaj^o el plaketoj, ekvilibre pendantaj de dratoj k turnig^antaj lau^ la aermovoj. -> stabilo."
+ },
+ {
+  "root": "magnet",
+  "dominant": "磁石",
+  "wrong": "磁気",
+  "word": "magnetosfero",
+  "def": "【天】【PIV】Dikega, neregulforma tegaj^o de magneta kampo c^irkau^ Tero k aliaj c^ielaj korpoj (Suno, planedoj): la magnetosfero de Tero komencig^as c^. (c^irkau^) 1000 km (kilometro) super ties surfaco.##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "magnet",
+  "dominant": "磁石",
+  "wrong": "磁気",
+  "word": "magnetoskopo",
+  "def": "【PIV】Aparato por magnete registri sur bendon samtempe sonojn k movig^antajn bildojn el kamerao au^ televidilo k por reprodukti ilin per televidilo. Sin. (sinonimo) vidbendaparato, videobendregistrilo. Vd magnetofono.##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "kok",
+  "dominant": "ニワトリ",
+  "wrong": "球菌",
+  "word": "diplokoko",
+  "def": "【生】【PIV】1 G. (Genro) (Diplococcus) de eu^bakterioj. 2 Morfologia nomo de diversagenraj globaj eu^bakterioj, kies c^eloj estas duope arig^intaj. Vd koko.##偽分解"
+ },
+ {
+  "root": "sfer",
+  "dominant": "球",
+  "wrong": "圏",
+  "word": "astenosfero",
+  "def": "【地質】【PIV】Fleksebla parto de la supra mantelo de Tero. Vd litosfero, magmo.##偽分解"
+ },
+ {
+  "root": "bit",
+  "dominant": "ビット",
+  "wrong": "係柱",
+  "word": "biteto",
+  "def": "【PIV】Paro da fostetoj arang^ita je la boatrando, servanta por fiksi al g^i s^nuregojn."
+ },
+ {
+  "root": "bor",
+  "dominant": "穴をあける",
+  "wrong": "ホウ素",
+  "word": "borato",
+  "def": "【化】【PIV】Salo de borata acido, H 3 BO 3.##偽分解"
+ },
+ {
+  "root": "strek",
+  "dominant": "線をひく",
+  "wrong": "カタ",
+  "word": "streka",
+  "def": "カタカナ（片仮名）"
+ },
+ {
+  "root": "si",
+  "dominant": "自己",
+  "wrong": "SI",
+  "word": "SI",
+  "def": "【理】【PIV】Mll de «sistemo internacia de mezurunuoj», kies sep bazaj unuoj estas la metro (longo), kilogramo (maso), sekundo (tempo), ampero (elektra kurento), kelvino (temperaturo), molo (substanckvanto) k kandelo (lumintenso). Vd cgs, mks."
+ },
+ {
+  "root": "faz",
+  "dominant": "段階",
+  "wrong": "期",
+  "word": "metafazo",
+  "def": "【生】【PIV】Fazo de mitozo k mejozo, dum kiu la kromosomoj arang^ig^as c^e la ekvatoro de la c^elspindelo.##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "dia",
+  "dominant": "通過",
+  "wrong": "通",
+  "word": "diakrona",
+  "def": "【語】【PIV】Temanta pri la historia evoluo: diakrona fonetiko, gramatiko. Vd sinkrona.##偽分解##過細分解 dia/k/r/o/n/a"
+ },
+ {
+  "root": "konstant",
+  "dominant": "不変の",
+  "wrong": "定数",
+  "word": "influenckonstanto",
+  "def": "【理】【PIV】Fizika grando, karakterizanta la elektran kampon en vakuo, egala al kvociento de elektrokvanto interne de volumena ero per la area integralo de la elektra kampintenso prenita sur la surfaco de la volumena ero; simb. (simbolo): Σ 0 (epsilono nul)."
+ },
+ {
+  "root": "meta",
+  "dominant": "後・超",
+  "wrong": "中",
+  "word": "metafazo",
+  "def": "【生】【PIV】Fazo de mitozo k mejozo, dum kiu la kromosomoj arang^ig^as c^e la ekvatoro de la c^elspindelo.##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "meta",
+  "dominant": "後・超",
+  "wrong": "転",
+  "word": "metastazo",
+  "def": "【医】【PIV】Kancerrecidivo en alia korpoparto.##偽分解"
+ },
+ {
+  "root": "grand",
+  "dominant": "大きい",
+  "wrong": "ポー",
+  "word": "pogranda",
+  "def": "卸商品"
+ },
+ {
+  "root": "grand",
+  "dominant": "大きい",
+  "wrong": "ポー",
+  "word": "pogranda",
+  "def": "卸売"
+ },
+ {
+  "root": "grand",
+  "dominant": "大きい",
+  "wrong": "正反対",
+  "word": "pomalgranda",
+  "def": "小売商品"
+ },
+ {
+  "root": "grand",
+  "dominant": "大きい",
+  "wrong": "正反対",
+  "word": "pomalgranda",
+  "def": "小売"
+ },
+ {
+  "root": "muŝ",
+  "dominant": "ハエ",
+  "wrong": "些細",
+  "word": "mus^bugrado",
+  "def": "【PIV】(f (figurasence)) Harfendado."
+ },
+ {
+  "root": "franc",
+  "dominant": "フランスの",
+  "wrong": "フランス",
+  "word": "Franca",
+  "def": "【地名】フランス領ギアナ（南アメリカ）"
+ },
+ {
+  "root": "hipo",
+  "dominant": "低下",
+  "wrong": "小",
+  "word": "hipotenaro",
+  "def": "【解】【PIV】(hypothenar) Elstaraj^o en la manplato c^e la ulna rando. Vd tenaro.##偽分解(PIV正式分解)"
+ },
+ {
+  "root": "salajr",
+  "dominant": "給料",
+  "wrong": "a 給料",
+  "word": "salajro",
+  "def": "時間給"
+ },
+ {
+  "root": "mus",
+  "dominant": "ハツカネズミ",
+  "wrong": "マウス",
+  "word": "Muso",
+  "def": "【文】ミッキーマウス（ディズニー・アニメの主人公）"
+ },
+ {
+  "root": "or",
+  "dominant": "金",
+  "wrong": "者",
+  "word": "kreditoro",
+  "def": "{Ｏ}【商】債権者,><debitoro##偽分解##過細分解 kred/it/o/r/o"
+ },
+ {
+  "root": "or",
+  "dominant": "金",
+  "wrong": "器",
+  "word": "monokromatoro",
+  "def": "【理】モノクロメーター##偽分解##過細分解 mono/kromat/o/r/o"
+ },
+ {
+  "root": "or",
+  "dominant": "金",
+  "wrong": "器",
+  "word": "konvertoro",
+  "def": "【理】転換炉##偽分解##過細分解 nukle/a konvert/o/r/o"
+ },
+ {
+  "root": "latin",
+  "dominant": "ラテン語",
+  "wrong": "ラティウム",
+  "word": "Latinujo",
+  "def": "【PIV】Latio."
+ },
+ {
+  "root": "oranĝ",
+  "dominant": "オランジュ",
+  "wrong": "オレンジ川",
+  "word": "Orang^o",
+  "def": "【地名】オレンジ川（南アフリカ）"
+ },
+ {
+  "root": "moder",
+  "dominant": "適度の",
+  "wrong": "減速",
+  "word": "moderigaj^o",
+  "def": "【理】【PIV】Materialo en nuklea reaktoro, kiu malakcelas la rapidajn neu^tronojn, emanantajn de fandig^intaj nukleoj, k tiel ebligas pludau^ron de la c^enreakcio. Sin. (sinonimo) moderatoro."
+ },
+ {
+  "root": "serioz",
+  "dominant": "まじめな",
+  "wrong": "重い",
+  "word": "serioza",
+  "def": "重い病気"
+ },
+ {
+  "root": "meteor",
+  "dominant": "流星",
+  "wrong": "鼓腸",
+  "word": "meteorismo",
+  "def": "【医】鼓腸##偽分解##過細分解 m/e/t/e/o/r/ism/o"
+ },
+ {
+  "root": "sol",
+  "dominant": "唯一の",
+  "wrong": "ゾル",
+  "word": "citosolo",
+  "def": "【生】【PIV】C^elsolo.##偽分解"
+ },
+ {
+  "root": "sten",
+  "dominant": "速記",
+  "wrong": "ステーヌ",
+  "word": "steno",
+  "def": "【理】ステーヌ（力の単位）"
+ }
+]

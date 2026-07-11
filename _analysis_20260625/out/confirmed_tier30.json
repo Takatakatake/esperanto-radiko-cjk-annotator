@@ -1,0 +1,2418 @@
+[
+ {
+  "w": "ekde",
+  "target": "ek/de"
+ },
+ {
+  "w": "progresi",
+  "target": "progres/i"
+ },
+ {
+  "w": "fasxismo",
+  "target": "faŝ/ism/o"
+ },
+ {
+  "w": "fero",
+  "target": "fer/o"
+ },
+ {
+  "w": "milfoje",
+  "target": "mil/foj/e"
+ },
+ {
+  "w": "farado",
+  "target": "far/ad/o"
+ },
+ {
+  "w": "amas",
+  "target": "am/as"
+ },
+ {
+  "w": "adon",
+  "target": "ad/on"
+ },
+ {
+  "w": "amon",
+  "target": "am/on"
+ },
+ {
+  "w": "meritokratio",
+  "target": "merit/o/krat/i/o"
+ },
+ {
+  "w": "dion",
+  "target": "di/on"
+ },
+ {
+  "w": "tokiponuloj",
+  "target": "tokipon/ul/oj"
+ },
+ {
+  "w": "areopologio",
+  "target": "are/op/o/logi/o"
+ },
+ {
+  "w": "anton",
+  "target": "ant/on"
+ },
+ {
+  "w": "junuliĉoj",
+  "target": "jun/ul/iĉ/oj"
+ },
+ {
+  "w": "gerdan",
+  "target": "gerda/n"
+ },
+ {
+  "w": "tenis",
+  "target": "ten/is"
+ },
+ {
+  "w": "havaj",
+  "target": "hav/aj"
+ },
+ {
+  "w": "elzan",
+  "target": "elza/n"
+ },
+ {
+  "w": "eti",
+  "target": "et/i"
+ },
+ {
+  "w": "peĉjon",
+  "target": "peĉjo/n"
+ },
+ {
+  "w": "jutubo",
+  "target": "jutub/o"
+ },
+ {
+  "w": "tokiponistoj",
+  "target": "tokipon/ist/oj"
+ },
+ {
+  "w": "tokiponularo",
+  "target": "tokipon/ul/ar/o"
+ },
+ {
+  "w": "tokiponulojn",
+  "target": "tokipon/ul/ojn"
+ },
+ {
+  "w": "etos",
+  "target": "et/os"
+ },
+ {
+  "w": "argentan",
+  "target": "argent/an"
+ },
+ {
+  "w": "ndemande",
+  "target": "n/demand/e"
+ },
+ {
+  "w": "fie",
+  "target": "fi/e"
+ },
+ {
+  "w": "paran",
+  "target": "par/an"
+ },
+ {
+  "w": "aĝe",
+  "target": "aĝ/e"
+ },
+ {
+  "w": "pense",
+  "target": "pens/e"
+ },
+ {
+  "w": "vortoscion",
+  "target": "vort/o/sci/on"
+ },
+ {
+  "w": "davaon",
+  "target": "davao/n"
+ },
+ {
+  "w": "faradis",
+  "target": "far/ad/is"
+ },
+ {
+  "w": "iĉoj",
+  "target": "iĉ/oj"
+ },
+ {
+  "w": "iĉaj",
+  "target": "iĉ/aj"
+ },
+ {
+  "w": "tradiciojn",
+  "target": "tradici/ojn"
+ },
+ {
+  "w": "sportocentro",
+  "target": "sport/o/centr/o"
+ },
+ {
+  "w": "piastdinastia",
+  "target": "piast/dinasti/a"
+ },
+ {
+  "w": "vroclava",
+  "target": "vroclav/a"
+ },
+ {
+  "w": "dojmis",
+  "target": "dojm/is"
+ },
+ {
+  "w": "anjon",
+  "target": "anjo/n"
+ },
+ {
+  "w": "sulen",
+  "target": "sule/n"
+ },
+ {
+  "w": "jajon",
+  "target": "jajo/n"
+ },
+ {
+  "w": "trekadon",
+  "target": "trek/ad/on"
+ },
+ {
+  "w": "auster",
+  "target": "auster"
+ },
+ {
+  "w": "vroclavo",
+  "target": "vroclav/o"
+ },
+ {
+  "w": "okcidentigo",
+  "target": "okcident/ig/o"
+ },
+ {
+  "w": "memeon",
+  "target": "meme/on"
+ },
+ {
+  "w": "meritokratia",
+  "target": "merit/o/krat/ia"
+ },
+ {
+  "w": "meritokratian",
+  "target": "merit/o/krat/ian"
+ },
+ {
+  "w": "domen",
+  "target": "dom/e/n"
+ },
+ {
+  "w": "legata",
+  "target": "leg/at/a"
+ },
+ {
+  "w": "baron",
+  "target": "bar/on"
+ },
+ {
+  "w": "honorata",
+  "target": "honor/at/a"
+ },
+ {
+  "w": "kantataj",
+  "target": "kant/at/aj"
+ },
+ {
+  "w": "kantata",
+  "target": "kant/at/a"
+ },
+ {
+  "w": "ĉoĉangaĉa",
+  "target": "ĉoĉangaĉ/a"
+ },
+ {
+  "w": "kantoa",
+  "target": "kanto/a"
+ },
+ {
+  "w": "tereftalato",
+  "target": "tereftalat/o"
+ },
+ {
+  "w": "nociveco",
+  "target": "nociv/ec/o"
+ },
+ {
+  "w": "grifita",
+  "target": "grifit/a"
+ },
+ {
+  "w": "toruno",
+  "target": "torun/o"
+ },
+ {
+  "w": "ebligantaj",
+  "target": "ebl/ig/ant/aj"
+ },
+ {
+  "w": "baltikon",
+  "target": "baltik/on"
+ },
+ {
+  "w": "bonŝanĉulo",
+  "target": "bon/ŝanĉ/ul/o"
+ },
+ {
+  "w": "fronantaj",
+  "target": "fron/ant/aj"
+ },
+ {
+  "w": "kaŝtelestro",
+  "target": "kaŝtel/estr/o"
+ },
+ {
+  "w": "invigilserva",
+  "target": "invigil/serv/a"
+ },
+ {
+  "w": "invigilservo",
+  "target": "invigil/serv/o"
+ },
+ {
+  "w": "ekscepta",
+  "target": "ekscept/a"
+ },
+ {
+  "w": "informatika",
+  "target": "informatik/a"
+ },
+ {
+  "w": "boleslaon",
+  "target": "boleslao/n"
+ },
+ {
+  "w": "revenĝe",
+  "target": "re/venĝ/e"
+ },
+ {
+  "w": "milsko",
+  "target": "milsk/o"
+ },
+ {
+  "w": "antiseptiko",
+  "target": "antiseptik/o"
+ },
+ {
+  "w": "lecjonojn",
+  "target": "lecjon/ojn"
+ },
+ {
+  "w": "jurnalisto",
+  "target": "jurnal/ist/o"
+ },
+ {
+  "w": "rubaŝka",
+  "target": "rubaŝk/a"
+ },
+ {
+  "w": "trekado",
+  "target": "trek/ad/o"
+ },
+ {
+  "w": "sendependemon",
+  "target": "sen/depend/em/on"
+ },
+ {
+  "w": "evidentigis",
+  "target": "evident/ig/is"
+ },
+ {
+  "w": "amaziĥa",
+  "target": "amaziĥ/a"
+ },
+ {
+  "w": "paiŭanan",
+  "target": "paiŭan/an"
+ },
+ {
+  "w": "ŝonaan",
+  "target": "ŝona/an"
+ },
+ {
+  "w": "kamakuron",
+  "target": "kamakuro/n"
+ },
+ {
+  "w": "enoŝimon",
+  "target": "enoŝimo/n"
+ },
+ {
+  "w": "bisaja",
+  "target": "bisaj/a"
+ },
+ {
+  "w": "bisajaso",
+  "target": "bisajas/o"
+ },
+ {
+  "w": "renkejtiĝon",
+  "target": "renkejtiĝo/n"
+ },
+ {
+  "w": "jukata",
+  "target": "jukat/a"
+ },
+ {
+  "w": "brasilo",
+  "target": "brasil/o"
+ },
+ {
+  "w": "jutube",
+  "target": "jutub/e"
+ },
+ {
+  "w": "jutubaj",
+  "target": "jutub/aj"
+ },
+ {
+  "w": "jutubisto",
+  "target": "jutub/ist/o"
+ },
+ {
+  "w": "tifinaha",
+  "target": "tifinah/a"
+ },
+ {
+  "w": "trilitajn",
+  "target": "tril/it/ajn"
+ },
+ {
+  "w": "okajamo",
+  "target": "okajam/o"
+ },
+ {
+  "w": "oktoberfesto",
+  "target": "oktoberfest/o"
+ },
+ {
+  "w": "jokohaman",
+  "target": "jokohama/n"
+ },
+ {
+  "w": "neŭtronoj",
+  "target": "neŭtron/oj"
+ },
+ {
+  "w": "ferio",
+  "target": "feri/o"
+ },
+ {
+  "w": "feria",
+  "target": "feri/a"
+ },
+ {
+  "w": "pensio",
+  "target": "pensi/o"
+ },
+ {
+  "w": "pasio",
+  "target": "pasi/o"
+ },
+ {
+  "w": "taksio",
+  "target": "taksi/o"
+ },
+ {
+  "w": "metio",
+  "target": "meti/o"
+ },
+ {
+  "w": "konsilio",
+  "target": "konsili/o"
+ },
+ {
+  "w": "kajo",
+  "target": "kajo"
+ },
+ {
+  "w": "kajon",
+  "target": "kajo/n"
+ },
+ {
+  "w": "kajoj",
+  "target": "kajo/j"
+ },
+ {
+  "w": "kajojn",
+  "target": "kajo/jn"
+ },
+ {
+  "w": "firmao",
+  "target": "firmao"
+ },
+ {
+  "w": "firmaon",
+  "target": "firmao/n"
+ },
+ {
+  "w": "firmaoj",
+  "target": "firma/oj"
+ },
+ {
+  "w": "lama",
+  "target": "lam/a"
+ },
+ {
+  "w": "laman",
+  "target": "lam/a/n"
+ },
+ {
+  "w": "lamaj",
+  "target": "lam/aj"
+ },
+ {
+  "w": "lamajn",
+  "target": "lam/aj/n"
+ },
+ {
+  "w": "lame",
+  "target": "lam/e"
+ },
+ {
+  "w": "adalberto",
+  "target": "adalberto"
+ },
+ {
+  "w": "adejemi",
+  "target": "adejemi"
+ },
+ {
+  "w": "andrzej",
+  "target": "andrzej"
+ },
+ {
+  "w": "arquien",
+  "target": "arquien"
+ },
+ {
+  "w": "asaĵiroo",
+  "target": "asaĵiroo"
+ },
+ {
+  "w": "aŝirpa",
+  "target": "aŝirpa"
+ },
+ {
+  "w": "aŭdu",
+  "target": "aŭdu"
+ },
+ {
+  "w": "bagmati",
+  "target": "bagmati"
+ },
+ {
+  "w": "barat",
+  "target": "barat"
+ },
+ {
+  "w": "batangas",
+  "target": "batangas"
+ },
+ {
+  "w": "bath",
+  "target": "bath"
+ },
+ {
+  "w": "beaufront",
+  "target": "beaufront"
+ },
+ {
+  "w": "berezovka",
+  "target": "berezovka"
+ },
+ {
+  "w": "bernstein",
+  "target": "bernstein"
+ },
+ {
+  "w": "bisajas",
+  "target": "bisajas"
+ },
+ {
+  "w": "bletchley",
+  "target": "bletchley"
+ },
+ {
+  "w": "boleslao",
+  "target": "boleslao"
+ },
+ {
+  "w": "borovko",
+  "target": "borovko"
+ },
+ {
+  "w": "budziszyn",
+  "target": "budziszyn"
+ },
+ {
+  "w": "bulski",
+  "target": "bulski"
+ },
+ {
+  "w": "burno",
+  "target": "burno"
+ },
+ {
+  "w": "cambridge",
+  "target": "cambridge"
+ },
+ {
+  "w": "carmen",
+  "target": "carmen"
+ },
+ {
+  "w": "changchun",
+  "target": "changchun"
+ },
+ {
+  "w": "chopin",
+  "target": "chopin"
+ },
+ {
+  "w": "christian",
+  "target": "christian"
+ },
+ {
+  "w": "cisarua",
+  "target": "cisarua"
+ },
+ {
+  "w": "comenius",
+  "target": "comenius"
+ },
+ {
+  "w": "conreria",
+  "target": "conreria"
+ },
+ {
+  "w": "corgatelli",
+  "target": "corgatelli"
+ },
+ {
+  "w": "corsetti",
+  "target": "corsetti"
+ },
+ {
+  "w": "couderc",
+  "target": "couderc"
+ },
+ {
+  "w": "couturat",
+  "target": "couturat"
+ },
+ {
+  "w": "czerniowce",
+  "target": "czerniowce"
+ },
+ {
+  "w": "dalian",
+  "target": "dalian"
+ },
+ {
+  "w": "dariusz",
+  "target": "dariusz"
+ },
+ {
+  "w": "deguĉi",
+  "target": "deguĉi"
+ },
+ {
+  "w": "doppler",
+  "target": "doppler"
+ },
+ {
+  "w": "dungguo",
+  "target": "dungguo"
+ },
+ {
+  "w": "edulo",
+  "target": "edulo"
+ },
+ {
+  "w": "edward",
+  "target": "edward"
+ },
+ {
+  "w": "einstein",
+  "target": "einstein"
+ },
+ {
+  "w": "eiselberg",
+  "target": "eiselberg"
+ },
+ {
+  "w": "elbinga",
+  "target": "elbinga"
+ },
+ {
+  "w": "enoŝimo",
+  "target": "enoŝimo"
+ },
+ {
+  "w": "eroŝenko",
+  "target": "eroŝenko"
+ },
+ {
+  "w": "ethan",
+  "target": "ethan"
+ },
+ {
+  "w": "fergus",
+  "target": "fergus"
+ },
+ {
+  "w": "firestone",
+  "target": "firestone"
+ },
+ {
+  "w": "fumiharu",
+  "target": "fumiharu"
+ },
+ {
+  "w": "fushun",
+  "target": "fushun"
+ },
+ {
+  "w": "fusun",
+  "target": "fusun"
+ },
+ {
+  "w": "gudula",
+  "target": "gudula"
+ },
+ {
+  "w": "gameron",
+  "target": "gameron"
+ },
+ {
+  "w": "gangnam",
+  "target": "gangnam"
+ },
+ {
+  "w": "gauntlett",
+  "target": "gauntlett"
+ },
+ {
+  "w": "gemblou",
+  "target": "gemblou"
+ },
+ {
+  "w": "ghimire",
+  "target": "ghimire"
+ },
+ {
+  "w": "gniezno",
+  "target": "gniezno"
+ },
+ {
+  "w": "gomamoto",
+  "target": "gomamoto"
+ },
+ {
+  "w": "graz",
+  "target": "graz"
+ },
+ {
+  "w": "grodno",
+  "target": "grodno"
+ },
+ {
+  "w": "gunma",
+  "target": "gunma"
+ },
+ {
+  "w": "hangzhou",
+  "target": "hangzhou"
+ },
+ {
+  "w": "harima",
+  "target": "harima"
+ },
+ {
+  "w": "harka",
+  "target": "harka"
+ },
+ {
+  "w": "hasegaŭa",
+  "target": "hasegaŭa"
+ },
+ {
+  "w": "haĉiooĵi",
+  "target": "haĉiooĵi"
+ },
+ {
+  "w": "hector",
+  "target": "hector"
+ },
+ {
+  "w": "heinrich",
+  "target": "heinrich"
+ },
+ {
+  "w": "henryk",
+  "target": "henryk"
+ },
+ {
+  "w": "hideki",
+  "target": "hideki"
+ },
+ {
+  "w": "hiei",
+  "target": "hiei"
+ },
+ {
+  "w": "hiroo",
+  "target": "hiroo"
+ },
+ {
+  "w": "hirosima",
+  "target": "hirosima"
+ },
+ {
+  "w": "hirotaka",
+  "target": "hirotaka"
+ },
+ {
+  "w": "hokkaido",
+  "target": "hokkaido"
+ },
+ {
+  "w": "hokkajd",
+  "target": "hokkajd"
+ },
+ {
+  "w": "holmes",
+  "target": "holmes"
+ },
+ {
+  "w": "honŝuu",
+  "target": "honŝuu"
+ },
+ {
+  "w": "hubble",
+  "target": "hubble"
+ },
+ {
+  "w": "hubei",
+  "target": "hubei"
+ },
+ {
+  "w": "hukuoka",
+  "target": "hukuoka"
+ },
+ {
+  "w": "hukuta",
+  "target": "hukuta"
+ },
+ {
+  "w": "hutabatei",
+  "target": "hutabatei"
+ },
+ {
+  "w": "hwaseong",
+  "target": "hwaseong"
+ },
+ {
+  "w": "inazoo",
+  "target": "inazoo"
+ },
+ {
+  "w": "inuta",
+  "target": "inuta"
+ },
+ {
+  "w": "itabashi",
+  "target": "itabashi"
+ },
+ {
+  "w": "italujo",
+  "target": "italujo"
+ },
+ {
+  "w": "iŝiguro",
+  "target": "iŝiguro"
+ },
+ {
+  "w": "jamaŭĉi",
+  "target": "jamaŭĉi"
+ },
+ {
+  "w": "jacugatake",
+  "target": "jacugatake"
+ },
+ {
+  "w": "jamada",
+  "target": "jamada"
+ },
+ {
+  "w": "jamaga",
+  "target": "jamaga"
+ },
+ {
+  "w": "jamanasi",
+  "target": "jamanasi"
+ },
+ {
+  "w": "janusz",
+  "target": "janusz"
+ },
+ {
+  "w": "janĉjo",
+  "target": "janĉjo"
+ },
+ {
+  "w": "jasutaroo",
+  "target": "jasutaroo"
+ },
+ {
+  "w": "jetunde",
+  "target": "jetunde"
+ },
+ {
+  "w": "jiamusi",
+  "target": "jiamusi"
+ },
+ {
+  "w": "jinbo",
+  "target": "jinbo"
+ },
+ {
+  "w": "jining",
+  "target": "jining"
+ },
+ {
+  "w": "jinsu",
+  "target": "jinsu"
+ },
+ {
+  "w": "johannes",
+  "target": "johannes"
+ },
+ {
+  "w": "jokosuka",
+  "target": "jokosuka"
+ },
+ {
+  "w": "jonas",
+  "target": "jonas"
+ },
+ {
+  "w": "joŝimi",
+  "target": "joŝimi"
+ },
+ {
+  "w": "joŝino",
+  "target": "joŝino"
+ },
+ {
+  "w": "joŝio",
+  "target": "joŝio"
+ },
+ {
+  "w": "kacumi",
+  "target": "kacumi"
+ },
+ {
+  "w": "kamakuro",
+  "target": "kamakuro"
+ },
+ {
+  "w": "kameoka",
+  "target": "kameoka"
+ },
+ {
+  "w": "kanagawa",
+  "target": "kanagawa"
+ },
+ {
+  "w": "kanagaŭa",
+  "target": "kanagaŭa"
+ },
+ {
+  "w": "karpacz",
+  "target": "karpacz"
+ },
+ {
+  "w": "katmando",
+  "target": "katmando"
+ },
+ {
+  "w": "kawasaki",
+  "target": "kawasaki"
+ },
+ {
+  "w": "kazimiera",
+  "target": "kazimiera"
+ },
+ {
+  "w": "kazimierz",
+  "target": "kazimierz"
+ },
+ {
+  "w": "kikumi",
+  "target": "kikumi"
+ },
+ {
+  "w": "kimoto",
+  "target": "kimoto"
+ },
+ {
+  "w": "kinkaku",
+  "target": "kinkaku"
+ },
+ {
+  "w": "kinugasa",
+  "target": "kinugasa"
+ },
+ {
+  "w": "kitakyusyu",
+  "target": "kitakyusyu"
+ },
+ {
+  "w": "kjuŝu",
+  "target": "kjuŝu"
+ },
+ {
+  "w": "klagenfurt",
+  "target": "klagenfurt"
+ },
+ {
+  "w": "klemens",
+  "target": "klemens"
+ },
+ {
+  "w": "knobloch",
+  "target": "knobloch"
+ },
+ {
+  "w": "koenigsberg",
+  "target": "koenigsberg"
+ },
+ {
+  "w": "kolomiec",
+  "target": "kolomiec"
+ },
+ {
+  "w": "komaki",
+  "target": "komaki"
+ },
+ {
+  "w": "konfucio",
+  "target": "konfucio"
+ },
+ {
+  "w": "konigsberg",
+  "target": "konigsberg"
+ },
+ {
+  "w": "koosaku",
+  "target": "koosaku"
+ },
+ {
+  "w": "kosadi",
+  "target": "kosadi"
+ },
+ {
+  "w": "kumamoto",
+  "target": "kumamoto"
+ },
+ {
+  "w": "kunitaroo",
+  "target": "kunitaroo"
+ },
+ {
+  "w": "kuratov",
+  "target": "kuratov"
+ },
+ {
+  "w": "kurita",
+  "target": "kurita"
+ },
+ {
+  "w": "kuroita",
+  "target": "kuroita"
+ },
+ {
+  "w": "kvedlinburg",
+  "target": "kvedlinburg"
+ },
+ {
+  "w": "langtang",
+  "target": "langtang"
+ },
+ {
+  "w": "leibniz",
+  "target": "leibniz"
+ },
+ {
+  "w": "lenjo",
+  "target": "lenjo"
+ },
+ {
+  "w": "leonel",
+  "target": "leonel"
+ },
+ {
+  "w": "lessing",
+  "target": "lessing"
+ },
+ {
+  "w": "liang",
+  "target": "liang"
+ },
+ {
+  "w": "linyi",
+  "target": "linyi"
+ },
+ {
+  "w": "lipovski",
+  "target": "lipovski"
+ },
+ {
+  "w": "loskutova",
+  "target": "loskutova"
+ },
+ {
+  "w": "ludwika",
+  "target": "ludwika"
+ },
+ {
+  "w": "lusin",
+  "target": "lusin"
+ },
+ {
+  "w": "lutek",
+  "target": "lutek"
+ },
+ {
+  "w": "luzaci",
+  "target": "luzaci"
+ },
+ {
+  "w": "manabu",
+  "target": "manabu"
+ },
+ {
+  "w": "mankiĉi",
+  "target": "mankiĉi"
+ },
+ {
+  "w": "manĉu",
+  "target": "manĉu"
+ },
+ {
+  "w": "marianna",
+  "target": "marianna"
+ },
+ {
+  "w": "mariko",
+  "target": "mariko"
+ },
+ {
+  "w": "marja",
+  "target": "marja"
+ },
+ {
+  "w": "markoviĉ",
+  "target": "markoviĉ"
+ },
+ {
+  "w": "marshyangdi",
+  "target": "marshyangdi"
+ },
+ {
+  "w": "martha",
+  "target": "martha"
+ },
+ {
+  "w": "masao",
+  "target": "masao"
+ },
+ {
+  "w": "maĉida",
+  "target": "maĉida"
+ },
+ {
+  "w": "mbagema",
+  "target": "mbagema"
+ },
+ {
+  "w": "mezazio",
+  "target": "mezazio"
+ },
+ {
+  "w": "mezoriento",
+  "target": "mezoriento"
+ },
+ {
+  "w": "mieszko",
+  "target": "mieszko"
+ },
+ {
+  "w": "mijake",
+  "target": "mijake"
+ },
+ {
+  "w": "mijamoto",
+  "target": "mijamoto"
+ },
+ {
+  "w": "mikulicz",
+  "target": "mikulicz"
+ },
+ {
+  "w": "miller",
+  "target": "miller"
+ },
+ {
+  "w": "milovan",
+  "target": "milovan"
+ },
+ {
+  "w": "milsk",
+  "target": "milsk"
+ },
+ {
+  "w": "minkowski",
+  "target": "minkowski"
+ },
+ {
+  "w": "missisipi",
+  "target": "missisipi"
+ },
+ {
+  "w": "morawa",
+  "target": "morawa"
+ },
+ {
+  "w": "morimoto",
+  "target": "morimoto"
+ },
+ {
+  "w": "morsztyn",
+  "target": "morsztyn"
+ },
+ {
+  "w": "mukdeno",
+  "target": "mukdeno"
+ },
+ {
+  "w": "mutoo",
+  "target": "mutoo"
+ },
+ {
+  "w": "nadai",
+  "target": "nadai"
+ },
+ {
+  "w": "nagano",
+  "target": "nagano"
+ },
+ {
+  "w": "nakahara",
+  "target": "nakahara"
+ },
+ {
+  "w": "nanking",
+  "target": "nanking"
+ },
+ {
+  "w": "nerima",
+  "target": "nerima"
+ },
+ {
+  "w": "nevers",
+  "target": "nevers"
+ },
+ {
+  "w": "newton",
+  "target": "newton"
+ },
+ {
+  "w": "nitobe",
+  "target": "nitobe"
+ },
+ {
+  "w": "nobejama",
+  "target": "nobejama"
+ },
+ {
+  "w": "nomra",
+  "target": "nomra"
+ },
+ {
+  "w": "novjorko",
+  "target": "novjorko"
+ },
+ {
+  "w": "numazu",
+  "target": "numazu"
+ },
+ {
+  "w": "nurnbergo",
+  "target": "nurnbergo"
+ },
+ {
+  "w": "odeon",
+  "target": "odeon"
+ },
+ {
+  "w": "okada",
+  "target": "okada"
+ },
+ {
+  "w": "okajam",
+  "target": "okajam"
+ },
+ {
+  "w": "okajama",
+  "target": "okajama"
+ },
+ {
+  "w": "okayama",
+  "target": "okayama"
+ },
+ {
+  "w": "onisaburo",
+  "target": "onisaburo"
+ },
+ {
+  "w": "onisaburoo",
+  "target": "onisaburoo"
+ },
+ {
+  "w": "ooŝima",
+  "target": "ooŝima"
+ },
+ {
+  "w": "ossaka",
+  "target": "ossaka"
+ },
+ {
+  "w": "ostrogski",
+  "target": "ostrogski"
+ },
+ {
+  "w": "otton",
+  "target": "otton"
+ },
+ {
+  "w": "paloma",
+  "target": "paloma"
+ },
+ {
+  "w": "panĉo",
+  "target": "panĉo"
+ },
+ {
+  "w": "petitjean",
+  "target": "petitjean"
+ },
+ {
+  "w": "pikarid",
+  "target": "pikarid"
+ },
+ {
+  "w": "potok",
+  "target": "potok"
+ },
+ {
+  "w": "poznan",
+  "target": "poznan"
+ },
+ {
+  "w": "prakash",
+  "target": "prakash"
+ },
+ {
+  "w": "probal",
+  "target": "probal"
+ },
+ {
+  "w": "qingdao",
+  "target": "qingdao"
+ },
+ {
+  "w": "rejewski",
+  "target": "rejewski"
+ },
+ {
+  "w": "ritsumeikan",
+  "target": "ritsumeikan"
+ },
+ {
+  "w": "ronga",
+  "target": "ronga"
+ },
+ {
+  "w": "ryuzo",
+  "target": "ryuzo"
+ },
+ {
+  "w": "seriŝev",
+  "target": "seriŝev"
+ },
+ {
+  "w": "sumii",
+  "target": "sumii"
+ },
+ {
+  "w": "sagamihara",
+  "target": "sagamihara"
+ },
+ {
+  "w": "saitama",
+  "target": "saitama"
+ },
+ {
+  "w": "sakae",
+  "target": "sakae"
+ },
+ {
+  "w": "sakai",
+  "target": "sakai"
+ },
+ {
+  "w": "sakuzoo",
+  "target": "sakuzoo"
+ },
+ {
+  "w": "samicler",
+  "target": "samicler"
+ },
+ {
+  "w": "samosierra",
+  "target": "samosierra"
+ },
+ {
+  "w": "sanfrancisko",
+  "target": "sanfrancisko"
+ },
+ {
+  "w": "sapienza",
+  "target": "sapienza"
+ },
+ {
+  "w": "sapporo",
+  "target": "sapporo"
+ },
+ {
+  "w": "sasaki",
+  "target": "sasaki"
+ },
+ {
+  "w": "sauerbruch",
+  "target": "sauerbruch"
+ },
+ {
+  "w": "schlossberg",
+  "target": "schlossberg"
+ },
+ {
+  "w": "sekelj",
+  "target": "sekelj"
+ },
+ {
+  "w": "selten",
+  "target": "selten"
+ },
+ {
+  "w": "sendai",
+  "target": "sendai"
+ },
+ {
+  "w": "seongnam",
+  "target": "seongnam"
+ },
+ {
+  "w": "sergjo",
+  "target": "sergjo"
+ },
+ {
+  "w": "sergjon",
+  "target": "sergjon"
+ },
+ {
+  "w": "shandong",
+  "target": "shandong"
+ },
+ {
+  "w": "shangqiu",
+  "target": "shangqiu"
+ },
+ {
+  "w": "shanhai",
+  "target": "shanhai"
+ },
+ {
+  "w": "shanhaj",
+  "target": "shanhaj"
+ },
+ {
+  "w": "shrestha",
+  "target": "shrestha"
+ },
+ {
+  "w": "simei",
+  "target": "simei"
+ },
+ {
+  "w": "sitges",
+  "target": "sitges"
+ },
+ {
+  "w": "smolenko",
+  "target": "smolenko"
+ },
+ {
+  "w": "sobiepan",
+  "target": "sobiepan"
+ },
+ {
+  "w": "sobieski",
+  "target": "sobieski"
+ },
+ {
+  "w": "soichiro",
+  "target": "soichiro"
+ },
+ {
+  "w": "songshan",
+  "target": "songshan"
+ },
+ {
+  "w": "stanibor",
+  "target": "stanibor"
+ },
+ {
+  "w": "stanimir",
+  "target": "stanimir"
+ },
+ {
+  "w": "stonehenge",
+  "target": "stonehenge"
+ },
+ {
+  "w": "subirats",
+  "target": "subirats"
+ },
+ {
+  "w": "sudet",
+  "target": "sudet"
+ },
+ {
+  "w": "sudety",
+  "target": "sudety"
+ },
+ {
+  "w": "sunayama",
+  "target": "sunayama"
+ },
+ {
+  "w": "sunmi",
+  "target": "sunmi"
+ },
+ {
+  "w": "suzuki",
+  "target": "suzuki"
+ },
+ {
+  "w": "svislando",
+  "target": "svislando"
+ },
+ {
+  "w": "syabrubesi",
+  "target": "syabrubesi"
+ },
+ {
+  "w": "szymon",
+  "target": "szymon"
+ },
+ {
+  "w": "tadacuna",
+  "target": "tadacuna"
+ },
+ {
+  "w": "takafumi",
+  "target": "takafumi"
+ },
+ {
+  "w": "takemi",
+  "target": "takemi"
+ },
+ {
+  "w": "tamara",
+  "target": "tamara"
+ },
+ {
+  "w": "tamka",
+  "target": "tamka"
+ },
+ {
+  "w": "tanaka",
+  "target": "tanaka"
+ },
+ {
+  "w": "taragono",
+  "target": "taragono"
+ },
+ {
+  "w": "tatjana",
+  "target": "tatjana"
+ },
+ {
+  "w": "terumi",
+  "target": "terumi"
+ },
+ {
+  "w": "thamel",
+  "target": "thamel"
+ },
+ {
+  "w": "tiana",
+  "target": "tiana"
+ },
+ {
+  "w": "tianjin",
+  "target": "tianjin"
+ },
+ {
+  "w": "tiavea",
+  "target": "tiavea"
+ },
+ {
+  "w": "timpu",
+  "target": "timpu"
+ },
+ {
+  "w": "tokusima",
+  "target": "tokusima"
+ },
+ {
+  "w": "tony",
+  "target": "tony"
+ },
+ {
+  "w": "toohoku",
+  "target": "toohoku"
+ },
+ {
+  "w": "torbiev",
+  "target": "torbiev"
+ },
+ {
+  "w": "torun",
+  "target": "torun"
+ },
+ {
+  "w": "tossa",
+  "target": "tossa"
+ },
+ {
+  "w": "toŝihiko",
+  "target": "toŝihiko"
+ },
+ {
+  "w": "trompeter",
+  "target": "trompeter"
+ },
+ {
+  "w": "tryjanowski",
+  "target": "tryjanowski"
+ },
+ {
+  "w": "tuiavii",
+  "target": "tuiavii"
+ },
+ {
+  "w": "tuskolo",
+  "target": "tuskolo"
+ },
+ {
+  "w": "tylman",
+  "target": "tylman"
+ },
+ {
+  "w": "tyniec",
+  "target": "tyniec"
+ },
+ {
+  "w": "umihotaru",
+  "target": "umihotaru"
+ },
+ {
+  "w": "upolu",
+  "target": "upolu"
+ },
+ {
+  "w": "urakami",
+  "target": "urakami"
+ },
+ {
+  "w": "uŝiku",
+  "target": "uŝiku"
+ },
+ {
+  "w": "vasilij",
+  "target": "vasilij"
+ },
+ {
+  "w": "velehrad",
+  "target": "velehrad"
+ },
+ {
+  "w": "vitsinskij",
+  "target": "vitsinskij"
+ },
+ {
+  "w": "vladislavo",
+  "target": "vladislavo"
+ },
+ {
+  "w": "walter",
+  "target": "walter"
+ },
+ {
+  "w": "wanda",
+  "target": "wanda"
+ },
+ {
+  "w": "waseda",
+  "target": "waseda"
+ },
+ {
+  "w": "wielkopolska",
+  "target": "wielkopolska"
+ },
+ {
+  "w": "wilhelm",
+  "target": "wilhelm"
+ },
+ {
+  "w": "wisenna",
+  "target": "wisenna"
+ },
+ {
+  "w": "wojtakowski",
+  "target": "wojtakowski"
+ },
+ {
+  "w": "wuhan",
+  "target": "wuhan"
+ },
+ {
+  "w": "yamakawa",
+  "target": "yamakawa"
+ },
+ {
+  "w": "yamasiro",
+  "target": "yamasiro"
+ },
+ {
+  "w": "yanagihara",
+  "target": "yanagihara"
+ },
+ {
+  "w": "yatsugatake",
+  "target": "yatsugatake"
+ },
+ {
+  "w": "yoneyama",
+  "target": "yoneyama"
+ },
+ {
+  "w": "yumi",
+  "target": "yumi"
+ },
+ {
+  "w": "yunnan",
+  "target": "yunnan"
+ },
+ {
+  "w": "zafiaŭoj",
+  "target": "zafiaŭoj"
+ },
+ {
+  "w": "zafinifotsy",
+  "target": "zafinifotsy"
+ },
+ {
+  "w": "zamoyski",
+  "target": "zamoyski"
+ },
+ {
+  "w": "zhejiang",
+  "target": "zhejiang"
+ },
+ {
+  "w": "zoucheng",
+  "target": "zoucheng"
+ },
+ {
+  "w": "zygalski",
+  "target": "zygalski"
+ },
+ {
+  "w": "vroclav",
+  "target": "vroclav"
+ },
+ {
+  "w": "zafiaŭo",
+  "target": "zafiaŭo"
+ },
+ {
+  "w": "ĉieko",
+  "target": "ĉieko"
+ },
+ {
+  "w": "ĝirono",
+  "target": "ĝirono"
+ },
+ {
+  "w": "ŝarapova",
+  "target": "ŝarapova"
+ },
+ {
+  "w": "ŝiga",
+  "target": "ŝiga"
+ },
+ {
+  "w": "ŝimei",
+  "target": "ŝimei"
+ },
+ {
+  "w": "ŝinjuku",
+  "target": "ŝinjuku"
+ },
+ {
+  "w": "ŝinmura",
+  "target": "ŝinmura"
+ },
+ {
+  "w": "platformo",
+  "target": "platform/o"
+ },
+ {
+  "w": "platformon",
+  "target": "platform/o/n"
+ },
+ {
+  "w": "platformoj",
+  "target": "platform/oj"
+ },
+ {
+  "w": "platformojn",
+  "target": "platform/oj/n"
+ },
+ {
+  "w": "disdegni",
+  "target": "disdegn/i"
+ },
+ {
+  "w": "chiune",
+  "target": "chiune"
+ },
+ {
+  "w": "oosugi",
+  "target": "oosugi"
+ },
+ {
+  "w": "zilbernik",
+  "target": "zilbernik"
+ },
+ {
+  "w": "sugihara",
+  "target": "sugihara"
+ },
+ {
+  "w": "neĝojige",
+  "target": "ne/ĝoj/ig/e"
+ },
+ {
+  "w": "ofendita",
+  "target": "ofend/it/a"
+ },
+ {
+  "w": "temkanto",
+  "target": "tem/kant/o"
+ },
+ {
+  "w": "hualjan",
+  "target": "hualjan"
+ },
+ {
+  "w": "jilan",
+  "target": "jilan"
+ },
+ {
+  "w": "rojbos",
+  "target": "rojbos"
+ },
+ {
+  "w": "osaka",
+  "target": "osaka"
+ },
+ {
+  "w": "memeo",
+  "target": "meme/o"
+ },
+ {
+  "w": "jarulo",
+  "target": "jar/ul/o"
+ },
+ {
+  "w": "iasence",
+  "target": "ia/senc/e"
+ },
+ {
+  "w": "hidratigi",
+  "target": "hidrat/ig/i"
+ },
+ {
+  "w": "inflamigi",
+  "target": "inflam/ig/i"
+ },
+ {
+  "w": "nebuligi",
+  "target": "nebul/ig/i"
+ },
+ {
+  "w": "plaŭdigi",
+  "target": "plaŭd/ig/i"
+ },
+ {
+  "w": "trompita",
+  "target": "tromp/it/a"
+ },
+ {
+  "w": "kilokalorio",
+  "target": "kilokalori/o"
+ },
+ {
+  "w": "tuketo",
+  "target": "tuk/et/o"
+ },
+ {
+  "w": "butanon",
+  "target": "butano/n"
+ },
+ {
+  "w": "sindemandoj",
+  "target": "si/n/demand/oj"
+ },
+ {
+  "w": "idon",
+  "target": "ido/n"
+ },
+ {
+  "w": "kanton",
+  "target": "kant/on"
+ },
+ {
+  "w": "reblu",
+  "target": "re/blu"
+ },
+ {
+  "w": "adone",
+  "target": "a/don/e"
+ },
+ {
+  "w": "blisa",
+  "target": "blis/a"
+ },
+ {
+  "w": "esplorfirmao",
+  "target": "esplor/firma/o"
+ },
+ {
+  "w": "nerimark",
+  "target": "ne/rimark"
+ },
+ {
+  "w": "katederalo",
+  "target": "katederal/o"
+ },
+ {
+  "w": "kievon",
+  "target": "kievo/n"
+ },
+ {
+  "w": "gastroskopon",
+  "target": "gastr/o/skop/o/n"
+ },
+ {
+  "w": "cintamanio",
+  "target": "cintamani/o"
+ },
+ {
+  "w": "japanologio",
+  "target": "japan/o/logi/o"
+ },
+ {
+  "w": "rotaviruso",
+  "target": "rotavirus/o"
+ },
+ {
+  "w": "defian",
+  "target": "defi/an"
+ },
+ {
+  "w": "rusion",
+  "target": "rusio/n"
+ },
+ {
+  "w": "miaj",
+  "target": "mia/j"
+ },
+ {
+  "w": "nian",
+  "target": "nia/n"
+ },
+ {
+  "w": "karaĵaoj",
+  "target": "karaĵa/oj"
+ },
+ {
+  "w": "afantin",
+  "target": "afanti/n"
+ },
+ {
+  "w": "altabliĝi",
+  "target": "al/tabl/iĝ/i"
+ },
+ {
+  "w": "animpacigilo",
+  "target": "anim/pac/ig/il/o"
+ },
+ {
+  "w": "atakantoj",
+  "target": "atak/ant/oj"
+ },
+ {
+  "w": "belvestuloj",
+  "target": "bel/vest/ul/oj"
+ },
+ {
+  "w": "bonvolema",
+  "target": "bon/vol/em/a"
+ },
+ {
+  "w": "difinitajn",
+  "target": "difin/it/ajn"
+ },
+ {
+  "w": "diskantis",
+  "target": "dis/kant/is"
+ },
+ {
+  "w": "efektivigebla",
+  "target": "efektiv/ig/ebl/a"
+ },
+ {
+  "w": "ekstertempa",
+  "target": "ekster/temp/a"
+ },
+ {
+  "w": "enparke",
+  "target": "en/park/e"
+ },
+ {
+  "w": "entrudante",
+  "target": "en/trud/ant/e"
+ },
+ {
+  "w": "fonteto",
+  "target": "font/et/o"
+ },
+ {
+  "w": "fortoprenan",
+  "target": "fort/o/pren/an"
+ },
+ {
+  "w": "gajkante",
+  "target": "gaj/kant/e"
+ },
+ {
+  "w": "gajninda",
+  "target": "gajn/ind/a"
+ },
+ {
+  "w": "iluziaĵon",
+  "target": "iluzi/aĵ/on"
+ },
+ {
+  "w": "investejon",
+  "target": "invest/ej/on"
+ },
+ {
+  "w": "konstantan",
+  "target": "konstant/an"
+ },
+ {
+  "w": "kosmospaco",
+  "target": "kosm/o/spac/o"
+ },
+ {
+  "w": "kunavaro",
+  "target": "kun/avar/o"
+ },
+ {
+  "w": "kunuleco",
+  "target": "kun/ul/ec/o"
+ },
+ {
+  "w": "larĝega",
+  "target": "larĝ/eg/a"
+ },
+ {
+  "w": "laŭdantoj",
+  "target": "laŭd/ant/oj"
+ },
+ {
+  "w": "ligile",
+  "target": "lig/il/e"
+ },
+ {
+  "w": "liteto",
+  "target": "lit/et/o"
+ },
+ {
+  "w": "ludigas",
+  "target": "lud/ig/as"
+ },
+ {
+  "w": "markarto",
+  "target": "mar/kart/o"
+ },
+ {
+  "w": "mebleton",
+  "target": "mebl/et/on"
+ },
+ {
+  "w": "militeto",
+  "target": "milit/et/o"
+ },
+ {
+  "w": "militiloj",
+  "target": "milit/il/oj"
+ },
+ {
+  "w": "minuteto",
+  "target": "minut/et/o"
+ },
+ {
+  "w": "mirigaĵoj",
+  "target": "mir/ig/aĵ/oj"
+ },
+ {
+  "w": "momenteto",
+  "target": "moment/et/o"
+ },
+ {
+  "w": "mortigindan",
+  "target": "mort/ig/ind/an"
+ },
+ {
+  "w": "muraro",
+  "target": "mur/ar/o"
+ },
+ {
+  "w": "necesegas",
+  "target": "neces/eg/as"
+ },
+ {
+  "w": "nialande",
+  "target": "ni/a/land/e"
+ },
+ {
+  "w": "novjorkon",
+  "target": "nov/jork/on"
+ },
+ {
+  "w": "olun",
+  "target": "olu/n"
+ },
+ {
+  "w": "ordonantojn",
+  "target": "ordon/ant/ojn"
+ },
+ {
+  "w": "pasigrafio",
+  "target": "pasi/graf/io"
+ },
+ {
+  "w": "patreto",
+  "target": "patr/et/o"
+ },
+ {
+  "w": "petema",
+  "target": "pet/em/a"
+ },
+ {
+  "w": "planema",
+  "target": "plan/em/a"
+ },
+ {
+  "w": "poemas",
+  "target": "poem/as"
+ },
+ {
+  "w": "poemeton",
+  "target": "poem/et/on"
+ },
+ {
+  "w": "polinoj",
+  "target": "pol/in/oj"
+ },
+ {
+  "w": "presinda",
+  "target": "pres/ind/a"
+ },
+ {
+  "w": "revuaĉoj",
+  "target": "revu/aĉ/oj"
+ },
+ {
+  "w": "ridema",
+  "target": "rid/em/a"
+ },
+ {
+  "w": "samliti",
+  "target": "sam/lit/i"
+ },
+ {
+  "w": "sanigisto",
+  "target": "san/ig/ist/o"
+ },
+ {
+  "w": "sekvantaj",
+  "target": "sekv/ant/aj"
+ },
+ {
+  "w": "senpense",
+  "target": "sen/pens/e"
+ },
+ {
+  "w": "sentaĵo",
+  "target": "sent/aĵ/o"
+ },
+ {
+  "w": "seriozaspekta",
+  "target": "serioz/aspekt/a"
+ },
+ {
+  "w": "sidantaro",
+  "target": "sid/ant/ar/o"
+ },
+ {
+  "w": "sidantojn",
+  "target": "sid/ant/ojn"
+ },
+ {
+  "w": "sindemande",
+  "target": "si/n/demand/e"
+ },
+ {
+  "w": "sindone",
+  "target": "sin/don/e"
+ },
+ {
+  "w": "sinĝenon",
+  "target": "sin/ĝen/on"
+ },
+ {
+  "w": "soifega",
+  "target": "soif/eg/a"
+ },
+ {
+  "w": "surmarŝindaj",
+  "target": "sur/marŝ/ind/aj"
+ },
+ {
+  "w": "tejhon",
+  "target": "tejho/n"
+ },
+ {
+  "w": "totaleco",
+  "target": "total/ec/o"
+ },
+ {
+  "w": "tutanime",
+  "target": "tut/anim/e"
+ },
+ {
+  "w": "ultranaciismo",
+  "target": "ultra/naci/ism/o"
+ },
+ {
+  "w": "ultranaciismon",
+  "target": "ultra/naci/ism/on"
+ },
+ {
+  "w": "vagonplafono",
+  "target": "vagon/plafon/o"
+ },
+ {
+  "w": "venkosenton",
+  "target": "venk/o/sent/on"
+ },
+ {
+  "w": "vinplena",
+  "target": "vin/plen/a"
+ },
+ {
+  "w": "vinĝuo",
+  "target": "vin/ĝu/o"
+ },
+ {
+  "w": "vjetnamion",
+  "target": "vjetnamio/n"
+ },
+ {
+  "w": "dekkvaran",
+  "target": "dek/kvar/an"
+ },
+ {
+  "w": "dekkvarjara",
+  "target": "dek/kvar/jar/a"
+ },
+ {
+  "w": "pasigrafioj",
+  "target": "pasi/grafi/oj"
+ },
+ {
+  "w": "radioamatoroj",
+  "target": "radio/amator/oj"
+ },
+ {
+  "w": "radioprogramoj",
+  "target": "radio/program/oj"
+ },
+ {
+  "w": "reprezentiĝas",
+  "target": "reprezent/iĝ/as"
+ },
+ {
+  "w": "monstrato",
+  "target": "mon/strat/o"
+ },
+ {
+  "w": "pikara",
+  "target": "pikar/a"
+ },
+ {
+  "w": "ĉinion",
+  "target": "ĉinio/n"
+ },
+ {
+  "w": "japanion",
+  "target": "japanio/n"
+ },
+ {
+  "w": "koreion",
+  "target": "koreio/n"
+ },
+ {
+  "w": "ukrainion",
+  "target": "ukrainio/n"
+ },
+ {
+  "w": "eŭrazion",
+  "target": "eŭrazio/n"
+ },
+ {
+  "w": "tokion",
+  "target": "tokio/n"
+ },
+ {
+  "w": "oomoton",
+  "target": "oomoto/n"
+ },
+ {
+  "w": "rankoron",
+  "target": "rankor/on"
+ },
+ {
+  "w": "rankoro",
+  "target": "rankor/o"
+ },
+ {
+  "w": "landecoj",
+  "target": "land/ec/oj"
+ },
+ {
+  "w": "landeco",
+  "target": "land/ec/o"
+ },
+ {
+  "w": "panejon",
+  "target": "pan/ej/on"
+ },
+ {
+  "w": "panejo",
+  "target": "pan/ej/o"
+ },
+ {
+  "w": "kontrolantoj",
+  "target": "kontrol/ant/oj"
+ },
+ {
+  "w": "kontrolanto",
+  "target": "kontrol/ant/o"
+ },
+ {
+  "w": "ĉapelfaristo",
+  "target": "ĉapel/far/ist/o"
+ },
+ {
+  "w": "voĉdonatingo",
+  "target": "voĉ/don/ating/o"
+ },
+ {
+  "w": "kaligrafoj",
+  "target": "kaligraf/oj"
+ },
+ {
+  "w": "kaligrafo",
+  "target": "kaligraf/o"
+ },
+ {
+  "w": "metrovagonaron",
+  "target": "metro/vagon/ar/on"
+ },
+ {
+  "w": "metrovagonaro",
+  "target": "metro/vagon/ar/o"
+ },
+ {
+  "w": "metrosistemon",
+  "target": "metro/sistem/on"
+ },
+ {
+  "w": "metrosistemo",
+  "target": "metro/sistem/o"
+ },
+ {
+  "w": "kaligrafio",
+  "target": "kaligrafi/o"
+ },
+ {
+  "w": "kaligrafion",
+  "target": "kaligrafi/on"
+ }
+]

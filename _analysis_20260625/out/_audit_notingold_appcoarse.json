@@ -1,0 +1,107 @@
+[
+ {
+  "word": "teranoj",
+  "corpus": "ter/an/oj",
+  "app": "ter/anoj",
+  "gold": null,
+  "count": 8
+ },
+ {
+  "word": "bonlingvanojn",
+  "corpus": "bon/lingv/an/ojn",
+  "app": "bon/lingv/anojn",
+  "gold": null,
+  "count": 3
+ },
+ {
+  "word": "seulanoj",
+  "corpus": "seul/an/oj",
+  "app": "seul/anoj",
+  "gold": null,
+  "count": 2
+ },
+ {
+  "word": "bonlingvanoj",
+  "corpus": "bon/lingv/an/oj",
+  "app": "bon/lingv/anoj",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "kantoa",
+  "corpus": "kanto/a",
+  "app": "kantoa",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "ursulanina",
+  "corpus": "ursul/an/in/a",
+  "app": "ursulan/in/a",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "mondanan",
+  "corpus": "mond/an/an",
+  "app": "mond/anan",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "sudanoj",
+  "corpus": "sud/an/oj",
+  "app": "sud/anoj",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "paiŭanan",
+  "corpus": "paiŭan/an",
+  "app": "paiŭanan",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "ŝonaan",
+  "corpus": "ŝona/an",
+  "app": "ŝonaan",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "renkejtiĝon",
+  "corpus": "renkejtiĝo/n",
+  "app": "renkejtiĝon",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "kunhejmano",
+  "corpus": "kun/hejm/an/o",
+  "app": "kun/hejm/ano",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "specialvilaĝetanoj",
+  "corpus": "special/vilaĝ/et/an/oj",
+  "app": "special/vilaĝ/et/anoj",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "vilaĝetanoj",
+  "corpus": "vilaĝ/et/an/oj",
+  "app": "vilaĝ/et/anoj",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "neŭtronoj",
+  "corpus": "neŭtron/oj",
+  "app": "neŭtronoj",
+  "gold": null,
+  "count": 1
+ }
+]

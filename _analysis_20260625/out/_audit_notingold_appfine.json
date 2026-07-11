@@ -1,0 +1,100 @@
+[
+ {
+  "word": "areopologio",
+  "corpus": "are/op/o/log/io",
+  "app": "are/op/o/logi/o",
+  "gold": null,
+  "count": 11
+ },
+ {
+  "word": "idon",
+  "corpus": "ido/n",
+  "app": "id/on",
+  "gold": null,
+  "count": 4
+ },
+ {
+  "word": "areopologia",
+  "corpus": "are/op/o/log/ia",
+  "app": "are/op/o/logi/a",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "areopologiajn",
+  "corpus": "are/op/o/log/iajn",
+  "app": "are/op/o/logi/ajn",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "areopologion",
+  "corpus": "are/op/o/log/ion",
+  "app": "are/op/o/logi/on",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "tereftalato",
+  "corpus": "tereftalat/o",
+  "app": "ter/e/ftal/at/o",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "ĉeĥion",
+  "corpus": "ĉeĥi/on",
+  "app": "ĉeĥ/ion",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "revenĝe",
+  "corpus": "revenĝ/e",
+  "app": "re/venĝ/e",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "gastroskopon",
+  "corpus": "gastroskop/on",
+  "app": "gastr/o/skop/on",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "tibetologo",
+  "corpus": "tibetolog/o",
+  "app": "tibet/o/log/o",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "jurnalisto",
+  "corpus": "jurnalist/o",
+  "app": "jurnal/ist/o",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "davaanoj",
+  "corpus": "davaan/oj",
+  "app": "dava/an/oj",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "trilitajn",
+  "corpus": "trilit/ajn",
+  "app": "tril/it/ajn",
+  "gold": null,
+  "count": 1
+ },
+ {
+  "word": "bizaraĵon",
+  "corpus": "bizaraĵ/on",
+  "app": "bizar/aĵon",
+  "gold": null,
+  "count": 1
+ }
+]

@@ -1,0 +1,51 @@
+{
+ "demografi": [
+  "dem/o/grafi/o【日=人口/o/記述/o｜中=人口/o/记述/o｜韓=인구/o/기술/o】:{Ｏ}人口統計学;人口統計,人口##偽分解"
+ ],
+ "detektiv": [
+  "detekt/iv/o【日=検出/性質/o｜中=侦测/性质/o｜韓=탐지/성질/o】:{Ｏ}探偵;（警察の）刑事",
+  "detekt/iv/a【日=検出/性質/a｜中=侦测/性质/a｜韓=탐지/성질/a】:【PIV】Rilata al detektivo(j): detektiva romano (kies intrigo bazig^as sur prikrima enketo).",
+  "detekt/iv/i【日=検出/性質/i｜中=侦测/性质/i｜韓=탐지/성질/i】:【PIV】Labori kiel detektivo: c^u vi ne dungis min por tio, por detektivi? M. Vd spuro."
+ ],
+ "dividend": [
+  "divid/end/o【日=分ける/必要/o｜中=分/必要/o｜韓=나누다/필요/o】:【経】（株の）配当金##偽分解(PIV正式分解)"
+ ],
+ "ekologi": [
+  "eko/logi/a【日=環境/学/a｜中=环境/学/a｜韓=환경/학/a】:生態学の;=mediprotekta（環境保護の）##偽分解(PIV正式分解)",
+  "eko/logi/o【日=環境/学/o｜中=环境/学/o｜韓=환경/학/o】:{Ｏ}生態学;《転》生態環境##偽分解(PIV正式分解)"
+ ],
+ "etimologi": [
+  "etim/o/logi/o【日=語源/o/学/o｜中=词源/o/学/o｜韓=어원/o/학/o】:{Ｏ}語源学;語源##偽分解(PIV正式分解)",
+  "etim/o/logi/a【日=語源/o/学/a｜中=词源/o/学/a｜韓=어원/o/학/a】:【PIV】Rilata al etimologio: etimologia vortaro; etimologia figuro (per kiu ntr verbo ricevas objekton, konsistantan el samradika subst. (substantivo), ekz. (ekzemple) «vivi mizeran vivon», «j^uri grandan j^uron» ks (kaj simile, kaj similaj)).##偽分解(PIV正式分解)"
+ ],
+ "golf": [
+  "golf/o【日=湾/o｜中=海湾/o｜韓=만/o】:{Ｂ}【地理】湾",
+  "golf/o【日=ゴルフ/o｜中=高尔夫/o｜韓=골프/o】:【運】ゴルフ,=golfludo,>>klabo,>>pilko"
+ ],
+ "golfo": [
+  "golf/o【日=湾/o｜中=海湾/o｜韓=만/o】:{Ｂ}【地理】湾",
+  "golf/o【日=ゴルフ/o｜中=高尔夫/o｜韓=골프/o】:【運】ゴルフ,=golfludo,>>klabo,>>pilko"
+ ],
+ "ideogram": [
+  "ide/o/gram/o【日=観念/o/記録/o｜中=观念/o/记录/o｜韓=관념/o/기록/o】:=ideografiaj^o（表意文字）##偽分解##過細分解 ide/o/g/r/a/m/o"
+ ],
+ "ideologi": [
+  "ide/o/logi/a【日=観念/o/学/a｜中=观念/o/学/a｜韓=관념/o/학/a】:イデオロギーの,観念形態の##偽分解(PIV正式分解)",
+  "ide/o/logi/o【日=観念/o/学/o｜中=观念/o/学/o｜韓=관념/o/학/o】:{Ｏ}イデオロギー,観念形態;【哲】観念学;《転》空理空論##偽分解(PIV正式分解)"
+ ],
+ "intensiv": [
+  "intens/iv/a【日=強烈な/性質/a｜中=强烈的/性质/a｜韓=강렬한/성질/a】:=intensa（集中的な）"
+ ],
+ "kilobit": [
+  "kilobit/o【日=kb/o｜中=千比特/o｜韓=kb/o】:【情】キロビット（kb）"
+ ],
+ "kilokalori": [
+  "kilokalori/o【日=kcal/o｜中=千卡/o｜韓=kcal/o】:【理】キロカロリー（熱量の単位，kcal）"
+ ],
+ "hipocentr": [
+  "hipo/centr/o【日=低下/中心/o｜中=低/中心/o｜韓=저/중심/o】:【地質】【PIV】Loko en la interno de Tero, kie estig^as tertremo; fokuso de tertremo. Vd epicentro.##偽分解(PIV正式分解)"
+ ],
+ "jugoslavi": [
+  "jugoslav/i/a【日=ユーゴスラビア/i/a｜中=南斯拉夫/i/a｜韓=유고슬라비아/i/a】:【PIV】Rilata al jugoslavoj au^ Jugoslavio: la jugoslaviaj popoloj."
+ ]
+}
