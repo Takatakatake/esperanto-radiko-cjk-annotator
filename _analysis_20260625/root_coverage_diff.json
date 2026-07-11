@@ -1,0 +1,27 @@
+{
+ "ja_not_zh": [
+  "fortran",
+  "racionalism",
+  "racionalist",
+  "spiritism",
+  "spiritist"
+ ],
+ "ja_not_ko": [
+  "racionalism",
+  "racionalist",
+  "spiritism",
+  "spiritist"
+ ],
+ "zh_not_ja": [
+  "ddt",
+  "golfo",
+  "hiv",
+  "khz",
+  "mhz",
+  "pat!"
+ ],
+ "ko_not_ja": [
+  "golfo",
+  "pat!"
+ ]
+}
