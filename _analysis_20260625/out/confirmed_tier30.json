@@ -2414,5 +2414,65 @@
  {
   "w": "kaligrafion",
   "target": "kaligrafi/on"
+ },
+ {
+  "w": "bordosupro",
+  "target": "bord/o/supr/o"
+ },
+ {
+  "w": "fondusan",
+  "target": "fondus/an"
+ },
+ {
+  "w": "konsentemon",
+  "target": "konsent/em/on"
+ },
+ {
+  "w": "konsentemo",
+  "target": "konsent/em/o"
+ },
+ {
+  "w": "konsenteman",
+  "target": "konsent/em/an"
+ },
+ {
+  "w": "konsentema",
+  "target": "konsent/em/a"
+ },
+ {
+  "w": "konsenteme",
+  "target": "konsent/em/e"
+ },
+ {
+  "w": "renomo",
+  "target": "renom/o"
+ },
+ {
+  "w": "renomon",
+  "target": "renom/on"
+ },
+ {
+  "w": "renoma",
+  "target": "renom/a"
+ },
+ {
+  "w": "renomaj",
+  "target": "renom/aj"
+ },
+ {
+  "w": "renoman",
+  "target": "renom/an"
+ },
+ {
+  "w": "sekaigo",
+  "target": "sekaigo"
+ },
+ {
+  "w": "renomita",
+  "target": "re/nom/it/a"
+ },
+ {
+  "w": "renomitaj",
+  "target": "re/nom/it/aj"
  }
 ]

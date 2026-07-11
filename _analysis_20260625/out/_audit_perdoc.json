@@ -145,8 +145,8 @@
  },
  {
   "name": "vere_aux_fantazie_12.html",
-  "total": 704,
-  "match": 703,
+  "total": 705,
+  "match": 704,
   "pct": 99.86
  },
  {
@@ -192,12 +192,6 @@
   "pct": 99.9
  },
  {
-  "name": "vere_aux_fantazie_28.html",
-  "total": 975,
-  "match": 974,
-  "pct": 99.9
- },
- {
   "name": "vere_aux_fantazie_41.html",
   "total": 1084,
   "match": 1083,
@@ -211,14 +205,14 @@
  },
  {
   "name": "Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-  "total": 14162,
-  "match": 14150,
+  "total": 14161,
+  "match": 14149,
   "pct": 99.92
  },
  {
   "name": "vere_aux_fantazie.html",
-  "total": 33943,
-  "match": 33922,
+  "total": 33944,
+  "match": 33924,
   "pct": 99.94
  },
  {
@@ -229,8 +223,8 @@
  },
  {
   "name": "fujimaki15.html",
-  "total": 829,
-  "match": 829,
+  "total": 828,
+  "match": 828,
   "pct": 100.0
  },
  {
@@ -687,6 +681,12 @@
   "name": "vere_aux_fantazie_18.html",
   "total": 485,
   "match": 485,
+  "pct": 100.0
+ },
+ {
+  "name": "vere_aux_fantazie_28.html",
+  "total": 975,
+  "match": 975,
   "pct": 100.0
  },
  {
