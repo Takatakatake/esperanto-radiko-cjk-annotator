@@ -77,6 +77,13 @@ CIEL_FORMS={'ĉiel','ĉiele'}
 LAMA_FORMS={'lama','laman','lamaj','lamajn','lame'}
 
 
+# 大文字語頭でのみ適用する固有名詞 piece 再構築(小文字の同綴り一般語は不変)。
+# Butano(国名ブータン) vs butano(ブタンガス): 小文字CSV既定 butan=ブタン を保持したまま、
+# 大文字語形にのみ地名グロスを割り当てる(コーパス Butan<rt>[地名]ブータン と整合)。
+CAP_WORD_PIECES={
+  'butan': [('butan',{'JA':'[地名]ブータン','ZH':'[地名]不丹','KO':'[지명]부탄'})],
+}
+
 def rewrite_surface_core(src, app, format_piece):
     """Return a replacement core, or ``None`` when no fixup may apply."""
     if is_authoritative_exact_surface(src):
@@ -85,6 +92,24 @@ def rewrite_surface_core(src, app, format_piece):
     if sl in CIEL_FORMS:
         stem = src[:4]
         return format_piece(stem, CORR_CIEL[app]) + src[4:]
+    if src[:1].isupper() and any(
+        sl.startswith(stem) and sl[len(stem):] in _WP_END
+        for stem in CAP_WORD_PIECES
+    ):
+        stem = next(
+            candidate for candidate in CAP_WORD_PIECES
+            if sl.startswith(candidate) and sl[len(candidate):] in _WP_END
+        )
+        pos = 0
+        parts = []
+        for piece, glosses in CAP_WORD_PIECES[stem]:
+            segment = src[pos:pos + len(piece)]
+            pos += len(piece)
+            parts.append(
+                segment if glosses is None
+                else format_piece(segment, glosses[app])
+            )
+        return ''.join(parts) + src[pos:]
     if any(
         sl.startswith(stem) and sl[len(stem):] in _WP_END
         for stem in WORD_PIECES
