@@ -1,0 +1,910 @@
+{
+ "configured_entries": 67,
+ "configured_document_keys": 193,
+ "observed_document_keys": 193,
+ "used_document_keys": 13,
+ "resolved_by_runtime_document_keys": [
+  {
+   "word": "aina",
+   "corpus": "aina",
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "alberto",
+   "corpus": "alberto",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "alberto",
+   "corpus": "alberto",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_04.html"
+  },
+  {
+   "word": "anjo",
+   "corpus": "anjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "anjo",
+   "corpus": "anjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_04.html"
+  },
+  {
+   "word": "antananarivo",
+   "corpus": "antananarivo",
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "ardo",
+   "corpus": "ardo",
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html"
+  },
+  {
+   "word": "arogantaĵo",
+   "corpus": "arogant/aĵ/o",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "arogantaĵo",
+   "corpus": "arogant/aĵ/o",
+   "path": "lernolibroj/fujimaki/fujimaki5.html"
+  },
+  {
+   "word": "brno",
+   "corpus": "brno",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "brno",
+   "corpus": "brno",
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "brno",
+   "corpus": "brno",
+   "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "brno",
+   "corpus": "brno",
+   "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html"
+  },
+  {
+   "word": "eminjo",
+   "corpus": "eminjo",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "eskalo",
+   "corpus": "eskalo",
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "eva",
+   "corpus": "eva",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html"
+  },
+  {
+   "word": "eva",
+   "corpus": "eva",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_18.html"
+  },
+  {
+   "word": "fajro",
+   "corpus": "fajro",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "fiziologia",
+   "corpus": "fiziologi/a",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "fiziologia",
+   "corpus": "fiziologi/a",
+   "path": "lernolibroj/fujimaki/fujimaki8.html"
+  },
+  {
+   "word": "frederiko",
+   "corpus": "frederiko",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "gelato",
+   "corpus": "gelato",
+   "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_04.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_05.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_06.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_08.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_09.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_12.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_14.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_15.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_17.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_18.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_20.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_21.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_22.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_23.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_25.html"
+  },
+  {
+   "word": "gerda",
+   "corpus": "gerda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html"
+  },
+  {
+   "word": "gustavo",
+   "corpus": "gustavo",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "henriko",
+   "corpus": "henriko",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "ido",
+   "corpus": "ido",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "ido",
+   "corpus": "ido",
+   "path": "lernolibroj/fujimaki/fujimaki11.html"
+  },
+  {
+   "word": "inocento",
+   "corpus": "inocento",
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html"
+  },
+  {
+   "word": "ivano",
+   "corpus": "ivano",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "ivano",
+   "corpus": "ivano",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_12.html"
+  },
+  {
+   "word": "jakobo",
+   "corpus": "jakobo",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "joĉjo",
+   "corpus": "joĉjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "joĉjo",
+   "corpus": "joĉjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_05.html"
+  },
+  {
+   "word": "kana",
+   "corpus": "kana",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html"
+  },
+  {
+   "word": "kana",
+   "corpus": "kana",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+  },
+  {
+   "word": "karolo",
+   "corpus": "karolo",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "kato",
+   "corpus": "kato",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "kazimiro",
+   "corpus": "kazimiro",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "lernolibroj/fujimaki/fujimaki16.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "lernolibroj/fujimaki/fujimaki19.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "kioto",
+   "corpus": "kioto",
+   "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "klara",
+   "corpus": "klara",
+   "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "konfuceo",
+   "corpus": "konfuceo",
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html"
+  },
+  {
+   "word": "konfuceo",
+   "corpus": "konfuceo",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "konfuceo",
+   "corpus": "konfuceo",
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "konfuceo",
+   "corpus": "konfuceo",
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "konfuceo",
+   "corpus": "konfuceo",
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "kongo",
+   "corpus": "kongo",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "lanti",
+   "corpus": "lanti",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "lanti",
+   "corpus": "lanti",
+   "path": "lernolibroj/fujimaki/fujimaki12.html"
+  },
+  {
+   "word": "lee",
+   "corpus": "lee",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html"
+  },
+  {
+   "word": "lee",
+   "corpus": "lee",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+  },
+  {
+   "word": "leonardo",
+   "corpus": "leonardo",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_01.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_02.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_03.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_04.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_05.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_06.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_08.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_10.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_11.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_13.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_15.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_16.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_17.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_20.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_21.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_22.html"
+  },
+  {
+   "word": "linda",
+   "corpus": "linda",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html"
+  },
+  {
+   "word": "ludo",
+   "corpus": "ludo",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "maria",
+   "corpus": "maria",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "maria",
+   "corpus": "maria",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "maria",
+   "corpus": "maria",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html"
+  },
+  {
+   "word": "maria",
+   "corpus": "maria",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "maria",
+   "corpus": "maria",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_12.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_17.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_20.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_23.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_25.html"
+  },
+  {
+   "word": "marta",
+   "corpus": "marta",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "mateo",
+   "corpus": "mateo",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "mensa",
+   "corpus": "mensa",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "mindanao",
+   "corpus": "mindanao",
+   "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "mindanao",
+   "corpus": "mindanao",
+   "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html"
+  },
+  {
+   "word": "mozi",
+   "corpus": "mozi",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "mozi",
+   "corpus": "mozi",
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "mozi",
+   "corpus": "mozi",
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "noma",
+   "corpus": "noma",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "oka",
+   "corpus": "oka",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "oka",
+   "corpus": "oka",
+   "path": "lernolibroj/fujimaki/fujimaki15.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "lernolibroj/fujimaki/fujimaki15.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "lernolibroj/fujimaki/fujimaki19.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "oomoto",
+   "corpus": "oomoto",
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "oslo",
+   "corpus": "oslo",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "petro",
+   "corpus": "petro",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html"
+  },
+  {
+   "word": "petro",
+   "corpus": "petro",
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_19.html"
+  },
+  {
+   "word": "petro",
+   "corpus": "petro",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "peĉjo",
+   "corpus": "peĉjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "peĉjo",
+   "corpus": "peĉjo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_09.html"
+  },
+  {
+   "word": "pimento",
+   "corpus": "pimento",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "pimento",
+   "corpus": "pimento",
+   "path": "lernolibroj/fujimaki/fujimaki4.html"
+  },
+  {
+   "word": "pimento",
+   "corpus": "pimento",
+   "path": "lernolibroj/fujimaki/fujimaki5.html"
+  },
+  {
+   "word": "rajmondo",
+   "corpus": "rajmondo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html"
+  },
+  {
+   "word": "rajmondo",
+   "corpus": "rajmondo",
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_05.html"
+  },
+  {
+   "word": "renato",
+   "corpus": "renato",
+   "path": "legajxoj/historio-kaj-biografioj/renard_corsetti.html"
+  },
+  {
+   "word": "samoa",
+   "corpus": "samoa",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "samoa",
+   "corpus": "samoa",
+   "path": "lernolibroj/fujimaki/fujimaki17.html"
+  },
+  {
+   "word": "sin",
+   "corpus": "sin",
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html"
+  },
+  {
+   "word": "skajpo",
+   "corpus": "skajpo",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "skajpo",
+   "corpus": "skajpo",
+   "path": "lernolibroj/fujimaki/fujimaki20.html"
+  },
+  {
+   "word": "sojo",
+   "corpus": "sojo",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "sojo",
+   "corpus": "sojo",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "sojo",
+   "corpus": "sojo",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "taro",
+   "corpus": "taro",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/fujimaki12.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/fujimaki15.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/fujimaki16.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/fujimaki19.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "lernolibroj/fujimaki/fujimaki5.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "tokio",
+   "corpus": "tokio",
+   "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "lernolibroj/fujimaki/fujimaki12.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "lernolibroj/fujimaki/fujimaki19.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html"
+  },
+  {
+   "word": "unesko",
+   "corpus": "unesko",
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+  },
+  {
+   "word": "urbano",
+   "corpus": "urbano",
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html"
+  },
+  {
+   "word": "vojaĝo",
+   "corpus": "vojaĝo",
+   "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html"
+  }
+ ],
+ "unobserved_document_keys": [],
+ "count_mismatches": []
+}

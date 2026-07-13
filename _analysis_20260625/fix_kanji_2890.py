@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 """2890漢字違反38語をマスター注入どおりに再構築(3アプリ・全語形・大小文字変種)。DRY既定/--apply。"""
-import os,  json, sys, re, unicodedata, importlib, shutil
+import os,  json, sys, re, unicodedata, shutil
 sys.stdout.reconfigure(encoding="utf-8")
 DRY = "--apply" not in sys.argv
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repoルート自動検出
-REF2 = os.environ.get('ESP_KANJI_MASTER_PATH', r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\エスペラントの漢字化プロジェクト総結集20260630\エスペラント語根＿漢字割り当て＿20260630")  # 外部漢字マスター(正本)。他環境では環境変数で指定
+sys.path.insert(0, ROOT+r"\_analysis_20260625")
+from atomic_json import atomic_file_copy, atomic_json_dump
+from gold_snapshot import consistent_snapshot
+from gen_replacement import load_app_replacement_helper
+DEFAULT_REF2 = os.path.join(
+    os.path.dirname(ROOT), "エスペラント語根＿漢字割り当て＿20260630",
+)
+REF2 = os.environ.get('ESP_KANJI_MASTER_PATH', DEFAULT_REF2)  # 外部漢字マスター(正本)。他環境では環境変数で指定
 X={'c^':'ĉ','g^':'ĝ','h^':'ĥ','j^':'ĵ','s^':'ŝ','u^':'ŭ','C^':'Ĉ','G^':'Ĝ','H^':'Ĥ','J^':'Ĵ','S^':'Ŝ','U^':'Ŭ'}
 def xconv(s):
     for a,b in X.items(): s=s.replace(a,b)
@@ -16,7 +23,48 @@ TARGET=['valoro','ĉielo','ĉiela','vetero','voĉo','volonte','averti','vigla','
 # 注入マスターから対象の分解を取得
 inj={}
 RE=re.compile(r'^([^⟦:]+)⟦([^⟧]+)⟧')
-for line in open(REF2+r"\漢字注入_学習者版_20260620.txt",encoding="utf-8"):
+master_path=REF2+r"\漢字注入_学習者版_20260620.txt"
+master_raw, master_identity = consistent_snapshot(master_path)
+print(
+    f"漢字master bytes={master_identity['bytes']} sha256={master_identity['sha256']}",
+    flush=True,
+)
+expected_master_sha = os.environ.get('ESP_EXPECTED_KANJI_MASTER_SHA256', '').strip().upper()
+expected_master_bytes = None
+expected_manifest_path = os.environ.get(
+    'ESP_EXPECTED_KANJI_MASTER_MANIFEST', ''
+).strip()
+if expected_manifest_path:
+    with open(expected_manifest_path, encoding='utf-8') as handle:
+        expected_manifest = json.load(handle)
+    if expected_manifest.get('schema_version') != 1:
+        raise RuntimeError('unsupported Kanji master manifest schema')
+    injection_rows = [
+        row for row in expected_manifest.get('files', [])
+        if row.get('name') == '漢字注入_学習者版_20260620.txt'
+    ]
+    if len(injection_rows) != 1:
+        raise RuntimeError('Kanji master manifest must pin one injection file')
+    manifest_row = injection_rows[0]
+    manifest_sha = str(manifest_row['sha256']).upper()
+    if expected_master_sha and expected_master_sha != manifest_sha:
+        raise RuntimeError('conflicting Kanji master SHA expectations')
+    expected_master_sha = manifest_sha
+    expected_master_bytes = int(manifest_row['bytes'])
+if (
+    expected_master_bytes is not None
+    and master_identity['bytes'] != expected_master_bytes
+):
+    raise RuntimeError(
+        f"kanji master byte mismatch: expected {expected_master_bytes}, "
+        f"got {master_identity['bytes']}"
+    )
+if expected_master_sha and master_identity['sha256'] != expected_master_sha:
+    raise RuntimeError(
+        f"kanji master SHA mismatch: expected {expected_master_sha}, "
+        f"got {master_identity['sha256']}"
+    )
+for line in master_raw.decode('utf-8').splitlines():
     m=RE.match(line)
     if not m: continue
     w=xconv(m.group(1).strip())
@@ -64,11 +112,10 @@ for app in ("JA","ZH","KO"):
     base=rf"{ROOT}\Esperanto-Kanji-Ruby-{app}\app_data"
     dep_path=base+r"\置換リスト_漢字.json"
     d=json.load(open(dep_path,encoding="utf-8"))
-    sys.path.insert(0, rf"{ROOT}\Esperanto-Kanji-Ruby-{app}")
-    import esp_replacement_json_make_module as M; importlib.reload(M)
+    M = load_app_replacement_helper(rf"{ROOT}\Esperanto-Kanji-Ruby-{app}")
     cw=json.load(open(base+r"\char_widths.json",encoding="utf-8")); FMT='HTML格式_Ruby文字_大小调整'
     stems=sorted(plans.keys(),key=len,reverse=True)
-    n=0
+    n=0; samples=[]
     for k in d:
         for e in d[k]:
             if len(e)<2 or not isinstance(e[0],str) or not isinstance(e[1],str): continue
@@ -81,16 +128,21 @@ for app in ("JA","ZH","KO"):
                     nb=rebuild(src,wp,kp,M,cw,FMT)
                     if nb and nb!=e[1].strip():
                         n+=1
+                        if len(samples)<15:
+                            samples.append((e[0], e[1], nb))
                         if not DRY:
                             pad_l=e[1][:len(e[1])-len(e[1].lstrip())]; pad_r=e[1][len(e[1].rstrip()):]
                             e[1]=pad_l+nb+pad_r
                     break
     print(f"[{app}] 漢字deployed 再構築 {n}")
+    if DRY:
+        for old, current, proposed in samples:
+            print(f"     {old!r}: {current!r} -> {proposed!r}")
     if not DRY:
-        shutil.copy2(dep_path, dep_path+".bak_preKanji2890")
-        json.dump(d, open(dep_path,"w",encoding="utf-8"), ensure_ascii=False)
+        atomic_file_copy(dep_path, dep_path+".bak_preKanji2890")
+        atomic_json_dump(dep_path, d)
         print("     保存(.bak_preKanji2890)")
 if not DRY:
-    shutil.copy2(wk_path, wk_path+".bak_preKanji2890")
-    json.dump(wk, open(wk_path,"w",encoding="utf-8"), ensure_ascii=False)
+    atomic_file_copy(wk_path, wk_path+".bak_preKanji2890")
+    atomic_json_dump(wk_path, wk)
     print("word_kanji 保存")

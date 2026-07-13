@@ -16,7 +16,8 @@ GUI(ページ「語根分解の手動補正」)でユーザが「この単語は
     補正語 W を「W より長い old を持つGGエントリの後ろ」に挿入することで、W を部分文字列として
     含む長い語(例: sporti ⊂ sportisto)が先に置換され、壊れない。
 """
-import os, json, re
+import importlib.util
+import os, json, re, sys
 from typing import List
 
 OVERLAY_FILE = "user_corrections.json"        # app_data 直下に置く
@@ -30,6 +31,34 @@ RUBY_FMT = "HTML格式_Ruby文字_大小调整"
 KANJI_FMT = "HTML格式_Ruby文字_大小调整_汉字替换"
 
 _ROOT_DICT_CACHE = {}   # (data_dir, csv, fmt) -> {root: <ruby>…</ruby>}
+_REPLACEMENT_HELPER = None
+
+
+def _replacement_helper():
+    """Load this app's sibling helper by exact path, never generic cache."""
+    global _REPLACEMENT_HELPER
+    path = os.path.abspath(os.path.join(
+        os.path.dirname(__file__), "esp_replacement_json_make_module.py",
+    ))
+    if _REPLACEMENT_HELPER is not None:
+        if os.path.normcase(os.path.abspath(_REPLACEMENT_HELPER.__file__)) != os.path.normcase(path):
+            raise ImportError("cached overlay helper path changed")
+        return _REPLACEMENT_HELPER
+    module_name = "_overlay_replacement_helper_" + re.sub(
+        r"\W+", "_", os.path.basename(os.path.dirname(path)),
+    )
+    spec = importlib.util.spec_from_file_location(module_name, path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"cannot load overlay replacement helper: {path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception:
+        sys.modules.pop(module_name, None)
+        raise
+    _REPLACEMENT_HELPER = module
+    return module
 
 
 _LANG_CSV = {  # アプリ言語 → 自言語ルビCSV(app_dataに他言語CSVが同居していても正しく選ぶ)
@@ -58,7 +87,8 @@ def _build_root_dict(data_dir: str, csv_name: str, fmt: str):
         return _ROOT_DICT_CACHE[key]
     import pandas as pd
     from io import StringIO
-    from esp_replacement_json_make_module import convert_to_circumflex, output_format
+    helper = _replacement_helper()
+    convert_to_circumflex, output_format = helper.convert_to_circumflex, helper.output_format
     with open(os.path.join(data_dir, "char_widths.json"), encoding="utf-8") as fp:
         cw = json.load(fp)
     txt = convert_to_circumflex(open(os.path.join(data_dir, csv_name), encoding="utf-8").read())
@@ -93,7 +123,7 @@ def _upper_outside_tags(s: str) -> str:
 
 def _variants(old: str, new: str):
     """小文字・大文字・先頭大文字の3変種 [(old,new), ...] を返す(重複は除外)。"""
-    from esp_replacement_json_make_module import capitalize_ruby_and_rt
+    capitalize_ruby_and_rt = _replacement_helper().capitalize_ruby_and_rt
     out = [(old, new)]
     up = (old.upper(), _upper_outside_tags(new))
     cap = (old.capitalize(), capitalize_ruby_and_rt(new))
@@ -106,7 +136,7 @@ def _variants(old: str, new: str):
 def build_correction(decomp: str, data_dir: str) -> dict:
     """分解形(スラッシュ区切り, 例 'sport/i')から、ルビ・漢字両モードの補正エントリを生成。
        戻り値: {word, decomp, ruby:[[old,new],...], kanji:[[old,new],...]}"""
-    from esp_replacement_json_make_module import convert_to_circumflex
+    convert_to_circumflex = _replacement_helper().convert_to_circumflex
     # 入力正規化: 空白除去・cx/字上符統一・小文字化(大文字変種は _variants が生成)
     decomp = re.sub(r"\s+", "", convert_to_circumflex(decomp)).lower().strip("/")
     word = decomp.replace("/", "")
@@ -241,16 +271,27 @@ def merge_overlay(GG: List[list], overlay: List[list]) -> List[list]:
         return GG
     ov = sorted(overlay, key=lambda e: len(e[0].strip()), reverse=True)
     ov_by_old = {e[0]: e for e in ov}
-    padded = [[" " + e[0] + " ", " " + e[1] + " ", " " + e[2] + " "] for e in ov]
-    out = list(padded)
+    shadowed = []
+    matched = set()
     for g in GG:
         mch = ov_by_old.get(g[0].strip())
         if mch is not None:
+            matched.add(mch[0])
             lead = g[0][:len(g[0]) - len(g[0].lstrip())]
             trail = g[0][len(g[0].rstrip()):]
-            out.append([g[0], lead + mch[1] + trail, g[2]])
+            shadowed.append([g[0], lead + mch[1] + trail, g[2]])
         else:
-            out.append(g)
+            shadowed.append(g)
+    out = list(shadowed)
+    for entry in reversed(ov):
+        old, new, placeholder = entry
+        padded = [" " + old + " ", " " + new + " ", " " + placeholder + " "]
+        insertion = 0
+        for index, existing in enumerate(out):
+            candidate = existing[0].strip()
+            if len(candidate) > len(old) and old in candidate:
+                insertion = index + 1
+        out.insert(insertion, padded)
     return out
 
 

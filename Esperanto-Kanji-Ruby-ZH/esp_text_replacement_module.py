@@ -217,24 +217,26 @@ def orchestrate_comprehensive_esperanto_text_replacement(
     #   英字26+字上符12=語の構成文字 / ラテン拡張(À-Ö,Ø-ö,ø-ɏ)=外国固有名詞(ę,ś,ü等)の内部を
     #   境界化しない(Międzygórze等の偽ルビ防止。CJK/かなは境界のまま=中kaj国は発火) /
     #   数字+%+@=プレースホルダ整合に必須(序数3anの無害性は実測済みだが整合上も除外) /
-    #   ASCIIアポストロフィ=辞書にdank'等39エントリがあるため基本温存(右側と閉じ引用は下で個別処理) /
-    #   U+2019(')=辞書0件のため通常約物として両側パディング(‘mi’/dank’al発火) / 空白改行番兵=構造上必須
+    #   ASCII/U+2019アポストロフィ=詩的語尾省略と定冠詞l'/l’に使うため
+    #   基本温存(右側と閉じ引用は下で個別処理) / 空白改行番兵=構造上必須
     _BOL = chr(1)
     import re as _re
     _HAT12 = chr(264) + chr(265) + chr(284) + chr(285) + chr(292) + chr(293) + chr(308) + chr(309) + chr(348) + chr(349) + chr(364) + chr(365)
     _LATEXT = chr(192) + '-' + chr(214) + chr(216) + '-' + chr(246) + chr(248) + '-' + chr(591)
-    _KEEP = 'A-Za-z0-9' + _HAT12 + _LATEXT + chr(37) + chr(64) + chr(39) + ' ' + chr(10) + chr(13) + chr(1)
+    _APOSTROPHES = chr(39) + chr(8217)
+    _KEEP = 'A-Za-z0-9' + _HAT12 + _LATEXT + chr(37) + chr(64) + _APOSTROPHES + ' ' + chr(10) + chr(13) + chr(1)
     _PAD = _re.compile('([^' + _KEEP + '])')
     text = _PAD.sub(lambda _mo: ' ' + _BOL + _mo.group(1) + _BOL + ' ', text)
-    # ASCIIアポストロフィの右側限定パディング(直後が文字): dank'al のal・'Mi 引用開きが発火。
+    # アポストロフィの右側限定パディング(直後が文字): dank'al / dank’al
+    # のal・'Mi / ’Mi 引用開きが発火。記号自体は原表記のまま保つ。
     # 左側温存により省略形(l'/kor'/dank')とアポストロフィ入り辞書エントリは無傷。
     _LTR = 'A-Za-z' + _HAT12 + _LATEXT
-    _APOS_R = _re.compile(chr(39) + '(?=[' + _LTR + '])')
-    text = _APOS_R.sub(chr(39) + _BOL + ' ', text)
+    _APOS_R = _re.compile('[' + _APOSTROPHES + '](?=[' + _LTR + '])')
+    text = _APOS_R.sub(lambda _mo: _mo.group(0) + _BOL + ' ', text)
     # 閉じ引用 mi' 型: o省略形になり得ない2字語根に限り左側もパディング(du/en/ve は duo/eno/veo の
     # 省略があり得るため対象外)。
-    _APOS_L = _re.compile('(?<![' + _LTR + '])((?:[Mm]i|[Vv]i|[Nn]i|[Ll]i|[' + chr(348) + chr(349) + ']i|[' + chr(284) + chr(285) + ']i|[Aa]l|[Dd]e|[Ee]l|[' + chr(264) + chr(265) + ']e|[' + chr(264) + chr(265) + ']u|[Ss]e|[Kk]e|[Jj]e|[Dd]a|[Nn]e|[Hh]o|[Oo]k))' + chr(39) + '(?![' + _LTR + '])')
-    text = _APOS_L.sub(lambda _mo: _mo.group(1) + ' ' + _BOL + chr(39), text)
+    _APOS_L = _re.compile('(?<![' + _LTR + '])((?:[Mm]i|[Vv]i|[Nn]i|[Ll]i|[' + chr(348) + chr(349) + ']i|[' + chr(284) + chr(285) + ']i|[Aa]l|[Dd]e|[Ee]l|[' + chr(264) + chr(265) + ']e|[' + chr(264) + chr(265) + ']u|[Ss]e|[Kk]e|[Jj]e|[Dd]a|[Nn]e|[Hh]o|[Oo]k))([' + _APOSTROPHES + '])(?![' + _LTR + '])')
+    text = _APOS_L.sub(lambda _mo: _mo.group(1) + ' ' + _BOL + _mo.group(2), text)
     # 行頭(文頭・改行直後)の2字語根対応: 各行頭/行末に番兵付き仮想スペースを挿入
     text = _BOL + ' ' + text.replace(chr(10), ' ' + _BOL + chr(10) + _BOL + ' ') + ' ' + _BOL
     # 大域替换
@@ -251,21 +253,40 @@ def orchestrate_comprehensive_esperanto_text_replacement(
     _pmap = {}
     _sub = lambda _mo: ' ' + _BOL + _mo.group(1) + _BOL + ' '
     for _o, _n, _p in replacements_final_list:
-        if _PAD.search(_o) is not None:
-            _v = _pgc.get(_o)
+        if (_PAD.search(_o) is not None or _APOS_R.search(_o) is not None
+                or _APOS_L.search(_o) is not None):
+            # Version the cache key because rule-key normalization now mirrors
+            # all three text-side boundary transformations, not only _PAD.
+            _cache_key = ('v4', _o)
+            _v = _pgc.get(_cache_key)
             if _v is None:
                 _v = _PAD.sub(_sub, _o)
-                _pgc[_o] = _v
+                _v = _APOS_R.sub(lambda _mo: _mo.group(0) + _BOL + ' ', _v)
+                _v = _APOS_L.sub(
+                    lambda _mo: _mo.group(1) + ' ' + _BOL + _mo.group(2), _v
+                )
+                _pgc[_cache_key] = _v
             _pmap[_o] = _v
+    def _remember_global_replacement(placeholder, new):
+        # Boundary spaces are structural and may be consumed by a later
+        # punctuation/component rule.  Restore the globally unique $...$ core
+        # and preserve any surviving outer spaces.
+        core = placeholder.strip(' ')
+        replacement = new.strip(' ')
+        prior = valid_replacements.get(core)
+        if prior is not None and prior != replacement:
+            raise ValueError(f"conflicting global placeholder core: {core!r}")
+        valid_replacements[core] = replacement
+
     for old, new, placeholder in replacements_final_list:
         if old in text:
             text = text.replace(old, placeholder)
-            valid_replacements[placeholder] = new
+            _remember_global_replacement(placeholder, new)
         else:
             _p_old = _pmap.get(old)
             if _p_old is not None and _p_old in text:
                 text = text.replace(_p_old, placeholder)
-                valid_replacements[placeholder] = new
+                _remember_global_replacement(placeholder, new)
 
     # 2 字母词根：从「固定两遍」改为「反复到不再匹配为止(fixpoint)」。
     #   固定两遍会漏掉连续 3 个以上的 2 字母词缀(如 san/ig/ej/et)，从而产生伪词根。
