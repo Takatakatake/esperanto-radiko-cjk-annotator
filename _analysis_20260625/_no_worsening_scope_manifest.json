@@ -1,0 +1,60 @@
+{
+ "manifest_schema_version": 1,
+ "projection_sha256": "BA4EC180790C4A555D8A8E7FF8175A977D835EDC844C72D32EE46B51843E03B0",
+ "expected": {
+  "schema_version": 4,
+  "case_count": 68593,
+  "surface_count": 68504,
+  "reference_sha256": "C6596F2667A160CC199F51CCA7E36A24148A24E3A53C4A3211296F89C1E11464",
+  "reference_conflict_count": 89,
+  "reference_conflicts_sha256": "210784145477165B85C59FDDB3D011024A8CA9DF8EC1F46989F37B2BB67C9836",
+  "corpus": {
+   "files": 169,
+   "raw_ruby": 349006,
+   "parsed_ruby": 349006,
+   "parsed_units": 271065,
+   "eligible_units": 271065,
+   "word_alphabet_units": 269879,
+   "extended_reference_units": 1186,
+   "extended_reference_unique_rows": 677,
+   "extended_reference_unique_surfaces": 426,
+   "extended_reference_reasons": {
+    "contains_space": 833,
+    "outside_app_word_alphabet": 353
+   },
+   "extended_reference_sha256": "55611F15B3D66A285609CB98C236695905EF668673E452067AAFF6895646981B",
+   "case_preserved_instances": 34791,
+   "excluded_units": 0,
+   "content_sha256": "00EA3345734A7B776E480A31EB4B34D2BEF046F7E199BB1F55A1D56814338B4D"
+  },
+  "corpus_repository": {
+   "head_oid": "37020ef6582f1d190f4a1e47a42649950627beae",
+   "branch": "main",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "place_manifest": {
+   "rows": 48,
+   "instances": 74
+  },
+  "gold": {
+   "sha256": "BBD305D033570D7C2FE8804BF874E6D22FF3DE5A9B8B9A316733EF2990FBCB73",
+   "bytes": 4301768,
+   "lines": 62309,
+   "nul_bytes": 0,
+   "replacement_chars": 0,
+   "selected_records": 55413,
+   "included_unmarked": 52483,
+   "excluded_fake": 2921,
+   "official_overrides": 11,
+   "duplicate_surfaces": 250,
+   "duplicate_rows": 258,
+   "mixed_marker_surfaces": 37,
+   "atomic_hyphen_review": {
+    "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
+    "entries": 41,
+    "sha256": "FC8DB5DDE724F0693512695E79D63059073E8D36CDBE0F025D4F6DEA829D2BC5"
+   }
+  }
+ }
+}

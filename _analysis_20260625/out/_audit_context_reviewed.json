@@ -1,0 +1,166 @@
+[
+ {
+  "word": "Kontakto",
+  "corpus": "Kontakto",
+  "app": "Kontakt/o",
+  "gold": "kontakt/o",
+  "gold_marker": null,
+  "count": 24,
+  "reviewed_context": true,
+  "review_reasons": [
+   "団体・宗教・言語・題名等を直接指すentity用法としてrt・対訳を確認。"
+  ],
+  "documents": [
+   {
+    "path": "legajxoj\\vere-aux-fantazie\\vere_aux_fantazie.html",
+    "count": 12
+   },
+   {
+    "path": "legajxoj\\vere-aux-fantazie\\vere_aux_fantazie_00.html",
+    "count": 6
+   },
+   {
+    "path": "legajxoj\\vere-aux-fantazie\\vere_aux_fantazie_04.html",
+    "count": 4
+   },
+   {
+    "path": "legajxoj\\vere-aux-fantazie\\vere_aux_fantazie_45.html",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "word": "radio",
+  "corpus": "radio",
+  "app": "radi/o",
+  "gold": "radi/o",
+  "gold_marker": null,
+  "count": 4,
+  "reviewed_context": true,
+  "review_reasons": [
+   "放送・ラジオを表す文脈で、プロジェクト注釈方針（radi=光線 / radio=ラジオ）に従いwhole ruby。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 2
+   },
+   {
+    "path": "lernolibroj\\fujimaki\\Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+    "count": 1
+   },
+   {
+    "path": "lernolibroj\\fujimaki\\fujimaki20.html",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "word": "Esperanto-Societo",
+  "corpus": "Esperanto-Societo",
+  "app": "Esperant/o-/Societ/o",
+  "gold": null,
+  "gold_marker": null,
+  "count": 2,
+  "reviewed_context": true,
+  "review_reasons": [
+   "Harima Esperanto-Societoおよび京都大学Esperanto-Societoという団体名で、rtも[団体]。同じ表層の透明な複合語用法11件は分節を維持し、この団体名2件だけwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "word": "Hirundo",
+  "corpus": "Hirundo",
+  "app": "Hirund/o",
+  "gold": "hirund/o",
+  "gold_marker": null,
+  "count": 1,
+  "reviewed_context": true,
+  "review_reasons": [
+   "rtの[人名]ヒルンド、併記された本名（張燕氏）、人物としてチームを率いる文脈を確認。同一文書内の普通名詞 Hirund/o と区別し、人名本体のwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "word": "SabatEJO",
+  "corpus": "SabatEJO",
+  "app": "Sabat/EJ/O",
+  "gold": null,
+  "gold_marker": null,
+  "count": 1,
+  "reviewed_context": true,
+  "review_reasons": [
+   "内部大文字を含む団体固有表記SabatEJOで、rtも[団体]SabatEJO。一般語としてのSabat/EJ/O分析5件を壊さず、この団体名だけwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "word": "Esperanto-Domo",
+  "corpus": "Esperanto-Domo",
+  "app": "Esperant/o-/Dom/o",
+  "gold": null,
+  "gold_marker": null,
+  "count": 1,
+  "reviewed_context": true,
+  "review_reasons": [
+   "京都の施設名Esperanto-Domoで、rtも[施設]エスペラント会館。透明な複合語用法3件は分節を維持し、この施設名だけwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "word": "Lian",
+  "corpus": "Lian",
+  "app": "Li/an",
+  "gold": null,
+  "gold_marker": null,
+  "count": 1,
+  "reviewed_context": true,
+  "review_reasons": [
+   "Batangas州の地名Lianで、rtも[地名]リアン。普通のEsperanto所有代名詞 Li/an と同綴りなので、全域規則にはせず当該地名文脈だけwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2025\\202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "word": "Nagoja",
+  "corpus": "Nagoja",
+  "app": "Nagoj/a",
+  "gold": null,
+  "gold_marker": null,
+  "count": 1,
+  "reviewed_context": true,
+  "review_reasons": [
+   "前置詞enの目的地として使われ、rtも[地名]名古屋。Nagoj/aという形容詞的分析も別文脈では有効なため、当該地名綴りだけwhole rubyを保持。"
+  ],
+  "documents": [
+   {
+    "path": "revuoj\\revuo-orienta\\2026\\202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+    "count": 1
+   }
+  ]
+ }
+]

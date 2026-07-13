@@ -1,0 +1,2122 @@
+{
+  "schema_version": 2,
+  "scope": "Exact reviewed non-annotation occurrences after mandatory ruby omissions were fixed",
+  "entries": [
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+      "token": "Area",
+      "lines": [
+        149
+      ],
+      "expected_count": 1,
+      "category": "quoted_english_term",
+      "reason": "English discipline name quoted as the source-language equivalent, not Esperanto prose."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+      "token": "Studies",
+      "lines": [
+        149
+      ],
+      "expected_count": 1,
+      "category": "quoted_english_term",
+      "reason": "English discipline name quoted as the source-language equivalent, not Esperanto prose."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+      "token": "II",
+      "lines": [
+        1198
+      ],
+      "expected_count": 1,
+      "category": "roman_numeral_notation",
+      "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+      "token": "III",
+      "lines": [
+        1147,
+        1312
+      ],
+      "expected_count": 2,
+      "category": "roman_numeral_notation",
+      "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+      "token": "XVI",
+      "lines": [
+        1005
+      ],
+      "expected_count": 1,
+      "category": "roman_numeral_notation",
+      "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+      "token": "ale",
+      "lines": [
+        328
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+      "token": "jan",
+      "lines": [
+        247
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+      "token": "luka",
+      "lines": [
+        328
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+      "token": "mute",
+      "lines": [
+        328
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+      "token": "sike",
+      "lines": [
+        283
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "BY-SA",
+      "lines": [
+        154
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "CC",
+      "lines": [
+        154
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "Luc",
+      "lines": [
+        154
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "Viatour",
+      "lines": [
+        154
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "Wikipedia",
+      "lines": [
+        154
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "n-o",
+      "lines": [
+        172
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "no",
+      "lines": [
+        172
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+      "token": "u",
+      "lines": [
+        172
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+      "token": "Eeeeeeej",
+      "lines": [
+        37902
+      ],
+      "expected_count": 1,
+      "category": "onomatopoeia",
+      "reason": "Expressive drawn-out cry whose spelling is intentionally preserved."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+      "token": "No",
+      "lines": [
+        31967,
+        31988,
+        31997,
+        32005,
+        32117
+      ],
+      "expected_count": 5,
+      "category": "quoted_english_phrase",
+      "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+      "token": "a-a-a-a-a-a-blo",
+      "lines": [
+        37929
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+      "token": "ĵan",
+      "lines": [
+        40310
+      ],
+      "expected_count": 1,
+      "category": "pronunciation_transcription",
+      "reason": "Pronunciation rendering following the already annotated full personal name."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_01.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_02.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_03.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_04.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_05.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_06.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_07.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_08.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_09.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_10.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_11.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_12.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_13.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_14.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_16.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_17.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_18.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_19.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_20.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_21.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_22.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_23.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_24.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_25.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_26.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_27.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_29.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_30.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_31.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_32.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_34.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_35.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_36.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_37.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+      "token": "No",
+      "lines": [
+        697,
+        718,
+        727,
+        735,
+        847
+      ],
+      "expected_count": 5,
+      "category": "quoted_english_phrase",
+      "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_39.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_40.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_41.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+      "token": "Eeeeeeej",
+      "lines": [
+        1867
+      ],
+      "expected_count": 1,
+      "category": "onomatopoeia",
+      "reason": "Expressive drawn-out cry whose spelling is intentionally preserved."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+      "token": "a-a-a-a-a-a-blo",
+      "lines": [
+        1894
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_43.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_44.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+      "token": "Hejmo",
+      "lines": [
+        126
+      ],
+      "expected_count": 1,
+      "category": "navigation_link",
+      "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+    },
+    {
+      "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+      "token": "ĵan",
+      "lines": [
+        264
+      ],
+      "expected_count": 1,
+      "category": "pronunciation_transcription",
+      "reason": "Pronunciation rendering following the already annotated full personal name."
+    },
+    {
+      "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html",
+      "token": "Kore",
+      "lines": [
+        446,
+        449
+      ],
+      "expected_count": 2,
+      "category": "foreign_language_example",
+      "reason": "Japanese example phrase shown for comparison, outside Esperanto reading prose."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "Guk-kon",
+      "lines": [
+        3136
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "Gukkon",
+      "lines": [
+        3143
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "Kadó",
+      "lines": [
+        3875
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "Malamikete",
+      "lines": [
+        3874
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "a'n",
+      "lines": [
+        11132
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ac",
+      "lines": [
+        3769
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "aca",
+      "lines": [
+        3770
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ad",
+      "lines": [
+        3769
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ba",
+      "lines": [
+        3769
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "da",
+      "lines": [
+        3769
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ec",
+      "lines": [
+        3770,
+        3773
+      ],
+      "expected_count": 2,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ed",
+      "lines": [
+        3770
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "in",
+      "lines": [
+        3876
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "komenius",
+      "lines": [
+        6117
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "las",
+      "lines": [
+        3874
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "loo",
+      "lines": [
+        6859
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "lui",
+      "lines": [
+        6656
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "temp",
+      "lines": [
+        3875
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "tot",
+      "lines": [
+        3876
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+      "token": "ĉe",
+      "lines": [
+        7212
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki10.html",
+      "token": "komenius",
+      "lines": [
+        282
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki11.html",
+      "token": "de",
+      "lines": [
+        254
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki11.html",
+      "token": "loo",
+      "lines": [
+        457
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki11.html",
+      "token": "lui",
+      "lines": [
+        254
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki12.html",
+      "token": "ĉe",
+      "lines": [
+        325
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki17.html",
+      "token": "a'n",
+      "lines": [
+        847
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_pronunciation_notation",
+      "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki5.html",
+      "token": "Guk-kon",
+      "lines": [
+        494
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki5.html",
+      "token": "Gukkon",
+      "lines": [
+        501
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "ac",
+      "lines": [
+        625
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "aca",
+      "lines": [
+        626
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "ad",
+      "lines": [
+        625
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "ba",
+      "lines": [
+        625
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "da",
+      "lines": [
+        625
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "ec",
+      "lines": [
+        626,
+        629
+      ],
+      "expected_count": 2,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki6.html",
+      "token": "ed",
+      "lines": [
+        626
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "Kadó",
+      "lines": [
+        216
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "Malamikete",
+      "lines": [
+        215
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "in",
+      "lines": [
+        217
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "las",
+      "lines": [
+        215
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "temp",
+      "lines": [
+        216
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "lernolibroj/fujimaki/fujimaki7.html",
+      "token": "tot",
+      "lines": [
+        217
+      ],
+      "expected_count": 1,
+      "category": "foreign_or_constructed_example",
+      "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Foundation",
+      "lines": [
+        360
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Fūsui",
+      "lines": [
+        285
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Jo",
+      "lines": [
+        465
+      ],
+      "expected_count": 2,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Ki",
+      "lines": [
+        285
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Lecture",
+      "lines": [
+        358
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Nobel",
+      "lines": [
+        358,
+        360,
+        465
+      ],
+      "expected_count": 4,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Outreach",
+      "lines": [
+        465
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Peace",
+      "lines": [
+        465
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Prize",
+      "lines": [
+        465
+      ],
+      "expected_count": 2,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Qi",
+      "lines": [
+        285
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Straube",
+      "lines": [
+        465
+      ],
+      "expected_count": 2,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "The",
+      "lines": [
+        360
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Foundation",
+      "lines": [
+        416
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/copyright credit retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "IR",
+      "lines": [
+        607
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "LU",
+      "lines": [
+        603
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Lecture",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/copyright credit retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "OL",
+      "lines": [
+        603
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "The",
+      "lines": [
+        416
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "English Nobel lecture/copyright credit retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "as",
+      "lines": [
+        555
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "du",
+      "lines": [
+        564
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "et",
+      "lines": [
+        552
+      ],
+      "expected_count": 1,
+      "category": "grammar_or_code_example",
+      "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "AGED",
+      "lines": [
+        127
+      ],
+      "expected_count": 1,
+      "category": "image_text",
+      "reason": "Erroneous English wording transcribed from an AI-generated image."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "IS",
+      "lines": [
+        127
+      ],
+      "expected_count": 1,
+      "category": "image_text",
+      "reason": "Erroneous English wording transcribed from an AI-generated image."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "JP",
+      "lines": [
+        778
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sinzyuku-ku",
+      "lines": [
+        778
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Tôkyô-to",
+      "lines": [
+        778
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Waseda-mati",
+      "lines": [
+        778
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "ZAMENHOF",
+      "lines": [
+        127
+      ],
+      "expected_count": 1,
+      "category": "image_text",
+      "reason": "Erroneous English wording transcribed from an AI-generated image."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "anona",
+      "lines": [
+        474,
+        476,
+        478
+      ],
+      "expected_count": 3,
+      "category": "foreign_language_example",
+      "reason": "Source-language data in a linguistics problem retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "ira",
+      "lines": [
+        468,
+        470,
+        472,
+        474,
+        476,
+        478
+      ],
+      "expected_count": 6,
+      "category": "foreign_language_example",
+      "reason": "Source-language data in a linguistics problem retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "jol",
+      "lines": [
+        490
+      ],
+      "expected_count": 1,
+      "category": "file_name",
+      "reason": "PDF file name, not prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "se",
+      "lines": [
+        490
+      ],
+      "expected_count": 1,
+      "category": "file_name",
+      "reason": "PDF file name, not prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Gakusei-jidai-ni-ĉikara-o-ireta-koto",
+      "lines": [
+        156
+      ],
+      "expected_count": 1,
+      "category": "foreign_language_example",
+      "reason": "Romanized Japanese phrase explicitly presented as a source-language expression."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "JP",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sinzyuku-ku",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Tôkyô-to",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Waseda-mati",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "tel",
+      "lines": [
+        410
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Mi",
+      "lines": [
+        431
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Tokipone",
+      "lines": [
+        431
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "kili",
+      "lines": [
+        358
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "li",
+      "lines": [
+        358
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "mi",
+      "lines": [
+        361
+      ],
+      "expected_count": 1,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "moku",
+      "lines": [
+        352,
+        358,
+        361,
+        431
+      ],
+      "expected_count": 6,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "pali",
+      "lines": [
+        361,
+        431
+      ],
+      "expected_count": 2,
+      "category": "quoted_tokipona",
+      "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Es",
+      "lines": [
+        106
+      ],
+      "expected_count": 1,
+      "category": "wordplay_notation",
+      "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Fes",
+      "lines": [
+        106
+      ],
+      "expected_count": 1,
+      "category": "wordplay_notation",
+      "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "peranta",
+      "lines": [
+        106
+      ],
+      "expected_count": 1,
+      "category": "wordplay_notation",
+      "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "ramen",
+      "lines": [
+        265
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Italicized Japanese food name discussed as a loan/source term."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "to",
+      "lines": [
+        106
+      ],
+      "expected_count": 1,
+      "category": "wordplay_notation",
+      "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Auster",
+      "lines": [
+        188
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "JP",
+      "lines": [
+        680
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sinzyuku-ku",
+      "lines": [
+        680
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Thank",
+      "lines": [
+        444
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Tôkyô-to",
+      "lines": [
+        680
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Waseda-mati",
+      "lines": [
+        680
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "goi",
+      "lines": [
+        444
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "tea",
+      "lines": [
+        554
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "tel",
+      "lines": [
+        680
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Österreich",
+      "lines": [
+        188
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Com",
+      "lines": [
+        472,
+        493
+      ],
+      "expected_count": 2,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "D'on",
+      "lines": [
+        481
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "De",
+      "lines": [
+        478
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Gràcies",
+      "lines": [
+        475
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Hola",
+      "lines": [
+        469
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Japó",
+      "lines": [
+        484
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Moltes",
+      "lines": [
+        475
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Parlo",
+      "lines": [
+        490
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sóc",
+      "lines": [
+        484
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Una",
+      "lines": [
+        487
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "diu",
+      "lines": [
+        493
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "si",
+      "lines": [
+        487
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "una",
+      "lines": [
+        490
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "us",
+      "lines": [
+        487
+      ],
+      "expected_count": 1,
+      "category": "quoted_catalan",
+      "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "JP",
+      "lines": [
+        419
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sinzyuku-ku",
+      "lines": [
+        419
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Tôkyô-to",
+      "lines": [
+        419
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Waseda-mati",
+      "lines": [
+        419
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "fakso",
+      "lines": [
+        422
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "tel",
+      "lines": [
+        422
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "ale",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "dol",
+      "lines": [
+        471
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "guan",
+      "lines": [
+        716
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "jan",
+      "lines": [
+        557
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "luka",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "mute",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "sike",
+      "lines": [
+        569
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "ale",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "dol",
+      "lines": [
+        471
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "guan",
+      "lines": [
+        716
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "jan",
+      "lines": [
+        557
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "luka",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "mute",
+      "lines": [
+        584
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "sike",
+      "lines": [
+        569
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+    }
+  ]
+}

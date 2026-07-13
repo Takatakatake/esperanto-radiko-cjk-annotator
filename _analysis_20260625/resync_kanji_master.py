@@ -4,12 +4,16 @@
                   + 漢字注入_学習者版(語単位の漢字形 ⟦…⟧)
    再構築対象: app_data 漢字対応CSV(3アプリ) / out/kanji_root.csv / out/word_kanji.json
    --write で書込。"""
-import csv, sys, os, re, json
+import csv, sys, os, re, json, hashlib
+from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 WRITE = '--write' in sys.argv
-ROOT = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\エスペラントの漢字化プロジェクト総結集20260630"
-BASE = ROOT + r"\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630"
-KM = ROOT + r"\エスペラント語根＿漢字割り当て＿20260630"
+BASE = str(Path(__file__).resolve().parents[1])
+ROOT = str(Path(BASE).parent)
+KM = os.environ.get(
+    'ESP_KANJI_MASTER_PATH',
+    str(Path(ROOT) / "エスペラント語根＿漢字割り当て＿20260630"),
+)
 OUT = os.path.join(BASE, '_analysis_20260625', 'out')
 PFX = chr(92) + chr(92) + chr(63) + chr(92)
 def LP(p): return PFX + os.path.abspath(p)
@@ -18,14 +22,39 @@ def circ(s):
     for a, b in X.items(): s = s.replace(a, b)
     return s
 
+expected_manifest_path = os.environ.get('ESP_EXPECTED_KANJI_MASTER_MANIFEST')
+expected_files = None
+if expected_manifest_path:
+    with open(LP(expected_manifest_path), encoding='utf-8') as fp:
+        expected_manifest = json.load(fp)
+    if expected_manifest.get('schema_version') != 1:
+        raise RuntimeError('unsupported Kanji master manifest schema')
+    expected_files = {row['name']: row for row in expected_manifest['files']}
+
+def pinned_text(name):
+    path = os.path.join(KM, name)
+    raw = open(LP(path), 'rb').read()
+    if expected_files is not None:
+        expected = expected_files.get(name)
+        if expected is None:
+            raise RuntimeError(f'Kanji master file is not pinned: {name}')
+        actual_sha = hashlib.sha256(raw).hexdigest().upper()
+        if len(raw) != expected['bytes'] or actual_sha != expected['sha256']:
+            raise RuntimeError(
+                f'Kanji master drift: {name}: expected '
+                f"{expected['bytes']} bytes/{expected['sha256']}, got "
+                f'{len(raw)} bytes/{actual_sha}'
+            )
+    return raw.decode('utf-8')
+
 # --- 1) 正本の語根→表示形(識別子込み) ---
 master = {}
-for ln in open(LP(os.path.join(KM, '_kanji_map_master.tsv')), encoding='utf-8'):
+for ln in pinned_text('_kanji_map_master.tsv').splitlines():
     ps = ln.rstrip('\n').split('\t')
     if len(ps) >= 3 and ps[1] and ps[2]:
         master[circ(ps[1].strip())] = ps[2].strip()
 disp = {}
-for ln in open(LP(os.path.join(KM, '_identifier_sidecar.tsv')), encoding='utf-8'):
+for ln in pinned_text('_identifier_sidecar.tsv').splitlines():
     ps = [p.strip().strip('"') for p in ln.rstrip('\n').split('\t')]
     if len(ps) >= 5 and ps[0] and ps[4]:
         disp[circ(ps[0])] = ps[4]
@@ -36,7 +65,7 @@ print(f"正本語根: {len(authority)} (識別子込み表示形 {len(disp)})")
 GRAM = {'o','a','i','e','u','n','j','oj','on','aj','an','en','as','is','os','us'}
 wk_new = {}
 bad = 0
-for ln in open(LP(os.path.join(KM, '漢字注入_学習者版_20260620.txt')), encoding='utf-8'):
+for ln in pinned_text('漢字注入_学習者版_20260620.txt').splitlines():
     m = re.match(r'^([^:⟦{]+)⟦([^⟧]+)⟧', ln.strip().lstrip('﻿'))
     if not m: continue
     dec = circ(m.group(1).strip()).replace('-', '')
@@ -69,10 +98,10 @@ if WRITE:
     for L in ('JA', 'ZH', 'KO'):
         tgt = LP(os.path.join(BASE, f'Esperanto-Kanji-Ruby-{L}', 'app_data', '世界语词根-汉字对应列表_参照2新割当_7791.csv'))
         with open(tgt, 'w', encoding='utf-8', newline='') as fp:
-            w = csv.writer(fp)
+            w = csv.writer(fp, lineterminator='\n')
             for r, k in newrows: w.writerow([r, k])
     with open(LP(os.path.join(OUT, 'kanji_root.csv')), 'w', encoding='utf-8', newline='') as fp:
-        w = csv.writer(fp)
+        w = csv.writer(fp, lineterminator='\n')
         for r, k in newrows: w.writerow([r, k])
     print(f"CSV再構築: {len(newrows)}語根 ×(3アプリ+out)")
     # 4) word_kanji.json 全面再構築(正本注入版ベース)

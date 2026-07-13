@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "algorithm": {
+    "id": "canonical-corpus-surfaces-v1",
+    "steps": [
+      "Verify the corpus checkout is clean and matches the pinned HEAD/content hash.",
+      "Parse CONTENT_DIRS with no_worsening_audit.parse_corpus_words.",
+      "Canonicalize Esperanto notation and retain only audit.evaluable surfaces.",
+      "Group every observed typed signature by canonical surface.",
+      "Narrow all reviewed evaluable surfaces to their reviewed-manifest signature.",
+      "Render every surface through each selected deployed Ruby runtime/payload.",
+      "Require visible identity, expected typed signature, and no placeholder token."
+    ]
+  },
+  "algorithm_sha256": "6A68969E3B4A0FF6580D52BE8645F39E74DC12C525317DEB3FD339F594771B97",
+  "script_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\_analysis_20260625\\check_canonical_corpus_surfaces.py",
+  "script_sha256": "FD7F15C10E1D65B290208B152E59490EB1AD09F21770F7C95D070047EC6D4DF0",
+  "corpus": {
+    "path": "D:\\tmp\\kyodai_html_merge_clone_20260712_2334",
+    "head_oid": "37020ef6582f1d190f4a1e47a42649950627beae",
+    "content_sha256": "00EA3345734A7B776E480A31EB4B34D2BEF046F7E199BB1F55A1D56814338B4D"
+  },
+  "exact_manifest_sha256": "8788207EE4447FA13E274D98280C01EFE97BB547F7DADE44C982187067F5528F",
+  "reviewed_manifest_sha256": "1EA463726F77EE3EE298B76EBB0E04389261264F9CD8ADFA8612C7A418F6A5BD",
+  "scope": {
+    "content_files": 169,
+    "raw_ruby": 349006,
+    "parsed_ruby": 349006,
+    "parsed_units": 271065,
+    "evaluable_instances": 269879,
+    "canonical_surfaces": 21443,
+    "reviewed_overrides": 628
+  },
+  "languages": [
+    {
+      "language": "JA",
+      "payload_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-JA\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "256369E01F730802E98FF6A1A00230DDF7E82A05ABF8E80C1144F3967CDE3210",
+      "runtime_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-JA\\esp_text_replacement_module.py",
+      "runtime_sha256": "28FFBB4D4CB6609F5CAE10B24C1CA5555233242744423B6514A5FFE4F768D5E4",
+      "global_rules": 570649,
+      "render_seconds": 99.14872932434082,
+      "residual_surfaces": 0,
+      "residual_instances": 0,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": true,
+      "residuals": [],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    },
+    {
+      "language": "ZH",
+      "payload_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-ZH\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "826BFF7E9B4177132804352428374F427D0EC1B718E38D1F158F589475DA1E20",
+      "runtime_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-ZH\\esp_text_replacement_module.py",
+      "runtime_sha256": "1E54C6C385BA878D4E632164FEE0FC62E5E829705377B4EC9F5C0DA387216759",
+      "global_rules": 570649,
+      "render_seconds": 96.75993704795837,
+      "residual_surfaces": 0,
+      "residual_instances": 0,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": true,
+      "residuals": [],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    },
+    {
+      "language": "KO",
+      "payload_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-KO\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "7A6232F7755F1F4A3606A3E7D5DF047EFF6231E850032CA204D51BF910EEA33B",
+      "runtime_path": "D:\\GoogleDrive202510\\マイドライブ\\20_エスペラント・語学\\エスペラントの漢字化プロジェクト総結集20260630\\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630\\Esperanto-Kanji-Ruby-KO\\esp_text_replacement_module.py",
+      "runtime_sha256": "57A20D6E70DA24B52387F4C4B664E0FF0556464DE8BDA63DF87AB767970DF4CC",
+      "global_rules": 570649,
+      "render_seconds": 95.80895829200745,
+      "residual_surfaces": 0,
+      "residual_instances": 0,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": true,
+      "residuals": [],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    }
+  ],
+  "residual_language_surfaces": 0,
+  "visible_failures": 0,
+  "placeholder_residual_surfaces": 0,
+  "pass": true
+}
