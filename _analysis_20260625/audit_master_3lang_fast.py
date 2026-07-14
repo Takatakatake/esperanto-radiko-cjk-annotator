@@ -1,7 +1,17 @@
 # -*- coding: utf-8 -*-
-"""高速版: 62,000語マスター全語の3言語分解一致を実測(バッチ変換=500語/回, ◆区切り)。"""
+"""MONITOR-ONLY高速版（正式gateではない）。
+
+固定snapshot・全行accounting・安定入力検証を持たないため、正式証明には必ず
+``audit_master_3lang_full_snapshot.py`` を使う。このスクリプトは明示的な
+``--monitor-only`` 指定時だけ動かす。
+"""
 import os, re, sys, json
 sys.stdout.reconfigure(encoding='utf-8')
+if '--monitor-only' not in sys.argv:
+    raise SystemExit(
+        'monitor-only audit: pass --monitor-only explicitly; '
+        'use audit_master_3lang_full_snapshot.py for the formal gate'
+    )
 ROOT = r"D:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\エスペラントの漢字化プロジェクト総結集20260630"
 BASE = ROOT + r"\語根分解、注釈ルビ振り、漢字化アプリ徹底ブラッシュアップ20260630"
 GOLD = ROOT + r"\エスペラント辞書徹底語根分解_20260630\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt"
@@ -75,3 +85,5 @@ print(f"\n=== 最終: マスター全語 {len(words)} の3言語分解不一致:
 for x in mism[:40]:
     print(f"  {x['w']:20s} JA={x['JA']:22s} ZH={x['ZH']:22s} KO={x['KO']}")
 json.dump(mism, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'master_3lang_mismatch.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+if mism:
+    raise SystemExit(1)

@@ -1,0 +1,61 @@
+{
+ "schema_version": 1,
+ "languages": [
+  "ja",
+  "zh",
+  "ko"
+ ],
+ "expected_key_counts": {
+  "ja": 49280,
+  "zh": 49319,
+  "ko": 49319
+ },
+ "authority_keys": 49319,
+ "authority_sha256": "72396E3457E04479E1023E571A27476252F8EC8249FB93A6FAC3CD282A192FF1",
+ "expected_missing_by_language": {
+  "ja": [
+   "anstataŭ",
+   "anstataŭ/ant",
+   "anstataŭ/aĵ",
+   "anstataŭ/ig",
+   "anstataŭ/il",
+   "anstataŭ/iĝ",
+   "golf/ej",
+   "golf/pantalon",
+   "golfo/flu",
+   "gru",
+   "gru/form",
+   "gru/o-doli",
+   "gru/o/form",
+   "paper/gru",
+   "pat",
+   "pat/aĵ",
+   "pat/et",
+   "pat/kuk",
+   "pat/o/ten/il",
+   "pat/rost",
+   "pat/rost/aĵ",
+   "pat/rost/it",
+   "pivot/gru",
+   "po",
+   "po/cent",
+   "po/detal",
+   "po/grand/ist",
+   "po/gut",
+   "po/gut/ig",
+   "po/gut/ig/il",
+   "po/iom/et",
+   "po/kap",
+   "po/pec",
+   "rab/gru",
+   "rab/gru/form",
+   "rab/gru/o/form",
+   "tur/gru",
+   "volb/o/pat",
+   "ĉu/sign"
+  ],
+  "zh": [],
+  "ko": []
+ },
+ "note": "Boundary keys/pieces are shared authority; gloss values remain language-local and are intentionally not hashed here."
+}

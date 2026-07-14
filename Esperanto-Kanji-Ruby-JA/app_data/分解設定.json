@@ -16848,23 +16848,6 @@
   ]
  ],
  [
-  "nov/jork",
-  79000,
-  [
-   "o",
-   "oj",
-   "on",
-   "ojn",
-   "a",
-   "aj",
-   "an",
-   "ajn",
-   "e",
-   "en",
-   "word_boundary"
-  ]
- ],
- [
   "numazu",
   69000,
   [
@@ -19012,14 +18995,6 @@
   ]
  ],
  [
-  "nov/jork/on",
-  99000,
-  [
-   "ne",
-   "word_boundary"
-  ]
- ],
- [
   "olu/n",
   49000,
   [
@@ -20338,14 +20313,6 @@
  [
   "reprezent/it/an",
   139000,
-  [
-   "ne",
-   "word_boundary"
-  ]
- ],
- [
-  "hokkajd/on",
-  99000,
   [
    "ne",
    "word_boundary"
@@ -26691,6 +26658,59 @@
   ]
  ],
  [
+  "bonaer",
+  69000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@atomic-family:bonaer"
+  ]
+ ],
+ [
+  "novjork",
+  79000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "a"
+  ]
+ ],
+ [
+  "novjork/an",
+  99000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
   "Ivo",
   39000,
   [
@@ -26731,6 +26751,953 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RLL"
+  ]
+ ],
+ [
+  "hokkajdo/n",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "HOKKAJDO/N",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "aglutinin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "akonitin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "algin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "amanitin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "anilin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "asparagin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "atropin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "boldin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "botulin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "citrolin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "digitalin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "dioskorein/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "efedrin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "elateriin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "emulsiin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "ergotin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "eskulin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "fitin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "foliklin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "gajl/o/tanin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL"
+  ]
+ ],
+ [
+  "gastrin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "giromitrin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "glutenin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "gonad/o/stimulin/o",
+  159000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL"
+  ]
+ ],
+ [
+  "guanin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "hematin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "hematoksilin/o",
+  139000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "hiosciamin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "hirudin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "hiskiamin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "humin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "inulin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "johimbin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kadavrin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kantaridin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kapsikin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "keratin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kinkonin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kolĉikin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "koniin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kreatinin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kumarin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kurkumin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "kvasiin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "legumin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "lignin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "lutein/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "melanin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "migdalin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "mjelin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "olein/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "ostin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "pankreatin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "papajin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "papaverin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "papavin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "pektin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "pilokarpin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "piretrin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "poezin/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "pseŭdo/efedrin/o",
+  149000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRL"
+  ]
+ ],
+ [
+  "renin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "ricinin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "roz/anilin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRL"
+  ]
+ ],
+ [
+  "rutin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "sakarin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "salikin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "santalin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "sekreciin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "simpatin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "stimulin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "striknin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "strofantin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "suberin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "tanin/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "tebain/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "tefoliin/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "tein/o",
+  59000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "teobromin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "terebintin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "tiroid/stimulin/o",
+  159000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRL"
+  ]
+ ],
+ [
+  "tuberkulin/iz/ad/o",
+  159000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRRL"
+  ]
+ ],
+ [
+  "tuberkulin/o",
+  119000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "vanilin/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "vegetalin/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "Tomist/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
+  ]
+ ],
+ [
+  "promil/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_only"
+  ]
+ ],
+ [
+  "pro/mil",
+  69000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "kanji_track_only"
+  ]
+ ],
+ [
+  "Bonaer",
+  69001,
+  [
+   "ne",
+   "atomic_no_split",
+   "ruby_left_boundary",
+   "case_sensitive",
+   "ruby_context_annotation:@atomic-family:Bonaer"
+  ]
+ ],
+ [
+  "BONAER",
+  69001,
+  [
+   "ne",
+   "atomic_no_split",
+   "ruby_left_boundary",
+   "case_sensitive",
+   "ruby_context_annotation:@atomic-family:BONAER"
+  ]
+ ],
+ [
+  "novjork",
+  79001,
+  [
+   "ne",
+   "atomic_no_split",
+   "ruby_left_boundary"
+  ]
+ ],
+ [
+  "bon/aer",
+  69000,
+  [
+   "ne"
   ]
  ],
  [
@@ -35206,16 +36173,6 @@
   ]
  ],
  [
-  "aglutin/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "aizo/ac/oj",
   89000,
   [
@@ -35234,16 +36191,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:R"
-  ]
- ],
- [
-  "akonit/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -35327,16 +36274,6 @@
   ]
  ],
  [
-  "alg/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "alism/ac/oj",
   99000,
   [
@@ -35349,16 +36286,6 @@
  [
   "alveolin/ed/oj",
   129000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "amanit/in/o",
-  99000,
   [
    "ne",
    "word_boundary",
@@ -35424,16 +36351,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RL"
-  ]
- ],
- [
-  "anil/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -35579,16 +36496,6 @@
   ]
  ],
  [
-  "asparag/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "aster/ac/oj",
   99000,
   [
@@ -35627,16 +36534,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:R"
-  ]
- ],
- [
-  "atrop/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -35896,16 +36793,6 @@
   ]
  ],
  [
-  "bold/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "bolet/ac/oj",
   99000,
   [
@@ -35933,16 +36820,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RLRL"
-  ]
- ],
- [
-  "botul/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -36088,16 +36965,6 @@
  [
   "ciprin/ed/oj",
   109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "citrol/in/o",
-  99000,
   [
    "ne",
    "word_boundary",
@@ -36467,16 +37334,6 @@
   ]
  ],
  [
-  "digital/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "diktiosom/ar/o",
   129000,
   [
@@ -36489,16 +37346,6 @@
  [
   "dioptr/ik/o",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "dioskore/in/o",
-  119000,
   [
    "ne",
    "word_boundary",
@@ -36598,16 +37445,6 @@
  ],
  [
   "eci/spor/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "efedr/in/o",
   89000,
   [
    "ne",
@@ -36729,16 +37566,6 @@
   ]
  ],
  [
-  "elateri/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "elefant/ed/oj",
   119000,
   [
@@ -36779,28 +37606,8 @@
   ]
  ],
  [
-  "emulsi/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "enoter/ac/oj",
   109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "ergot/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -36821,16 +37628,6 @@
  [
   "eskal/imun/a",
   109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "eskul/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -37103,16 +37900,6 @@
   ]
  ],
  [
-  "fit/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "fiŝ/ov/ar/o",
   89000,
   [
@@ -37175,16 +37962,6 @@
  ],
  [
   "folad/ed/oj",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "folikl/in/o",
   99000,
   [
    "ne",
@@ -37284,16 +38061,6 @@
   ]
  ],
  [
-  "gajl/o/tan/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RLRRL"
-  ]
- ],
- [
   "galbul/ed/oj",
   109000,
   [
@@ -37306,16 +38073,6 @@
  [
   "galvan/iz/i",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "gastr/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -37364,28 +38121,8 @@
   ]
  ],
  [
-  "giromitr/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "glir/ed/oj",
   89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "gluten/in/o",
-  99000,
   [
    "ne",
    "word_boundary",
@@ -37445,16 +38182,6 @@
   ]
  ],
  [
-  "gonad/o/stimul/in/o",
-  159000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RLRRL"
-  ]
- ],
- [
   "grafit/kolon/et/o",
   149000,
   [
@@ -37505,16 +38232,6 @@
   ]
  ],
  [
-  "guan/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "hapal/ed/oj",
   99000,
   [
@@ -37527,26 +38244,6 @@
  [
   "harpal/ed/oj",
   109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "hemat/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "hematoksil/in/o",
-  139000,
   [
    "ne",
    "word_boundary",
@@ -37607,37 +38304,7 @@
   ]
  ],
  [
-  "hiosciam/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "hirud/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "hirund/ed/oj",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "hiskiam/in/o",
   109000,
   [
    "ne",
@@ -37718,16 +38385,6 @@
   ]
  ],
  [
-  "hum/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "igvan/ed/oj",
   99000,
   [
@@ -37761,16 +38418,6 @@
  [
   "intens/iv/a",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "inul/in/o",
-  79000,
   [
    "ne",
    "word_boundary",
@@ -37862,16 +38509,6 @@
   ]
  ],
  [
-  "johimb/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "jugoslav/ia",
   109000,
   [
@@ -37884,16 +38521,6 @@
  [
   "juĝ/ot/o",
   69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "kadavr/in/o",
-  99000,
   [
    "ne",
    "word_boundary",
@@ -37962,28 +38589,8 @@
   ]
  ],
  [
-  "kantarid/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "kap/et/o",
   69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "kapsik/in/o",
-  99000,
   [
    "ne",
    "word_boundary",
@@ -38102,16 +38709,6 @@
   ]
  ],
  [
-  "kerat/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "ket/o/grup/o",
   99000,
   [
@@ -38119,16 +38716,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RLRL"
-  ]
- ],
- [
-  "kinkon/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -38274,16 +38861,6 @@
   ]
  ],
  [
-  "kolĉik/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "kompozit/ac/oj",
   129000,
   [
@@ -38376,16 +38953,6 @@
   ]
  ],
  [
-  "koni/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "kontraŭ/kod/er/o",
   139000,
   [
@@ -38436,16 +39003,6 @@
   ]
  ],
  [
-  "kreatin/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "krizomel/ed/oj",
   129000,
   [
@@ -38476,16 +39033,6 @@
   ]
  ],
  [
-  "kumar/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "kupres/ac/oj",
   109000,
   [
@@ -38506,28 +39053,8 @@
   ]
  ],
  [
-  "kurkum/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "kvar/il/o",
   79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "kvasi/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -38596,16 +39123,6 @@
   ]
  ],
  [
-  "legum/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "lentibulari/ac/oj",
   159000,
   [
@@ -38624,16 +39141,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:R"
-  ]
- ],
- [
-  "lign/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -38729,16 +39236,6 @@
   ]
  ],
  [
-  "lute/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "makedon/i/an/o",
   119000,
   [
@@ -38819,16 +39316,6 @@
   ]
  ],
  [
-  "melan/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "merkat/ik/o",
   99000,
   [
@@ -38869,16 +39356,6 @@
   ]
  ],
  [
-  "migdal/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "miks/de/ven/a",
   109000,
   [
@@ -38901,16 +39378,6 @@
  [
   "mirt/ac/oj",
   89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "mjel/in/o",
-  79000,
   [
    "ne",
    "word_boundary",
@@ -39233,16 +39700,6 @@
   ]
  ],
  [
-  "ole/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "oligark/io",
   99000,
   [
@@ -39350,16 +39807,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RLRL"
-  ]
- ],
- [
-  "ost/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -39474,48 +39921,8 @@
   ]
  ],
  [
-  "pankreat/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "papaj/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "papav/ac/oj",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "papaver/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "papav/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -39655,16 +40062,6 @@
   ]
  ],
  [
-  "pekt/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "pelag/an/o",
   89000,
   [
@@ -39767,16 +40164,6 @@
   ]
  ],
  [
-  "pilokarp/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "pin/ac/oj",
   79000,
   [
@@ -39798,16 +40185,6 @@
  ],
  [
   "piper/ac/oj",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "piretr/in/o",
   99000,
   [
    "ne",
@@ -39890,16 +40267,6 @@
  [
   "po/ac/oj",
   69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "poez/in/o",
-  79000,
   [
    "ne",
    "word_boundary",
@@ -40060,16 +40427,6 @@
   ]
  ],
  [
-  "pseŭdo/efedr/in/o",
-  149000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRRL"
-  ]
- ],
- [
   "psikiatr/ia",
   109000,
   [
@@ -40190,16 +40547,6 @@
   ]
  ],
  [
-  "ren/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "re/nom/i",
   69000,
   [
@@ -40270,16 +40617,6 @@
   ]
  ],
  [
-  "ricin/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "ro",
   29000,
   [
@@ -40311,16 +40648,6 @@
   ]
  ],
  [
-  "roz/anil/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRRL"
-  ]
- ],
- [
   "roz/et/plant/o",
   119000,
   [
@@ -40331,38 +40658,8 @@
   ]
  ],
  [
-  "rut/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "sakar/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "salamandr/ed/oj",
   139000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "salik/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -40388,16 +40685,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RLRL"
-  ]
- ],
- [
-  "santal/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -40433,16 +40720,6 @@
  [
   "sciur/ed/oj",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "sekreci/in/o",
-  109000,
   [
    "ne",
    "word_boundary",
@@ -40542,16 +40819,6 @@
  ],
  [
   "simbol/ik/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "simpat/in/o",
   99000,
   [
    "ne",
@@ -40793,16 +41060,6 @@
   ]
  ],
  [
-  "stimul/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "stokast/ik/o",
   109000,
   [
@@ -40823,16 +41080,6 @@
   ]
  ],
  [
-  "strikn/in/o",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "striptiz/ist/in/o",
   149000,
   [
@@ -40843,28 +41090,8 @@
   ]
  ],
  [
-  "strofant/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "sturn/ed/oj",
   99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "suber/in/o",
-  89000,
   [
    "ne",
    "word_boundary",
@@ -40953,38 +41180,8 @@
   ]
  ],
  [
-  "tan/in/o",
-  69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "te/ac/oj",
   69000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "teba/in/o",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "te/in/o",
-  59000,
   [
    "ne",
    "word_boundary",
@@ -41043,16 +41240,6 @@
   ]
  ],
  [
-  "teobrom/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "teozof/io",
   89000,
   [
@@ -41064,16 +41251,6 @@
  ],
  [
   "terafoz/ed/oj",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
-  "terebint/in/o",
   119000,
   [
    "ne",
@@ -41181,16 +41358,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RL"
-  ]
- ],
- [
-  "tiroid/stimul/in/o",
-  159000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRRL"
   ]
  ],
  [
@@ -41385,26 +41552,6 @@
   ]
  ],
  [
-  "tuberkul/in/iz/ad/o",
-  159000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRRRL"
-  ]
- ],
- [
-  "tuberkul/in/o",
-  119000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "turd/ed/oj",
   89000,
   [
@@ -41505,16 +41652,6 @@
   ]
  ],
  [
-  "vanil/in/o",
-  89000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "varan/ed/oj",
   99000,
   [
@@ -41542,16 +41679,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RRRL"
-  ]
- ],
- [
-  "vegetal/in/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
   ]
  ],
  [
@@ -43247,6 +43374,127 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RRL"
+  ]
+ ],
+ [
+  "Arg/o/land/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Eol/ia",
+  59000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Eol/i/an/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Eol/io",
+  59000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Frig/io",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Ligur/io",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Ohi/o/river/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Ret/io",
+  59000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "Umbr/io",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "psik/o/kirurg/io",
+  139000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "tie/n/vojaĝ/o",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLRL",
+   "ruby_track_only"
   ]
  ]
 ]

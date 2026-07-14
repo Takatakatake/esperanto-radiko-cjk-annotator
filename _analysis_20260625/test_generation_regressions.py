@@ -4,6 +4,7 @@ import gc
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -23,9 +24,14 @@ import apply_corpus_word_anno as corpus_data
 import check_multilingual_structure as multilingual_structure
 import check_kanji_structure as kanji_structure
 import fix_ruby_postregen as postregen
+from gold_snapshot import consistent_snapshot
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
+FINAL_RUBY_RE = re.compile(
+    r'<ruby>([^<]+)<rt class="[^"]+">((?:[^<]|<br>)*)</rt></ruby>',
+    re.IGNORECASE,
+)
 LATIN_RE = re.compile(r"[A-Za-zĈĉĜĝĤĥĴĵŜŝŬŭ]+")
 
 
@@ -93,6 +99,19 @@ def _overlay_module(app_dir, language):
 
 
 class GenerationRuleTests(unittest.TestCase):
+    def test_consistent_snapshot_reports_line_count(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = Path(temp_dir) / "authority.txt"
+            raw = b"alpha\r\nbeta\ngamma"
+            source.write_bytes(raw)
+            observed_raw, identity = consistent_snapshot(source)
+        self.assertEqual(observed_raw, raw)
+        self.assertEqual(identity["bytes"], len(raw))
+        self.assertEqual(identity["lines"], 3)
+        self.assertEqual(
+            identity["sha256"], hashlib.sha256(raw).hexdigest().upper(),
+        )
+
     def test_short_overlay_cannot_preempt_longer_reviewed_exact_rule(self):
         for language in ("JA", "ZH", "KO"):
             overlay = _overlay_module(
@@ -511,6 +530,174 @@ class GenerationRuleTests(unittest.TestCase):
                 atomic_binary_copy(source, destination)
             self.assertEqual(destination.read_bytes(), b"preserved")
 
+    def test_multilingual_word_anno_boundary_scope_is_fail_closed(self):
+        manifest = json.loads(
+            (HERE / "_word_anno_boundary_scope_manifest.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        maps = {
+            language: json.loads(
+                (HERE / "out" / f"word_anno_{language}.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            for language in manifest["languages"]
+        }
+        authority = canonical.validate_multilingual_word_anno_boundaries(
+            maps, manifest,
+        )
+        self.assertEqual(len(authority), manifest["authority_keys"])
+        self.assertEqual(authority["@typed:hokkajdon:0"], ("hokkajdo",))
+        self.assertIn("pat", authority)
+        self.assertNotIn("pat", maps["ja"])
+
+        # Glosses are deliberately language-local and are not copied or
+        # hashed; changing one translation cannot change the boundary scope.
+        localized = dict(maps["ja"])
+        localized["@typed:hokkajdon:0"] = [["hokkajdo", "別の日本語訳"]]
+        gloss_variant = dict(maps)
+        gloss_variant["ja"] = localized
+        canonical.validate_multilingual_word_anno_boundaries(
+            gloss_variant, manifest,
+        )
+
+        conflicting = dict(maps["zh"])
+        conflicting["@typed:hokkajdon:0"] = [["hokkajd", "北海道"]]
+        boundary_variant = dict(maps)
+        boundary_variant["zh"] = conflicting
+        with self.assertRaisesRegex(ValueError, "boundary conflict"):
+            canonical.validate_multilingual_word_anno_boundaries(
+                boundary_variant, manifest,
+            )
+
+        missing = dict(maps["ko"])
+        del missing["@typed:hokkajdon:0"]
+        key_variant = dict(maps)
+        key_variant["ko"] = missing
+        with self.assertRaisesRegex(ValueError, "key count drift"):
+            canonical.validate_multilingual_word_anno_boundaries(
+                key_variant, manifest,
+            )
+
+    def test_reviewed_local_exact_scope_preserves_unreviewed_local_semantics(self):
+        review = json.loads(
+            (HERE / "localized_global_exact_reviewed.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        reviewed_forms = {
+            form
+            for row in review["targets"]
+            for form in (
+                row["root"], row["root"].capitalize(), row["root"].upper(),
+            )
+        }
+        self.assertEqual(len(reviewed_forms), 36)
+        glosses = {
+            "JA": "[地名]北海道",
+            "ZH": "[地名]北海道",
+            "KO": "[지명]홋카이도",
+        }
+        format_type = "HTML格式_Ruby文字_大小调整"
+        for language in ("JA", "ZH", "KO"):
+            app_dir = ROOT / f"Esperanto-Kanji-Ruby-{language}"
+            module = _runtime_module(app_dir, f"reviewed_local_{language}")
+            helper = canonical.load_app_replacement_helper(app_dir)
+            char_widths = json.loads(
+                (app_dir / "app_data" / "char_widths.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual(
+                module._LOCALIZED_GLOBAL_EXACT_REVIEWED,
+                reviewed_forms,
+                language,
+            )
+            hokkaido = helper.output_format(
+                "hokkajdo", glosses[language], format_type, char_widths,
+            ) + "n"
+            local_rules = [
+                ["hok", "<ruby>hok<rt class=\"S_S\">LOCAL-HOK</rt></ruby>", "@HOK@"],
+                ["kaj", "<ruby>kaj<rt class=\"S_S\">LOCAL-KAJ</rt></ruby>", "@KAJ@"],
+                ["don", "<ruby>don<rt class=\"S_S\">LOCAL-DON</rt></ruby>", "@DON@"],
+                ["re", "<ruby>re<rt class=\"S_S\">LOCAL-RE</rt></ruby>", "@RE@"],
+                ["sum", "<ruby>sum<rt class=\"S_S\">LOCAL-SUM</rt></ruby>", "@SUM@"],
+                ["i", "i", "@I@"],
+            ]
+            global_rules = [
+                [" hokkajdon ", f" {hokkaido} ", " $HOKKAIDO$ "],
+                ["kaj", "GLOBAL-KAJ", "$GLOBAL-KAJ$"],
+                ["resumi", "GLOBAL-RESUM-I", "$GLOBAL-RESUM-I$"],
+            ]
+            rows = module.create_replacements_list_for_localized_replacement(
+                "@hokkajdon@ @kaj@ @resumi@",
+                ["@L0@", "@L1@", "@L2@"],
+                local_rules,
+                global_rules,
+            )
+            rendered = {row[0]: row[2] for row in rows}
+            self.assertEqual(rendered["@hokkajdon@"], hokkaido, language)
+            self.assertIn(glosses[language], rendered["@hokkajdon@"])
+            self.assertEqual(
+                rendered["@kaj@"], module.safe_replace("kaj", local_rules),
+                language,
+            )
+            self.assertIn("LOCAL-KAJ", rendered["@kaj@"])
+            self.assertNotIn("GLOBAL-KAJ", rendered["@kaj@"])
+            self.assertEqual(
+                rendered["@resumi@"], module.safe_replace("resumi", local_rules),
+                language,
+            )
+            self.assertNotIn("GLOBAL-RESUM-I", rendered["@resumi@"])
+            with self.assertRaisesRegex(ValueError, "lacks an exact global rule"):
+                module.create_replacements_list_for_localized_replacement(
+                    "@ddt@", ["@MISSING@"], local_rules, global_rules,
+                )
+
+    def test_kanji_resync_rejects_piece_count_mismatch(self):
+        with tempfile.TemporaryDirectory() as directory:
+            master = Path(directory)
+            (master / "_kanji_map_master.tsv").write_text(
+                "id\troot\t根\n", encoding="utf-8",
+            )
+            (master / "_identifier_sidecar.tsv").write_text("", encoding="utf-8")
+            (master / "漢字注入_学習者版_20260620.txt").write_text(
+                "bad/a⟦坏⟧\n", encoding="utf-8",
+            )
+            environment = dict(os.environ)
+            environment["ESP_KANJI_MASTER_PATH"] = str(master)
+            # This fixture deliberately supplies a tiny synthetic authority so
+            # it can reach the piece-count guard.  Formal regeneration exports
+            # pins for the real master; do not let those unrelated parent pins
+            # make the subprocess fail earlier on fixture identity.
+            for pin_name in (
+                "ESP_EXPECTED_KANJI_MASTER_MANIFEST",
+                "ESP_EXPECTED_KANJI_MASTER_SHA256",
+            ):
+                environment.pop(pin_name, None)
+            result = subprocess.run(
+                [sys.executable, str(HERE / "resync_kanji_master.py")],
+                cwd=ROOT,
+                env=environment,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Kanji master resync aborted: 1", result.stderr)
+
+    def test_formal_regeneration_uses_snapshot_full_master_audit(self):
+        pipeline = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
+        fast = (HERE / "audit_master_3lang_fast.py").read_text(encoding="utf-8")
+        self.assertIn("audit_master_3lang_full_snapshot.py", pipeline)
+        self.assertNotIn("'audit_master_3lang_fast.py'", pipeline)
+        self.assertIn("--expected-gold-sha256", pipeline)
+        self.assertIn("--expected-head", pipeline)
+        self.assertIn("--monitor-only", fast)
+        self.assertIn("if mism:", fast)
+
     def test_case_sensitive_bounded_phrase_runtime_padding(self):
         module = _runtime_module(ROOT / "Esperanto-Kanji-Ruby-JA", "phrase_padding")
         latin_ruby = '<ruby>Global Voices<rt class="S_S">entity</rt></ruby>'
@@ -637,16 +824,25 @@ class GenerationRuleTests(unittest.TestCase):
     def test_onin_uses_confirmed_pipeline(self):
         confirmed = json.loads((HERE / "out" / "confirmed_tier30.json").read_text(encoding="utf-8"))
         confirmed_words = [entry.get("w") for entry in confirmed]
-        duplicates = sorted({word for word in confirmed_words if confirmed_words.count(word) > 1})
-        self.assertEqual(duplicates, [], f"duplicate confirmed surfaces: {duplicates}")
-        target_nosl = [entry["target"].replace("/", "") for entry in confirmed]
-        target_duplicates = sorted({
-            target for target in target_nosl if target_nosl.count(target) > 1
-        })
-        self.assertEqual(
-            target_duplicates, [],
-            f"duplicate slashless confirmed targets: {target_duplicates}",
-        )
+        def _track(entry):
+            if entry.get("kanji_track_only"):
+                return "kanji"
+            if entry.get("ruby_track_only") or entry.get("ruby_only"):
+                return "ruby"
+            return "shared"
+        for label, key in (
+            ("surface", lambda entry: entry["w"]),
+            ("slashless target", lambda entry: entry["target"].replace("/", "")),
+        ):
+            groups = {}
+            for entry in confirmed:
+                groups.setdefault(key(entry), []).append(entry)
+            invalid = {
+                value: rows for value, rows in groups.items()
+                if len(rows) > 1
+                and {_track(row) for row in rows} != {"ruby", "kanji"}
+            }
+            self.assertEqual(invalid, {}, f"unsafe duplicate confirmed {label}")
         for entry in confirmed:
             self.assertEqual(
                 canonical.normalize_esperanto_surface_notation(entry["w"]),
@@ -656,7 +852,63 @@ class GenerationRuleTests(unittest.TestCase):
         matches = [entry for entry in confirmed if entry.get("w") == "onin"]
         self.assertEqual(matches, [{"w": "onin", "target": "oni/n", "boundary_only": True}])
         novjorko = [entry for entry in confirmed if entry.get("w") == "novjorko"]
-        self.assertEqual(novjorko, [{"w": "novjorko", "target": "nov/jork/o"}])
+        self.assertEqual(novjorko, [{
+            "w": "novjorko", "target": "novjork/o",
+            "corpus_managed": True,
+        }])
+        self.assertEqual(
+            [entry for entry in confirmed if entry.get("w") in {
+                "novjork", "Bonaer", "BONAER",
+            }],
+            [
+                {
+                    "w": "Bonaer", "target": "Bonaer",
+                    "exact_only": True, "ruby_left_boundary": True,
+                    "case_sensitive": True, "corpus_managed": True,
+                    "ruby_context_annotation": "@atomic-family:Bonaer",
+                },
+                {
+                    "w": "BONAER", "target": "BONAER",
+                    "exact_only": True, "ruby_left_boundary": True,
+                    "case_sensitive": True, "corpus_managed": True,
+                    "ruby_context_annotation": "@atomic-family:BONAER",
+                },
+                {
+                    "w": "novjork", "target": "novjork",
+                    "exact_only": True, "ruby_left_boundary": True,
+                    "case_sensitive": False, "corpus_managed": True,
+                },
+            ],
+        )
+        self.assertIn({
+            "w": "bonaer", "target": "bon/aer", "exact_only": True,
+            "allow_substring": True, "corpus_managed": True,
+            "localized_compositional": True,
+        }, confirmed)
+        self.assertIn({
+            "w": "novjorka", "target": "novjork/a",
+            "corpus_managed": True,
+        }, confirmed)
+        self.assertIn({
+            "w": "novjorkano", "target": "novjork/an/o",
+            "corpus_managed": True, "ruby_track_only": True,
+        }, confirmed)
+        self.assertIn({
+            "w": "promilo", "target": "promil/o", "typed_roles": "RL",
+            "exact_only": True, "boundary_only": True,
+            "case_sensitive": True, "corpus_managed": True,
+            "fake_coarse_5e_transition_managed": True,
+            "ruby_only": True,
+        }, confirmed)
+        self.assertIn({
+            "w": "promilo", "target": "pro/mil/o",
+            "kanji_track_only": True, "corpus_managed": True,
+            "fake_coarse_5e_transition_managed": True,
+        }, confirmed)
+        self.assertFalse(
+            any(entry.get("w") == "novjorkon" for entry in confirmed),
+            "productive novjork/o must replace the legacy nov/jork/on pin",
+        )
         meritokrati = [entry for entry in confirmed if entry.get("w") == "meritokrati"]
         self.assertEqual(meritokrati, [{
             "w": "meritokrati", "target": "merit/o/krati",
@@ -745,6 +997,9 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertEqual(
             len(corpus_entries),
             len(corpus_data.MANAGED_EXACT_TARGETS)
+            + len(corpus_data.PRODUCTIVE_RUBY_LEFT_TARGETS)
+            + len(corpus_data.COMPOSITIONAL_FAMILY_TARGETS)
+            + len(corpus_data.KANJI_TRACK_PRODUCTIVE_TARGETS)
             + len(corpus_data.MANAGED_MORPH_TARGETS)
             + len(corpus_data.MANAGED_TYPED_EXACT_TARGETS)
             + len(corpus_data.REVIEWED_TYPED_EXACT_TARGETS),
@@ -765,9 +1020,15 @@ class GenerationRuleTests(unittest.TestCase):
                 expected["case_sensitive"] = True
             if spec.get("context_annotation"):
                 expected["context_annotation"] = spec["context_annotation"]
+            if spec.get("ruby_context_annotation"):
+                expected["ruby_context_annotation"] = spec[
+                    "ruby_context_annotation"
+                ]
+            if spec.get("ruby_track_only"):
+                expected["ruby_track_only"] = True
             self.assertIn(expected, corpus_entries)
         for word, spec in corpus_data.MANAGED_TYPED_EXACT_TARGETS.items():
-            self.assertIn({
+            expected = {
                 "w": word,
                 "target": spec["target"],
                 "typed_roles": spec["typed_roles"],
@@ -775,6 +1036,44 @@ class GenerationRuleTests(unittest.TestCase):
                 "boundary_only": True,
                 "case_sensitive": bool(spec.get("case_sensitive", True)),
                 "corpus_managed": True,
+            }
+            if word in corpus_data.FAKE_COARSE_TYPED_SURFACES:
+                expected["fake_coarse_transition_managed"] = True
+            if word in corpus_data.FAKE_COARSE_FF33_TYPED_SURFACES:
+                expected["fake_coarse_ff33_transition_managed"] = True
+            if word in corpus_data.FAKE_COARSE_5E_TYPED_SURFACES:
+                expected["fake_coarse_5e_transition_managed"] = True
+            if spec.get("ruby_only"):
+                expected["ruby_only"] = True
+            self.assertIn(expected, corpus_entries)
+        for word, spec in corpus_data.KANJI_TRACK_PRODUCTIVE_TARGETS.items():
+            self.assertIn({
+                "w": word,
+                "target": spec["target"],
+                "kanji_track_only": True,
+                "corpus_managed": True,
+                "fake_coarse_5e_transition_managed": True,
+            }, corpus_entries)
+        for word, spec in corpus_data.PRODUCTIVE_RUBY_LEFT_TARGETS.items():
+            expected = {
+                "w": word, "target": spec["target"],
+                "exact_only": True, "ruby_left_boundary": True,
+                "case_sensitive": spec["case_sensitive"],
+                "corpus_managed": True,
+            }
+            if spec.get("ruby_context_annotation"):
+                expected["ruby_context_annotation"] = spec[
+                    "ruby_context_annotation"
+                ]
+            if spec.get("ruby_track_only"):
+                expected["ruby_track_only"] = True
+            self.assertIn(expected, corpus_entries)
+        for word, spec in corpus_data.COMPOSITIONAL_FAMILY_TARGETS.items():
+            self.assertIn({
+                "w": word, "target": spec["target"],
+                "exact_only": True, "allow_substring": True,
+                "corpus_managed": True,
+                "localized_compositional": True,
             }, corpus_entries)
         for word, spec in corpus_data.REVIEWED_TYPED_EXACT_TARGETS.items():
             self.assertIn({
@@ -828,9 +1127,9 @@ class GenerationRuleTests(unittest.TestCase):
             entries, ensure_ascii=False, separators=(",", ":"),
         ).encode("utf-8")
         self.assertEqual(payload["schema_version"], 1)
-        self.assertEqual(payload["reference_schema_version"], 4)
+        self.assertEqual(payload["reference_schema_version"], 5)
         self.assertEqual(len(entries), payload["expected_entries"])
-        self.assertEqual(len(entries), 902)
+        self.assertEqual(len(entries), 914)
         self.assertEqual(
             hashlib.sha256(compact).hexdigest().upper(),
             payload["entries_sha256"],
@@ -838,6 +1137,24 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertEqual(payload["gold_sha256"], scope["gold"]["sha256"])
         self.assertEqual(payload["reference_sha256"], scope["reference_sha256"])
         self.assertEqual(len({entry["w"] for entry in entries}), len(entries))
+        newly_adjudicated = {
+            "Argolando": ("Arg/o/land/o", "RLRL"),
+            "Eolia": ("Eol/ia", "RL"),
+            "Eoliano": ("Eol/i/an/o", "RLRL"),
+            "Eolio": ("Eol/io", "RL"),
+            "Frigio": ("Frig/io", "RL"),
+            "Ligurio": ("Ligur/io", "RL"),
+            "Ohiorivero": ("Ohi/o/river/o", "RLRL"),
+            "Retio": ("Ret/io", "RL"),
+            "Umbrio": ("Umbr/io", "RL"),
+            "psikokirurgio": ("psik/o/kirurg/io", "RLRL"),
+            "tienvojaĝo": ("tie/n/vojaĝ/o", "RLRL"),
+        }
+        by_surface = {entry["w"]: entry for entry in entries}
+        for surface, (target, roles) in newly_adjudicated.items():
+            self.assertEqual(by_surface[surface]["target"], target)
+            self.assertEqual(by_surface[surface]["typed_roles"], roles)
+            self.assertIs(by_surface[surface].get("ruby_track_only"), True)
         for entry in entries:
             parts = [part for part in entry["target"].split("/") if part]
             self.assertTrue(entry["exact_only"], entry)
@@ -855,7 +1172,20 @@ class GenerationRuleTests(unittest.TestCase):
             out_data = json.loads((HERE / "out" / f"word_anno_{code}.json").read_text(encoding="utf-8"))
             app_data = json.loads((ROOT / f"Esperanto-Kanji-Ruby-{language}" / "app_data" / "word_anno.json").read_text(encoding="utf-8"))
             self.assertEqual(out_data, app_data)
+            for legacy in (
+                "bon/aer", "bonaer", "Bonaer", "BONAER",
+                "nov/jork", "nov/jork/an",
+            ):
+                self.assertNotIn(legacy, out_data)
+            for surface in ("bonaer", "Bonaer", "BONAER"):
+                context_key = f"@atomic-family:{surface}"
+                self.assertEqual(
+                    out_data[context_key],
+                    [[surface, corpus_data.ANNOTATIONS[code][surface]]],
+                )
             for root in corpus_data.ANNOTATIONS[code]:
+                if root in corpus_data.ATOMIC_FAMILY_CONTEXT_KEYS:
+                    continue
                 self.assertEqual(out_data[root][0][0], root)
             for key, pairs in corpus_data.SPLIT_CONTEXT_ANNOTATIONS[code].items():
                 self.assertEqual(out_data[key], pairs)
@@ -864,7 +1194,7 @@ class GenerationRuleTests(unittest.TestCase):
                     out_data[f"@typed:{surface}:{index}"],
                     [[piece, glosses[code]]],
                 )
-            for key, row in corpus_data.REVIEWED_EXACT_MANIFEST["annotations"].items():
+            for key, row in corpus_data.REVIEWED_TYPED_ANNOTATIONS.items():
                 self.assertEqual(
                     out_data[key], [[row["piece"], row["glosses"][code]]],
                 )
@@ -921,6 +1251,45 @@ class GenerationRuleTests(unittest.TestCase):
             canonical.extract_context_annotation(actions), "@typed:alo:0",
         )
         self.assertEqual(actions, ["o"])
+        actions = ["ne", "ruby_track_only", "ruby_context_annotation:@x"]
+        self.assertTrue(
+            canonical.consume_track_only_metadata(
+                actions, kanji_format=False,
+            )
+        )
+        self.assertEqual(actions, ["ne", "ruby_context_annotation:@x"])
+        actions = ["ne", "ruby_track_only"]
+        self.assertFalse(
+            canonical.consume_track_only_metadata(
+                actions, kanji_format=True,
+            )
+        )
+        self.assertEqual(actions, ["ne", "ruby_track_only"])
+        actions = ["o", "kanji_track_only"]
+        self.assertTrue(
+            canonical.consume_track_only_metadata(
+                actions, kanji_format=True,
+            )
+        )
+        self.assertEqual(actions, ["o"])
+        actions = ["o", "kanji_track_only"]
+        self.assertFalse(
+            canonical.consume_track_only_metadata(
+                actions, kanji_format=False,
+            )
+        )
+        self.assertEqual(actions, ["o", "kanji_track_only"])
+        for invalid in (
+            ["ruby_track_only", "kanji_track_only"],
+            ["ruby_track_only", "ruby_track_only"],
+            ["ruby_track_only", "ruby_only"],
+            ["kanji_track_only", "ruby_left_boundary"],
+            ["kanji_track_only", "ruby_context_annotation:@x"],
+        ):
+            with self.assertRaises(ValueError):
+                canonical.consume_track_only_metadata(
+                    invalid, kanji_format=False,
+                )
         # Explicitly confirmed word families keep their productive endings, but
         # no generated sibling may fire inside an unrelated longer lexeme.
         self.assertTrue(
@@ -928,6 +1297,35 @@ class GenerationRuleTests(unittest.TestCase):
                 ["fer"], ["i", "o"], explicit_boundary=True,
             )
         )
+
+    def test_kanji_track_row_bypasses_reviewed_coarse_root_filter(self):
+        reviewed = {"promil"}
+        self.assertFalse(canonical.setting_forces_reviewed_coarse_root(
+            [
+                "pro/mil", 69000,
+                ["o", "a", "e", "word_boundary", "kanji_track_only"],
+            ],
+            reviewed,
+        ))
+        self.assertTrue(canonical.setting_forces_reviewed_coarse_root(
+            [
+                "promil/o", 69000,
+                ["ne", "word_boundary", "ruby_only"],
+            ],
+            reviewed,
+        ))
+        self.assertTrue(canonical.setting_forces_reviewed_coarse_root(
+            ["pro/mil", 69000, ["ne"]],
+            reviewed,
+        ))
+        with self.assertRaises(ValueError):
+            canonical.setting_forces_reviewed_coarse_root(
+                [
+                    "pro/mil", 69000,
+                    ["ruby_track_only", "kanji_track_only"],
+                ],
+                reviewed,
+            )
 
     def test_global_rule_tie_break_is_language_independent(self):
         # Equal-priority/equal-length rules cannot contain one another; lexical
@@ -1067,6 +1465,38 @@ class GenerationRuleTests(unittest.TestCase):
             sys.modules.pop("_esperanto_canonical_gen_replacement", None)
 
 
+_PARADIGM_ENDINGS = ("o", "oj", "on", "ojn", "a", "aj", "an", "ajn", "e", "en")
+NOVJORK_PARADIGM_EXPECTED = {}
+for _surface_stem, _target_stem in (
+    ("novjork", "novjork"),
+    ("novjorkan", "novjork/an"),
+):
+    for _ending in _PARADIGM_ENDINGS:
+        _lower_surface = _surface_stem + _ending
+        _target = _target_stem + "/" + _ending
+        for _surface in (
+            _lower_surface,
+            _lower_surface.capitalize(),
+            _lower_surface.upper(),
+        ):
+            NOVJORK_PARADIGM_EXPECTED[_surface] = _target_decomposition(_target)
+if len(NOVJORK_PARADIGM_EXPECTED) != 60:
+    raise AssertionError("Novjork two-stem/three-case paradigm must contain 60 forms")
+BONAER_PARADIGM_EXPECTED = {}
+for _ending in _PARADIGM_ENDINGS:
+    _lower_surface = "bonaer" + _ending
+    for _surface in (
+        _lower_surface,
+        _lower_surface.capitalize(),
+        _lower_surface.upper(),
+    ):
+        BONAER_PARADIGM_EXPECTED[_surface] = _target_decomposition(
+            "bonaer/" + _ending
+        )
+if len(BONAER_PARADIGM_EXPECTED) != 30:
+    raise AssertionError("Bonaer bounded three-case paradigm must contain 30 forms")
+
+
 class DeployedRubyRegressionTests(unittest.TestCase):
     EXPECTED = {
         "onin": "oni/n",
@@ -1155,7 +1585,17 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "bonlingvanojn": "bon/lingv/an/ojn",
         "seulanoj": "seul/an/oj",
         "porto-rikanoj": "porto-rik/an/oj",
-        "novjorko": "nov/jork/o",
+        "bonaero": "bonaer/o",
+        "Bonaero": "bonaer/o",
+        "BONAERO": "bonaer/o",
+        "novjorko": "novjork/o",
+        "Novjorko": "novjork/o",
+        "NOVJORKO": "novjork/o",
+        "Novjorkon": "novjork/on",
+        "novjorkaj": "novjork/aj",
+        "novjorkan": "novjork/an",
+        "Tomisto": "tomist/o",
+        "natria klorido": "natri/a/klor/id/o",
         # Consecutive bare inflection letters are one observable literal run in
         # rendered HTML.  Their conceptual splits are asserted below at HTML
         # fragment level (there must be no ruby boundary between the letters).
@@ -1297,6 +1737,33 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "Sirio": "siri/o",
         "Oceania": "oceani/a",
         "radiofonio": "radiofoni/o",
+        "resumi": "resum/i",
+        "hokkajdon": "hokkajdo/n",
+        "Hokkajdon": "hokkajdo/n",
+        "HOKKAJDON": "hokkajdo/n",
+        "promilo": "promil/o",
+        # The formal 62,313-row audit found these 13 pre-existing residuals:
+        # 11 exact Ruby-track corrections plus two reviewed coarse displays.
+        # No root is made finer merely to shorten a ruby label.
+        "Argolando": "arg/o/land/o",
+        "Eolia": "eol/ia",
+        "Eoliano": "eol/i/an/o",
+        "Eolio": "eol/io",
+        "Frigio": "frig/io",
+        "Ionia": "ioni/a",
+        "Ligurio": "ligur/io",
+        "Ohiorivero": "ohi/o/river/o",
+        "Retio": "ret/io",
+        "Umbrio": "umbr/io",
+        "alternanco": "alternanc/o",
+        "psikokirurgio": "psik/o/kirurg/io",
+        "tienvojaĝo": "tie/n/vojaĝ/o",
+        # Approved coarse/fake-decomposition neighbours must retain their
+        # own exact rules despite the capitalized Ionia/Ligurio additions.
+        "Ionia Maro": "ioni/a/mar/o",
+        "Ionio": "ioni/o",
+        "ioniano": "ioni/an/o",
+        "ligurio": "liguri/o",
         # Case-sensitive proper names must coexist with their lowercase
         # grammatical/lexical homographs.
         "sin": "si/n",
@@ -1322,6 +1789,8 @@ class DeployedRubyRegressionTests(unittest.TestCase):
             row["surface"]: _manifest_decomposition(row)
             for row in corpus_data.REVIEWED_EXACT_MANIFEST["exact_surfaces"]
         },
+        **NOVJORK_PARADIGM_EXPECTED,
+        **BONAER_PARADIGM_EXPECTED,
     }
 
     LOWERCASE_HOMOGRAPHS = ("SAT", "UN", "KS", "PS", "TEJO", "PET", "Maria")
@@ -1346,6 +1815,14 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "Kaŭno": ("Kaŭn",),
         "Bikini-Atolo": ("Bikini", "Atol"),
         "BUENOS-AIRESO": ("BUENOS-AIRES",),
+        "Bonaero": ("Bonaer",),
+        "BONAERO": ("BONAER",),
+        "Novjorko": ("Novjork",),
+        "Novjorkon": ("Novjork",),
+        "novjorkaj": ("novjork",),
+        "novjorkan": ("novjork",),
+        "Tomisto": ("Tomist",),
+        "natria klorido": ("natri", "klor", "id"),
         "kriptografio": ("kriptografi",),
         "Moravio": ("Moravi",),
         "golfoflu": ("golf", "flu"),
@@ -1453,6 +1930,10 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "Sirio": ("Siri",),
         "Oceania": ("Oceani",),
         "radiofonio": ("radiofoni",),
+        "hokkajdon": ("hokkajdo",),
+        "Hokkajdon": ("Hokkajdo",),
+        "HOKKAJDON": ("HOKKAJDO",),
+        "promilo": ("promil",),
     }
 
     def test_all_language_apps(self):
@@ -1462,9 +1943,155 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 data_dir = app_dir / "app_data"
                 module = _runtime_module(app_dir, language)
                 payload = json.loads((data_dir / "置換リスト_ルビ.json").read_text(encoding="utf-8"))
+                settings = json.loads(
+                    (data_dir / "分解設定.json").read_text(encoding="utf-8")
+                )
+                ruby_left_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and "ruby_left_boundary" in row[2]
+                ]
+                self.assertEqual(
+                    {row[0] for row in ruby_left_rows},
+                    {"Bonaer", "BONAER", "novjork"},
+                    f"{language} productive Ruby-left scope",
+                )
+                self.assertEqual(
+                    {row[0]: set(row[2]) for row in ruby_left_rows},
+                    {
+                        "Bonaer": {
+                            "ne", "atomic_no_split", "ruby_left_boundary",
+                            "case_sensitive",
+                            "ruby_context_annotation:@atomic-family:Bonaer",
+                        },
+                        "BONAER": {
+                            "ne", "atomic_no_split", "ruby_left_boundary",
+                            "case_sensitive",
+                            "ruby_context_annotation:@atomic-family:BONAER",
+                        },
+                        "novjork": {
+                            "ne", "atomic_no_split", "ruby_left_boundary",
+                        },
+                    },
+                )
+                compositional_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and row[0] == "bon/aer" and set(row[2]) == {"ne"}
+                ]
+                self.assertEqual(len(compositional_rows), 1, language)
+                bonaer_morph_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and row[0] == "bonaer"
+                    and "word_boundary" in row[2]
+                    and "ruby_context_annotation:@atomic-family:bonaer" in row[2]
+                    and "ruby_track_only" not in row[2]
+                    and "kanji_track_only" not in row[2]
+                ]
+                self.assertEqual(len(bonaer_morph_rows), 1, language)
+                self.assertTrue(all(
+                    row[1] > compositional_rows[0][1]
+                    for row in ruby_left_rows if row[0].casefold() == "bonaer"
+                ))
+                novjork_morph_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and row[0] == "novjork"
+                    and "word_boundary" in row[2]
+                    and "ruby_track_only" not in row[2]
+                    and "kanji_track_only" not in row[2]
+                    and any(ending in row[2] for ending in _PARADIGM_ENDINGS)
+                ]
+                self.assertEqual(len(novjork_morph_rows), 1, language)
+                novjorkan_morph_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and row[0] == "novjork/an"
+                    and "word_boundary" in row[2]
+                    and "ruby_track_only" in row[2]
+                    and any(ending in row[2] for ending in _PARADIGM_ENDINGS)
+                ]
+                self.assertEqual(len(novjorkan_morph_rows), 1, language)
+                self.assertFalse(any(
+                    "ruby_left_boundary" in row[2]
+                    and "word_boundary" in row[2]
+                    for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                ))
+                ruby_only_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and "ruby_only" in row[2]
+                ]
+                self.assertEqual(len(ruby_only_rows), 1, language)
+                self.assertEqual(ruby_only_rows[0][0], "promil/o")
+                ruby_track_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and "ruby_track_only" in row[2]
+                ]
+                strict_payload = json.loads(
+                    (HERE / "_strict_gold_reference_fixes.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                strict_ruby_track = {
+                    entry["target"]: entry
+                    for entry in strict_payload["entries"]
+                    if entry.get("ruby_track_only")
+                }
+                self.assertEqual(
+                    {row[0] for row in ruby_track_rows},
+                    {"novjork/an", *strict_ruby_track},
+                )
+                for row in ruby_track_rows:
+                    if row[0] == "novjork/an":
+                        self.assertIn("word_boundary", row[2])
+                        self.assertTrue(any(
+                            ending in row[2] for ending in _PARADIGM_ENDINGS
+                        ))
+                        continue
+                    entry = strict_ruby_track[row[0]]
+                    self.assertEqual(
+                        set(row[2]),
+                        {
+                            "ne", "word_boundary", "case_sensitive",
+                            f"typed_roles:{entry['typed_roles']}",
+                            "ruby_track_only",
+                        },
+                    )
+                kanji_track_rows = [
+                    row for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                    and "kanji_track_only" in row[2]
+                ]
+                self.assertEqual(len(kanji_track_rows), 1, language)
+                self.assertEqual(kanji_track_rows[0][0], "pro/mil")
+                self.assertIn("word_boundary", kanji_track_rows[0][2])
+                self.assertTrue(
+                    set(_PARADIGM_ENDINGS).issubset(kanji_track_rows[0][2])
+                )
+                self.assertFalse(any(
+                    {"ruby_track_only", "kanji_track_only"}.issubset(row[2])
+                    or (
+                        "ruby_only" in row[2]
+                        and (
+                            "ruby_track_only" in row[2]
+                            or "kanji_track_only" in row[2]
+                        )
+                    )
+                    for row in settings
+                    if isinstance(row, list) and len(row) == 3
+                ))
                 global_rules = next(value for key, value in payload.items() if "replacements_final_list" in key)
                 local_rules = next(value for key, value in payload.items() if "localized_string" in key)
                 two_char_rules = next(value for key, value in payload.items() if "2char" in key)
+                replacement_helper = canonical.load_app_replacement_helper(app_dir)
+                char_widths = json.loads(
+                    (data_dir / "char_widths.json").read_text(encoding="utf-8")
+                )
+                width_cache = {}
                 for label, rules in (
                     ("global", global_rules),
                     ("local", local_rules),
@@ -1498,6 +2125,33 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         f"{language} {label} invalid rt markup="
                         f"{len(invalid_rt_markup)}",
                     )
+                    width_mismatches = []
+                    for old, new, _placeholder in rules:
+                        for match in FINAL_RUBY_RE.finditer(new):
+                            rb = match.group(1)
+                            rt = re.sub(
+                                r"<br\s*/?>", "", match.group(2),
+                                flags=re.IGNORECASE,
+                            )
+                            cache_key = (rb, rt)
+                            expected_ruby = width_cache.get(cache_key)
+                            if expected_ruby is None:
+                                expected_ruby = replacement_helper.output_format(
+                                    rb,
+                                    rt,
+                                    "HTML格式_Ruby文字_大小调整",
+                                    char_widths,
+                                )
+                                width_cache[cache_key] = expected_ruby
+                            if match.group(0) != expected_ruby:
+                                width_mismatches.append(
+                                    (old, match.group(0), expected_ruby)
+                                )
+                    self.assertEqual(
+                        width_mismatches[:20], [],
+                        f"{language} {label} final rt width mismatches="
+                        f"{len(width_mismatches)}",
+                    )
                 visible_mismatches = [
                     (rule[0], multilingual_structure.rendered_visible(rule[1]))
                     for rule in global_rules
@@ -1530,6 +2184,24 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     f"{language} duplicate global placeholder cores",
                 )
                 old_rules = {rule[0] for rule in global_rules}
+                self.assertNotIn("novjork", old_rules)
+                self.assertTrue({
+                    " novjork", " Novjork", " NOVJORK",
+                    " Bonaer", " BONAER",
+                }.issubset(old_rules))
+                # The learner-authoritative E_stem bon/aer rule stays naked
+                # and reusable in lowercase/token-internal compositions.
+                self.assertIn("bonaer", old_rules)
+                self.assertNotIn(" bonaer", old_rules)
+                rule_order = {rule[0]: index for index, rule in enumerate(global_rules)}
+                for surface in ("Bonaer", "BONAER"):
+                    self.assertIn(surface, rule_order)
+                    self.assertLess(
+                        rule_order[f" {surface}"], rule_order[surface],
+                        (language, surface, "token-left atomic must win"),
+                    )
+                self.assertIn("novjorki", rule_order)
+                self.assertLess(rule_order["novjorki"], rule_order[" novjork"])
                 sentence_punctuation_inside_rb = [
                     rule[0] for rule in global_rules
                     if re.search(r'<ruby>[^<]*[!?]<rt', rule[1], re.IGNORECASE)
@@ -1583,6 +2255,201 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 actual = {word: _decomposition(line) for word, line in zip(words, lines)}
                 self.assertEqual(actual, self.EXPECTED)
                 rendered_by_word = dict(zip(words, lines))
+
+                # Reviewed proper roots are productive only at a token's left
+                # edge. Novjork allows all three cases; Bonaer deliberately
+                # excludes arbitrary lowercase derivatives because bon+aer is
+                # a genuine compositional reading.
+                family_probes = (
+                    "novjorkdevena", "Novjorkdevena", "NOVJORKDEVENA",
+                    "Bonaerdevena", "BONAERDEVENA",
+                    "bonaerdevena", "xnovjorkdevena", "supernovjorko",
+                    "malbonaero", "trebonaero", "xBonaerdevena",
+                    "novjorki", "novjorkio",
+                    "Novjorkdevena!",
+                )
+                family_html = module.orchestrate_comprehensive_esperanto_text_replacement(
+                    "\n".join(family_probes),
+                    skip, local_rules, local_capture, global_rules, two_char_rules,
+                    "HTML格式_Ruby文字_大小调整",
+                ).splitlines()
+                self.assertEqual(len(family_html), len(family_probes))
+                family_rendered = dict(zip(family_probes, family_html))
+                flat = lambda value: re.sub(
+                    r"<br\s*/?>", "", value, flags=re.IGNORECASE,
+                )
+                novjork_marker = corpus_data.ANNOTATIONS[language.lower()]["novjork"]
+                bonaer_marker = corpus_data.ANNOTATIONS[language.lower()]["bonaer"]
+                for surface, root in (
+                    ("novjorkdevena", "novjork"),
+                    ("Novjorkdevena", "Novjork"),
+                    ("NOVJORKDEVENA", "NOVJORK"),
+                ):
+                    signature = multilingual_structure.structural_signature(
+                        family_rendered[surface]
+                    )
+                    self.assertIn(f"R:{root}", signature, (language, surface))
+                    self.assertIn(novjork_marker, flat(family_rendered[surface]))
+                for surface, root in (
+                    ("Bonaerdevena", "Bonaer"),
+                    ("BONAERDEVENA", "BONAER"),
+                ):
+                    signature = multilingual_structure.structural_signature(
+                        family_rendered[surface]
+                    )
+                    self.assertIn(f"R:{root}", signature, (language, surface))
+                    self.assertIn(bonaer_marker, flat(family_rendered[surface]))
+                for surface in (
+                    "xnovjorkdevena", "supernovjorko",
+                    "malbonaero", "trebonaero", "xBonaerdevena",
+                    "bonaerdevena",
+                ):
+                    normalized = flat(family_rendered[surface])
+                    self.assertNotIn(novjork_marker, normalized, (language, surface))
+                    self.assertNotIn(bonaer_marker, normalized, (language, surface))
+                    self.assertFalse(any(
+                        span.casefold() in {"r:novjork", "r:bonaer"}
+                        for span in multilingual_structure.structural_signature(
+                            family_rendered[surface]
+                        )
+                    ))
+                lower_bonaer_signature = tuple(
+                    span.casefold() for span in multilingual_structure.structural_signature(
+                        family_rendered["bonaerdevena"]
+                    )
+                )
+                self.assertIn("r:bon", lower_bonaer_signature)
+                self.assertIn("r:aer", lower_bonaer_signature)
+                self.assertNotIn("r:bonaer", lower_bonaer_signature)
+                for surface in (
+                    "malbonaero", "trebonaero", "xBonaerdevena",
+                ):
+                    signature = tuple(
+                        span.casefold() for span in
+                        multilingual_structure.structural_signature(
+                            family_rendered[surface]
+                        )
+                    )
+                    self.assertIn("r:bon", signature, (language, surface))
+                    self.assertIn("r:aer", signature, (language, surface))
+                    self.assertNotIn("r:bonaer", signature, (language, surface))
+                for surface in ("novjorki", "novjorkio"):
+                    normalized = flat(family_rendered[surface])
+                    self.assertNotIn(novjork_marker, normalized)
+                    self.assertIn(
+                        "r:novjorki",
+                        tuple(
+                            span.casefold() for span in
+                            multilingual_structure.structural_signature(
+                                family_rendered[surface]
+                            )
+                        ),
+                    )
+                punctuated = family_rendered["Novjorkdevena!"]
+                self.assertIn("R:Novjork", multilingual_structure.structural_signature(punctuated))
+                self.assertRegex(punctuated, r"!\s*(?:<br>)?\s*$")
+
+                protected, local_family = (
+                    module.orchestrate_comprehensive_esperanto_text_replacement(
+                        "%novjorkdevena%\n@novjorkdevena@",
+                        skip, local_rules, local_capture, global_rules,
+                        two_char_rules, "HTML格式_Ruby文字_大小调整",
+                    ).splitlines()
+                )
+                self.assertEqual(
+                    re.sub(r"<br\s*/?>", "", protected, flags=re.IGNORECASE).strip(),
+                    "novjorkdevena",
+                )
+                self.assertNotIn("<ruby", protected.casefold())
+                self.assertIn(
+                    "R:novjork",
+                    multilingual_structure.structural_signature(local_family),
+                )
+
+                reviewed_local = json.loads(
+                    (HERE / "localized_global_exact_reviewed.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                local_specs = []
+                for spec in reviewed_local["targets"]:
+                    for surface in (
+                        spec["root"],
+                        spec["root"].capitalize(),
+                        spec["root"].upper(),
+                    ):
+                        local_specs.append((surface, spec["signature_casefold"]))
+                reviewed_rendered = module.orchestrate_comprehensive_esperanto_text_replacement(
+                    "\n".join(f"@{surface}@" for surface, _signature in local_specs),
+                    skip,
+                    local_rules,
+                    local_capture,
+                    global_rules,
+                    two_char_rules,
+                    "HTML格式_Ruby文字_大小调整",
+                ).splitlines()
+                self.assertEqual(len(reviewed_rendered), len(local_specs))
+                reviewed_global = module.orchestrate_comprehensive_esperanto_text_replacement(
+                    "\n".join(surface for surface, _signature in local_specs),
+                    skip,
+                    local_rules,
+                    local_capture,
+                    global_rules,
+                    two_char_rules,
+                    "HTML格式_Ruby文字_大小调整",
+                ).splitlines()
+                self.assertEqual(
+                    reviewed_rendered,
+                    reviewed_global,
+                    f"{language} reviewed @local must reuse exact global HTML",
+                )
+                for (surface, expected_signature), local_html in zip(
+                    local_specs, reviewed_rendered,
+                ):
+                    actual_signature = tuple(
+                        part.casefold()
+                        for part in multilingual_structure.structural_signature(
+                            local_html
+                        )[1:]
+                    )
+                    self.assertEqual(
+                        actual_signature,
+                        tuple(expected_signature),
+                        f"{language} reviewed @local {surface!r}",
+                    )
+                hokkaido_marker = {
+                    "JA": "[地名]北海道",
+                    "ZH": "[地名]北海道",
+                    "KO": "[지명]홋카이도",
+                }[language]
+                for surface in ("hokkajdon", "Hokkajdon", "HOKKAJDON"):
+                    index = next(
+                        i for i, (candidate, _signature) in enumerate(local_specs)
+                        if candidate == surface
+                    )
+                    self.assertIn(
+                        hokkaido_marker,
+                        re.sub(
+                            r"<br\s*/?>", "", reviewed_rendered[index],
+                            flags=re.IGNORECASE,
+                        ),
+                        f"{language} @local {surface!r} localized gloss",
+                    )
+
+                # The guide intentionally gives @kaj@ a broader local gloss;
+                # reviewed exact reuse must not flatten it to the global word.
+                kaj_local, kaj_global = (
+                    module.orchestrate_comprehensive_esperanto_text_replacement(
+                        "@kaj@\nkaj",
+                        skip,
+                        local_rules,
+                        local_capture,
+                        global_rules,
+                        two_char_rules,
+                        "HTML格式_Ruby文字_大小调整",
+                    ).splitlines()
+                )
+                self.assertNotEqual(kaj_local, kaj_global, language)
                 for word, components in self.REQUIRED_RUBY_COMPONENTS.items():
                     signature = multilingual_structure.structural_signature(rendered_by_word[word])
                     for component in components:

@@ -8,6 +8,7 @@
 generate(...) を呼ぶと combined_data(dict) を返す(JSONには書かない)。
 呼び出し側で必要なら書き出す。
 """
+import hashlib
 import importlib
 import re, json, sys, os, unicodedata
 from io import StringIO
@@ -88,6 +89,9 @@ _LITERAL_SETTING_PUNCTUATION = frozenset("-'\"’‘“”.,!?;:()[]")
 _FINITE_VERB_ENDINGS = frozenset({"as", "is", "os", "us"})
 _TYPED_ROLES_PREFIX = "typed_roles:"
 _CONTEXT_ANNOTATION_PREFIX = "context_annotation:"
+_RUBY_CONTEXT_ANNOTATION_PREFIX = "ruby_context_annotation:"
+_RUBY_TRACK_ONLY_ACTION = "ruby_track_only"
+_KANJI_TRACK_ONLY_ACTION = "kanji_track_only"
 _AUTHORED_BR_RE = re.compile(r"<br\s*/?>", re.IGNORECASE)
 _RT_CONTENT_RE = re.compile(
     r"(<rt\b[^>]*>).*?(</rt>)", re.IGNORECASE | re.DOTALL,
@@ -183,6 +187,100 @@ def extract_context_annotation(actions):
     return key
 
 
+def extract_ruby_context_annotation(actions):
+    """Remove and return a Ruby-only reserved word_anno context key."""
+    markers = [
+        a for a in actions
+        if isinstance(a, str) and a.startswith(_RUBY_CONTEXT_ANNOTATION_PREFIX)
+    ]
+    if not markers:
+        return None
+    if len(markers) != 1:
+        raise ValueError(
+            "setting must contain at most one ruby_context_annotation marker"
+        )
+    marker = markers[0]
+    key = marker[len(_RUBY_CONTEXT_ANNOTATION_PREFIX):]
+    if not key:
+        raise ValueError("ruby_context_annotation key must not be empty")
+    actions.remove(marker)
+    return key
+
+
+def consume_track_only_metadata(actions, *, kanji_format):
+    """Validate track metadata and say whether this setting applies.
+
+    Opposite-track rows are skipped without mutation. Same-track rows consume
+    their marker before ordinary suffix/action validation. ``ruby_only`` keeps
+    its historical exact-typed meaning and must not be mixed with the broader
+    track flags.
+    """
+    ruby_count = actions.count(_RUBY_TRACK_ONLY_ACTION)
+    kanji_count = actions.count(_KANJI_TRACK_ONLY_ACTION)
+    if ruby_count > 1 or kanji_count > 1:
+        raise ValueError("track-only metadata must not be duplicated")
+    if ruby_count and kanji_count:
+        raise ValueError(
+            "ruby_track_only and kanji_track_only are mutually exclusive"
+        )
+    if (ruby_count or kanji_count) and "ruby_only" in actions:
+        raise ValueError(
+            "legacy ruby_only cannot be combined with track-only metadata"
+        )
+    if kanji_count and (
+        "ruby_left_boundary" in actions
+        or any(
+            isinstance(action, str)
+            and action.startswith(_RUBY_CONTEXT_ANNOTATION_PREFIX)
+            for action in actions
+        )
+    ):
+        raise ValueError(
+            "kanji_track_only cannot carry Ruby-only boundary/context metadata"
+        )
+    if ruby_count:
+        if kanji_format:
+            return False
+        actions.remove(_RUBY_TRACK_ONLY_ACTION)
+    elif kanji_count:
+        if not kanji_format:
+            return False
+        actions.remove(_KANJI_TRACK_ONLY_ACTION)
+    return True
+
+
+def setting_forces_reviewed_coarse_root(entry, decompose_roots):
+    """Return whether a shared/Ruby setting must be removed for Kanji.
+
+    An explicit ``kanji_track_only`` row is the reviewed deep replacement and
+    therefore bypasses the historical coarse-root filter. Legacy ``ruby_only``
+    and unscoped coarse rows retain the previous removal behaviour.
+    """
+    if not isinstance(entry, list) or len(entry) != 3:
+        return False
+    actions = entry[2] if isinstance(entry[2], list) else []
+    if (
+        _RUBY_TRACK_ONLY_ACTION in actions
+        and _KANJI_TRACK_ONLY_ACTION in actions
+    ):
+        raise ValueError(
+            "ruby_track_only and kanji_track_only are mutually exclusive"
+        )
+    if _KANJI_TRACK_ONLY_ACTION in actions:
+        return False
+    pieces = [piece for piece in str(entry[0]).split('/') if piece]
+    identities = {''.join(pieces)}
+    if pieces and pieces[-1].casefold() in {
+        'o', 'a', 'e', 'i', 'u', 'n', 'j', 'oj', 'on', 'aj', 'an',
+        'en', 'as', 'is', 'os', 'us',
+    }:
+        identities.add(''.join(pieces[:-1]))
+    folded_roots = {str(root).casefold() for root in decompose_roots}
+    return bool(
+        {identity.casefold() for identity in identities} & folded_roots
+    )
+
+
 def setting_effective_part_total(parts, actions):
     """Include an appended suffix slot when classifying a stem-final piece."""
     return len(parts) + (1 if any(action != "ne" for action in actions) else 0)
@@ -210,6 +308,103 @@ def lookup_word_anno_exact_first(word_anno, word_anno_nosl, key):
     if exact is not None:
         return exact
     return word_anno_nosl.get(key.replace('/', '')) if word_anno_nosl is not None else None
+
+
+def word_anno_boundary_signature(key, pairs):
+    """Return the language-independent piece sequence for one annotation key.
+
+    Glosses are deliberately ignored: JA/ZH/KO may translate the same piece
+    differently, but a present key must describe the same Esperanto boundary.
+    Slash characters inside legacy piece fields are notation, not a second
+    source of authority, so the deployed surface spelling is used here.
+    """
+    if not isinstance(pairs, list) or not pairs:
+        raise ValueError(f"word_anno {key!r} must contain at least one pair")
+    pieces = []
+    for index, pair in enumerate(pairs):
+        if not isinstance(pair, list) or len(pair) != 2:
+            raise ValueError(
+                f"word_anno {key!r}[{index}] is not a [piece, gloss] pair"
+            )
+        piece = pair[0]
+        if not isinstance(piece, str) or not piece.replace('/', ''):
+            raise ValueError(
+                f"word_anno {key!r}[{index}] has an empty/non-string piece"
+            )
+        pieces.append(piece.replace('/', ''))
+    return tuple(pieces)
+
+
+def validate_multilingual_word_anno_boundaries(language_maps, manifest):
+    """Validate sparse multilingual gloss maps against one pinned boundary scope.
+
+    A language may intentionally lack a gloss key only when the manifest lists
+    that exact absence.  Present entries must agree on Esperanto pieces, while
+    their gloss values remain language-local and are never copied or hashed.
+    Any key-set or boundary drift therefore stops regeneration before writes.
+    """
+    if not isinstance(manifest, dict) or manifest.get("schema_version") != 1:
+        raise ValueError("unsupported word_anno boundary manifest schema")
+    languages = tuple(manifest.get("languages", ()))
+    if not languages or set(language_maps) != set(languages):
+        raise ValueError(
+            "word_anno languages do not match boundary manifest: "
+            f"maps={sorted(language_maps)!r}, manifest={list(languages)!r}"
+        )
+    expected_counts = manifest.get("expected_key_counts", {})
+    expected_missing = manifest.get("expected_missing_by_language", {})
+    if set(expected_counts) != set(languages) or set(expected_missing) != set(languages):
+        raise ValueError("word_anno boundary manifest language fields are incomplete")
+
+    key_union = set().union(*(set(language_maps[language]) for language in languages))
+    for language in languages:
+        mapping = language_maps[language]
+        if not isinstance(mapping, dict):
+            raise ValueError(f"word_anno {language!r} is not a mapping")
+        if len(mapping) != expected_counts[language]:
+            raise ValueError(
+                f"word_anno {language!r} key count drift: "
+                f"expected {expected_counts[language]}, got {len(mapping)}"
+            )
+        actual_missing = sorted(key_union - set(mapping))
+        if actual_missing != expected_missing[language]:
+            raise ValueError(
+                f"word_anno {language!r} key-set drift: "
+                f"expected_missing={expected_missing[language]!r}, "
+                f"actual_missing={actual_missing!r}"
+            )
+
+    authority = {}
+    for key in sorted(key_union):
+        observed = {
+            language: word_anno_boundary_signature(key, language_maps[language][key])
+            for language in languages
+            if key in language_maps[language]
+        }
+        signatures = set(observed.values())
+        if len(signatures) != 1:
+            raise ValueError(
+                f"word_anno multilingual boundary conflict for {key!r}: {observed!r}"
+            )
+        authority[key] = next(iter(signatures))
+
+    serialized = json.dumps(
+        [[key, list(authority[key])] for key in sorted(authority)],
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    digest = hashlib.sha256(serialized).hexdigest().upper()
+    if len(authority) != manifest.get("authority_keys"):
+        raise ValueError(
+            "word_anno boundary authority count drift: "
+            f"expected {manifest.get('authority_keys')}, got {len(authority)}"
+        )
+    if digest != manifest.get("authority_sha256"):
+        raise ValueError(
+            "word_anno boundary authority SHA-256 drift: "
+            f"expected {manifest.get('authority_sha256')}, got {digest}"
+        )
+    return authority
 
 
 def lookup_typed_ruby_annotation(word_anno, surface, index, piece):
@@ -575,8 +770,15 @@ def filter_settings_for_correction_removals(
                 semantic_actions = [
                     action for action in actions
                     if action not in {"word_boundary", "case_sensitive"}
+                    and action != "ruby_left_boundary"
+                    and action != "ruby_only"
+                    and action != _RUBY_TRACK_ONLY_ACTION
+                    and action != _KANJI_TRACK_ONLY_ACTION
                     and not str(action).startswith(_TYPED_ROLES_PREFIX)
                     and not str(action).startswith(_CONTEXT_ANNOTATION_PREFIX)
+                    and not str(action).startswith(
+                        _RUBY_CONTEXT_ANNOTATION_PREFIX
+                    )
                 ]
                 removed += 1
                 if semantic_actions:
@@ -1063,12 +1265,46 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
         if len(i) == 3:
             try:
                 _explicit_word_boundary = "word_boundary" in i[2]
+                _ruby_left_boundary = "ruby_left_boundary" in i[2]
+                _ruby_only = "ruby_only" in i[2]
+                _is_kanji_format = '汉字替换' in format_type
+                if not consume_track_only_metadata(
+                    i[2], kanji_format=_is_kanji_format,
+                ):
+                    continue
+                _has_ruby_context = any(
+                    isinstance(action, str)
+                    and action.startswith(_RUBY_CONTEXT_ANNOTATION_PREFIX)
+                    for action in i[2]
+                )
+                if _ruby_only and _is_kanji_format:
+                    continue
+                if _has_ruby_context and _is_kanji_format:
+                    # The separate Kanji authority keeps its deeper pieces.
+                    # Skipping the whole Ruby-context row lets the ordinary
+                    # E_stem/word_kanji rule remain reachable and avoids an
+                    # atomic proper-name override in the Kanji track.
+                    continue
+                if _ruby_left_boundary and _is_kanji_format:
+                    # Annotation-only root fallback. The Kanji track retains
+                    # the learner's deeper pieces and its own authority.
+                    continue
                 _boundary_noop_guard = "boundary_noop_guard" in i[2]
                 _case_sensitive = "case_sensitive" in i[2]
                 _atomic_no_split = "atomic_no_split" in i[2]
                 _word_boundary = _explicit_word_boundary
+                if _ruby_left_boundary and (
+                    _explicit_word_boundary or _boundary_noop_guard
+                ):
+                    raise ValueError(
+                        "ruby_left_boundary conflicts with whole-word guards"
+                    )
                 if _explicit_word_boundary:
                     i[2].remove("word_boundary")
+                if _ruby_left_boundary:
+                    i[2].remove("ruby_left_boundary")
+                if _ruby_only:
+                    i[2].remove("ruby_only")
                 if _boundary_noop_guard:
                     i[2].remove("boundary_noop_guard")
                 if _case_sensitive:
@@ -1079,6 +1315,36 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                 _setting_parts = [q for q in i[0].split('/') if q]
                 _typed_roles = extract_typed_roles(i[2], len(_setting_parts))
                 _context_annotation_key = extract_context_annotation(i[2])
+                _ruby_context_annotation_key = extract_ruby_context_annotation(
+                    i[2]
+                )
+                if (
+                    _context_annotation_key is not None
+                    and _ruby_context_annotation_key is not None
+                ):
+                    raise ValueError(
+                        "setting cannot combine context_annotation and "
+                        "ruby_context_annotation"
+                    )
+                if (
+                    _ruby_context_annotation_key is not None
+                    and not _is_kanji_format
+                ):
+                    _context_annotation_key = _ruby_context_annotation_key
+                if _ruby_only and (
+                    "ne" not in i[2]
+                    or _typed_roles is None
+                ):
+                    raise ValueError("ruby_only requires an exact typed setting")
+                if _ruby_left_boundary and (
+                    not _setting_parts
+                    or "ne" not in i[2]
+                    or set(i[2]) != {"ne"}
+                    or (_atomic_no_split != (len(_setting_parts) == 1))
+                ):
+                    raise ValueError(
+                        "ruby_left_boundary requires an exact ne-only prefix setting"
+                    )
                 if i[1] == "dflt":
                     replacement_priority_by_length = len(esperanto_Word_before_replacement) * 10000
                 elif i[1] in allowed_values:
@@ -1400,6 +1666,23 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                         pre_replacements_dict_3[_bounded_old] = [_bounded_new, _bounded_priority]
                         if _case_sensitive:
                             _case_sensitive_rule_keys.add(_bounded_old)
+                    elif _ruby_left_boundary:
+                        # Proper roots such as novjork must stay atomic in
+                        # unseen derivatives (Novjorkdevena), but a naked rule
+                        # would also consume xnovjork... inside another token.
+                        # Keep precisely the token-left edge; the runtime pads
+                        # text and preserves this one leading space through its
+                        # placeholder, just as the elided article rule does.
+                        pre_replacements_dict_3.pop(
+                            esperanto_Word_before_replacement, None,
+                        )
+                        _left_old = ' ' + esperanto_Word_before_replacement
+                        _left_new = ' ' + Replaced_String
+                        pre_replacements_dict_3[_left_old] = [
+                            _left_new, replacement_priority_by_length,
+                        ]
+                        if _case_sensitive:
+                            _case_sensitive_rule_keys.add(_left_old)
                     else:
                         pre_replacements_dict_3[esperanto_Word_before_replacement] = [Replaced_String, replacement_priority_by_length]
                         if _case_sensitive:
@@ -1423,7 +1706,7 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                         else:
                             j3 = safe_replace(jj, temporary_replacements_list_final).replace("</rt></ruby>", "%%%").replace('/', '').replace("%%%", "</rt></ruby>")
                         _register_custom_suffix(j2, j3, replacement_priority_by_length + len(j2) * 10000)
-                elif not _word_boundary:
+                elif not _word_boundary and not _ruby_left_boundary:
                     # boundary-only 固定語は上で登録した空白付きキーだけを保つ。
                     # ``ne`` を除いた後の共通 fallback で裸キーを復活させない。
                     pre_replacements_dict_3[esperanto_Word_before_replacement] = [Replaced_String, replacement_priority_by_length]
@@ -1546,6 +1829,17 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                 return output_format(g2, _BR_ANY.sub('', g1), format_type, char_widths_dict)
             return output_format(g1, g2, format_type, char_widths_dict)
         return _RUBYFIX.sub(_rf, h)
+
+    # Reflow every finalized ruby, not only the synthetic case variants below.
+    # Contextual word_anno/custom-setting overlays can replace an rt after its
+    # atomic rule was first formatted; carrying that atom's old class/<br>
+    # layout into the final rule is incorrect (and was observable in ZH/KO).
+    # At this point rb and the localized visible rt are both final, so this is
+    # the single authority for the deployed width class and automatic breaks.
+    pre_replacements_list_3 = [
+        [old, _resize_caps(new), place_holder]
+        for old, new, place_holder in pre_replacements_list_3
+    ]
 
     pre_replacements_list_4 = []
     def _case_variant_is_reserved(old):

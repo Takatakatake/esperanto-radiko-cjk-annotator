@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "decompose_roots": 53,
+  "decompose_roots_sha256": "53885056F92C162E9ADED20844BBBADF818FF530B0A1BCCCE7AF3E462488458C",
+  "evaluable_word_kanji": 42,
+  "evaluable_word_kanji_sha256": "D21412540482C680175CB5B4241773FC8DF5CB1250A8D60B9AC03A96DC70A044",
+  "expected_missing_word_kanji": [
+    "aŭstri",
+    "butano",
+    "esperant",
+    "etno",
+    "gerda",
+    "jugoslavi",
+    "peĉjo",
+    "romi",
+    "rumani",
+    "sovetuni",
+    "video"
+  ],
+  "fallback_reviewed_count": 11,
+  "fallback_reviewed_sha256": "8CED814FE418E5A88561C3186FC9C0E5A1270C63746458E41D2337C1E042E832",
+  "fallback_reviewed": [
+    {
+      "root": "aŭstri",
+      "surface": "aŭstrio",
+      "signature": [["L", "aŭstrio"]]
+    },
+    {
+      "root": "butano",
+      "surface": "butano",
+      "signature": [["L", "butano"]]
+    },
+    {
+      "root": "esperant",
+      "surface": "esperant",
+      "signature": [["R", "esper", "望"], ["R", "ant", "在"]]
+    },
+    {
+      "root": "etno",
+      "surface": "etno",
+      "signature": [["R", "etn", "族ᴱ"], ["L", "o"]]
+    },
+    {
+      "root": "gerda",
+      "surface": "gerda",
+      "signature": [["L", "gerda"]]
+    },
+    {
+      "root": "jugoslavi",
+      "surface": "jugoslavi",
+      "signature": [["L", "jugoslavi"]]
+    },
+    {
+      "root": "peĉjo",
+      "surface": "peĉjo",
+      "signature": [["L", "peĉjo"]]
+    },
+    {
+      "root": "romi",
+      "surface": "romi",
+      "signature": [["L", "romi"]]
+    },
+    {
+      "root": "rumani",
+      "surface": "rumanio",
+      "signature": [["L", "rumanio"]]
+    },
+    {
+      "root": "sovetuni",
+      "surface": "sovetuni",
+      "signature": [["L", "sovet"], ["R", "uni", "联"]]
+    },
+    {
+      "root": "video",
+      "surface": "video",
+      "signature": [["R", "vide", "视ⱽ"], ["L", "o"]]
+    }
+  ],
+  "localized_atomic_policy_sha256": "E68BC5B7819DD3674927BA492545CFEAE11BEBB8FFEEBABC7EC5A14C915B255E",
+  "localized_atomic_policy": {
+    "family_manifest_sha256": "51345622D787FE78F6F6CB86FA0B75C5956F2DDFD3ED67D1679B5F4267426F5D",
+    "learner_sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
+    "probes": [
+      {
+        "family_root": "bonaer",
+        "learner_line": 4042,
+        "surface": "Bonaero",
+        "learner_decomposition": "Bon/aer/o",
+        "kanji_signature": [["R", "Bon", "良"], ["R", "aer", "气"], ["L", "o"]]
+      },
+      {
+        "family_root": "novjork",
+        "learner_line": 27866,
+        "surface": "novjorka",
+        "learner_decomposition": "nov/jork/a",
+        "kanji_signature": [["R", "nov", "新"], ["L", "jorka"]]
+      },
+      {
+        "family_root": "novjork",
+        "learner_line": 27867,
+        "surface": "novjorkano",
+        "learner_decomposition": "nov/jork/an/o",
+        "kanji_signature": [["R", "nov", "新"], ["L", "jork"], ["R", "an", "员ᴬ"], ["L", "o"]]
+      },
+      {
+        "family_root": "novjork",
+        "learner_line": 27869,
+        "surface": "Novjorko",
+        "learner_decomposition": "Nov/jork/o",
+        "kanji_signature": [["R", "Nov", "新"], ["L", "jorko"]]
+      }
+    ],
+    "decision": "Ruby uses the reviewed coarse atomic proper root at a token-left boundary; Kanji keeps the learner's deep pieces. Adjacent unassigned literal pieces may coalesce in deployed HTML, so both the learner decomposition and the observable deployed signature are pinned."
+  },
+  "final_5e_policy_sha256": "C21E7FA515401C1D2EDDF346B9952A1691195A242E65D336BFD8784CE977C067",
+  "final_5e_policy": {
+    "transition_entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
+    "learner_line": 53890,
+    "ruby_decomposition": "promil/o",
+    "kanji_decomposition": "pro/mil/o",
+    "word_kanji_key": "pro/mil",
+    "word_kanji_pairs": [["pro", "因ᴾ"], ["mil", "千"]],
+    "probes": [
+      {"surface": "promilo", "signature": [["R", "pro", "因ᴾ"], ["R", "mil", "千"], ["L", "o"]]},
+      {"surface": "Promilo", "signature": [["R", "Pro", "因ᴾ"], ["R", "mil", "千"], ["L", "o"]]},
+      {"surface": "PROMILO", "signature": [["R", "PRO", "因ᴾ"], ["R", "MIL", "千"], ["L", "O"]]},
+      {"surface": "promila", "signature": [["R", "pro", "因ᴾ"], ["R", "mil", "千"], ["L", "a"]]},
+      {"surface": "promile", "signature": [["R", "pro", "因ᴾ"], ["R", "mil", "千"], ["L", "e"]]},
+      {"surface": "promiloj", "signature": [["R", "pro", "因ᴾ"], ["R", "mil", "千"], ["L", "oj"]]},
+      {"surface": "promilon", "signature": [["R", "pro", "因ᴾ"], ["R", "mil", "千"], ["L", "on"]]}
+    ],
+    "decision": "The final 5E delta is coarse only in annotation Ruby. Kanji removes the Ruby-only promil/o setting and derives pro/mil from the two pinned root assignments; inflection probes prevent mile or another competing root from winning."
+  },
+  "ff33_policy_sha256": "0CB1EF358C9FEB36AD1E6FAFF915FB478735C40CA4C498594A660DADAB8E89B1",
+  "ff33_policy": {
+    "tomisto": {
+      "learner_line": 56273,
+      "learner_decomposition": "Tom/ist/o",
+      "annotation_decomposition": "Tomist/o",
+      "kanji_surface": "Tomisto",
+      "kanji_signature": [["L", "Tomisto"]],
+      "decision": "reviewed_literal_fallback_no_proper_name_kanji_authority",
+      "reason": "No reviewed proper-name Kanji authority exists for Tom; preserve the visible surface literally and synthesize no Kanji assignment."
+    },
+    "natria_klorido": {
+      "learner_line": 26746,
+      "decomposition": "natri/a klor/id/o",
+      "tokens": [
+        {"surface": "natria", "signature": [["R", "natri", "钠"], ["L", "a"]]},
+        {"surface": "klorido", "signature": [["R", "klor", "氯"], ["R", "id", "化ᴵᴰ"], ["L", "o"]]}
+      ]
+    }
+  },
+  "note": "All 53 fake/deep roots are gated in all three deployed Kanji JSONs. Forty-two use pinned word_kanji piece/Kanji pairs, including the final-5E pro/mil overlay; the 11 without an exact per-word entry use an explicit reviewed fallback surface/signature so coverage cannot pass vacuously. Seven promil inflections and the localized Bonaer/Novjork families have separate deployed probes. FF33 Tomisto remains a literal fallback; natria klorido remains a pinned unmarked deep-decomposition probe."
+}

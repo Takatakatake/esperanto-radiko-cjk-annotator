@@ -2,27 +2,26 @@
 """道B: 大JSON一括再生成 (正式ルート)
 
 使い方:  python regenerate_all.py
-  1. 固定コーパスexact manifestが指定repoのclean HEADと一致するか検証
-  2. 汎用規則適用後のreviewed evaluable exact manifestを同様に検証
-  3. コーパス確定固有語注釈をword_anno日中韓へ同期
-  4. 確定リスト(out/confirmed_tier30.json)を分解設定へ適用し、3言語のルビJSONを再生成
-  5. ルビ事後修正(fix_ruby_postregen: 偽の友グロス等)
-  6. 21,443 canonical表記を配置済み日中韓runtimeで全数検査
-  7. 漢字マスター正本との全面再同期(resync_kanji_master: CSV+word_kanji再構築)
-  8. 3言語の漢字JSONを再生成
-  9. 漢字39語パッチ(fix_kanji_2890: 旧安全網)
- 10. 純粋置換版JSONの再導出(derive_pure_kanji)
- 11. 6JSON異常スキャン
- 12. 生成規則+実機回帰テスト
- 13. 日中韓Ruby全域構造一致検査
- 14. .bak掃除(prune_baks: 肥大化防止)
+  1-5. 偽分解reference/transition/app-reviewの固定manifestを検証
+  6-10. corpus exact/reviewed/bare/word_anno境界を検証・同期
+ 11-15. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
+ 16. 漢字マスター正本との全面再同期(CSV+word_kanji再構築)
+ 17. 漢字3言語再生成
+ 18. 漢字38語互換パッチ(fix_kanji_2890: 旧安全網)
+ 19. 漢字の偽分解/深分解を固定authorityに対し3言語全件照合
+ 20. 純粋置換版JSONの再導出
+ 21-25. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
+ 26-27. no-worsening診断と固定62,313行の正式3言語監査
+ 28. .bak掃除(prune_baks: 肥大化防止)
 
 外部マスターが必要な工程は環境変数で場所を指定できる(既定は作者環境):
   ESP_GOLD_PATH          … 学習者版マスター辞書(62k行)
+  ESP_ACADEMIC_GOLD_PATH … 同じ行に対応する学術版マスター辞書
+  ESP_PEJVO_ORIGINAL_PATH … 固定した原典PEJVO snapshot
   ESP_KANJI_MASTER_PATH  … 漢字割り当てマスター
   ESP_CORPUS_PATH        … 固定exact manifestの元になったcleanな京大HTML repo
 """
-import hashlib, json, subprocess, sys, os
+import hashlib, json, subprocess, sys, os, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from gold_snapshot import consistent_snapshot
@@ -31,7 +30,10 @@ from gold_snapshot import consistent_snapshot
 # The reviewed scope manifest is the authority for the accepted gold identity;
 # an asynchronously synchronized newer master must be audited separately before
 # it can replace this snapshot.
-for required in ("ESP_GOLD_PATH", "ESP_CORPUS_PATH", "ESP_KANJI_MASTER_PATH"):
+for required in (
+    "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
+    "ESP_CORPUS_PATH", "ESP_KANJI_MASTER_PATH",
+):
     if not os.environ.get(required):
         raise SystemExit(f"formal regeneration requires explicit {required}")
 with open(os.path.join(HERE, "_no_worsening_scope_manifest.json"), encoding="utf-8") as handle:
@@ -48,6 +50,36 @@ if (
         f"got {gold_identity['bytes']} bytes/{gold_identity['sha256']}"
     )
 COMMON_ENV = {"ESP_EXPECTED_GOLD_SHA256": expected_gold["sha256"]}
+with open(
+    os.path.join(HERE, "_fake_coarse_reference_manifest.json"),
+    encoding="utf-8",
+) as handle:
+    fake_coarse_manifest = json.load(handle)
+for label, environment_name in (
+    ("academic", "ESP_ACADEMIC_GOLD_PATH"),
+    ("pejvo_original", "ESP_PEJVO_ORIGINAL_PATH"),
+):
+    _paired_raw, paired_identity = consistent_snapshot(
+        os.environ[environment_name]
+    )
+    expected = fake_coarse_manifest["sources"][label]
+    if (
+        paired_identity["sha256"] != expected["sha256"]
+        or paired_identity["bytes"] != expected["bytes"]
+        or paired_identity["lines"] != expected["lines"]
+    ):
+        raise SystemExit(
+            f"pinned {label} mismatch before regeneration: expected "
+            f"{expected['bytes']} bytes/{expected['lines']} lines/"
+            f"{expected['sha256']}, got {paired_identity['bytes']} bytes/"
+            f"{paired_identity['lines']} lines/{paired_identity['sha256']}"
+        )
+COMMON_ENV["ESP_EXPECTED_ACADEMIC_SHA256"] = (
+    fake_coarse_manifest["sources"]["academic"]["sha256"]
+)
+FORMAL_HEAD = subprocess.check_output(
+    ["git", "rev-parse", "HEAD"], cwd=os.path.dirname(HERE), text=True,
+).strip()
 kanji_manifest_path = os.path.join(HERE, "_kanji_master_scope_manifest.json")
 with open(kanji_manifest_path, encoding="utf-8") as handle:
     kanji_manifest = json.load(handle)
@@ -75,10 +107,43 @@ if sum(
     raise SystemExit("Kanji master manifest must pin exactly one injection file")
 COMMON_ENV["ESP_EXPECTED_KANJI_MASTER_SHA256"] = _kanji_injection["sha256"]
 STEPS = [
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_reference_manifest.py'),
+        '--learner', os.environ['ESP_GOLD_PATH'],
+        '--academic', os.environ['ESP_ACADEMIC_GOLD_PATH'],
+        '--pejvo-original', os.environ['ESP_PEJVO_ORIGINAL_PATH'],
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_transition_review.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_ff33_transition_review.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_5e_transition_review.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_transition_app_review.py'),
+        '--check',
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'build_corpus_exact_manifest.py'), '--check'], {}),
     ([sys.executable, os.path.join(HERE, 'build_corpus_reviewed_exact_manifest.py'), '--check'], {}),
     ([sys.executable, os.path.join(HERE, 'bare_word_audit.py'), '--require-zero'], {}),
     ([sys.executable, os.path.join(HERE, 'apply_corpus_word_anno.py'), '--write'], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_word_anno_boundary_manifest.py'),
+        '--check',
+    ], {}),
     # 3言語とも同一の固定正本 + 確定補正になることを、生成前にfail-closedで検査する。
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--settings-audit'], {'SKIP_VERIFY': '1'}),
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--write'], {'SKIP_VERIFY': '1'}),
@@ -90,6 +155,8 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'resync_kanji_master.py'), '--write'], {}),
     ([sys.executable, os.path.join(HERE, 'apply_kanji_now.py'), '--write'], {}),
     ([sys.executable, os.path.join(HERE, 'fix_kanji_2890.py'), '--apply'], {}),  # 旧安全網(resync後は実質no-op)
+    # 偽分解/深分解のpiece列と漢字割当を、固定word_kanji authorityに対し3言語全件照合。
+    ([sys.executable, os.path.join(HERE, 'check_kanji_fake_decomposition.py')], {}),
     # 純粋置換版(タグなし)はHTML漢字JSONから毎回再導出する(忘れると陳腐化する成果物)
     ([sys.executable, os.path.join(HERE, 'derive_pure_kanji.py')], {}),
     ([sys.executable, os.path.join(HERE, 'anomaly_scan.py')], {}),
@@ -98,6 +165,31 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'test_reviewed_exact_manifest.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_raw_apostrophe_structure.py')], {}),
+    # Formal expected-signature gate for the pinned 5E snapshot plus the
+    # historical, FF33-lineage and final-5E fake-to-coarse transitions.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'no_worsening_audit.py'),
+        '--current-only-diagnostic',
+        '--languages', 'JA', 'ZH', 'KO',
+        '--expected-gold-sha256', expected_gold['sha256'],
+    ], {}),
+    # 固定gold snapshot全行（空白・約物・hyphenを含む）を3言語runtimeで監査。
+    # fast版はmoving absolute pathのmonitor-onlyであり、正式工程では使用しない。
+    ([
+        sys.executable,
+        os.path.join(HERE, 'audit_master_3lang_full_snapshot.py'),
+        '--gold', os.environ['ESP_GOLD_PATH'],
+        '--expected-gold-sha256', expected_gold['sha256'],
+        '--academic', os.environ['ESP_ACADEMIC_GOLD_PATH'],
+        '--expected-academic-sha256',
+        fake_coarse_manifest['sources']['academic']['sha256'],
+        '--expected-head', FORMAL_HEAD,
+        '--allow-stable-tracked-changes',
+        '--report', os.path.join(
+            tempfile.gettempdir(), 'esperanto_master_3lang_formal_report.json',
+        ),
+    ], {}),
     # 全工程合格後に .bak_* を掃除(放置すると3GB超に膨張。現行成果物はgit+SSDで三重保全済み)
     ([sys.executable, os.path.join(HERE, 'prune_baks.py')], {}),
 ]

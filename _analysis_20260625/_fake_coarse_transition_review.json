@@ -1,0 +1,838 @@
+{
+ "schema_version": 1,
+ "source_candidate_sha256": "0D62EA71A07499800AA49DAAEB8C9B9BA0D6870F3AF9D7158C249115D8BE34B3",
+ "review_basis": "Independent C679/B090 transition audit plus same-line paired-academic coarse authority; staged before the remaining full fake-row queue.",
+ "counts": {
+  "entries": 136,
+  "unique_surfaces": 135,
+  "duplicate_surface_rows": 1,
+  "categories": {
+   "reviewed_c679_to_b090_fake_transition": 133,
+   "reviewed_b090_marker_only_delta": 3
+  },
+  "authority_adjustments": 2
+ },
+ "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
+ "entries": [
+  {
+   "learner_line": 1782,
+   "surface": "anilino",
+   "coarse_decomposition": "anilin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 2704,
+   "surface": "atletiko",
+   "coarse_decomposition": "atletik/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 2748,
+   "surface": "atropino",
+   "coarse_decomposition": "atropin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 6807,
+   "surface": "digitalino",
+   "coarse_decomposition": "digitalin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 9812,
+   "surface": "ergotino",
+   "coarse_decomposition": "ergotin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 10909,
+   "surface": "fibrino",
+   "coarse_decomposition": "fibrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 15682,
+   "surface": "interezprocento",
+   "coarse_decomposition": "interez/procent/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 15993,
+   "surface": "Ionia Maro",
+   "coarse_decomposition": "Ioni/a Mar/o",
+   "category": "reviewed_b090_marker_only_delta"
+  },
+  {
+   "learner_line": 15994,
+   "surface": "ioniano",
+   "coarse_decomposition": "ioni/an/o",
+   "category": "reviewed_b090_marker_only_delta"
+  },
+  {
+   "learner_line": 15996,
+   "surface": "Ionio",
+   "coarse_decomposition": "Ioni/o",
+   "category": "reviewed_b090_marker_only_delta"
+  },
+  {
+   "learner_line": 17849,
+   "surface": "kinkonino",
+   "coarse_decomposition": "kinkonin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 18247,
+   "surface": "kokainismo",
+   "coarse_decomposition": "kokain/ism/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 18248,
+   "surface": "kokaino",
+   "coarse_decomposition": "kokain/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 18310,
+   "surface": "kolĉikino",
+   "coarse_decomposition": "kolĉikin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 21783,
+   "surface": "legumino",
+   "coarse_decomposition": "legumin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 24166,
+   "surface": "Manĉurio",
+   "coarse_decomposition": "Manĉuri/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 29826,
+   "surface": "penicilino",
+   "coarse_decomposition": "penicilin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 32109,
+   "surface": "procentege",
+   "coarse_decomposition": "procent/eg/e",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 32110,
+   "surface": "procentegisto",
+   "coarse_decomposition": "procent/eg/ist/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 32111,
+   "surface": "procentego",
+   "coarse_decomposition": "procent/eg/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 32112,
+   "surface": "procento",
+   "coarse_decomposition": "procent/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 33337,
+   "surface": "reformatoro",
+   "coarse_decomposition": "reformator/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 33819,
+   "surface": "resonatoro",
+   "coarse_decomposition": "resonator/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 34793,
+   "surface": "rutino",
+   "coarse_decomposition": "rutin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 34885,
+   "surface": "sakarino",
+   "coarse_decomposition": "sakarin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 37889,
+   "surface": "stearino",
+   "coarse_decomposition": "stearin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 38127,
+   "surface": "striknino",
+   "coarse_decomposition": "striknin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 39909,
+   "surface": "tanino",
+   "coarse_decomposition": "tanin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 41468,
+   "surface": "trito",
+   "coarse_decomposition": "trit/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 41711,
+   "surface": "tuberkulino",
+   "coarse_decomposition": "tuberkulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 42834,
+   "surface": "vegetalino",
+   "coarse_decomposition": "vegetalin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 44554,
+   "surface": "aglutinino",
+   "coarse_decomposition": "aglutinin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 44618,
+   "surface": "akonitino",
+   "coarse_decomposition": "akonitin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 44739,
+   "surface": "algino",
+   "coarse_decomposition": "algin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 44779,
+   "surface": "alkadieno",
+   "coarse_decomposition": "alkadien/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 44868,
+   "surface": "amanitino",
+   "coarse_decomposition": "amanitin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 45204,
+   "surface": "arabino",
+   "coarse_decomposition": "arabin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 45205,
+   "surface": "arabinozo",
+   "coarse_decomposition": "arabin/oz/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 45393,
+   "surface": "asparagino",
+   "coarse_decomposition": "asparagin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 45942,
+   "surface": "boldino",
+   "coarse_decomposition": "boldin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46000,
+   "surface": "botulino",
+   "coarse_decomposition": "botulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46170,
+   "surface": "butadieno",
+   "coarse_decomposition": "butadien/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46394,
+   "surface": "citrolino",
+   "coarse_decomposition": "citrolin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46405,
+   "surface": "Ĉadio",
+   "coarse_decomposition": "Ĉadi/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46788,
+   "surface": "dioskoreino",
+   "coarse_decomposition": "dioskorein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 46995,
+   "surface": "efedrino",
+   "coarse_decomposition": "efedrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47126,
+   "surface": "elastino",
+   "coarse_decomposition": "elastin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47129,
+   "surface": "elateriino",
+   "coarse_decomposition": "elateriin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47213,
+   "surface": "emulsiino",
+   "coarse_decomposition": "emulsiin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47413,
+   "surface": "eskulino",
+   "coarse_decomposition": "eskulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47480,
+   "surface": "eŭfonio",
+   "coarse_decomposition": "eŭfoni/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47815,
+   "surface": "fitino",
+   "coarse_decomposition": "fitin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47849,
+   "surface": "flavino",
+   "coarse_decomposition": "flavin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 47922,
+   "surface": "foliklino",
+   "coarse_decomposition": "foliklin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48239,
+   "surface": "gastrino",
+   "coarse_decomposition": "gastrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48359,
+   "surface": "giromitrino",
+   "coarse_decomposition": "giromitrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48394,
+   "surface": "globino",
+   "coarse_decomposition": "globin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48433,
+   "surface": "glutamino",
+   "coarse_decomposition": "glutamin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48437,
+   "surface": "glutenino",
+   "coarse_decomposition": "glutenin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48588,
+   "surface": "guanino",
+   "coarse_decomposition": "guanin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48836,
+   "surface": "hematino",
+   "coarse_decomposition": "hematin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 48840,
+   "surface": "hematoksilino",
+   "coarse_decomposition": "hematoksilin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49006,
+   "surface": "hiosciamino",
+   "coarse_decomposition": "hiosciamin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49065,
+   "surface": "hirudino",
+   "coarse_decomposition": "hirudin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49069,
+   "surface": "hiskiamino",
+   "coarse_decomposition": "hiskiamin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49190,
+   "surface": "humino",
+   "coarse_decomposition": "humin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49519,
+   "surface": "inulino",
+   "coarse_decomposition": "inulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49686,
+   "surface": "johimbino",
+   "coarse_decomposition": "johimbin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49781,
+   "surface": "kadavrino",
+   "coarse_decomposition": "kadavrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49967,
+   "surface": "kantaridino",
+   "coarse_decomposition": "kantaridin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 49992,
+   "surface": "kapsikino",
+   "coarse_decomposition": "kapsikin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 50266,
+   "surface": "keratino",
+   "coarse_decomposition": "keratin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 50474,
+   "surface": "kofeino",
+   "coarse_decomposition": "kofein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 50495,
+   "surface": "kokainizo",
+   "coarse_decomposition": "kokain/iz/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 50687,
+   "surface": "koniino",
+   "coarse_decomposition": "koniin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 50906,
+   "surface": "kreatinino",
+   "coarse_decomposition": "kreatinin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51082,
+   "surface": "kumarino",
+   "coarse_decomposition": "kumarin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51120,
+   "surface": "kurkumino",
+   "coarse_decomposition": "kurkumin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51158,
+   "surface": "kvasiino",
+   "coarse_decomposition": "kvasiin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51434,
+   "surface": "lignino",
+   "coarse_decomposition": "lignin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51619,
+   "surface": "luteino",
+   "coarse_decomposition": "lutein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51870,
+   "surface": "melanino",
+   "coarse_decomposition": "melanin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 51897,
+   "surface": "meningokoko",
+   "coarse_decomposition": "meningokok/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52025,
+   "surface": "migdalino",
+   "coarse_decomposition": "migdalin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52129,
+   "surface": "mjelino",
+   "coarse_decomposition": "mjelin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52324,
+   "surface": "narkotino",
+   "coarse_decomposition": "narkotin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52695,
+   "surface": "oleino",
+   "coarse_decomposition": "olein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52870,
+   "surface": "ostino",
+   "coarse_decomposition": "ostin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 52997,
+   "surface": "pankreatino",
+   "coarse_decomposition": "pankreatin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53017,
+   "surface": "papajino",
+   "coarse_decomposition": "papajin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53020,
+   "surface": "papavino",
+   "coarse_decomposition": "papavin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53022,
+   "surface": "papaverino",
+   "coarse_decomposition": "papaverin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53191,
+   "surface": "pektino",
+   "coarse_decomposition": "pektin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53385,
+   "surface": "pilokarpino",
+   "coarse_decomposition": "pilokarpin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53444,
+   "surface": "piretrino",
+   "coarse_decomposition": "piretrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53447,
+   "surface": "piridino",
+   "coarse_decomposition": "piridin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53450,
+   "surface": "piridoksino",
+   "coarse_decomposition": "piridoksin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 53627,
+   "surface": "poezino",
+   "coarse_decomposition": "poezin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54107,
+   "surface": "putrino",
+   "coarse_decomposition": "putrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54301,
+   "surface": "renino",
+   "coarse_decomposition": "renin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54393,
+   "surface": "ricinino",
+   "coarse_decomposition": "ricinin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54530,
+   "surface": "rozanilino",
+   "coarse_decomposition": "roz/anilin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54568,
+   "surface": "rutino",
+   "coarse_decomposition": "rutin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54621,
+   "surface": "salikino",
+   "coarse_decomposition": "salikin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54673,
+   "surface": "santalino",
+   "coarse_decomposition": "santalin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 54793,
+   "surface": "sekreciino",
+   "coarse_decomposition": "sekreciin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55014,
+   "surface": "simpatino",
+   "coarse_decomposition": "simpatin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55288,
+   "surface": "spermino",
+   "coarse_decomposition": "spermin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55461,
+   "surface": "stimulino",
+   "coarse_decomposition": "stimulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55534,
+   "surface": "strofantino",
+   "coarse_decomposition": "strofantin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55564,
+   "surface": "suberino",
+   "coarse_decomposition": "suberin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55964,
+   "surface": "teino",
+   "coarse_decomposition": "tein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 55968,
+   "surface": "tebaino",
+   "coarse_decomposition": "tebain/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 56065,
+   "surface": "teobromino",
+   "coarse_decomposition": "teobromin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 56093,
+   "surface": "terebintino",
+   "coarse_decomposition": "terebintin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 56235,
+   "surface": "tiroidstimulino",
+   "coarse_decomposition": "tiroid/stimulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 56523,
+   "surface": "tuberkulinizado",
+   "coarse_decomposition": "tuberkulin/iz/ad/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 56728,
+   "surface": "vanilino",
+   "coarse_decomposition": "vanilin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 57007,
+   "surface": "zeino",
+   "coarse_decomposition": "zein/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 57470,
+   "surface": "cikloalkadieno",
+   "coarse_decomposition": "cikl/o/alkadien/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58136,
+   "surface": "pseŭdoefedrino",
+   "coarse_decomposition": "pseŭdo/efedrin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58465,
+   "surface": "laktoflavino",
+   "coarse_decomposition": "lakt/o/flavin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58466,
+   "surface": "riboflavino",
+   "coarse_decomposition": "rib/o/flavin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58547,
+   "surface": "tefoliino",
+   "coarse_decomposition": "tefoliin/o",
+   "category": "reviewed_c679_to_b090_fake_transition",
+   "candidate_coarse_decomposition": "te/foliin/o",
+   "authority_adjustment": "project_reviewed_override"
+  },
+  {
+   "learner_line": 58781,
+   "surface": "heteroglobino",
+   "coarse_decomposition": "hetero/globin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58785,
+   "surface": "mioglobino",
+   "coarse_decomposition": "mi/o/globin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58786,
+   "surface": "muskolglobino",
+   "coarse_decomposition": "muskol/globin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58789,
+   "surface": "sangoglobino",
+   "coarse_decomposition": "sang/o/globin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 58942,
+   "surface": "hemolizino",
+   "coarse_decomposition": "hemo/lizin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 59075,
+   "surface": "hipojodita",
+   "coarse_decomposition": "hipo/jodit/a",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 59475,
+   "surface": "diskreditigi",
+   "coarse_decomposition": "diskredit/ig/i",
+   "category": "reviewed_c679_to_b090_fake_transition",
+   "candidate_coarse_decomposition": "dis/kredit/ig/i",
+   "authority_adjustment": "project_reviewed_override"
+  },
+  {
+   "learner_line": 60546,
+   "surface": "riparprocento",
+   "coarse_decomposition": "ripar/procent/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 61139,
+   "surface": "gonadostimulino",
+   "coarse_decomposition": "gonad/o/stimulin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 61371,
+   "surface": "gajlotanino",
+   "coarse_decomposition": "gajl/o/tanin/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 62030,
+   "surface": "ionio",
+   "coarse_decomposition": "ioni/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  },
+  {
+   "learner_line": 62092,
+   "surface": "ligurio",
+   "coarse_decomposition": "liguri/o",
+   "category": "reviewed_c679_to_b090_fake_transition"
+  }
+ ]
+}

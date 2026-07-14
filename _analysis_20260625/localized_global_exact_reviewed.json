@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "case_policy": [
+    "lower",
+    "initial",
+    "upper"
+  ],
+  "targets": [
+    {
+      "root": "ddt",
+      "signature_casefold": ["r:ddt"]
+    },
+    {
+      "root": "fortran",
+      "signature_casefold": ["r:fortran"]
+    },
+    {
+      "root": "golfo",
+      "signature_casefold": ["r:golf", "l:o"]
+    },
+    {
+      "root": "hiv",
+      "signature_casefold": ["r:hiv"]
+    },
+    {
+      "root": "khz",
+      "signature_casefold": ["r:khz"]
+    },
+    {
+      "root": "mhz",
+      "signature_casefold": ["r:mhz"]
+    },
+    {
+      "root": "pat!",
+      "signature_casefold": ["r:pat", "l:!"]
+    },
+    {
+      "root": "racionalism",
+      "signature_casefold": ["r:racional", "r:ism"]
+    },
+    {
+      "root": "racionalist",
+      "signature_casefold": ["r:racional", "r:ist"]
+    },
+    {
+      "root": "spiritism",
+      "signature_casefold": ["r:spirit", "r:ism"]
+    },
+    {
+      "root": "spiritist",
+      "signature_casefold": ["r:spirit", "r:ist"]
+    },
+    {
+      "root": "hokkajdon",
+      "signature_casefold": ["r:hokkajdo", "l:n"],
+      "reason": "Kyoto HTML reviewed place-name boundary"
+    }
+  ],
+  "note": "Only these reviewed lower/initial/upper @...@ payloads reuse each language's own finalized global rendering. Other local gloss semantics, including @kaj@, remain unchanged."
+}

@@ -15,6 +15,43 @@ import no_worsening_audit as audit  # noqa: E402
 
 
 class ReviewedExactManifestTests(unittest.TestCase):
+    def test_source_refresh_requires_identical_reviewed_rules(self):
+        current = {
+            "schema_version": 1,
+            "source": {"head_oid": "OLD", "report": {"sha256": "REPORT"}},
+            "counts": {"exact_surfaces": 1},
+            "exact_surfaces": [{"surface": "radiko"}],
+            "annotations": {},
+        }
+        refreshed = {
+            **current,
+            "source": {"head_oid": "NEW", "report": {"sha256": "REPORT"}},
+        }
+
+        reviewed.require_source_only_refresh(current, refreshed)
+
+        changed = {
+            **refreshed,
+            "exact_surfaces": [{"surface": "alia"}],
+        }
+        with self.assertRaisesRegex(ValueError, "new residual report"):
+            reviewed.require_source_only_refresh(current, changed)
+
+    def test_source_refresh_rejects_report_authority_change(self):
+        current = {
+            "schema_version": 1,
+            "source": {"report": {"sha256": "ORIGINAL"}},
+            "counts": {},
+            "exact_surfaces": [],
+            "annotations": {},
+        }
+        refreshed = {
+            **current,
+            "source": {"report": {"sha256": "OTHER"}},
+        }
+        with self.assertRaisesRegex(ValueError, "report authority"):
+            reviewed.require_source_only_refresh(current, refreshed)
+
     def test_zero_residual_report_is_a_reproducible_empty_selection(self):
         report = {
             "schema_version": 1,

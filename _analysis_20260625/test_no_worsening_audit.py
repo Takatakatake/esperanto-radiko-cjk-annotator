@@ -461,6 +461,69 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
             self.assertEqual(signature[0], surface)
             self.assertEqual([span[1] for span in signature[1]], [True, False, True, False, True])
 
+    def test_two_track_project_boundary_reviews_remain_coarse_for_ruby(self):
+        self.assertEqual(
+            audit.PROJECT_RUBY_BOUNDARY_OVERRIDES,
+            {"Ionia": "Ioni/a", "alternanco": "alternanc/o"},
+        )
+        self.assertEqual(
+            {
+                review["decision"]
+                for review in audit.PROJECT_RUBY_BOUNDARY_REVIEWS.values()
+            },
+            {
+                "project_conservative_ruby_display_override",
+                "project_piv_long_root",
+            },
+        )
+        for surface, review in audit.PROJECT_RUBY_BOUNDARY_REVIEWS.items():
+            self.assertTrue(review["authority"])
+            self.assertTrue(review["counterevidence"])
+            self.assertTrue(review["reason"])
+            self.assertEqual(
+                audit.expected_signature(
+                    review["selected_decomposition"]
+                )[0],
+                surface,
+            )
+
+    def test_project_boundary_override_requires_its_exact_signature(self):
+        cases = {}
+        coarse = audit.expected_signature("Ioni/a")
+        fine = audit.expected_signature("Ion/i/a")
+        audit.add_case(
+            cases, "Ionia", coarse, "Ioni/a",
+            "gold_project_ruby_boundary_override", 1,
+        )
+        # A second contextual authority can make the surface generally
+        # acceptable, but it must not silently neutralize the explicit
+        # project-level Ruby display decision.
+        audit.add_case(
+            cases, "Ionia", fine, "Ion/i/a", "unit_alternative", 1,
+        )
+        fine_output = {
+            "Ionia": {
+                "signature": fine,
+                "decomposition": "Ion/i/a",
+                "typed_decomposition": "R:Ion|R:i|L:a",
+            }
+        }
+        result = audit.compare_outputs(
+            "JA", "unit", fine_output, fine_output, cases, ["Ionia"]
+        )
+        self.assertFalse(result["current_unreferenced_wrong_surfaces"])
+        self.assertEqual(
+            len(result["current_project_ruby_boundary_override_wrong_cases"]),
+            1,
+        )
+        self.assertEqual(
+            result["sources"]["gold_project_ruby_boundary_override"][
+                "current_correct_weight"
+            ],
+            0,
+        )
+        self.assertFalse(result["gate"])
+
     def test_case_is_preserved_in_reference_signature(self):
         self.assertEqual(
             audit.expected_signature("Kac/um/i"),

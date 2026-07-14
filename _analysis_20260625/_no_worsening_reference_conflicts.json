@@ -1,7 +1,7 @@
 {
  "manifest_schema_version": 1,
- "reference_schema_version": 4,
- "raw_conflicts_sha256": "210784145477165B85C59FDDB3D011024A8CA9DF8EC1F46989F37B2BB67C9836",
+ "reference_schema_version": 5,
+ "raw_conflicts_sha256": "78600D1BE475F5BC7124069174BBAC66DB8EA6B6A8A943E1D032DC453AD17986",
  "entries": [
   {
    "surface": "Alberto",
@@ -5263,6 +5263,87 @@
    ],
    "category": "contextual_homograph",
    "reason": "The same spelling is attested both as the lexical noun radi/o and as an atomic named-entity use; document context determines the typed signature."
+  },
+  {
+   "surface": "resumi",
+   "options": [
+    {
+     "expected": "re/sum/i",
+     "signature": {
+      "reconstruction": "resumi",
+      "spans": [
+       {
+        "text": "re",
+        "ruby": true
+       },
+       {
+        "text": "sum",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "resum/i",
+     "signature": {
+      "reconstruction": "resumi",
+      "spans": [
+       {
+        "text": "resum",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "resumi",
+     "spans": [
+      {
+       "text": "re",
+       "ruby": true
+      },
+      {
+       "text": "sum",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "resumi",
+     "spans": [
+      {
+       "text": "resum",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "lexical_homograph_context",
+   "reason": "B090 line 33885 is the summary verb resum/i (also the Kyoto HTML reading), while line 33886 is the distinct productive re/sum/i sense 'sum again'. A context-free app may expose either reviewed signature; deployed ordinary resumi remains resum/i."
   },
   {
    "surface": "sendota",

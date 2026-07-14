@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Lightweight pure-function tests for the canonical corpus runtime gate."""
 import collections
+import json
 from pathlib import Path
 import sys
 import unittest
@@ -13,6 +14,16 @@ import no_worsening_audit as audit
 
 
 class CanonicalCorpusSurfaceGateTests(unittest.TestCase):
+    def test_ruby_scope_matches_pinned_corpus_manifest(self):
+        manifest = json.loads(
+            (HERE / "_corpus_exact_app_manifest.json").read_text(encoding="utf-8")
+        )
+        source = manifest["source"]
+        self.assertEqual(gate.EXPECTED_SCOPE["content_files"], source["content_files"])
+        self.assertEqual(gate.EXPECTED_SCOPE["raw_ruby"], source["raw_ruby"])
+        self.assertEqual(gate.EXPECTED_SCOPE["parsed_ruby"], source["parsed_ruby"])
+        self.assertEqual(gate.EXPECTED_SCOPE["parsed_units"], source["parsed_units"])
+
     def test_reviewed_override_narrows_observed_options(self):
         split = audit.signature_from_typed_parts([
             ("radik", True), ("o", False),

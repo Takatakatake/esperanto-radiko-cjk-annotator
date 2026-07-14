@@ -11,6 +11,7 @@ builder pins every ruby/literal span and its context-localized annotation.
 Usage::
 
     python build_corpus_reviewed_exact_manifest.py --write --report REPORT.json
+    python build_corpus_reviewed_exact_manifest.py --refresh-source
     python build_corpus_reviewed_exact_manifest.py --check
 
 ``ESP_CORPUS_PATH`` must point at the reviewed clean Kyoto HTML repository.
@@ -36,6 +37,31 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 OUTPUT = HERE / "_corpus_reviewed_exact_app_manifest.json"
 MARKER_RE = re.compile(r"(\x01\d+\x01)")
+
+
+def require_source_only_refresh(current: dict, refreshed: dict) -> None:
+    """Permit a corpus re-pin only when all reviewed rules are unchanged.
+
+    A small reviewed corpus edit can legitimately change the clean repository
+    identity without changing any of the selected residual surfaces.  Reusing
+    the original residual-report authority is safe only when rebuilding from
+    the new corpus produces byte-for-byte equivalent counts, exact rules and
+    annotations.  This guard makes that condition explicit and fail-closed.
+    """
+    if current.get("schema_version") != 1:
+        raise ValueError("unsupported reviewed exact manifest schema")
+    if current.get("source", {}).get("report") != refreshed.get("source", {}).get(
+        "report"
+    ):
+        raise ValueError("reviewed residual report authority changed during refresh")
+    current_rules = {key: value for key, value in current.items() if key != "source"}
+    refreshed_rules = {
+        key: value for key, value in refreshed.items() if key != "source"
+    }
+    if current_rules != refreshed_rules:
+        raise ValueError(
+            "reviewed rules changed; a new residual report and full review are required"
+        )
 
 
 def normalize_rich(parts):
@@ -341,6 +367,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--write", action="store_true")
+    mode.add_argument("--refresh-source", action="store_true")
     mode.add_argument("--check", action="store_true")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
@@ -354,6 +381,19 @@ def main() -> None:
             raise SystemExit("--write requires --report")
         selected, report_meta = load_report(args.report, fingerprint["sha256"])
         payload = build(corpus_root, selected, report_meta)
+        atomic_json_dump(OUTPUT, payload, indent=1)
+    elif args.refresh_source:
+        if args.report is not None:
+            raise SystemExit("--refresh-source does not accept --report")
+        if not OUTPUT.exists():
+            raise SystemExit("reviewed corpus exact manifest is missing")
+        current = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        selected = {
+            row["surface"]: set(row["available_expected_options"])
+            for row in current.get("exact_surfaces", [])
+        }
+        payload = build(corpus_root, selected, current.get("source", {}).get("report"))
+        require_source_only_refresh(current, payload)
         atomic_json_dump(OUTPUT, payload, indent=1)
     else:
         if args.report is not None:
@@ -375,7 +415,10 @@ def main() -> None:
             raise SystemExit("reviewed corpus exact manifest is stale")
     print(json.dumps({
         "output": str(OUTPUT),
-        "mode": "write" if args.write else "check",
+        "mode": (
+            "write" if args.write else
+            ("refresh-source" if args.refresh_source else "check")
+        ),
         **payload["counts"],
         "corpus_head": payload["source"]["head_oid"],
         "content_sha256": payload["source"]["content_sha256"],

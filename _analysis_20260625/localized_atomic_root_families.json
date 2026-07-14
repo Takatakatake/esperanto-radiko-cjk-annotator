@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "learner_sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
+  "academic_sha256": "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D",
+  "case_policy": ["lower", "initial", "upper"],
+  "expected_families": 2,
+  "expected_morph_targets": 4,
+  "expected_authority_rows": 4,
+  "families_sha256": "B047D6177321BC1E3B0C73D57B57A8B20EA79679E309AC8E3BCFBAABCF57BB61",
+  "families": [
+    {
+      "root": "bonaer",
+      "productive_boundary": "ruby_token_left",
+      "productive_left_cases": ["initial", "upper"],
+      "lowercase_left_fallback": null,
+      "compositional_target": "bon/aer",
+      "atomic_context_key_prefix": "@atomic-family:",
+      "legacy_pieces": ["bon", "aer"],
+      "legacy_word_anno_keys": ["bon/aer", "bonaer", "Bonaer", "BONAER"],
+      "morph_targets": [
+        {"surface": "bonaero", "target": "bonaer/o"}
+      ],
+      "authority": [
+        {"learner_line": 4042, "surface": "Bonaero", "target": "Bonaer/o"}
+      ]
+    },
+    {
+      "root": "novjork",
+      "productive_boundary": "ruby_token_left",
+      "productive_left_cases": ["lower", "initial", "upper"],
+      "lowercase_left_fallback": null,
+      "compositional_target": null,
+      "atomic_context_key_prefix": null,
+      "legacy_pieces": ["nov", "jork"],
+      "legacy_word_anno_keys": ["nov/jork", "nov/jork/an"],
+      "morph_targets": [
+        {"surface": "novjorko", "target": "novjork/o"},
+        {"surface": "novjorka", "target": "novjork/a"},
+        {"surface": "novjorkano", "target": "novjork/an/o"}
+      ],
+      "authority": [
+        {"learner_line": 27866, "surface": "novjorka", "target": "novjork/a"},
+        {"learner_line": 27867, "surface": "novjorkano", "target": "novjork/an/o"},
+        {"learner_line": 27869, "surface": "Novjorko", "target": "Novjork/o"}
+      ]
+    }
+  ],
+  "note": "Reviewed localized roots. Novjork is Ruby-atomic in lower/initial/upper case only at a token's left boundary. Bonaer is Ruby-atomic for unseen derivatives only in initial/upper case. Lowercase and token-internal bonaer use an explicit reusable bon/aer correction. The ordinary bonaer/Bonaer/BONAER word_anno keys are quarantined because their slashless overlay would collapse E_stem bon/aer; three reserved case-exact context keys provide the place-name gloss only to reviewed atomic Ruby rules and bounded known morphology. Ruby-only context markers are ignored by Kanji generation so its separate deep-piece authority remains effective."
+}

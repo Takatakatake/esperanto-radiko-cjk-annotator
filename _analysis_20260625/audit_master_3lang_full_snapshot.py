@@ -1,0 +1,1639 @@
+# -*- coding: utf-8 -*-
+"""Isolated, snapshot-explicit three-language runtime audit for the full gold master.
+
+Unlike ``audit_master_3lang_fast.py``, this audit has no live/default gold path,
+keeps spaces, punctuation and hyphens, accounts for every input line, loads the
+three runtimes under distinct module names, and mirrors the effective app
+overlay/autofix path.  It never regenerates app data.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import gc
+import hashlib
+import heapq
+import html as htmllib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+import time
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+sys.path.insert(0, str(HERE))
+
+from atomic_json import atomic_json_dump
+import no_worsening_audit as audit
+
+
+LANGUAGES = ("JA", "ZH", "KO")
+RUBY_PAYLOAD_NAME = "置換リスト_ルビ.json"
+DEFAULT_REPORT = HERE / "out" / "_audit_master_3lang_current_gold.json"
+PLACEHOLDER_RE = re.compile(r"\$(?:[A-Za-z]+)?\d+\$")
+ESP_LETTERS = "A-Za-zĉĝĥĵŝŭĈĜĤĴŜŬ"
+ESP_LETTER_RE = re.compile(rf"[{ESP_LETTERS}]")
+TOKEN_RE = re.compile(
+    rf"[{ESP_LETTERS}]+(?:[-'’][{ESP_LETTERS}]+)*",
+)
+ALPHA_APOSTROPHE_RE = re.compile(
+    rf"[{ESP_LETTERS}]+(?:['’][{ESP_LETTERS}]+)*",
+)
+FAST_RE = re.compile(rf"[{ESP_LETTERS}]{{3,30}}")
+RUBY_DETAIL_RE = re.compile(
+    r"<ruby\b[^>]*>\s*(?P<rb>.*?)\s*"
+    r"<rt\b(?P<attrs>[^>]*)>(?P<rt>.*?)</rt\s*>\s*</ruby\s*>",
+    re.IGNORECASE | re.DOTALL,
+)
+BR_RE = re.compile(r"<br\s*/?>", re.IGNORECASE)
+TAG_RE = re.compile(r"<[^>]+>")
+CLASS_RE = re.compile(r"\bclass\s*=\s*(['\"])(.*?)\1", re.IGNORECASE | re.DOTALL)
+NOTE_LIKE_RE = re.compile(
+    r"[\[\]［］【】{}（）()]|(?:^|\s)(?:abbr\.?|prefix|suffix)(?:\s|$)|"
+    r"(?:略|接頭|接尾|語尾|文法|地名|人名|固有|学名|化学|音楽|品詞|"
+    r"简称|缩写|前缀|后缀|语法|地名|人名|专名|学名|化学|"
+    r"약어|접두|접미|문법|지명|인명|고유|학명|화학)",
+    re.IGNORECASE,
+)
+CLASS_SCALE = {
+    "XXXS_S": 0.3,
+    "XXS_S": 0.3,
+    "XS_S": 0.3,
+    "S_S": 0.4,
+    "M_M": 0.5,
+    "L_L": 0.6,
+    "XL_L": 0.7,
+    "XXL_L": 0.8,
+}
+TOP_LIMIT = 120
+LEGACY_HAT_MAP = {
+    "c^": "ĉ", "g^": "ĝ", "h^": "ĥ", "j^": "ĵ", "s^": "ŝ", "u^": "ŭ",
+    "C^": "Ĉ", "G^": "Ĝ", "H^": "Ĥ", "J^": "Ĵ", "S^": "Ŝ", "U^": "Ŭ",
+}
+DUPLICATE_METADATA_PREFIX = "##重複語"
+FAKE_COARSE_MANIFEST = HERE / "_fake_coarse_reference_manifest.json"
+FAKE_TRANSITION_MANIFEST = HERE / "_fake_coarse_transition_review.json"
+FAKE_FF33_TRANSITION_MANIFEST = (
+    HERE / "_fake_coarse_ff33_transition_review.json"
+)
+FAKE_5E_TRANSITION_MANIFEST = (
+    HERE / "_fake_coarse_5e_transition_review.json"
+)
+ATOMIC_HYPHEN_REVIEW, _ATOMIC_HYPHEN_IDENTITY = audit.load_atomic_hyphen_review()
+
+
+def sha256_bytes(raw: bytes) -> str:
+    return hashlib.sha256(raw).hexdigest().upper()
+
+
+def sha256_file(path: Path) -> str:
+    return sha256_bytes(path.read_bytes())
+
+
+def git_text(*args: str) -> str:
+    return subprocess.check_output(["git", *args], cwd=ROOT, text=True).strip()
+
+
+def tracked_status() -> list[str]:
+    rows = []
+    for args in (("diff", "--name-only"), ("diff", "--cached", "--name-only")):
+        value = git_text(*args)
+        rows.extend(row for row in value.splitlines() if row)
+    return sorted(set(rows))
+
+
+def html_text(fragment: str, preserve_breaks: bool = False) -> str:
+    if preserve_breaks:
+        fragment = BR_RE.sub("\n", fragment)
+    else:
+        fragment = BR_RE.sub("", fragment)
+    return htmllib.unescape(TAG_RE.sub("", fragment))
+
+
+def ratio_bin(value: float | None) -> str:
+    if value is None:
+        return "unmeasurable"
+    if value <= 2:
+        return "le_2"
+    if value <= 2.5:
+        return "gt_2_le_2_5"
+    if value <= 3:
+        return "gt_2_5_le_3"
+    return "gt_3"
+
+
+def cumulative_bins(counter: collections.Counter) -> dict:
+    return {
+        "le_2": counter["le_2"],
+        "gt_2": (
+            counter["gt_2_le_2_5"]
+            + counter["gt_2_5_le_3"]
+            + counter["gt_3"]
+        ),
+        "gt_2_5": counter["gt_2_5_le_3"] + counter["gt_3"],
+        "gt_3": counter["gt_3"],
+        "unmeasurable": counter["unmeasurable"],
+        "exclusive": dict(counter),
+    }
+
+
+def push_top(heap: list, score: float, serial: int, payload: dict) -> None:
+    item = (float(score), serial, payload)
+    if len(heap) < TOP_LIMIT:
+        heapq.heappush(heap, item)
+    elif item[:2] > heap[0][:2]:
+        heapq.heapreplace(heap, item)
+
+
+def top_payload(heap: list) -> list[dict]:
+    return [item[2] for item in sorted(heap, reverse=True)]
+
+
+def structural_payload(key) -> dict:
+    visible, spans, tokens = key
+    return {
+        "visible": visible,
+        "line_signature": audit.display_typed_parts(list(spans)),
+        "tokens": [
+            {
+                "token": token,
+                "signature": audit.display_typed_parts(list(token_spans)),
+            }
+            for token, token_spans in tokens
+        ],
+    }
+
+
+def expected_expression_structure(decomposition: str):
+    """Project a slash decomposition to the runtime-observable R/L structure.
+
+    Spaces delimit separate words even when no slash surrounds them.  Digits
+    and punctuation remain literal outside Ruby; lexical letter runs retain
+    the Ruby/bare role assigned by the ordinary morphology projection.
+    """
+    parts = []
+    for chunk in re.split(r"(\s+)", decomposition):
+        if not chunk:
+            continue
+        if chunk.isspace():
+            parts.append((chunk, False))
+            continue
+        word_surface = audit.canonical(chunk.replace("/", ""))
+        atomic_pieces = audit.reviewed_atomic_hyphen_pieces(
+            word_surface, chunk, ATOMIC_HYPHEN_REVIEW,
+        )
+        for piece, is_ruby in audit.expected_typed_parts(chunk, atomic_pieces):
+            if not is_ruby or piece in atomic_pieces:
+                parts.append((piece, is_ruby))
+                continue
+            position = 0
+            for match in ALPHA_APOSTROPHE_RE.finditer(piece):
+                if match.start() > position:
+                    parts.append((piece[position:match.start()], False))
+                parts.append((match.group(0), True))
+                position = match.end()
+            if position < len(piece):
+                parts.append((piece[position:], False))
+    visible, spans = audit.signature_from_typed_parts(parts)
+    return visible, spans, token_projection(visible, spans)
+
+
+def token_projection(visible: str, spans) -> tuple:
+    located = []
+    offset = 0
+    for text, is_ruby in spans:
+        located.append((offset, offset + len(text), text, bool(is_ruby)))
+        offset += len(text)
+    if offset != len(visible):
+        raise ValueError("typed-span reconstruction length changed")
+    tokens = []
+    for match in TOKEN_RE.finditer(visible):
+        parts = []
+        for start, end, _text, is_ruby in located:
+            left = max(start, match.start())
+            right = min(end, match.end())
+            if left >= right:
+                continue
+            piece = visible[left:right]
+            if parts and not is_ruby and not parts[-1][1]:
+                parts[-1] = (parts[-1][0] + piece, False)
+            else:
+                parts.append((piece, is_ruby))
+        tokens.append((match.group(0), tuple(parts)))
+    return tuple(tokens)
+
+
+def legacy_fast_candidate(decomposition: str) -> str:
+    """Reproduce audit_master_3lang_fast.py's exact pre-filter transform."""
+    candidate = decomposition
+    for original, converted in LEGACY_HAT_MAP.items():
+        candidate = candidate.replace(original, converted)
+    return candidate.replace("/", "").replace("-", "")
+
+
+def fast_scope_class(decomposition: str) -> tuple[str, str | None]:
+    candidate = legacy_fast_candidate(decomposition)
+    if " " in candidate:
+        return "excluded_space", None
+    if "!" in candidate or "." in candidate:
+        return "excluded_bang_or_dot", None
+    if FAST_RE.fullmatch(candidate):
+        return "included", candidate
+    if re.fullmatch(rf"[{ESP_LETTERS}]+", candidate):
+        if len(candidate) < 3:
+            return "excluded_length_lt_3", None
+        if len(candidate) > 30:
+            return "excluded_length_gt_30", None
+    return "excluded_non_fast_alphabet_or_punctuation", None
+
+
+def surface_features(decomposition: str, surface: str) -> list[str]:
+    features = []
+    if " " in surface:
+        features.append("contains_ascii_space")
+    if any(character.isspace() for character in surface):
+        features.append("contains_whitespace")
+    if decomposition.startswith("-") or decomposition.endswith("-"):
+        features.append("edge_hyphen_affix_entry")
+    if any(character.isdigit() for character in surface):
+        features.append("contains_digit")
+    if "." in surface:
+        features.append("contains_period")
+    if "!" in surface:
+        features.append("contains_exclamation")
+    if "?" in surface:
+        features.append("contains_question")
+    if "…" in surface:
+        features.append("contains_ellipsis")
+    if re.search(rf"[^{ESP_LETTERS}'’\-\s]", surface):
+        features.append("contains_non_esperanto_or_punctuation")
+    token_count = len(TOKEN_RE.findall(surface))
+    if token_count == 0:
+        features.append("zero_esperanto_tokens")
+    elif token_count > 1:
+        features.append("multiple_esperanto_tokens")
+    return features
+
+
+def parse_gold(path: Path, expected_sha256: str):
+    raw = path.read_bytes()
+    digest = sha256_bytes(raw)
+    if digest != expected_sha256.upper():
+        raise ValueError(f"gold SHA256 changed: {digest} != {expected_sha256.upper()}")
+    text = raw.decode("utf-8", errors="strict")
+    records = []
+    exclusions = collections.Counter()
+    exclusion_rows = collections.defaultdict(list)
+    feature_counts = collections.Counter()
+    fast_counts = collections.Counter()
+    for line_number, line in enumerate(text.splitlines(), 1):
+        clean = line.lstrip("\ufeff")
+        if not clean.strip():
+            exclusions["blank"] += 1
+            exclusion_rows["blank"].append(line_number)
+            continue
+        if clean.lstrip().startswith("#"):
+            exclusions["comment"] += 1
+            exclusion_rows["comment"].append(line_number)
+            continue
+        if ":" not in clean:
+            exclusions["missing_colon"] += 1
+            exclusion_rows["missing_colon"].append(line_number)
+            continue
+        decomposition = clean.split(":", 1)[0].strip()
+        if not decomposition:
+            exclusions["empty_decomposition"] += 1
+            exclusion_rows["empty_decomposition"].append(line_number)
+            continue
+        surface = audit.canonical(decomposition.replace("/", ""))
+        if not surface:
+            exclusions["empty_surface"] += 1
+            exclusion_rows["empty_surface"].append(line_number)
+            continue
+        features = surface_features(decomposition, surface)
+        for feature in features:
+            feature_counts[feature] += 1
+        fast_class, fast_key = fast_scope_class(decomposition)
+        fast_counts[fast_class] += 1
+        records.append({
+            "line_number": line_number,
+            "decomposition": audit.canonical(decomposition),
+            "surface": surface,
+            "features": features,
+            "fast_scope": fast_class,
+            "fast_key": fast_key,
+        })
+    return raw, text, records, exclusions, exclusion_rows, feature_counts, fast_counts
+
+
+def strip_duplicate_metadata(decomposition: str) -> tuple[str, bool]:
+    cleaned = decomposition.lstrip("\ufeff").strip()
+    if cleaned.startswith(DUPLICATE_METADATA_PREFIX):
+        return cleaned[len(DUPLICATE_METADATA_PREFIX):], True
+    return cleaned, False
+
+
+def normalize_slash_decomposition(decomposition: str) -> str:
+    return "/".join(
+        audit.canonical(piece)
+        for piece in decomposition.split("/") if audit.canonical(piece)
+    )
+
+
+def load_fake_coarse_authority(
+    learner_raw: bytes, learner_text: str, academic_path: Path,
+    expected_academic_sha256: str,
+):
+    """Return all 3,382 fake-marked line authorities and staged scopes.
+
+    Every line is sense-aligned by exact gloss equality after removing the
+    learner marker suffix.  Single-word/evaluable rows use the committed
+    academic/PEJVO review manifest; the remaining rows are retained as explicit
+    multiword, numeric/punctuation, or metadata-prefix rows.
+    """
+    academic_raw = academic_path.read_bytes()
+    academic_digest = sha256_bytes(academic_raw)
+    if academic_digest != expected_academic_sha256.upper():
+        raise ValueError(
+            "academic SHA256 changed: "
+            f"{academic_digest} != {expected_academic_sha256.upper()}"
+        )
+    academic_text = academic_raw.decode("utf-8", errors="strict")
+    learner_lines = learner_text.splitlines()
+    academic_lines = academic_text.splitlines()
+    if len(learner_lines) != len(academic_lines):
+        raise ValueError("learner/academic line counts differ")
+
+    manifest_raw = FAKE_COARSE_MANIFEST.read_bytes()
+    manifest = json.loads(manifest_raw.decode("utf-8"))
+    if manifest.get("schema_version") != 1:
+        raise ValueError("unsupported fake-coarse authority schema")
+    serialized_entries = json.dumps(
+        manifest.get("entries", []), ensure_ascii=False,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    if sha256_bytes(serialized_entries) != manifest.get("entries_sha256"):
+        raise ValueError("fake-coarse authority entry fingerprint mismatch")
+    source_identity = manifest.get("sources", {})
+    for label, raw, lines in (
+        ("learner", learner_raw, learner_lines),
+        ("academic", academic_raw, academic_lines),
+    ):
+        expected = source_identity.get(label, {})
+        actual = {
+            "bytes": len(raw), "sha256": sha256_bytes(raw), "lines": len(lines),
+        }
+        if any(expected.get(key) != value for key, value in actual.items()):
+            raise ValueError(f"fake-coarse {label} source identity changed")
+    entries_by_line = {}
+    for entry in manifest["entries"]:
+        line = entry.get("learner_line")
+        if not isinstance(line, int) or line in entries_by_line:
+            raise ValueError(f"invalid/reused fake-coarse line: {line!r}")
+        entries_by_line[line] = entry
+
+    transition_raw = FAKE_TRANSITION_MANIFEST.read_bytes()
+    transition = json.loads(transition_raw.decode("utf-8"))
+    expected_transition_counts = {
+        "entries": 136,
+        "unique_surfaces": 135,
+        "duplicate_surface_rows": 1,
+        "categories": {
+            "reviewed_c679_to_b090_fake_transition": 133,
+            "reviewed_b090_marker_only_delta": 3,
+        },
+        "authority_adjustments": 2,
+    }
+    if transition.get("schema_version") != 1:
+        raise ValueError("unsupported fake-coarse transition schema")
+    serialized_transition = json.dumps(
+        transition.get("entries", []), ensure_ascii=False,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    if (
+        sha256_bytes(serialized_transition) != transition.get("entries_sha256")
+        or transition.get("entries_sha256")
+        != "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+        or transition.get("counts") != expected_transition_counts
+        or len(transition.get("entries", [])) != 136
+    ):
+        raise ValueError("fake-coarse transition entry fingerprint mismatch")
+    transition_by_line = {}
+    for entry in transition["entries"]:
+        line = entry.get("learner_line")
+        if not isinstance(line, int) or line in transition_by_line:
+            raise ValueError(f"invalid/reused transition line: {line!r}")
+        transition_by_line[line] = entry
+
+    ff33_transition_raw = FAKE_FF33_TRANSITION_MANIFEST.read_bytes()
+    ff33_transition = json.loads(ff33_transition_raw.decode("utf-8"))
+    ff33_entries = ff33_transition.get("entries", [])
+    serialized_ff33 = json.dumps(
+        ff33_entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    expected_ff33_counts = {
+        "entries": 1,
+        "evaluable_entries": 1,
+        "new_fake_marker_rows": 1,
+    }
+    if (
+        ff33_transition.get("schema_version") != 1
+        or sha256_bytes(serialized_ff33)
+        != "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31"
+        or ff33_transition.get("entries_sha256")
+        != "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31"
+        or ff33_transition.get("counts") != expected_ff33_counts
+        or ff33_transition.get("source_fake_coarse_entries_sha256")
+        != manifest.get("entries_sha256")
+        or ff33_transition.get("sources", {}).get("learner")
+        != source_identity.get("learner")
+        or ff33_transition.get("sources", {}).get("academic")
+        != source_identity.get("academic")
+        or len(ff33_entries) != 1
+    ):
+        raise ValueError("FF33 fake-coarse transition entry fingerprint mismatch")
+    ff33_transition_by_line = {}
+    for entry in ff33_entries:
+        line = entry.get("learner_line")
+        if (
+            line != 56273
+            or line in transition_by_line
+            or line in ff33_transition_by_line
+        ):
+            raise ValueError(f"invalid/reused FF33 transition line: {line!r}")
+        ff33_transition_by_line[line] = entry
+    final_5e_transition_raw = FAKE_5E_TRANSITION_MANIFEST.read_bytes()
+    final_5e_transition = json.loads(final_5e_transition_raw.decode("utf-8"))
+    final_5e_entries = final_5e_transition.get("entries", [])
+    serialized_final_5e = json.dumps(
+        final_5e_entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    expected_final_5e_hash = (
+        "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F"
+    )
+    expected_final_5e_counts = {
+        "entries": 1,
+        "evaluable_entries": 1,
+        "new_fake_marker_rows": 1,
+    }
+    if (
+        final_5e_transition.get("schema_version") != 1
+        or sha256_bytes(serialized_final_5e) != expected_final_5e_hash
+        or final_5e_transition.get("entries_sha256") != expected_final_5e_hash
+        or final_5e_transition.get("counts") != expected_final_5e_counts
+        or final_5e_transition.get("source_fake_coarse_entries_sha256")
+        != manifest.get("entries_sha256")
+        or final_5e_transition.get("sources", {}).get("learner")
+        != source_identity.get("learner")
+        or final_5e_transition.get("sources", {}).get("academic")
+        != source_identity.get("academic")
+        or len(final_5e_entries) != 1
+    ):
+        raise ValueError("5E fake-coarse transition entry fingerprint mismatch")
+    final_5e_transition_by_line = {}
+    for entry in final_5e_entries:
+        line = entry.get("learner_line")
+        if (
+            line != 53890
+            or line in transition_by_line
+            or line in ff33_transition_by_line
+            or line in final_5e_transition_by_line
+        ):
+            raise ValueError(f"invalid/reused 5E transition line: {line!r}")
+        final_5e_transition_by_line[line] = entry
+    combined_transition_by_line = {
+        **transition_by_line,
+        **ff33_transition_by_line,
+        **final_5e_transition_by_line,
+    }
+
+    authority_rows = []
+    used_entries = set()
+    used_transition = set()
+    invariant = collections.Counter()
+    categories = collections.Counter()
+    for line_number, (learner_line, academic_line) in enumerate(
+        zip(learner_lines, academic_lines), 1
+    ):
+        if audit.FAKE_MARKER_RE.search(academic_line):
+            raise ValueError(f"academic fake marker at line {line_number}")
+        invariant["academic_rows_without_fake_marker"] += 1
+        learner_raw_decomposition = learner_line.lstrip("\ufeff").split(":", 1)[0].strip()
+        academic_raw_decomposition = academic_line.lstrip("\ufeff").split(":", 1)[0].strip()
+        marked = bool(audit.FAKE_MARKER_RE.search(learner_line))
+        if not marked:
+            invariant["unmarked_rows"] += 1
+            if learner_raw_decomposition != academic_raw_decomposition:
+                raise ValueError(
+                    f"unmarked learner/academic decomposition drift at line {line_number}"
+                )
+            invariant["unmarked_identical_decomposition"] += 1
+            continue
+        invariant["marked_rows"] += 1
+        if learner_raw_decomposition == academic_raw_decomposition:
+            raise ValueError(
+                f"fake-marked decomposition did not differ at line {line_number}"
+            )
+        invariant["marked_different_decomposition"] += 1
+        learner_without_marker = audit.FAKE_MARKER_RE.split(
+            learner_line, maxsplit=1,
+        )[0]
+        if ":" not in learner_without_marker or ":" not in academic_line:
+            raise ValueError(f"fake-marked gloss unavailable at line {line_number}")
+        if (
+            learner_without_marker.split(":", 1)[1]
+            != academic_line.split(":", 1)[1]
+        ):
+            raise ValueError(
+                f"fake-marked learner/academic sense drift at line {line_number}"
+            )
+        invariant["marked_gloss_context_matches_academic"] += 1
+
+        academic_decomposition, has_metadata = strip_duplicate_metadata(
+            academic_raw_decomposition,
+        )
+        learner_decomposition, _learner_has_metadata = strip_duplicate_metadata(
+            learner_raw_decomposition,
+        )
+        academic_decomposition = normalize_slash_decomposition(
+            academic_decomposition,
+        )
+        learner_decomposition = normalize_slash_decomposition(
+            learner_decomposition,
+        )
+        entry = entries_by_line.get(line_number)
+        if entry is not None:
+            used_entries.add(line_number)
+            if entry.get("academic_decomposition") != academic_decomposition:
+                raise ValueError(
+                    f"fake-coarse academic provenance drift at line {line_number}"
+                )
+            selected_decomposition = entry["coarse_decomposition"]
+            surface = entry["surface"]
+            category = "single_word_evaluable_manifest"
+            source = entry["authority"]
+        else:
+            selected_decomposition = academic_decomposition
+            surface = audit.canonical(academic_decomposition.replace("/", ""))
+            if has_metadata:
+                category = "duplicate_metadata_prefix"
+            elif " " in academic_decomposition:
+                category = "multiword_expression"
+            elif any(character.isdigit() for character in surface):
+                category = "numeric_or_punctuation_expression"
+            else:
+                category = "unclassified_manifest_exclusion"
+            source = "paired_academic_excluded_single_word_scope"
+        expected = expected_expression_structure(selected_decomposition)
+        if expected[0] != surface:
+            raise ValueError(
+                f"fake-coarse full expression reconstruction drift at line {line_number}: "
+                f"{selected_decomposition!r} -> {expected[0]!r} != {surface!r}"
+            )
+        learner_surface = audit.canonical(learner_decomposition.replace("/", ""))
+        if learner_surface.casefold() != surface.casefold():
+            raise ValueError(f"fake-coarse learner surface drift at line {line_number}")
+        transition_entry = combined_transition_by_line.get(line_number)
+        transition_scope = None
+        if line_number in transition_by_line:
+            transition_scope = "historical_c679_b090"
+        elif line_number in ff33_transition_by_line:
+            transition_scope = "ff33_delta"
+        elif line_number in final_5e_transition_by_line:
+            transition_scope = "final_5e_delta"
+        if transition_entry is not None:
+            if (
+                transition_entry.get("surface") != surface
+                or transition_entry.get("coarse_decomposition")
+                != selected_decomposition
+            ):
+                raise ValueError(
+                    f"staged transition authority drift at line {line_number}"
+                )
+            used_transition.add(line_number)
+        categories[category] += 1
+        authority_rows.append({
+            "learner_line": line_number,
+            "surface": surface,
+            "learner_decomposition": learner_decomposition,
+            "academic_decomposition": academic_decomposition,
+            "selected_decomposition": selected_decomposition,
+            "authority_source": source,
+            "coverage_category": category,
+            "transition_required": transition_entry is not None,
+            "transition_scope": transition_scope,
+            "transition_category": (
+                transition_entry.get("category") if transition_entry else None
+            ),
+            "expected": expected,
+        })
+    if used_entries != set(entries_by_line):
+        raise ValueError(
+            "unused fake-coarse manifest lines: "
+            f"{sorted(set(entries_by_line) - used_entries)[:20]!r}"
+        )
+    if used_transition != set(combined_transition_by_line):
+        raise ValueError(
+            "unused staged-transition lines: "
+            f"{sorted(set(combined_transition_by_line) - used_transition)[:20]!r}"
+        )
+    if categories["unclassified_manifest_exclusion"]:
+        raise ValueError(
+            "unclassified fake-coarse exclusions: "
+            f"{categories['unclassified_manifest_exclusion']}"
+        )
+    expected_invariant = manifest.get("paired_invariant")
+    if dict(invariant) != expected_invariant:
+        raise ValueError(
+            f"paired-master invariant changed: {dict(invariant)!r} "
+            f"!= {expected_invariant!r}"
+        )
+    if len(authority_rows) != invariant["marked_rows"]:
+        raise ValueError("not every fake-marked line received an authority row")
+    return authority_rows, {
+        "academic": {
+            "path": str(academic_path.resolve()),
+            "bytes": len(academic_raw),
+            "sha256": academic_digest,
+            "lines": len(academic_lines),
+        },
+        "fake_coarse_manifest": {
+            "path": str(FAKE_COARSE_MANIFEST.relative_to(ROOT)),
+            "sha256": sha256_bytes(manifest_raw),
+            "entries_sha256": manifest["entries_sha256"],
+            "entries": len(manifest["entries"]),
+        },
+        "transition_manifests": {
+            "historical_c679_b090": {
+                "path": str(FAKE_TRANSITION_MANIFEST.relative_to(ROOT)),
+                "sha256": sha256_bytes(transition_raw),
+                "entries_sha256": transition["entries_sha256"],
+                "counts": transition["counts"],
+            },
+            "ff33_delta": {
+                "path": str(FAKE_FF33_TRANSITION_MANIFEST.relative_to(ROOT)),
+                "sha256": sha256_bytes(ff33_transition_raw),
+                "entries_sha256": ff33_transition["entries_sha256"],
+                "counts": ff33_transition["counts"],
+            },
+            "final_5e_delta": {
+                "path": str(FAKE_5E_TRANSITION_MANIFEST.relative_to(ROOT)),
+                "sha256": sha256_bytes(final_5e_transition_raw),
+                "entries_sha256": final_5e_transition["entries_sha256"],
+                "counts": final_5e_transition["counts"],
+            },
+            "combined_entries": len(combined_transition_by_line),
+            "historical_entries": len(transition_by_line),
+            "ff33_entries": len(ff33_transition_by_line),
+            "final_5e_entries": len(final_5e_transition_by_line),
+        },
+        "paired_invariant": dict(invariant),
+        "coverage_categories": dict(categories),
+    }
+
+
+def app_input_fingerprints() -> dict:
+    return {
+        language: audit.current_app_fingerprint(
+            ROOT / f"Esperanto-Kanji-Ruby-{language}"
+        )
+        for language in LANGUAGES
+    }
+
+
+def render_language(language: str, surfaces: list[str], surface_records: dict,
+                    batch_size: int):
+    app_dir = ROOT / f"Esperanto-Kanji-Ruby-{language}"
+    data_dir = app_dir / "app_data"
+    payload_path = data_dir / RUBY_PAYLOAD_NAME
+    payload = json.loads(payload_path.read_text(encoding="utf-8"))
+    local_rules, global_rules, two_char_rules = audit.extract_lists(payload)
+    module = audit.runtime_module(app_dir, f"master_full_{language}")
+    overlay = audit.overlay_module(app_dir, f"master_full_{language}")
+    corrections = json.loads(
+        (data_dir / "user_corrections.json").read_text(encoding="utf-8")
+    )
+    correction_entries = audit.overlay_entries_from_corrections(corrections, "ruby")
+    effective_global = overlay.merge_overlay(global_rules, correction_entries)
+    skip = module.import_placeholders(str(data_dir / "placeholders_skip.txt"))
+    local_capture = module.import_placeholders(
+        str(data_dir / "placeholders_localcapture.txt")
+    )
+    char_width_path = data_dir / "char_widths.json"
+    char_widths = json.loads(char_width_path.read_text(encoding="utf-8"))
+
+    structural = {}
+    issue_rows = {
+        "runtime_errors": [],
+        "visible_failures": [],
+        "placeholder_residuals": [],
+        "empty_rt": [],
+        "empty_rb": [],
+        "zero_token_outputs": [],
+    }
+    naked = collections.Counter()
+    naked_examples = collections.defaultdict(list)
+    ruby_stats = {
+        "unique_ruby_occurrences": 0,
+        "line_weighted_ruby_occurrences": 0,
+        "empty_rt_unique": 0,
+        "empty_rt_line_weighted": 0,
+        "empty_rb_unique": 0,
+        "empty_rb_line_weighted": 0,
+        "annotation_like_over_2_unique": 0,
+        "annotation_like_over_2_line_weighted": 0,
+        "plain_gloss_over_2_unique": 0,
+        "plain_gloss_over_2_line_weighted": 0,
+        "missing_width_characters": collections.Counter(),
+        "rt_class_unique": collections.Counter(),
+        "rt_class_line_weighted": collections.Counter(),
+        "br_count_unique": collections.Counter(),
+        "br_count_line_weighted": collections.Counter(),
+        "char_ratio_bins_unique": collections.Counter(),
+        "char_ratio_bins_line_weighted": collections.Counter(),
+        "raw_width_ratio_bins_unique": collections.Counter(),
+        "raw_width_ratio_bins_line_weighted": collections.Counter(),
+        "effective_width_ratio_bins_unique": collections.Counter(),
+        "effective_width_ratio_bins_line_weighted": collections.Counter(),
+        "max_char_ratio": None,
+        "max_raw_width_ratio": None,
+        "max_effective_width_ratio": None,
+    }
+    top_width = []
+    top_chars = []
+    top_annotation = []
+    top_plain = []
+    heap_serial = 0
+    root_stats = {}
+    render_started = time.perf_counter()
+
+    def width(text: str) -> float:
+        total = 0.0
+        for character in text:
+            if character not in char_widths:
+                ruby_stats["missing_width_characters"][character] += 1
+            total += float(char_widths.get(character, 8))
+        return total
+
+    def render_batch(batch: list[str]):
+        source = "\n".join(f" {surface} " for surface in batch)
+        output = overlay.autofix_render(
+            source, skip, local_rules, local_capture, effective_global,
+            two_char_rules, audit.FORMAT, str(data_dir), "ruby",
+            module.orchestrate_comprehensive_esperanto_text_replacement,
+        )
+        lines = output.splitlines()
+        if len(lines) == len(batch):
+            return lines
+        fallback = []
+        for surface in batch:
+            one = overlay.autofix_render(
+                f" {surface} ", skip, local_rules, local_capture,
+                effective_global, two_char_rules, audit.FORMAT,
+                str(data_dir), "ruby",
+                module.orchestrate_comprehensive_esperanto_text_replacement,
+            )
+            one_lines = one.splitlines()
+            if len(one_lines) != 1:
+                raise ValueError(
+                    f"{language} line accounting failed for {surface!r}: "
+                    f"batch={len(lines)}/{len(batch)}, single={len(one_lines)}"
+                )
+            fallback.append(one_lines[0])
+        return fallback
+
+    for start in range(0, len(surfaces), batch_size):
+        batch = surfaces[start:start + batch_size]
+        try:
+            rendered_lines = render_batch(batch)
+        except Exception as error:
+            for surface in batch:
+                issue_rows["runtime_errors"].append({
+                    "surface": surface,
+                    "line_numbers": surface_records[surface]["line_numbers"],
+                    "error": f"{type(error).__name__}: {error}",
+                })
+            continue
+        for surface, rendered in zip(batch, rendered_lines):
+            record = surface_records[surface]
+            # Width/naked-fragment distributions are strictly for the exact
+            # 62K master-line surfaces.  Synthetic hyphen-stripped fast keys
+            # are rendered for the labelled legacy subset but carry zero
+            # weight here unless they are also exact master surfaces.
+            weight = record["full_line_count"]
+            typed = audit.rendered_typed_parts(rendered)
+            visible, spans = audit.signature_from_typed_parts(typed)
+            tokens = token_projection(visible, spans)
+            structural[surface] = (visible, spans, tokens)
+            if visible != surface:
+                issue_rows["visible_failures"].append({
+                    "surface": surface,
+                    "actual_visible": visible,
+                    "line_numbers": record["line_numbers"],
+                    "scopes": record["scopes"],
+                })
+            placeholders = sorted(set(PLACEHOLDER_RE.findall(rendered)))
+            if placeholders:
+                issue_rows["placeholder_residuals"].append({
+                    "surface": surface,
+                    "placeholders": placeholders,
+                    "line_numbers": record["line_numbers"],
+                    "scopes": record["scopes"],
+                })
+            if not tokens:
+                issue_rows["zero_token_outputs"].append({
+                    "surface": surface,
+                    "actual_visible": visible,
+                    "line_numbers": record["line_numbers"],
+                    "scopes": record["scopes"],
+                })
+            if not record["full_scope"]:
+                continue
+
+            for token_index, (token, token_spans) in enumerate(tokens):
+                ruby_letter = any(
+                    is_ruby and ESP_LETTER_RE.search(piece)
+                    for piece, is_ruby in token_spans
+                )
+                literal_letter_parts = [
+                    (part_index, piece)
+                    for part_index, (piece, is_ruby) in enumerate(token_spans)
+                    if not is_ruby and ESP_LETTER_RE.search(piece)
+                ]
+                if not literal_letter_parts:
+                    naked["fully_annotated_tokens_unique"] += 1
+                    naked["fully_annotated_tokens_line_weighted"] += weight
+                    continue
+                if not ruby_letter:
+                    naked["fully_naked_tokens_unique"] += 1
+                    naked["fully_naked_tokens_line_weighted"] += weight
+                    category = "fully_naked_grammar_or_short" if (
+                        token.lower() in audit.TERMINAL_BARE_PIECES
+                        or len(token) < 2
+                    ) else "fully_naked_lexical_review_candidate"
+                    naked[category + "_unique"] += 1
+                    naked[category + "_line_weighted"] += weight
+                    if len(naked_examples[category]) < TOP_LIMIT:
+                        naked_examples[category].append({
+                            "surface": surface,
+                            "token": token,
+                            "token_index": token_index,
+                            "signature": audit.display_typed_parts(list(token_spans)),
+                            "line_numbers": record["line_numbers"],
+                        })
+                else:
+                    naked["mixed_ruby_literal_tokens_unique"] += 1
+                    naked["mixed_ruby_literal_tokens_line_weighted"] += weight
+                for part_index, piece in literal_letter_parts:
+                    naked["literal_letter_fragments_unique"] += 1
+                    naked["literal_letter_fragments_line_weighted"] += weight
+                    expected_terminal = (
+                        part_index == len(token_spans) - 1
+                        and piece.lower() in audit.TERMINAL_BARE_PIECES
+                    )
+                    category = (
+                        "expected_terminal_or_grammar_fragment"
+                        if expected_terminal or len(piece) < 2
+                        else "nonterminal_naked_fragment_review_candidate"
+                    )
+                    naked[category + "_unique"] += 1
+                    naked[category + "_line_weighted"] += weight
+                    if len(naked_examples[category]) < TOP_LIMIT:
+                        naked_examples[category].append({
+                            "surface": surface,
+                            "token": token,
+                            "fragment": piece,
+                            "signature": audit.display_typed_parts(list(token_spans)),
+                            "line_numbers": record["line_numbers"],
+                        })
+
+            for ruby_index, match in enumerate(RUBY_DETAIL_RE.finditer(rendered)):
+                base = audit.canonical(html_text(match.group("rb")))
+                rt_break_text = html_text(match.group("rt"), preserve_breaks=True)
+                rt_visible = "".join(rt_break_text.splitlines()).strip()
+                class_match = CLASS_RE.search(match.group("attrs"))
+                rt_class = class_match.group(2).strip() if class_match else ""
+                rt_class = rt_class.split()[0] if rt_class else "(none)"
+                br_count = len(BR_RE.findall(match.group("rt")))
+                ruby_stats["unique_ruby_occurrences"] += 1
+                ruby_stats["line_weighted_ruby_occurrences"] += weight
+                ruby_stats["rt_class_unique"][rt_class] += 1
+                ruby_stats["rt_class_line_weighted"][rt_class] += weight
+                ruby_stats["br_count_unique"][str(br_count)] += 1
+                ruby_stats["br_count_line_weighted"][str(br_count)] += weight
+                if not base:
+                    ruby_stats["empty_rb_unique"] += 1
+                    ruby_stats["empty_rb_line_weighted"] += weight
+                    issue_rows["empty_rb"].append({
+                        "surface": surface,
+                        "rt": rt_visible,
+                        "line_numbers": record["line_numbers"],
+                    })
+                if not rt_visible:
+                    ruby_stats["empty_rt_unique"] += 1
+                    ruby_stats["empty_rt_line_weighted"] += weight
+                    issue_rows["empty_rt"].append({
+                        "surface": surface,
+                        "base": base,
+                        "line_numbers": record["line_numbers"],
+                    })
+
+                base_letters = len(ESP_LETTER_RE.findall(base))
+                rt_chars = sum(not character.isspace() for character in rt_visible)
+                char_ratio = rt_chars / base_letters if base_letters else None
+                base_width = width(base)
+                rt_width = width(rt_visible)
+                raw_width_ratio = rt_width / base_width if base_width else None
+                lines = rt_break_text.splitlines() or [rt_visible]
+                max_line_width = max((width(line) for line in lines), default=0.0)
+                scale = CLASS_SCALE.get(rt_class, 0.5)
+                effective_width_ratio = (
+                    max_line_width * scale / base_width if base_width else None
+                )
+                for key, value in (
+                    ("char_ratio", char_ratio),
+                    ("raw_width_ratio", raw_width_ratio),
+                    ("effective_width_ratio", effective_width_ratio),
+                ):
+                    bin_name = ratio_bin(value)
+                    ruby_stats[key + "_bins_unique"][bin_name] += 1
+                    ruby_stats[key + "_bins_line_weighted"][bin_name] += weight
+                    max_key = "max_" + key
+                    if value is not None and (
+                        ruby_stats[max_key] is None or value > ruby_stats[max_key]
+                    ):
+                        ruby_stats[max_key] = value
+
+                note_like = bool(NOTE_LIKE_RE.search(rt_visible))
+                context = {
+                    "surface": surface,
+                    "decompositions": record["decompositions"],
+                    "line_numbers": record["line_numbers"],
+                    "line_count": weight,
+                    "ruby_index": ruby_index,
+                    "base": base,
+                    "rt": rt_visible,
+                    "rt_class": rt_class,
+                    "br_count": br_count,
+                    "base_alphabet_chars": base_letters,
+                    "rt_visible_chars": rt_chars,
+                    "char_ratio": round(char_ratio, 6) if char_ratio is not None else None,
+                    "base_width": round(base_width, 6),
+                    "rt_width": round(rt_width, 6),
+                    "raw_width_ratio": (
+                        round(raw_width_ratio, 6)
+                        if raw_width_ratio is not None else None
+                    ),
+                    "effective_max_line_width_ratio": (
+                        round(effective_width_ratio, 6)
+                        if effective_width_ratio is not None else None
+                    ),
+                    "annotation_like": note_like,
+                }
+                heap_serial += 1
+                if raw_width_ratio is not None:
+                    push_top(top_width, raw_width_ratio, heap_serial, context)
+                if char_ratio is not None:
+                    push_top(top_chars, char_ratio, heap_serial, context)
+                if raw_width_ratio is not None and raw_width_ratio > 2:
+                    prefix = "annotation_like" if note_like else "plain_gloss"
+                    ruby_stats[prefix + "_over_2_unique"] += 1
+                    ruby_stats[prefix + "_over_2_line_weighted"] += weight
+                    push_top(
+                        top_annotation if note_like else top_plain,
+                        raw_width_ratio, heap_serial, context,
+                    )
+
+                root = root_stats.setdefault(base, {
+                    "base": base,
+                    "unique_contexts": 0,
+                    "line_weighted_contexts": 0,
+                    "rt_values": collections.Counter(),
+                    "max_raw_width_ratio": None,
+                    "max_char_ratio": None,
+                    "max_context": None,
+                })
+                root["unique_contexts"] += 1
+                root["line_weighted_contexts"] += weight
+                root["rt_values"][rt_visible] += weight
+                if raw_width_ratio is not None and (
+                    root["max_raw_width_ratio"] is None
+                    or raw_width_ratio > root["max_raw_width_ratio"]
+                ):
+                    root["max_raw_width_ratio"] = raw_width_ratio
+                    root["max_context"] = context
+                if char_ratio is not None and (
+                    root["max_char_ratio"] is None
+                    or char_ratio > root["max_char_ratio"]
+                ):
+                    root["max_char_ratio"] = char_ratio
+
+        print(
+            f"[{language}] {min(start + len(batch), len(surfaces))}/"
+            f"{len(surfaces)} unique surfaces",
+            flush=True,
+        )
+
+    root_top = []
+    for root in root_stats.values():
+        if root["max_raw_width_ratio"] is None:
+            continue
+        root_top.append({
+            "base": root["base"],
+            "unique_contexts": root["unique_contexts"],
+            "line_weighted_contexts": root["line_weighted_contexts"],
+            "rt_values_top": [
+                {"rt": rt, "line_weighted_count": count}
+                for rt, count in root["rt_values"].most_common(10)
+            ],
+            "max_raw_width_ratio": round(root["max_raw_width_ratio"], 6),
+            "max_char_ratio": (
+                round(root["max_char_ratio"], 6)
+                if root["max_char_ratio"] is not None else None
+            ),
+            "max_context": root["max_context"],
+        })
+    root_top.sort(
+        key=lambda row: (row["max_raw_width_ratio"], row["line_weighted_contexts"]),
+        reverse=True,
+    )
+    root_top = root_top[:TOP_LIMIT]
+
+    ruby_serial = {
+        key: value for key, value in ruby_stats.items()
+        if not isinstance(value, collections.Counter)
+    }
+    for key, value in ruby_stats.items():
+        if not isinstance(value, collections.Counter):
+            continue
+        if "_bins_" in key:
+            ruby_serial[key] = cumulative_bins(value)
+        else:
+            ruby_serial[key] = dict(value)
+    ruby_serial["top_contexts_by_raw_width_ratio"] = top_payload(top_width)
+    ruby_serial["top_contexts_by_character_ratio"] = top_payload(top_chars)
+    ruby_serial["top_annotation_like_over_2"] = top_payload(top_annotation)
+    ruby_serial["top_plain_gloss_review_candidates_over_2"] = top_payload(top_plain)
+    ruby_serial["top_roots_by_raw_width_ratio"] = root_top
+    ruby_serial["classification_note"] = (
+        "annotation_like is a conservative regex heuristic (brackets or explicit "
+        "abbreviation/grammar/name/science markers); plain_gloss rows are review "
+        "candidates, not automatically errors. Boundaries are never changed."
+    )
+
+    result = {
+        "language": language,
+        "render_seconds": round(time.perf_counter() - render_started, 3),
+        "runtime_sha256": sha256_file(app_dir / "esp_text_replacement_module.py"),
+        "overlay_sha256": sha256_file(app_dir / "esp_overlay_module.py"),
+        "payload_sha256": sha256_file(payload_path),
+        "char_widths_sha256": sha256_file(char_width_path),
+        "global_rules": len(global_rules),
+        "localized_rules": len(local_rules),
+        "two_char_rules": len(two_char_rules),
+        "correction_entries": len(correction_entries),
+        "rendered_unique_surfaces": len(structural),
+        "rendered_full_exact_surfaces": sum(
+            row["full_scope"] for row in surface_records.values()
+        ),
+        "rendered_legacy_fast_surfaces": sum(
+            row["fast_scope"] for row in surface_records.values()
+        ),
+        "issues": issue_rows,
+        "issue_counts": {
+            key: len(rows) for key, rows in issue_rows.items()
+        },
+        "naked_fragment_audit": {
+            "counts": dict(naked),
+            "examples": dict(naked_examples),
+            "note": (
+                "Terminal/one-letter literal pieces are separated from lexical "
+                "fully-naked and nonterminal review candidates. Review candidates "
+                "may still be legitimate proper names or unsupported dictionary text."
+            ),
+        },
+        "ruby_length_audit": ruby_serial,
+    }
+
+    del payload, local_rules, global_rules, two_char_rules, effective_global
+    del module, overlay, corrections, char_widths, root_stats
+    gc.collect()
+    return structural, result
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--gold", type=Path, required=True)
+    parser.add_argument("--expected-gold-sha256", required=True)
+    parser.add_argument("--academic", type=Path, required=True)
+    parser.add_argument("--expected-academic-sha256", required=True)
+    parser.add_argument("--expected-head", required=True)
+    parser.add_argument(
+        "--enforce-all-fake-coarse", action="store_true",
+        help=(
+            "Fail on every fake-row coarse mismatch.  Without this flag the "
+            "full queue remains exhaustive in the report, while only the "
+            "independently reviewed transition scopes are required gates."
+        ),
+    )
+    parser.add_argument(
+        "--allow-stable-tracked-changes",
+        action="store_true",
+        help=(
+            "Allow formal regeneration outputs already present at audit start; "
+            "the exact tracked-status set must remain unchanged during the audit."
+        ),
+    )
+    parser.add_argument("--batch-size", type=int, default=1000)
+    parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
+    return parser.parse_args(argv)
+
+
+def run(args):
+    if args.batch_size <= 0:
+        raise ValueError("--batch-size must be positive")
+    head_at_start = git_text("rev-parse", "HEAD")
+    if head_at_start != args.expected_head:
+        raise ValueError(f"app HEAD changed: {head_at_start} != {args.expected_head}")
+    tracked_at_start = tracked_status()
+    if tracked_at_start and not args.allow_stable_tracked_changes:
+        raise ValueError(f"isolated clone has tracked changes: {tracked_at_start}")
+    app_inputs_at_start = app_input_fingerprints()
+    script_sha256 = sha256_file(Path(__file__).resolve())
+    authority_manifest_paths = (
+        FAKE_COARSE_MANIFEST,
+        FAKE_TRANSITION_MANIFEST,
+        FAKE_FF33_TRANSITION_MANIFEST,
+        FAKE_5E_TRANSITION_MANIFEST,
+        HERE / "_fake_coarse_pejvo_disagreement_review.json",
+        HERE / "_fake_coarse_project_boundary_review.json",
+        HERE / "localized_atomic_root_families.json",
+    )
+    authority_manifest_hashes_at_start = {
+        str(path.relative_to(ROOT)): sha256_file(path)
+        for path in authority_manifest_paths
+    }
+
+    (gold_raw, gold_text, records, exclusions, exclusion_rows,
+     feature_counts, fast_counts) = parse_gold(
+        args.gold.resolve(), args.expected_gold_sha256,
+    )
+    fake_authority_rows, fake_authority_identity = load_fake_coarse_authority(
+        gold_raw, gold_text, args.academic.resolve(),
+        args.expected_academic_sha256,
+    )
+    # Exact master surfaces retain spaces/punctuation/hyphens.  In parallel,
+    # reproduce the legacy fast script's hyphen-stripped keys exactly.  Render
+    # their union once so both the 62K and labelled 55K scopes are measured.
+    full_surface_records = {}
+    fast_key_records = {}
+    authority_surface_records = {}
+    for row in records:
+        target = full_surface_records.setdefault(row["surface"], {
+            "surface": row["surface"],
+            "line_numbers": [],
+            "decompositions": [],
+        })
+        target["line_numbers"].append(row["line_number"])
+        if row["decomposition"] not in target["decompositions"]:
+            target["decompositions"].append(row["decomposition"])
+        if row["fast_key"] is not None:
+            fast = fast_key_records.setdefault(row["fast_key"], {
+                "line_numbers": [],
+                "decompositions": [],
+            })
+            fast["line_numbers"].append(row["line_number"])
+            if row["decomposition"] not in fast["decompositions"]:
+                fast["decompositions"].append(row["decomposition"])
+    for row in fake_authority_rows:
+        authority = authority_surface_records.setdefault(row["surface"], {
+            "line_numbers": [],
+            "decompositions": [],
+        })
+        authority["line_numbers"].append(row["learner_line"])
+        if row["selected_decomposition"] not in authority["decompositions"]:
+            authority["decompositions"].append(row["selected_decomposition"])
+    for target in full_surface_records.values():
+        target["line_count"] = len(target["line_numbers"])
+    full_surfaces = sorted(full_surface_records)
+    fast_surfaces = sorted(fast_key_records)
+    surface_records = {}
+    authority_surfaces = sorted(authority_surface_records)
+    for surface in sorted(
+        set(full_surfaces) | set(fast_surfaces) | set(authority_surfaces)
+    ):
+        full = full_surface_records.get(surface)
+        fast = fast_key_records.get(surface)
+        authority = authority_surface_records.get(surface)
+        line_numbers = sorted(set(
+            (full or {}).get("line_numbers", [])
+            + (fast or {}).get("line_numbers", [])
+            + (authority or {}).get("line_numbers", [])
+        ))
+        decompositions = list(dict.fromkeys(
+            (full or {}).get("decompositions", [])
+            + (fast or {}).get("decompositions", [])
+            + (authority or {}).get("decompositions", [])
+        ))
+        surface_records[surface] = {
+            "surface": surface,
+            "line_numbers": line_numbers,
+            "decompositions": decompositions,
+            "line_count": len(line_numbers),
+            "full_line_count": (full or {}).get("line_count", 0),
+            "fast_line_count": len((fast or {}).get("line_numbers", [])),
+            "authority_line_count": len(
+                (authority or {}).get("line_numbers", [])
+            ),
+            "full_scope": full is not None,
+            "fast_scope": fast is not None,
+            "authority_scope": authority is not None,
+            "scopes": [
+                scope for scope, present in (
+                    ("full_exact", full is not None),
+                    ("legacy_fast", fast is not None),
+                    ("fake_coarse_authority", authority is not None),
+                ) if present
+            ],
+        }
+    render_surfaces = sorted(surface_records)
+
+    input_token_line_count = sum(
+        len(TOKEN_RE.findall(row["surface"])) for row in records
+    )
+    unique_token_values = sorted({
+        token
+        for surface in full_surfaces
+        for token in TOKEN_RE.findall(surface)
+    })
+
+    baseline = None
+    mismatch_map = {}
+    language_results = []
+    fake_authority_results = []
+    for language in LANGUAGES:
+        structural, language_result = render_language(
+            language, render_surfaces, surface_records, args.batch_size,
+        )
+        fake_mismatches = []
+        fake_counts = collections.Counter()
+        fake_category_counts = collections.defaultdict(collections.Counter)
+        fake_source_counts = collections.defaultdict(collections.Counter)
+        fake_transition_scope_counts = collections.defaultdict(
+            collections.Counter
+        )
+        for authority_row in fake_authority_rows:
+            fake_counts["rows"] += 1
+            expected_structure = authority_row["expected"]
+            observed_structure = structural.get(authority_row["surface"])
+            matched = observed_structure == expected_structure
+            state = "matched" if matched else "mismatched"
+            fake_counts[state] += 1
+            fake_category_counts[authority_row["coverage_category"]][state] += 1
+            fake_source_counts[authority_row["authority_source"]][state] += 1
+            if authority_row["transition_required"]:
+                fake_counts["transition_rows"] += 1
+                fake_counts[f"transition_{state}"] += 1
+                fake_transition_scope_counts[
+                    authority_row["transition_scope"]
+                ][state] += 1
+            if not matched:
+                fake_mismatches.append({
+                    "learner_line": authority_row["learner_line"],
+                    "surface": authority_row["surface"],
+                    "learner_decomposition": authority_row["learner_decomposition"],
+                    "academic_decomposition": authority_row["academic_decomposition"],
+                    "selected_decomposition": authority_row["selected_decomposition"],
+                    "authority_source": authority_row["authority_source"],
+                    "coverage_category": authority_row["coverage_category"],
+                    "transition_required": authority_row["transition_required"],
+                    "transition_scope": authority_row["transition_scope"],
+                    "transition_category": authority_row["transition_category"],
+                    "expected": structural_payload(expected_structure),
+                    "observed": (
+                        structural_payload(observed_structure)
+                        if observed_structure is not None else None
+                    ),
+                })
+        fake_authority_results.append({
+            "language": language,
+            "counts": dict(fake_counts),
+            "coverage_categories": {
+                key: dict(value)
+                for key, value in sorted(fake_category_counts.items())
+            },
+            "authority_sources": {
+                key: dict(value)
+                for key, value in sorted(fake_source_counts.items())
+            },
+            "transition_scopes": {
+                key: dict(value)
+                for key, value in sorted(fake_transition_scope_counts.items())
+            },
+            "mismatches": fake_mismatches,
+        })
+        language_results.append(language_result)
+        if baseline is None:
+            baseline = structural
+        else:
+            for surface in render_surfaces:
+                current = structural.get(surface)
+                expected = baseline.get(surface)
+                if current == expected:
+                    continue
+                mismatch = mismatch_map.setdefault(surface, {
+                    "surface": surface,
+                    "line_numbers": surface_records[surface]["line_numbers"],
+                    "decompositions": surface_records[surface]["decompositions"],
+                    "full_line_numbers": (
+                        full_surface_records.get(surface, {}).get("line_numbers", [])
+                    ),
+                    "fast_line_numbers": (
+                        fast_key_records.get(surface, {}).get("line_numbers", [])
+                    ),
+                    "full_exact_scope": surface_records[surface]["full_scope"],
+                    "fast_subset": surface_records[surface]["fast_scope"],
+                    "scopes": surface_records[surface]["scopes"],
+                    "observed": {},
+                })
+                if "JA" not in mismatch["observed"]:
+                    mismatch["observed"]["JA"] = structural_payload(expected) if expected else None
+                mismatch["observed"][language] = structural_payload(current) if current else None
+        del structural
+        gc.collect()
+
+    # Fill languages which matched JA for a surface that differed in another language.
+    for surface, mismatch in mismatch_map.items():
+        ja_payload = mismatch["observed"].get("JA")
+        for language in LANGUAGES:
+            mismatch["observed"].setdefault(language, ja_payload)
+
+    mismatches = [mismatch_map[surface] for surface in sorted(mismatch_map)]
+    token_mismatches = []
+    for mismatch in mismatches:
+        observed = mismatch["observed"]
+        token_lists = {
+            language: (payload or {}).get("tokens", [])
+            for language, payload in observed.items()
+        }
+        maximum = max((len(rows) for rows in token_lists.values()), default=0)
+        for index in range(maximum):
+            rows = {
+                language: (tokens[index] if index < len(tokens) else None)
+                for language, tokens in token_lists.items()
+            }
+            serialized = {
+                language: json.dumps(value, ensure_ascii=False, sort_keys=True)
+                for language, value in rows.items()
+            }
+            if len(set(serialized.values())) > 1:
+                token_mismatches.append({
+                    "surface": mismatch["surface"],
+                    "line_numbers": mismatch["line_numbers"],
+                    "token_index": index,
+                    "observed": rows,
+                })
+
+    gold_digest_at_end = sha256_file(args.gold.resolve())
+    academic_digest_at_end = sha256_file(args.academic.resolve())
+    head_at_end = git_text("rev-parse", "HEAD")
+    tracked_at_end = tracked_status()
+    app_inputs_at_end = app_input_fingerprints()
+    all_runtime_assessed = all(
+        row["rendered_unique_surfaces"] == len(render_surfaces)
+        and row["issue_counts"]["runtime_errors"] == 0
+        for row in language_results
+    )
+    issue_gate = all(
+        all(row["issue_counts"][key] == 0 for key in (
+            "runtime_errors", "visible_failures", "placeholder_residuals",
+            "empty_rt", "empty_rb",
+        ))
+        for row in language_results
+    )
+    inputs_stable = {
+        "gold": gold_digest_at_end == sha256_bytes(gold_raw),
+        "academic": (
+            academic_digest_at_end
+            == fake_authority_identity["academic"]["sha256"]
+        ),
+        "head": head_at_end == head_at_start == args.expected_head,
+        "tracked_worktree": (
+            tracked_at_end == tracked_at_start
+            if args.allow_stable_tracked_changes
+            else not tracked_at_start and not tracked_at_end
+        ),
+        "app_inputs": app_inputs_at_end == app_inputs_at_start,
+        "audit_script": sha256_file(Path(__file__).resolve()) == script_sha256,
+        "authority_manifests": {
+            str(path.relative_to(ROOT)): sha256_file(path)
+            for path in authority_manifest_paths
+        } == authority_manifest_hashes_at_start,
+    }
+    fake_authority_all_assessed = all(
+        row["counts"].get("rows", 0) == len(fake_authority_rows)
+        for row in fake_authority_results
+    )
+    expected_transition_scope_rows = {
+        "historical_c679_b090": 136,
+        "ff33_delta": 1,
+        "final_5e_delta": 1,
+    }
+    fake_transition_gate = all(
+        row["counts"].get("transition_rows", 0) == 138
+        and row["counts"].get("transition_matched", 0) == 138
+        and row["counts"].get("transition_mismatched", 0) == 0
+        and {
+            scope: counts.get("matched", 0)
+            for scope, counts in row["transition_scopes"].items()
+        } == expected_transition_scope_rows
+        and all(
+            counts.get("mismatched", 0) == 0
+            for counts in row["transition_scopes"].values()
+        )
+        for row in fake_authority_results
+    )
+    fake_all_coarse_gate = all(
+        row["counts"].get("mismatched", 0) == 0
+        for row in fake_authority_results
+    )
+    report = {
+        "schema_version": 1,
+        "algorithm": {
+            "id": "full-master-three-language-runtime-v1",
+            "production_path": (
+                "runtime + committed user corrections + overlay autofix; no regeneration"
+            ),
+            "line_surface": (
+                "substring before first colon, slash decomposition markers removed; "
+                "spaces, hyphens, punctuation, digits and case retained"
+            ),
+            "boundary_signature": (
+                "exact visible R/L spans plus per-token projections; rt gloss ignored"
+            ),
+            "fast_scope_reproduction": (
+                "audit_master_3lang_fast.py filter reproduced only as a labelled subset"
+            ),
+            "ruby_width": (
+                "char_widths.json Arial16 sum with missing-char default 8; raw ratio, "
+                "visible-codepoint ratio, and CSS-scaled maximum-line ratio"
+            ),
+        },
+        "script_path": str(Path(__file__).resolve()),
+        "script_sha256": script_sha256,
+        "app": {
+            "root": str(ROOT),
+            "head_oid": head_at_start,
+            "tracked_status_at_start": tracked_at_start,
+            "tracked_status_at_end": tracked_at_end,
+        },
+        "gold": {
+            "path": str(args.gold.resolve()),
+            "bytes": len(gold_raw),
+            "sha256": sha256_bytes(gold_raw),
+            "lines": len(gold_text.splitlines()),
+            "sha256_at_end": gold_digest_at_end,
+        },
+        "coarse_authority": {
+            **fake_authority_identity,
+            "academic_sha256_at_end": academic_digest_at_end,
+            "authority_rows": len(fake_authority_rows),
+            "all_rows_assessed_in_all_languages": fake_authority_all_assessed,
+            "staged_transition_gate": fake_transition_gate,
+            "staged_transition_expected_rows": {
+                **expected_transition_scope_rows,
+                "combined": 138,
+            },
+            "all_fake_coarse_gate": fake_all_coarse_gate,
+            "all_fake_coarse_enforced": args.enforce_all_fake_coarse,
+            "languages": fake_authority_results,
+            "staging_note": (
+                "Every fake-marked row remains in this line-keyed report. "
+                "The historical 136-row transition, one-row FF33 lineage delta, "
+                "and one-row final-5E delta are mandatory until "
+                "the broader gloss/semantic queue is reviewed; use "
+                "--enforce-all-fake-coarse to promote the full queue to a gate."
+            ),
+        },
+        "accounting": {
+            "input_lines": len(gold_text.splitlines()),
+            "excluded_lines": sum(exclusions.values()),
+            "exclusions_by_reason": dict(exclusions),
+            "exclusion_line_numbers": dict(exclusion_rows),
+            "runtime_candidate_lines": len(records),
+            "runtime_unique_surfaces": len(full_surfaces),
+            "duplicate_surface_line_excess": len(records) - len(full_surfaces),
+            "duplicate_surface_groups": sum(
+                row["line_count"] > 1 for row in full_surface_records.values()
+            ),
+            "input_token_occurrences_line_weighted": input_token_line_count,
+            "unique_input_token_values": len(unique_token_values),
+            "zero_token_candidate_lines": sum(
+                "zero_esperanto_tokens" in row["features"] for row in records
+            ),
+            "feature_counts_line_weighted": dict(feature_counts),
+            "fast_filter_rows": dict(fast_counts),
+            "fast_filter_included_unique_surfaces": len(fast_surfaces),
+            "render_union_unique_surfaces": len(render_surfaces),
+            "fake_coarse_authority_unique_surfaces": len(authority_surfaces),
+            "fake_coarse_authority_line_rows": len(fake_authority_rows),
+            "legacy_fast_only_synthetic_surfaces": len(
+                set(fast_surfaces) - set(full_surfaces)
+            ),
+            "all_candidate_lines_mapped_to_surface": len(records) + sum(exclusions.values()) == len(gold_text.splitlines()),
+            "all_runtime_candidates_assessed_in_all_languages": all_runtime_assessed,
+            "unevaluated_runtime_candidate_lines": (
+                0 if all_runtime_assessed else len(records)
+            ),
+        },
+        "three_language_boundary": {
+            "render_union_mismatch_unique_surfaces": len(mismatches),
+            "full_exact_mismatch_unique_surfaces": sum(
+                row["full_exact_scope"] for row in mismatches
+            ),
+            "full_exact_mismatch_line_occurrences": sum(
+                len(row["full_line_numbers"])
+                for row in mismatches if row["full_exact_scope"]
+            ),
+            "legacy_fast_mismatch_unique_surfaces": sum(
+                row["fast_subset"] for row in mismatches
+            ),
+            "legacy_fast_mismatch_line_occurrences": sum(
+                len(row["fast_line_numbers"])
+                for row in mismatches if row["fast_subset"]
+            ),
+            "token_mismatch_unique_contexts": len(token_mismatches),
+            "full_exact_token_mismatch_unique_contexts": sum(
+                mismatch_map[row["surface"]]["full_exact_scope"]
+                for row in token_mismatches
+            ),
+            "legacy_fast_token_mismatch_unique_contexts": sum(
+                mismatch_map[row["surface"]]["fast_subset"]
+                for row in token_mismatches
+            ),
+            "all_mismatches": mismatches,
+            "all_token_mismatches": token_mismatches,
+        },
+        "languages": language_results,
+        "inputs_stable": inputs_stable,
+        "complete": all_runtime_assessed and fake_authority_all_assessed,
+        "gate": (
+            all_runtime_assessed
+            and fake_authority_all_assessed
+            and fake_transition_gate
+            and (fake_all_coarse_gate or not args.enforce_all_fake_coarse)
+            and not mismatches
+            and not token_mismatches
+            and issue_gate
+            and all(inputs_stable.values())
+        ),
+        "interpretation": {
+            "naked_fragments": (
+                "Not automatically a failure: terminal grammar is intentionally "
+                "literal. Lexical/nonterminal rows are separated as review candidates."
+            ),
+            "ruby_length": (
+                "Ratios above 2 are review indicators, not boundary errors. "
+                "Annotation-like rows are separated heuristically from plain glosses."
+            ),
+        },
+    }
+    return report
+
+
+def main(argv=None):
+    args = parse_args(argv)
+    report = run(args)
+    atomic_json_dump(args.report, report, indent=1)
+    print(json.dumps({
+        "report": str(args.report.resolve()),
+        "gate": report["gate"],
+        "accounting": report["accounting"],
+        "three_language_boundary": {
+            key: value for key, value in report["three_language_boundary"].items()
+            if not key.startswith("all_")
+        },
+        "language_issue_counts": {
+            row["language"]: row["issue_counts"] for row in report["languages"]
+        },
+        "coarse_authority": {
+            "rows": report["coarse_authority"]["authority_rows"],
+            "staged_transition_gate": report["coarse_authority"]["staged_transition_gate"],
+            "all_fake_coarse_gate": report["coarse_authority"]["all_fake_coarse_gate"],
+            "all_fake_coarse_enforced": report["coarse_authority"]["all_fake_coarse_enforced"],
+            "languages": {
+                row["language"]: row["counts"]
+                for row in report["coarse_authority"]["languages"]
+            },
+        },
+        "inputs_stable": report["inputs_stable"],
+    }, ensure_ascii=False, indent=2), flush=True)
+    if not report["gate"]:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

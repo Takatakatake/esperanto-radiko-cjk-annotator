@@ -132,6 +132,21 @@ def create_replacements_list_for_intact_parts(text: str, placeholders: List[str]
 # 用于 @...@ (局部替换) 的逻辑
 # -------------------------------
 AT_PATTERN = re.compile(r'(?<![A-Za-z0-9])@(.{1,18}?)@(?![A-Za-z0-9])')  # 英数字密着の@(メールアドレス等)はマーカー不成立
+
+# @...@ intentionally has its own, often broader, gloss semantics (for
+# example @kaj@ differs from the global word).  Exact global reuse is limited
+# to this reviewed boundary-correction set; see the central review manifest.
+_LOCALIZED_GLOBAL_EXACT_ROOTS = (
+    'ddt', 'fortran', 'golfo', 'hiv', 'khz', 'mhz', 'pat!',
+    'racionalism', 'racionalist', 'spiritism', 'spiritist',
+    'hokkajdon',
+)
+_LOCALIZED_GLOBAL_EXACT_REVIEWED = frozenset(
+    form
+    for root in _LOCALIZED_GLOBAL_EXACT_ROOTS
+    for form in (root, root.capitalize(), root.upper())
+)
+
 def find_at_enclosed_strings_for_localized_replacement(text: str) -> List[str]:
     """
     查找 @foo@ 的片段（1~18 字符），返回提取的 foo。
@@ -146,20 +161,70 @@ def find_at_enclosed_strings_for_localized_replacement(text: str) -> List[str]:
             used_indices.update(range(start, end))
     return matches
 
+def _finalized_global_renderings_for_exact_matches(
+    matches: List[str],
+    replacements_final_list: List[Tuple[str, str, str]],
+) -> Dict[str, str]:
+    """Return exact @...@ words using this language's finalized global rule.
+
+    The first global rule is the shared boundary authority.  Its already-final
+    replacement keeps this language's own gloss and its final class/<br>
+    calculation.  Local atom replacement remains the fallback for words that
+    have no exact global rule.
+    """
+    wanted = set(matches) & _LOCALIZED_GLOBAL_EXACT_REVIEWED
+    finalized = {}
+    if not wanted or not replacements_final_list:
+        return finalized
+    for rule in replacements_final_list:
+        if not isinstance(rule, (list, tuple)) or len(rule) < 2:
+            continue
+        old, new = rule[0], rule[1]
+        if not isinstance(old, str) or not isinstance(new, str):
+            continue
+        left = len(old) - len(old.lstrip(' '))
+        right = len(old) - len(old.rstrip(' '))
+        end = len(old) - right if right else len(old)
+        core = old[left:end]
+        if not core or core not in wanted or core in finalized:
+            continue
+        new_left = len(new) - len(new.lstrip(' '))
+        new_right = len(new) - len(new.rstrip(' '))
+        if (new_left, new_right) != (left, right):
+            raise ValueError(
+                f"global exact rule has mismatched structural spaces: {old!r}"
+            )
+        new_end = len(new) - new_right if new_right else len(new)
+        finalized[core] = new[new_left:new_end]
+        if len(finalized) == len(wanted):
+            break
+    unresolved = sorted(wanted - set(finalized))
+    if unresolved:
+        raise ValueError(
+            f"reviewed @local target lacks an exact global rule: {unresolved!r}"
+        )
+    return finalized
+
 def create_replacements_list_for_localized_replacement(
     text,
     placeholders: List[str],
-    replacements_list_for_localized_string: List[Tuple[str, str, str]]
+    replacements_list_for_localized_string: List[Tuple[str, str, str]],
+    replacements_final_list: List[Tuple[str, str, str]] = None,
 ) -> List[List[str]]:
     """
     针对文本中出现的 @xxx@，用 replacements_list_for_localized_string 对其中的内容执行 safe_replace。
     最终返回 [("@xxx@", placeholder, replaced_xxx), ...] 形式。
     """
     matches = find_at_enclosed_strings_for_localized_replacement(text)
+    finalized_global = _finalized_global_renderings_for_exact_matches(
+        matches, replacements_final_list or []
+    )
     tmp_replacements_list_for_localized_string = []
     for i, match in enumerate(matches):
         if i < len(placeholders):
-            replaced_match = safe_replace(match, replacements_list_for_localized_string)
+            replaced_match = finalized_global.get(match)
+            if replaced_match is None:
+                replaced_match = safe_replace(match, replacements_list_for_localized_string)
             tmp_replacements_list_for_localized_string.append([f"@{match}@", placeholders[i], replaced_match])
         else:
             break
@@ -204,7 +269,12 @@ def orchestrate_comprehensive_esperanto_text_replacement(
     for original, place_holder_ in sorted_replacements_list_for_intact_parts:
         text = text.replace(original, place_holder_)
     # 4) '@'で囲まれた箇所を局所的に置換・保存(placeholderに置換)。※パディング前(窓18字+raw照合)
-    tmp_replacements_list_for_localized_string_2 = create_replacements_list_for_localized_replacement(text, placeholders_for_localized_replacement, replacements_list_for_localized_string)
+    tmp_replacements_list_for_localized_string_2 = create_replacements_list_for_localized_replacement(
+        text,
+        placeholders_for_localized_replacement,
+        replacements_list_for_localized_string,
+        replacements_final_list,
+    )
     sorted_replacements_list_for_localized_string = sorted(tmp_replacements_list_for_localized_string_2, key=lambda x: len(x[0]), reverse=True)
     for original, place_holder_, replaced_original in sorted_replacements_list_for_localized_string:
         text = text.replace(original, place_holder_)

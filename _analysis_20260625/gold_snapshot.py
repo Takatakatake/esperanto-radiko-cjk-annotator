@@ -24,6 +24,11 @@ def consistent_snapshot(path, attempts=20, retry_seconds=0.1):
         if before_id == after_id and len(raw) == after.st_size:
             return raw, {
                 "bytes": len(raw),
+                # Keep the stable snapshot identity useful to callers that
+                # pin line-oriented dictionary sources.  ``bytes.splitlines``
+                # handles LF/CRLF without decoding and matches the builders'
+                # ``text.splitlines()`` count for the UTF-8 authorities.
+                "lines": len(raw.splitlines()),
                 "mtime_ns": after.st_mtime_ns,
                 "sha256": hashlib.sha256(raw).hexdigest().upper(),
             }

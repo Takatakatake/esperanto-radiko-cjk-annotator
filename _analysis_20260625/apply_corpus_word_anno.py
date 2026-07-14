@@ -13,11 +13,201 @@ from pathlib import Path
 import sys
 
 from atomic_json import atomic_json_dump
+from build_fake_coarse_transition_app_review import (
+    validate as validate_fake_coarse_transition_app_review,
+)
+from build_fake_coarse_ff33_transition_review import (
+    validate as validate_fake_coarse_ff33_transition_review,
+)
+from build_fake_coarse_5e_transition_review import (
+    validate as validate_fake_coarse_5e_transition_review,
+)
 
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_analysis_20260625" / "out"
 WRITE = "--write" in sys.argv
+FAKE_COARSE_APP_REVIEW_PATH = (
+    ROOT / "_analysis_20260625" / "_fake_coarse_transition_app_review.json"
+)
+FAKE_COARSE_APP_REVIEW = json.loads(
+    FAKE_COARSE_APP_REVIEW_PATH.read_text(encoding="utf-8")
+)
+validate_fake_coarse_transition_app_review(FAKE_COARSE_APP_REVIEW)
+FAKE_COARSE_APP_ENTRIES = FAKE_COARSE_APP_REVIEW["entries"]
+FAKE_COARSE_FF33_REVIEW_PATH = (
+    ROOT / "_analysis_20260625" / "_fake_coarse_ff33_transition_review.json"
+)
+FAKE_COARSE_FF33_REVIEW = json.loads(
+    FAKE_COARSE_FF33_REVIEW_PATH.read_text(encoding="utf-8")
+)
+validate_fake_coarse_ff33_transition_review(FAKE_COARSE_FF33_REVIEW)
+FAKE_COARSE_FF33_ENTRIES = FAKE_COARSE_FF33_REVIEW["entries"]
+FAKE_COARSE_5E_REVIEW_PATH = (
+    ROOT / "_analysis_20260625" / "_fake_coarse_5e_transition_review.json"
+)
+FAKE_COARSE_5E_REVIEW = json.loads(
+    FAKE_COARSE_5E_REVIEW_PATH.read_text(encoding="utf-8")
+)
+validate_fake_coarse_5e_transition_review(FAKE_COARSE_5E_REVIEW)
+FAKE_COARSE_5E_ENTRIES = FAKE_COARSE_5E_REVIEW["entries"]
+if len(FAKE_COARSE_5E_ENTRIES) != 1:
+    raise SystemExit("final 5E transition must contain exactly one entry")
+_final_5e_entry = FAKE_COARSE_5E_ENTRIES[0]
+if (
+    _final_5e_entry.get("surface") != "promilo"
+    or _final_5e_entry.get("learner_decomposition") != "pro/mil/o"
+    or _final_5e_entry.get("target") != "promil/o"
+    or _final_5e_entry.get("typed_roles") != "RL"
+):
+    raise SystemExit("final 5E promilo transition identity drift")
+KANJI_TRACK_PRODUCTIVE_TARGETS = {
+    _final_5e_entry["surface"]: {
+        "target": _final_5e_entry["learner_decomposition"],
+        "kanji_track_only": True,
+        "fake_coarse_5e_transition_managed": True,
+    },
+}
+ATOMIC_ROOT_FAMILY_PATH = (
+    ROOT / "_analysis_20260625" / "localized_atomic_root_families.json"
+)
+ATOMIC_ROOT_FAMILY_REVIEW = json.loads(
+    ATOMIC_ROOT_FAMILY_PATH.read_text(encoding="utf-8")
+)
+_fake_reference = json.loads(
+    (ROOT / "_analysis_20260625" / "_fake_coarse_reference_manifest.json")
+    .read_text(encoding="utf-8")
+)
+if (
+    ATOMIC_ROOT_FAMILY_REVIEW.get("schema_version") != 1
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("learner_sha256")
+    != _fake_reference.get("sources", {}).get("learner", {}).get("sha256")
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("academic_sha256")
+    != _fake_reference.get("sources", {}).get("academic", {}).get("sha256")
+):
+    raise SystemExit("localized atomic-root family source identity mismatch")
+_atomic_families = ATOMIC_ROOT_FAMILY_REVIEW.get("families", [])
+_atomic_families_compact = json.dumps(
+    _atomic_families, ensure_ascii=False, separators=(",", ":"),
+).encode("utf-8")
+if (
+    len(_atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_families")
+    or sum(len(row.get("morph_targets", [])) for row in _atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_morph_targets")
+    or sum(len(row.get("authority", [])) for row in _atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_authority_rows")
+    or hashlib.sha256(_atomic_families_compact).hexdigest().upper()
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("families_sha256")
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("families_sha256")
+    != "B047D6177321BC1E3B0C73D57B57A8B20EA79679E309AC8E3BCFBAABCF57BB61"
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("case_policy")
+    != ["lower", "initial", "upper"]
+):
+    raise SystemExit("localized atomic-root family fingerprint/count drift")
+_fake_reference_by_line = {
+    entry["learner_line"]: entry for entry in _fake_reference["entries"]
+}
+_atomic_family_roots = set()
+PRODUCTIVE_RUBY_LEFT_TARGETS = {}
+COMPOSITIONAL_FAMILY_TARGETS = {}
+ATOMIC_FAMILY_CONTEXT_KEYS = {}
+LEGACY_ATOMIC_FAMILY_WORD_ANNO_KEYS = set()
+for _family in _atomic_families:
+    _root = _family.get("root")
+    _legacy = _family.get("legacy_pieces", [])
+    if (
+        not _root or _root in _atomic_family_roots
+        or "".join(_legacy) != _root
+        or _family.get("productive_boundary") != "ruby_token_left"
+        or _family.get("productive_left_cases") not in (
+            ["initial", "upper"], ["lower", "initial", "upper"],
+        )
+        or _family.get("lowercase_left_fallback") is not None
+        or _family.get("compositional_target") not in (None, "bon/aer")
+        or _family.get("atomic_context_key_prefix") not in (
+            None, "@atomic-family:",
+        )
+        or not _family.get("morph_targets")
+        or not _family.get("authority")
+    ):
+        raise SystemExit(f"invalid localized atomic-root family: {_family!r}")
+    _atomic_family_roots.add(_root)
+    _case_surfaces = {
+        "lower": _root,
+        "initial": _root.capitalize(),
+        "upper": _root.upper(),
+    }
+    # One lowercase generator row already expands to initial/upper. When the
+    # lowercase spelling is not authorized (Bonaer), retain the two explicit
+    # case-sensitive rows instead.
+    _emitted_cases = (
+        ["lower"]
+        if "lower" in _family["productive_left_cases"]
+        else _family["productive_left_cases"]
+    )
+    _compositional_target = _family.get("compositional_target")
+    _context_prefix = _family.get("atomic_context_key_prefix")
+    if (_compositional_target is None) != (_context_prefix is None):
+        raise SystemExit(f"atomic-family context/composition drift: {_family!r}")
+    if _compositional_target is not None:
+        if _compositional_target.replace("/", "") != _root:
+            raise SystemExit(f"atomic-family composition reconstruction drift: {_family!r}")
+        COMPOSITIONAL_FAMILY_TARGETS[_root] = {
+            "target": _compositional_target,
+            "allow_substring": True,
+        }
+        for _surface in _case_surfaces.values():
+            ATOMIC_FAMILY_CONTEXT_KEYS[_surface] = _context_prefix + _surface
+    for _case_name in _emitted_cases:
+        _surface = _case_surfaces[_case_name]
+        if _surface in PRODUCTIVE_RUBY_LEFT_TARGETS:
+            raise SystemExit(f"duplicate productive Ruby-left surface: {_surface!r}")
+        PRODUCTIVE_RUBY_LEFT_TARGETS[_surface] = {
+            "target": _surface,
+            "mode": "atomic",
+            # A lowercase rule receives automatic initial/upper variants from
+            # the generator. Explicit Bonaer/BONAER rows must stay exact-case.
+            "case_sensitive": _case_name != "lower",
+            "family_root": _root,
+        }
+        if _surface in ATOMIC_FAMILY_CONTEXT_KEYS:
+            PRODUCTIVE_RUBY_LEFT_TARGETS[_surface][
+                "ruby_context_annotation"
+            ] = ATOMIC_FAMILY_CONTEXT_KEYS[_surface]
+    LEGACY_ATOMIC_FAMILY_WORD_ANNO_KEYS.update(
+        _family.get("legacy_word_anno_keys", [])
+    )
+    _morph_pairs = {
+        (row.get("surface", "").casefold(), row.get("target", "").casefold())
+        for row in _family["morph_targets"]
+    }
+    _authority_pairs = {
+        (row.get("surface", "").casefold(), row.get("target", "").casefold())
+        for row in _family["authority"]
+    }
+    if _morph_pairs != _authority_pairs:
+        raise SystemExit(
+            f"atomic-root morph/authority coverage drift: {_family!r}"
+        )
+    for _row in _family["authority"]:
+        _reference = _fake_reference_by_line.get(_row.get("learner_line"))
+        if (
+            _reference is None
+            or _reference.get("surface") != _row.get("surface")
+            or _reference.get("coarse_decomposition") != _row.get("target")
+        ):
+            raise SystemExit(f"atomic-root authority drift: {_row!r}")
+if _atomic_family_roots != {"bonaer", "novjork"}:
+    raise SystemExit("localized atomic-root family set drift")
+if set(PRODUCTIVE_RUBY_LEFT_TARGETS) != {
+    "Bonaer", "BONAER", "novjork",
+}:
+    raise SystemExit("productive Ruby-left case policy drift")
+if COMPOSITIONAL_FAMILY_TARGETS != {
+    "bonaer": {"target": "bon/aer", "allow_substring": True},
+} or set(ATOMIC_FAMILY_CONTEXT_KEYS) != {"bonaer", "Bonaer", "BONAER"}:
+    raise SystemExit("localized compositional/context policy drift")
 EXACT_MANIFEST_PATH = ROOT / "_analysis_20260625" / "_corpus_exact_app_manifest.json"
 EXACT_MANIFEST = json.loads(EXACT_MANIFEST_PATH.read_text(encoding="utf-8"))
 if EXACT_MANIFEST.get("schema_version") != 1:
@@ -207,6 +397,8 @@ ANNOTATIONS = {
         "kaŭn": "[地名]カウナス",
         "bikini": "[地名]ビキニ",
         "buenos-aires": "[地名]ブエノスアイレス",
+        "bonaer": "[地名]ブエノスアイレス",
+        "novjork": "[地名]ニューヨーク",
         "kriptografi": "暗号学",
         "anestez": "麻酔する",
         "davaan": "[人]ダバオ住民",
@@ -248,6 +440,8 @@ ANNOTATIONS = {
         "kaŭn": "[地名]考纳斯",
         "bikini": "[地名]比基尼",
         "buenos-aires": "[地名]布宜诺斯艾利斯",
+        "bonaer": "[地名]布宜诺斯艾利斯",
+        "novjork": "[地名]纽约",
         "kriptografi": "密码学",
         "anestez": "麻醉",
         "davaan": "[人]达沃居民",
@@ -289,6 +483,8 @@ ANNOTATIONS = {
         "kaŭn": "[지명]카우나스",
         "bikini": "[지명]비키니",
         "buenos-aires": "[지명]부에노스아이레스",
+        "bonaer": "[지명]부에노스아이레스",
+        "novjork": "[지명]뉴욕",
         "kriptografi": "암호학",
         "anestez": "마취하다",
         "davaan": "[사람]다바오 주민",
@@ -304,6 +500,33 @@ ANNOTATIONS = {
         "jurnal": "신문",
     },
 }
+
+# Explicit case-sensitive Ruby-left rules cannot borrow the lowercase key at
+# generation time. Mirror only their reviewed localized gloss, retaining the
+# written rb spelling; this does not create a lowercase productive fallback.
+for _surface, _spec in PRODUCTIVE_RUBY_LEFT_TARGETS.items():
+    if not _spec["case_sensitive"] or _spec["mode"] != "atomic":
+        continue
+    for _language in ANNOTATIONS:
+        _source_gloss = ANNOTATIONS[_language].get(_spec["family_root"])
+        if not _source_gloss:
+            raise SystemExit(
+                f"{_language}: missing atomic-family gloss for {_surface!r}"
+            )
+        ANNOTATIONS[_language][_surface] = _source_gloss
+
+# Ordinary slashless word_anno keys would overwrite E_stem ``bon/aer`` with
+# one atomic ``bonaer`` span. Keep the gloss behind reserved, case-exact keys
+# which only reviewed atomic settings can request.
+ATOMIC_FAMILY_CONTEXT_ANNOTATIONS = {language: {} for language in ANNOTATIONS}
+for _surface, _key in ATOMIC_FAMILY_CONTEXT_KEYS.items():
+    for _language in ANNOTATIONS:
+        _gloss = ANNOTATIONS[_language].get(_surface)
+        if not _gloss:
+            raise SystemExit(
+                f"{_language}: missing atomic-family context gloss for {_surface!r}"
+            )
+        ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[_language][_key] = [[_surface, _gloss]]
 
 # Contextual homographs use a reserved key which is never a normal Esperanto
 # surface.  A typed exact rule can therefore annotate kaj="wharf" or al="wing"
@@ -333,7 +556,33 @@ TYPED_CONTEXT_GLOSSES = {
     ("f-ino", 0, "f-ino"): {
         "ja": "[敬称]令嬢", "zh": "[敬称]小姐", "ko": "[경칭]양",
     },
+    # Hokkaido is a borrowed place-name root, not hokkajd+o.  Lower/upper
+    # exact forms are declared here; the reviewed Initial-cap annotation is
+    # normalized below from the same three-language gloss authority.
+    ("hokkajdon", 0, "hokkajdo"): {
+        "ja": "[地名]北海道", "zh": "[地名]北海道", "ko": "[지명]홋카이도",
+    },
+    ("HOKKAJDON", 0, "HOKKAJDO"): {
+        "ja": "[地名]北海道", "zh": "[地名]北海道", "ko": "[지명]홋카이도",
+    },
 }
+
+# The staged fake-to-coarse manifest supplies one reviewed localized fallback
+# (tefoliin).  All other 84 entries must resolve through the existing local
+# CSV/word_anno data and therefore add no guessed or concatenated glosses.
+for _fake_entry in FAKE_COARSE_APP_ENTRIES:
+    _exact_annotation = _fake_entry.get("exact_annotation")
+    if _exact_annotation is None:
+        continue
+    _fake_pieces = [
+        piece for piece in _fake_entry["target"].split("/") if piece
+    ]
+    _fake_piece = _exact_annotation["piece"]
+    _fake_index = _fake_pieces.index(_fake_piece)
+    _fake_key = (_fake_entry["surface"], _fake_index, _fake_piece)
+    if _fake_key in TYPED_CONTEXT_GLOSSES:
+        raise SystemExit(f"duplicate fake-coarse typed annotation: {_fake_key!r}")
+    TYPED_CONTEXT_GLOSSES[_fake_key] = dict(_exact_annotation["glosses"])
 
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
@@ -346,6 +595,17 @@ STRICT_TYPED_PIECE_GLOSSES = {
     "AZT": {"ja": "[略]アジドチミジン", "zh": "[简称]叠氮胸苷", "ko": "[약]아지도티미딘"},
     "MHz": {"ja": "[略]メガヘルツ", "zh": "[简称]兆赫", "ko": "[약]메가헤르츠"},
     "Andora": {"ja": "[地名]アンドラ", "zh": "[地名]安道尔", "ko": "[지명]안도라"},
+    # These capitalized roots occur in newly reviewed, case-sensitive
+    # geographic exact rules.  Contextual glosses prevent lowercase
+    # homographs such as arg (Argo ship), ret (net), and umbr from leaking
+    # into the place-name readings.
+    "Arg": {"ja": "[地名]アルゴス", "zh": "[地名]阿尔戈斯", "ko": "[지명]아르고스"},
+    "Eol": {"ja": "[地名]アイオリス", "zh": "[地名]埃奥利斯", "ko": "[지명]아이올리스"},
+    "Frig": {"ja": "[地名]フリギア", "zh": "[地名]弗里吉亚", "ko": "[지명]프리기아"},
+    "Ligur": {"ja": "[地名]リグーリア", "zh": "[地名]利古里亚", "ko": "[지명]리구리아"},
+    "Ohi": {"ja": "[地名]オハイオ", "zh": "[地名]俄亥俄", "ko": "[지명]오하이오"},
+    "Ret": {"ja": "[地名]レーティア", "zh": "[地名]雷蒂亚", "ko": "[지명]레티아"},
+    "Umbr": {"ja": "[地名]ウンブリア", "zh": "[地名]翁布里亚", "ko": "[지명]움브리아"},
     "la": {"ja": "定冠詞", "zh": "定冠词", "ko": "정관사"},
     "Buenos": {"ja": "[地名]ブエノス", "zh": "[地名]布宜诺斯", "ko": "[지명]부에노스"},
     "Ajres": {"ja": "[地名]アイレス", "zh": "[地名]艾利斯", "ko": "[지명]아이레스"},
@@ -406,6 +666,10 @@ STRICT_TYPED_PIECE_GLOSSES = {
     "esp": {"ja": "[略]エスペラント", "zh": "[简称]世界语", "ko": "[약]에스페란토"},
     "gramen": {"ja": "イネ科植物", "zh": "禾本科植物", "ko": "벼과 식물"},
     "anc": {"ja": "性・量", "zh": "性质·量", "ko": "성질·양"},
+    # psikokirurgio alone uses the finer PIV root kirurg.  Preserve the
+    # established coarse-root meaning of kirurgi instead of borrowing the
+    # ordinary kirurg gloss "surgeon" from the language CSVs.
+    "kirurg": {"ja": "外科学", "zh": "外科", "ko": "외과"},
     "k": {"ja": "[略]スプーン", "zh": "[简称]汤匙", "ko": "[약]숟가락"},
     "k-o": {"ja": "[略]スプーン", "zh": "[简称]汤匙", "ko": "[약]숟가락"},
     "mejbomit": {"ja": "マイボーム腺炎", "zh": "睑板腺炎", "ko": "마이봄샘염"},
@@ -413,6 +677,7 @@ STRICT_TYPED_PIECE_GLOSSES = {
     "pK": {"ja": "イオン化定数", "zh": "电离常数", "ko": "이온화 상수"},
     "spondilit": {"ja": "脊椎炎", "zh": "脊椎炎", "ko": "척추염"},
     "strateg": {"ja": "戦略", "zh": "战略", "ko": "전략"},
+    "vojaĝ": {"ja": "旅行", "zh": "旅行", "ko": "여행"},
     "Ĉefeĉ": {"ja": "[名称]チェフェチ", "zh": "[名称]切费奇", "ko": "[명칭]체페치"},
     "ĥilopod": {"ja": "唇脚類", "zh": "唇足类", "ko": "순각류"},
     "Vel": {"ja": "[地名]ベリャ", "zh": "[地名]城", "ko": "[지명]라베야"},
@@ -535,6 +800,12 @@ MANAGED_EXACT_TARGETS = {
     "prof.": ("prof/.", True),
     "Prof.": ("Prof/.", True),
 }
+
+# Do not add a bounded bare ``bonaer`` correction. The generator's reviewed
+# E_stem ``bon/aer`` rule is deliberately unbounded, so it preserves the real
+# composition in lowercase and token-internal forms (bonaerdevena,
+# malbonaero, xBonaer...). A bounded correction for the same slashless stem
+# would pop that reusable rule before registering its space-guarded variant.
 
 for _surface, (_target, _case_sensitive) in list(MANAGED_EXACT_TARGETS.items()):
     _curly_surface = curly_apostrophe_variant(_surface)
@@ -663,10 +934,33 @@ MANAGED_MORPH_TARGETS = {
     "azian-oceanian": {"target": "azi/a/n/-/oceani/a/n"},
 }
 
+for _family in ATOMIC_ROOT_FAMILY_REVIEW["families"]:
+    for _target in _family["morph_targets"]:
+        _surface = _target["surface"]
+        if _surface in MANAGED_MORPH_TARGETS:
+            raise SystemExit(f"duplicate atomic-family morph target: {_surface!r}")
+        _spec = {"target": _target["target"]}
+        # The shared ``novjork`` nominal stem is intentionally useful to both
+        # tracks: Ruby keeps the reviewed atomic spelling while Kanji can use
+        # its deeper nov/jork authority.  Only the derived ``novjork/an`` stem
+        # needs Ruby scoping; otherwise its coarse family correction masks the
+        # Kanji-track lexical ``an`` piece.  Bonaer already skips the whole row
+        # in Kanji through ruby_context_annotation below.
+        if _target["target"].casefold().startswith("novjork/an/"):
+            _spec["ruby_track_only"] = True
+        if _family["root"] in ATOMIC_FAMILY_CONTEXT_KEYS:
+            _spec["ruby_context_annotation"] = (
+                ATOMIC_FAMILY_CONTEXT_KEYS[_family["root"]]
+            )
+        MANAGED_MORPH_TARGETS[_surface] = _spec
+
 # Obsolete same-family pins are removed so the productive managed stem above
 # remains the sole rule and retains its context-specific annotation.
 MANAGED_REMOVED_SURFACES = {
     "pasigrafioj",
+    # Replaced by the productive novjork/o nominal paradigm above.  Leaving
+    # this legacy nov/jork/on row would create a same-stem casefold collision.
+    "novjorkon",
 }
 
 # Slash boundaries alone cannot encode whether a piece is ruby or literal.
@@ -682,10 +976,82 @@ MANAGED_TYPED_EXACT_TARGETS = {
         "target": "ChatGPT/-/on", "typed_roles": "RLL",
         "case_sensitive": True,
     },
+    # Case-specific reviewed place-name forms.  Keeping the grammatical -n
+    # literal prevents the obsolete hokkajd/on split from returning.
+    "hokkajdon": {
+        "target": "hokkajdo/n", "typed_roles": "RL", "case_sensitive": True,
+    },
+    "HOKKAJDON": {
+        "target": "HOKKAJDO/N", "typed_roles": "RL", "case_sensitive": True,
+    },
 }
+
+FAKE_COARSE_TYPED_SURFACES = set()
+for _fake_entry in FAKE_COARSE_APP_ENTRIES:
+    _fake_surface = _fake_entry["surface"]
+    if (
+        _fake_surface in MANAGED_TYPED_EXACT_TARGETS
+        or _fake_surface in FAKE_COARSE_TYPED_SURFACES
+    ):
+        raise SystemExit(
+            f"duplicate staged fake-coarse exact surface: {_fake_surface!r}"
+        )
+    MANAGED_TYPED_EXACT_TARGETS[_fake_surface] = {
+        "target": _fake_entry["target"],
+        "typed_roles": _fake_entry["typed_roles"],
+        # Limit this first reviewed deployment to the exact written form.  A
+        # later productive family expansion requires its own semantic review.
+        "case_sensitive": True,
+    }
+    FAKE_COARSE_TYPED_SURFACES.add(_fake_surface)
+
+FAKE_COARSE_FF33_TYPED_SURFACES = set()
+for _fake_entry in FAKE_COARSE_FF33_ENTRIES:
+    _fake_surface = _fake_entry["surface"]
+    if (
+        _fake_surface in MANAGED_TYPED_EXACT_TARGETS
+        or _fake_surface in FAKE_COARSE_FF33_TYPED_SURFACES
+    ):
+        raise SystemExit(
+            f"duplicate FF33 fake-coarse exact surface: {_fake_surface!r}"
+        )
+    MANAGED_TYPED_EXACT_TARGETS[_fake_surface] = {
+        "target": _fake_entry["target"],
+        "typed_roles": _fake_entry["typed_roles"],
+        "case_sensitive": True,
+    }
+    FAKE_COARSE_FF33_TYPED_SURFACES.add(_fake_surface)
+
+FAKE_COARSE_5E_TYPED_SURFACES = set()
+for _fake_entry in FAKE_COARSE_5E_ENTRIES:
+    _fake_surface = _fake_entry["surface"]
+    if (
+        _fake_surface in MANAGED_TYPED_EXACT_TARGETS
+        or _fake_surface in FAKE_COARSE_5E_TYPED_SURFACES
+    ):
+        raise SystemExit(
+            f"duplicate 5E fake-coarse exact surface: {_fake_surface!r}"
+        )
+    MANAGED_TYPED_EXACT_TARGETS[_fake_surface] = {
+        "target": _fake_entry["target"],
+        "typed_roles": _fake_entry["typed_roles"],
+        "case_sensitive": True,
+        "ruby_only": True,
+    }
+    FAKE_COARSE_5E_TYPED_SURFACES.add(_fake_surface)
 
 REVIEWED_TYPED_EXACT_TARGETS = {}
 REVIEWED_TYPED_ANNOTATIONS = dict(REVIEWED_EXACT_MANIFEST["annotations"])
+_HOKKAJDO_GLOSSES = {
+    "ja": "[地名]北海道", "zh": "[地名]北海道", "ko": "[지명]홋카이도",
+}
+_hokkajdon_annotation = dict(
+    REVIEWED_TYPED_ANNOTATIONS.get("@typed:Hokkajdon:0", {})
+)
+if _hokkajdon_annotation.get("piece") != "Hokkajdo":
+    raise SystemExit("reviewed Hokkajdon annotation is missing or malformed")
+_hokkajdon_annotation["glosses"] = dict(_HOKKAJDO_GLOSSES)
+REVIEWED_TYPED_ANNOTATIONS["@typed:Hokkajdon:0"] = _hokkajdon_annotation
 for row in REVIEWED_EXACT_MANIFEST["exact_surfaces"]:
     surface = row["surface"]
     target = row["target"]
@@ -781,8 +1147,18 @@ def main():
         for key in list(data):
             if key.startswith("@typed:") and key not in desired_typed_keys:
                 del data[key]
+            if (
+                key.startswith("@atomic-family:")
+                and key not in ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language]
+            ):
+                del data[key]
+        for key in LEGACY_ATOMIC_FAMILY_WORD_ANNO_KEYS:
+            data.pop(key, None)
         for root, gloss in entries.items():
+            if root in ATOMIC_FAMILY_CONTEXT_KEYS:
+                continue
             data[root] = [[root, gloss]]
+        data.update(ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language])
         for key, pairs in SPLIT_CONTEXT_ANNOTATIONS[language].items():
             data[key] = pairs
         for (surface, index, piece), glosses in TYPED_CONTEXT_GLOSSES.items():
@@ -809,6 +1185,9 @@ def main():
     confirmed = json.loads(confirmed_path.read_text(encoding="utf-8"))
     managed_surfaces = (
         set(MANAGED_EXACT_TARGETS)
+        | set(PRODUCTIVE_RUBY_LEFT_TARGETS)
+        | set(COMPOSITIONAL_FAMILY_TARGETS)
+        | set(KANJI_TRACK_PRODUCTIVE_TARGETS)
         | set(MANAGED_MORPH_TARGETS)
         | set(MANAGED_TYPED_EXACT_TARGETS)
         | set(REVIEWED_TYPED_EXACT_TARGETS)
@@ -823,9 +1202,9 @@ def main():
             "w": surface,
             "target": target,
             "exact_only": True,
-            "boundary_only": True,
             "corpus_managed": True,
         }
+        entry["boundary_only"] = True
         if case_sensitive:
             entry["case_sensitive"] = True
         confirmed.append(entry)
@@ -839,6 +1218,10 @@ def main():
             entry["case_sensitive"] = True
         if spec.get("context_annotation"):
             entry["context_annotation"] = spec["context_annotation"]
+        if spec.get("ruby_context_annotation"):
+            entry["ruby_context_annotation"] = spec["ruby_context_annotation"]
+        if spec.get("ruby_track_only"):
+            entry["ruby_track_only"] = True
         confirmed.append(entry)
     for surface, spec in MANAGED_TYPED_EXACT_TARGETS.items():
         entry = {
@@ -850,7 +1233,44 @@ def main():
             "case_sensitive": bool(spec.get("case_sensitive", True)),
             "corpus_managed": True,
         }
+        if surface in FAKE_COARSE_TYPED_SURFACES:
+            entry["fake_coarse_transition_managed"] = True
+        if surface in FAKE_COARSE_FF33_TYPED_SURFACES:
+            entry["fake_coarse_ff33_transition_managed"] = True
+        if surface in FAKE_COARSE_5E_TYPED_SURFACES:
+            entry["fake_coarse_5e_transition_managed"] = True
+        if spec.get("ruby_only"):
+            entry["ruby_only"] = True
         confirmed.append(entry)
+    for surface, spec in KANJI_TRACK_PRODUCTIVE_TARGETS.items():
+        confirmed.append({
+            "w": surface,
+            "target": spec["target"],
+            "kanji_track_only": True,
+            "corpus_managed": True,
+            "fake_coarse_5e_transition_managed": True,
+        })
+    for surface, spec in PRODUCTIVE_RUBY_LEFT_TARGETS.items():
+        entry = {
+            "w": surface,
+            "target": spec["target"],
+            "exact_only": True,
+            "ruby_left_boundary": True,
+            "case_sensitive": spec["case_sensitive"],
+            "corpus_managed": True,
+        }
+        if spec.get("ruby_context_annotation"):
+            entry["ruby_context_annotation"] = spec["ruby_context_annotation"]
+        confirmed.append(entry)
+    for surface, spec in COMPOSITIONAL_FAMILY_TARGETS.items():
+        confirmed.append({
+            "w": surface,
+            "target": spec["target"],
+            "exact_only": True,
+            "allow_substring": True,
+            "corpus_managed": True,
+            "localized_compositional": True,
+        })
     for surface, spec in REVIEWED_TYPED_EXACT_TARGETS.items():
         confirmed.append({
             "w": surface,
@@ -867,6 +1287,9 @@ def main():
     print(
         "[confirmed] corpus rules: "
         f"exact={len(MANAGED_EXACT_TARGETS)} "
+        f"ruby_left={len(PRODUCTIVE_RUBY_LEFT_TARGETS)} "
+        f"compositional={len(COMPOSITIONAL_FAMILY_TARGETS)} "
+        f"kanji_productive={len(KANJI_TRACK_PRODUCTIVE_TARGETS)} "
         f"morph={len(MANAGED_MORPH_TARGETS)} "
         f"typed={len(MANAGED_TYPED_EXACT_TARGETS)} "
         f"reviewed_typed={len(REVIEWED_TYPED_EXACT_TARGETS)} "

@@ -2,14 +2,14 @@
  "schema_version": 1,
  "description": "Pinned exact case-sensitive app rules for every non-app-alphabet ruby-bearing unit in the reviewed Kyoto corpus.",
  "source": {
-  "head_oid": "37020ef6582f1d190f4a1e47a42649950627beae",
-  "branch": "main",
+  "head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
+  "branch": "agent/kyodai-proper-roots-20260714",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
   "content_files": 169,
-  "content_sha256": "00EA3345734A7B776E480A31EB4B34D2BEF046F7E199BB1F55A1D56814338B4D",
-  "raw_ruby": 349006,
-  "parsed_ruby": 349006,
+  "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
+  "raw_ruby": 348971,
+  "parsed_ruby": 348971,
   "parsed_units": 271065
  },
  "counts": {

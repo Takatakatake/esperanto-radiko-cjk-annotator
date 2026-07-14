@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 漢字化モード(参照2 新漢字割り当て)を3アプリへ統合。
- - 新漢字CSV(out/kanji_root.csv, 参照2 漢字注入版由来 7791語根)を各アプリへ配置
+ - 新漢字CSV(out/kanji_root.csv, ヘッダーなし9,813語根・未対応13を含む)
+   を各アプリへ配置（互換CSVファイル名の7791は維持）
  - 改善済み分解設定(deployed) + word_kanji(per-word漢字) + 漢字化フォーマットで
    漢字化モードの最終JSONを生成・配置
 形態: <ruby>漢字<rt>エス語根</rt></ruby> (漢字本文・語根ルビ=学習補助)
@@ -13,7 +14,7 @@ import json, sys, re, shutil, os
 sys.stdout.reconfigure(encoding="utf-8")
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repoルート自動検出
 sys.path.insert(0, BASE + r"\_analysis_20260625")
-from gen_replacement import generate, lp
+from gen_replacement import generate, lp, setting_forces_reviewed_coarse_root
 from _important_stems import load_important_stems
 from atomic_json import atomic_binary_copy, atomic_json_dump
 OUT = BASE + r"\_analysis_20260625\out"
@@ -40,15 +41,17 @@ print(f"word_kanji {len(word_kanji)}語形 / FMT={FMT}")
 # 漢字モードでは強制を外して偽分解し、マスター漢字割り当てを各語根に適用する。
 # ルビ側(apply_confirmed)は一体のまま不変(独立生成)。
 KANJI_DECOMPOSE = {"esperant"}
-_grv = OUT + r"\gold_revert_roots.json"   # マスターgoldが分解する国際語根(51)
+_grv = OUT + r"\gold_revert_roots.json"   # マスターgoldが分解する国際語根(52)
 if os.path.exists(lp(_grv)):
     KANJI_DECOMPOSE |= set(json.load(open(lp(_grv), encoding="utf-8")))
 
 def _kanji_settings(DATA):
     """漢字用設定: KANJI_DECOMPOSEの一体化強制を除去した一時設定を作り、パスを返す。"""
     with open(lp(DATA+STEM), encoding="utf-8") as f: sett = json.load(f)
-    sett = [e for e in sett if not (isinstance(e, list) and len(e) >= 1
-            and str(e[0]).replace('/', '') in KANJI_DECOMPOSE)]
+    sett = [
+        entry for entry in sett
+        if not setting_forces_reviewed_coarse_root(entry, KANJI_DECOMPOSE)
+    ]
     tmp = DATA + r"\_kanji_settings_tmp.json"
     atomic_json_dump(lp(tmp), sett)
     return tmp
