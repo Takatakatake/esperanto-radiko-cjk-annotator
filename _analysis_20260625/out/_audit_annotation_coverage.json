@@ -321,7 +321,7 @@
  ],
  "document_accounting_gate": true,
  "totals": {
-  "ruby": 349006,
+  "ruby": 348971,
   "url_spans": 95,
   "attached_morphology_tokens": 116304,
   "attached_allowed_internal": 1190,
@@ -329,7 +329,7 @@
   "attached_unexpected_tokens": 7,
   "lines_non_annotation_block": 31799,
   "lines_translation_or_note": 22012,
-  "lines_annotated_body": 80810,
+  "lines_annotated_body": 80802,
   "lines_plain_line_in_annotated_document": 101,
   "lines_foreign_source_block": 2
  },
@@ -1005,7 +1005,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 31967,
+   "line": 31965,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1015,7 +1015,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 31988,
+   "line": 31986,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "plain_line_in_annotated_document",
@@ -1025,7 +1025,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 31997,
+   "line": 31995,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1035,7 +1035,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 32005,
+   "line": 32003,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "plain_line_in_annotated_document",
@@ -1045,7 +1045,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 32117,
+   "line": 32114,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1055,7 +1055,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 37902,
+   "line": 37898,
    "token": "Eeeeeeej",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1065,7 +1065,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 37929,
+   "line": 37925,
    "token": "a-a-a-a-a-a-blo",
    "kind": "attached_unexpected_token",
    "line_class": "annotated_body",
@@ -1075,7 +1075,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
-   "line": 40310,
+   "line": 40306,
    "token": "ĵan",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -1475,7 +1475,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
-   "line": 697,
+   "line": 695,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1485,7 +1485,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
-   "line": 718,
+   "line": 716,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "plain_line_in_annotated_document",
@@ -1495,7 +1495,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
-   "line": 727,
+   "line": 725,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1505,7 +1505,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
-   "line": 735,
+   "line": 733,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "plain_line_in_annotated_document",
@@ -1515,7 +1515,7 @@
   },
   {
    "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
-   "line": 847,
+   "line": 844,
    "token": "No",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",

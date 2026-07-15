@@ -1,0 +1,1665 @@
+{
+ "schema_version": 1,
+ "authority_audit_sha256": "F50456E073043BAD432736C0EAAC7C8240AEC96EC67A04A17D512B561E58C3D0",
+ "transition_manifest": {
+  "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
+  "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+ },
+ "fake_authority_manifest": {
+  "sha256": "91358ADDA30E3E120F335141F755AFE25B5118C4FC2490015683B8BC8B192195",
+  "entries_sha256": "A744696EED592AEAA01EBD7D9CB6380715F114D3BD144D638517B24146D48AEB"
+ },
+ "localized_sources": {
+  "ja": {
+   "csv": "Esperanto-Kanji-Ruby-JA/app_data/エスペラント語根-日本語訳ルビ対応リスト.csv",
+   "csv_sha256": "33CE469EFCE8D77111C281DF36585E981269409F1D33753DA620D56C6AD5CE0E",
+   "csv_rows": 49037
+  },
+  "zh": {
+   "csv": "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-中文注释对应列表.csv",
+   "csv_sha256": "13D248DACD526F7028A35BE28AA846E42FBBF17B718CE824A2AF7D22BC1903E6",
+   "csv_rows": 49072
+  },
+  "ko": {
+   "csv": "Esperanto-Kanji-Ruby-KO/app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv",
+   "csv_sha256": "29383FEB4A852818F3BEA424E65215A72FD28B302A3E38FEE1CC25599AC6F307",
+   "csv_rows": 49072
+  }
+ },
+ "counts": {
+  "entries": 85,
+  "existing_localized_gloss": 84,
+  "reviewed_exact_localized_annotation": 1,
+  "html_intersection_surfaces": 0
+ },
+ "entries_sha256": "216E85708B4419EE0D7BE9F36068C19EBDB7666B55A1E3B7077590973729EA5A",
+ "entries": [
+  {
+   "surface": "aglutinino",
+   "target": "aglutinin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    44554
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:aglutin|R:in|L:o",
+   "runtime_after_expected_typed": "R:aglutinin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "akonitino",
+   "target": "akonitin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    44618
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:akonit|R:in|L:o",
+   "runtime_after_expected_typed": "R:akonitin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "algino",
+   "target": "algin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    44739
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:alg|R:in|L:o",
+   "runtime_after_expected_typed": "R:algin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "amanitino",
+   "target": "amanitin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    44868
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:amanit|R:in|L:o",
+   "runtime_after_expected_typed": "R:amanitin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "anilino",
+   "target": "anilin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    1782
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:anil|R:in|L:o",
+   "runtime_after_expected_typed": "R:anilin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "asparagino",
+   "target": "asparagin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    45393
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:asparag|R:in|L:o",
+   "runtime_after_expected_typed": "R:asparagin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "atropino",
+   "target": "atropin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    2748
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:atrop|R:in|L:o",
+   "runtime_after_expected_typed": "R:atropin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "boldino",
+   "target": "boldin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    45942
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:bold|R:in|L:o",
+   "runtime_after_expected_typed": "R:boldin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "botulino",
+   "target": "botulin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    46000
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:botul|R:in|L:o",
+   "runtime_after_expected_typed": "R:botulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "citrolino",
+   "target": "citrolin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    46394
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:citrol|R:in|L:o",
+   "runtime_after_expected_typed": "R:citrolin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "digitalino",
+   "target": "digitalin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    6807
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:digital|R:in|L:o",
+   "runtime_after_expected_typed": "R:digitalin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "dioskoreino",
+   "target": "dioskorein/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    46788
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:dioskore|R:in|L:o",
+   "runtime_after_expected_typed": "R:dioskorein/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "efedrino",
+   "target": "efedrin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    46995
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:efedr|R:in|L:o",
+   "runtime_after_expected_typed": "R:efedrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "elateriino",
+   "target": "elateriin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    47129
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:elateri|R:in|L:o",
+   "runtime_after_expected_typed": "R:elateriin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "emulsiino",
+   "target": "emulsiin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    47213
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:emulsi|R:in|L:o",
+   "runtime_after_expected_typed": "R:emulsiin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "ergotino",
+   "target": "ergotin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    9812
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:ergot|R:in|L:o",
+   "runtime_after_expected_typed": "R:ergotin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "eskulino",
+   "target": "eskulin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    47413
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:eskul|R:in|L:o",
+   "runtime_after_expected_typed": "R:eskulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "fitino",
+   "target": "fitin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    47815
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:fit|R:in|L:o",
+   "runtime_after_expected_typed": "R:fitin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "foliklino",
+   "target": "foliklin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    47922
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:folikl|R:in|L:o",
+   "runtime_after_expected_typed": "R:foliklin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "gajlotanino",
+   "target": "gajl/o/tanin/o",
+   "typed_roles": "RLRL",
+   "learner_lines": [
+    61371
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:gajl|L:o|R:tan|R:in|L:o",
+   "runtime_after_expected_typed": "R:gajl/L:o/R:tanin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "gastrino",
+   "target": "gastrin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48239
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:gastr|R:in|L:o",
+   "runtime_after_expected_typed": "R:gastrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "giromitrino",
+   "target": "giromitrin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48359
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:giromitr|R:in|L:o",
+   "runtime_after_expected_typed": "R:giromitrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "glutenino",
+   "target": "glutenin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48437
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:gluten|R:in|L:o",
+   "runtime_after_expected_typed": "R:glutenin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "gonadostimulino",
+   "target": "gonad/o/stimulin/o",
+   "typed_roles": "RLRL",
+   "learner_lines": [
+    61139
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:gonad|L:o|R:stimul|R:in|L:o",
+   "runtime_after_expected_typed": "R:gonad/L:o/R:stimulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "guanino",
+   "target": "guanin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48588
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:guan|R:in|L:o",
+   "runtime_after_expected_typed": "R:guanin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "hematino",
+   "target": "hematin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48836
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hemat|R:in|L:o",
+   "runtime_after_expected_typed": "R:hematin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "hematoksilino",
+   "target": "hematoksilin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    48840
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hematoksil|R:in|L:o",
+   "runtime_after_expected_typed": "R:hematoksilin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "hiosciamino",
+   "target": "hiosciamin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49006
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hiosciam|R:in|L:o",
+   "runtime_after_expected_typed": "R:hiosciamin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "hirudino",
+   "target": "hirudin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49065
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hirud|R:in|L:o",
+   "runtime_after_expected_typed": "R:hirudin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "hiskiamino",
+   "target": "hiskiamin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49069
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hiskiam|R:in|L:o",
+   "runtime_after_expected_typed": "R:hiskiamin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "humino",
+   "target": "humin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49190
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:hum|R:in|L:o",
+   "runtime_after_expected_typed": "R:humin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "inulino",
+   "target": "inulin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49519
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:inul|R:in|L:o",
+   "runtime_after_expected_typed": "R:inulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "johimbino",
+   "target": "johimbin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49686
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:johimb|R:in|L:o",
+   "runtime_after_expected_typed": "R:johimbin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kadavrino",
+   "target": "kadavrin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49781
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kadavr|R:in|L:o",
+   "runtime_after_expected_typed": "R:kadavrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kantaridino",
+   "target": "kantaridin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49967
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kantarid|R:in|L:o",
+   "runtime_after_expected_typed": "R:kantaridin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kapsikino",
+   "target": "kapsikin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    49992
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kapsik|R:in|L:o",
+   "runtime_after_expected_typed": "R:kapsikin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "keratino",
+   "target": "keratin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    50266
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kerat|R:in|L:o",
+   "runtime_after_expected_typed": "R:keratin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kinkonino",
+   "target": "kinkonin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    17849
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kinkon|R:in|L:o",
+   "runtime_after_expected_typed": "R:kinkonin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kolĉikino",
+   "target": "kolĉikin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    18310
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kolĉik|R:in|L:o",
+   "runtime_after_expected_typed": "R:kolĉikin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "koniino",
+   "target": "koniin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    50687
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:koni|R:in|L:o",
+   "runtime_after_expected_typed": "R:koniin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kreatinino",
+   "target": "kreatinin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    50906
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kreatin|R:in|L:o",
+   "runtime_after_expected_typed": "R:kreatinin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kumarino",
+   "target": "kumarin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51082
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kumar|R:in|L:o",
+   "runtime_after_expected_typed": "R:kumarin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kurkumino",
+   "target": "kurkumin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51120
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kurkum|R:in|L:o",
+   "runtime_after_expected_typed": "R:kurkumin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "kvasiino",
+   "target": "kvasiin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51158
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:kvasi|R:in|L:o",
+   "runtime_after_expected_typed": "R:kvasiin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "legumino",
+   "target": "legumin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    21783
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:legum|R:in|L:o",
+   "runtime_after_expected_typed": "R:legumin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "lignino",
+   "target": "lignin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51434
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:lign|R:in|L:o",
+   "runtime_after_expected_typed": "R:lignin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "luteino",
+   "target": "lutein/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51619
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:lute|R:in|L:o",
+   "runtime_after_expected_typed": "R:lutein/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "melanino",
+   "target": "melanin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    51870
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:melan|R:in|L:o",
+   "runtime_after_expected_typed": "R:melanin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "migdalino",
+   "target": "migdalin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    52025
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:migdal|R:in|L:o",
+   "runtime_after_expected_typed": "R:migdalin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "mjelino",
+   "target": "mjelin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    52129
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:mjel|R:in|L:o",
+   "runtime_after_expected_typed": "R:mjelin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "oleino",
+   "target": "olein/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    52695
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:ole|R:in|L:o",
+   "runtime_after_expected_typed": "R:olein/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "ostino",
+   "target": "ostin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    52870
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:ost|R:in|L:o",
+   "runtime_after_expected_typed": "R:ostin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "pankreatino",
+   "target": "pankreatin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    52997
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:pankreat|R:in|L:o",
+   "runtime_after_expected_typed": "R:pankreatin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "papajino",
+   "target": "papajin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53017
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:papaj|R:in|L:o",
+   "runtime_after_expected_typed": "R:papajin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "papaverino",
+   "target": "papaverin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53022
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:papaver|R:in|L:o",
+   "runtime_after_expected_typed": "R:papaverin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "papavino",
+   "target": "papavin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53020
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:papav|R:in|L:o",
+   "runtime_after_expected_typed": "R:papavin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "pektino",
+   "target": "pektin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53191
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:pekt|R:in|L:o",
+   "runtime_after_expected_typed": "R:pektin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "pilokarpino",
+   "target": "pilokarpin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53385
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:pilokarp|R:in|L:o",
+   "runtime_after_expected_typed": "R:pilokarpin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "piretrino",
+   "target": "piretrin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53444
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:piretr|R:in|L:o",
+   "runtime_after_expected_typed": "R:piretrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "poezino",
+   "target": "poezin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    53627
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:poez|R:in|L:o",
+   "runtime_after_expected_typed": "R:poezin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "pseŭdoefedrino",
+   "target": "pseŭdo/efedrin/o",
+   "typed_roles": "RRL",
+   "learner_lines": [
+    58136
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:pseŭdo|R:efedr|R:in|L:o",
+   "runtime_after_expected_typed": "R:pseŭdo/R:efedrin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "renino",
+   "target": "renin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    54301
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:ren|R:in|L:o",
+   "runtime_after_expected_typed": "R:renin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "ricinino",
+   "target": "ricinin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    54393
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:ricin|R:in|L:o",
+   "runtime_after_expected_typed": "R:ricinin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "rozanilino",
+   "target": "roz/anilin/o",
+   "typed_roles": "RRL",
+   "learner_lines": [
+    54530
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:roz|R:anil|R:in|L:o",
+   "runtime_after_expected_typed": "R:roz/R:anilin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "rutino",
+   "target": "rutin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    34793,
+    54568
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:rut|R:in|L:o",
+   "runtime_after_expected_typed": "R:rutin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "sakarino",
+   "target": "sakarin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    34885
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:sakar|R:in|L:o",
+   "runtime_after_expected_typed": "R:sakarin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "salikino",
+   "target": "salikin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    54621
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:salik|R:in|L:o",
+   "runtime_after_expected_typed": "R:salikin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "santalino",
+   "target": "santalin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    54673
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:santal|R:in|L:o",
+   "runtime_after_expected_typed": "R:santalin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "sekreciino",
+   "target": "sekreciin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    54793
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:sekreci|R:in|L:o",
+   "runtime_after_expected_typed": "R:sekreciin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "simpatino",
+   "target": "simpatin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55014
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:simpat|R:in|L:o",
+   "runtime_after_expected_typed": "R:simpatin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "stimulino",
+   "target": "stimulin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55461
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:stimul|R:in|L:o",
+   "runtime_after_expected_typed": "R:stimulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "striknino",
+   "target": "striknin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    38127
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:strikn|R:in|L:o",
+   "runtime_after_expected_typed": "R:striknin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "strofantino",
+   "target": "strofantin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55534
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:strofant|R:in|L:o",
+   "runtime_after_expected_typed": "R:strofantin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "suberino",
+   "target": "suberin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55564
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:suber|R:in|L:o",
+   "runtime_after_expected_typed": "R:suberin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tanino",
+   "target": "tanin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    39909
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:tan|R:in|L:o",
+   "runtime_after_expected_typed": "R:tanin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tebaino",
+   "target": "tebain/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55968
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:teba|R:in|L:o",
+   "runtime_after_expected_typed": "R:tebain/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tefoliino",
+   "target": "tefoliin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    58547
+   ],
+   "authority_source": "PROJECT_REVIEW_OVERRIDE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "reviewed_exact_localized_annotation",
+   "runtime_before_typed": "R:te|R:foli|R:in|L:o",
+   "runtime_after_expected_typed": "R:tefoliin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   },
+   "exact_annotation": {
+    "piece": "tefoliin",
+    "glosses": {
+     "ja": "テオフィリン",
+     "zh": "茶碱",
+     "ko": "테오필린"
+    },
+    "review_basis": "Conservative synonym-level Ruby display. Academic te/foliin/o and PIV's internal te+foli+ino analysis are recorded counterevidence; tefoliin is not asserted to be an official indivisible PIV root."
+   },
+   "audited_academic_target": "te/foliin/o",
+   "authority_adjustment": "project_reviewed_override"
+  },
+  {
+   "surface": "teino",
+   "target": "tein/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    55964
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:te|R:in|L:o",
+   "runtime_after_expected_typed": "R:tein/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "teobromino",
+   "target": "teobromin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    56065
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:teobrom|R:in|L:o",
+   "runtime_after_expected_typed": "R:teobromin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "terebintino",
+   "target": "terebintin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    56093
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:terebint|R:in|L:o",
+   "runtime_after_expected_typed": "R:terebintin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tiroidstimulino",
+   "target": "tiroid/stimulin/o",
+   "typed_roles": "RRL",
+   "learner_lines": [
+    56235
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:tiroid|R:stimul|R:in|L:o",
+   "runtime_after_expected_typed": "R:tiroid/R:stimulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tuberkulinizado",
+   "target": "tuberkulin/iz/ad/o",
+   "typed_roles": "RRRL",
+   "learner_lines": [
+    56523
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:tuberkul|R:in|R:iz|R:ad|L:o",
+   "runtime_after_expected_typed": "R:tuberkulin/R:iz/R:ad/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "tuberkulino",
+   "target": "tuberkulin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    41711
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:tuberkul|R:in|L:o",
+   "runtime_after_expected_typed": "R:tuberkulin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "vanilino",
+   "target": "vanilin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    56728
+   ],
+   "authority_source": "PAIRED_ACADEMIC_LINE",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:vanil|R:in|L:o",
+   "runtime_after_expected_typed": "R:vanilin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  },
+  {
+   "surface": "vegetalino",
+   "target": "vegetalin/o",
+   "typed_roles": "RL",
+   "learner_lines": [
+    42834
+   ],
+   "authority_source": "PEJVO_ORIGINAL_EXACT_THEN_PAIRED_ACADEMIC",
+   "rule_mode": "exact_typed_case_sensitive",
+   "gloss_mode": "existing_localized_csv_or_word_anno",
+   "runtime_before_typed": "R:vegetal|R:in|L:o",
+   "runtime_after_expected_typed": "R:vegetalin/L:o",
+   "semantic_change": "collapse_rejected_fake_internal_boundaries",
+   "html_intersection": {
+    "annotated_token_count": 0,
+    "visible_text_token_count": 0,
+    "files": {}
+   }
+  }
+ ]
+}

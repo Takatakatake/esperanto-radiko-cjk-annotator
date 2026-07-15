@@ -17,6 +17,7 @@ from gen_replacement import (
     generate,
     lp,
     normalize_esperanto_surface_notation,
+    validate_multilingual_word_anno_boundaries,
 )
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 from atomic_json import atomic_file_copy, atomic_json_dump
@@ -28,6 +29,43 @@ BASE_SETTINGS_PATH = os.path.join(
 BASE_SETTINGS_MANIFEST_PATH = os.path.join(
     BASE, "_analysis_20260625", "_base_stemming_settings_manifest.json",
 )
+ATOMIC_ROOT_FAMILY_PATH = os.path.join(
+    BASE, "_analysis_20260625", "localized_atomic_root_families.json",
+)
+with open(lp(ATOMIC_ROOT_FAMILY_PATH), encoding="utf-8") as _handle:
+    ATOMIC_ROOT_FAMILY_REVIEW = json.load(_handle)
+if ATOMIC_ROOT_FAMILY_REVIEW.get("schema_version") != 1:
+    raise ValueError("unsupported localized atomic-root family schema")
+_atomic_families = ATOMIC_ROOT_FAMILY_REVIEW.get("families", [])
+_atomic_families_compact = json.dumps(
+    _atomic_families, ensure_ascii=False, separators=(",", ":"),
+).encode("utf-8")
+if (
+    ATOMIC_ROOT_FAMILY_REVIEW.get("learner_sha256")
+    != "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0"
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("academic_sha256")
+    != "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D"
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("case_policy")
+    != ["lower", "initial", "upper"]
+    or len(_atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_families")
+    or sum(len(row.get("morph_targets", [])) for row in _atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_morph_targets")
+    or sum(len(row.get("authority", [])) for row in _atomic_families)
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("expected_authority_rows")
+    or hashlib.sha256(_atomic_families_compact).hexdigest().upper()
+    != ATOMIC_ROOT_FAMILY_REVIEW.get("families_sha256")
+    or ATOMIC_ROOT_FAMILY_REVIEW.get("families_sha256")
+    != "B047D6177321BC1E3B0C73D57B57A8B20EA79679E309AC8E3BCFBAABCF57BB61"
+):
+    raise ValueError("localized atomic-root family identity/count drift")
+ATOMIC_ROOT_LEGACY_PREFIXES = []
+for _family in _atomic_families:
+    _legacy = tuple(_family.get("legacy_pieces", []))
+    if not _legacy or "".join(_legacy) != _family.get("root"):
+        raise ValueError(f"invalid localized atomic-root family: {_family!r}")
+    if "lower" in _family.get("productive_left_cases", []):
+        ATOMIC_ROOT_LEGACY_PREFIXES.append(_legacy)
 
 
 def load_pinned_base_settings():
@@ -124,7 +162,7 @@ with open(lp(strict_fix_path), 'rb') as f:
 strict_fix_manifest=json.loads(strict_fix_raw.decode('utf-8'))
 if (
     strict_fix_manifest.get('schema_version') != 1
-    or strict_fix_manifest.get('reference_schema_version') != 4
+    or strict_fix_manifest.get('reference_schema_version') != 5
 ):
     raise ValueError('unsupported strict gold-reference fix manifest schema')
 strict_gold_fixes=strict_fix_manifest.get('entries', [])
@@ -184,9 +222,12 @@ for entry in confirmed:
 
 _NOMINAL=["o","oj","on","ojn","a","aj","an","ajn","e","en"]
 def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
-                    exact_only=False, case_sensitive=False,
+                    ruby_left_boundary=False, exact_only=False,
+                    case_sensitive=False,
                     allow_substring=False, typed_roles=None,
-                    context_annotation=None):
+                    context_annotation=None, ruby_context_annotation=None,
+                    ruby_track_only=False, kanji_track_only=False,
+                    ruby_only=False):
     """target分解→設定エントリ。屈折語尾はgold照合で生成:
       候補(名詞/形容詞/副詞語尾)のうち、stem+語尾がgoldに「別分解で」存在する形だけ除外。
       → 多品詞語根(esperant=名詞esperanto/形容詞esperanta/副詞esperante)の兄弟形を1項目から自動カバーしつつ、
@@ -195,6 +236,10 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
     """
     pieces=[p for p in decomp.split('/') if p]
     if not pieces: return None
+    if ruby_left_boundary and (boundary_only or boundary_with_noop_guard):
+        raise ValueError("ruby_left_boundary conflicts with whole-word boundary")
+    if ruby_left_boundary and not exact_only:
+        raise ValueError("ruby_left_boundary requires an exact reviewed prefix")
     if typed_roles is not None:
         if not exact_only:
             raise ValueError("typed_roles requires exact_only")
@@ -202,6 +247,31 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
             raise ValueError(f"invalid typed_roles {typed_roles!r} for {decomp!r}")
     if context_annotation is not None and not isinstance(context_annotation, str):
         raise ValueError("context_annotation must be a reserved word_anno key")
+    if (
+        ruby_context_annotation is not None
+        and not isinstance(ruby_context_annotation, str)
+    ):
+        raise ValueError(
+            "ruby_context_annotation must be a reserved word_anno key"
+        )
+    if context_annotation is not None and ruby_context_annotation is not None:
+        raise ValueError("context annotations are mutually exclusive")
+    if ruby_track_only and kanji_track_only:
+        raise ValueError(
+            "ruby_track_only and kanji_track_only are mutually exclusive"
+        )
+    if ruby_only and (ruby_track_only or kanji_track_only):
+        raise ValueError(
+            "legacy ruby_only cannot be combined with track-only metadata"
+        )
+    if kanji_track_only and (
+        ruby_left_boundary or ruby_context_annotation is not None
+    ):
+        raise ValueError(
+            "kanji_track_only cannot carry Ruby-only boundary/context metadata"
+        )
+    if ruby_only and (not exact_only or typed_roles is None):
+        raise ValueError("ruby_only requires an exact typed rule")
     nosl=''.join(pieces)
     last=pieces[-1]
     if exact_only:
@@ -209,7 +279,9 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
         suffixes=["ne"]
         if len(pieces) == 1:
             suffixes.append("atomic_no_split")
-        if boundary_only or boundary_with_noop_guard:
+        if ruby_left_boundary:
+            suffixes.append("ruby_left_boundary")
+        elif boundary_only or boundary_with_noop_guard:
             suffixes.append("word_boundary")
         if boundary_with_noop_guard:
             suffixes.append("boundary_noop_guard")
@@ -252,7 +324,11 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
     # must also be whole-word bounded: an unbounded high-priority ``fer/i``
     # sibling otherwise consumes the tail of unrelated ``ofer/i``.  A future
     # deliberately productive-in-compounds entry must opt in explicitly.
-    if not allow_substring and "word_boundary" not in suffixes:
+    if (
+        not allow_substring
+        and "word_boundary" not in suffixes
+        and "ruby_left_boundary" not in suffixes
+    ):
         suffixes.append("word_boundary")
     if case_sensitive:
         suffixes.append("case_sensitive")
@@ -260,9 +336,24 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
         suffixes.append(f"typed_roles:{typed_roles}")
     if context_annotation is not None:
         suffixes.append(f"context_annotation:{context_annotation}")
+    if ruby_context_annotation is not None:
+        suffixes.append(
+            f"ruby_context_annotation:{ruby_context_annotation}"
+        )
+    if ruby_track_only:
+        suffixes.append("ruby_track_only")
+    if kanji_track_only:
+        suffixes.append("kanji_track_only")
+    if ruby_only:
+        suffixes.append("ruby_only")
     # Confirmed human adjudications must beat same-surface generated rules
     # (+5000 in gen_replacement) without crossing the next length tier.
     prio=confirmed_priority_for_stem(stem_nosl)
+    if ruby_left_boundary:
+        # A token-left proper-root rule must precede a same-stem reusable
+        # compositional fallback (Bonaer vs bon/aer). One point stays inside
+        # the same length tier while making the intended precedence explicit.
+        prio += 1
     return {
         'stem': stem,
         'stem_nosl': stem_nosl,
@@ -271,10 +362,13 @@ def make_correction(decomp, boundary_only=False, boundary_with_noop_guard=False,
         'word_nosl': nosl,
         'case_sensitive': case_sensitive,
         'exact_only': exact_only,
+        'ruby_track_only': ruby_track_only,
+        'kanji_track_only': kanji_track_only,
     }
 
 # 同一語幹は語尾を和集合マージ(例 sugesti/o + sugesti/a + sugesti/i → 名詞+形容詞+動詞)
 corrs={}
+casefold_productive_stems={}
 remove_nosl_casefold=set(); remove_nosl_exact_case=set()
 exact_only_remove_nosl_casefold=set()
 exact_only_remove_nosl_exact_case=set()
@@ -283,24 +377,70 @@ for e in confirmed:
         e['target'],
         bool(e.get('boundary_only')),
         bool(e.get('boundary_with_noop_guard')),
+        bool(e.get('ruby_left_boundary')),
         bool(e.get('exact_only')),
         bool(e.get('case_sensitive')),
         bool(e.get('allow_substring')),
         e.get('typed_roles'),
         e.get('context_annotation'),
+        e.get('ruby_context_annotation'),
+        bool(e.get('ruby_track_only')),
+        bool(e.get('kanji_track_only')),
+        bool(e.get('ruby_only')),
     )
     if not c: continue
     sn=c['stem_nosl']
-    if sn in corrs and corrs[sn]['stem']==c['stem']:
-        ex=corrs[sn]
+    track_scope = (
+        "ruby_track_only" if c["ruby_track_only"] else
+        "kanji_track_only" if c["kanji_track_only"] else None
+    )
+    if not c['case_sensitive'] and not c['exact_only']:
+        folded=sn.casefold()
+        decomposition=tuple(
+            piece.casefold() for piece in c['stem'].split('/') if piece
+        )
+        managed=bool(e.get('corpus_managed'))
+        previous=casefold_productive_stems.setdefault(
+            (track_scope or "shared", folded), {}
+        )
+        if previous and decomposition not in previous and (
+            managed or any(previous.values())
+        ):
+            raise ValueError(
+                "managed case-insensitive productive decomposition conflicts "
+                f"for {folded!r}: {tuple(previous)!r} vs {decomposition!r}"
+            )
+        previous[decomposition]=previous.get(decomposition, False) or managed
+    # A Ruby-left atomic root and its bounded known morphology intentionally
+    # share slashless spelling but are separate rules. Merging their actions
+    # would create an impossible left+whole-boundary hybrid.
+    corr_key = (
+        ("ruby_left_boundary", sn)
+        if "ruby_left_boundary" in c["suffixes"] else sn
+    )
+    if e.get("localized_compositional"):
+        corr_key = ("localized_compositional", sn)
+    if track_scope is not None:
+        corr_key = (track_scope, corr_key)
+    if corr_key in corrs and corrs[corr_key]['stem']==c['stem']:
+        ex=corrs[corr_key]
         for s in c['suffixes']:
             if s not in ex['suffixes']: ex['suffixes'].append(s)
         ex['prio']=max(ex['prio'], c['prio'])
+    elif corr_key in corrs and track_scope is not None:
+        raise ValueError(
+            f"track-specific correction key collision: {corr_key!r}: "
+            f"{corrs[corr_key]['stem']!r} vs {c['stem']!r}"
+        )
     else:
-        corrs[sn]=c
+        corrs[corr_key]=c
     # A case-sensitive proper name replaces only an old row with the same
     # written case.  Deleting its casefold sibling would erase legitimate
     # homographs (Sin must coexist with grammatical si/n; Kacumi with kacumi).
+    if track_scope is not None:
+        # Track-scoped rows must not delete shared pinned settings: the
+        # opposite generator skips this row and still needs the common base.
+        continue
     if c['exact_only']:
         removal_set = (
             exact_only_remove_nosl_exact_case
@@ -361,6 +501,26 @@ ESTEM=r"\E_stem.json"
 ROOTS=r"\root_list.txt"; FINAL=r"\置換リスト_ルビ.json"
 STEM=r"\分解設定.json"; USER=r"\替换后文字列(汉字)の使用者自定义设置(基本上完全不推荐).json"; FMT='HTML格式_Ruby文字_大小调整'
 
+WORD_ANNO_BOUNDARY_MANIFEST_PATH = os.path.join(
+    BASE, "_analysis_20260625", "_word_anno_boundary_scope_manifest.json",
+)
+with open(lp(WORD_ANNO_BOUNDARY_MANIFEST_PATH), encoding="utf-8") as handle:
+    WORD_ANNO_BOUNDARY_MANIFEST = json.load(handle)
+WORD_ANNO_BY_LANGUAGE = {}
+for _language in WORD_ANNO_BOUNDARY_MANIFEST.get("languages", []):
+    with open(lp(OUT + f"\\word_anno_{_language}.json"), encoding="utf-8") as handle:
+        WORD_ANNO_BY_LANGUAGE[_language] = json.load(handle)
+WORD_ANNO_BOUNDARY_AUTHORITY = validate_multilingual_word_anno_boundaries(
+    WORD_ANNO_BY_LANGUAGE,
+    WORD_ANNO_BOUNDARY_MANIFEST,
+)
+print(
+    "[word_anno boundary] "
+    f"authority_keys={len(WORD_ANNO_BOUNDARY_AUTHORITY)} "
+    f"sha256={WORD_ANNO_BOUNDARY_MANIFEST['authority_sha256']}",
+    flush=True,
+)
+
 
 def prepare_settings(settings_path):
     with open(lp(settings_path),encoding='utf-8') as f:
@@ -377,8 +537,190 @@ def prepare_settings(settings_path):
         exact_only_remove_nosl_exact_case,
         exact_only_remove_nosl_casefold,
     )
+    # Remove stale settings whose leading pieces spell a root reviewed as
+    # atomic in lowercase (nov/jork...). Bonaer is intentionally excluded:
+    # its learner-authoritative bon/aer composition must remain reusable in
+    # lowercase and token-internal forms.
+    filtered=[]
+    for row in settings:
+        if not isinstance(row, list) or len(row) != 3:
+            filtered.append(row)
+            continue
+        pieces=tuple(piece for piece in str(row[0]).split('/') if piece)
+        if any(
+            pieces[:len(prefix)] == prefix
+            for prefix in ATOMIC_ROOT_LEGACY_PREFIXES
+        ):
+            removed += 1
+            continue
+        filtered.append(row)
+    settings=filtered
     for sn,c in corrs.items():
         settings.append([c['stem'], c['prio'], list(c['suffixes'])])
+    _ruby_left_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3
+        and 'ruby_left_boundary' in row[2]
+    ]
+    _ruby_left_actions = {row[0]: set(row[2]) for row in _ruby_left_rows}
+    if _ruby_left_actions != {
+        'Bonaer': {
+            'ne', 'atomic_no_split', 'ruby_left_boundary', 'case_sensitive',
+            'ruby_context_annotation:@atomic-family:Bonaer',
+        },
+        'BONAER': {
+            'ne', 'atomic_no_split', 'ruby_left_boundary', 'case_sensitive',
+            'ruby_context_annotation:@atomic-family:BONAER',
+        },
+        'novjork': {'ne', 'atomic_no_split', 'ruby_left_boundary'},
+    }:
+        raise ValueError(f'Ruby-left family settings drift: {_ruby_left_rows!r}')
+    _novjork_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3
+        and str(row[0]).casefold() in {'novjork', 'novjork/an'}
+    ]
+    _novjork_left = [
+        row for row in _novjork_rows
+        if 'ruby_left_boundary' in row[2]
+    ]
+    _novjork_morph = [
+        row for row in _novjork_rows
+        if row[0] == 'novjork/an'
+        and 'word_boundary' in row[2]
+        and 'ruby_track_only' in row[2]
+        and any(action in row[2] for action in _NOMINAL)
+    ]
+    _novjork_shared_morph = [
+        row for row in _novjork_rows
+        if row[0] == 'novjork'
+        if 'word_boundary' in row[2]
+        and 'ruby_track_only' not in row[2]
+        and 'kanji_track_only' not in row[2]
+        and any(action in row[2] for action in _NOMINAL)
+    ]
+    if (
+        len(_novjork_left) != 1
+        or set(_novjork_left[0][2])
+        != {'ne', 'atomic_no_split', 'ruby_left_boundary'}
+        or len(_novjork_morph) != 1
+        or len(_novjork_shared_morph) != 1
+        or any(
+            'ruby_left_boundary' in row[2] and 'word_boundary' in row[2]
+            for row in _novjork_rows
+        )
+    ):
+        raise ValueError(
+            f'Novjork Ruby-left/morph settings collapsed: {_novjork_rows!r}'
+        )
+    _bonaer_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3
+        and str(row[0]).replace('/', '').casefold() == 'bonaer'
+    ]
+    _bonaer_compositional = [
+        row for row in _bonaer_rows
+        if row[0] == 'bon/aer' and set(row[2]) == {'ne'}
+    ]
+    _bonaer_morph = [
+        row for row in _bonaer_rows
+        if row[0] == 'bonaer'
+        and 'word_boundary' in row[2]
+        and 'ruby_context_annotation:@atomic-family:bonaer' in row[2]
+        and any(action in row[2] for action in _NOMINAL)
+    ]
+    _bonaer_left = [
+        row for row in _bonaer_rows if 'ruby_left_boundary' in row[2]
+    ]
+    if (
+        len(_bonaer_compositional) != 1
+        or len(_bonaer_morph) != 1
+        or 'ruby_track_only' in _bonaer_morph[0][2]
+        or 'kanji_track_only' in _bonaer_morph[0][2]
+        or len(_bonaer_left) != 2
+        or min(row[1] for row in _bonaer_left)
+        <= _bonaer_compositional[0][1]
+    ):
+        raise ValueError(
+            f'Bonaer compositional/atomic ordering drift: {_bonaer_rows!r}'
+        )
+    _ruby_track_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3
+        and 'ruby_track_only' in row[2]
+    ]
+    _strict_ruby_track_entries = {
+        entry['target']: entry
+        for entry in strict_gold_fixes
+        if entry.get('ruby_track_only')
+    }
+    _expected_ruby_track_stems = {
+        'novjork/an', *_strict_ruby_track_entries,
+    }
+    if (
+        {row[0] for row in _ruby_track_rows}
+        != _expected_ruby_track_stems
+        or len(_ruby_track_rows) != len(_expected_ruby_track_stems)
+    ):
+        raise ValueError(
+            f'localized Ruby-track morphology drift: {_ruby_track_rows!r}'
+        )
+    for _row in _ruby_track_rows:
+        if _row[0] == 'novjork/an':
+            _expected_actions = set(_NOMINAL) | {
+                'word_boundary', 'ruby_track_only',
+            }
+        else:
+            _entry = _strict_ruby_track_entries[_row[0]]
+            _expected_actions = {
+                'ne', 'word_boundary', 'case_sensitive',
+                f"typed_roles:{_entry['typed_roles']}", 'ruby_track_only',
+            }
+        if set(_row[2]) != _expected_actions:
+            raise ValueError(
+                f'localized Ruby-track action drift: {_row!r}'
+            )
+    _kanji_track_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3
+        and 'kanji_track_only' in row[2]
+    ]
+    if (
+        len(_kanji_track_rows) != 1
+        or _kanji_track_rows[0][0] != 'pro/mil'
+        or set(_kanji_track_rows[0][2])
+        != set(_NOMINAL) | {'word_boundary', 'kanji_track_only'}
+    ):
+        raise ValueError(
+            f'final 5E Kanji-track morphology drift: {_kanji_track_rows!r}'
+        )
+    _ruby_only_rows = [
+        row for row in settings
+        if isinstance(row, list) and len(row) == 3 and 'ruby_only' in row[2]
+    ]
+    if (
+        len(_ruby_only_rows) != 1
+        or _ruby_only_rows[0][0] != 'promil/o'
+        or set(_ruby_only_rows[0][2]) != {
+            'ne', 'word_boundary', 'case_sensitive',
+            'typed_roles:RL', 'ruby_only',
+        }
+        or any(
+            'ruby_only' in row[2]
+            and (
+                'ruby_track_only' in row[2]
+                or 'kanji_track_only' in row[2]
+            )
+            for row in settings
+            if isinstance(row, list) and len(row) == 3
+        )
+        or any(
+            'ruby_track_only' in row[2] and 'kanji_track_only' in row[2]
+            for row in settings
+            if isinstance(row, list) and len(row) == 3
+        )
+    ):
+        raise ValueError(f'5E Ruby-only promil setting drift: {_ruby_only_rows!r}')
     return settings, removed
 
 def process(key, write):
@@ -391,7 +733,7 @@ def process(key, write):
     settings, removed = prepare_settings(sp)
     tmp=DATA+r"\_settings_confirmed_tmp.json"
     with open(lp(tmp),'w',encoding='utf-8') as g: json.dump(settings,g,ensure_ascii=False,indent=1)
-    with open(lp(OUT+f"\\word_anno_{lang}.json"),encoding='utf-8') as f: word_anno=json.load(f)
+    word_anno=WORD_ANNO_BY_LANGUAGE[lang]
     combined=generate(APPDIR,DATA,DATA+csvn,tmp,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_anno)
     if write:
         atomic_file_copy(lp(sp), lp(sp+".bak_preTier"+str(TIER)+"confirmed"))

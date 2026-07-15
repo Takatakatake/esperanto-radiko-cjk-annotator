@@ -9,6 +9,10 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 WRITE = '--write' in sys.argv
 BASE = str(Path(__file__).resolve().parents[1])
+sys.path.insert(0, os.path.join(BASE, '_analysis_20260625'))
+from build_fake_coarse_5e_transition_review import (
+    validate as validate_fake_coarse_5e_transition_review,
+)
 ROOT = str(Path(BASE).parent)
 KM = os.environ.get(
     'ESP_KANJI_MASTER_PATH',
@@ -87,6 +91,44 @@ print(f"語単位(注入版→word_kanji): {len(wk_new)} (形不一致スキッ�
 print("  例:", {k: ''.join(g for _, g in v) for k, v in list(wk_new.items())[:5]})
 amp = [k for k in wk_new if k.startswith('amplifik')]
 print("  amplifik系:", {k: ''.join(g for _, g in wk_new[k]) for k in amp[:3]})
+if bad:
+    raise SystemExit(
+        f"Kanji master resync aborted: {bad} injected forms have mismatched "
+        "Esperanto/Kanji piece counts"
+    )
+
+# The read-only Kanji master predates the final 5E learner delta. Derive the
+# reviewed pro/mil stem locally from two already pinned root assignments; do
+# not edit or guess an external master entry. The paired transition remains
+# the authority that Ruby is coarse promil while Kanji is deep pro/mil.
+_final_5e_path = os.path.join(
+    BASE, '_analysis_20260625', '_fake_coarse_5e_transition_review.json',
+)
+with open(LP(_final_5e_path), encoding='utf-8') as _fp:
+    _final_5e = json.load(_fp)
+validate_fake_coarse_5e_transition_review(_final_5e)
+_promil_entry = _final_5e['entries'][0]
+_promil_stem = '/'.join(
+    piece for piece in _promil_entry['learner_decomposition'].split('/')
+    if piece and piece not in GRAM
+)
+_promil_pairs = [
+    ['pro', authority.get('pro')],
+    ['mil', authority.get('mil')],
+]
+if (
+    _promil_entry.get('learner_line') != 53890
+    or _promil_stem != 'pro/mil'
+    or _promil_pairs != [['pro', '因ᴾ'], ['mil', '千']]
+):
+    raise SystemExit(
+        f'5E promil Kanji authority drift: stem={_promil_stem!r} '
+        f'pairs={_promil_pairs!r}'
+    )
+if _promil_stem in wk_new and wk_new[_promil_stem] != _promil_pairs:
+    raise SystemExit('5E pro/mil conflicts with pinned injected word_kanji')
+wk_new[_promil_stem] = _promil_pairs
+print(f"5E reviewed word_kanji override: {_promil_stem} -> {_promil_pairs}")
 
 if WRITE:
     # 3) app_data CSV(3アプリ) + out/kanji_root.csv

@@ -187,7 +187,7 @@
       "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
       "token": "Eeeeeeej",
       "lines": [
-        37902
+        37898
       ],
       "expected_count": 1,
       "category": "onomatopoeia",
@@ -207,11 +207,11 @@
       "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
       "token": "No",
       "lines": [
-        31967,
-        31988,
-        31997,
-        32005,
-        32117
+        31965,
+        31986,
+        31995,
+        32003,
+        32114
       ],
       "expected_count": 5,
       "category": "quoted_english_phrase",
@@ -221,7 +221,7 @@
       "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
       "token": "a-a-a-a-a-a-blo",
       "lines": [
-        37929
+        37925
       ],
       "expected_count": 1,
       "category": "grammar_or_pronunciation_notation",
@@ -231,7 +231,7 @@
       "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
       "token": "ĵan",
       "lines": [
-        40310
+        40306
       ],
       "expected_count": 1,
       "category": "pronunciation_transcription",
@@ -631,11 +631,11 @@
       "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
       "token": "No",
       "lines": [
-        697,
-        718,
-        727,
-        735,
-        847
+        695,
+        716,
+        725,
+        733,
+        844
       ],
       "expected_count": 5,
       "category": "quoted_english_phrase",

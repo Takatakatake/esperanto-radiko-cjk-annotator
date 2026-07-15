@@ -1,0 +1,30 @@
+{
+ "schema_version": 1,
+ "expected_entries": 2,
+ "entries": [
+  {
+   "learner_line": 59475,
+   "surface": "diskreditigi",
+   "academic_decomposition": "dis/kredit/ig/i",
+   "selected_decomposition": "diskredit/ig/i",
+   "decision": "project_piv_long_root",
+   "evidence": "PIV2020 line 23034 explicitly heads diskredit/i.",
+   "reason": "The paired academic dis/kredit/ig/i is over-analysis for conservative Ruby; retain the attested long root diskredit and the productive ig/i suffixes."
+  },
+  {
+   "learner_line": 58547,
+   "surface": "tefoliino",
+   "academic_decomposition": "te/foliin/o",
+   "selected_decomposition": "tefoliin/o",
+   "decision": "project_conservative_ruby_display_override",
+   "evidence": "Academic has te/foliin/o. PIV2020 heads teofilin/o and shows te+foli+ino only as a derivation under foli/o; tefoliin is not itself a PIV headword.",
+   "counterevidence": "The PIV derivation supports internal te+foli+ino morphology, so this is explicitly a conservative annotation-display choice, not a claim that tefoliin is an official indivisible root.",
+   "localized_gloss": {
+    "JA": "テオフィリン",
+    "ZH": "茶碱",
+    "KO": "테오필린"
+   },
+   "reason": "Standalone foliin lacks an honest localized gloss in all three apps; one exact synonym-level Ruby avoids both invented annotation text and the learner's still deeper fake split."
+  }
+ ]
+}

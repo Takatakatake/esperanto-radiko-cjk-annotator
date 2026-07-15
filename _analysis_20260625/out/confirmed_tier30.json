@@ -1168,10 +1168,6 @@
   "target": "nomra"
  },
  {
-  "w": "novjorko",
-  "target": "nov/jork/o"
- },
- {
   "w": "numazu",
   "target": "numazu"
  },
@@ -2036,10 +2032,6 @@
   "target": "ni/a/land/e"
  },
  {
-  "w": "novjorkon",
-  "target": "nov/jork/on"
- },
- {
   "w": "olun",
   "target": "olu/n"
  },
@@ -2478,10 +2470,6 @@
   "target": "hokkajd/a"
  },
  {
-  "w": "hokkajdon",
-  "target": "hokkajdo/n"
- },
- {
   "w": "janĉjon",
   "target": "janĉjo/n"
  },
@@ -2513,4200 +2501,4200 @@
   "w": "RenKEJtiĝon",
   "target": "RenKEJtiĝo/n",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "Taranaki",
   "target": "Taranaki",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "s-ino",
   "target": "s-ino",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "Urewera",
   "target": "Urewera",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "Whanganui",
   "target": "Whanganui",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "Egmont",
   "target": "Egmont",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "ioj",
   "target": "ioj",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "iojn",
   "target": "iojn",
   "exact_only": true,
-  "boundary_only": true,
-  "corpus_managed": true
+  "corpus_managed": true,
+  "boundary_only": true
  },
  {
   "w": "UK",
   "target": "UK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SAT",
   "target": "SAT",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UEA",
   "target": "UEA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "JEI",
   "target": "JEI",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "IJK",
   "target": "IJK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TEJO",
   "target": "TEJO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UN",
   "target": "UN",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KLEG",
   "target": "KLEG",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KS",
   "target": "KS",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "EPA",
   "target": "EPA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ILEI",
   "target": "ILEI",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LKK",
   "target": "LKK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PS",
   "target": "PS",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PS2.0",
   "target": "PS2.0",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Google",
   "target": "Google",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DeepL",
   "target": "DeepL",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ro",
   "target": "s-ro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "S-ro",
   "target": "S-ro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "d-ro",
   "target": "d-ro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "D-ro",
   "target": "D-ro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "prof",
   "target": "prof",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Prof",
   "target": "Prof",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Pop Mart",
   "target": "Pop Mart",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Labubu",
   "target": "Labubu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Global Voices",
   "target": "Global Voices",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SADD",
   "target": "SADD",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Suvam Pal",
   "target": "Suvam Pal",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sonja Lang",
   "target": "Sonja Lang",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alberto Crescenti",
   "target": "Alberto Crescenti",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hangeul",
   "target": "Hangeul",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "EU",
   "target": "EU",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "AFP",
   "target": "AFP",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TaiwanPlus",
   "target": "TaiwanPlus",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ChatGPT",
   "target": "ChatGPT",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Juan Pablo Schiavi",
   "target": "Juan Pablo Schiavi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hankook Research",
   "target": "Hankook Research",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SKY",
   "target": "SKY",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PDF",
   "target": "PDF",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "JPEU",
   "target": "JPEU",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "JJJ",
   "target": "JJJ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "AK",
   "target": "AK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "JEK",
   "target": "JEK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TTT",
   "target": "TTT",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "AEKO",
   "target": "AEKO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UNESKO",
   "target": "UNESKO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "GPS",
   "target": "GPS",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HK",
   "target": "HK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PEA",
   "target": "PEA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KAEM",
   "target": "KAEM",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "IKU",
   "target": "IKU",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ERAJ",
   "target": "ERAJ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "N-ro",
   "target": "N-ro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "GV",
   "target": "GV",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SP",
   "target": "SP",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Johano Paŭlo Schiavi",
   "target": "Johano Paŭlo Schiavi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Feminism With Him",
   "target": "Feminism With Him",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Feminism with Him",
   "target": "Feminism with Him",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "John Kuk",
   "target": "John Kuk",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lee Han",
   "target": "Lee Han",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "FM Korea",
   "target": "FM Korea",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "The Meritocracy Trap",
   "target": "The Meritocracy Trap",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Korea meritokratio",
   "target": "Korea meritokratio",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Korean Meritocracy",
   "target": "Korean Meritocracy",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ISO",
   "target": "ISO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Discord",
   "target": "Discord",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SC",
   "target": "SC",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "RO",
   "target": "RO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UAE",
   "target": "UAE",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CEO",
   "target": "CEO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CGTN",
   "target": "CGTN",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DLT",
   "target": "DLT",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "NBA",
   "target": "NBA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LLM",
   "target": "LLM",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "NHK",
   "target": "NHK",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SOJO",
   "target": "SOJO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PEJ",
   "target": "PEJ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "NEspA",
   "target": "NEspA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "MAML",
   "target": "MAML",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "QR",
   "target": "QR",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LRO",
   "target": "LRO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "NaCl",
   "target": "NaCl",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Facebook",
   "target": "Facebook",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TikTok",
   "target": "TikTok",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "WhatsApp",
   "target": "WhatsApp",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "YouTube",
   "target": "YouTube",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "eBay",
   "target": "eBay",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Zoom",
   "target": "Zoom",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ipernity",
   "target": "Ipernity",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "PET",
   "target": "PET",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Maria",
   "target": "Maria",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tokipono",
   "target": "Tokipono",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Unesko",
   "target": "Unesko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TV",
   "target": "TV",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "aKE",
   "target": "aKE",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "RĈ",
   "target": "RĈ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "EsFes",
   "target": "EsFes",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Disney",
   "target": "Disney",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HarperCollins",
   "target": "HarperCollins",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Routledge",
   "target": "Routledge",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "The Financial Times",
   "target": "The Financial Times",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "The Conversation",
   "target": "The Conversation",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Harry Potter",
   "target": "Harry Potter",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gen-Z",
   "target": "Gen-Z",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "L'Espérantiste",
   "target": "L'Espérantiste",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Esp",
   "target": "Esp",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "jan.",
   "target": "jan.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Vd",
   "target": "Vd",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Univ",
   "target": "Univ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UK-oj",
   "target": "UK/-/oj",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UK-on",
   "target": "UK/-/on",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "prof.",
   "target": "prof.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Prof.",
   "target": "Prof.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "L’Espérantiste",
   "target": "L’Espérantiste",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "'F-ino Gudula'",
   "target": "'/F-ino Gudula/'",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "’F-ino Gudula’",
   "target": "’/F-ino Gudula/’",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "-Osaka Kenji",
   "target": "-/Osaka Kenji",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Academia Vivarium Novum",
   "target": "Academia Vivarium Novum",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Adam Mickiewicz-universitato",
   "target": "Adam Mickiewicz/-/universitat/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Agnieszka Mozer",
   "target": "Agnieszka Mozer",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Aikawa Setuko",
   "target": "Aikawa Setuko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Albert Stalin GARRIDO",
   "target": "Albert Stalin GARRIDO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Albrecht Hohenzollern",
   "target": "Albrecht Hohenzollern",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Aleksandr Ŝtejnman",
   "target": "Aleksandr Ŝtejnman",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alessandra MADELLA",
   "target": "Alessandra MADELLA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alessandra Madella",
   "target": "Alessandra Madella",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alfa Resort Hotel and Conference",
   "target": "Alfa Resort Hotel and Conference",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alfred Michaŭ",
   "target": "Alfred Michaŭ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alfred Pitois",
   "target": "Alfred Pitois",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alphonse Mistler",
   "target": "Alphonse Mistler",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Alumno Bene Merento",
   "target": "Alumno Bene Merento",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Andreas Mikulitsch",
   "target": "Andreas Mikulitsch",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Andreo Cseh",
   "target": "Andreo Cseh",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Angela OEHLER",
   "target": "Angela OEHLER",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Anna Löwenstein",
   "target": "Anna Löwenstein",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Antoni Gaudí",
   "target": "Antoni Gaudí",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "BAK Giwan",
   "target": "BAK Giwan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "BUENOSA ERO",
   "target": "BUENOSA ERO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Baduy Luar",
   "target": "Baduy Luar",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Barbara Pietrzak",
   "target": "Barbara Pietrzak",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Biblioteko Vatikana",
   "target": "Biblioteko Vatikana",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Bogusław",
   "target": "Bogusław",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Bolesław",
   "target": "Bolesław",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Boris LOMANOV",
   "target": "Boris LOMANOV",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Britaj Insuloj",
   "target": "Britaj Insuloj",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Bruno Mars",
   "target": "Bruno Mars",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Brześnica",
   "target": "Brześnica",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Buenos Aires",
   "target": "Buenos Aires",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CEO Score",
   "target": "CEO Score",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CHANG Youngeun",
   "target": "CHANG Youngeun",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CHOI Manwon",
   "target": "CHOI Manwon",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "CHU Fumin",
   "target": "CHU Fumin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Camellia sinensis",
   "target": "Camellia sinensis",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chapecó",
   "target": "Chapecó",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chen Shengshu",
   "target": "Chen Shengshu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chen Zhaoying",
   "target": "Chen Zhaoying",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chełm",
   "target": "Chełm",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chełmno",
   "target": "Chełmno",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chełmno-privilegio",
   "target": "Chełmno/-/privilegi/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chełmno-regionon",
   "target": "Chełmno/-/region/on",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chien Yuechen",
   "target": "Chien Yuechen",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ching Liben",
   "target": "Ching Liben",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Chris Elliott",
   "target": "Chris Elliott",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Châtre",
   "target": "Châtre",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Claude Piron",
   "target": "Claude Piron",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Collegium Historicum",
   "target": "Collegium Historicum",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "D-ro Karl Beckmann",
   "target": "D-ro Karl Beckmann",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "D.R.",
   "target": "D.R.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Hidemaru",
   "target": "DEGUĈI Hidemaru",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Kijoko",
   "target": "DEGUĈI Kijoko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Kurenai",
   "target": "DEGUĈI Kurenai",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Nao",
   "target": "DEGUĈI Nao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Naohi",
   "target": "DEGUĈI Naohi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "DEGUĈI Onisaburo",
   "target": "DEGUĈI Onisaburo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Daigo Fukuryu Maru",
   "target": "Daigo Fukuryu Maru",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Dan Maxwell",
   "target": "Dan Maxwell",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Daniel Markovitz",
   "target": "Daniel Markovitz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Dariusz Feller",
   "target": "Dariusz Feller",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "David Beckham",
   "target": "David Beckham",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "David Ŝahar",
   "target": "David Ŝahar",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Doi Hirokazu",
   "target": "Doi Hirokazu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Dong Hua",
   "target": "Dong Hua",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Duan Jike",
   "target": "Duan Jike",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Edmond Privat",
   "target": "Edmond Privat",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Edward Said",
   "target": "Edward Said",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Edwin Hubble",
   "target": "Edwin Hubble",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Elbląg",
   "target": "Elbląg",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Eleanor Ashbourne",
   "target": "Eleanor Ashbourne",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Emilia Freiin von Damnitz",
   "target": "Emilia Freiin von Damnitz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Erich Scheurmann",
   "target": "Erich Scheurmann",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Erošenko",
   "target": "Erošenko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Esperanta Kafejo Ponto",
   "target": "Esperanta Kafejo Ponto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ethan Corgatelli",
   "target": "Ethan Corgatelli",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "F-ino Gudula",
   "target": "F-ino Gudula",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "F.Faulhaber",
   "target": "F.Faulhaber",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Feng Shui",
   "target": "Feng Shui",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ferdinand Sauerbruch",
   "target": "Ferdinand Sauerbruch",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Franca Esperantisto",
   "target": "Franca Esperantisto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Franz JONAS",
   "target": "Franz JONAS",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "François",
   "target": "François",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Françoise",
   "target": "Françoise",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Freiburg in Schlesien",
   "target": "Freiburg in Schlesien",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Freie Universität Berlin",
   "target": "Freie Universität Berlin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gabriela Kosiarska",
   "target": "Gabriela Kosiarska",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gabrijel Divjanović",
   "target": "Gabrijel Divjanović",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gao Tzong",
   "target": "Gao Tzong",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gaskiya Corporation",
   "target": "Gaskiya Corporation",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gaudí",
   "target": "Gaudí",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Gerda Malaperis",
   "target": "Gerda Malaperis",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Goh Kah-bin",
   "target": "Goh Kah-bin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Golden Kamuy",
   "target": "Golden Kamuy",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Granda Budho",
   "target": "Granda Budho",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Grody Czerwieńskie",
   "target": "Grody Czerwieńskie",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Guo Houjue",
   "target": "Guo Houjue",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Guo Moruo",
   "target": "Guo Moruo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Góry Stołowe",
   "target": "Góry Stołowe",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Görlitz",
   "target": "Görlitz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HAN Sugheui",
   "target": "HAN Sugheui",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HASEGAWA Teru",
   "target": "HASEGAWA Teru",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HIRAI Kaichirō",
   "target": "HIRAI Kaichirō",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HIROTAKA Masaaki",
   "target": "HIROTAKA Masaaki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HITOFUŜI Hakka",
   "target": "HITOFUŜI Hakka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "HORI Yasuo",
   "target": "HORI Yasuo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hama-Ronda Tago",
   "target": "Hama-Ronda Tago",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hasegaŭa Teru",
   "target": "Hasegaŭa Teru",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hausa Literature and the Hausa Sound System",
   "target": "Hausa Literature and the Hausa Sound System",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Henri Albert",
   "target": "Henri Albert",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Henrietta Pacher",
   "target": "Henrietta Pacher",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hermann von Salza",
   "target": "Hermann von Salza",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hirano Noboru",
   "target": "Hirano Noboru",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hirata Sizu",
   "target": "Hirata Sizu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hitofushi Hakka",
   "target": "Hitofushi Hakka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hori Yasuo",
   "target": "Hori Yasuo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Hun Min Jeong Eum",
   "target": "Hun Min Jeong Eum",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "I.a.",
   "target": "I.a.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "INSTRUISTO DUNGGUO",
   "target": "INSTRUISTO DUNGGUO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ISHIHARA Taiga",
   "target": "ISHIHARA Taiga",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ISHIWARA Taiga",
   "target": "ISHIWARA Taiga",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ignacy Jan Paderewski",
   "target": "Ignacy Jan Paderewski",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Instruisto Dungguo",
   "target": "Instruisto Dungguo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Irek Bobrzak",
   "target": "Irek Bobrzak",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "István Ertl",
   "target": "István Ertl",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ivo LAPENNA",
   "target": "Ivo LAPENNA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ivo Lapenna",
   "target": "Ivo Lapenna",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "IŜIUĈI Joŝiki",
   "target": "IŜIUĈI Joŝiki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "IŠIHARA Tadajoŝi",
   "target": "IŠIHARA Tadajoŝi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "JOYAMA Tsukika",
   "target": "JOYAMA Tsukika",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jan Antoni Mikulicz-Radecki",
   "target": "Jan Antoni Mikulicz-Radecki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jan Mikulicz",
   "target": "Jan Mikulicz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jan Mikulicz Radecki",
   "target": "Jan Mikulicz Radecki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jang Jaeuk",
   "target": "Jang Jaeuk",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jarosław",
   "target": "Jarosław",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jasper NEERGAARD",
   "target": "Jasper NEERGAARD",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jean Biétrumé Picard",
   "target": "Jean Biétrumé Picard",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jelenia Góra",
   "target": "Jelenia Góra",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jen Guosjang",
   "target": "Jen Guosjang",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Johann Freiherr von Mikulicz-Radecki",
   "target": "Johann Freiherr von Mikulicz-Radecki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Johán Valano",
   "target": "Johán Valano",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "José",
   "target": "José",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Jui Ĉuunoŝin",
   "target": "Jui Ĉuunoŝin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Julio Baghy",
   "target": "Julio Baghy",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Juĝisto Liang",
   "target": "Juĝisto Liang",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KAWAZUMI Takaki",
   "target": "KAWAZUMI Takaki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KIMURA Goro Christoph",
   "target": "KIMURA Goro Christoph",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KITAGAWA Ikuko",
   "target": "KITAGAWA Ikuko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KOGAHATA Noriko",
   "target": "KOGAHATA Noriko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KOMAKI Tokiko",
   "target": "KOMAKI Tokiko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KURATA Rei",
   "target": "KURATA Rei",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "KYOKU Bunshin",
   "target": "KYOKU Bunshin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ka Karatu",
   "target": "Ka Karatu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kasing Lung",
   "target": "Kasing Lung",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kasper Schwenckfeld",
   "target": "Kasper Schwenckfeld",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kawazumi Takaki",
   "target": "Kawazumi Takaki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kep ENDERBY",
   "target": "Kep ENDERBY",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kerry Kan",
   "target": "Kerry Kan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kimoto Yasuhiro",
   "target": "Kimoto Yasuhiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kimura Kishiro",
   "target": "Kimura Kishiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kita Ikki",
   "target": "Kita Ikki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kjušu",
   "target": "Kjušu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kokoro no ĉjou",
   "target": "Kokoro no ĉjou",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Komuneca Spirito",
   "target": "Komuneca Spirito",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kołobrzeg",
   "target": "Kołobrzeg",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kraków",
   "target": "Kraków",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Krystyna Grochocka",
   "target": "Krystyna Grochocka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Królewiec",
   "target": "Królewiec",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kurita Kimiaki",
   "target": "Kurita Kimiaki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kwon Young-kook",
   "target": "Kwon Young-kook",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kyanjin Gompa",
   "target": "Kyanjin Gompa",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kyanjin Ri",
   "target": "Kyanjin Ri",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Königsberg",
   "target": "Königsberg",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kłodzka",
   "target": "Kłodzka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Kłodzko",
   "target": "Kłodzko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "L. C. Zaleski-Zamenhof",
   "target": "L. C. Zaleski-Zamenhof",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "L. de Beaufront",
   "target": "L. de Beaufront",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "L.Leau",
   "target": "L.Leau",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LIU Donghong",
   "target": "LIU Donghong",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LIU Shifu",
   "target": "LIU Shifu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La Chaŭ-de-Fonds",
   "target": "La Chaŭ-de-Fonds",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La Grange",
   "target": "La Grange",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La Revuo Orienta",
   "target": "La Revuo Orienta",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La vana kanto",
   "target": "La vana kanto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La Ŝodfon'",
   "target": "La Ŝodfon'",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "La Ŝodfon’",
   "target": "La Ŝodfon’",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lafcadio Hearn",
   "target": "Lafcadio Hearn",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lee Jae-myung",
   "target": "Lee Jae-myung",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lee Jun-seok",
   "target": "Lee Jun-seok",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lemaître",
   "target": "Lemaître",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Leo Tolstoj",
   "target": "Leo Tolstoj",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Leonard Thurneyssen",
   "target": "Leonard Thurneyssen",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Leopold Einstein",
   "target": "Leopold Einstein",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Liang Yukun",
   "target": "Liang Yukun",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Liu Baoguo",
   "target": "Liu Baoguo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Louis de Beaufront",
   "target": "Louis de Beaufront",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Luchuan Yingzi",
   "target": "Luchuan Yingzi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lucien Péraire",
   "target": "Lucien Péraire",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lucien Thevenin",
   "target": "Lucien Thevenin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ludwig Maximilian",
   "target": "Ludwig Maximilian",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "LÁSZLÓ",
   "target": "LÁSZLÓ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Löwenstein",
   "target": "Löwenstein",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Lądek-Zdrój",
   "target": "Lądek-Zdrój",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "M.O.S.",
   "target": "M.O.S.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "MIYAMOTO Masao",
   "target": "MIYAMOTO Masao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "MORIKAWA Kazunori",
   "target": "MORIKAWA Kazunori",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "MURAKAMI (poste HIROSE) Kanae",
   "target": "MURAKAMI (poste HIROSE) Kanae",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "MaMiya Midori",
   "target": "MaMiya Midori",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Mahmud Idris",
   "target": "Mahmud Idris",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Mark Fettes",
   "target": "Mark Fettes",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Marta Żbikowska-Cieśla",
   "target": "Marta Żbikowska-Cieśla",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Martin Schleyer",
   "target": "Martin Schleyer",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Maruki Iri",
   "target": "Maruki Iri",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Marysieńka",
   "target": "Marysieńka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Marysieńska",
   "target": "Marysieńska",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Mastro Pikar",
   "target": "Mastro Pikar",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Mastro Pikarn",
   "target": "Mastro Pikar/n",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Maximiliano Garcia",
   "target": "Maximiliano Garcia",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Miko Sloper",
   "target": "Miko Sloper",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Miron Schmekel",
   "target": "Miron Schmekel",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Miyamoto M.",
   "target": "Miyamoto M.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Miyoshi Etsuo",
   "target": "Miyoshi Etsuo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Międzygórze",
   "target": "Międzygórze",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Międzyrzecz",
   "target": "Międzyrzecz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nacia Biblioteko",
   "target": "Nacia Biblioteko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nakajima Miki",
   "target": "Nakajima Miki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nakao Sasuke",
   "target": "Nakao Sasuke",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Namba Fumiharu",
   "target": "Namba Fumiharu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Navalona LAHATRINIAINA",
   "target": "Navalona LAHATRINIAINA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nigra Maro",
   "target": "Nigra Maro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nihon Hidankyo",
   "target": "Nihon Hidankyo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Nowy Świat-strato",
   "target": "Nowy Świat/-/strat/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "OSAKA Kenji",
   "target": "OSAKA Kenji",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "OZASA Rjota",
   "target": "OZASA Rjota",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Oh Eunchan",
   "target": "Oh Eunchan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "One World",
   "target": "One World",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "One World Festival",
   "target": "One World Festival",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Orienta Azio",
   "target": "Orienta Azio",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Osaka Kenji",
   "target": "Osaka Kenji",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Osaka Kenzi",
   "target": "Osaka Kenzi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Otto Zeidlitz",
   "target": "Otto Zeidlitz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Oświęcim",
   "target": "Oświęcim",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Park Kwonil",
   "target": "Park Kwonil",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Paul Couderc",
   "target": "Paul Couderc",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Paul NEERGAARD",
   "target": "Paul NEERGAARD",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Peace Himalaya",
   "target": "Peace Himalaya",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Pola Retradio",
   "target": "Pola Retradio",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Preston Miller Firestone",
   "target": "Preston Miller Firestone",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Probal DASGUPTA",
   "target": "Probal DASGUPTA",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Pu Songling",
   "target": "Pu Songling",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Pulau Seribu",
   "target": "Pulau Seribu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Père-Lachaise",
   "target": "Père-Lachaise",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Péraire",
   "target": "Péraire",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Péraire cifereca",
   "target": "Péraire cifereca",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Qin Diqing",
   "target": "Qin Diqing",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ROSÉ",
   "target": "ROSÉ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Racława",
   "target": "Racława",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Radziwiłł",
   "target": "Radziwiłł",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ranja ZAFINIFOTSY",
   "target": "Ranja ZAFINIFOTSY",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ruta autoguiada",
   "target": "Ruta autoguiada",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Różycki",
   "target": "Różycki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "S-ro Dungguo",
   "target": "S-ro Dungguo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SASAKI Shura",
   "target": "SASAKI Shura",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SASAKI Taruhiro",
   "target": "SASAKI Taruhiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SASAKI Teruhiro",
   "target": "SASAKI Teruhiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SATO Ryusuke",
   "target": "SATO Ryusuke",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SUGIMOTO Sajĉi",
   "target": "SUGIMOTO Sajĉi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SUMI Yusuke",
   "target": "SUMI Yusuke",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SUN Minĝiao",
   "target": "SUN Minĝiao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "SUZUKI Ryuzo",
   "target": "SUZUKI Ryuzo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sabata Kunveno",
   "target": "Sabata Kunveno",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sagrada Família",
   "target": "Sagrada Família",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Saichō",
   "target": "Saichō",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sakalĉô",
   "target": "Sakalĉô",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "San-Franciska Ŝtata Universitato",
   "target": "San-Franciska Ŝtata Universitato",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sanada Shinji",
   "target": "Sanada Shinji",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sant Pau d'Ordal",
   "target": "Sant Pau d'Ordal",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sant Pau d’Ordal",
   "target": "Sant Pau d’Ordal",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sasaki Teruhiro",
   "target": "Sasaki Teruhiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sato Ryusuke",
   "target": "Sato Ryusuke",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Simo Milojeviĉ",
   "target": "Simo Milojeviĉ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sisa In",
   "target": "Sisa In",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "So Jinsu",
   "target": "So Jinsu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sovetskij Uzbekistan",
   "target": "Sovetskij Uzbekistan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Squid Game",
   "target": "Squid Game",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Stanisław",
   "target": "Stanisław",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Staniątki",
   "target": "Staniątki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Stirpium et fossilium silesiae catalogus",
   "target": "Stirpium et fossilium silesiae catalogus",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sugawa Soichiro",
   "target": "Sugawa Soichiro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sun Minĝiao",
   "target": "Sun Minĝiao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sun-ku san",
   "target": "Sun-ku san",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Suvan Pal",
   "target": "Suvan Pal",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Suzuki Ryuzo",
   "target": "Suzuki Ryuzo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Szklarska Poręba",
   "target": "Szklarska Poręba",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Sūzin",
   "target": "Sūzin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TAKADA Jotaro",
   "target": "TAKADA Jotaro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TAKADA Ĵotaro",
   "target": "TAKADA Ĵotaro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TAKAHASHI Mizuki",
   "target": "TAKAHASHI Mizuki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TANAKA Terumi",
   "target": "TANAKA Terumi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TANIGUCHI Naoya",
   "target": "TANIGUCHI Naoya",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TIDA Syuntaro",
   "target": "TIDA Syuntaro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "TOYOTOMI Hideyosi",
   "target": "TOYOTOMI Hideyosi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tadeusz Dobosz",
   "target": "Tadeusz Dobosz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Takada Ĵotaro",
   "target": "Takada Ĵotaro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tan Fu",
   "target": "Tan Fu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tanaka Terumi",
   "target": "Tanaka Terumi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Te Urewera",
   "target": "Te Urewera",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Terumi Tanaka",
   "target": "Terumi Tanaka",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "The Straits Times",
   "target": "The Straits Times",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Theodor Billroth",
   "target": "Theodor Billroth",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tibor SEKELJ",
   "target": "Tibor SEKELJ",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tibor Sekelj",
   "target": "Tibor Sekelj",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tida Syuntaro",
   "target": "Tida Syuntaro",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tida Syuntarô",
   "target": "Tida Syuntarô",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tok Pisin",
   "target": "Tok Pisin",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tsurezure Gogaku Nikki",
   "target": "Tsurezure Gogaku Nikki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tusiama Mabinda",
   "target": "Tusiama Mabinda",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Tutmonda San-Organizo",
   "target": "Tutmonda San-Organizo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "UMESAO Tadao",
   "target": "UMESAO Tadao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "USUI Hiroyuki",
   "target": "USUI Hiroyuki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Univ. de Kioto",
   "target": "Univ. de Kioto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Universitato Adam Mickiewicz",
   "target": "Universitato Adam Mickiewicz",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Universitato de Kioto",
   "target": "Universitato de Kioto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "University of London Press",
   "target": "University of London Press",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Uniwersytet Przyrodniczy",
   "target": "Uniwersytet Przyrodniczy",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Usui Hiroyuki",
   "target": "Usui Hiroyuki",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Valerie TEO",
   "target": "Valerie TEO",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Varsovia Vento",
   "target": "Varsovia Vento",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Vatikana Biblioteko",
   "target": "Vatikana Biblioteko",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Vd.",
   "target": "Vd.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Vere aŭ Fantazie",
   "target": "Vere aŭ Fantazie",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Victor Petitjean",
   "target": "Victor Petitjean",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Victoria Peak",
   "target": "Victoria Peak",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Virtuti Militario",
   "target": "Virtuti Militari/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Volapük",
   "target": "Volapük",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "W. Auld",
   "target": "W. Auld",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "WATANABE Katsuyoshi",
   "target": "WATANABE Katsuyoshi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wang Ning",
   "target": "Wang Ning",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wang Tianyi",
   "target": "Wang Tianyi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wei Ningna",
   "target": "Wei Ningna",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Weil am Rhein",
   "target": "Weil am Rhein",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wilanów",
   "target": "Wilanów",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wilanów-kvartalo",
   "target": "Wilanów/-/kvartal/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "William AULD",
   "target": "William AULD",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wołyń",
   "target": "Wołyń",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Wrocław",
   "target": "Wrocław",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Xin Shijie",
   "target": "Xin Shijie",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "YAMAKAWA Shuichi",
   "target": "YAMAKAWA Shuichi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "YONEYAMA Sankiĉi",
   "target": "YONEYAMA Sankiĉi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "YONEYAMA Toshinao",
   "target": "YONEYAMA Toshinao",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Yamakawa Shuichi",
   "target": "Yamakawa Shuichi",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Yoon Suk Yeol",
   "target": "Yoon Suk Yeol",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Yoshida Masanori",
   "target": "Yoshida Masanori",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Yu Daoquan",
   "target": "Yu Daoquan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ZHANG Yan",
   "target": "ZHANG Yan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Zagreba Metodo",
   "target": "Zagreba Metodo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Zhang Di",
   "target": "Zhang Di",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Zhang Yan",
   "target": "Zhang Yan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Zhong Qin Meiri Hanyu",
   "target": "Zhong Qin Meiri Hanyu",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ziphil SHALEIRAS",
   "target": "Ziphil SHALEIRAS",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "aŭg.-sept.",
   "target": "aŭg./-/sept.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "del.de",
   "target": "del.de",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ekz.",
   "target": "ekz.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "f-ino Gudula",
   "target": "f-ino Gudula",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "fraŭlino Gudula",
   "target": "fraŭlino Gudula",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "i.a.",
   "target": "i.a.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "instruisto Dungguo",
   "target": "instruisto Dungguo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "jan Itan",
   "target": "jan Itan",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "jan Minasa",
   "target": "jan Minasa",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "jan Osame",
   "target": "jan Osame",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "jan Peton",
   "target": "jan Peton",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "k.a.",
   "target": "k.a.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "k.t.p.",
   "target": "k.t.p.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ktp.",
   "target": "ktp.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "p.",
   "target": "p.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "pp.",
   "target": "pp.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ino Delfonto",
   "target": "s-ino Delfonto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ro Dungguo",
   "target": "s-ro Dungguo",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ro Gao Ŝoufang",
   "target": "s-ro Gao Ŝoufang",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ro Jen",
   "target": "s-ro Jen",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "s-ro Jen Guos-jang",
   "target": "s-ro Jen Guos-jang",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "sept.",
   "target": "sept.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "sinjoro Jen",
   "target": "sinjoro Jen",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "t.e.",
   "target": "t.e.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "t.n.",
   "target": "t.n.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "vd.",
   "target": "vd.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Île-de-France",
   "target": "Île-de-France",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ĉ.",
   "target": "ĉ.",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ĝ.Sekretario",
   "target": "Ĝ./Sekretari/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ĝeneva Universitato",
   "target": "Ĝeneva Universitato",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "ĝubaan araban",
   "target": "ĝubaan araban",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Łazienki-parko",
   "target": "Łazienki/-/park/o",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ōto",
   "target": "Ōto",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Ōtō",
   "target": "Ōtō",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Śnieżnik",
   "target": "Śnieżnik",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Świebodzice",
   "target": "Świebodzice",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Świeradów",
   "target": "Świeradów",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Świeradów-Zdrój",
   "target": "Świeradów-Zdrój",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Świętopełek",
   "target": "Świętopełek",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Китейаŭa",
   "target": "Китейаŭa",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Китейаба",
   "target": "Китейаба",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
   "w": "Он Heeyeon",
   "target": "Он Heeyeon",
   "exact_only": true,
-  "boundary_only": true,
   "corpus_managed": true,
+  "boundary_only": true,
   "case_sensitive": true
  },
  {
@@ -7205,6 +7193,28 @@
   "corpus_managed": true
  },
  {
+  "w": "bonaero",
+  "target": "bonaer/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@atomic-family:bonaer"
+ },
+ {
+  "w": "novjorko",
+  "target": "novjork/o",
+  "corpus_managed": true
+ },
+ {
+  "w": "novjorka",
+  "target": "novjork/a",
+  "corpus_managed": true
+ },
+ {
+  "w": "novjorkano",
+  "target": "novjork/an/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
   "w": "Ivo",
   "target": "Ivo",
   "typed_roles": "R",
@@ -7239,6 +7249,936 @@
   "boundary_only": true,
   "case_sensitive": true,
   "corpus_managed": true
+ },
+ {
+  "w": "hokkajdon",
+  "target": "hokkajdo/n",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true
+ },
+ {
+  "w": "HOKKAJDON",
+  "target": "HOKKAJDO/N",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true
+ },
+ {
+  "w": "aglutinino",
+  "target": "aglutinin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "akonitino",
+  "target": "akonitin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "algino",
+  "target": "algin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "amanitino",
+  "target": "amanitin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "anilino",
+  "target": "anilin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "asparagino",
+  "target": "asparagin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "atropino",
+  "target": "atropin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "boldino",
+  "target": "boldin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "botulino",
+  "target": "botulin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "citrolino",
+  "target": "citrolin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "digitalino",
+  "target": "digitalin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "dioskoreino",
+  "target": "dioskorein/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "efedrino",
+  "target": "efedrin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "elateriino",
+  "target": "elateriin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "emulsiino",
+  "target": "emulsiin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "ergotino",
+  "target": "ergotin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "eskulino",
+  "target": "eskulin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "fitino",
+  "target": "fitin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "foliklino",
+  "target": "foliklin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "gajlotanino",
+  "target": "gajl/o/tanin/o",
+  "typed_roles": "RLRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "gastrino",
+  "target": "gastrin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "giromitrino",
+  "target": "giromitrin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "glutenino",
+  "target": "glutenin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "gonadostimulino",
+  "target": "gonad/o/stimulin/o",
+  "typed_roles": "RLRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "guanino",
+  "target": "guanin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "hematino",
+  "target": "hematin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "hematoksilino",
+  "target": "hematoksilin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "hiosciamino",
+  "target": "hiosciamin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "hirudino",
+  "target": "hirudin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "hiskiamino",
+  "target": "hiskiamin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "humino",
+  "target": "humin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "inulino",
+  "target": "inulin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "johimbino",
+  "target": "johimbin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kadavrino",
+  "target": "kadavrin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kantaridino",
+  "target": "kantaridin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kapsikino",
+  "target": "kapsikin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "keratino",
+  "target": "keratin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kinkonino",
+  "target": "kinkonin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kolĉikino",
+  "target": "kolĉikin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "koniino",
+  "target": "koniin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kreatinino",
+  "target": "kreatinin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kumarino",
+  "target": "kumarin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kurkumino",
+  "target": "kurkumin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "kvasiino",
+  "target": "kvasiin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "legumino",
+  "target": "legumin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "lignino",
+  "target": "lignin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "luteino",
+  "target": "lutein/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "melanino",
+  "target": "melanin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "migdalino",
+  "target": "migdalin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "mjelino",
+  "target": "mjelin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "oleino",
+  "target": "olein/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "ostino",
+  "target": "ostin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "pankreatino",
+  "target": "pankreatin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "papajino",
+  "target": "papajin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "papaverino",
+  "target": "papaverin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "papavino",
+  "target": "papavin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "pektino",
+  "target": "pektin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "pilokarpino",
+  "target": "pilokarpin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "piretrino",
+  "target": "piretrin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "poezino",
+  "target": "poezin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "pseŭdoefedrino",
+  "target": "pseŭdo/efedrin/o",
+  "typed_roles": "RRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "renino",
+  "target": "renin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "ricinino",
+  "target": "ricinin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "rozanilino",
+  "target": "roz/anilin/o",
+  "typed_roles": "RRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "rutino",
+  "target": "rutin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "sakarino",
+  "target": "sakarin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "salikino",
+  "target": "salikin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "santalino",
+  "target": "santalin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "sekreciino",
+  "target": "sekreciin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "simpatino",
+  "target": "simpatin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "stimulino",
+  "target": "stimulin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "striknino",
+  "target": "striknin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "strofantino",
+  "target": "strofantin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "suberino",
+  "target": "suberin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tanino",
+  "target": "tanin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tebaino",
+  "target": "tebain/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tefoliino",
+  "target": "tefoliin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "teino",
+  "target": "tein/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "teobromino",
+  "target": "teobromin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "terebintino",
+  "target": "terebintin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tiroidstimulino",
+  "target": "tiroid/stimulin/o",
+  "typed_roles": "RRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tuberkulinizado",
+  "target": "tuberkulin/iz/ad/o",
+  "typed_roles": "RRRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "tuberkulino",
+  "target": "tuberkulin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "vanilino",
+  "target": "vanilin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "vegetalino",
+  "target": "vegetalin/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_transition_managed": true
+ },
+ {
+  "w": "Tomisto",
+  "target": "Tomist/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_ff33_transition_managed": true
+ },
+ {
+  "w": "promilo",
+  "target": "promil/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "fake_coarse_5e_transition_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "promilo",
+  "target": "pro/mil/o",
+  "kanji_track_only": true,
+  "corpus_managed": true,
+  "fake_coarse_5e_transition_managed": true
+ },
+ {
+  "w": "Bonaer",
+  "target": "Bonaer",
+  "exact_only": true,
+  "ruby_left_boundary": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_context_annotation": "@atomic-family:Bonaer"
+ },
+ {
+  "w": "BONAER",
+  "target": "BONAER",
+  "exact_only": true,
+  "ruby_left_boundary": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_context_annotation": "@atomic-family:BONAER"
+ },
+ {
+  "w": "novjork",
+  "target": "novjork",
+  "exact_only": true,
+  "ruby_left_boundary": true,
+  "case_sensitive": false,
+  "corpus_managed": true
+ },
+ {
+  "w": "bonaer",
+  "target": "bon/aer",
+  "exact_only": true,
+  "allow_substring": true,
+  "corpus_managed": true,
+  "localized_compositional": true
  },
  {
   "w": "--Dalian--Qingdao--Jinan--Pekino--Wuhan--",

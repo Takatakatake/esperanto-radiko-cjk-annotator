@@ -11,13 +11,15 @@ Reference cases are the union of:
 
 * every ruby-bearing word/decomposition in the 169 Kyoto HTML content files;
 * the path-specific 74-instance place-repair manifest;
-* the learner gold dictionary, excluding the exact selected rows marked
-  ``##偽分解``;
-* explicitly reviewed official long-root overrides.
+* the learner gold dictionary's unmarked rows;
+* a line-paired academic/PEJVO coarse authority for every evaluable learner
+  row marked ``##偽分解`` (the learner's fake deep boundaries are excluded);
+* explicitly reviewed official long-root overrides and project-level Ruby
+  boundary decisions.
 
 The gate rejects every old-correct -> current-wrong case, every changed output
 which remains wrong, any weighted decrease, and any current mismatch in the
-place manifest or official override set.
+place manifest or either reviewed override set.
 """
 from __future__ import annotations
 
@@ -59,7 +61,7 @@ RESUME_COMPATIBLE_AUDIT_CODE_SHA256 = {
     # byte the producers of the saved JA/ZH results.
     "DA2317DB1E4CED0BE2AF5313829C77903C834414A92186DE5EBD7CF1195E10F1",
 }
-REFERENCE_SCHEMA_VERSION = 4
+REFERENCE_SCHEMA_VERSION = 5
 FORMAT = "HTML格式_Ruby文字_大小调整"
 ESP_LETTERS = "a-zĉĝĥĵŝŭ"
 WORD_RE = re.compile(rf"(?=.*[{ESP_LETTERS}])[{ESP_LETTERS}'-]+", re.IGNORECASE)
@@ -108,6 +110,63 @@ OFFICIAL_LONG_ROOT_OVERRIDES = {
     "glu-glu-glu": "glu/-/glu/-/glu",
     "pli-ol-unu": "pli/-/ol/-/unu",
 }
+
+# These unmarked-gold exceptions are reviewed annotation-boundary decisions,
+# not claims that their recorded counteranalyses are linguistically false.
+PROJECT_RUBY_BOUNDARY_REVIEWS = {
+    "Ionia": {
+        "selected_decomposition": "Ioni/a",
+        "decision": "project_conservative_ruby_display_override",
+        "authority": (
+            "reviewed Ionia Maro/Ionio/ioniano family, paired academic and "
+            "PEJVO coarse forms, and pinned Kanji master Ioni/a"
+        ),
+        "counterevidence": (
+            "PIV derives Ionia from Ion/o, and the pinned moving-gold row "
+            "49535 is the unmarked fine form Ion/i/a"
+        ),
+        "reason": (
+            "keep one coherent Ioni family in annotation Ruby while the "
+            "deeper Ion/i analysis remains documented in PIV and moving-gold "
+            "counterevidence for a future track-specific review"
+        ),
+    },
+    "alternanco": {
+        "selected_decomposition": "alternanc/o",
+        "decision": "project_piv_long_root",
+        "authority": (
+            "PIV2020 has an independent alternanc/o head; fixed PEJVO and "
+            "the pinned Kanji master also use alternanc/o"
+        ),
+        "counterevidence": (
+            "PIV also registers productive scientific suffix -anc/, and the "
+            "moving-gold row 1352 uses the finer altern/anc/o analysis"
+        ),
+        "reason": (
+            "Kyoto HTML supplies no family instance, so conservative Ruby "
+            "retains the three-authority long root instead of forcing the "
+            "otherwise plausible suffix reanalysis"
+        ),
+    },
+}
+PROJECT_RUBY_BOUNDARY_OVERRIDES = {
+    surface: review["selected_decomposition"]
+    for surface, review in PROJECT_RUBY_BOUNDARY_REVIEWS.items()
+}
+EXACT_REQUIRED_REFERENCE_SOURCES = frozenset({
+    "html_place_manifest",
+    "gold_official_override",
+    "gold_project_ruby_boundary_override",
+})
+REVIEWED_GOLD_OVERRIDES = {
+    **OFFICIAL_LONG_ROOT_OVERRIDES,
+    **PROJECT_RUBY_BOUNDARY_OVERRIDES,
+}
+if len(REVIEWED_GOLD_OVERRIDES) != (
+    len(OFFICIAL_LONG_ROOT_OVERRIDES)
+    + len(PROJECT_RUBY_BOUNDARY_OVERRIDES)
+):
+    raise ValueError("reviewed gold override surfaces overlap")
 
 
 def normalize_visible(value: str) -> str:
@@ -584,7 +643,428 @@ def gold_path() -> Path:
     )
 
 
-def gold_cases(cases, path: Path, raw: bytes, snapshot_identity, expected_sha256):
+def load_fake_coarse_reference(
+    gold_raw: bytes, gold_lines: list[str], eligible_marked_rows: dict[int, dict],
+    marker_exclusions: collections.Counter,
+):
+    """Load the fixed non-fake boundary for every evaluable fake-marked row.
+
+    The committed manifest is generated from line-paired learner/academic
+    snapshots plus matching PEJVO evidence.  This loader intentionally checks
+    the learner identity and every selected learner line again: a stale or
+    surface-collapsed manifest must fail before it can influence the audit.
+    """
+    path = HERE / "_fake_coarse_reference_manifest.json"
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    if payload.get("schema_version") != 1:
+        raise ValueError("unsupported fake-coarse reference schema")
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        raise ValueError("fake-coarse entries must be a list")
+    serialized_entries = json.dumps(
+        entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    entries_sha256 = hashlib.sha256(serialized_entries).hexdigest().upper()
+    if entries_sha256 != payload.get("entries_sha256"):
+        raise ValueError("fake-coarse entry fingerprint mismatch")
+    review_path = HERE / "_fake_coarse_pejvo_disagreement_review.json"
+    review_raw = review_path.read_bytes()
+    review_payload = json.loads(review_raw.decode("utf-8"))
+    review_identity = payload.get("pejvo_disagreement_review", {})
+    if (
+        review_payload.get("schema_version") != 1
+        or len(review_payload.get("entries", []))
+        != review_payload.get("expected_entries")
+        or review_identity.get("path") != review_path.name
+        or review_identity.get("entries") != len(review_payload["entries"])
+        or review_identity.get("sha256")
+        != hashlib.sha256(review_raw).hexdigest().upper()
+    ):
+        raise ValueError("fake-coarse PEJVO disagreement review drift")
+    review_by_line = {
+        entry["learner_line"]: entry for entry in review_payload["entries"]
+    }
+    project_review_path = HERE / "_fake_coarse_project_boundary_review.json"
+    project_review_raw = project_review_path.read_bytes()
+    project_review_payload = json.loads(project_review_raw.decode("utf-8"))
+    project_review_identity = payload.get("project_boundary_review", {})
+    if (
+        project_review_payload.get("schema_version") != 1
+        or len(project_review_payload.get("entries", []))
+        != project_review_payload.get("expected_entries")
+        or project_review_identity.get("path") != project_review_path.name
+        or project_review_identity.get("entries")
+        != len(project_review_payload["entries"])
+        or project_review_identity.get("sha256")
+        != hashlib.sha256(project_review_raw).hexdigest().upper()
+    ):
+        raise ValueError("fake-coarse project boundary review drift")
+    project_review_by_line = {
+        entry["learner_line"]: entry
+        for entry in project_review_payload["entries"]
+    }
+
+    learner_source = payload.get("sources", {}).get("learner", {})
+    actual_gold = {
+        "bytes": len(gold_raw),
+        "sha256": hashlib.sha256(gold_raw).hexdigest().upper(),
+        "lines": len(gold_lines),
+    }
+    if any(learner_source.get(key) != value for key, value in actual_gold.items()):
+        raise ValueError(
+            "fake-coarse manifest learner snapshot differs from audit gold"
+        )
+
+    by_line = {}
+    source_counts = collections.Counter()
+    exact_counts = collections.Counter()
+    casefold_counts = collections.Counter()
+    nonmatching_pejvo = 0
+    used_project_reviews = set()
+    for entry in entries:
+        line_number = entry.get("learner_line")
+        if (
+            not isinstance(line_number, int) or line_number < 1
+            or line_number > len(gold_lines) or line_number in by_line
+        ):
+            raise ValueError(f"invalid/reused fake-coarse learner line: {line_number!r}")
+        learner_row = eligible_marked_rows.get(line_number)
+        if learner_row is None:
+            raise ValueError(
+                f"fake-coarse entry does not name an eligible marked line: {line_number}"
+            )
+        if (
+            entry.get("learner_surface") != learner_row["surface"]
+            or entry.get("learner_decomposition") != learner_row["decomposition"]
+        ):
+            raise ValueError(
+                f"fake-coarse learner provenance drift at line {line_number}"
+            )
+        surface = canonical(entry.get("surface", ""))
+        coarse = entry.get("coarse_decomposition", "")
+        academic = entry.get("academic_decomposition", "")
+        if (
+            not surface or not evaluable(surface)
+            or expected_signature(coarse)[0] != surface
+            or expected_signature(academic)[0] != surface
+            or surface.casefold() != learner_row["surface"].casefold()
+        ):
+            raise ValueError(
+                f"fake-coarse reconstruction/case drift at line {line_number}"
+            )
+        authority = entry.get("authority")
+        if authority not in {
+            "paired_academic", "pejvo_original", "pejvo_reviewed_override",
+            "project_reviewed_override",
+        }:
+            raise ValueError(
+                f"unsupported fake-coarse authority at line {line_number}: {authority!r}"
+            )
+        if authority == "pejvo_original" and coarse != academic:
+            raise ValueError(
+                f"PEJVO may corroborate but not override paired academic line {line_number}"
+            )
+        candidates = entry.get("nonmatching_pejvo_candidates", [])
+        if candidates:
+            review = review_by_line.get(line_number)
+            if review is None:
+                raise ValueError(
+                    f"nonmatching PEJVO row lacks review at line {line_number}"
+                )
+            available = sorted(
+                candidate.get("decomposition", "") for candidate in candidates
+            )
+            if (
+                review.get("surface") != surface
+                or review.get("academic_decomposition") != academic
+                or review.get("pejvo_decompositions") != available
+                or review.get("selected_decomposition") != coarse
+                or entry.get("disagreement_review_decision")
+                != review.get("decision")
+                or (
+                    review.get("decision") == "paired_academic"
+                    and authority != "paired_academic"
+                )
+                or (
+                    review.get("decision") == "pejvo_coarse"
+                    and authority != "pejvo_reviewed_override"
+                )
+            ):
+                raise ValueError(
+                    f"nonmatching PEJVO review selection drift at line {line_number}"
+                )
+            nonmatching_pejvo += 1
+            for candidate in candidates:
+                candidate_decomposition = candidate.get("decomposition", "")
+                if (
+                    expected_signature(candidate_decomposition)[0] != surface
+                    or candidate_decomposition == academic
+                    or not candidate.get("lines")
+                ):
+                    raise ValueError(
+                        f"invalid nonmatching PEJVO evidence at line {line_number}"
+                    )
+        elif line_number in review_by_line:
+            raise ValueError(f"stale PEJVO disagreement review at line {line_number}")
+        project_review = project_review_by_line.get(line_number)
+        if project_review is not None:
+            if (
+                project_review.get("surface") != surface
+                or project_review.get("academic_decomposition") != academic
+                or project_review.get("selected_decomposition") != coarse
+                or project_review.get("decision") not in {
+                    "project_piv_long_root",
+                    "project_conservative_ruby_display_override",
+                }
+                or entry.get("project_boundary_review_decision")
+                != project_review.get("decision")
+                or authority != "project_reviewed_override"
+                or not project_review.get("evidence")
+            ):
+                raise ValueError(
+                    f"project boundary review selection drift at line {line_number}"
+                )
+            used_project_reviews.add(line_number)
+        elif authority == "project_reviewed_override":
+            raise ValueError(
+                f"project override lacks review at line {line_number}"
+            )
+        by_line[line_number] = entry
+        source_counts[authority] += 1
+        exact_counts[surface] += 1
+        casefold_counts[surface.casefold()] += 1
+
+    if used_project_reviews != set(project_review_by_line):
+        raise ValueError(
+            "unused project boundary reviews: "
+            f"{sorted(set(project_review_by_line) - used_project_reviews)!r}"
+        )
+
+    if set(by_line) != set(eligible_marked_rows):
+        missing = sorted(set(eligible_marked_rows) - set(by_line))
+        extra = sorted(set(by_line) - set(eligible_marked_rows))
+        raise ValueError(
+            "fake-coarse marked-line coverage changed: "
+            f"missing={missing[:10]!r}, extra={extra[:10]!r}"
+        )
+    counts = payload.get("counts", {})
+    actual_counts = {
+        "entries": len(entries),
+        "marker_excluded_rows": sum(marker_exclusions.values()),
+        "marker_exclusions_by_reason": dict(marker_exclusions),
+        "source_rows": dict(source_counts),
+        "academic_rows_with_nonmatching_pejvo_homographs": nonmatching_pejvo,
+        "exact_surfaces": len(exact_counts),
+        "duplicate_exact_surface_rows": sum(
+            count - 1 for count in exact_counts.values() if count > 1
+        ),
+        "casefold_surfaces": len(casefold_counts),
+        "duplicate_casefold_surface_rows": sum(
+            count - 1 for count in casefold_counts.values() if count > 1
+        ),
+    }
+    if counts != actual_counts:
+        raise ValueError(
+            f"fake-coarse manifest counts changed: {actual_counts!r} != {counts!r}"
+        )
+    paired = payload.get("paired_invariant", {})
+    marker_rows = sum(bool(FAKE_MARKER_RE.search(line)) for line in gold_lines)
+    if (
+        paired.get("marked_rows") != marker_rows
+        or paired.get("marked_different_decomposition") != marker_rows
+        or paired.get("marked_gloss_context_matches_academic") != marker_rows
+        or paired.get("unmarked_rows") != len(gold_lines) - marker_rows
+        or paired.get("unmarked_identical_decomposition")
+        != len(gold_lines) - marker_rows
+        or paired.get("academic_rows_without_fake_marker") != len(gold_lines)
+    ):
+        raise ValueError("fake-coarse paired invariant no longer covers all gold lines")
+    return by_line, {
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        "entries_sha256": entries_sha256,
+        "academic_sha256": payload["sources"]["academic"]["sha256"],
+        "pejvo_original_sha256": payload["sources"]["pejvo_original"]["sha256"],
+        "pejvo_disagreement_review": review_identity,
+        "project_boundary_review": project_review_identity,
+        "paired_invariant": paired,
+        "counts": counts,
+    }
+
+
+def load_fake_coarse_transition(fake_coarse_by_line):
+    path = HERE / "_fake_coarse_transition_review.json"
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    entries = payload.get("entries", [])
+    serialized = json.dumps(
+        entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    if (
+        payload.get("schema_version") != 1
+        or hashlib.sha256(serialized).hexdigest().upper()
+        != payload.get("entries_sha256")
+        or payload.get("entries_sha256")
+        != "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+    ):
+        raise ValueError("fake-coarse transition review drift")
+    evaluable_lines = set()
+    excluded_lines = []
+    seen = set()
+    for entry in entries:
+        line = entry.get("learner_line")
+        if not isinstance(line, int) or line in seen:
+            raise ValueError(f"invalid/reused fake transition line: {line!r}")
+        seen.add(line)
+        coarse_entry = fake_coarse_by_line.get(line)
+        if coarse_entry is None:
+            excluded_lines.append(line)
+            continue
+        if (
+            entry.get("surface") != coarse_entry.get("surface")
+            or entry.get("coarse_decomposition")
+            != coarse_entry.get("coarse_decomposition")
+        ):
+            raise ValueError(f"fake transition authority drift at line {line}")
+        evaluable_lines.add(line)
+    counts = payload.get("counts", {})
+    expected_counts = {
+        "entries": 136,
+        "unique_surfaces": 135,
+        "duplicate_surface_rows": 1,
+        "categories": {
+            "reviewed_c679_to_b090_fake_transition": 133,
+            "reviewed_b090_marker_only_delta": 3,
+        },
+        "authority_adjustments": 2,
+    }
+    if (
+        counts != expected_counts
+        or len(entries) != counts["entries"]
+        or len(seen) != len(entries)
+    ):
+        raise ValueError("fake transition review counts changed")
+    # The single excluded entry is the reviewed multiword Ionia Maro; the
+    # full-master audit renders and gates it without collapsing to a word key.
+    if len(excluded_lines) != 1:
+        raise ValueError(
+            f"unexpected non-word staged transitions: {excluded_lines!r}"
+        )
+    return evaluable_lines, {
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        "entries_sha256": payload["entries_sha256"],
+        "entries": len(entries),
+        "evaluable_entries": len(evaluable_lines),
+        "full_master_only_entries": len(excluded_lines),
+        "full_master_only_lines": excluded_lines,
+    }
+
+
+def load_fake_coarse_ff33_transition(fake_coarse_by_line):
+    path = HERE / "_fake_coarse_ff33_transition_review.json"
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    entries = payload.get("entries", [])
+    serialized = json.dumps(
+        entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    expected_counts = {
+        "entries": 1,
+        "evaluable_entries": 1,
+        "new_fake_marker_rows": 1,
+    }
+    if (
+        payload.get("schema_version") != 1
+        or hashlib.sha256(serialized).hexdigest().upper()
+        != "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31"
+        or payload.get("entries_sha256")
+        != "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31"
+        or payload.get("counts") != expected_counts
+        or len(entries) != 1
+    ):
+        raise ValueError("FF33 fake-coarse transition review drift")
+    entry = entries[0]
+    line = entry.get("learner_line")
+    coarse_entry = fake_coarse_by_line.get(line)
+    if (
+        line != 56273
+        or coarse_entry is None
+        or entry.get("surface") != coarse_entry.get("surface")
+        or entry.get("learner_decomposition")
+        != coarse_entry.get("learner_decomposition")
+        or entry.get("coarse_decomposition")
+        != coarse_entry.get("coarse_decomposition")
+        or entry.get("target") != coarse_entry.get("coarse_decomposition")
+        or entry.get("typed_roles") != "RL"
+        or entry.get("case_sensitive") is not True
+    ):
+        raise ValueError("FF33 Tomisto transition authority drift")
+    return {line}, {
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        "entries_sha256": payload["entries_sha256"],
+        "entries": 1,
+        "evaluable_entries": 1,
+        "full_master_only_entries": 0,
+    }
+
+
+def load_fake_coarse_5e_transition(fake_coarse_by_line):
+    path = HERE / "_fake_coarse_5e_transition_review.json"
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    entries = payload.get("entries", [])
+    serialized = json.dumps(
+        entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    expected_hash = (
+        "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F"
+    )
+    expected_counts = {
+        "entries": 1,
+        "evaluable_entries": 1,
+        "new_fake_marker_rows": 1,
+    }
+    if (
+        payload.get("schema_version") != 1
+        or hashlib.sha256(serialized).hexdigest().upper() != expected_hash
+        or payload.get("entries_sha256") != expected_hash
+        or payload.get("counts") != expected_counts
+        or len(entries) != 1
+    ):
+        raise ValueError("5E fake-coarse transition review drift")
+    entry = entries[0]
+    line = entry.get("learner_line")
+    coarse_entry = fake_coarse_by_line.get(line)
+    if (
+        line != 53890
+        or coarse_entry is None
+        or entry.get("surface") != coarse_entry.get("surface")
+        or entry.get("learner_decomposition")
+        != coarse_entry.get("learner_decomposition")
+        or entry.get("coarse_decomposition")
+        != coarse_entry.get("coarse_decomposition")
+        or entry.get("target") != coarse_entry.get("coarse_decomposition")
+        or entry.get("typed_roles") != "RL"
+        or entry.get("case_sensitive") is not True
+    ):
+        raise ValueError("5E promil transition authority drift")
+    return {line}, {
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        "entries_sha256": payload["entries_sha256"],
+        "entries": 1,
+        "evaluable_entries": 1,
+        "full_master_only_entries": 0,
+    }
+
+
+def gold_cases(
+    cases, path: Path, raw: bytes, snapshot_identity, expected_sha256,
+    enforce_all_fake_coarse=False,
+):
     digest = hashlib.sha256(raw).hexdigest().upper()
     expected_sha256 = expected_sha256.upper()
     if digest != expected_sha256:
@@ -592,33 +1072,84 @@ def gold_cases(cases, path: Path, raw: bytes, snapshot_identity, expected_sha256
     atomic_hyphen_review, atomic_hyphen_identity = load_atomic_hyphen_review()
     used_atomic_hyphen_reviews = set()
     records = collections.defaultdict(list)
+    eligible_marked_rows = {}
+    marker_exclusions = collections.Counter()
     text = raw.decode("utf-8", errors="strict")
     lines = text.splitlines()
     for line_number, line in enumerate(lines, 1):
+        marker = bool(FAKE_MARKER_RE.search(line))
         if ":" not in line:
+            if marker:
+                marker_exclusions["missing_colon"] += 1
             continue
         decomposition, gloss = line.split(":", 1)
-        decomposition = decomposition.strip()
-        if (
-            not decomposition or " " in decomposition
-            or decomposition.startswith("-") or decomposition.endswith("-")
-        ):
+        decomposition = decomposition.lstrip("\ufeff").strip()
+        if not decomposition:
+            if marker:
+                marker_exclusions["empty_decomposition"] += 1
+            continue
+        if " " in decomposition:
+            if marker:
+                marker_exclusions["contains_space"] += 1
+            continue
+        if decomposition.startswith("-") or decomposition.endswith("-"):
+            if marker:
+                marker_exclusions["edge_affix"] += 1
             continue
         surface = canonical(
             "".join(piece for piece in decomposition.split("/") if piece)
         )
         if not evaluable(surface):
+            if marker:
+                marker_exclusions["non_evaluable_surface"] += 1
             continue
-        records[surface].append({
+        record = {
             "decomposition": "/".join(
                 canonical(piece)
                 for piece in decomposition.split("/") if canonical(piece)
             ),
-            "marker": bool(FAKE_MARKER_RE.search(gloss)),
+            "marker": marker,
             "line": line_number,
-        })
+            "surface": surface,
+        }
+        records[surface].append(record)
+        if marker:
+            eligible_marked_rows[line_number] = record
 
-    included = excluded_fake = overridden = 0
+    fake_coarse_by_line, fake_coarse_identity = load_fake_coarse_reference(
+        raw, lines, eligible_marked_rows, marker_exclusions,
+    )
+    historical_transition_lines, historical_transition_identity = load_fake_coarse_transition(
+        fake_coarse_by_line,
+    )
+    ff33_transition_lines, ff33_transition_identity = (
+        load_fake_coarse_ff33_transition(fake_coarse_by_line)
+    )
+    final_5e_transition_lines, final_5e_transition_identity = (
+        load_fake_coarse_5e_transition(fake_coarse_by_line)
+    )
+    transition_scopes = (
+        historical_transition_lines,
+        ff33_transition_lines,
+        final_5e_transition_lines,
+    )
+    if sum(len(scope) for scope in transition_scopes) != len(
+        set().union(*transition_scopes)
+    ):
+        raise ValueError("fake transition scopes overlap")
+    transition_lines = set().union(*transition_scopes)
+    transition_identity = {
+        "historical_c679_b090": historical_transition_identity,
+        "ff33_delta": ff33_transition_identity,
+        "final_5e_delta": final_5e_transition_identity,
+        "evaluable_entries": len(transition_lines),
+        "full_master_only_entries": historical_transition_identity[
+            "full_master_only_entries"
+        ],
+    }
+
+    included = excluded_fake = 0
+    official_overridden = project_boundary_overridden = 0
     mixed_marker_surfaces = []
     unmarked_conflicts = []
     duplicate_surfaces = sum(len(rows) > 1 for rows in records.values())
@@ -628,10 +1159,14 @@ def gold_cases(cases, path: Path, raw: bytes, snapshot_identity, expected_sha256
         has_unmarked = any(not record["marker"] for record in surface_records)
         if has_marked and has_unmarked:
             mixed_marker_surfaces.append(surface)
-        if surface in OFFICIAL_LONG_ROOT_OVERRIDES:
-            decompositions = [OFFICIAL_LONG_ROOT_OVERRIDES[surface]]
-            sources = ["gold_official_override"]
-            overridden += 1
+        if surface in REVIEWED_GOLD_OVERRIDES:
+            decompositions = [REVIEWED_GOLD_OVERRIDES[surface]]
+            if surface in PROJECT_RUBY_BOUNDARY_OVERRIDES:
+                sources = ["gold_project_ruby_boundary_override"]
+                project_boundary_overridden += 1
+            else:
+                sources = ["gold_official_override"]
+                official_overridden += 1
         elif not has_unmarked:
             excluded_fake += 1
             continue
@@ -674,14 +1209,48 @@ def gold_cases(cases, path: Path, raw: bytes, snapshot_identity, expected_sha256
                 ),
                 decomposition, source, 1,
             )
-    for surface, decomposition in OFFICIAL_LONG_ROOT_OVERRIDES.items():
+    fake_coarse_surfaces = set()
+    fake_coarse_sources = collections.Counter()
+    selected_fake_lines = (
+        set(fake_coarse_by_line) if enforce_all_fake_coarse
+        else transition_lines
+    )
+    for line_number, entry in sorted(fake_coarse_by_line.items()):
+        if line_number not in selected_fake_lines:
+            continue
+        surface = entry["surface"]
+        decomposition = entry["coarse_decomposition"]
+        if surface in REVIEWED_GOLD_OVERRIDES:
+            # Reviewed gold overrides remain the stronger project authority,
+            # but the paired line is still exhaustively validated by the
+            # manifest loader above.
+            continue
+        atomic_hyphen_pieces = reviewed_atomic_hyphen_pieces(
+            surface, decomposition, atomic_hyphen_review,
+        )
+        if atomic_hyphen_pieces:
+            used_atomic_hyphen_reviews.add(surface)
+        source = f"gold_fake_coarse_{entry['authority']}"
+        add_case(
+            cases, surface,
+            expected_signature(decomposition, atomic_hyphen_pieces),
+            decomposition, source, 1,
+        )
+        fake_coarse_surfaces.add(surface)
+        fake_coarse_sources[source] += 1
+    for surface, decomposition in REVIEWED_GOLD_OVERRIDES.items():
         if surface in records:
             continue
+        if surface in PROJECT_RUBY_BOUNDARY_OVERRIDES:
+            source = "gold_project_ruby_boundary_override"
+            project_boundary_overridden += 1
+        else:
+            source = "gold_official_override"
+            official_overridden += 1
         add_case(
             cases, surface, expected_signature(decomposition), decomposition,
-            "gold_official_override", 1,
+            source, 1,
         )
-        overridden += 1
     if used_atomic_hyphen_reviews != set(atomic_hyphen_review):
         missing = sorted(set(atomic_hyphen_review) - used_atomic_hyphen_reviews)
         raise ValueError(f"unused atomic-hyphen reviews: {missing!r}")
@@ -698,7 +1267,16 @@ def gold_cases(cases, path: Path, raw: bytes, snapshot_identity, expected_sha256
         "selected_records": len(records),
         "included_unmarked": included,
         "excluded_fake": excluded_fake,
-        "official_overrides": overridden,
+        "included_fake_coarse_entries": sum(fake_coarse_sources.values()),
+        "included_fake_coarse_surfaces": len(fake_coarse_surfaces),
+        "fake_coarse_sources": dict(fake_coarse_sources),
+        "fake_coarse_reference": fake_coarse_identity,
+        "fake_coarse_transition": transition_identity,
+        "fake_coarse_enforcement": (
+            "all_evaluable" if enforce_all_fake_coarse else "reviewed_transitions"
+        ),
+        "official_overrides": official_overridden,
+        "project_ruby_boundary_overrides": project_boundary_overridden,
         "duplicate_surfaces": duplicate_surfaces,
         "duplicate_rows": duplicate_rows,
         "mixed_marker_surfaces": len(mixed_marker_surfaces),
@@ -825,6 +1403,11 @@ def scope_projection(scope, cases, surfaces, conflicts):
                 "sha256", "bytes", "lines", "nul_bytes",
                 "replacement_chars", "selected_records",
                 "included_unmarked", "excluded_fake", "official_overrides",
+                "project_ruby_boundary_overrides",
+                "included_fake_coarse_entries",
+                "included_fake_coarse_surfaces", "fake_coarse_sources",
+                "fake_coarse_reference", "fake_coarse_transition",
+                "fake_coarse_enforcement",
                 "duplicate_surfaces", "duplicate_rows",
                 "mixed_marker_surfaces",
                 "atomic_hyphen_review",
@@ -1242,6 +1825,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
     current_unreferenced_wrong = []
     current_manifest_wrong = []
     current_override_wrong = []
+    current_project_boundary_override_wrong = []
     expected_signatures_by_surface = collections.defaultdict(set)
     cases_by_surface = collections.defaultdict(list)
     for case in cases.values():
@@ -1341,20 +1925,35 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
             current_manifest_wrong.append(record)
         if "gold_official_override" in case["sources"] and not exact_current_ok:
             current_override_wrong.append(record)
+        if (
+            "gold_project_ruby_boundary_override" in case["sources"]
+            and not exact_current_ok
+        ):
+            current_project_boundary_override_wrong.append(record)
         for source, weight in case["sources"].items():
             stats = source_stats[source]
+            source_old_ok = (
+                old_result["signature"] == expected
+                if source in EXACT_REQUIRED_REFERENCE_SOURCES
+                else old_ok
+            )
+            source_current_ok = (
+                current_result["signature"] == expected
+                if source in EXACT_REQUIRED_REFERENCE_SOURCES
+                else current_ok
+            )
             stats["total_weight"] += weight
             stats["total_cases"] += 1
-            if old_ok:
+            if source_old_ok:
                 stats["baseline_correct_weight"] += weight
                 stats["baseline_correct_cases"] += 1
-            if current_ok:
+            if source_current_ok:
                 stats["current_correct_weight"] += weight
                 stats["current_correct_cases"] += 1
-            if old_ok and not current_ok:
+            if source_old_ok and not source_current_ok:
                 stats["regression_weight"] += weight
                 stats["regression_cases"] += 1
-            if not old_ok and current_ok:
+            if not source_old_ok and source_current_ok:
                 stats["improvement_weight"] += weight
                 stats["improvement_cases"] += 1
 
@@ -1403,6 +2002,9 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
         "current_unreferenced_wrong_surfaces": current_unreferenced_wrong,
         "current_place_manifest_wrong_cases": current_manifest_wrong,
         "current_official_override_wrong_cases": current_override_wrong,
+        "current_project_ruby_boundary_override_wrong_cases": (
+            current_project_boundary_override_wrong
+        ),
         "weighted_worsening_sources": weighted_worsening,
     }
     result["gate"] = not any((
@@ -1411,6 +2013,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
         current_unreferenced_wrong,
         current_manifest_wrong,
         current_override_wrong,
+        current_project_boundary_override_wrong,
         weighted_worsening,
     ))
     return result
@@ -1614,11 +2217,9 @@ def evaluate_current_only(
     }
 
 
-def print_language_result(result):
-    for label in ("data_isolated", "comprehensive"):
-        comparison = result[label]
-        print(
-            f"[{result['language']}/{label}] "
+def print_comparison_result(language, label, comparison):
+    print(
+            f"[{language}/{label}] "
             f"old-correct->current-wrong="
             f"{len(comparison['regression_cases'])}, "
             f"changed-current-unreferenced-wrong="
@@ -1629,9 +2230,16 @@ def print_language_result(result):
             f"{len(comparison['current_place_manifest_wrong_cases'])}, "
             f"current-official-override-wrong="
             f"{len(comparison['current_official_override_wrong_cases'])}, "
+            f"current-project-boundary-override-wrong="
+            f"{len(comparison['current_project_ruby_boundary_override_wrong_cases'])}, "
             f"gate={'PASS' if comparison['gate'] else 'FAIL'}",
             flush=True,
         )
+
+
+def print_language_result(result):
+    for label in ("data_isolated", "comprehensive"):
+        print_comparison_result(result["language"], label, result[label])
 
 
 def main():
@@ -1646,6 +2254,14 @@ def main():
     parser.add_argument(
         "--references-only", action="store_true",
         help="Build the pinned reference candidate without rendering apps.",
+    )
+    parser.add_argument(
+        "--enforce-all-fake-coarse", action="store_true",
+        help=(
+            "Promote every evaluable fake-row coarse authority to the gate. "
+            "Default formal scope gates only the independently reviewed "
+            "transition while the full-master audit reports the remaining queue."
+        ),
     )
     parser.add_argument(
         "--current-only-diagnostic", action="store_true",
@@ -1687,6 +2303,7 @@ def main():
         "gold": gold_cases(
             cases, gold_file, gold_raw, gold_identity,
             args.expected_gold_sha256,
+            enforce_all_fake_coarse=args.enforce_all_fake_coarse,
         ),
     }
     del gold_raw
@@ -1779,6 +2396,10 @@ def main():
             )
             for language in args.languages
         ]
+        for result in diagnostics:
+            print_comparison_result(
+                result["language"], "current_only", result["comparison"]
+            )
         _diagnostic_gold_raw, diagnostic_gold_identity = consistent_snapshot(
             gold_file
         )
