@@ -1,5 +1,8 @@
 # Keep only hash-pinned audit inputs and generated app artifacts byte-stable.
 /_analysis_20260625/_*.json text eol=lf
+/_analysis_20260625/localized_atomic_root_families.json text eol=lf
+/_analysis_20260625/localized_global_exact_reviewed.json text eol=lf
+/_analysis_20260625/no_worsening_guards.json text eol=lf
 /_analysis_20260625/no_worsening_audit.py text eol=lf
 /_analysis_20260625/check_canonical_corpus_surfaces.py text eol=lf
 /_analysis_20260625/out/_audit_no_worsening.json text eol=lf
