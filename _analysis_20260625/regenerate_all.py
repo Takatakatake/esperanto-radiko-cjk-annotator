@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """道B: 大JSON一括再生成 (正式ルート)
 
-使い方:  python regenerate_all.py
+使い方:
+  python regenerate_all.py --ruby-only
+  python regenerate_all.py --all-tracks
   1-6. 偽分解reference/transition/app-reviewの固定manifestを検証
   7-11. corpus exact/reviewed/bare/word_anno境界を検証・同期
  12-16. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
@@ -12,7 +14,11 @@
  21. 純粋置換版JSONの再導出
  22-26. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
  27-28. no-worsening診断と固定62,313行の正式3言語監査
- 29. .bak掃除(prune_baks: 肥大化防止)
+ 29. .bak掃除(prune_baks: 肥大化防止、--all-tracksのみ)
+
+track modeは必須である。--ruby-onlyは17-19/21の漢字書込工程を実行せず、
+配備済み漢字成果物9本が各工程の前後で不変であることをSHA-256で監視する。
+--all-tracksだけが固定漢字マスターから漢字成果物を再構築する。
 
 外部マスターが必要な工程は環境変数で場所を指定できる(既定は作者環境):
   ESP_GOLD_PATH          … 学習者版マスター辞書(62k行)
@@ -21,19 +27,107 @@
   ESP_KANJI_MASTER_PATH  … 漢字割り当てマスター
   ESP_CORPUS_PATH        … 固定exact manifestの元になったcleanな京大HTML repo
 """
-import hashlib, json, subprocess, sys, os, tempfile
+import argparse, hashlib, json, subprocess, sys, os, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from gold_snapshot import consistent_snapshot
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument(
+        "--ruby-only",
+        action="store_true",
+        help="regenerate and verify Ruby assets without writing Kanji assets",
+    )
+    mode.add_argument(
+        "--all-tracks",
+        action="store_true",
+        help="explicitly regenerate both Ruby and Kanji assets",
+    )
+    return parser.parse_args(argv)
+
+
+ARGS = parse_args()
+
+KANJI_CANDIDATE_ACK = "ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE"
+if ARGS.all_tracks and os.environ.get(KANJI_CANDIDATE_ACK) != "1":
+    raise SystemExit(
+        "all-tracks is candidate-only until the reviewed Phase511 21-row "
+        "Kanji authority gate exists; run only in an isolated worktree and "
+        f"set {KANJI_CANDIDATE_ACK}=1 explicitly"
+    )
+
+KANJI_PROTECTED_PATHS = (
+    "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv",
+    "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv",
+    "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv",
+    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_漢字.json",
+    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_漢字.json",
+    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_漢字.json",
+    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_漢字_純粋置換.json",
+    "_analysis_20260625/out/kanji_root.csv",
+    "_analysis_20260625/out/word_kanji.json",
+)
+
+
+def _kanji_artifact_fingerprints():
+    fingerprints = {}
+    for relative in KANJI_PROTECTED_PATHS:
+        path = os.path.join(REPO_ROOT, *relative.split("/"))
+        try:
+            with open(path, "rb") as handle:
+                raw = handle.read()
+        except OSError as error:
+            raise SystemExit(
+                f"Ruby-only Kanji guard cannot read {relative}: {error}"
+            ) from error
+        fingerprints[relative] = {
+            "bytes": len(raw),
+            "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        }
+    return fingerprints
+
+
+def _capture_ruby_only_kanji_guard():
+    clean = subprocess.run(
+        ["git", "diff", "--quiet", "HEAD", "--", *KANJI_PROTECTED_PATHS],
+        cwd=REPO_ROOT,
+        check=False,
+    )
+    if clean.returncode != 0:
+        raise SystemExit(
+            "Ruby-only regeneration requires all 9 protected Kanji artifacts "
+            "to match HEAD before the first write"
+        )
+    return _kanji_artifact_fingerprints()
+
+
+def _assert_ruby_only_kanji_guard(expected, completed_step):
+    actual = _kanji_artifact_fingerprints()
+    changed = [
+        relative for relative in KANJI_PROTECTED_PATHS
+        if actual[relative] != expected[relative]
+    ]
+    if changed:
+        raise SystemExit(
+            "Ruby-only regeneration changed protected Kanji artifacts after "
+            f"{completed_step}: {changed}"
+        )
 
 # No write starts until all external moving inputs are explicitly pinned.
 # The reviewed scope manifest is the authority for the accepted gold identity;
 # an asynchronously synchronized newer master must be audited separately before
 # it can replace this snapshot.
-for required in (
+required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
-    "ESP_CORPUS_PATH", "ESP_KANJI_MASTER_PATH",
-):
+    "ESP_CORPUS_PATH",
+]
+if ARGS.all_tracks:
+    required_inputs.append("ESP_KANJI_MASTER_PATH")
+for required in required_inputs:
     if not os.environ.get(required):
         raise SystemExit(f"formal regeneration requires explicit {required}")
 with open(os.path.join(HERE, "_no_worsening_scope_manifest.json"), encoding="utf-8") as handle:
@@ -80,32 +174,41 @@ COMMON_ENV["ESP_EXPECTED_ACADEMIC_SHA256"] = (
 FORMAL_HEAD = subprocess.check_output(
     ["git", "rev-parse", "HEAD"], cwd=os.path.dirname(HERE), text=True,
 ).strip()
-kanji_manifest_path = os.path.join(HERE, "_kanji_master_scope_manifest.json")
-with open(kanji_manifest_path, encoding="utf-8") as handle:
-    kanji_manifest = json.load(handle)
-if kanji_manifest.get("schema_version") != 1:
-    raise SystemExit("unsupported Kanji master manifest schema")
-for expected in kanji_manifest["files"]:
-    path = os.path.join(os.environ["ESP_KANJI_MASTER_PATH"], expected["name"])
-    raw = open(path, "rb").read()
-    actual_sha = hashlib.sha256(raw).hexdigest().upper()
-    if len(raw) != expected["bytes"] or actual_sha != expected["sha256"]:
-        raise SystemExit(
-            f"pinned Kanji master mismatch: {expected['name']}: expected "
-            f"{expected['bytes']} bytes/{expected['sha256']}, got "
-            f"{len(raw)} bytes/{actual_sha}"
+if ARGS.all_tracks:
+    kanji_manifest_path = os.path.join(
+        HERE, "_kanji_master_scope_manifest.json",
+    )
+    with open(kanji_manifest_path, encoding="utf-8") as handle:
+        kanji_manifest = json.load(handle)
+    if kanji_manifest.get("schema_version") != 1:
+        raise SystemExit("unsupported Kanji master manifest schema")
+    for expected in kanji_manifest["files"]:
+        path = os.path.join(
+            os.environ["ESP_KANJI_MASTER_PATH"], expected["name"],
         )
-COMMON_ENV["ESP_EXPECTED_KANJI_MASTER_MANIFEST"] = kanji_manifest_path
-_kanji_injection = next(
-    row for row in kanji_manifest["files"]
-    if row["name"] == "漢字注入_学習者版_20260620.txt"
-)
-if sum(
-    row.get("name") == _kanji_injection["name"]
-    for row in kanji_manifest["files"]
-) != 1:
-    raise SystemExit("Kanji master manifest must pin exactly one injection file")
-COMMON_ENV["ESP_EXPECTED_KANJI_MASTER_SHA256"] = _kanji_injection["sha256"]
+        raw = open(path, "rb").read()
+        actual_sha = hashlib.sha256(raw).hexdigest().upper()
+        if len(raw) != expected["bytes"] or actual_sha != expected["sha256"]:
+            raise SystemExit(
+                f"pinned Kanji master mismatch: {expected['name']}: expected "
+                f"{expected['bytes']} bytes/{expected['sha256']}, got "
+                f"{len(raw)} bytes/{actual_sha}"
+            )
+    COMMON_ENV["ESP_EXPECTED_KANJI_MASTER_MANIFEST"] = kanji_manifest_path
+    _kanji_injection = next(
+        row for row in kanji_manifest["files"]
+        if row["name"] == "漢字注入_学習者版_20260620.txt"
+    )
+    if sum(
+        row.get("name") == _kanji_injection["name"]
+        for row in kanji_manifest["files"]
+    ) != 1:
+        raise SystemExit(
+            "Kanji master manifest must pin exactly one injection file"
+        )
+    COMMON_ENV["ESP_EXPECTED_KANJI_MASTER_SHA256"] = (
+        _kanji_injection["sha256"]
+    )
 STEPS = [
     ([
         sys.executable,
@@ -198,10 +301,43 @@ STEPS = [
     # 全工程合格後に .bak_* を掃除(放置すると3GB超に膨張。現行成果物はgit+SSDで三重保全済み)
     ([sys.executable, os.path.join(HERE, 'prune_baks.py')], {}),
 ]
+
+KANJI_WRITE_SCRIPTS = frozenset({
+    "resync_kanji_master.py",
+    "apply_kanji_now.py",
+    "fix_kanji_2890.py",
+    "derive_pure_kanji.py",
+})
+RUBY_ONLY_EXCLUDED_SCRIPTS = KANJI_WRITE_SCRIPTS | {"prune_baks.py"}
+if ARGS.ruby_only:
+    STEPS = [
+        step for step in STEPS
+        if os.path.basename(step[0][1]) not in RUBY_ONLY_EXCLUDED_SCRIPTS
+    ]
+    planned_scripts = {os.path.basename(step[0][1]) for step in STEPS}
+    if planned_scripts & RUBY_ONLY_EXCLUDED_SCRIPTS:
+        raise SystemExit("Ruby-only plan unexpectedly contains a writer")
+    if "check_kanji_fake_decomposition.py" not in planned_scripts:
+        raise SystemExit("Ruby-only plan lost the read-only Kanji integrity gate")
+    ruby_only_kanji_guard = _capture_ruby_only_kanji_guard()
+else:
+    ruby_only_kanji_guard = None
+
 for cmd, env_add in STEPS:
     env = dict(os.environ); env.update(COMMON_ENV); env.update(env_add)
+    step_name = os.path.basename(cmd[1])
     print('>>>', ' '.join(os.path.basename(c) for c in cmd[1:2] + cmd[2:]))
-    r = subprocess.run(cmd, env=env)
+    try:
+        r = subprocess.run(cmd, env=env)
+    finally:
+        if ruby_only_kanji_guard is not None:
+            _assert_ruby_only_kanji_guard(
+                ruby_only_kanji_guard,
+                step_name,
+            )
     if r.returncode != 0:
         print(f'!! 失敗: {cmd[1]}'); sys.exit(1)
-print('=== 道B 一括再生成 完了 ===')
+print(
+    '=== 道B 一括再生成 完了 '
+    f"({'Ruby-only' if ARGS.ruby_only else 'all-tracks candidate'}) ==="
+)
