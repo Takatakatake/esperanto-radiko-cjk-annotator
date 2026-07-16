@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Regression tests for morphology generation and deployed ruby JSONs."""
+import ast
 import gc
 import hashlib
 import importlib.util
@@ -232,6 +233,133 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertIn("ESP_EXPECTED_KANJI_MASTER_MANIFEST", pipeline_source)
         self.assertIn("ESP_EXPECTED_KANJI_MASTER_SHA256", pipeline_source)
         self.assertIn("expected_master_bytes", fix_source)
+
+    def test_formal_regeneration_requires_an_explicit_track_mode(self):
+        environment = dict(os.environ)
+        for name in (
+            "ESP_GOLD_PATH",
+            "ESP_ACADEMIC_GOLD_PATH",
+            "ESP_PEJVO_ORIGINAL_PATH",
+            "ESP_CORPUS_PATH",
+            "ESP_KANJI_MASTER_PATH",
+        ):
+            environment.pop(name, None)
+        result = subprocess.run(
+            [sys.executable, str(HERE / "regenerate_all.py")],
+            cwd=ROOT,
+            env=environment,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("--ruby-only", result.stderr)
+        self.assertIn("--all-tracks", result.stderr)
+
+        all_tracks = subprocess.run(
+            [
+                sys.executable,
+                str(HERE / "regenerate_all.py"),
+                "--all-tracks",
+            ],
+            cwd=ROOT,
+            env=environment,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            check=False,
+        )
+        self.assertNotEqual(all_tracks.returncode, 0)
+        self.assertIn(
+            "ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE=1",
+            all_tracks.stderr,
+        )
+        self.assertNotIn("formal regeneration requires", all_tracks.stderr)
+
+    def test_ruby_only_pipeline_guards_kanji_artifacts(self):
+        source = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
+        self.assertIn("KANJI_PROTECTED_PATHS", source)
+        self.assertIn("_capture_ruby_only_kanji_guard", source)
+        self.assertIn("_assert_ruby_only_kanji_guard", source)
+        self.assertIn("RUBY_ONLY_EXCLUDED_SCRIPTS", source)
+        for writer in (
+            "resync_kanji_master.py",
+            "apply_kanji_now.py",
+            "fix_kanji_2890.py",
+            "derive_pure_kanji.py",
+            "prune_baks.py",
+        ):
+            self.assertIn(writer, source)
+        self.assertIn("check_kanji_fake_decomposition.py", source)
+        self.assertIn('if ARGS.all_tracks:', source)
+        self.assertIn('required_inputs.append("ESP_KANJI_MASTER_PATH")', source)
+
+        tree = ast.parse(source, filename=str(HERE / "regenerate_all.py"))
+        protected_assignment = next(
+            node for node in tree.body
+            if isinstance(node, ast.Assign)
+            and any(
+                isinstance(target, ast.Name)
+                and target.id == "KANJI_PROTECTED_PATHS"
+                for target in node.targets
+            )
+        )
+        protected_paths = ast.literal_eval(protected_assignment.value)
+        self.assertEqual(len(protected_paths), 9)
+        self.assertEqual(len(set(protected_paths)), 9)
+
+        helper_names = {
+            "_kanji_artifact_fingerprints",
+            "_capture_ruby_only_kanji_guard",
+            "_assert_ruby_only_kanji_guard",
+        }
+        helper_nodes = [
+            node for node in tree.body
+            if isinstance(node, ast.FunctionDef)
+            and node.name in helper_names
+        ]
+        self.assertEqual({node.name for node in helper_nodes}, helper_names)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture_root = Path(temporary)
+            for index, relative in enumerate(protected_paths):
+                path = fixture_root.joinpath(*relative.split("/"))
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(f"artifact-{index}".encode("ascii"))
+            for command in (
+                ["git", "init", "-q"],
+                ["git", "config", "user.email", "guard@example.invalid"],
+                ["git", "config", "user.name", "Ruby-only guard test"],
+                ["git", "add", "--", "."],
+                ["git", "commit", "-qm", "fixture"],
+            ):
+                subprocess.run(command, cwd=fixture_root, check=True)
+
+            namespace = {
+                "os": os,
+                "hashlib": hashlib,
+                "subprocess": subprocess,
+                "REPO_ROOT": str(fixture_root),
+                "KANJI_PROTECTED_PATHS": protected_paths,
+            }
+            helper_module = ast.Module(body=helper_nodes, type_ignores=[])
+            exec(
+                compile(helper_module, "<ruby-only-kanji-guard>", "exec"),
+                namespace,
+            )
+            capture = namespace["_capture_ruby_only_kanji_guard"]
+            assert_unchanged = namespace["_assert_ruby_only_kanji_guard"]
+            expected = capture()
+            self.assertEqual(len(expected), 9)
+            assert_unchanged(expected, "clean fixture")
+
+            victim = fixture_root.joinpath(*protected_paths[0].split("/"))
+            victim.write_bytes(b"changed")
+            with self.assertRaises(SystemExit):
+                assert_unchanged(expected, "mutating fixture")
+            with self.assertRaises(SystemExit):
+                capture()
 
     def test_pinned_base_stemming_settings_manifest(self):
         path = HERE / "_base_stemming_settings.json"

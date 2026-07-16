@@ -4,22 +4,47 @@
 **唯一の正式ルート**が収録されています。アプリ内の旧「JSON生成ページ」は
 最新の品質修正を含まないため撤去されました。
 
-## 一括実行
+## 明示trackで一括実行
     $env:ESP_GOLD_PATH = '<監査済みgold snapshot>'
     $env:ESP_ACADEMIC_GOLD_PATH = '<同一行対応の学術版snapshot>'
     $env:ESP_PEJVO_ORIGINAL_PATH = '<監査済み原典PEJVO snapshot>'
     $env:ESP_CORPUS_PATH = '<cleanな京大HTML repo>'
-    $env:ESP_KANJI_MASTER_PATH = '<監査済み漢字割当正本ディレクトリ>'
-    python _analysis_20260625/regenerate_all.py
+    python _analysis_20260625/regenerate_all.py --ruby-only
 
-この5環境変数は正式一括実行では必須である。学習者版・学術版・原典PEJVOは
+漢字成果物も意図的に再構築する場合だけ、固定漢字正本を追加して実行する。
+
+    $env:ESP_KANJI_MASTER_PATH = '<監査済み漢字割当正本ディレクトリ>'
+    $env:ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE = '1'  # 隔離worktree限定
+    python _analysis_20260625/regenerate_all.py --all-tracks
+
+track modeは必須であり、引数なしでは最初の書き込み前に停止する。
+Ruby-onlyでは先頭4環境変数、all-tracksでは5環境変数すべてを必須とする。
+さらにall-tracksは、Phase511由来21件のKanji authority gateが未整備である間は
+candidate-onlyとし、`ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE=1`を明示した隔離worktreeでしか
+実行できない。候補は個別裁定前に配備成果物へ昇格してはならない。
+学習者版・学術版・原典PEJVOは
 `_fake_coarse_reference_manifest.json` のbytes/line count/SHA-256と一致し、
 正式生成は書き込み前に全62,313行の対応、偽分解3,492行の語義gloss一致、
 および粗い分解参照表を`--check`で再構成する。goldは
 `_no_worsening_scope_manifest.json` のbytes/SHA-256と一致し、corpusは2つの
 exact manifestが記録したHEAD/status/content hashと一致すること。漢字正本は
-`_kanji_master_scope_manifest.json` の4ファイルのbytes/SHA-256と一致すること。
+all-tracksの場合に限り、`_kanji_master_scope_manifest.json` の4ファイルの
+bytes/SHA-256と一致すること。
 いずれかが異なれば最初の書き込み前に停止する。
+
+Ruby-onlyは17・18・19・21の漢字書込工程と29のbackup一括掃除を計画から除外する。
+開始時に配備済み漢字成果物9本がHEADと同一であることを確認し、各工程の成功時・
+失敗時の双方でbytes/SHA-256不変を再確認する。20の偽分解/deep分解照合は
+read-only gateとして残す。これにより、Rubyの粗境界修正を漢字成果物へ暗黙に
+伝播させない。漢字を更新する場合はall-tracksを明示し、差分を別途裁定する。
+
+Phase513 Ruby設定を固定Kanji snapshotへ隔離再生成した比較では、配備版に対して
+全域表16表層（追加10・削除6）のsemantic差が生じた。偽分解/deep分解53件×3言語は
+不一致0だが、この16件はRuby設定由来であり、今回のRuby-only更新には吸収しない。
+62K実機差分8行には改善（celulozo、laktozo、siria系、nen）と同時に、bifeniloが
+部分漢字化から全裸文字へ戻る退行が1件含まれる。改善だけを理由に巨大JSONを一括昇格せず、
+Phase511 transition 21件のKanji authorityとfail-closed gateを整備してから、
+次回all-tracks更新時に固定候補treeで個別裁定する。
 
 実行順(2026-07-15版。番号は `regenerate_all.py` の `STEPS` と一致):
 1. build_fake_coarse_reference_manifest.py --check … Phase513学習者版・学術版・PEJVO原典を再読し、62,313行対応・語義一致・3,213行の粗分解authorityを検証
@@ -38,11 +63,11 @@ exact manifestが記録したHEAD/status/content hashと一致すること。漢
 14. fix_ruby_postregen.py … Ruby事後修正
 15. test_canonical_corpus_surfaces.py … canonical全数ゲートの純粋関数回帰
 16. check_canonical_corpus_surfaces.py … 21,443表記を日中韓runtimeで全数検査
-17. resync_kanji_master.py --write … 漢字正本と全面再同期（CSVはヘッダーなし9,813語根・未対応13を含む、互換パッチ前word_kanji 43,738語幹）
-18. apply_kanji_now.py --write … 漢字3言語再生成（偽分解を深分解authorityへ戻す）
-19. fix_kanji_2890.py --apply … 38語の旧互換安全網（適用後word_kanji 43,776語幹）
+17. resync_kanji_master.py --write … all-tracksのみ。漢字正本と全面再同期（CSVはヘッダーなし9,813語根・未対応13を含む、互換パッチ前word_kanji 43,738語幹）
+18. apply_kanji_now.py --write … all-tracksのみ。漢字3言語再生成（偽分解を深分解authorityへ戻す）
+19. fix_kanji_2890.py --apply … all-tracksのみ。38語の旧互換安全網（適用後word_kanji 43,776語幹）
 20. check_kanji_fake_decomposition.py … 深分解piece列と漢字割当を3言語で全件照合
-21. derive_pure_kanji.py … 純粋置換版JSON再導出
+21. derive_pure_kanji.py … all-tracksのみ。純粋置換版JSON再導出
 22. anomaly_scan.py … 6JSON異常スキャン
 23. test_generation_regressions.py … 生成規則＋配置済み3言語の実機回帰
 24. test_reviewed_exact_manifest.py … 残差manifest回帰
@@ -50,7 +75,7 @@ exact manifestが記録したHEAD/status/content hashと一致すること。漢
 26. check_raw_apostrophe_structure.py … U+2019原表記の全コーパス3言語runtime回帰
 27. no_worsening_audit.py --current-only-diagnostic … 固定referenceに対する現行runtime残差0を再確認（単語投影の正式移行scope 157行）
 28. audit_master_3lang_full_snapshot.py … Phase513でpinした学習者版・学術版の全62,313行を3言語runtimeで正式監査（full-master scope 158行）
-29. prune_baks.py … 全工程合格後に一時バックアップを掃除
+29. prune_baks.py … all-tracksのみ。全工程合格後に一時バックアップを掃除
 
 Phase511由来の `_fake_coarse_phase511_transition_review.json` は、裁定済み21行だけを
 `ruby_track_only` で固定する。歴史manifestのraw 136行は変更せず、重なるline 45205
@@ -80,6 +105,21 @@ manifestへ追加する。`--enforce-all-fake-coarse` は全件裁定後だけ�
 また、完全無注釈の語彙候補45件と非終端無注釈断片候補202件も報告専用の確認キューであり、
 自動修正や幅合わせのための細分化対象ではない。ルビ幅は原綴りのおおむね2倍以内を表示ゲートで
 検査するが、幅を短くする目的だけで語根境界を増やさない。
+
+2026-07-16のPhase513固定snapshotによるRuby-only正式再走は、入力62,313行からコメント
+202行を明示除外し、runtime候補62,111行をJA/ZH/KOすべてで評価した（未評価0）。render
+union 62,299表層の3言語境界不一致、runtime error、可視文字列不一致、placeholder残留はすべて0。
+偽分解authority 3,492行は各言語で一致910／不一致2,582であり、一致910の内数である
+段階的transition 158行は158/158一致した。不一致2,582行は未裁定キューとして強制しない。
+この`gate=true`はstaged transition等の現段階の正式ゲート合格を表し、3,492行すべての
+粗境界一致認証ではない（`all_fake_coarse_gate=false` / `all_fake_coarse_enforced=false`）。
+文字数比2倍超のunique review指標はJA 199、ZH 78、KO 329（行重み付き202／78／330）だが、
+CSSと実文字幅を反映した
+実効幅2倍超は3言語とも0（最大JA 1.533750、ZH 1.366875、KO 1.104375、幅字形欠落0）。
+入力・HEAD・tracked worktree・アプリ入力・監査script・authority manifestは終始不変で、
+`complete=true` / `gate=true`。正式report SHA-256は
+`8E0E8568A80A985178C69004CBDBE039422D9368DADA8ABD02906627C46C0201`。
+reportは正式工程がOS一時ディレクトリの`esperanto_master_3lang_formal_report.json`へ再生成する。
 
 ## 構成
 - gen_replacement.py      … 置換リスト生成の中核(AN/ONリスト等の拡張点を含む)

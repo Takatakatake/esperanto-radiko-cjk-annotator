@@ -42,13 +42,19 @@ _project_root_misc/        コーパス(京大エス研HTML文書群)・修正�
 ## 🔧 大JSONの再生成（正式パイプライン）
 
 ```bash
-python _analysis_20260625/regenerate_all.py
+python _analysis_20260625/regenerate_all.py --ruby-only
+# 漢字候補を隔離worktreeで監査する場合だけ:
+ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE=1 python _analysis_20260625/regenerate_all.py --all-tracks
 ```
 
-確定リスト適用 → ルビ3言語再生成 → 事後修正 → 漢字3言語再生成 → 漢字パッチ → 異常スキャン
-を一括実行します。詳細は `_analysis_20260625/README_regeneration.md` を参照。
-（外部マスター辞書の場所は環境変数 `ESP_GOLD_PATH` / `ESP_KANJI_MASTER_PATH` で指定可能。
-生成物の大JSONはソース(CSV/E_stem/分解設定/word_anno)+本パイプラインから常に再構築できます）
+track modeの明示は必須です。通常の注釈ルビ更新は `--ruby-only` を使い、配備済み
+漢字成果物9点をHEAD・SHA-256で保護します。漢字正本も含めて再構築する場合だけ
+`--all-tracks` を指定します。ただしPhase511の漢字21件gateが未整備のため、現時点の
+all-tracksは隔離worktree内のcandidate-onlyで、上記環境変数がなければ書込前に停止します。
+候補を配備成果物へ昇格してはいけません。外部入力は `ESP_GOLD_PATH` / `ESP_ACADEMIC_GOLD_PATH` /
+`ESP_PEJVO_ORIGINAL_PATH` / `ESP_CORPUS_PATH` を明示し、all-tracksではさらに
+`ESP_KANJI_MASTER_PATH` を指定します。詳細は
+`_analysis_20260625/README_regeneration.md` を参照してください。
 
 ## 🧠 品質の設計原則
 
