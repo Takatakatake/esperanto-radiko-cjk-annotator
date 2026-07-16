@@ -1,0 +1,597 @@
+{
+ "schema_version": 2,
+ "phase": 511,
+ "source_fake_coarse_manifest": {
+  "sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+  "entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB"
+ },
+ "sources": {
+  "learner": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
+   "bytes": 4371657,
+   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+   "lines": 62313
+  },
+  "academic": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学術版_utf8_20260416.txt",
+   "bytes": 4277566,
+   "sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
+   "lines": 62313
+  }
+ },
+ "supersedes": {
+  "historical_manifest": {
+   "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
+   "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
+   "learner_lines": [
+    45205
+   ]
+  },
+  "strict_ledger_entries": {
+   "learner_lines": [
+    45818,
+    4785,
+    21361
+   ],
+   "entry_sha256": {
+    "45818": "D34E079717436B166B9305D7F1A32C6A366654E100F903873DB79003AB409997",
+    "4785": "41F3FCFF4911615606DAC601641786B1334C9724A6CDE835D6AF86C1004E4EC0",
+    "21361": "70BE599AC4B88BE6A9248A771E0D415B90B81586F50B7000361A1918A7C1D5F3"
+   }
+  }
+ },
+ "counts": {
+  "entries": 21,
+  "historical_authority_supersessions": 1,
+  "strict_authority_carry_forwards": 1,
+  "strict_authority_supersessions": 2,
+  "strict_authority_additions": 17,
+  "reviewed_exact_localized_annotations": 19
+ },
+ "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+ "entries": [
+  {
+   "learner_line": 45205,
+   "surface": "arabinozo",
+   "learner_decomposition": "arab/in/oz/o",
+   "coarse_decomposition": "arabinoz/o",
+   "academic_decomposition": "arabinoz/o",
+   "target": "arabinoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_historical_authority_supersession",
+   "previous_target": "arabin/oz/o",
+   "reference_entry_sha256": "88606BCF6186735D613CCB779F822DD38550737E48554799F2679F68227BE291",
+   "reason": "Phase 511 distinguishes PIV sugar -oz/④ from the homographic PEJVO disease/abundance suffix. Annotation Ruby follows the paired academic arabinoz/o root; Kanji keeps arab/in/oz/o.",
+   "supersedes_historical_entry_sha256": "93611A1DB885BD4AF3951C847185F109C7D7A4412B1606EBD3590E0BA7B35C08",
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "arabinoz",
+     "glosses": {
+      "ja": "アラビノース",
+      "zh": "阿拉伯糖",
+      "ko": "아라비노스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 45818,
+   "surface": "bifenilo",
+   "learner_decomposition": "bi/fen/il/o",
+   "coarse_decomposition": "bi/fenil/o",
+   "academic_decomposition": "bi/fenil/o",
+   "target": "bi/fenil/o",
+   "typed_roles": "RRL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_strict_authority_carry_forward",
+   "previous_target": "bi/fenil/o",
+   "reference_entry_sha256": "A583D7A3D0B4824DE38B5045878C5AE0AD1621BD4B96D2368C4844BD90D78F97",
+   "reason": "Phase 511 newly marks the learner bi/fen/il/o as deep/Kanji decomposition. The paired academic bi/fenil/o exactly preserves the already-reviewed Ruby boundary.",
+   "supersedes_strict_entry_sha256": "D34E079717436B166B9305D7F1A32C6A366654E100F903873DB79003AB409997"
+  },
+  {
+   "learner_line": 4785,
+   "surface": "celulozo",
+   "learner_decomposition": "celul/oz/o",
+   "coarse_decomposition": "celuloz/o",
+   "academic_decomposition": "celuloz/o",
+   "target": "celuloz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_strict_authority_supersession",
+   "previous_target": "celul/oz/o",
+   "reference_entry_sha256": "3F326F1E1834A67F65F112C53BBB29E4725A1B8A58713F1A081A4211B0259E5B",
+   "reason": "Phase 511 assigns sugar -oz/④ only to the deep/Kanji track. Annotation Ruby follows the PEJVO and paired-academic celuloz/o lexical root.",
+   "supersedes_strict_entry_sha256": "41F3FCFF4911615606DAC601641786B1334C9724A6CDE835D6AF86C1004E4EC0"
+  },
+  {
+   "learner_line": 21361,
+   "surface": "laktozo",
+   "learner_decomposition": "lakt/oz/o",
+   "coarse_decomposition": "laktoz/o",
+   "academic_decomposition": "laktoz/o",
+   "target": "laktoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_strict_authority_supersession",
+   "previous_target": "lakt/oz/o",
+   "reference_entry_sha256": "ED2CBB5B1C621F61897926CF05D4805FB77F73C0536067C08F05EE72AAE926E9",
+   "reason": "Phase 511 assigns sugar -oz/④ only to the deep/Kanji track. Annotation Ruby follows the PEJVO and paired-academic laktoz/o lexical root.",
+   "supersedes_strict_entry_sha256": "70BE599AC4B88BE6A9248A771E0D415B90B81586F50B7000361A1918A7C1D5F3"
+  },
+  {
+   "learner_line": 60166,
+   "surface": "deoksiozo",
+   "learner_decomposition": "de/oksi/oz/o",
+   "coarse_decomposition": "deoksioz/o",
+   "academic_decomposition": "deoksioz/o",
+   "target": "deoksioz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "de/oksi/oz/o",
+   "reference_entry_sha256": "DEEBC14E5F55D7E5CA73DD2CB81F94DD35AFACB7C7F7007983576460FDBDCC65",
+   "reason": "The paired academic deoksioz/o is the reviewed coarse sugar root. The deployed learner/deep pieces expose oxygen and the homographic disease -oz gloss, so Ruby uses one exact localized root while Kanji keeps de/oksi/oz/o.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "deoksioz",
+     "glosses": {
+      "ja": "デオキシ糖",
+      "zh": "脱氧糖",
+      "ko": "디옥시당"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 60735,
+   "surface": "deoksiribozo",
+   "learner_decomposition": "de/oksi/rib/oz/o",
+   "coarse_decomposition": "deoksi/riboz/o",
+   "academic_decomposition": "deoksi/riboz/o",
+   "target": "deoksi/riboz/o",
+   "typed_roles": "RRL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "de/oksi/rib/oz/o",
+   "reference_entry_sha256": "B01CA33F631D95C7596E70A11B881AB536B47751F0A29A48D1ACADC8F1BA6766",
+   "reason": "The paired academic deoksi/riboz/o preserves the coarse PIV chemical prefix and ribose root. The learner/deep rib piece is the currant homograph in the Ruby dictionaries, so the two exact localized pieces prevent a semantic false annotation without creating productive root rules.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "deoksi",
+     "glosses": {
+      "ja": "デオキシ",
+      "zh": "脱氧",
+      "ko": "디옥시"
+     }
+    },
+    {
+     "index": 1,
+     "piece": "riboz",
+     "glosses": {
+      "ja": "リボース",
+      "zh": "核糖",
+      "ko": "리보스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 24033,
+   "surface": "maltozo",
+   "learner_decomposition": "malt/oz/o",
+   "coarse_decomposition": "maltoz/o",
+   "academic_decomposition": "maltoz/o",
+   "target": "maltoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "malt/oz/o",
+   "reference_entry_sha256": "C7C852DFD7BF643F655894DB2E810C19FB4530FA021CD18AAE4F2BE676F9D306",
+   "reason": "The paired academic maltoz/o is the reviewed coarse sugar name. The learner/deep malt/oz/o remains the Kanji analysis, while this exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "maltoz",
+     "glosses": {
+      "ja": "麦芽糖",
+      "zh": "麦芽糖",
+      "ko": "맥아당"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 34886,
+   "surface": "sakarozo",
+   "learner_decomposition": "sakar/oz/o",
+   "coarse_decomposition": "sakaroz/o",
+   "academic_decomposition": "sakaroz/o",
+   "target": "sakaroz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "sakar/oz/o",
+   "reference_entry_sha256": "601FD08A7A144FA53771F10538FEDEE69DCDFAF90D78F409A6ED572371D7ADE3",
+   "reason": "The paired academic sakaroz/o is the reviewed coarse sugar name. The learner/deep sakar/oz/o remains the Kanji analysis, while this exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "sakaroz",
+     "glosses": {
+      "ja": "ショ糖",
+      "zh": "蔗糖",
+      "ko": "자당"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 44893,
+   "surface": "amelozo",
+   "learner_decomposition": "amel/oz/o",
+   "coarse_decomposition": "ameloz/o",
+   "academic_decomposition": "ameloz/o",
+   "target": "ameloz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "amel/oz/o",
+   "reference_entry_sha256": "37CD6B15D73AEFFB000990BAFBB5BB7614430127F2465A9A4E8C2CB4A512E90D",
+   "reason": "The paired academic ameloz/o is the reviewed coarse sugar name. The learner/deep amel/oz/o remains the Kanji analysis; the exact Ruby-only gloss avoids composing the starch and disease senses.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "ameloz",
+     "glosses": {
+      "ja": "アミロース",
+      "zh": "直链淀粉",
+      "ko": "아밀로스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 46627,
+   "surface": "deoksi",
+   "learner_decomposition": "de/oksi",
+   "coarse_decomposition": "deoksi",
+   "academic_decomposition": "deoksi",
+   "target": "deoksi",
+   "typed_roles": "R",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "de/oksi",
+   "reference_entry_sha256": "2303E4EE28F9A1F8C56F2CA532BA549BDB947F36EAFEEEB40A1A9AFE670A128A",
+   "reason": "The paired academic deoksi is the reviewed coarse chemical root. The learner/deep de/oksi remains available to the Kanji track; this exact annotation prevents a misleading oxygen-only Ruby.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "deoksi",
+     "glosses": {
+      "ja": "デオキシ",
+      "zh": "脱氧",
+      "ko": "디옥시"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 48081,
+   "surface": "fruktozo",
+   "learner_decomposition": "frukt/oz/o",
+   "coarse_decomposition": "fruktoz/o",
+   "academic_decomposition": "fruktoz/o",
+   "target": "fruktoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "frukt/oz/o",
+   "reference_entry_sha256": "8A869E29DF744CAE28DFE90FCC85AA4B7A6AF6412DAB7839D3166E31841117A4",
+   "reason": "The paired academic fruktoz/o is the reviewed coarse sugar name. The learner/deep frukt/oz/o remains the Kanji analysis; the exact Ruby-only gloss avoids composing fruit with disease -oz.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "fruktoz",
+     "glosses": {
+      "ja": "果糖",
+      "zh": "果糖",
+      "ko": "과당"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 49821,
+   "surface": "kalozo",
+   "learner_decomposition": "kal/oz/o",
+   "coarse_decomposition": "kaloz/o",
+   "academic_decomposition": "kaloz/o",
+   "target": "kaloz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "kal/oz/o",
+   "reference_entry_sha256": "3BEC84AB366A52E3F99F2F5DED064C9EE7FE059E455486B72A8F741390D6C0C8",
+   "reason": "Both pinned kalozo senses share the paired academic kaloz/o boundary.  The exact localized Ruby records the plant and anatomy senses together without turning kaloz into a productive rule; Kanji keeps kal/oz/o.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "kaloz",
+     "glosses": {
+      "ja": "カロース;脳梁",
+      "zh": "胼胝质;胼胝体",
+      "ko": "칼로스;뇌량"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 51048,
+   "surface": "ksilozo",
+   "learner_decomposition": "ksil/oz/o",
+   "coarse_decomposition": "ksiloz/o",
+   "academic_decomposition": "ksiloz/o",
+   "target": "ksiloz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "ksil/oz/o",
+   "reference_entry_sha256": "14CD6E0762D87F48408E85E58096B46ED401BE7604023A3A96CA5D4FB973357A",
+   "reason": "The paired academic ksiloz/o is the reviewed coarse sugar name. The learner/deep ksil/oz/o remains the Kanji analysis; the exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "ksiloz",
+     "glosses": {
+      "ja": "キシロース",
+      "zh": "木糖",
+      "ko": "자일로스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 54151,
+   "surface": "rafinozo",
+   "learner_decomposition": "rafin/oz/o",
+   "coarse_decomposition": "rafinoz/o",
+   "academic_decomposition": "rafinoz/o",
+   "target": "rafinoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "rafin/oz/o",
+   "reference_entry_sha256": "725CEE6219018B65C1E5F6A7D9C5E6819CA8B4FCE77B13620848AACB4CD57E69",
+   "reason": "The paired academic rafinoz/o is the reviewed coarse sugar name. The learner/deep rafin/oz/o remains the Kanji analysis; the exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "rafinoz",
+     "glosses": {
+      "ja": "ラフィノース",
+      "zh": "棉子糖",
+      "ko": "라피노스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 54383,
+   "surface": "ribozo",
+   "learner_decomposition": "rib/oz/o",
+   "coarse_decomposition": "riboz/o",
+   "academic_decomposition": "riboz/o",
+   "target": "riboz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "rib/oz/o",
+   "reference_entry_sha256": "2427A076E891441255F789BD584606FD6B411939E31AF5EDA30F72C1E39EE4E5",
+   "reason": "The paired academic riboz/o is the reviewed coarse sugar name. The learner/deep rib/oz/o remains the Kanji analysis; the exact Ruby-only annotation avoids the currant and disease homographs.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "riboz",
+     "glosses": {
+      "ja": "リボース",
+      "zh": "核糖",
+      "ko": "리보스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 55369,
+   "surface": "stakiozo",
+   "learner_decomposition": "staki/oz/o",
+   "coarse_decomposition": "stakioz/o",
+   "academic_decomposition": "stakioz/o",
+   "target": "stakioz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_coarse_authority_addition",
+   "previous_target": "staki/oz/o",
+   "reference_entry_sha256": "36BEF3E198835D599DCA8FC90771BD5F7A37F78530021C30864019B129FEEA08",
+   "reason": "The paired academic stakioz/o supplies the Kyoto-level coarse Ruby boundary.  The semantically usable learner/deep staki/oz/o remains for Kanji, and the exact rule does not generalize either piece.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "stakioz",
+     "glosses": {
+      "ja": "スタキオース",
+      "zh": "水苏糖",
+      "ko": "스타키오스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 59757,
+   "surface": "grenmaltozaĵo",
+   "learner_decomposition": "gren/malt/oz/aĵ/o",
+   "coarse_decomposition": "gren/maltoz/aĵ/o",
+   "academic_decomposition": "gren/maltoz/aĵ/o",
+   "target": "gren/maltoz/aĵ/o",
+   "typed_roles": "RRRL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "gren/malt/oz/aĵ/o",
+   "reference_entry_sha256": "C68803D17FE4A89B642EAC0478C6C73AE952838147DF5934FE87C2A1A01C5FF2",
+   "reason": "The paired academic compound keeps maltoz as one sugar root.  Only that indexed piece receives a context-local gloss; gren and aĵ retain their existing annotations and Kanji keeps the deep gren/malt/oz/aĵ/o analysis.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 1,
+     "piece": "maltoz",
+     "glosses": {
+      "ja": "麦芽糖",
+      "zh": "麦芽糖",
+      "ko": "맥아당"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 60165,
+   "surface": "aldozo",
+   "learner_decomposition": "ald/oz/o",
+   "coarse_decomposition": "aldoz/o",
+   "academic_decomposition": "aldoz/o",
+   "target": "aldoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "ald/oz/o",
+   "reference_entry_sha256": "5C9EC18EBE402F7B3BFA97689DF205517D56DECD61000250BD5CCD565ABA749E",
+   "reason": "The paired academic aldoz/o is the reviewed coarse sugar name. The learner/deep ald/oz/o remains the Kanji analysis; the exact Ruby-only annotation avoids alto and disease homographs.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "aldoz",
+     "glosses": {
+      "ja": "アルドース",
+      "zh": "醛糖",
+      "ko": "알도스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 60167,
+   "surface": "furanozo",
+   "learner_decomposition": "furan/oz/o",
+   "coarse_decomposition": "furanoz/o",
+   "academic_decomposition": "furanoz/o",
+   "target": "furanoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "furan/oz/o",
+   "reference_entry_sha256": "3AADEFCB9EFE7E2463B617F8A7301453FD70682F64AAF0F00C03072B4EC3F74F",
+   "reason": "The paired academic furanoz/o is the reviewed coarse sugar name. The learner/deep furan/oz/o remains the Kanji analysis; the exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "furanoz",
+     "glosses": {
+      "ja": "フラノース",
+      "zh": "呋喃糖",
+      "ko": "푸라노스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 60168,
+   "surface": "ketozo",
+   "learner_decomposition": "ket/oz/o",
+   "coarse_decomposition": "ketoz/o",
+   "academic_decomposition": "ketoz/o",
+   "target": "ketoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "ket/oz/o",
+   "reference_entry_sha256": "DB1866DC96A4318CF7A5BEFE9E8D14343F93709F5F4BCC7EF02331A1911330CA",
+   "reason": "The paired academic ketoz/o is the reviewed coarse sugar name. The learner/deep ket/oz/o remains the Kanji analysis; the exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "ketoz",
+     "glosses": {
+      "ja": "ケトース",
+      "zh": "酮糖",
+      "ko": "케토스"
+     }
+    }
+   ]
+  },
+  {
+   "learner_line": 60169,
+   "surface": "piranozo",
+   "learner_decomposition": "piran/oz/o",
+   "coarse_decomposition": "piranoz/o",
+   "academic_decomposition": "piranoz/o",
+   "target": "piranoz/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "ruby_track_only": true,
+   "category": "phase511_semantic_authority_addition",
+   "previous_target": "piran/oz/o",
+   "reference_entry_sha256": "A417430EEB9C0512617D6E889715055A8A7CD1425DF11D874E1A0AE0CDD56955",
+   "reason": "The paired academic piranoz/o is the reviewed coarse sugar name. The learner/deep piran/oz/o remains the Kanji analysis; the exact Ruby-only annotation prevents the disease -oz homograph.",
+   "adds_strict_entry": true,
+   "exact_annotations": [
+    {
+     "index": 0,
+     "piece": "piranoz",
+     "glosses": {
+      "ja": "ピラノース",
+      "zh": "吡喃糖",
+      "ko": "피라노스"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -816,7 +816,10 @@ def main():
 
     report = build_report()
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    json.dump(report, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # Keep the tracked audit artifact byte-stable on Windows as well as POSIX.
+    with OUT.open("w", encoding="utf-8", newline="\n") as stream:
+        json.dump(report, stream, ensure_ascii=False, indent=1)
+        stream.write("\n")
     print(
         f"HTML {report['files']} = annotated {report['annotated_documents']} + "
         f"zero-ruby {report['zero_ruby_documents']} / "

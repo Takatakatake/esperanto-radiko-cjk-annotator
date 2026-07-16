@@ -14,7 +14,7 @@
 
 この5環境変数は正式一括実行では必須である。学習者版・学術版・原典PEJVOは
 `_fake_coarse_reference_manifest.json` のbytes/line count/SHA-256と一致し、
-正式生成は書き込み前に全62,313行の対応、偽分解3,383行の語義gloss一致、
+正式生成は書き込み前に全62,313行の対応、偽分解3,492行の語義gloss一致、
 および粗い分解参照表を`--check`で再構成する。goldは
 `_no_worsening_scope_manifest.json` のbytes/SHA-256と一致し、corpusは2つの
 exact manifestが記録したHEAD/status/content hashと一致すること。漢字正本は
@@ -22,41 +22,61 @@ exact manifestが記録したHEAD/status/content hashと一致すること。漢
 いずれかが異なれば最初の書き込み前に停止する。
 
 実行順(2026-07-15版。番号は `regenerate_all.py` の `STEPS` と一致):
-1. build_fake_coarse_reference_manifest.py --check … final 5E学習者版・0462学術版・PEJVO原典を再読し、全行対応・語義一致・3,113行の粗分解authorityを検証
-2. build_fake_coarse_transition_review.py --check … 歴史的C679→B090の136行（135表層、word gate 135行＋full-master-only 1行）を由来を変えず固定
+1. build_fake_coarse_reference_manifest.py --check … Phase513学習者版・学術版・PEJVO原典を再読し、62,313行対応・語義一致・3,213行の粗分解authorityを検証
+2. build_fake_coarse_transition_review.py --check … 歴史的C679→B090 manifestのraw 136行を由来ごと改変せず固定
 3. build_fake_coarse_ff33_transition_review.py --check … FF33で新たに偽分解となったTomisto 1行を別scopeとして固定
 4. build_fake_coarse_5e_transition_review.py --check … final 5Eのpromilo 1行を別scopeとして固定（Ruby=promil/o、Kanji=pro/mil）
-5. build_fake_coarse_transition_app_review.py --check … アプリ移行対象を固定authorityと照合
-6. build_corpus_exact_manifest.py --check … 固定exact manifestと指定コーパスのclean HEAD・内容hashを照合
-7. build_corpus_reviewed_exact_manifest.py --check … 汎用規則後に残ったevaluable表記のtyped exact固定を照合
-8. bare_word_audit.py --require-zero … ガイド必須rubyの裸語レビュー漏れを0件に固定
-9. apply_corpus_word_anno.py --write … コーパス確定注釈とexact境界ルールを日中韓へ同期
-10. build_word_anno_boundary_manifest.py --check … 日中韓の語根境界signatureを照合
-11. apply_confirmed_now.py 30 --settings-audit … 補正後の設定が日中韓で意味的に同一か検査
-12. apply_confirmed_now.py 30 --write … 確定リスト適用＋Ruby 3言語再生成
-13. fix_ruby_postregen.py … Ruby事後修正
-14. test_canonical_corpus_surfaces.py … canonical全数ゲートの純粋関数回帰
-15. check_canonical_corpus_surfaces.py … 21,443表記を日中韓runtimeで全数検査
-16. resync_kanji_master.py --write … 漢字正本と全面再同期（CSVはヘッダーなし9,813語根・未対応13を含む、互換パッチ前word_kanji 43,738語幹）
-17. apply_kanji_now.py --write … 漢字3言語再生成（偽分解を深分解authorityへ戻す）
-18. fix_kanji_2890.py --apply … 38語の旧互換安全網（適用後word_kanji 43,776語幹）
-19. check_kanji_fake_decomposition.py … 深分解piece列と漢字割当を3言語で全件照合
-20. derive_pure_kanji.py … 純粋置換版JSON再導出
-21. anomaly_scan.py … 6JSON異常スキャン
-22. test_generation_regressions.py … 生成規則＋配置済み3言語の実機回帰
-23. test_reviewed_exact_manifest.py … 残差manifest回帰
-24. check_multilingual_structure.py … 全域ルールの日中韓語根分節一致
-25. check_raw_apostrophe_structure.py … U+2019原表記の全コーパス3言語runtime回帰
-26. no_worsening_audit.py --current-only-diagnostic … 固定referenceに対する現行runtime残差0を再確認
-27. audit_master_3lang_full_snapshot.py … final 5E学習者版・0462学術版の全62,313行を3言語runtimeで正式監査
-28. prune_baks.py … 全工程合格後に一時バックアップを掃除
+5. build_fake_coarse_phase511_transition_review.py --check … Phase511由来でRuby用に閉集合裁定した21行をPhase513 snapshotで再認証し、歴史manifestのline 45205を後発authorityでsupersede
+6. build_fake_coarse_transition_app_review.py --check … アプリ移行対象を固定authorityと照合
+7. build_corpus_exact_manifest.py --check … 固定exact manifestと指定コーパスのclean HEAD・内容hashを照合
+8. build_corpus_reviewed_exact_manifest.py --check … 汎用規則後に残ったevaluable表記のtyped exact固定を照合
+9. bare_word_audit.py --require-zero … ガイド必須rubyの裸語レビュー漏れを0件に固定
+10. apply_corpus_word_anno.py --write … コーパス確定注釈とexact境界ルールを日中韓へ同期
+11. build_word_anno_boundary_manifest.py --check … 日中韓の語根境界signatureを照合
+12. apply_confirmed_now.py 30 --settings-audit … 補正後の設定が日中韓で意味的に同一か検査
+13. apply_confirmed_now.py 30 --write … 確定リスト適用＋Ruby 3言語再生成
+14. fix_ruby_postregen.py … Ruby事後修正
+15. test_canonical_corpus_surfaces.py … canonical全数ゲートの純粋関数回帰
+16. check_canonical_corpus_surfaces.py … 21,443表記を日中韓runtimeで全数検査
+17. resync_kanji_master.py --write … 漢字正本と全面再同期（CSVはヘッダーなし9,813語根・未対応13を含む、互換パッチ前word_kanji 43,738語幹）
+18. apply_kanji_now.py --write … 漢字3言語再生成（偽分解を深分解authorityへ戻す）
+19. fix_kanji_2890.py --apply … 38語の旧互換安全網（適用後word_kanji 43,776語幹）
+20. check_kanji_fake_decomposition.py … 深分解piece列と漢字割当を3言語で全件照合
+21. derive_pure_kanji.py … 純粋置換版JSON再導出
+22. anomaly_scan.py … 6JSON異常スキャン
+23. test_generation_regressions.py … 生成規則＋配置済み3言語の実機回帰
+24. test_reviewed_exact_manifest.py … 残差manifest回帰
+25. check_multilingual_structure.py … 全域ルールの日中韓語根分節一致
+26. check_raw_apostrophe_structure.py … U+2019原表記の全コーパス3言語runtime回帰
+27. no_worsening_audit.py --current-only-diagnostic … 固定referenceに対する現行runtime残差0を再確認（単語投影の正式移行scope 157行）
+28. audit_master_3lang_full_snapshot.py … Phase513でpinした学習者版・学術版の全62,313行を3言語runtimeで正式監査（full-master scope 158行）
+29. prune_baks.py … 全工程合格後に一時バックアップを掃除
 
-`audit_master_3lang_full_snapshot.py` は偽分解指定3,383行を毎回すべて測定するが、
-正式既定ゲートで粗いルビ境界を強制するのは、独立に裁定済みの移行対象138行だけである。
-2026-07-15固定snapshotでは各言語802行が粗い境界に一致し、2,581行は未裁定キューとして
-報告される（`all_fake_coarse_gate=false` / `all_fake_coarse_enforced=false`）。未裁定行を
-一括で粗分解へ昇格してはならず、個別の語義・京大コーパス・日中韓境界を確認してから
-review manifestへ追加する。`--enforce-all-fake-coarse` は全件裁定後だけ使用する。
+Phase511由来の `_fake_coarse_phase511_transition_review.json` は、裁定済み21行だけを
+`ruby_track_only` で固定する。歴史manifestのraw 136行は変更せず、重なるline 45205
+（arabinozo）だけをPhase511側からsupersedeする。このためfull-masterの正式scopeは
+歴史effective 135＋FF33 1＋final-5E 1＋Phase511 21＝158行である。一方、単語投影の
+no-worsening scopeは歴史側のmultiword 1行を含まないため157行であり、両数値を混同しない。
+このreviewが固定するのは学術版に沿う粗いRuby境界だけで、漢字側は学習者版のdeep/偽分解を
+そのままauthorityとして保持する。line 60166 `deoksioz/o` とline 60735
+`deoksi/riboz/o` は、深いRubyで酸素・病症・スグリの同綴語義を誤表示したため、
+語と片位置に限定した日中韓注釈を伴う完全一致ルールとしてのみ採用する。追加の15表層
+（糖名13、standalone `deoksi`、過細な `stakiozo`）も同じ閉集合方式である。
+`exact_only`・`case_sensitive`・`ruby_track_only` を必須とし、融合語根を一般設定へ昇格
+させない。`kalozo` は同綴2義を片方へ潰さず、三言語とも植物義と解剖義を併記する。
+`nitrato` の訳語補完も既存 `@typed:nitrato:0` のみで行い、plain `nitrat` を追加して
+`nitrata acido` / `sennitratigo` の深境界へ波及させない。
+
+`adopt_phase513_no_worsening_candidate.py` は、`--references-only` で作ったpin済み候補から
+この21行を保持し、通常分解delta `nen -> ne/n` だけを加え、scope/conflict manifestと
+strict exact台帳を933件へ再束縛する
+一回限りの専用adopterである。通常の一括再生成には含めず、候補・gold・corpusの全identityを
+照合してから明示的に実行する。Phase512/513で増加・深化したfake 11行の一括採用には使用しない。
+
+`audit_master_3lang_full_snapshot.py` は偽分解指定3,492行を毎回すべて測定するが、
+正式既定ゲートで粗いルビ境界を強制するのは上記158行だけである。その他の不一致は
+未裁定キューとして報告し、個別の語義・京大コーパス・日中韓境界を確認してからreview
+manifestへ追加する。`--enforce-all-fake-coarse` は全件裁定後だけ使用する。
 また、完全無注釈の語彙候補45件と非終端無注釈断片候補202件も報告専用の確認キューであり、
 自動修正や幅合わせのための細分化対象ではない。ルビ幅は原綴りのおおむね2倍以内を表示ゲートで
 検査するが、幅を短くする目的だけで語根境界を増やさない。
@@ -82,6 +102,11 @@ review manifestへ追加する。`--enforce-all-fake-coarse` は全件裁定後�
 各言語から引き継ぐのは先頭の説明行だけです。これにより過去の生成済み行が
 バックアップ経由で正本へ逆流することを防ぎ、`--settings-audit` は補正後の意味的
 SHA-256が日中韓で一致しない場合、成果物を書き込む前に停止します。
+Ruby用の衝突判定・語尾派生には、pinした学術版（粗分解）を使います。学習者版の
+deep/偽分解（例: `et/an`, `met/an`）をRuby設定へ流用して短い語根を過剰に一般化せず、
+学習者版は漢字トラックの深分解authorityとしてのみ使います。このため正式生成では
+`ESP_ACADEMIC_GOLD_PATH` も必須で、学術版のbytes/line count/SHA-256がmanifestと
+一致しなければ設定生成前に停止します。
 また、`word_anno` で末尾が独立片 `/an` と確定した語幹は、
 `o/oj/on/ojn/a/aj/an/ajn/e/en` を自動派生します。同じ綴りに別の `word_anno`
 分解がある場合は自動生成せず、同綴異義語を保全します。
@@ -151,7 +176,8 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   evaluable 269,879件/21,443表記を3言語の配置済みruntimeで再描画し、reviewed
   628表記を含むtyped signature・可視文字・placeholder残留を残差0に固定
 - `_strict_gold_reference_fixes.json` … no-worsening参照に残った辞書語を、
-  case-sensitive・bounded・typed exact規則として参照hash付きで固定する。
+  case-sensitive・bounded・typed exact規則として参照hash付きで固定する
+  （Phase513 pinでは933件）。
   通常CSVにない略語・医学語・固有名片のJA/ZH/KO注釈は
   `apply_corpus_word_anno.py` の表記＋片位置限定グロスから生成し、同綴異義語へ漏らさない。
 

@@ -82,6 +82,9 @@ FAKE_FF33_TRANSITION_MANIFEST = (
 FAKE_5E_TRANSITION_MANIFEST = (
     HERE / "_fake_coarse_5e_transition_review.json"
 )
+FAKE_PHASE511_TRANSITION_MANIFEST = (
+    HERE / "_fake_coarse_phase511_transition_review.json"
+)
 ATOMIC_HYPHEN_REVIEW, _ATOMIC_HYPHEN_IDENTITY = audit.load_atomic_hyphen_review()
 
 
@@ -417,6 +420,8 @@ def load_fake_coarse_authority(
         sha256_bytes(serialized_transition) != transition.get("entries_sha256")
         or transition.get("entries_sha256")
         != "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+        or sha256_bytes(transition_raw)
+        != "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34"
         or transition.get("counts") != expected_transition_counts
         or len(transition.get("entries", [])) != 136
     ):
@@ -504,11 +509,138 @@ def load_fake_coarse_authority(
         ):
             raise ValueError(f"invalid/reused 5E transition line: {line!r}")
         final_5e_transition_by_line[line] = entry
+
+    phase511_transition_raw = FAKE_PHASE511_TRANSITION_MANIFEST.read_bytes()
+    phase511_transition = json.loads(phase511_transition_raw.decode("utf-8"))
+    phase511_entries = phase511_transition.get("entries", [])
+    serialized_phase511 = json.dumps(
+        phase511_entries, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    expected_phase511_hash = (
+        "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF"
+    )
+    expected_phase511_counts = {
+        "entries": 21,
+        "historical_authority_supersessions": 1,
+        "strict_authority_carry_forwards": 1,
+        "strict_authority_supersessions": 2,
+        "strict_authority_additions": 17,
+        "reviewed_exact_localized_annotations": 19,
+    }
+    expected_phase511_supersedes = {
+        "historical_manifest": {
+            "sha256": (
+                "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34"
+            ),
+            "entries_sha256": (
+                "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+            ),
+            "learner_lines": [45205],
+        },
+        "strict_ledger_entries": {
+            "learner_lines": [45818, 4785, 21361],
+            "entry_sha256": {
+                "45818": (
+                    "D34E079717436B166B9305D7F1A32C6A366654E100F903873DB79003AB409997"
+                ),
+                "4785": (
+                    "41F3FCFF4911615606DAC601641786B1334C9724A6CDE835D6AF86C1004E4EC0"
+                ),
+                "21361": (
+                    "70BE599AC4B88BE6A9248A771E0D415B90B81586F50B7000361A1918A7C1D5F3"
+                ),
+            },
+        },
+    }
+    expected_phase511_source = {
+        "sha256": (
+            "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504"
+        ),
+        "entries_sha256": (
+            "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB"
+        ),
+    }
+    if (
+        set(phase511_transition) != {
+            "schema_version", "phase", "source_fake_coarse_manifest", "sources",
+            "supersedes", "counts", "entries_sha256", "entries",
+        }
+        or set(phase511_transition.get("sources", {})) != {"learner", "academic"}
+        or phase511_transition.get("schema_version") != 2
+        or phase511_transition.get("phase") != 511
+        or sha256_bytes(manifest_raw) != expected_phase511_source["sha256"]
+        or manifest.get("entries_sha256")
+        != expected_phase511_source["entries_sha256"]
+        or sha256_bytes(serialized_phase511) != expected_phase511_hash
+        or phase511_transition.get("entries_sha256") != expected_phase511_hash
+        or phase511_transition.get("counts") != expected_phase511_counts
+        or phase511_transition.get("source_fake_coarse_manifest")
+        != expected_phase511_source
+        or phase511_transition.get("sources", {}).get("learner")
+        != source_identity.get("learner")
+        or phase511_transition.get("sources", {}).get("academic")
+        != source_identity.get("academic")
+        or phase511_transition.get("supersedes")
+        != expected_phase511_supersedes
+        or len(phase511_entries) != 21
+    ):
+        raise ValueError("Phase 511 fake-coarse transition entry fingerprint mismatch")
+    phase511_transition_by_line = {}
+    expected_phase511_lines = {
+        45205, 45818, 4785, 21361, 60166, 60735,
+        24033, 34886, 44893, 46627, 48081, 49821, 51048, 54151,
+        54383, 55369, 59757, 60165, 60167, 60168, 60169,
+    }
+    for entry in phase511_entries:
+        line = entry.get("learner_line")
+        if (
+            line not in expected_phase511_lines
+            or line in phase511_transition_by_line
+            or line in ff33_transition_by_line
+            or line in final_5e_transition_by_line
+        ):
+            raise ValueError(f"invalid/reused Phase 511 transition line: {line!r}")
+        phase511_transition_by_line[line] = entry
+    if set(phase511_transition_by_line) != expected_phase511_lines:
+        raise ValueError("Phase 511 transition line set changed")
+
+    superseded_historical_lines = set(
+        expected_phase511_supersedes["historical_manifest"]["learner_lines"]
+    )
+    if set(phase511_transition_by_line) & set(transition_by_line) != (
+        superseded_historical_lines
+    ):
+        raise ValueError("unexpected Phase 511/historical transition overlap")
+    for line in superseded_historical_lines:
+        historical_entry = transition_by_line.get(line)
+        phase511_entry = phase511_transition_by_line.get(line)
+        serialized_historical_entry = json.dumps(
+            historical_entry, ensure_ascii=False, separators=(",", ":"),
+        ).encode("utf-8")
+        if (
+            historical_entry is None
+            or phase511_entry is None
+            or sha256_bytes(serialized_historical_entry)
+            != phase511_entry.get("supersedes_historical_entry_sha256")
+        ):
+            raise ValueError(
+                f"Phase 511 historical supersession identity drift at line {line}"
+            )
+    historical_effective_by_line = {
+        line: entry for line, entry in transition_by_line.items()
+        if line not in superseded_historical_lines
+    }
     combined_transition_by_line = {
-        **transition_by_line,
+        **historical_effective_by_line,
         **ff33_transition_by_line,
         **final_5e_transition_by_line,
+        **phase511_transition_by_line,
     }
+    if (
+        len(historical_effective_by_line) != 135
+        or len(combined_transition_by_line) != 158
+    ):
+        raise ValueError("effective staged-transition scope count changed")
 
     authority_rows = []
     used_entries = set()
@@ -598,12 +730,14 @@ def load_fake_coarse_authority(
             raise ValueError(f"fake-coarse learner surface drift at line {line_number}")
         transition_entry = combined_transition_by_line.get(line_number)
         transition_scope = None
-        if line_number in transition_by_line:
+        if line_number in historical_effective_by_line:
             transition_scope = "historical_c679_b090"
         elif line_number in ff33_transition_by_line:
             transition_scope = "ff33_delta"
         elif line_number in final_5e_transition_by_line:
             transition_scope = "final_5e_delta"
+        elif line_number in phase511_transition_by_line:
+            transition_scope = "phase511_supersession"
         if transition_entry is not None:
             if (
                 transition_entry.get("surface") != surface
@@ -672,6 +806,8 @@ def load_fake_coarse_authority(
                 "sha256": sha256_bytes(transition_raw),
                 "entries_sha256": transition["entries_sha256"],
                 "counts": transition["counts"],
+                "effective_entries": len(historical_effective_by_line),
+                "superseded_lines": sorted(superseded_historical_lines),
             },
             "ff33_delta": {
                 "path": str(FAKE_FF33_TRANSITION_MANIFEST.relative_to(ROOT)),
@@ -685,10 +821,21 @@ def load_fake_coarse_authority(
                 "entries_sha256": final_5e_transition["entries_sha256"],
                 "counts": final_5e_transition["counts"],
             },
+            "phase511_supersession": {
+                "path": str(
+                    FAKE_PHASE511_TRANSITION_MANIFEST.relative_to(ROOT)
+                ),
+                "sha256": sha256_bytes(phase511_transition_raw),
+                "entries_sha256": phase511_transition["entries_sha256"],
+                "counts": phase511_transition["counts"],
+                "supersedes": phase511_transition["supersedes"],
+            },
             "combined_entries": len(combined_transition_by_line),
             "historical_entries": len(transition_by_line),
+            "historical_effective_entries": len(historical_effective_by_line),
             "ff33_entries": len(ff33_transition_by_line),
             "final_5e_entries": len(final_5e_transition_by_line),
+            "phase511_entries": len(phase511_transition_by_line),
         },
         "paired_invariant": dict(invariant),
         "coverage_categories": dict(categories),
@@ -1168,6 +1315,7 @@ def run(args):
         FAKE_TRANSITION_MANIFEST,
         FAKE_FF33_TRANSITION_MANIFEST,
         FAKE_5E_TRANSITION_MANIFEST,
+        FAKE_PHASE511_TRANSITION_MANIFEST,
         HERE / "_fake_coarse_pejvo_disagreement_review.json",
         HERE / "_fake_coarse_project_boundary_review.json",
         HERE / "localized_atomic_root_families.json",
@@ -1438,13 +1586,14 @@ def run(args):
         for row in fake_authority_results
     )
     expected_transition_scope_rows = {
-        "historical_c679_b090": 136,
+        "historical_c679_b090": 135,
         "ff33_delta": 1,
         "final_5e_delta": 1,
+        "phase511_supersession": 21,
     }
     fake_transition_gate = all(
-        row["counts"].get("transition_rows", 0) == 138
-        and row["counts"].get("transition_matched", 0) == 138
+        row["counts"].get("transition_rows", 0) == 158
+        and row["counts"].get("transition_matched", 0) == 158
         and row["counts"].get("transition_mismatched", 0) == 0
         and {
             scope: counts.get("matched", 0)
@@ -1505,15 +1654,18 @@ def run(args):
             "staged_transition_gate": fake_transition_gate,
             "staged_transition_expected_rows": {
                 **expected_transition_scope_rows,
-                "combined": 138,
+                "combined": 158,
             },
             "all_fake_coarse_gate": fake_all_coarse_gate,
             "all_fake_coarse_enforced": args.enforce_all_fake_coarse,
             "languages": fake_authority_results,
             "staging_note": (
                 "Every fake-marked row remains in this line-keyed report. "
-                "The historical 136-row transition, one-row FF33 lineage delta, "
-                "and one-row final-5E delta are mandatory until "
+                "The historical manifest remains frozen at 136 rows, with line "
+                "45205 superseded so that 135 historical rows, one FF33 lineage "
+                "delta, one final-5E delta, and twenty-one Phase 511 rows are "
+                "mandatory "
+                "until "
                 "the broader gloss/semantic queue is reviewed; use "
                 "--enforce-all-fake-coarse to promote the full queue to a gate."
             ),

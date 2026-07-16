@@ -1,7 +1,7 @@
 {
  "manifest_schema_version": 1,
  "reference_schema_version": 5,
- "raw_conflicts_sha256": "78600D1BE475F5BC7124069174BBAC66DB8EA6B6A8A943E1D032DC453AD17986",
+ "raw_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
  "entries": [
   {
    "surface": "Alberto",
@@ -3367,70 +3367,6 @@
    ],
    "category": "reviewed_lexical_root",
    "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'akvedukt/o'; the competing learner-gold form is a productive-looking over-segmentation."
-  },
-  {
-   "surface": "areno",
-   "options": [
-    {
-     "expected": "ar/en/o",
-     "signature": {
-      "reconstruction": "areno",
-      "spans": [
-       {
-        "text": "ar",
-        "ruby": true
-       },
-       {
-        "text": "en",
-        "ruby": true
-       },
-       {
-        "text": "o",
-        "ruby": false
-       }
-      ]
-     },
-     "sources": {
-      "gold_unmarked": 1
-     }
-    },
-    {
-     "expected": "aren/o",
-     "signature": {
-      "reconstruction": "areno",
-      "spans": [
-       {
-        "text": "aren",
-        "ruby": true
-       },
-       {
-        "text": "o",
-        "ruby": false
-       }
-      ]
-     },
-     "sources": {
-      "html_corpus": 1
-     }
-    }
-   ],
-   "allowed_signatures": [
-    {
-     "reconstruction": "areno",
-     "spans": [
-      {
-       "text": "aren",
-       "ruby": true
-      },
-      {
-       "text": "o",
-       "ruby": false
-      }
-     ]
-    }
-   ],
-   "category": "reviewed_lexical_root",
-   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'aren/o'; the competing learner-gold form is a productive-looking over-segmentation."
   },
   {
    "surface": "demokratia",

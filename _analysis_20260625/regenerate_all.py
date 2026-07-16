@@ -2,17 +2,17 @@
 """道B: 大JSON一括再生成 (正式ルート)
 
 使い方:  python regenerate_all.py
-  1-5. 偽分解reference/transition/app-reviewの固定manifestを検証
-  6-10. corpus exact/reviewed/bare/word_anno境界を検証・同期
- 11-15. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
- 16. 漢字マスター正本との全面再同期(CSV+word_kanji再構築)
- 17. 漢字3言語再生成
- 18. 漢字38語互換パッチ(fix_kanji_2890: 旧安全網)
- 19. 漢字の偽分解/深分解を固定authorityに対し3言語全件照合
- 20. 純粋置換版JSONの再導出
- 21-25. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
- 26-27. no-worsening診断と固定62,313行の正式3言語監査
- 28. .bak掃除(prune_baks: 肥大化防止)
+  1-6. 偽分解reference/transition/app-reviewの固定manifestを検証
+  7-11. corpus exact/reviewed/bare/word_anno境界を検証・同期
+ 12-16. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
+ 17. 漢字マスター正本との全面再同期(CSV+word_kanji再構築)
+ 18. 漢字3言語再生成
+ 19. 漢字38語互換パッチ(fix_kanji_2890: 旧安全網)
+ 20. 漢字の偽分解/深分解を固定authorityに対し3言語全件照合
+ 21. 純粋置換版JSONの再導出
+ 22-26. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
+ 27-28. no-worsening診断と固定62,313行の正式3言語監査
+ 29. .bak掃除(prune_baks: 肥大化防止)
 
 外部マスターが必要な工程は環境変数で場所を指定できる(既定は作者環境):
   ESP_GOLD_PATH          … 学習者版マスター辞書(62k行)
@@ -132,6 +132,11 @@ STEPS = [
     ], {}),
     ([
         sys.executable,
+        os.path.join(HERE, 'build_fake_coarse_phase511_transition_review.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
         os.path.join(HERE, 'build_fake_coarse_transition_app_review.py'),
         '--check',
     ], {}),
@@ -165,8 +170,8 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'test_reviewed_exact_manifest.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_raw_apostrophe_structure.py')], {}),
-    # Formal expected-signature gate for the pinned 5E snapshot plus the
-    # historical, FF33-lineage and final-5E fake-to-coarse transitions.
+    # Formal expected-signature gate for the pinned Phase 513 snapshot plus
+    # the effective historical, FF33, final-5E and 21 reviewed Phase511 rows.
     ([
         sys.executable,
         os.path.join(HERE, 'no_worsening_audit.py'),
