@@ -1,13 +1,13 @@
 {
  "manifest_schema_version": 1,
- "projection_sha256": "2055924C6E8FC7D65F65C20E60BF594A8A20D3905020A1FC6E4DD800CCD07969",
+ "projection_sha256": "361505F0B7CE0966085089346F8619F13A09D1DC9D3536408CECB12BBEB35444",
  "expected": {
   "schema_version": 5,
-  "case_count": 68596,
-  "surface_count": 68506,
-  "reference_sha256": "F7C4755D70215A4DB78976A1AAFFA801B0374AE8B3248D1BADB480911F741B29",
-  "reference_conflict_count": 90,
-  "reference_conflicts_sha256": "78600D1BE475F5BC7124069174BBAC66DB8EA6B6A8A943E1D032DC453AD17986",
+  "case_count": 68516,
+  "surface_count": 68427,
+  "reference_sha256": "EB81086916F181D657D683EC5E983C5E0D3FE287E71AA9D059ABA98D1A33E357",
+  "reference_conflict_count": 89,
+  "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
   "corpus": {
    "files": 169,
    "raw_ruby": 348971,
@@ -28,8 +28,8 @@
    "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
   },
   "corpus_repository": {
-   "head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
-   "branch": "agent/kyodai-proper-roots-20260714",
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "branch": "main",
    "status_entries": 0,
    "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
   },
@@ -38,28 +38,28 @@
    "instances": 74
   },
   "gold": {
-   "sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
-   "bytes": 4366007,
+   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+   "bytes": 4371657,
    "lines": 62313,
    "nul_bytes": 0,
    "replacement_chars": 0,
    "selected_records": 55413,
-   "included_unmarked": 52348,
-   "excluded_fake": 3054,
+   "included_unmarked": 52248,
+   "excluded_fake": 3154,
    "official_overrides": 11,
    "project_ruby_boundary_overrides": 2,
-   "included_fake_coarse_entries": 137,
-   "included_fake_coarse_surfaces": 136,
+   "included_fake_coarse_entries": 157,
+   "included_fake_coarse_surfaces": 156,
    "fake_coarse_sources": {
-    "gold_fake_coarse_pejvo_original": 31,
-    "gold_fake_coarse_paired_academic": 104,
+    "gold_fake_coarse_pejvo_original": 35,
+    "gold_fake_coarse_paired_academic": 120,
     "gold_fake_coarse_project_reviewed_override": 2
    },
    "fake_coarse_reference": {
     "path": "_analysis_20260625/_fake_coarse_reference_manifest.json",
-    "sha256": "91358ADDA30E3E120F335141F755AFE25B5118C4FC2490015683B8BC8B192195",
-    "entries_sha256": "A744696EED592AEAA01EBD7D9CB6380715F114D3BD144D638517B24146D48AEB",
-    "academic_sha256": "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D",
+    "sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+    "entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+    "academic_sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
     "pejvo_original_sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF",
     "pejvo_disagreement_review": {
      "path": "_fake_coarse_pejvo_disagreement_review.json",
@@ -72,31 +72,31 @@
      "entries": 2
     },
     "paired_invariant": {
-     "unmarked_rows": 58930,
-     "unmarked_identical_decomposition": 58930,
+     "unmarked_rows": 58821,
+     "unmarked_identical_decomposition": 58821,
      "academic_rows_without_fake_marker": 62313,
-     "marked_rows": 3383,
-     "marked_different_decomposition": 3383,
-     "marked_gloss_context_matches_academic": 3383
+     "marked_rows": 3492,
+     "marked_different_decomposition": 3492,
+     "marked_gloss_context_matches_academic": 3492
     },
     "counts": {
-     "entries": 3113,
-     "marker_excluded_rows": 270,
+     "entries": 3213,
+     "marker_excluded_rows": 279,
      "marker_exclusions_by_reason": {
-      "contains_space": 260,
-      "non_evaluable_surface": 10
+      "contains_space": 264,
+      "non_evaluable_surface": 15
      },
      "source_rows": {
-      "pejvo_original": 1376,
+      "pejvo_original": 1397,
       "pejvo_reviewed_override": 9,
-      "paired_academic": 1726,
+      "paired_academic": 1805,
       "project_reviewed_override": 2
      },
      "academic_rows_with_nonmatching_pejvo_homographs": 13,
-     "exact_surfaces": 3099,
-     "duplicate_exact_surface_rows": 14,
-     "casefold_surfaces": 3088,
-     "duplicate_casefold_surface_rows": 25
+     "exact_surfaces": 3197,
+     "duplicate_exact_surface_rows": 16,
+     "casefold_surfaces": 3186,
+     "duplicate_casefold_surface_rows": 27
     }
    },
    "fake_coarse_transition": {
@@ -105,15 +105,20 @@
      "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
      "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
      "entries": 136,
-     "evaluable_entries": 135,
+     "effective_entries": 135,
+     "evaluable_entries": 134,
      "full_master_only_entries": 1,
      "full_master_only_lines": [
       15993
+     ],
+     "superseded_entries": 1,
+     "superseded_lines": [
+      45205
      ]
     },
     "ff33_delta": {
      "path": "_analysis_20260625/_fake_coarse_ff33_transition_review.json",
-     "sha256": "B809061FF930D8CCB96F39EF3C1D8CA813334EF12484DA552B672069E14EB8B6",
+     "sha256": "BD5E4B5A2BC7D6D37AB910E2A250F203CF402DFAF8BDF933265863D1FF3F247A",
      "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
      "entries": 1,
      "evaluable_entries": 1,
@@ -121,19 +126,28 @@
     },
     "final_5e_delta": {
      "path": "_analysis_20260625/_fake_coarse_5e_transition_review.json",
-     "sha256": "7B2A0DEADFD25A790C96FADEA8D91AFE5FAD3DEA333425AF15886C017B2BDB69",
+     "sha256": "4DB426E02930B87B9581C820DA0AF04F993180BBFC0DC16D39619A501AE59783",
      "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
      "entries": 1,
      "evaluable_entries": 1,
      "full_master_only_entries": 0
     },
-    "evaluable_entries": 137,
+    "phase511_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase511_transition_review.json",
+     "sha256": "72D3CDE187680F4CD0DD178915FEBF9DD1FA421B1C4AC17B25374720FDB9CEA8",
+     "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+     "entries": 21,
+     "evaluable_entries": 21,
+     "full_master_only_entries": 0,
+     "historical_supersessions": 1
+    },
+    "evaluable_entries": 157,
     "full_master_only_entries": 1
    },
    "fake_coarse_enforcement": "reviewed_transitions",
    "duplicate_surfaces": 254,
    "duplicate_rows": 262,
-   "mixed_marker_surfaces": 38,
+   "mixed_marker_surfaces": 36,
    "atomic_hyphen_review": {
     "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
     "entries": 41,

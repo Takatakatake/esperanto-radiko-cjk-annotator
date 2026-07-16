@@ -22,6 +22,9 @@ from build_fake_coarse_ff33_transition_review import (
 from build_fake_coarse_5e_transition_review import (
     validate as validate_fake_coarse_5e_transition_review,
 )
+from build_fake_coarse_phase511_transition_review import (
+    validate as validate_fake_coarse_phase511_transition_review,
+)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,6 +64,28 @@ if (
     or _final_5e_entry.get("typed_roles") != "RL"
 ):
     raise SystemExit("final 5E promilo transition identity drift")
+FAKE_COARSE_PHASE511_REVIEW_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_fake_coarse_phase511_transition_review.json"
+)
+FAKE_COARSE_PHASE511_REVIEW = json.loads(
+    FAKE_COARSE_PHASE511_REVIEW_PATH.read_text(encoding="utf-8")
+)
+validate_fake_coarse_phase511_transition_review(
+    FAKE_COARSE_PHASE511_REVIEW
+)
+FAKE_COARSE_PHASE511_ENTRIES = FAKE_COARSE_PHASE511_REVIEW["entries"]
+if {
+    entry.get("surface") for entry in FAKE_COARSE_PHASE511_ENTRIES
+} != {
+    "arabinozo", "bifenilo", "celulozo", "laktozo",
+    "deoksiozo", "deoksiribozo",
+    "maltozo", "sakarozo", "grenmaltozaĵo", "amelozo",
+    "fruktozo", "kalozo", "ksilozo", "rafinozo", "ribozo",
+    "aldozo", "furanozo", "ketozo", "piranozo", "deoksi",
+    "stakiozo",
+}:
+    raise SystemExit("Phase 511 reviewed Ruby surface scope drift")
 KANJI_TRACK_PRODUCTIVE_TARGETS = {
     _final_5e_entry["surface"]: {
         "target": _final_5e_entry["learner_decomposition"],
@@ -243,6 +268,26 @@ if (
     != STRICT_FIX_MANIFEST.get("entries_sha256")
 ):
     raise SystemExit("strict gold-reference fix manifest identity mismatch")
+_strict_fix_by_surface = {
+    entry["w"]: entry for entry in STRICT_FIX_ENTRIES
+}
+for _phase_entry in FAKE_COARSE_PHASE511_ENTRIES:
+    _strict_entry = _strict_fix_by_surface.get(_phase_entry["surface"])
+    if (
+        _strict_entry is None
+        or _strict_entry.get("target") != _phase_entry.get("target")
+        or _strict_entry.get("typed_roles")
+        != _phase_entry.get("typed_roles")
+        or _strict_entry.get("exact_only") is not True
+        or _strict_entry.get("boundary_only") is not True
+        or _strict_entry.get("case_sensitive") is not True
+        or _strict_entry.get("ruby_track_only") is not True
+        or _phase_entry.get("ruby_track_only") is not True
+    ):
+        raise SystemExit(
+            "Phase 511 strict Ruby-only rule drift: "
+            f"{_phase_entry.get('surface')!r}"
+        )
 
 
 def curly_apostrophe_variant(value):
@@ -567,22 +612,76 @@ TYPED_CONTEXT_GLOSSES = {
     },
 }
 
-# The staged fake-to-coarse manifest supplies one reviewed localized fallback
-# (tefoliin).  All other 84 entries must resolve through the existing local
-# CSV/word_anno data and therefore add no guessed or concatenated glosses.
-for _fake_entry in FAKE_COARSE_APP_ENTRIES:
-    _exact_annotation = _fake_entry.get("exact_annotation")
-    if _exact_annotation is None:
-        continue
-    _fake_pieces = [
-        piece for piece in _fake_entry["target"].split("/") if piece
-    ]
-    _fake_piece = _exact_annotation["piece"]
-    _fake_index = _fake_pieces.index(_fake_piece)
-    _fake_key = (_fake_entry["surface"], _fake_index, _fake_piece)
-    if _fake_key in TYPED_CONTEXT_GLOSSES:
-        raise SystemExit(f"duplicate fake-coarse typed annotation: {_fake_key!r}")
-    TYPED_CONTEXT_GLOSSES[_fake_key] = dict(_exact_annotation["glosses"])
+# The staged manifests supply only explicitly reviewed localized fallbacks.
+# Historical manifests used one ``exact_annotation`` object; the Phase 511
+# semantic review can carry several indexed ``exact_annotations`` for a single
+# word.  Normalize both forms fail-closed, and never turn these contextual
+# glosses into productive root annotations.
+def _iter_reviewed_exact_annotations(entry):
+    singular = entry.get("exact_annotation")
+    plural = entry.get("exact_annotations")
+    if singular is not None and plural is not None:
+        raise SystemExit(
+            f"mixed exact annotation schemas: {entry.get('surface')!r}"
+        )
+    pieces = [piece for piece in entry["target"].split("/") if piece]
+    roles = entry.get("typed_roles", "")
+    if len(roles) != len(pieces):
+        raise SystemExit(
+            f"invalid typed exact target: {entry.get('surface')!r}"
+        )
+    if singular is not None:
+        matches = [
+            index for index, piece in enumerate(pieces)
+            if piece == singular.get("piece")
+        ]
+        if len(matches) != 1:
+            raise SystemExit(
+                f"ambiguous legacy exact annotation: {entry.get('surface')!r}"
+            )
+        plural = [{**singular, "index": matches[0]}]
+    elif plural is None:
+        return ()
+    if not isinstance(plural, list) or not plural:
+        raise SystemExit(
+            f"invalid exact annotation list: {entry.get('surface')!r}"
+        )
+    normalized = []
+    seen = set()
+    for annotation in plural:
+        index = annotation.get("index")
+        glosses = annotation.get("glosses")
+        if (
+            not isinstance(index, int)
+            or index < 0
+            or index >= len(pieces)
+            or pieces[index] != annotation.get("piece")
+            or roles[index] != "R"
+            or index in seen
+            or not isinstance(glosses, dict)
+            or set(glosses) != {"ja", "zh", "ko"}
+            or any(not isinstance(value, str) or not value for value in glosses.values())
+        ):
+            raise SystemExit(
+                f"invalid indexed exact annotation: {entry.get('surface')!r}"
+            )
+        seen.add(index)
+        normalized.append((index, pieces[index], glosses))
+    return tuple(normalized)
+
+
+for _fake_entry in (
+    FAKE_COARSE_APP_ENTRIES + FAKE_COARSE_PHASE511_ENTRIES
+):
+    for _fake_index, _fake_piece, _fake_glosses in (
+        _iter_reviewed_exact_annotations(_fake_entry)
+    ):
+        _fake_key = (_fake_entry["surface"], _fake_index, _fake_piece)
+        if _fake_key in TYPED_CONTEXT_GLOSSES:
+            raise SystemExit(
+                f"duplicate fake-coarse typed annotation: {_fake_key!r}"
+            )
+        TYPED_CONTEXT_GLOSSES[_fake_key] = dict(_fake_glosses)
 
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
@@ -1052,6 +1151,22 @@ if _hokkajdon_annotation.get("piece") != "Hokkajdo":
     raise SystemExit("reviewed Hokkajdon annotation is missing or malformed")
 _hokkajdon_annotation["glosses"] = dict(_HOKKAJDO_GLOSSES)
 REVIEWED_TYPED_ANNOTATIONS["@typed:Hokkajdon:0"] = _hokkajdon_annotation
+
+# ``nitrato`` is a reviewed exact coarse surface (nitrat/o), but its corpus
+# manifest observed only the Japanese annotation and therefore supplied
+# machine fallback tags in Chinese and Korean.  Repair only this typed context:
+# a plain ``nitrat`` annotation would also feed productive/deep words such as
+# nitrata acido and sennitratigo, changing their intended boundaries.
+_NITRATO_GLOSSES = {
+    "ja": "硝酸塩", "zh": "硝酸盐", "ko": "질산염",
+}
+_nitrato_annotation = dict(
+    REVIEWED_TYPED_ANNOTATIONS.get("@typed:nitrato:0", {})
+)
+if _nitrato_annotation.get("piece") != "nitrat":
+    raise SystemExit("reviewed nitrato annotation is missing or malformed")
+_nitrato_annotation["glosses"] = dict(_NITRATO_GLOSSES)
+REVIEWED_TYPED_ANNOTATIONS["@typed:nitrato:0"] = _nitrato_annotation
 for row in REVIEWED_EXACT_MANIFEST["exact_surfaces"]:
     surface = row["surface"]
     target = row["target"]

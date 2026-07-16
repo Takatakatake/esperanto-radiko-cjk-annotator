@@ -19842,13 +19842,13 @@
    "oj",
    "on",
    "ojn",
+   "a",
    "aj",
    "an",
    "ajn",
    "e",
    "en",
-   "word_boundary",
-   "a"
+   "word_boundary"
   ]
  ],
  [
@@ -19999,6 +19999,7 @@
    "oj",
    "on",
    "ojn",
+   "a",
    "aj",
    "an",
    "ajn",
@@ -20015,6 +20016,7 @@
    "oj",
    "on",
    "ojn",
+   "a",
    "aj",
    "an",
    "ajn",
@@ -26591,6 +26593,7 @@
    "oj",
    "on",
    "ojn",
+   "a",
    "aj",
    "an",
    "ajn",
@@ -26684,13 +26687,13 @@
    "oj",
    "on",
    "ojn",
+   "a",
    "aj",
    "an",
    "ajn",
    "e",
    "en",
-   "word_boundary",
-   "a"
+   "word_boundary"
   ]
  ],
  [
@@ -36728,7 +36731,8 @@
    "ne",
    "word_boundary",
    "case_sensitive",
-   "typed_roles:RRL"
+   "typed_roles:RRL",
+   "ruby_track_only"
   ]
  ],
  [
@@ -36874,13 +36878,14 @@
   ]
  ],
  [
-  "celul/oz/o",
+  "celuloz/o",
   89000,
   [
    "ne",
    "word_boundary",
    "case_sensitive",
-   "typed_roles:RRL"
+   "typed_roles:RL",
+   "ruby_track_only"
   ]
  ],
  [
@@ -39104,13 +39109,14 @@
   ]
  ],
  [
-  "lakt/oz/o",
+  "laktoz/o",
   79000,
   [
    "ne",
    "word_boundary",
    "case_sensitive",
-   "typed_roles:RRL"
+   "typed_roles:RL",
+   "ruby_track_only"
   ]
  ],
  [
@@ -43496,6 +43502,215 @@
    "case_sensitive",
    "typed_roles:RLRL",
    "ruby_track_only"
+  ]
+ ],
+ [
+  "arabinoz/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "deoksioz/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "deoksi/riboz/o",
+  129000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "maltoz/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "sakaroz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ameloz/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "deoksi",
+  69000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:R",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "fruktoz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "kaloz/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ksiloz/o",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "rafinoz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "riboz/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "stakioz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "gren/maltoz/aĵ/o",
+  139000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RRRL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "aldoz/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "furanoz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ketoz/o",
+  69000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "piranoz/o",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ne/n",
+  39000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL"
   ]
  ]
 ]

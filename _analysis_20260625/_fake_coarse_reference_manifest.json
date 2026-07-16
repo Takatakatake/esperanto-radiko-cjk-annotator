@@ -3,14 +3,14 @@
  "sources": {
   "learner": {
    "name": "世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
-   "bytes": 4366007,
-   "sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
+   "bytes": 4371657,
+   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
    "lines": 62313
   },
   "academic": {
    "name": "世界语全部单词_大约44100个(原pejvo.txt)_学術版_utf8_20260416.txt",
-   "bytes": 4277590,
-   "sha256": "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D",
+   "bytes": 4277566,
+   "sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
    "lines": 62313
   },
   "pejvo_original": {
@@ -31,33 +31,33 @@
   "entries": 2
  },
  "paired_invariant": {
-  "unmarked_rows": 58930,
-  "unmarked_identical_decomposition": 58930,
+  "unmarked_rows": 58821,
+  "unmarked_identical_decomposition": 58821,
   "academic_rows_without_fake_marker": 62313,
-  "marked_rows": 3383,
-  "marked_different_decomposition": 3383,
-  "marked_gloss_context_matches_academic": 3383
+  "marked_rows": 3492,
+  "marked_different_decomposition": 3492,
+  "marked_gloss_context_matches_academic": 3492
  },
  "counts": {
-  "entries": 3113,
-  "marker_excluded_rows": 270,
+  "entries": 3213,
+  "marker_excluded_rows": 279,
   "marker_exclusions_by_reason": {
-   "contains_space": 260,
-   "non_evaluable_surface": 10
+   "contains_space": 264,
+   "non_evaluable_surface": 15
   },
   "source_rows": {
-   "pejvo_original": 1376,
+   "pejvo_original": 1397,
    "pejvo_reviewed_override": 9,
-   "paired_academic": 1726,
+   "paired_academic": 1805,
    "project_reviewed_override": 2
   },
   "academic_rows_with_nonmatching_pejvo_homographs": 13,
-  "exact_surfaces": 3099,
-  "duplicate_exact_surface_rows": 14,
-  "casefold_surfaces": 3088,
-  "duplicate_casefold_surface_rows": 25
+  "exact_surfaces": 3197,
+  "duplicate_exact_surface_rows": 16,
+  "casefold_surfaces": 3186,
+  "duplicate_casefold_surface_rows": 27
  },
- "entries_sha256": "A744696EED592AEAA01EBD7D9CB6380715F114D3BD144D638517B24146D48AEB",
+ "entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
  "entries": [
   {
    "learner_line": 173,
@@ -2409,7 +2409,7 @@
    "learner_line": 4681,
    "surface": "butanolo",
    "learner_surface": "butanolo",
-   "learner_decomposition": "butan/ol/o",
+   "learner_decomposition": "but/an/ol/o",
    "coarse_decomposition": "butanol/o",
    "academic_decomposition": "butanol/o",
    "authority": "pejvo_original",
@@ -2451,6 +2451,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     4873
+   ]
+  },
+  {
+   "learner_line": 4785,
+   "surface": "celulozo",
+   "learner_surface": "celulozo",
+   "learner_decomposition": "celul/oz/o",
+   "coarse_decomposition": "celuloz/o",
+   "academic_decomposition": "celuloz/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    4876
    ]
   },
   {
@@ -4155,12 +4167,24 @@
    "learner_line": 10016,
    "surface": "etanolo",
    "learner_surface": "etanolo",
-   "learner_decomposition": "etan/ol/o",
+   "learner_decomposition": "et/an/ol/o",
    "coarse_decomposition": "etanol/o",
    "academic_decomposition": "etanol/o",
    "authority": "pejvo_original",
    "authority_lines": [
     10148
+   ]
+  },
+  {
+   "learner_line": 10053,
+   "surface": "etilo",
+   "learner_surface": "etilo",
+   "learner_decomposition": "et/il/o",
+   "coarse_decomposition": "etil/o",
+   "academic_decomposition": "etil/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    10185
    ]
   },
   {
@@ -4533,6 +4557,30 @@
    ]
   },
   {
+   "learner_line": 10717,
+   "surface": "femuralo",
+   "learner_surface": "femuralo",
+   "learner_decomposition": "femur/al/o",
+   "coarse_decomposition": "femural/o",
+   "academic_decomposition": "femural/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    10853
+   ]
+  },
+  {
+   "learner_line": 10751,
+   "surface": "fenolo",
+   "learner_surface": "fenolo",
+   "learner_decomposition": "fen/ol/o",
+   "coarse_decomposition": "fenol/o",
+   "academic_decomposition": "fenol/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    10890
+   ]
+  },
+  {
    "learner_line": 10759,
    "surface": "fenomenologio",
    "learner_surface": "fenomenologio",
@@ -4542,6 +4590,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     10898
+   ]
+  },
+  {
+   "learner_line": 10782,
+   "surface": "ferika",
+   "learner_surface": "ferika",
+   "learner_decomposition": "fer/ik/a",
+   "coarse_decomposition": "ferik/a",
+   "academic_decomposition": "ferik/a",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    10921
    ]
   },
   {
@@ -4578,6 +4638,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     10959
+   ]
+  },
+  {
+   "learner_line": 10824,
+   "surface": "feroza",
+   "learner_surface": "feroza",
+   "learner_decomposition": "fer/oz/a",
+   "coarse_decomposition": "feroz/a",
+   "academic_decomposition": "feroz/a",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    10962
    ]
   },
   {
@@ -5244,6 +5316,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     12205
+   ]
+  },
+  {
+   "learner_line": 12240,
+   "surface": "fruntalo",
+   "learner_surface": "fruntalo",
+   "learner_decomposition": "frunt/al/o",
+   "coarse_decomposition": "fruntal/o",
+   "academic_decomposition": "fruntal/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    12393
    ]
   },
   {
@@ -8593,6 +8677,30 @@
    ]
   },
   {
+   "learner_line": 21159,
+   "surface": "kvinto",
+   "learner_surface": "kvinto",
+   "learner_decomposition": "kvin/t/o",
+   "coarse_decomposition": "kvint/o",
+   "academic_decomposition": "kvint/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    21410
+   ]
+  },
+  {
+   "learner_line": 21361,
+   "surface": "laktozo",
+   "learner_surface": "laktozo",
+   "learner_decomposition": "lakt/oz/o",
+   "coarse_decomposition": "laktoz/o",
+   "academic_decomposition": "laktoz/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    21616
+   ]
+  },
+  {
    "learner_line": 21485,
    "surface": "laparotomio",
    "learner_surface": "laparotomio",
@@ -9085,6 +9193,18 @@
    ]
   },
   {
+   "learner_line": 24033,
+   "surface": "maltozo",
+   "learner_surface": "maltozo",
+   "learner_decomposition": "malt/oz/o",
+   "coarse_decomposition": "maltoz/o",
+   "academic_decomposition": "maltoz/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    24326
+   ]
+  },
+  {
    "learner_line": 24049,
    "surface": "maltusianismo",
    "learner_surface": "maltusianismo",
@@ -9518,10 +9638,22 @@
    ]
   },
   {
+   "learner_line": 25181,
+   "surface": "metano",
+   "learner_surface": "metano",
+   "learner_decomposition": "met/an/o",
+   "coarse_decomposition": "metan/o",
+   "academic_decomposition": "metan/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25482
+   ]
+  },
+  {
    "learner_line": 25182,
    "surface": "metanolo",
    "learner_surface": "metanolo",
-   "learner_decomposition": "metan/ol/o",
+   "learner_decomposition": "met/an/ol/o",
    "coarse_decomposition": "metanol/o",
    "academic_decomposition": "metanol/o",
    "authority": "pejvo_original",
@@ -9626,15 +9758,63 @@
    ]
   },
   {
+   "learner_line": 25209,
+   "surface": "metilalkoholo",
+   "learner_surface": "metilalkoholo",
+   "learner_decomposition": "met/il/alkohol/o",
+   "coarse_decomposition": "metil/alkohol/o",
+   "academic_decomposition": "metil/alkohol/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25510
+   ]
+  },
+  {
+   "learner_line": 25214,
+   "surface": "metilhidrargo",
+   "learner_surface": "metilhidrargo",
+   "learner_decomposition": "met/il/hidrarg/o",
+   "coarse_decomposition": "metil/hidrarg/o",
+   "academic_decomposition": "metil/hidrarg/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25515
+   ]
+  },
+  {
    "learner_line": 25215,
    "surface": "metilklorido",
    "learner_surface": "metilklorido",
-   "learner_decomposition": "metil/klor/id/o",
+   "learner_decomposition": "met/il/klor/id/o",
    "coarse_decomposition": "metil/klorid/o",
    "academic_decomposition": "metil/klorid/o",
    "authority": "pejvo_original",
    "authority_lines": [
     25516
+   ]
+  },
+  {
+   "learner_line": 25216,
+   "surface": "metilo",
+   "learner_surface": "metilo",
+   "learner_decomposition": "met/il/o",
+   "coarse_decomposition": "metil/o",
+   "academic_decomposition": "metil/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25517
+   ]
+  },
+  {
+   "learner_line": 25217,
+   "surface": "metilviolo",
+   "learner_surface": "metilviolo",
+   "learner_decomposition": "met/il/viol/o",
+   "coarse_decomposition": "metil/viol/o",
+   "academic_decomposition": "metil/viol/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25518
    ]
   },
   {
@@ -11152,6 +11332,18 @@
    ]
   },
   {
+   "learner_line": 28239,
+   "surface": "okcipitalo",
+   "learner_surface": "okcipitalo",
+   "learner_decomposition": "okcipit/al/o",
+   "coarse_decomposition": "okcipital/o",
+   "academic_decomposition": "okcipital/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    28585
+   ]
+  },
+  {
    "learner_line": 28272,
    "surface": "oksigenakvo",
    "learner_surface": "oksigenakvo",
@@ -11185,6 +11377,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     28627
+   ]
+  },
+  {
+   "learner_line": 28277,
+   "surface": "oktano",
+   "learner_surface": "oktano",
+   "learner_decomposition": "okt/an/o",
+   "coarse_decomposition": "oktan/o",
+   "academic_decomposition": "oktan/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    28630
    ]
   },
   {
@@ -11797,6 +12001,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     29713
+   ]
+  },
+  {
+   "learner_line": 29374,
+   "surface": "parietalo",
+   "learner_surface": "parietalo",
+   "learner_decomposition": "pariet/al/o",
+   "coarse_decomposition": "parietal/o",
+   "academic_decomposition": "parietal/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    29745
    ]
   },
   {
@@ -12844,6 +13060,18 @@
    ]
   },
   {
+   "learner_line": 32329,
+   "surface": "propangaso",
+   "learner_surface": "propangaso",
+   "learner_decomposition": "prop/an/gas/o",
+   "coarse_decomposition": "propan/gas/o",
+   "academic_decomposition": "propan/gas/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    32712
+   ]
+  },
+  {
    "learner_line": 32399,
    "surface": "protagonisto",
    "learner_surface": "protagonisto",
@@ -13801,6 +14029,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     35293
+   ]
+  },
+  {
+   "learner_line": 34886,
+   "surface": "sakarozo",
+   "learner_surface": "sakarozo",
+   "learner_decomposition": "sakar/oz/o",
+   "coarse_decomposition": "sakaroz/o",
+   "academic_decomposition": "sakaroz/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    35294
    ]
   },
   {
@@ -17359,10 +17599,22 @@
    ]
   },
   {
+   "learner_line": 44780,
+   "surface": "alkano",
+   "learner_surface": "alkano",
+   "learner_decomposition": "alk/an/o",
+   "coarse_decomposition": "alkan/o",
+   "academic_decomposition": "alkan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44780
+   ]
+  },
+  {
    "learner_line": 44781,
    "surface": "alkanalo",
    "learner_surface": "alkanalo",
-   "learner_decomposition": "alkan/al/o",
+   "learner_decomposition": "alk/an/al/o",
    "coarse_decomposition": "alkanal/o",
    "academic_decomposition": "alkanal/o",
    "authority": "paired_academic",
@@ -17374,7 +17626,7 @@
    "learner_line": 44782,
    "surface": "alkanolo",
    "learner_surface": "alkanolo",
-   "learner_decomposition": "alkan/ol/o",
+   "learner_decomposition": "alk/an/ol/o",
    "coarse_decomposition": "alkanol/o",
    "academic_decomposition": "alkanol/o",
    "authority": "paired_academic",
@@ -17386,12 +17638,60 @@
    "learner_line": 44783,
    "surface": "alkanolato",
    "learner_surface": "alkanolato",
-   "learner_decomposition": "alkan/ol/at/o",
+   "learner_decomposition": "alk/an/ol/at/o",
    "coarse_decomposition": "alkanolat/o",
    "academic_decomposition": "alkanolat/o",
    "authority": "paired_academic",
    "authority_lines": [
     44783
+   ]
+  },
+  {
+   "learner_line": 44784,
+   "surface": "alkanono",
+   "learner_surface": "alkanono",
+   "learner_decomposition": "alk/an/on/o",
+   "coarse_decomposition": "alkanon/o",
+   "academic_decomposition": "alkanon/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44784
+   ]
+  },
+  {
+   "learner_line": 44785,
+   "surface": "alkeno",
+   "learner_surface": "alkeno",
+   "learner_decomposition": "alk/en/o",
+   "coarse_decomposition": "alken/o",
+   "academic_decomposition": "alken/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44785
+   ]
+  },
+  {
+   "learner_line": 44786,
+   "surface": "alkilo",
+   "learner_surface": "alkilo",
+   "learner_decomposition": "alk/il/o",
+   "coarse_decomposition": "alkil/o",
+   "academic_decomposition": "alkil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44786
+   ]
+  },
+  {
+   "learner_line": 44787,
+   "surface": "alkino",
+   "learner_surface": "alkino",
+   "learner_decomposition": "alk/in/o",
+   "coarse_decomposition": "alkin/o",
+   "academic_decomposition": "alkin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44787
    ]
   },
   {
@@ -17560,6 +17860,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     44868
+   ]
+  },
+  {
+   "learner_line": 44893,
+   "surface": "amelozo",
+   "learner_surface": "amelozo",
+   "learner_decomposition": "amel/oz/o",
+   "coarse_decomposition": "ameloz/o",
+   "academic_decomposition": "ameloz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    44893
    ]
   },
   {
@@ -17995,6 +18307,18 @@
    ]
   },
   {
+   "learner_line": 45202,
+   "surface": "arino",
+   "learner_surface": "arino",
+   "learner_decomposition": "ar/in/o",
+   "coarse_decomposition": "arin/o",
+   "academic_decomposition": "arin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45202
+   ]
+  },
+  {
    "learner_line": 45204,
    "surface": "arabino",
    "learner_surface": "arabino",
@@ -18011,8 +18335,8 @@
    "surface": "arabinozo",
    "learner_surface": "arabinozo",
    "learner_decomposition": "arab/in/oz/o",
-   "coarse_decomposition": "arabin/oz/o",
-   "academic_decomposition": "arabin/oz/o",
+   "coarse_decomposition": "arabinoz/o",
+   "academic_decomposition": "arabinoz/o",
    "authority": "paired_academic",
    "authority_lines": [
     45205
@@ -18040,6 +18364,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     45229
+   ]
+  },
+  {
+   "learner_line": 45243,
+   "surface": "areno",
+   "learner_surface": "areno",
+   "learner_decomposition": "ar/en/o",
+   "coarse_decomposition": "aren/o",
+   "academic_decomposition": "aren/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    2327
    ]
   },
   {
@@ -18172,6 +18508,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     45377
+   ]
+  },
+  {
+   "learner_line": 45380,
+   "surface": "asistolio",
+   "learner_surface": "asistolio",
+   "learner_decomposition": "a/sistol/i/o",
+   "coarse_decomposition": "asistoli/o",
+   "academic_decomposition": "asistoli/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45380
    ]
   },
   {
@@ -18715,6 +19063,18 @@
    ]
   },
   {
+   "learner_line": 45818,
+   "surface": "bifenilo",
+   "learner_surface": "bifenilo",
+   "learner_decomposition": "bi/fen/il/o",
+   "coarse_decomposition": "bi/fenil/o",
+   "academic_decomposition": "bi/fenil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45818
+   ]
+  },
+  {
    "learner_line": 45837,
    "surface": "bimetala",
    "learner_surface": "bimetala",
@@ -18991,10 +19351,46 @@
    ]
   },
   {
+   "learner_line": 46173,
+   "surface": "butanono",
+   "learner_surface": "butanono",
+   "learner_decomposition": "but/an/on/o",
+   "coarse_decomposition": "butanon/o",
+   "academic_decomposition": "butanon/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    46173
+   ]
+  },
+  {
+   "learner_line": 46174,
+   "surface": "buteno",
+   "learner_surface": "buteno",
+   "learner_decomposition": "but/en/o",
+   "coarse_decomposition": "buten/o",
+   "academic_decomposition": "buten/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    46174
+   ]
+  },
+  {
+   "learner_line": 46176,
+   "surface": "butino",
+   "learner_surface": "butino",
+   "learner_decomposition": "but/in/o",
+   "coarse_decomposition": "butin/o",
+   "academic_decomposition": "butin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    46176
+   ]
+  },
+  {
    "learner_line": 46177,
    "surface": "izobutanolo",
    "learner_surface": "izobutanolo",
-   "learner_decomposition": "izo/butan/ol/o",
+   "learner_decomposition": "izo/but/an/ol/o",
    "coarse_decomposition": "izobutanol/o",
    "academic_decomposition": "izobutanol/o",
    "authority": "paired_academic",
@@ -19006,7 +19402,7 @@
    "learner_line": 46178,
    "surface": "ter-butanolo",
    "learner_surface": "ter-butanolo",
-   "learner_decomposition": "ter-butan/ol/o",
+   "learner_decomposition": "ter-but/an/ol/o",
    "coarse_decomposition": "ter-butanol/o",
    "academic_decomposition": "ter-butanol/o",
    "authority": "paired_academic",
@@ -19660,6 +20056,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     46692
+   ]
+  },
+  {
+   "learner_line": 46701,
+   "surface": "diazometano",
+   "learner_surface": "diazometano",
+   "learner_decomposition": "diazo/met/an/o",
+   "coarse_decomposition": "diazometan/o",
+   "academic_decomposition": "diazometan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    46701
    ]
   },
   {
@@ -20899,6 +21307,18 @@
    ]
   },
   {
+   "learner_line": 47383,
+   "surface": "erizifaloj",
+   "learner_surface": "erizifaloj",
+   "learner_decomposition": "erizif/al/oj",
+   "coarse_decomposition": "erizifal/oj",
+   "academic_decomposition": "erizifal/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47383
+   ]
+  },
+  {
    "learner_line": 47394,
    "surface": "erotogena",
    "learner_surface": "erotogena",
@@ -20971,10 +21391,22 @@
    ]
   },
   {
+   "learner_line": 47450,
+   "surface": "etano",
+   "learner_surface": "etano",
+   "learner_decomposition": "et/an/o",
+   "coarse_decomposition": "etan/o",
+   "academic_decomposition": "etan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47450
+   ]
+  },
+  {
    "learner_line": 47451,
    "surface": "etanalo",
    "learner_surface": "etanalo",
-   "learner_decomposition": "etan/al/o",
+   "learner_decomposition": "et/an/al/o",
    "coarse_decomposition": "etanal/o",
    "academic_decomposition": "etanal/o",
    "authority": "paired_academic",
@@ -20986,12 +21418,24 @@
    "learner_line": 47453,
    "surface": "etanolato",
    "learner_surface": "etanolato",
-   "learner_decomposition": "etan/ol/at/o",
+   "learner_decomposition": "et/an/ol/at/o",
    "coarse_decomposition": "etanolat/o",
    "academic_decomposition": "etanolat/o",
    "authority": "paired_academic",
    "authority_lines": [
     47453
+   ]
+  },
+  {
+   "learner_line": 47454,
+   "surface": "eteno",
+   "learner_surface": "eteno",
+   "learner_decomposition": "et/en/o",
+   "coarse_decomposition": "eten/o",
+   "academic_decomposition": "eten/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47454
    ]
   },
   {
@@ -21004,6 +21448,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     47455
+   ]
+  },
+  {
+   "learner_line": 47456,
+   "surface": "etilismo",
+   "learner_surface": "etilismo",
+   "learner_decomposition": "et/il/ism/o",
+   "coarse_decomposition": "etil/ism/o",
+   "academic_decomposition": "etil/ism/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47456
+   ]
+  },
+  {
+   "learner_line": 47457,
+   "surface": "etino",
+   "learner_surface": "etino",
+   "learner_decomposition": "et/in/o",
+   "coarse_decomposition": "etin/o",
+   "academic_decomposition": "etin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47457
    ]
   },
   {
@@ -21127,10 +21595,22 @@
    ]
   },
   {
+   "learner_line": 47678,
+   "surface": "fenilo",
+   "learner_surface": "fenilo",
+   "learner_decomposition": "fen/il/o",
+   "coarse_decomposition": "fenil/o",
+   "academic_decomposition": "fenil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    47678
+   ]
+  },
+  {
    "learner_line": 47680,
    "surface": "fenolato",
    "learner_surface": "fenolato",
-   "learner_decomposition": "fenol/at/o",
+   "learner_decomposition": "fen/ol/at/o",
    "coarse_decomposition": "fenolat/o",
    "academic_decomposition": "fenolat/o",
    "authority": "paired_academic",
@@ -21592,6 +22072,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     48080
+   ]
+  },
+  {
+   "learner_line": 48081,
+   "surface": "fruktozo",
+   "learner_surface": "fruktozo",
+   "learner_decomposition": "frukt/oz/o",
+   "coarse_decomposition": "fruktoz/o",
+   "academic_decomposition": "fruktoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    48081
    ]
   },
   {
@@ -22639,6 +23131,18 @@
    ]
   },
   {
+   "learner_line": 48795,
+   "surface": "heksano",
+   "learner_surface": "heksano",
+   "learner_decomposition": "heks/an/o",
+   "coarse_decomposition": "heksan/o",
+   "academic_decomposition": "heksan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    48795
+   ]
+  },
+  {
    "learner_line": 48815,
    "surface": "heliocentra",
    "learner_surface": "heliocentra",
@@ -22852,6 +23356,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     48856
+   ]
+  },
+  {
+   "learner_line": 48866,
+   "surface": "heptano",
+   "learner_surface": "heptano",
+   "learner_decomposition": "hept/an/o",
+   "coarse_decomposition": "heptan/o",
+   "academic_decomposition": "heptan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    48866
    ]
   },
   {
@@ -24484,6 +25000,18 @@
    ]
   },
   {
+   "learner_line": 49821,
+   "surface": "kalozo",
+   "learner_surface": "kalozo",
+   "learner_decomposition": "kal/oz/o",
+   "coarse_decomposition": "kaloz/o",
+   "academic_decomposition": "kaloz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    49821
+   ]
+  },
+  {
    "learner_line": 49822,
    "surface": "kalozo",
    "learner_surface": "kalozo",
@@ -24565,6 +25093,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     49992
+   ]
+  },
+  {
+   "learner_line": 50002,
+   "surface": "karaficoj",
+   "learner_surface": "karaficoj",
+   "learner_decomposition": "kara/fic/oj",
+   "coarse_decomposition": "karafic/oj",
+   "academic_decomposition": "karafic/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    50002
+   ]
+  },
+  {
+   "learner_line": 50003,
+   "surface": "karafitoj",
+   "learner_surface": "karafitoj",
+   "learner_decomposition": "kara/fit/oj",
+   "coarse_decomposition": "karafit/oj",
+   "academic_decomposition": "karafit/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    50003
    ]
   },
   {
@@ -25669,6 +26221,18 @@
    ]
   },
   {
+   "learner_line": 50991,
+   "surface": "kromiilo",
+   "learner_surface": "kromiilo",
+   "learner_decomposition": "kromi/il/o",
+   "coarse_decomposition": "kromiil/o",
+   "academic_decomposition": "kromiil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    50991
+   ]
+  },
+  {
    "learner_line": 50992,
    "surface": "kromiflavo",
    "learner_surface": "kromiflavo",
@@ -25810,6 +26374,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     51043
+   ]
+  },
+  {
+   "learner_line": 51048,
+   "surface": "ksilozo",
+   "learner_surface": "ksilozo",
+   "learner_decomposition": "ksil/oz/o",
+   "coarse_decomposition": "ksiloz/o",
+   "academic_decomposition": "ksiloz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    51048
    ]
   },
   {
@@ -26689,6 +27265,18 @@
    ]
   },
   {
+   "learner_line": 51903,
+   "surface": "mentano",
+   "learner_surface": "mentano",
+   "learner_decomposition": "ment/an/o",
+   "coarse_decomposition": "mentan/o",
+   "academic_decomposition": "mentan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    51903
+   ]
+  },
+  {
    "learner_line": 51933,
    "surface": "mesentero",
    "learner_surface": "mesentero",
@@ -26716,7 +27304,7 @@
    "learner_line": 51942,
    "surface": "metanalo",
    "learner_surface": "metanalo",
-   "learner_decomposition": "metan/al/o",
+   "learner_decomposition": "met/an/al/o",
    "coarse_decomposition": "metanal/o",
    "academic_decomposition": "metanal/o",
    "authority": "paired_academic",
@@ -26926,6 +27514,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     52005
+   ]
+  },
+  {
+   "learner_line": 52006,
+   "surface": "miomo",
+   "learner_surface": "miomo",
+   "learner_decomposition": "mi/om/o",
+   "coarse_decomposition": "miom/o",
+   "academic_decomposition": "miom/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52006
    ]
   },
   {
@@ -27337,6 +27937,18 @@
    ]
   },
   {
+   "learner_line": 52262,
+   "surface": "mukoraloj",
+   "learner_surface": "mukoraloj",
+   "learner_decomposition": "mukor/al/oj",
+   "coarse_decomposition": "mukoral/oj",
+   "academic_decomposition": "mukoral/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52262
+   ]
+  },
+  {
    "learner_line": 52287,
    "surface": "muskolozo",
    "learner_surface": "muskolozo",
@@ -27349,6 +27961,18 @@
    ]
   },
   {
+   "learner_line": 52300,
+   "surface": "naftilo",
+   "learner_surface": "naftilo",
+   "learner_decomposition": "naft/il/o",
+   "coarse_decomposition": "naftil/o",
+   "academic_decomposition": "naftil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52300
+   ]
+  },
+  {
    "learner_line": 52324,
    "surface": "narkotino",
    "learner_surface": "narkotino",
@@ -27358,6 +27982,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     52324
+   ]
+  },
+  {
+   "learner_line": 52341,
+   "surface": "naŭto",
+   "learner_surface": "naŭto",
+   "learner_decomposition": "naŭ/t/o",
+   "coarse_decomposition": "naŭt/o",
+   "academic_decomposition": "naŭt/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52341
    ]
   },
   {
@@ -27709,6 +28345,30 @@
    ]
   },
   {
+   "learner_line": 52494,
+   "surface": "nitrozoilo",
+   "learner_surface": "nitrozoilo",
+   "learner_decomposition": "nitrozo/il/o",
+   "coarse_decomposition": "nitrozoil/o",
+   "academic_decomposition": "nitrozoil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52494
+   ]
+  },
+  {
+   "learner_line": 52521,
+   "surface": "nonano",
+   "learner_surface": "nonano",
+   "learner_decomposition": "non/an/o",
+   "coarse_decomposition": "nonan/o",
+   "academic_decomposition": "nonan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52521
+   ]
+  },
+  {
    "learner_line": 52564,
    "surface": "Nubiano",
    "learner_surface": "Nubiano",
@@ -27913,6 +28573,18 @@
    ]
   },
   {
+   "learner_line": 52680,
+   "surface": "okto",
+   "learner_surface": "okto",
+   "learner_decomposition": "ok/t/o",
+   "coarse_decomposition": "okt/o",
+   "academic_decomposition": "okt/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52680
+   ]
+  },
+  {
    "learner_line": 52683,
    "surface": "oktaedro",
    "learner_surface": "oktaedro",
@@ -27934,6 +28606,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     52685
+   ]
+  },
+  {
+   "learner_line": 52689,
+   "surface": "okzalilo",
+   "learner_surface": "okzalilo",
+   "learner_decomposition": "okzal/il/o",
+   "coarse_decomposition": "okzalil/o",
+   "academic_decomposition": "okzalil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52689
+   ]
+  },
+  {
+   "learner_line": 52690,
+   "surface": "olato",
+   "learner_surface": "olato",
+   "learner_decomposition": "ol/at/o",
+   "coarse_decomposition": "olat/o",
+   "academic_decomposition": "olat/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52690
    ]
   },
   {
@@ -28366,6 +29062,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     52874
+   ]
+  },
+  {
+   "learner_line": 52875,
+   "surface": "osteino",
+   "learner_surface": "osteino",
+   "learner_decomposition": "ost/e/in/o",
+   "coarse_decomposition": "ostein/o",
+   "academic_decomposition": "ostein/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52875
    ]
   },
   {
@@ -28897,10 +29605,22 @@
    ]
   },
   {
+   "learner_line": 53234,
+   "surface": "pentano",
+   "learner_surface": "pentano",
+   "learner_decomposition": "pent/an/o",
+   "coarse_decomposition": "pentan/o",
+   "academic_decomposition": "pentan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53234
+   ]
+  },
+  {
    "learner_line": 53235,
    "surface": "pentanolo",
    "learner_surface": "pentanolo",
-   "learner_decomposition": "pentan/ol/o",
+   "learner_decomposition": "pent/an/ol/o",
    "coarse_decomposition": "pentanol/o",
    "academic_decomposition": "pentanol/o",
    "authority": "paired_academic",
@@ -29254,6 +29974,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     53447
+   ]
+  },
+  {
+   "learner_line": 53448,
+   "surface": "piridilo",
+   "learner_surface": "piridilo",
+   "learner_decomposition": "pirid/il/o",
+   "coarse_decomposition": "piridil/o",
+   "academic_decomposition": "piridil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53448
    ]
   },
   {
@@ -29977,10 +30709,22 @@
    ]
   },
   {
+   "learner_line": 53907,
+   "surface": "propano",
+   "learner_surface": "propano",
+   "learner_decomposition": "prop/an/o",
+   "coarse_decomposition": "propan/o",
+   "academic_decomposition": "propan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53907
+   ]
+  },
+  {
    "learner_line": 53908,
    "surface": "propanalo",
    "learner_surface": "propanalo",
-   "learner_decomposition": "propan/al/o",
+   "learner_decomposition": "prop/an/al/o",
    "coarse_decomposition": "propanal/o",
    "academic_decomposition": "propanal/o",
    "authority": "paired_academic",
@@ -29989,10 +30733,22 @@
    ]
   },
   {
+   "learner_line": 53909,
+   "surface": "propeno",
+   "learner_surface": "propeno",
+   "learner_decomposition": "prop/en/o",
+   "coarse_decomposition": "propen/o",
+   "academic_decomposition": "propen/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53909
+   ]
+  },
+  {
    "learner_line": 53910,
    "surface": "propenalo",
    "learner_surface": "propenalo",
-   "learner_decomposition": "propen/al/o",
+   "learner_decomposition": "prop/en/al/o",
    "coarse_decomposition": "propenal/o",
    "academic_decomposition": "propenal/o",
    "authority": "paired_academic",
@@ -30004,12 +30760,36 @@
    "learner_line": 53911,
    "surface": "propenato",
    "learner_surface": "propenato",
-   "learner_decomposition": "propen/at/o",
+   "learner_decomposition": "prop/en/at/o",
    "coarse_decomposition": "propenat/o",
    "academic_decomposition": "propenat/o",
    "authority": "paired_academic",
    "authority_lines": [
     53911
+   ]
+  },
+  {
+   "learner_line": 53912,
+   "surface": "propenaldehido",
+   "learner_surface": "propenaldehido",
+   "learner_decomposition": "prop/en/aldehid/o",
+   "coarse_decomposition": "propen/aldehid/o",
+   "academic_decomposition": "propen/aldehid/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53912
+   ]
+  },
+  {
+   "learner_line": 53913,
+   "surface": "propilo",
+   "learner_surface": "propilo",
+   "learner_decomposition": "prop/il/o",
+   "coarse_decomposition": "propil/o",
+   "academic_decomposition": "propil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53913
    ]
   },
   {
@@ -30373,6 +31153,18 @@
    ]
   },
   {
+   "learner_line": 54151,
+   "surface": "rafinozo",
+   "learner_surface": "rafinozo",
+   "learner_decomposition": "rafin/oz/o",
+   "coarse_decomposition": "rafinoz/o",
+   "academic_decomposition": "rafinoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54151
+   ]
+  },
+  {
    "learner_line": 54165,
    "surface": "rakialgio",
    "learner_surface": "rakialgio",
@@ -30613,6 +31405,18 @@
    ]
   },
   {
+   "learner_line": 54383,
+   "surface": "ribozo",
+   "learner_surface": "ribozo",
+   "learner_decomposition": "rib/oz/o",
+   "coarse_decomposition": "riboz/o",
+   "academic_decomposition": "riboz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54383
+   ]
+  },
+  {
    "learner_line": 54393,
    "surface": "ricinino",
    "learner_surface": "ricinino",
@@ -30634,6 +31438,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     54394
+   ]
+  },
+  {
+   "learner_line": 54409,
+   "surface": "rikecialoj",
+   "learner_surface": "rikecialoj",
+   "learner_decomposition": "rikeci/al/oj",
+   "coarse_decomposition": "rikecial/oj",
+   "academic_decomposition": "rikecial/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54409
    ]
   },
   {
@@ -30718,6 +31534,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     54467
+   ]
+  },
+  {
+   "learner_line": 54471,
+   "surface": "roeoj",
+   "learner_surface": "roeoj",
+   "learner_decomposition": "ro/e/oj",
+   "coarse_decomposition": "roe/oj",
+   "academic_decomposition": "roe/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54471
    ]
   },
   {
@@ -30922,6 +31750,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     54623
+   ]
+  },
+  {
+   "learner_line": 54624,
+   "surface": "salikilato",
+   "learner_surface": "salikilato",
+   "learner_decomposition": "salik/il/at/o",
+   "coarse_decomposition": "salikilat/o",
+   "academic_decomposition": "salikilat/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54624
    ]
   },
   {
@@ -31741,6 +32581,18 @@
    ]
   },
   {
+   "learner_line": 55307,
+   "surface": "spionito",
+   "learner_surface": "spionito",
+   "learner_decomposition": "spion/it/o",
+   "coarse_decomposition": "spionit/o",
+   "academic_decomposition": "spionit/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55307
+   ]
+  },
+  {
    "learner_line": 55311,
    "surface": "spirometro",
    "learner_surface": "spirometro",
@@ -31762,6 +32614,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     55312
+   ]
+  },
+  {
+   "learner_line": 55322,
+   "surface": "spiroketaloj",
+   "learner_surface": "spiroketaloj",
+   "learner_decomposition": "spiroket/al/oj",
+   "coarse_decomposition": "spiroketal/oj",
+   "academic_decomposition": "spiroketal/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55322
    ]
   },
   {
@@ -31846,6 +32710,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     55347
+   ]
+  },
+  {
+   "learner_line": 55369,
+   "surface": "stakiozo",
+   "learner_surface": "stakiozo",
+   "learner_decomposition": "staki/oz/o",
+   "coarse_decomposition": "stakioz/o",
+   "academic_decomposition": "stakioz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55369
    ]
   },
   {
@@ -32326,6 +33202,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     55623
+   ]
+  },
+  {
+   "learner_line": 55624,
+   "surface": "sulfonilo",
+   "learner_surface": "sulfonilo",
+   "learner_decomposition": "sulfon/il/o",
+   "coarse_decomposition": "sulfonil/o",
+   "academic_decomposition": "sulfonil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55624
+   ]
+  },
+  {
+   "learner_line": 55627,
+   "surface": "sulfurilo",
+   "learner_surface": "sulfurilo",
+   "learner_decomposition": "sulfur/il/o",
+   "coarse_decomposition": "sulfuril/o",
+   "academic_decomposition": "sulfuril/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55627
    ]
   },
   {
@@ -33514,6 +34414,18 @@
    ]
   },
   {
+   "learner_line": 56639,
+   "surface": "uredaloj",
+   "learner_surface": "uredaloj",
+   "learner_decomposition": "ured/al/oj",
+   "coarse_decomposition": "uredal/oj",
+   "academic_decomposition": "uredal/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    56639
+   ]
+  },
+  {
    "learner_line": 56645,
    "surface": "urinato",
    "learner_surface": "urinato",
@@ -33571,6 +34483,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     56649
+   ]
+  },
+  {
+   "learner_line": 56660,
+   "surface": "ustilagaloj",
+   "learner_surface": "ustilagaloj",
+   "learner_decomposition": "ustilag/al/oj",
+   "coarse_decomposition": "ustilagal/oj",
+   "academic_decomposition": "ustilagal/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    56660
    ]
   },
   {
@@ -34090,6 +35014,18 @@
    ]
   },
   {
+   "learner_line": 57455,
+   "surface": "fenilalanino",
+   "learner_surface": "fenilalanino",
+   "learner_decomposition": "fen/il/alanin/o",
+   "coarse_decomposition": "fenil/alanin/o",
+   "academic_decomposition": "fenil/alanin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57455
+   ]
+  },
+  {
    "learner_line": 57461,
    "surface": "tioaldehido",
    "learner_surface": "tioaldehido",
@@ -34102,6 +35038,18 @@
    ]
   },
   {
+   "learner_line": 57469,
+   "surface": "cikloalkano",
+   "learner_surface": "cikloalkano",
+   "learner_decomposition": "cikl/o/alk/an/o",
+   "coarse_decomposition": "cikl/o/alkan/o",
+   "academic_decomposition": "cikl/o/alkan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57469
+   ]
+  },
+  {
    "learner_line": 57470,
    "surface": "cikloalkadieno",
    "learner_surface": "cikloalkadieno",
@@ -34111,6 +35059,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     57470
+   ]
+  },
+  {
+   "learner_line": 57471,
+   "surface": "cikloalkeno",
+   "learner_surface": "cikloalkeno",
+   "learner_decomposition": "cikl/o/alk/en/o",
+   "coarse_decomposition": "cikl/o/alken/o",
+   "academic_decomposition": "cikl/o/alken/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57471
+   ]
+  },
+  {
+   "learner_line": 57472,
+   "surface": "cikloalkino",
+   "learner_surface": "cikloalkino",
+   "learner_decomposition": "cikl/o/alk/in/o",
+   "coarse_decomposition": "cikl/o/alkin/o",
+   "academic_decomposition": "cikl/o/alkin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57472
    ]
   },
   {
@@ -34147,6 +35119,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     57502
+   ]
+  },
+  {
+   "learner_line": 57506,
+   "surface": "metilamino",
+   "learner_surface": "metilamino",
+   "learner_decomposition": "met/il/amin/o",
+   "coarse_decomposition": "metil/amin/o",
+   "academic_decomposition": "metil/amin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57506
    ]
   },
   {
@@ -34201,7 +35185,7 @@
    "learner_line": 57544,
    "surface": "butilhidroksianizolo",
    "learner_surface": "butilhidroksianizolo",
-   "learner_decomposition": "butilhidroksi/aniz/ol/o",
+   "learner_decomposition": "but/il/hidr/oksi/aniz/ol/o",
    "coarse_decomposition": "butilhidroksi/anizol/o",
    "academic_decomposition": "butilhidroksi/anizol/o",
    "authority": "paired_academic",
@@ -34270,6 +35254,18 @@
    ]
   },
   {
+   "learner_line": 57681,
+   "surface": "metanbakterioj",
+   "learner_surface": "metanbakterioj",
+   "learner_decomposition": "met/an/bakteri/oj",
+   "coarse_decomposition": "metan/bakteri/oj",
+   "academic_decomposition": "metan/bakteri/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57681
+   ]
+  },
+  {
    "learner_line": 57685,
    "surface": "tiobakterio",
    "learner_surface": "tiobakterio",
@@ -34294,10 +35290,22 @@
    ]
   },
   {
+   "learner_line": 57761,
+   "surface": "fenilbenzeno",
+   "learner_surface": "fenilbenzeno",
+   "learner_decomposition": "fen/il/benzen/o",
+   "coarse_decomposition": "fenil/benzen/o",
+   "academic_decomposition": "fenil/benzen/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    57761
+   ]
+  },
+  {
    "learner_line": 57762,
    "surface": "izopropilbenzeno",
    "learner_surface": "izopropilbenzeno",
-   "learner_decomposition": "izo/propil/benzen/o",
+   "learner_decomposition": "izo/prop/il/benzen/o",
    "coarse_decomposition": "izopropil/benzen/o",
    "academic_decomposition": "izopropil/benzen/o",
    "authority": "paired_academic",
@@ -34558,6 +35566,30 @@
    ]
   },
   {
+   "learner_line": 58123,
+   "surface": "plenduto",
+   "learner_surface": "plenduto",
+   "learner_decomposition": "plen/du/t/o",
+   "coarse_decomposition": "plen/dut/o",
+   "academic_decomposition": "plen/dut/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58123
+   ]
+  },
+  {
+   "learner_line": 58124,
+   "surface": "duonduto",
+   "learner_surface": "duonduto",
+   "learner_decomposition": "du/on/du/t/o",
+   "coarse_decomposition": "du/on/dut/o",
+   "academic_decomposition": "du/on/dut/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58124
+   ]
+  },
+  {
    "learner_line": 58136,
    "surface": "pseŭdoefedrino",
    "learner_surface": "pseŭdoefedrino",
@@ -34690,6 +35722,18 @@
    ]
   },
   {
+   "learner_line": 58238,
+   "surface": "polieteno",
+   "learner_surface": "polieteno",
+   "learner_decomposition": "poli/et/en/o",
+   "coarse_decomposition": "poli/eten/o",
+   "academic_decomposition": "poli/eten/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58238
+   ]
+  },
+  {
    "learner_line": 58241,
    "surface": "tioetero",
    "learner_surface": "tioetero",
@@ -34705,7 +35749,7 @@
    "learner_line": 58337,
    "surface": "dimetoksifenolo",
    "learner_surface": "dimetoksifenolo",
-   "learner_decomposition": "di/met/oksi/fenol/o",
+   "learner_decomposition": "di/met/oksi/fen/ol/o",
    "coarse_decomposition": "dimetoksi/fenol/o",
    "academic_decomposition": "dimetoksi/fenol/o",
    "authority": "paired_academic",
@@ -34714,10 +35758,22 @@
    ]
   },
   {
+   "learner_line": 58338,
+   "surface": "poliklorbifenilo",
+   "learner_surface": "poliklorbifenilo",
+   "learner_decomposition": "poli/klor/bi/fen/il/o",
+   "coarse_decomposition": "poli/klor/bi/fenil/o",
+   "academic_decomposition": "poli/klor/bi/fenil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58338
+   ]
+  },
+  {
    "learner_line": 58339,
    "surface": "tiofenolo",
    "learner_surface": "tiofenolo",
-   "learner_decomposition": "tio/fenol/o",
+   "learner_decomposition": "tio/fen/ol/o",
    "coarse_decomposition": "tiofenol/o",
    "academic_decomposition": "tiofenol/o",
    "authority": "paired_academic",
@@ -34943,6 +35999,18 @@
    ]
   },
   {
+   "learner_line": 58679,
+   "surface": "fenolftaleino",
+   "learner_surface": "fenolftaleino",
+   "learner_decomposition": "fen/ol/ftalein/o",
+   "coarse_decomposition": "fenol/ftalein/o",
+   "academic_decomposition": "fenol/ftalein/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58679
+   ]
+  },
+  {
    "learner_line": 58719,
    "surface": "pirogajlo",
    "learner_surface": "pirogajlo",
@@ -35006,7 +36074,7 @@
    "learner_line": 58771,
    "surface": "metilglikolo",
    "learner_surface": "metilglikolo",
-   "learner_decomposition": "metil/glik/ol/o",
+   "learner_decomposition": "met/il/glik/ol/o",
    "coarse_decomposition": "metil/glikol/o",
    "academic_decomposition": "metil/glikol/o",
    "authority": "paired_academic",
@@ -35180,6 +36248,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     58822
+   ]
+  },
+  {
+   "learner_line": 58936,
+   "surface": "cikloheksanono",
+   "learner_surface": "cikloheksanono",
+   "learner_decomposition": "cikl/o/heks/an/on/o",
+   "coarse_decomposition": "cikl/o/heksanon/o",
+   "academic_decomposition": "cikl/o/heksanon/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    58936
    ]
   },
   {
@@ -35616,6 +36696,18 @@
    ]
   },
   {
+   "learner_line": 59757,
+   "surface": "grenmaltozaĵo",
+   "learner_surface": "grenmaltozaĵo",
+   "learner_decomposition": "gren/malt/oz/aĵ/o",
+   "coarse_decomposition": "gren/maltoz/aĵ/o",
+   "academic_decomposition": "gren/maltoz/aĵ/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    59757
+   ]
+  },
+  {
    "learner_line": 59769,
    "surface": "eteromanio",
    "learner_surface": "eteromanio",
@@ -35868,6 +36960,18 @@
    ]
   },
   {
+   "learner_line": 59939,
+   "surface": "dietilmorfino",
+   "learner_surface": "dietilmorfino",
+   "learner_decomposition": "di/et/il/morfin/o",
+   "coarse_decomposition": "dietil/morfin/o",
+   "academic_decomposition": "dietil/morfin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    59939
+   ]
+  },
+  {
    "learner_line": 59940,
    "surface": "centimorgano",
    "learner_surface": "centimorgano",
@@ -35985,6 +37089,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     60039
+   ]
+  },
+  {
+   "learner_line": 60065,
+   "surface": "oktannombro",
+   "learner_surface": "oktannombro",
+   "learner_decomposition": "okt/an/nombr/o",
+   "coarse_decomposition": "oktan/nombr/o",
+   "academic_decomposition": "oktan/nombr/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60065
+   ]
+  },
+  {
+   "learner_line": 60067,
+   "surface": "plurnomialo",
+   "learner_surface": "plurnomialo",
+   "learner_decomposition": "plur/nomial/o",
+   "coarse_decomposition": "plurnomial/o",
+   "academic_decomposition": "plurnomial/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60067
    ]
   },
   {
@@ -36144,15 +37272,63 @@
    ]
   },
   {
+   "learner_line": 60165,
+   "surface": "aldozo",
+   "learner_surface": "aldozo",
+   "learner_decomposition": "ald/oz/o",
+   "coarse_decomposition": "aldoz/o",
+   "academic_decomposition": "aldoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60165
+   ]
+  },
+  {
    "learner_line": 60166,
    "surface": "deoksiozo",
    "learner_surface": "deoksiozo",
    "learner_decomposition": "de/oksi/oz/o",
-   "coarse_decomposition": "deoksi/oz/o",
-   "academic_decomposition": "deoksi/oz/o",
+   "coarse_decomposition": "deoksioz/o",
+   "academic_decomposition": "deoksioz/o",
    "authority": "paired_academic",
    "authority_lines": [
     60166
+   ]
+  },
+  {
+   "learner_line": 60167,
+   "surface": "furanozo",
+   "learner_surface": "furanozo",
+   "learner_decomposition": "furan/oz/o",
+   "coarse_decomposition": "furanoz/o",
+   "academic_decomposition": "furanoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60167
+   ]
+  },
+  {
+   "learner_line": 60168,
+   "surface": "ketozo",
+   "learner_surface": "ketozo",
+   "learner_decomposition": "ket/oz/o",
+   "coarse_decomposition": "ketoz/o",
+   "academic_decomposition": "ketoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60168
+   ]
+  },
+  {
+   "learner_line": 60169,
+   "surface": "piranozo",
+   "learner_surface": "piranozo",
+   "learner_decomposition": "piran/oz/o",
+   "coarse_decomposition": "piranoz/o",
+   "academic_decomposition": "piranoz/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60169
    ]
   },
   {
@@ -36165,6 +37341,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     60170
+   ]
+  },
+  {
+   "learner_line": 60171,
+   "surface": "pentozano",
+   "learner_surface": "pentozano",
+   "learner_decomposition": "pent/ozan/o",
+   "coarse_decomposition": "pentozan/o",
+   "academic_decomposition": "pentozan/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    60171
    ]
   },
   {
@@ -36351,7 +37539,7 @@
    "learner_line": 60565,
    "surface": "izopropilo",
    "learner_surface": "izopropilo",
-   "learner_decomposition": "izo/propil/o",
+   "learner_decomposition": "izo/prop/il/o",
    "coarse_decomposition": "izopropil/o",
    "academic_decomposition": "izopropil/o",
    "authority": "paired_academic",
@@ -36412,8 +37600,8 @@
    "surface": "deoksiribozo",
    "learner_surface": "deoksiribozo",
    "learner_decomposition": "de/oksi/rib/oz/o",
-   "coarse_decomposition": "deoksi/rib/oz/o",
-   "academic_decomposition": "deoksi/rib/oz/o",
+   "coarse_decomposition": "deoksi/riboz/o",
+   "academic_decomposition": "deoksi/riboz/o",
    "authority": "paired_academic",
    "authority_lines": [
     60735
@@ -37197,6 +38385,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     61485
+   ]
+  },
+  {
+   "learner_line": 61514,
+   "surface": "butilhidroksitolueno",
+   "learner_surface": "butilhidroksitolueno",
+   "learner_decomposition": "but/il/hidr/oksi/toluen/o",
+   "coarse_decomposition": "butilhidroksi/toluen/o",
+   "academic_decomposition": "butilhidroksi/toluen/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    61514
    ]
   },
   {

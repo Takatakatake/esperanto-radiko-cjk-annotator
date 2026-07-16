@@ -101,7 +101,7 @@ def main():
         compact_sha(atomic_policy)
         != manifest.get("localized_atomic_policy_sha256")
         or manifest.get("localized_atomic_policy_sha256")
-        != "E68BC5B7819DD3674927BA492545CFEAE11BEBB8FFEEBABC7EC5A14C915B255E"
+        != "A0E90778850C4A9CA46039867A6D464BFD62E33F212413A8A64B9837B690A8C7"
     ):
         raise SystemExit("localized atomic-root Kanji policy drift")
     atomic_family_raw = ATOMIC_FAMILY_PATH.read_bytes()
@@ -109,7 +109,7 @@ def main():
         hashlib.sha256(atomic_family_raw).hexdigest().upper()
         != atomic_policy.get("family_manifest_sha256")
         or atomic_policy.get("learner_sha256")
-        != "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0"
+        != "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C"
     ):
         raise SystemExit("localized atomic-root Kanji source identity drift")
     atomic_families = json.loads(atomic_family_raw.decode("utf-8"))["families"]

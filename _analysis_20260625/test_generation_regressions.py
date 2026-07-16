@@ -21,6 +21,7 @@ sys.path.insert(0, str(HERE))
 import gen_replacement as canonical
 from atomic_json import atomic_binary_copy, atomic_file_copy, atomic_json_dump
 import apply_corpus_word_anno as corpus_data
+import build_fake_coarse_phase511_transition_review as phase511_review
 import check_multilingual_structure as multilingual_structure
 import check_kanji_structure as kanji_structure
 import fix_ruby_postregen as postregen
@@ -1129,7 +1130,7 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertEqual(payload["schema_version"], 1)
         self.assertEqual(payload["reference_schema_version"], 5)
         self.assertEqual(len(entries), payload["expected_entries"])
-        self.assertEqual(len(entries), 914)
+        self.assertEqual(len(entries), 933)
         self.assertEqual(
             hashlib.sha256(compact).hexdigest().upper(),
             payload["entries_sha256"],
@@ -1149,12 +1150,49 @@ class GenerationRuleTests(unittest.TestCase):
             "Umbrio": ("Umbr/io", "RL"),
             "psikokirurgio": ("psik/o/kirurg/io", "RLRL"),
             "tienvojaĝo": ("tie/n/vojaĝ/o", "RLRL"),
+            "arabinozo": ("arabinoz/o", "RL"),
+            "bifenilo": ("bi/fenil/o", "RRL"),
+            "celulozo": ("celuloz/o", "RL"),
+            "laktozo": ("laktoz/o", "RL"),
+            "deoksiozo": ("deoksioz/o", "RL"),
+            "deoksiribozo": ("deoksi/riboz/o", "RRL"),
+            "maltozo": ("maltoz/o", "RL"),
+            "sakarozo": ("sakaroz/o", "RL"),
+            "grenmaltozaĵo": ("gren/maltoz/aĵ/o", "RRRL"),
+            "amelozo": ("ameloz/o", "RL"),
+            "fruktozo": ("fruktoz/o", "RL"),
+            "kalozo": ("kaloz/o", "RL"),
+            "ksilozo": ("ksiloz/o", "RL"),
+            "rafinozo": ("rafinoz/o", "RL"),
+            "ribozo": ("riboz/o", "RL"),
+            "aldozo": ("aldoz/o", "RL"),
+            "furanozo": ("furanoz/o", "RL"),
+            "ketozo": ("ketoz/o", "RL"),
+            "piranozo": ("piranoz/o", "RL"),
+            "deoksi": ("deoksi", "R"),
+            "stakiozo": ("stakioz/o", "RL"),
         }
         by_surface = {entry["w"]: entry for entry in entries}
         for surface, (target, roles) in newly_adjudicated.items():
             self.assertEqual(by_surface[surface]["target"], target)
             self.assertEqual(by_surface[surface]["typed_roles"], roles)
             self.assertIs(by_surface[surface].get("ruby_track_only"), True)
+        self.assertEqual(
+            by_surface["nen"],
+            {
+                "w": "nen",
+                "target": "ne/n",
+                "typed_roles": "RL",
+                "exact_only": True,
+                "boundary_only": True,
+                "case_sensitive": True,
+            },
+        )
+        self.assertTrue({
+            "femuralo", "ferika", "feroza", "fruntalo", "okcipitalo",
+            "parietalo", "olato", "roeoj", "spionito",
+            "butilhidroksianizolo", "butilhidroksitolueno",
+        }.isdisjoint(by_surface))
         for entry in entries:
             parts = [part for part in entry["target"].split("/") if part]
             self.assertTrue(entry["exact_only"], entry)
@@ -1166,6 +1204,160 @@ class GenerationRuleTests(unittest.TestCase):
                 entry,
             )
             self.assertEqual("".join(parts), entry["w"], entry)
+
+    def test_phase511_transition_is_bounded_ruby_only_and_fail_closed(self):
+        historical_path = HERE / "_fake_coarse_transition_review.json"
+        historical_raw = historical_path.read_bytes()
+        self.assertEqual(
+            hashlib.sha256(historical_raw).hexdigest().upper(),
+            "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
+        )
+        historical = json.loads(historical_raw.decode("utf-8"))
+        phase = json.loads(
+            (HERE / "_fake_coarse_phase511_transition_review.json")
+            .read_text(encoding="utf-8")
+        )
+        phase511_review.validate(phase)
+        by_line = {entry["learner_line"]: entry for entry in phase["entries"]}
+        self.assertEqual(
+            set(by_line),
+            {
+                45205, 45818, 4785, 21361, 60166, 60735,
+                24033, 34886, 44893, 46627, 48081, 49821, 51048,
+                54151, 54383, 55369, 59757, 60165, 60167, 60168,
+                60169,
+            },
+        )
+        self.assertEqual(
+            set(by_line) & {
+                entry["learner_line"] for entry in historical["entries"]
+            },
+            {45205},
+        )
+        self.assertEqual(
+            {
+                line: (
+                    entry["surface"], entry["target"],
+                    entry["typed_roles"],
+                )
+                for line, entry in by_line.items()
+            },
+            {
+                45205: ("arabinozo", "arabinoz/o", "RL"),
+                45818: ("bifenilo", "bi/fenil/o", "RRL"),
+                4785: ("celulozo", "celuloz/o", "RL"),
+                21361: ("laktozo", "laktoz/o", "RL"),
+                60166: ("deoksiozo", "deoksioz/o", "RL"),
+                60735: ("deoksiribozo", "deoksi/riboz/o", "RRL"),
+                24033: ("maltozo", "maltoz/o", "RL"),
+                34886: ("sakarozo", "sakaroz/o", "RL"),
+                44893: ("amelozo", "ameloz/o", "RL"),
+                46627: ("deoksi", "deoksi", "R"),
+                48081: ("fruktozo", "fruktoz/o", "RL"),
+                49821: ("kalozo", "kaloz/o", "RL"),
+                51048: ("ksilozo", "ksiloz/o", "RL"),
+                54151: ("rafinozo", "rafinoz/o", "RL"),
+                54383: ("ribozo", "riboz/o", "RL"),
+                55369: ("stakiozo", "stakioz/o", "RL"),
+                59757: ("grenmaltozaĵo", "gren/maltoz/aĵ/o", "RRRL"),
+                60165: ("aldozo", "aldoz/o", "RL"),
+                60167: ("furanozo", "furanoz/o", "RL"),
+                60168: ("ketozo", "ketoz/o", "RL"),
+                60169: ("piranozo", "piranoz/o", "RL"),
+            },
+        )
+        for entry in by_line.values():
+            self.assertIs(entry.get("case_sensitive"), True)
+            self.assertIs(entry.get("ruby_track_only"), True)
+        self.assertEqual(
+            {
+                line: by_line[line]["exact_annotations"]
+                for line in phase511_review.REVIEW
+                if phase511_review.REVIEW[line].get("exact_annotations")
+            },
+            {
+                line: review["exact_annotations"]
+                for line, review in phase511_review.REVIEW.items()
+                if review.get("exact_annotations")
+            },
+        )
+        self.assertTrue({
+            10717, 10782, 10824, 12240, 28239, 29374,
+            52690, 54471, 55307, 57544, 61514,
+        }.isdisjoint(by_line))
+        tampered = json.loads(json.dumps(phase, ensure_ascii=False))
+        tampered["entries"][0]["target"] = "arabin/oz/o"
+        with self.assertRaises(ValueError):
+            phase511_review.validate(tampered)
+        tampered = json.loads(json.dumps(phase, ensure_ascii=False))
+        deoksi_entry = next(
+            entry for entry in tampered["entries"]
+            if entry["learner_line"] == 60735
+        )
+        deoksi_entry["exact_annotations"][1]["index"] = 0
+        with self.assertRaises(ValueError):
+            phase511_review.validate(tampered)
+
+        scope = json.loads(
+            (HERE / "_no_worsening_scope_manifest.json")
+            .read_text(encoding="utf-8")
+        )["expected"]["gold"]["fake_coarse_transition"]
+        self.assertEqual(scope["evaluable_entries"], 157)
+        self.assertEqual(scope["historical_c679_b090"]["evaluable_entries"], 134)
+        self.assertEqual(scope["historical_c679_b090"]["superseded_lines"], [45205])
+        self.assertEqual(scope["phase511_delta"]["evaluable_entries"], 21)
+
+    def test_indexed_exact_annotations_are_context_bounded_and_fail_closed(self):
+        entry = next(
+            row for row in corpus_data.FAKE_COARSE_PHASE511_ENTRIES
+            if row["surface"] == "deoksiribozo"
+        )
+        self.assertEqual(
+            corpus_data._iter_reviewed_exact_annotations(entry),
+            (
+                (
+                    0, "deoksi",
+                    {"ja": "デオキシ", "zh": "脱氧", "ko": "디옥시"},
+                ),
+                (
+                    1, "riboz",
+                    {"ja": "リボース", "zh": "核糖", "ko": "리보스"},
+                ),
+            ),
+        )
+        mixed = json.loads(json.dumps(entry, ensure_ascii=False))
+        mixed["exact_annotation"] = mixed["exact_annotations"][0]
+        duplicate = json.loads(json.dumps(entry, ensure_ascii=False))
+        duplicate["exact_annotations"][1]["index"] = 0
+        literal = json.loads(json.dumps(entry, ensure_ascii=False))
+        literal["exact_annotations"][1].update({"index": 2, "piece": "o"})
+        missing_language = json.loads(json.dumps(entry, ensure_ascii=False))
+        del missing_language["exact_annotations"][0]["glosses"]["ko"]
+        for invalid in (mixed, duplicate, literal, missing_language):
+            with self.subTest(invalid=invalid):
+                with self.assertRaises(SystemExit):
+                    corpus_data._iter_reviewed_exact_annotations(invalid)
+
+    def test_fake_deep_roots_do_not_broaden_short_ruby_settings(self):
+        """Learner et/an and met/an rows must not invade coarse Ruby."""
+        for language in ("JA", "ZH", "KO"):
+            settings = json.loads(
+                (
+                    ROOT / f"Esperanto-Kanji-Ruby-{language}"
+                    / "app_data" / "分解設定.json"
+                ).read_text(encoding="utf-8")
+            )
+            by_stem = {
+                row[0]: row for row in settings
+                if isinstance(row, list) and len(row) == 3
+            }
+            self.assertNotIn("an", by_stem["et"][2], language)
+            self.assertNotIn("en", by_stem["et"][2], language)
+            self.assertNotIn("an", by_stem["met"][2], language)
+            # Conversely, coarse academic siblings that the deep learner
+            # spelling used to mask remain productively available in Ruby.
+            for stem in ("biologi", "fiziologi", "siri"):
+                self.assertIn("a", by_stem[stem][2], (language, stem))
 
     def test_corpus_atomic_annotations_are_mirrored(self):
         for code, language in (("ja", "JA"), ("zh", "ZH"), ("ko", "KO")):
@@ -1198,6 +1390,10 @@ class GenerationRuleTests(unittest.TestCase):
                 self.assertEqual(
                     out_data[key], [[row["piece"], row["glosses"][code]]],
                 )
+            self.assertEqual(
+                out_data["@typed:nitrato:0"],
+                [["nitrat", {"ja": "硝酸塩", "zh": "硝酸盐", "ko": "질산염"}[code]]],
+            )
             for root, source in corpus_data.MIRRORED_ATOMIC_ROOTS.items():
                 self.assertEqual(out_data[root], [[root, out_data[source][0][1]]])
 
@@ -1742,6 +1938,38 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "Hokkajdon": "hokkajdo/n",
         "HOKKAJDON": "hokkajdo/n",
         "promilo": "promil/o",
+        # Phase 511 reviewed Ruby-only scope, reauthenticated against the
+        # Phase 513 snapshot.  The deoksi rows are exact semantic repairs;
+        # their learner/deep pieces remain reserved for the Kanji track.
+        "arabinozo": "arabinoz/o",
+        "bifenilo": "bi/fenil/o",
+        "celulozo": "celuloz/o",
+        "laktozo": "laktoz/o",
+        "deoksiozo": "deoksioz/o",
+        "deoksiribozo": "deoksi/riboz/o",
+        "maltozo": "maltoz/o",
+        "sakarozo": "sakaroz/o",
+        "grenmaltozaĵo": "gren/maltoz/aĵ/o",
+        "amelozo": "ameloz/o",
+        "fruktozo": "fruktoz/o",
+        "kalozo": "kaloz/o",
+        "ksilozo": "ksiloz/o",
+        "rafinozo": "rafinoz/o",
+        "ribozo": "riboz/o",
+        "aldozo": "aldoz/o",
+        "furanozo": "furanoz/o",
+        "ketozo": "ketoz/o",
+        "piranozo": "piranoz/o",
+        "deoksi": "deoksi",
+        "stakiozo": "stakioz/o",
+        "celuloza nitrato": "celuloz/a/nitrat/o",
+        "kalia nitrato": "kali/a/nitrat/o",
+        "natria nitrato": "natri/a/nitrat/o",
+        "nitrato": "nitrat/o",
+        "nitrata acido": "nitr/at/a/acid/o",
+        "sennitratigo": "sen/nitr/at/ig/o",
+        # Phase 513's sole ordinary (non-fake) decomposition delta.
+        "nen": "ne/n",
         # The formal 62,313-row audit found these 13 pre-existing residuals:
         # 11 exact Ruby-track corrections plus two reviewed coarse displays.
         # No root is made finer merely to shorten a ruby label.
@@ -1934,6 +2162,34 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         "Hokkajdon": ("Hokkajdo",),
         "HOKKAJDON": ("HOKKAJDO",),
         "promilo": ("promil",),
+        "arabinozo": ("arabinoz",),
+        "bifenilo": ("bi", "fenil"),
+        "celulozo": ("celuloz",),
+        "laktozo": ("laktoz",),
+        "deoksiozo": ("deoksioz",),
+        "deoksiribozo": ("deoksi", "riboz"),
+        "maltozo": ("maltoz",),
+        "sakarozo": ("sakaroz",),
+        "grenmaltozaĵo": ("gren", "maltoz", "aĵ"),
+        "amelozo": ("ameloz",),
+        "fruktozo": ("fruktoz",),
+        "kalozo": ("kaloz",),
+        "ksilozo": ("ksiloz",),
+        "rafinozo": ("rafinoz",),
+        "ribozo": ("riboz",),
+        "aldozo": ("aldoz",),
+        "furanozo": ("furanoz",),
+        "ketozo": ("ketoz",),
+        "piranozo": ("piranoz",),
+        "deoksi": ("deoksi",),
+        "stakiozo": ("stakioz",),
+        "celuloza nitrato": ("celuloz", "nitrat"),
+        "kalia nitrato": ("kali", "nitrat"),
+        "natria nitrato": ("natri", "nitrat"),
+        "nitrato": ("nitrat",),
+        "nitrata acido": ("nitr", "at", "acid"),
+        "sennitratigo": ("sen", "nitr", "at", "ig"),
+        "nen": ("ne",),
     }
 
     def test_all_language_apps(self):
@@ -2053,13 +2309,15 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         ))
                         continue
                     entry = strict_ruby_track[row[0]]
+                    expected_actions = {
+                        "ne", "word_boundary", "case_sensitive",
+                        f"typed_roles:{entry['typed_roles']}",
+                        "ruby_track_only",
+                    }
+                    if len([part for part in row[0].split("/") if part]) == 1:
+                        expected_actions.add("atomic_no_split")
                     self.assertEqual(
-                        set(row[2]),
-                        {
-                            "ne", "word_boundary", "case_sensitive",
-                            f"typed_roles:{entry['typed_roles']}",
-                            "ruby_track_only",
-                        },
+                        set(row[2]), expected_actions,
                     )
                 kanji_track_rows = [
                     row for row in settings
@@ -2255,6 +2513,104 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 actual = {word: _decomposition(line) for word, line in zip(words, lines)}
                 self.assertEqual(actual, self.EXPECTED)
                 rendered_by_word = dict(zip(words, lines))
+                phase511_glosses = {
+                    "JA": {
+                        "deoksiozo": ("デオキシ糖",),
+                        "deoksiribozo": ("デオキシ", "リボース"),
+                        "maltozo": ("麦芽糖",),
+                        "sakarozo": ("ショ糖",),
+                        "grenmaltozaĵo": ("麦芽糖",),
+                        "amelozo": ("アミロース",),
+                        "fruktozo": ("果糖",),
+                        "kalozo": ("カロース;脳梁",),
+                        "ksilozo": ("キシロース",),
+                        "rafinozo": ("ラフィノース",),
+                        "ribozo": ("リボース",),
+                        "aldozo": ("アルドース",),
+                        "furanozo": ("フラノース",),
+                        "ketozo": ("ケトース",),
+                        "piranozo": ("ピラノース",),
+                        "deoksi": ("デオキシ",),
+                        "stakiozo": ("スタキオース",),
+                    },
+                    "ZH": {
+                        "deoksiozo": ("脱氧糖",),
+                        "deoksiribozo": ("脱氧", "核糖"),
+                        "maltozo": ("麦芽糖",),
+                        "sakarozo": ("蔗糖",),
+                        "grenmaltozaĵo": ("麦芽糖",),
+                        "amelozo": ("直链淀粉",),
+                        "fruktozo": ("果糖",),
+                        "kalozo": ("胼胝质;胼胝体",),
+                        "ksilozo": ("木糖",),
+                        "rafinozo": ("棉子糖",),
+                        "ribozo": ("核糖",),
+                        "aldozo": ("醛糖",),
+                        "furanozo": ("呋喃糖",),
+                        "ketozo": ("酮糖",),
+                        "piranozo": ("吡喃糖",),
+                        "deoksi": ("脱氧",),
+                        "stakiozo": ("水苏糖",),
+                    },
+                    "KO": {
+                        "deoksiozo": ("디옥시당",),
+                        "deoksiribozo": ("디옥시", "리보스"),
+                        "maltozo": ("맥아당",),
+                        "sakarozo": ("자당",),
+                        "grenmaltozaĵo": ("맥아당",),
+                        "amelozo": ("아밀로스",),
+                        "fruktozo": ("과당",),
+                        "kalozo": ("칼로스;뇌량",),
+                        "ksilozo": ("자일로스",),
+                        "rafinozo": ("라피노스",),
+                        "ribozo": ("리보스",),
+                        "aldozo": ("알도스",),
+                        "furanozo": ("푸라노스",),
+                        "ketozo": ("케토스",),
+                        "piranozo": ("피라노스",),
+                        "deoksi": ("디옥시",),
+                        "stakiozo": ("스타키오스",),
+                    },
+                }
+                false_currant = {
+                    "JA": ("スグリ",),
+                    "ZH": ("醋栗", "茶藨子"),
+                    "KO": ("까치밥",),
+                }
+                for surface, expected_labels in phase511_glosses[language].items():
+                    flattened = re.sub(
+                        r"<br\s*/?>", "", rendered_by_word[surface],
+                        flags=re.IGNORECASE,
+                    )
+                    for label in expected_labels:
+                        self.assertIn(label, flattened, (language, surface))
+                    for label in false_currant[language]:
+                        self.assertNotIn(label, flattened, (language, surface))
+
+                nitrate_label = {
+                    "JA": "硝酸塩", "ZH": "硝酸盐", "KO": "질산염",
+                }[language]
+                for surface in (
+                    "celuloza nitrato", "kalia nitrato",
+                    "natria nitrato", "nitrato",
+                ):
+                    self.assertIn(
+                        nitrate_label,
+                        re.sub(
+                            r"<br\s*/?>", "", rendered_by_word[surface],
+                            flags=re.IGNORECASE,
+                        ),
+                        (language, surface),
+                    )
+                for surface in ("nitrata acido", "sennitratigo"):
+                    self.assertNotIn(
+                        nitrate_label,
+                        re.sub(
+                            r"<br\s*/?>", "", rendered_by_word[surface],
+                            flags=re.IGNORECASE,
+                        ),
+                        (language, surface),
+                    )
 
                 # Reviewed proper roots are productive only at a token's left
                 # edge. Novjork allows all three cases; Bonaer deliberately

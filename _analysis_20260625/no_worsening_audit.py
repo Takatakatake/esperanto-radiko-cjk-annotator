@@ -50,6 +50,7 @@ from extract_lib import hat_to_circumflex, replace_esperanto_chars
 from atomic_json import atomic_json_dump
 from gold_snapshot import consistent_snapshot
 from gen_replacement import load_app_replacement_helper
+import build_fake_coarse_phase511_transition_review as phase511_builder
 
 
 CONTENT_DIRS = ("lernolibroj", "legajxoj", "revuoj", "rondolegado")
@@ -893,7 +894,16 @@ def load_fake_coarse_reference(
     }
 
 
-def load_fake_coarse_transition(fake_coarse_by_line):
+def compact_json_sha256(value):
+    raw = json.dumps(
+        value, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest().upper()
+
+
+def load_fake_coarse_transition(
+    fake_coarse_by_line, superseded_historical_entries,
+):
     path = HERE / "_fake_coarse_transition_review.json"
     raw = path.read_bytes()
     payload = json.loads(raw.decode("utf-8"))
@@ -911,6 +921,7 @@ def load_fake_coarse_transition(fake_coarse_by_line):
         raise ValueError("fake-coarse transition review drift")
     evaluable_lines = set()
     excluded_lines = []
+    superseded_lines = []
     seen = set()
     for entry in entries:
         line = entry.get("learner_line")
@@ -918,6 +929,23 @@ def load_fake_coarse_transition(fake_coarse_by_line):
             raise ValueError(f"invalid/reused fake transition line: {line!r}")
         seen.add(line)
         coarse_entry = fake_coarse_by_line.get(line)
+        superseding_entry = superseded_historical_entries.get(line)
+        if superseding_entry is not None:
+            if (
+                line != 45205
+                or entry.get("surface") != superseding_entry.get("surface")
+                or entry.get("coarse_decomposition")
+                != superseding_entry.get("previous_target")
+                or compact_json_sha256(entry)
+                != superseding_entry.get(
+                    "supersedes_historical_entry_sha256"
+                )
+            ):
+                raise ValueError(
+                    f"invalid historical supersession at line {line}"
+                )
+            superseded_lines.append(line)
+            continue
         if coarse_entry is None:
             excluded_lines.append(line)
             continue
@@ -947,18 +975,23 @@ def load_fake_coarse_transition(fake_coarse_by_line):
         raise ValueError("fake transition review counts changed")
     # The single excluded entry is the reviewed multiword Ionia Maro; the
     # full-master audit renders and gates it without collapsing to a word key.
-    if len(excluded_lines) != 1:
+    if len(excluded_lines) != 1 or superseded_lines != [45205]:
         raise ValueError(
-            f"unexpected non-word staged transitions: {excluded_lines!r}"
+            "unexpected historical transition disposition: "
+            f"full-master-only={excluded_lines!r}, "
+            f"superseded={superseded_lines!r}"
         )
     return evaluable_lines, {
         "path": path.relative_to(ROOT).as_posix(),
         "sha256": hashlib.sha256(raw).hexdigest().upper(),
         "entries_sha256": payload["entries_sha256"],
         "entries": len(entries),
+        "effective_entries": len(entries) - len(superseded_lines),
         "evaluable_entries": len(evaluable_lines),
         "full_master_only_entries": len(excluded_lines),
         "full_master_only_lines": excluded_lines,
+        "superseded_entries": len(superseded_lines),
+        "superseded_lines": superseded_lines,
     }
 
 
@@ -1061,6 +1094,126 @@ def load_fake_coarse_5e_transition(fake_coarse_by_line):
     }
 
 
+def load_fake_coarse_phase511_transition(
+    fake_coarse_by_line, fake_coarse_identity,
+):
+    path = HERE / "_fake_coarse_phase511_transition_review.json"
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    entries = payload.get("entries", [])
+    expected_entries_hash = (
+        "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF"
+    )
+    expected_counts = {
+        "entries": 21,
+        "historical_authority_supersessions": 1,
+        "strict_authority_carry_forwards": 1,
+        "strict_authority_supersessions": 2,
+        "strict_authority_additions": 17,
+        "reviewed_exact_localized_annotations": 19,
+    }
+    source_reference = payload.get("source_fake_coarse_manifest", {})
+    supersedes = payload.get("supersedes", {})
+    historical = supersedes.get("historical_manifest", {})
+    if (
+        payload.get("schema_version") != 2
+        or payload.get("phase") != 511
+        or compact_json_sha256(entries) != expected_entries_hash
+        or payload.get("entries_sha256") != expected_entries_hash
+        or payload.get("counts") != expected_counts
+        or len(entries) != 21
+        or source_reference.get("sha256")
+        != fake_coarse_identity.get("sha256")
+        or source_reference.get("entries_sha256")
+        != fake_coarse_identity.get("entries_sha256")
+        or historical != {
+            "sha256": (
+                "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34"
+            ),
+            "entries_sha256": (
+                "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01"
+            ),
+            "learner_lines": [45205],
+        }
+    ):
+        raise ValueError("Phase 511 fake-coarse transition review drift")
+
+    # The builder owns the verbose closed-set semantics.  Revalidate it here,
+    # while retaining independent pins for the payload hash, counts and exact
+    # line membership so a coordinated edit cannot silently widen this gate.
+    phase511_builder.validate(payload)
+    expected_lines = {
+        45205, 45818, 4785, 21361, 60166, 60735,
+        24033, 34886, 44893, 46627, 48081, 49821, 51048, 54151,
+        54383, 55369, 59757, 60165, 60167, 60168, 60169,
+    }
+    if set(phase511_builder.REVIEW) != expected_lines:
+        raise ValueError("Phase 511 closed-set review membership drift")
+    expected = {
+        line: {
+            key: review[key] for key in (
+                "surface", "target", "typed_roles", "category",
+                "previous_target",
+            )
+        }
+        for line, review in phase511_builder.REVIEW.items()
+    }
+    by_line = {}
+    for entry in entries:
+        line = entry.get("learner_line")
+        wanted = expected.get(line)
+        reference = fake_coarse_by_line.get(line)
+        if (
+            wanted is None
+            or line in by_line
+            or reference is None
+            or any(entry.get(key) != value for key, value in wanted.items())
+            or entry.get("learner_decomposition")
+            != reference.get("learner_decomposition")
+            or entry.get("coarse_decomposition")
+            != reference.get("coarse_decomposition")
+            or entry.get("academic_decomposition")
+            != reference.get("academic_decomposition")
+            or entry.get("target") != entry.get("coarse_decomposition")
+            or entry.get("case_sensitive") is not True
+            or entry.get("ruby_track_only") is not True
+        ):
+            raise ValueError(
+                f"Phase 511 transition authority drift at line {line}"
+            )
+        by_line[line] = entry
+    if set(by_line) != set(expected):
+        raise ValueError("Phase 511 transition line coverage changed")
+    expected_exact = {
+        line: review["exact_annotations"]
+        for line, review in phase511_builder.REVIEW.items()
+        if review.get("exact_annotations")
+    }
+    if any(
+        by_line[line].get("exact_annotations") != annotations
+        for line, annotations in expected_exact.items()
+    ):
+        raise ValueError("Phase 511 localized annotation drift")
+    if any(
+        by_line[line].get("adds_strict_entry") is not True
+        for line in {
+            60166, 60735, 24033, 34886, 44893, 46627, 48081,
+            49821, 51048, 54151, 54383, 55369, 59757, 60165,
+            60167, 60168, 60169,
+        }
+    ):
+        raise ValueError("Phase 511 semantic strict additions drift")
+    return set(by_line), by_line, {
+        "path": path.relative_to(ROOT).as_posix(),
+        "sha256": hashlib.sha256(raw).hexdigest().upper(),
+        "entries_sha256": payload["entries_sha256"],
+        "entries": len(entries),
+        "evaluable_entries": len(entries),
+        "full_master_only_entries": 0,
+        "historical_supersessions": 1,
+    }
+
+
 def gold_cases(
     cases, path: Path, raw: bytes, snapshot_identity, expected_sha256,
     enforce_all_fake_coarse=False,
@@ -1119,8 +1272,16 @@ def gold_cases(
     fake_coarse_by_line, fake_coarse_identity = load_fake_coarse_reference(
         raw, lines, eligible_marked_rows, marker_exclusions,
     )
+    (
+        phase511_transition_lines,
+        phase511_transition_by_line,
+        phase511_transition_identity,
+    ) = load_fake_coarse_phase511_transition(
+        fake_coarse_by_line, fake_coarse_identity,
+    )
     historical_transition_lines, historical_transition_identity = load_fake_coarse_transition(
         fake_coarse_by_line,
+        {45205: phase511_transition_by_line[45205]},
     )
     ff33_transition_lines, ff33_transition_identity = (
         load_fake_coarse_ff33_transition(fake_coarse_by_line)
@@ -1132,6 +1293,7 @@ def gold_cases(
         historical_transition_lines,
         ff33_transition_lines,
         final_5e_transition_lines,
+        phase511_transition_lines,
     )
     if sum(len(scope) for scope in transition_scopes) != len(
         set().union(*transition_scopes)
@@ -1142,6 +1304,7 @@ def gold_cases(
         "historical_c679_b090": historical_transition_identity,
         "ff33_delta": ff33_transition_identity,
         "final_5e_delta": final_5e_transition_identity,
+        "phase511_delta": phase511_transition_identity,
         "evaluable_entries": len(transition_lines),
         "full_master_only_entries": historical_transition_identity[
             "full_master_only_entries"

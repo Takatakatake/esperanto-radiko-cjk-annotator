@@ -3,23 +3,30 @@
    不一致を形態素パターン別に集計し、汎用的に直せる法則を抽出する。"""
 import re, sys, json, html as htmllib, os, collections
 sys.stdout.reconfigure(encoding="utf-8")
-BASE = r"d:\GoogleDrive202510\マイドライブ\20_エスペラント・語学\語根分解アプリ徹底ブラッシュアップ20260624"
-sys.path.insert(0, BASE + r"\_analysis_20260625")
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE, "_analysis_20260625"))
 from gen_replacement import lp
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 def norm(p): return replace_esperanto_chars(p, hat_to_circumflex).lower().strip()
-CORP = BASE + r"\京大エス研html文書＿Github"
-if not os.path.isdir(CORP):  # 軽量化でfuyouへ退避済の場合のフォールバック
-    CORP = os.path.normpath(BASE + r"\..\fuyou\_project_root_misc\京大エス研html文書＿Github")
-appdir = BASE + r"\Esperanto-Kanji-Ruby-JA"; sys.path.insert(0, appdir)
+CORP = os.environ.get("ESP_CORPUS_PATH", "").strip()
+if not CORP:
+    CORP = os.path.join(
+        BASE, "_project_root_misc", "京大エス研html文書＿Github",
+    )
+if not os.path.isdir(lp(CORP)):
+    raise SystemExit(
+        "ESP_CORPUS_PATH must point to the clean Kyoto HTML repository"
+    )
+appdir = os.path.join(BASE, "Esperanto-Kanji-Ruby-JA")
+sys.path.insert(0, appdir)
 import esp_text_replacement_module as m
-DATA = appdir + r"\app_data"
-dd = json.load(open(lp(DATA + r"\置換リスト_ルビ.json"), encoding="utf-8"))
+DATA = os.path.join(appdir, "app_data")
+dd = json.load(open(lp(os.path.join(DATA, "置換リスト_ルビ.json")), encoding="utf-8"))
 GL = dd["局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)"]
 G2 = dd["二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)"]
 GG = dd["全域替换用のリスト(列表)型配列(replacements_final_list)"]
-ps = m.import_placeholders(lp(DATA + r"\placeholders_skip.txt"))
-pl = m.import_placeholders(lp(DATA + r"\placeholders_localcapture.txt"))
+ps = m.import_placeholders(lp(os.path.join(DATA, "placeholders_skip.txt")))
+pl = m.import_placeholders(lp(os.path.join(DATA, "placeholders_localcapture.txt")))
 def _roots_from_html(h):
     toks = []; pos = 0
     for mm in re.finditer(r'<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>', h):
@@ -67,7 +74,7 @@ def parse_words(t):
     if buf_word.strip(): words.append((buf_word, buf_roots))
     return words
 
-# 全HTML集計: (word_nz, ref_decomp) -> count
+# 全HTML集計: (元の表層形, ref_decomp) -> count
 pair_count = collections.Counter()
 nfile = 0
 for root, dirs, files in os.walk(lp(CORP)):
@@ -83,24 +90,29 @@ for root, dirs, files in os.walk(lp(CORP)):
             if len(rp) < 2: continue
             nz = norm(word)
             if not re.fullmatch(r'[a-zĉĝĥĵŝŭ\-]+', nz): continue
-            pair_count[(nz, '/'.join(rp))] += 1
+            # 固有名詞などでは大文字表層と小文字表層でアプリの辞書選択が
+            # 異なり得る。正式監査では、コーパスに現れた表層形を保持する。
+            pair_count[(word, '/'.join(rp))] += 1
 print(f"集計ファイル {nfile}, ユニーク(語,分解) {len(pair_count)}")
 
 def cuts(s):
     ps = [p for p in s.split('/') if p]; b = set(); c = 0
     for p in ps[:-1]: c += len(p); b.add(c)
     return b
-uniq_words = sorted({nz for (nz, _) in pair_count})
+uniq_words = sorted({surface for (surface, _) in pair_count})
 print(f"ユニーク語 {len(uniq_words)} をバッチorchestrate中...")
 appcache = app_roots_batch(uniq_words)
-total = match = 0; mis = collections.Counter()
-for (nz, refd), c in pair_count.items():
-    ap = appcache.get(nz)
-    if ap is None or ''.join(ap) != nz: continue
+total = match = 0; unevaluable = 0; mis = collections.Counter()
+for (surface, refd), c in pair_count.items():
+    ap = appcache.get(surface)
+    if ap is None or ''.join(ap) != norm(surface):
+        unevaluable += c
+        continue
     total += c
     if cuts(refd) == cuts('/'.join(ap)): match += c
     else: mis[(refd, '/'.join(ap))] += c
-print(f"\n=== コーパス全体 境界一致 {match}/{total} ({match*1000//max(total,1)/10}%)  不一致 {total-match} ===")
+print(f"\n=== コーパス全体 境界一致（原表層大小文字保持・正式） {match}/{total} ({match*1000//max(total,1)/10}%)  不一致 {total-match} ===")
+print(f"比較対象外（アプリ出力を安全に復元できないもの） {unevaluable}")
 
 # パターン分類: 末尾差分の形態素で
 def tail_pattern(r, a):

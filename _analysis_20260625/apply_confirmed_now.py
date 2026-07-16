@@ -42,9 +42,9 @@ _atomic_families_compact = json.dumps(
 ).encode("utf-8")
 if (
     ATOMIC_ROOT_FAMILY_REVIEW.get("learner_sha256")
-    != "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0"
+    != "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C"
     or ATOMIC_ROOT_FAMILY_REVIEW.get("academic_sha256")
-    != "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D"
+    != "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A"
     or ATOMIC_ROOT_FAMILY_REVIEW.get("case_policy")
     != ["lower", "initial", "upper"]
     or len(_atomic_families)
@@ -135,7 +135,58 @@ if expected_gold_sha and gold_identity['sha256'] != expected_gold_sha:
     raise RuntimeError(
         f"gold SHA mismatch: expected {expected_gold_sha}, got {gold_identity['sha256']}"
     )
-for line in gold_raw.decode('utf-8').splitlines():
+# Ruby morphology must never learn productive boundaries from learner rows
+# marked as fake/deep decomposition.  The line-paired academic snapshot is
+# identical for ordinary rows and supplies the reviewed coarse decomposition
+# for those fake rows, so it is the correct collision authority for this Ruby
+# generator.  Kanji consumes the learner/deep track in its separate pipeline.
+fake_reference_path=os.path.join(
+    os.path.dirname(__file__), '_fake_coarse_reference_manifest.json',
+)
+with open(lp(fake_reference_path), encoding='utf-8') as _handle:
+    fake_reference_manifest=json.load(_handle)
+expected_academic=fake_reference_manifest.get('sources', {}).get('academic', {})
+ACADEMIC_GOLD=os.environ.get('ESP_ACADEMIC_GOLD_PATH', '').strip()
+if not ACADEMIC_GOLD:
+    _learner_path=os.path.abspath(lp(GOLD))
+    _academic_name=os.path.basename(_learner_path).replace(
+        '学習者版', '学術版',
+    )
+    _academic_candidate=os.path.join(
+        os.path.dirname(_learner_path), _academic_name,
+    )
+    if _academic_name == os.path.basename(_learner_path) or not os.path.exists(
+        lp(_academic_candidate)
+    ):
+        raise SystemExit(
+            'ESP_ACADEMIC_GOLD_PATH is required for coarse Ruby morphology'
+        )
+    ACADEMIC_GOLD=_academic_candidate
+academic_raw, academic_identity=consistent_snapshot(lp(ACADEMIC_GOLD))
+expected_academic_env=os.environ.get(
+    'ESP_EXPECTED_ACADEMIC_SHA256', '',
+).strip().upper()
+if (
+    not expected_academic
+    or academic_identity['sha256'] != expected_academic.get('sha256')
+    or academic_identity['bytes'] != expected_academic.get('bytes')
+    or academic_identity['lines'] != expected_academic.get('lines')
+    or academic_identity['lines'] != gold_identity['lines']
+    or (
+        expected_academic_env
+        and academic_identity['sha256'] != expected_academic_env
+    )
+):
+    raise RuntimeError(
+        'academic Ruby authority mismatch: '
+        f"got {academic_identity}, expected {expected_academic}"
+    )
+print(
+    f"[academic Ruby authority] bytes={academic_identity['bytes']} "
+    f"sha256={academic_identity['sha256']}",
+    flush=True,
+)
+for line in academic_raw.decode('utf-8').splitlines():
     if not line or line.startswith('##') or ':' not in line: continue
     for w in line.split(':')[0].split(' '):
         wc=_norm(w)
@@ -143,7 +194,9 @@ for line in gold_raw.decode('utf-8').splitlines():
         ps=[p for p in wc.split('/') if p]
         if not ps: continue
         gold_map.setdefault(''.join(ps), ps)
-# gold語根集合(全分解片)。stem+語尾がそれ自体gold語根なら分割しない(spontane等の保全)。
+# Coarse Ruby-authority root set.  A fake/deep learner row must not remove a
+# lexical coarse root (etan, metan, ...), otherwise a short productive setting
+# can silently invade it merely because the moving learner master was refined.
 gold_roots=set()
 for ps in gold_map.values():
     for p in ps: gold_roots.add(p)
@@ -676,6 +729,12 @@ def prepare_settings(settings_path):
                 'ne', 'word_boundary', 'case_sensitive',
                 f"typed_roles:{_entry['typed_roles']}", 'ruby_track_only',
             }
+            if len([part for part in _row[0].split('/') if part]) == 1:
+                # A one-piece exact Ruby target is represented by the same
+                # fail-closed atomic marker used by other no-split settings.
+                # Derive this from the reviewed target instead of naming an
+                # individual surface such as deoksi.
+                _expected_actions.add('atomic_no_split')
         if set(_row[2]) != _expected_actions:
             raise ValueError(
                 f'localized Ruby-track action drift: {_row!r}'
