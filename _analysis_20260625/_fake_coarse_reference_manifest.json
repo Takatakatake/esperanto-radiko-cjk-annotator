@@ -3,14 +3,14 @@
  "sources": {
   "learner": {
    "name": "世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
-   "bytes": 4371657,
-   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+   "bytes": 4372552,
+   "sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
    "lines": 62313
   },
   "academic": {
    "name": "世界语全部单词_大约44100个(原pejvo.txt)_学術版_utf8_20260416.txt",
-   "bytes": 4277566,
-   "sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
+   "bytes": 4277591,
+   "sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
    "lines": 62313
   },
   "pejvo_original": {
@@ -31,33 +31,33 @@
   "entries": 2
  },
  "paired_invariant": {
-  "unmarked_rows": 58821,
-  "unmarked_identical_decomposition": 58821,
+  "unmarked_rows": 58796,
+  "unmarked_identical_decomposition": 58796,
   "academic_rows_without_fake_marker": 62313,
-  "marked_rows": 3492,
-  "marked_different_decomposition": 3492,
-  "marked_gloss_context_matches_academic": 3492
+  "marked_rows": 3517,
+  "marked_different_decomposition": 3517,
+  "marked_gloss_context_matches_academic": 3517
  },
  "counts": {
-  "entries": 3213,
+  "entries": 3238,
   "marker_excluded_rows": 279,
   "marker_exclusions_by_reason": {
    "contains_space": 264,
    "non_evaluable_surface": 15
   },
   "source_rows": {
-   "pejvo_original": 1397,
+   "pejvo_original": 1402,
    "pejvo_reviewed_override": 9,
-   "paired_academic": 1805,
+   "paired_academic": 1825,
    "project_reviewed_override": 2
   },
   "academic_rows_with_nonmatching_pejvo_homographs": 13,
-  "exact_surfaces": 3197,
+  "exact_surfaces": 3222,
   "duplicate_exact_surface_rows": 16,
-  "casefold_surfaces": 3186,
+  "casefold_surfaces": 3211,
   "duplicate_casefold_surface_rows": 27
  },
- "entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+ "entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
  "entries": [
   {
    "learner_line": 173,
@@ -1668,18 +1668,6 @@
    ]
   },
   {
-   "learner_line": 2704,
-   "surface": "atletiko",
-   "learner_surface": "atletiko",
-   "learner_decomposition": "atlet/ik/o",
-   "coarse_decomposition": "atletik/o",
-   "academic_decomposition": "atletik/o",
-   "authority": "pejvo_original",
-   "authority_lines": [
-    2736
-   ]
-  },
-  {
    "learner_line": 2740,
    "surface": "atonio",
    "learner_surface": "atonio",
@@ -2511,6 +2499,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     5046
+   ]
+  },
+  {
+   "learner_line": 4955,
+   "surface": "ciberspaco",
+   "learner_surface": "ciberspaco",
+   "learner_decomposition": "ciber/spac/o",
+   "coarse_decomposition": "ciberspac/o",
+   "academic_decomposition": "ciberspac/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    5050
    ]
   },
   {
@@ -6985,6 +6985,30 @@
    ]
   },
   {
+   "learner_line": 14922,
+   "surface": "iĥtiosaŭro",
+   "learner_surface": "iĥtiosaŭro",
+   "learner_decomposition": "iĥtio/saŭr/o",
+   "coarse_decomposition": "iĥtiosaŭr/o",
+   "academic_decomposition": "iĥtiosaŭr/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    15123
+   ]
+  },
+  {
+   "learner_line": 14938,
+   "surface": "iktiosaŭro",
+   "learner_surface": "iktiosaŭro",
+   "learner_decomposition": "iktio/saŭr/o",
+   "coarse_decomposition": "iktiosaŭr/o",
+   "academic_decomposition": "iktiosaŭr/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    15139
+   ]
+  },
+  {
    "learner_line": 15102,
    "surface": "impresionismo",
    "learner_surface": "impresionismo",
@@ -7006,6 +7030,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     15305
+   ]
+  },
+  {
+   "learner_line": 15164,
+   "surface": "incizivo",
+   "learner_surface": "incizivo",
+   "learner_decomposition": "inciz/iv/o",
+   "coarse_decomposition": "inciziv/o",
+   "academic_decomposition": "inciziv/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    15366
    ]
   },
   {
@@ -7654,6 +7690,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     17907
+   ]
+  },
+  {
+   "learner_line": 17783,
+   "surface": "kiberspaco",
+   "learner_surface": "kiberspaco",
+   "learner_decomposition": "kiber/spac/o",
+   "coarse_decomposition": "kiberspac/o",
+   "academic_decomposition": "kiberspac/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    18016
    ]
   },
   {
@@ -9434,6 +9482,18 @@
    ]
   },
   {
+   "learner_line": 24804,
+   "surface": "megalosaŭro",
+   "learner_surface": "megalosaŭro",
+   "learner_decomposition": "megalo/saŭr/o",
+   "coarse_decomposition": "megalosaŭr/o",
+   "academic_decomposition": "megalosaŭr/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    25106
+   ]
+  },
+  {
    "learner_line": 24807,
    "surface": "megavathoro",
    "learner_surface": "megavathoro",
@@ -11197,6 +11257,18 @@
    "authority": "pejvo_original",
    "authority_lines": [
     28026
+   ]
+  },
+  {
+   "learner_line": 27728,
+   "surface": "nomogenezo",
+   "learner_surface": "nomogenezo",
+   "learner_decomposition": "nomo/genez/o",
+   "coarse_decomposition": "nomogenez/o",
+   "academic_decomposition": "nomogenez/o",
+   "authority": "pejvo_original",
+   "authority_lines": [
+    28061
    ]
   },
   {
@@ -16999,18 +17071,6 @@
    ]
   },
   {
-   "learner_line": 44124,
-   "surface": "Sud-Sudano",
-   "learner_surface": "Sud-Sudano",
-   "learner_decomposition": "Sud-Sud/an/o",
-   "coarse_decomposition": "Sud-Sudan/o",
-   "academic_decomposition": "Sud-Sudan/o",
-   "authority": "pejvo_original",
-   "authority_lines": [
-    38946
-   ]
-  },
-  {
    "learner_line": 44240,
    "surface": "asiria",
    "learner_surface": "asiria",
@@ -18307,6 +18367,30 @@
    ]
   },
   {
+   "learner_line": 45198,
+   "surface": "apterigo",
+   "learner_surface": "apterigo",
+   "learner_decomposition": "a/pterig/o",
+   "coarse_decomposition": "apterig/o",
+   "academic_decomposition": "apterig/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45198
+   ]
+  },
+  {
+   "learner_line": 45199,
+   "surface": "apterigoformaj",
+   "learner_surface": "apterigoformaj",
+   "learner_decomposition": "a/pterig/o/form/aj",
+   "coarse_decomposition": "apterig/o/form/aj",
+   "academic_decomposition": "apterig/o/form/aj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45199
+   ]
+  },
+  {
    "learner_line": 45202,
    "surface": "arino",
    "learner_surface": "arino",
@@ -19168,6 +19252,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     45888
+   ]
+  },
+  {
+   "learner_line": 45931,
+   "surface": "bohemiano",
+   "learner_surface": "bohemiano",
+   "learner_decomposition": "bohem/i/an/o",
+   "coarse_decomposition": "bohemian/o",
+   "academic_decomposition": "bohemian/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    45931
    ]
   },
   {
@@ -21119,8 +21215,8 @@
    "surface": "epigrafiko",
    "learner_surface": "epigrafiko",
    "learner_decomposition": "epi/graf/ik/o",
-   "coarse_decomposition": "epigrafik/o",
-   "academic_decomposition": "epigrafik/o",
+   "coarse_decomposition": "epigraf/ik/o",
+   "academic_decomposition": "epigraf/ik/o",
    "authority": "paired_academic",
    "authority_lines": [
     47311
@@ -21143,8 +21239,8 @@
    "surface": "epigrafikisto",
    "learner_surface": "epigrafikisto",
    "learner_decomposition": "epi/graf/ik/ist/o",
-   "coarse_decomposition": "epigrafik/ist/o",
-   "academic_decomposition": "epigrafik/ist/o",
+   "coarse_decomposition": "epigraf/ik/ist/o",
+   "academic_decomposition": "epigraf/ik/ist/o",
    "authority": "paired_academic",
    "authority_lines": [
     47313
@@ -22999,18 +23095,6 @@
    ]
   },
   {
-   "learner_line": 48550,
-   "surface": "grenadilbero",
-   "learner_surface": "grenadilbero",
-   "learner_decomposition": "grenad/il/ber/o",
-   "coarse_decomposition": "grenadil/ber/o",
-   "academic_decomposition": "grenadil/ber/o",
-   "authority": "paired_academic",
-   "authority_lines": [
-    48550
-   ]
-  },
-  {
    "learner_line": 48583,
    "surface": "grundgenezo",
    "learner_surface": "grundgenezo",
@@ -24364,6 +24448,18 @@
    ]
   },
   {
+   "learner_line": 49293,
+   "surface": "iĥtiopterigoj",
+   "learner_surface": "iĥtiopterigoj",
+   "learner_decomposition": "iĥtio/pterig/oj",
+   "coarse_decomposition": "iĥtiopterig/oj",
+   "academic_decomposition": "iĥtiopterig/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    49293
+   ]
+  },
+  {
    "learner_line": 49296,
    "surface": "ikonologio",
    "learner_surface": "ikonologio",
@@ -24469,6 +24565,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     49311
+   ]
+  },
+  {
+   "learner_line": 49312,
+   "surface": "iktiopterigoj",
+   "learner_surface": "iktiopterigoj",
+   "learner_decomposition": "iktio/pterig/oj",
+   "coarse_decomposition": "iktiopterig/oj",
+   "academic_decomposition": "iktiopterig/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    49312
+   ]
+  },
+  {
+   "learner_line": 49313,
+   "surface": "iktiosaŭruloj",
+   "learner_surface": "iktiosaŭruloj",
+   "learner_decomposition": "iktio/saŭr/ul/oj",
+   "coarse_decomposition": "iktiosaŭr/ul/oj",
+   "academic_decomposition": "iktiosaŭr/ul/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    49313
    ]
   },
   {
@@ -25897,6 +26017,18 @@
    ]
   },
   {
+   "learner_line": 50655,
+   "surface": "kondilartroj",
+   "learner_surface": "kondilartroj",
+   "learner_decomposition": "kondil/artr/oj",
+   "coarse_decomposition": "kondilartr/oj",
+   "academic_decomposition": "kondilartr/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    50655
+   ]
+  },
+  {
    "learner_line": 50659,
    "surface": "kondrito",
    "learner_surface": "kondrito",
@@ -26302,6 +26434,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     51012
+   ]
+  },
+  {
+   "learner_line": 51035,
+   "surface": "ksenartroj",
+   "learner_surface": "ksenartroj",
+   "learner_decomposition": "ksen/artr/oj",
+   "coarse_decomposition": "ksenartr/oj",
+   "academic_decomposition": "ksenartr/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    51035
    ]
   },
   {
@@ -27505,6 +27649,18 @@
    ]
   },
   {
+   "learner_line": 51995,
+   "surface": "mezosaŭroj",
+   "learner_surface": "mezosaŭroj",
+   "learner_decomposition": "mez/o/saŭr/oj",
+   "coarse_decomposition": "mezosaŭr/oj",
+   "academic_decomposition": "mezosaŭr/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    51995
+   ]
+  },
+  {
    "learner_line": 52005,
    "surface": "miito",
    "learner_surface": "miito",
@@ -28145,8 +28301,8 @@
    "surface": "neologismemo",
    "learner_surface": "neologismemo",
    "learner_decomposition": "neo/log/ism/em/o",
-   "coarse_decomposition": "neologismem/o",
-   "academic_decomposition": "neologismem/o",
+   "coarse_decomposition": "neologism/em/o",
+   "academic_decomposition": "neologism/em/o",
    "authority": "paired_academic",
    "authority_lines": [
     52411
@@ -28157,8 +28313,8 @@
    "surface": "neologismemulo",
    "learner_surface": "neologismemulo",
    "learner_decomposition": "neo/log/ism/em/ul/o",
-   "coarse_decomposition": "neologismem/ul/o",
-   "academic_decomposition": "neologismem/ul/o",
+   "coarse_decomposition": "neologism/em/ul/o",
+   "academic_decomposition": "neologism/em/ul/o",
    "authority": "paired_academic",
    "authority_lines": [
     52412
@@ -28186,6 +28342,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     52414
+   ]
+  },
+  {
+   "learner_line": 52416,
+   "surface": "neornitoj",
+   "learner_surface": "neornitoj",
+   "learner_decomposition": "ne/ornit/oj",
+   "coarse_decomposition": "neornit/oj",
+   "academic_decomposition": "neornit/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52416
    ]
   },
   {
@@ -28825,6 +28993,18 @@
    ]
   },
   {
+   "learner_line": 52834,
+   "surface": "ornitiskioj",
+   "learner_surface": "ornitiskioj",
+   "learner_decomposition": "ornit/iski/oj",
+   "coarse_decomposition": "ornitiski/oj",
+   "academic_decomposition": "ornitiski/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52834
+   ]
+  },
+  {
    "learner_line": 52837,
    "surface": "ornitopodo",
    "learner_surface": "ornitopodo",
@@ -28882,6 +29062,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     52847
+   ]
+  },
+  {
+   "learner_line": 52848,
+   "surface": "ortognata",
+   "learner_surface": "ortognata",
+   "learner_decomposition": "ort/o/gnat/a",
+   "coarse_decomposition": "ortognat/a",
+   "academic_decomposition": "ortognat/a",
+   "authority": "paired_academic",
+   "authority_lines": [
+    52848
    ]
   },
   {
@@ -30625,6 +30817,18 @@
    ]
   },
   {
+   "learner_line": 53731,
+   "surface": "portovino",
+   "learner_surface": "portovino",
+   "learner_decomposition": "port/o/vin/o",
+   "coarse_decomposition": "portovin/o",
+   "academic_decomposition": "portovin/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53731
+   ]
+  },
+  {
    "learner_line": 53732,
    "surface": "Portlanda",
    "learner_surface": "Portlanda",
@@ -30658,6 +30862,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     53847
+   ]
+  },
+  {
+   "learner_line": 53855,
+   "surface": "prognata",
+   "learner_surface": "prognata",
+   "learner_decomposition": "pro/gnat/a",
+   "coarse_decomposition": "prognat/a",
+   "academic_decomposition": "prognat/a",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53855
+   ]
+  },
+  {
+   "learner_line": 53856,
+   "surface": "prognateco",
+   "learner_surface": "prognateco",
+   "learner_decomposition": "pro/gnat/ec/o",
+   "coarse_decomposition": "prognat/ec/o",
+   "academic_decomposition": "prognat/ec/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    53856
    ]
   },
   {
@@ -31054,6 +31282,30 @@
    "authority": "paired_academic",
    "authority_lines": [
     54025
+   ]
+  },
+  {
+   "learner_line": 54026,
+   "surface": "pterodaktilo",
+   "learner_surface": "pterodaktilo",
+   "learner_decomposition": "pter/o/daktil/o",
+   "coarse_decomposition": "pterodaktil/o",
+   "academic_decomposition": "pterodaktil/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54026
+   ]
+  },
+  {
+   "learner_line": 54030,
+   "surface": "pterosaŭroj",
+   "learner_surface": "pterosaŭroj",
+   "learner_decomposition": "pter/o/saŭr/oj",
+   "coarse_decomposition": "pterosaŭr/oj",
+   "academic_decomposition": "pterosaŭr/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54030
    ]
   },
   {
@@ -31501,6 +31753,18 @@
    ]
   },
   {
+   "learner_line": 54439,
+   "surface": "rinkocefaloj",
+   "learner_surface": "rinkocefaloj",
+   "learner_decomposition": "rink/o/cefal/oj",
+   "coarse_decomposition": "rinkocefal/oj",
+   "academic_decomposition": "rinkocefal/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54439
+   ]
+  },
+  {
    "learner_line": 54440,
    "surface": "rinoceredoj",
    "learner_surface": "rinoceredoj",
@@ -31822,6 +32086,18 @@
    "authority": "paired_academic",
    "authority_lines": [
     54692
+   ]
+  },
+  {
+   "learner_line": 54739,
+   "surface": "saŭriskioj",
+   "learner_surface": "saŭriskioj",
+   "learner_decomposition": "saŭr/iski/oj",
+   "coarse_decomposition": "saŭriski/oj",
+   "academic_decomposition": "saŭriski/oj",
+   "authority": "paired_academic",
+   "authority_lines": [
+    54739
    ]
   },
   {
@@ -32281,6 +32557,18 @@
    ]
   },
   {
+   "learner_line": 55027,
+   "surface": "sinartro",
+   "learner_surface": "sinartro",
+   "learner_decomposition": "sin/artr/o",
+   "coarse_decomposition": "sinartr/o",
+   "academic_decomposition": "sinartr/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55027
+   ]
+  },
+  {
    "learner_line": 55046,
    "surface": "sinkretisma",
    "learner_surface": "sinkretisma",
@@ -32321,11 +32609,23 @@
    "surface": "sinonimiko",
    "learner_surface": "sinonimiko",
    "learner_decomposition": "sin/onim/ik/o",
-   "coarse_decomposition": "sinonimik/o",
-   "academic_decomposition": "sinonimik/o",
+   "coarse_decomposition": "sinonim/ik/o",
+   "academic_decomposition": "sinonim/ik/o",
    "authority": "paired_academic",
    "authority_lines": [
     55050
+   ]
+  },
+  {
+   "learner_line": 55052,
+   "surface": "sinosto",
+   "learner_surface": "sinosto",
+   "learner_decomposition": "sin/ost/o",
+   "coarse_decomposition": "sinost/o",
+   "academic_decomposition": "sinost/o",
+   "authority": "paired_academic",
+   "authority_lines": [
+    55052
    ]
   },
   {
@@ -32813,8 +33113,8 @@
    "surface": "stenografistino",
    "learner_surface": "stenografistino",
    "learner_decomposition": "sten/o/graf/ist/in/o",
-   "coarse_decomposition": "stenografistin/o",
-   "academic_decomposition": "stenografistin/o",
+   "coarse_decomposition": "stenograf/ist/in/o",
+   "academic_decomposition": "stenograf/ist/in/o",
    "authority": "paired_academic",
    "authority_lines": [
     55419
@@ -37576,8 +37876,8 @@
    "surface": "termoreguligilo",
    "learner_surface": "termoreguligilo",
    "learner_decomposition": "term/o/regul/ig/il/o",
-   "coarse_decomposition": "termoreguligil/o",
-   "academic_decomposition": "termoreguligil/o",
+   "coarse_decomposition": "termoregulig/il/o",
+   "academic_decomposition": "termoregulig/il/o",
    "authority": "paired_academic",
    "authority_lines": [
     60705

@@ -22,7 +22,7 @@ from atomic_json import atomic_json_dump
 
 
 HERE = Path(__file__).resolve().parent
-REFERENCE = HERE / "_fake_coarse_reference_manifest.json"
+REFERENCE = HERE / "_phase513_fake_coarse_reference_manifest.json"
 HISTORICAL = HERE / "_fake_coarse_transition_review.json"
 OUTPUT = HERE / "_fake_coarse_phase511_transition_review.json"
 

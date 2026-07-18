@@ -32,6 +32,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from gold_snapshot import consistent_snapshot
+import build_phase532_authority_carry_forward as phase532_carry_builder
+import build_phase532_ruby_policy_review as phase532_policy_builder
+import phase532_authority_carry_forward as phase532_carry
+import phase532_ruby_policy as phase532_policy
 
 
 def parse_args(argv=None):
@@ -133,6 +137,45 @@ for required in required_inputs:
 with open(os.path.join(HERE, "_no_worsening_scope_manifest.json"), encoding="utf-8") as handle:
     scope_manifest = json.load(handle)
 expected_gold = scope_manifest["expected"]["gold"]
+phase532_scope_identity = scope_manifest["expected"].get(
+    "phase532_ruby_policy"
+)
+phase532_carry_identity = scope_manifest["expected"].get(
+    "phase532_authority_carry_forward"
+)
+phase532_formal = phase532_scope_identity is not None
+if phase532_formal:
+    for required in (
+        "ESP_PHASE532_BASELINE_DIR", "ESP_PHASE532_CANDIDATE_DIR",
+    ):
+        if not os.environ.get(required):
+            raise SystemExit(
+                f"formal Phase 532 regeneration requires explicit {required}"
+            )
+    phase532_manifest_path = os.path.join(
+        HERE, "_fake_coarse_reference_manifest.json",
+    )
+    phase532_policy_report = phase532_policy_builder.validate_frozen_closure(
+        os.environ["ESP_PHASE532_BASELINE_DIR"],
+        os.environ["ESP_PHASE532_CANDIDATE_DIR"],
+        phase532_manifest_path,
+    )
+    phase532_carry_report = phase532_carry_builder.validate_frozen_closure(
+        os.environ["ESP_PHASE532_BASELINE_DIR"],
+        os.environ["ESP_PHASE532_CANDIDATE_DIR"],
+        phase532_manifest_path,
+    )
+    if (
+        phase532_scope_identity != phase532_policy.review_identity()
+        or phase532_scope_identity
+        != phase532_policy_report["review_identity"]
+        or phase532_carry_identity != phase532_carry.review_identity()
+        or phase532_carry_identity
+        != phase532_carry_report["review_identity"]
+    ):
+        raise SystemExit("formal Phase 532 policy/carry identity mismatch")
+elif phase532_carry_identity is not None:
+    raise SystemExit("Phase 532 carry identity exists without its Ruby policy")
 _gold_raw, gold_identity = consistent_snapshot(os.environ["ESP_GOLD_PATH"])
 if (
     gold_identity["sha256"] != expected_gold["sha256"]
@@ -246,6 +289,34 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'build_corpus_exact_manifest.py'), '--check'], {}),
     ([sys.executable, os.path.join(HERE, 'build_corpus_reviewed_exact_manifest.py'), '--check'], {}),
     ([sys.executable, os.path.join(HERE, 'bare_word_audit.py'), '--require-zero'], {}),
+    *([
+        ([
+            sys.executable,
+            os.path.join(HERE, 'build_phase532_ruby_policy_review.py'),
+            '--baseline-dir', os.environ['ESP_PHASE532_BASELINE_DIR'],
+            '--candidate-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
+            '--candidate-manifest', phase532_manifest_path,
+            '--check',
+        ], {}),
+        ([
+            sys.executable,
+            os.path.join(HERE, 'build_phase532_authority_carry_forward.py'),
+            '--baseline-dir', os.environ['ESP_PHASE532_BASELINE_DIR'],
+            '--candidate-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
+            '--candidate-manifest', phase532_manifest_path,
+            '--check',
+        ], {}),
+    ] if phase532_formal else []),
+    # Permission to begin any Phase 532 write comes from the still-deployed
+    # reviewed state: 51 selected signatures plus exactly seven legacy
+    # signatures, with identical JA/ZH/KO boundaries.  Keep this before the
+    # first writer so a failed permission gate cannot leave intermediate
+    # word-annotation files partially advanced.
+    *([([
+        sys.executable,
+        os.path.join(HERE, 'phase532_runtime_signature_gate.py'),
+        '--mode', 'pre-regen', '--deployed',
+    ], {})] if phase532_formal else []),
     ([sys.executable, os.path.join(HERE, 'apply_corpus_word_anno.py'), '--write'], {}),
     ([
         sys.executable,
@@ -254,8 +325,17 @@ STEPS = [
     ], {}),
     # 3言語とも同一の固定正本 + 確定補正になることを、生成前にfail-closedで検査する。
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--settings-audit'], {'SKIP_VERIFY': '1'}),
+    # apply_confirmed builds all three payloads in memory and runs the matching
+    # post-regen 58/58 runtime gate before its first persistent write.
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--write'], {'SKIP_VERIFY': '1'}),
     ([sys.executable, os.path.join(HERE, 'fix_ruby_postregen.py')], {}),
+    # Re-render the persisted payloads after post-processing as well: the
+    # in-memory gate above cannot license a later fixer to alter any of the 58.
+    *([([
+        sys.executable,
+        os.path.join(HERE, 'phase532_runtime_signature_gate.py'),
+        '--mode', 'post-regen', '--deployed',
+    ], {})] if phase532_formal else []),
     # 全21443 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_canonical_corpus_surfaces.py')], {}),
@@ -294,6 +374,13 @@ STEPS = [
         fake_coarse_manifest['sources']['academic']['sha256'],
         '--expected-head', FORMAL_HEAD,
         '--allow-stable-tracked-changes',
+        *([
+            '--phase532-runtime-mode', 'post-regen',
+            '--phase532-baseline-dir',
+            os.environ['ESP_PHASE532_BASELINE_DIR'],
+            '--phase532-candidate-dir',
+            os.environ['ESP_PHASE532_CANDIDATE_DIR'],
+        ] if phase532_formal else []),
         '--report', os.path.join(
             tempfile.gettempdir(), 'esperanto_master_3lang_formal_report.json',
         ),

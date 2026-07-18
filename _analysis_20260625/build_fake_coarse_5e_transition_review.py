@@ -14,7 +14,7 @@ from atomic_json import atomic_json_dump
 
 
 HERE = Path(__file__).resolve().parent
-REFERENCE = HERE / "_fake_coarse_reference_manifest.json"
+REFERENCE = HERE / "_phase513_fake_coarse_reference_manifest.json"
 OUTPUT = HERE / "_fake_coarse_5e_transition_review.json"
 EXPECTED_LEARNER_SHA256 = (
     "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C"

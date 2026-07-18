@@ -22,7 +22,9 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 DEFAULT_MANIFEST = HERE / "_fake_coarse_transition_app_review.json"
 TRANSITION_MANIFEST = HERE / "_fake_coarse_transition_review.json"
-FAKE_AUTHORITY_MANIFEST = HERE / "_fake_coarse_reference_manifest.json"
+FAKE_AUTHORITY_MANIFEST = (
+    HERE / "_phase513_fake_coarse_reference_manifest.json"
+)
 AUTHORITY_AUDIT_SHA256 = (
     "F50456E073043BAD432736C0EAAC7C8240AEC96EC67A04A17D512B561E58C3D0"
 )

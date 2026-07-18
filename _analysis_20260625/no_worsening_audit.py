@@ -51,6 +51,10 @@ from atomic_json import atomic_json_dump
 from gold_snapshot import consistent_snapshot
 from gen_replacement import load_app_replacement_helper
 import build_fake_coarse_phase511_transition_review as phase511_builder
+import build_phase532_authority_carry_forward as phase532_carry_builder
+import build_phase532_ruby_policy_review as phase532_builder
+import phase532_authority_carry_forward as phase532_carry
+import phase532_ruby_policy as phase532_policy
 
 
 CONTENT_DIRS = ("lernolibroj", "legajxoj", "revuoj", "rondolegado")
@@ -63,6 +67,14 @@ RESUME_COMPATIBLE_AUDIT_CODE_SHA256 = {
     "DA2317DB1E4CED0BE2AF5313829C77903C834414A92186DE5EBD7CF1195E10F1",
 }
 REFERENCE_SCHEMA_VERSION = 5
+FAKE_COARSE_REFERENCE_PATH = HERE / "_fake_coarse_reference_manifest.json"
+PHASE513_FAKE_COARSE_MANIFEST_SHA256 = (
+    "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504"
+)
+PHASE513_FAKE_COARSE_ENTRIES_SHA256 = (
+    "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB"
+)
+PHASE532_REFERENCE_SOURCE = "gold_phase532_selected_ruby_policy"
 FORMAT = "HTML格式_Ruby文字_大小调整"
 ESP_LETTERS = "a-zĉĝĥĵŝŭ"
 WORD_RE = re.compile(rf"(?=.*[{ESP_LETTERS}])[{ESP_LETTERS}'-]+", re.IGNORECASE)
@@ -158,6 +170,12 @@ EXACT_REQUIRED_REFERENCE_SOURCES = frozenset({
     "html_place_manifest",
     "gold_official_override",
     "gold_project_ruby_boundary_override",
+    # A Phase 532 selected boundary is a reviewed authority, not merely one
+    # acceptable member of a contextual union.  Keeping this source exact
+    # prevents a second corpus/gold analysis from hiding a selected-target
+    # miss.  Phase 513 has no cases with this source, so its projection and
+    # comparison behavior remain unchanged.
+    PHASE532_REFERENCE_SOURCE,
 })
 REVIEWED_GOLD_OVERRIDES = {
     **OFFICIAL_LONG_ROOT_OVERRIDES,
@@ -644,9 +662,48 @@ def gold_path() -> Path:
     )
 
 
+def load_phase532_reference_review(manifest_path: Path) -> dict:
+    """Bind the exact Phase 532 manifest and its 58-expression Ruby policy.
+
+    This is deliberately separate from the normal tracked-manifest path.  A
+    moving or merely well-formed manifest must never activate the Phase 532
+    policy: the raw manifest, its entry union, both frozen masters and the two
+    human disposition ledgers are all exact authorities.
+    """
+    path = manifest_path.resolve()
+    raw = path.read_bytes()
+    payload = json.loads(raw.decode("utf-8"))
+    identity = phase532_policy.review_identity()
+    if (
+        hashlib.sha256(raw).hexdigest().upper()
+        != phase532_policy.CANDIDATE_MANIFEST_SHA256
+        or payload.get("entries_sha256")
+        != phase532_policy.CANDIDATE_MANIFEST_ENTRIES_SHA256
+        or payload.get("sources", {}).get("learner", {}).get("sha256")
+        != phase532_policy.CANDIDATE_LEARNER_SHA256
+        or payload.get("sources", {}).get("academic", {}).get("sha256")
+        != phase532_policy.CANDIDATE_ACADEMIC_SHA256
+        or identity.get("ordinary_reference_expressions") != 57
+        or identity.get("bounded_multiword_expressions") != 1
+        or identity.get("fake_transition_entries") != 35
+        or identity.get("retired_historical_entries") != 1
+    ):
+        raise ValueError("Phase 532 reference/policy identity changed")
+    loaded = phase532_policy.load_phase532_policy()
+    return {
+        "manifest_path": path,
+        "manifest_sha256": phase532_policy.CANDIDATE_MANIFEST_SHA256,
+        "manifest_entries_sha256": (
+            phase532_policy.CANDIDATE_MANIFEST_ENTRIES_SHA256
+        ),
+        "policy": loaded,
+        "identity": identity,
+    }
+
+
 def load_fake_coarse_reference(
     gold_raw: bytes, gold_lines: list[str], eligible_marked_rows: dict[int, dict],
-    marker_exclusions: collections.Counter,
+    marker_exclusions: collections.Counter, manifest_path: Path | None = None,
 ):
     """Load the fixed non-fake boundary for every evaluable fake-marked row.
 
@@ -655,7 +712,10 @@ def load_fake_coarse_reference(
     the learner identity and every selected learner line again: a stale or
     surface-collapsed manifest must fail before it can influence the audit.
     """
-    path = HERE / "_fake_coarse_reference_manifest.json"
+    path = (
+        manifest_path.resolve()
+        if manifest_path is not None else FAKE_COARSE_REFERENCE_PATH
+    )
     raw = path.read_bytes()
     payload = json.loads(raw.decode("utf-8"))
     if payload.get("schema_version") != 1:
@@ -882,7 +942,10 @@ def load_fake_coarse_reference(
     ):
         raise ValueError("fake-coarse paired invariant no longer covers all gold lines")
     return by_line, {
-        "path": path.relative_to(ROOT).as_posix(),
+        # Keep the candidate projection portable.  The external file is
+        # destined to replace this logical tracked authority byte-for-byte;
+        # its machine-specific D:\\tmp path must not enter the reference hash.
+        "path": FAKE_COARSE_REFERENCE_PATH.relative_to(ROOT).as_posix(),
         "sha256": hashlib.sha256(raw).hexdigest().upper(),
         "entries_sha256": entries_sha256,
         "academic_sha256": payload["sources"]["academic"]["sha256"],
@@ -903,7 +966,9 @@ def compact_json_sha256(value):
 
 def load_fake_coarse_transition(
     fake_coarse_by_line, superseded_historical_entries,
+    retired_historical_entries=(),
 ):
+    retired_historical_entries = list(retired_historical_entries)
     path = HERE / "_fake_coarse_transition_review.json"
     raw = path.read_bytes()
     payload = json.loads(raw.decode("utf-8"))
@@ -922,6 +987,16 @@ def load_fake_coarse_transition(
     evaluable_lines = set()
     excluded_lines = []
     superseded_lines = []
+    retired_lines = []
+    retired_by_line = {
+        entry.get("learner_line"): entry
+        for entry in retired_historical_entries
+    }
+    if (
+        len(retired_by_line) != len(retired_historical_entries)
+        or None in retired_by_line
+    ):
+        raise ValueError("invalid/reused historical transition retirement")
     seen = set()
     for entry in entries:
         line = entry.get("learner_line")
@@ -945,6 +1020,33 @@ def load_fake_coarse_transition(
                     f"invalid historical supersession at line {line}"
                 )
             superseded_lines.append(line)
+            continue
+        retirement = retired_by_line.get(line)
+        if retirement is not None:
+            if (
+                line != 2704
+                or coarse_entry is not None
+                or entry != {
+                    "learner_line": 2704,
+                    "surface": "atletiko",
+                    "coarse_decomposition": "atletik/o",
+                    "category": "reviewed_c679_to_b090_fake_transition",
+                }
+                or retirement != {
+                    "learner_line": 2704,
+                    "surface": "atletiko",
+                    "historical_coarse_decomposition": "atletik/o",
+                    "candidate_learner_decomposition": "atlet/ik/o",
+                    "candidate_academic_decomposition": "atlet/ik/o",
+                    "disposition": (
+                        "retire_fake_marker_keep_unmarked_ruby_review"
+                    ),
+                }
+            ):
+                raise ValueError(
+                    f"invalid historical retirement at line {line}"
+                )
+            retired_lines.append(line)
             continue
         if coarse_entry is None:
             excluded_lines.append(line)
@@ -975,24 +1077,45 @@ def load_fake_coarse_transition(
         raise ValueError("fake transition review counts changed")
     # The single excluded entry is the reviewed multiword Ionia Maro; the
     # full-master audit renders and gates it without collapsing to a word key.
-    if len(excluded_lines) != 1 or superseded_lines != [45205]:
+    expected_retired = [2704] if retired_by_line else []
+    if (
+        len(excluded_lines) != 1
+        or superseded_lines != [45205]
+        or retired_lines != expected_retired
+        or set(retired_by_line) != set(retired_lines)
+    ):
         raise ValueError(
             "unexpected historical transition disposition: "
             f"full-master-only={excluded_lines!r}, "
             f"superseded={superseded_lines!r}"
         )
-    return evaluable_lines, {
+    identity = {
         "path": path.relative_to(ROOT).as_posix(),
         "sha256": hashlib.sha256(raw).hexdigest().upper(),
         "entries_sha256": payload["entries_sha256"],
         "entries": len(entries),
-        "effective_entries": len(entries) - len(superseded_lines),
+        "effective_entries": (
+            len(entries) - len(superseded_lines) - len(retired_lines)
+        ),
         "evaluable_entries": len(evaluable_lines),
         "full_master_only_entries": len(excluded_lines),
         "full_master_only_lines": excluded_lines,
         "superseded_entries": len(superseded_lines),
         "superseded_lines": superseded_lines,
     }
+    # Phase 513's committed projection predates the retirement concept.  Do
+    # not add even zero/None-valued keys to that projection: candidate support
+    # must be a strict extension which leaves the deployed reference identity
+    # byte-for-byte reproducible.
+    if retired_lines:
+        identity.update({
+            "retired_entries": len(retired_lines),
+            "retired_lines": retired_lines,
+            "retired_entries_sha256": (
+                phase532_policy.RETIRED_HISTORICAL_ENTRIES_SHA256
+            ),
+        })
+    return evaluable_lines, identity
 
 
 def load_fake_coarse_ff33_transition(fake_coarse_by_line):
@@ -1096,6 +1219,7 @@ def load_fake_coarse_5e_transition(fake_coarse_by_line):
 
 def load_fake_coarse_phase511_transition(
     fake_coarse_by_line, fake_coarse_identity,
+    phase532_reference_review=None,
 ):
     path = HERE / "_fake_coarse_phase511_transition_review.json"
     raw = path.read_bytes()
@@ -1115,6 +1239,25 @@ def load_fake_coarse_phase511_transition(
     source_reference = payload.get("source_fake_coarse_manifest", {})
     supersedes = payload.get("supersedes", {})
     historical = supersedes.get("historical_manifest", {})
+    source_matches_current = (
+        source_reference.get("sha256")
+        == fake_coarse_identity.get("sha256")
+        and source_reference.get("entries_sha256")
+        == fake_coarse_identity.get("entries_sha256")
+    )
+    phase532_carry_forward = (
+        phase532_reference_review is not None
+        and source_reference == {
+            "sha256": PHASE513_FAKE_COARSE_MANIFEST_SHA256,
+            "entries_sha256": PHASE513_FAKE_COARSE_ENTRIES_SHA256,
+        }
+        and fake_coarse_identity.get("sha256")
+        == phase532_policy.CANDIDATE_MANIFEST_SHA256
+        and fake_coarse_identity.get("entries_sha256")
+        == phase532_policy.CANDIDATE_MANIFEST_ENTRIES_SHA256
+        and phase532_reference_review.get("identity")
+        == phase532_policy.review_identity()
+    )
     if (
         payload.get("schema_version") != 2
         or payload.get("phase") != 511
@@ -1122,10 +1265,7 @@ def load_fake_coarse_phase511_transition(
         or payload.get("entries_sha256") != expected_entries_hash
         or payload.get("counts") != expected_counts
         or len(entries) != 21
-        or source_reference.get("sha256")
-        != fake_coarse_identity.get("sha256")
-        or source_reference.get("entries_sha256")
-        != fake_coarse_identity.get("entries_sha256")
+        or not (source_matches_current or phase532_carry_forward)
         or historical != {
             "sha256": (
                 "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34"
@@ -1214,14 +1354,109 @@ def load_fake_coarse_phase511_transition(
     }
 
 
+def load_fake_coarse_phase532_transition(
+    fake_coarse_by_line: dict[int, dict], phase532_reference_review: dict,
+):
+    """Load the exact 35-row Phase 532 Ruby selection over fake/deep rows."""
+    if (
+        phase532_reference_review.get("identity")
+        != phase532_policy.review_identity()
+        or phase532_reference_review.get("manifest_sha256")
+        != phase532_policy.CANDIDATE_MANIFEST_SHA256
+        or phase532_reference_review.get("manifest_entries_sha256")
+        != phase532_policy.CANDIDATE_MANIFEST_ENTRIES_SHA256
+    ):
+        raise ValueError("Phase 532 transition review identity changed")
+    policy = phase532_reference_review.get("policy", {})
+    entries = policy.get("fake", {}).get("entries", [])
+    if (
+        len(entries) != 35
+        or phase532_policy.compact_sha256(entries)
+        != phase532_policy.FAKE_TRANSITION_ENTRIES_SHA256
+    ):
+        raise ValueError("Phase 532 fake transition entries changed")
+    by_line = {}
+    for reviewed in entries:
+        line = reviewed.get("learner_line")
+        source = fake_coarse_by_line.get(line)
+        disposition = reviewed.get("disposition")
+        target = reviewed.get("target")
+        if disposition in {
+            "keep_academic_coarse_for_ruby",
+            "adopt_productive_ruby_repair",
+        }:
+            target_matches = (
+                source is not None
+                and target == source.get("coarse_decomposition")
+                and target == source.get("academic_decomposition")
+            )
+        elif disposition in {
+            "retain_current_outer_ik_pending",
+            "retain_current_missing_parent_translation",
+        }:
+            target_matches = (
+                source is not None
+                and target == source.get("learner_decomposition")
+            )
+        else:
+            target_matches = False
+        if (
+            not isinstance(line, int)
+            or line in by_line
+            or source is None
+            or source.get("surface") != reviewed.get("surface")
+            or not target_matches
+        ):
+            raise ValueError(
+                f"Phase 532 fake transition authority drift at line {line!r}"
+            )
+        by_line[line] = reviewed
+    if len(by_line) != 35:
+        raise ValueError("Phase 532 fake transition line coverage changed")
+    return set(by_line), by_line, {
+        "path": phase532_policy.FAKE_TRANSITION_PATH.relative_to(ROOT).as_posix(),
+        "sha256": phase532_policy.file_sha256(
+            phase532_policy.FAKE_TRANSITION_PATH
+        ),
+        "entries_sha256": phase532_policy.FAKE_TRANSITION_ENTRIES_SHA256,
+        "entries": len(by_line),
+        "evaluable_entries": len(by_line),
+        "full_master_only_entries": 0,
+        "retired_historical_entries": 1,
+        "retired_historical_entries_sha256": (
+            phase532_policy.RETIRED_HISTORICAL_ENTRIES_SHA256
+        ),
+    }
+
+
 def gold_cases(
     cases, path: Path, raw: bytes, snapshot_identity, expected_sha256,
-    enforce_all_fake_coarse=False,
+    enforce_all_fake_coarse=False, fake_coarse_manifest_path: Path | None = None,
+    phase532_reference_review: dict | None = None,
 ):
     digest = hashlib.sha256(raw).hexdigest().upper()
     expected_sha256 = expected_sha256.upper()
     if digest != expected_sha256:
         raise ValueError(f"gold SHA256 changed: {digest} != {expected_sha256}")
+    phase532_enabled = phase532_reference_review is not None
+    if phase532_enabled:
+        if (
+            digest != phase532_policy.CANDIDATE_LEARNER_SHA256
+            or fake_coarse_manifest_path is None
+            or phase532_reference_review.get("manifest_path")
+            != fake_coarse_manifest_path.resolve()
+            or phase532_reference_review.get("identity")
+            != phase532_policy.review_identity()
+        ):
+            raise ValueError("Phase 532 gold/reference context changed")
+        phase532_loaded = phase532_reference_review["policy"]
+        phase532_unmarked_by_line = {
+            entry["learner_line"]: entry
+            for entry in phase532_loaded["unmarked"]["entries"]
+        }
+    else:
+        phase532_loaded = None
+        phase532_unmarked_by_line = {}
     atomic_hyphen_review, atomic_hyphen_identity = load_atomic_hyphen_review()
     used_atomic_hyphen_reviews = set()
     records = collections.defaultdict(list)
@@ -1271,6 +1506,7 @@ def gold_cases(
 
     fake_coarse_by_line, fake_coarse_identity = load_fake_coarse_reference(
         raw, lines, eligible_marked_rows, marker_exclusions,
+        manifest_path=fake_coarse_manifest_path,
     )
     (
         phase511_transition_lines,
@@ -1278,10 +1514,15 @@ def gold_cases(
         phase511_transition_identity,
     ) = load_fake_coarse_phase511_transition(
         fake_coarse_by_line, fake_coarse_identity,
+        phase532_reference_review=phase532_reference_review,
     )
     historical_transition_lines, historical_transition_identity = load_fake_coarse_transition(
         fake_coarse_by_line,
         {45205: phase511_transition_by_line[45205]},
+        (
+            phase532_loaded["fake"]["retired_historical_entries"]
+            if phase532_enabled else ()
+        ),
     )
     ff33_transition_lines, ff33_transition_identity = (
         load_fake_coarse_ff33_transition(fake_coarse_by_line)
@@ -1289,17 +1530,41 @@ def gold_cases(
     final_5e_transition_lines, final_5e_transition_identity = (
         load_fake_coarse_5e_transition(fake_coarse_by_line)
     )
+    if phase532_enabled:
+        (
+            phase532_transition_lines,
+            phase532_transition_by_line,
+            phase532_transition_identity,
+        ) = load_fake_coarse_phase532_transition(
+            fake_coarse_by_line, phase532_reference_review,
+        )
+    else:
+        phase532_transition_lines = set()
+        phase532_transition_by_line = {}
+        phase532_transition_identity = None
     transition_scopes = (
         historical_transition_lines,
         ff33_transition_lines,
         final_5e_transition_lines,
         phase511_transition_lines,
+        phase532_transition_lines,
     )
     if sum(len(scope) for scope in transition_scopes) != len(
         set().union(*transition_scopes)
     ):
         raise ValueError("fake transition scopes overlap")
     transition_lines = set().union(*transition_scopes)
+    if phase532_enabled:
+        carried_lines = phase532_carry.authority_lines()
+        if (
+            phase511_transition_lines
+            != set(carried_lines["phase511_transition"])
+            or ff33_transition_lines != set(carried_lines["ff33_transition"])
+            or final_5e_transition_lines != set(carried_lines["5e_transition"])
+        ):
+            raise ValueError(
+                "Phase 532 carried transition authority scope changed"
+            )
     transition_identity = {
         "historical_c679_b090": historical_transition_identity,
         "ff33_delta": ff33_transition_identity,
@@ -1310,11 +1575,14 @@ def gold_cases(
             "full_master_only_entries"
         ],
     }
+    if phase532_enabled:
+        transition_identity["phase532_delta"] = phase532_transition_identity
 
     included = excluded_fake = 0
     official_overridden = project_boundary_overridden = 0
     mixed_marker_surfaces = []
     unmarked_conflicts = []
+    used_phase532_unmarked_lines = set()
     duplicate_surfaces = sum(len(rows) > 1 for rows in records.values())
     duplicate_rows = sum(max(0, len(rows) - 1) for rows in records.values())
     for surface, surface_records in sorted(records.items()):
@@ -1338,23 +1606,46 @@ def gold_cases(
             for record in surface_records:
                 if record["marker"]:
                     continue
-                decomposition = record["decomposition"]
+                phase532_entry = phase532_unmarked_by_line.get(record["line"])
+                if phase532_entry is not None:
+                    used_phase532_unmarked_lines.add(record["line"])
+                decomposition = (
+                    phase532_entry["selected_ruby_decomposition"]
+                    if phase532_entry is not None
+                    else record["decomposition"]
+                )
+                source = (
+                    PHASE532_REFERENCE_SOURCE
+                    if phase532_entry is not None else "gold_unmarked"
+                )
                 atomic_hyphen_pieces = reviewed_atomic_hyphen_pieces(
                     surface, decomposition, atomic_hyphen_review,
                 )
                 if atomic_hyphen_pieces:
                     used_atomic_hyphen_reviews.add(surface)
-                by_signature.setdefault(
-                    expected_signature(decomposition, atomic_hyphen_pieces),
-                    decomposition,
+                signature = expected_signature(
+                    decomposition, atomic_hyphen_pieces,
                 )
-            decompositions = list(by_signature.values())
-            sources = ["gold_unmarked"] * len(decompositions)
+                selected = by_signature.setdefault(signature, {
+                    "decomposition": decomposition,
+                    "sources": [],
+                })
+                if source not in selected["sources"]:
+                    selected["sources"].append(source)
+            decompositions = []
+            sources = []
+            for selected in by_signature.values():
+                for source in selected["sources"]:
+                    decompositions.append(selected["decomposition"])
+                    sources.append(source)
             included += 1
-            if len(decompositions) > 1:
+            if len(by_signature) > 1:
                 unmarked_conflicts.append({
                     "surface": surface,
-                    "decompositions": sorted(decompositions),
+                    "decompositions": sorted({
+                        selected["decomposition"]
+                        for selected in by_signature.values()
+                    }),
                     "lines": sorted(
                         record["line"] for record in surface_records
                         if not record["marker"]
@@ -1372,6 +1663,23 @@ def gold_cases(
                 ),
                 decomposition, source, 1,
             )
+    if phase532_enabled:
+        multiword = phase532_policy.MULTIWORD_EXPRESSION
+        multiword_entries = [
+            entry for entry in phase532_loaded["unmarked"]["entries"]
+            if entry["surface"] == multiword["surface"]
+        ]
+        expected_word_lines = set(phase532_unmarked_by_line) - {34352}
+        if (
+            used_phase532_unmarked_lines != expected_word_lines
+            or len(multiword_entries) != 1
+            or multiword_entries[0]["learner_line"] != 34352
+            or multiword_entries[0]["selected_ruby_decomposition"]
+            != "ritm/a gimnastik/o"
+        ):
+            raise ValueError(
+                "Phase 532 ordinary/multiword unmarked coverage changed"
+            )
     fake_coarse_surfaces = set()
     fake_coarse_sources = collections.Counter()
     selected_fake_lines = (
@@ -1382,7 +1690,12 @@ def gold_cases(
         if line_number not in selected_fake_lines:
             continue
         surface = entry["surface"]
-        decomposition = entry["coarse_decomposition"]
+        phase532_entry = phase532_transition_by_line.get(line_number)
+        decomposition = (
+            phase532_entry["target"]
+            if phase532_entry is not None
+            else entry["coarse_decomposition"]
+        )
         if surface in REVIEWED_GOLD_OVERRIDES:
             # Reviewed gold overrides remain the stronger project authority,
             # but the paired line is still exhaustively validated by the
@@ -1393,7 +1706,11 @@ def gold_cases(
         )
         if atomic_hyphen_pieces:
             used_atomic_hyphen_reviews.add(surface)
-        source = f"gold_fake_coarse_{entry['authority']}"
+        source = (
+            PHASE532_REFERENCE_SOURCE
+            if phase532_entry is not None
+            else f"gold_fake_coarse_{entry['authority']}"
+        )
         add_case(
             cases, surface,
             expected_signature(decomposition, atomic_hyphen_pieces),
@@ -1401,6 +1718,35 @@ def gold_cases(
         )
         fake_coarse_surfaces.add(surface)
         fake_coarse_sources[source] += 1
+    if phase532_enabled:
+        ordinary_targets = phase532_policy.ordinary_reference_targets()
+        cases_by_surface = collections.defaultdict(list)
+        for case in cases.values():
+            cases_by_surface[case["surface"]].append(case)
+        selected_case_keys = set()
+        for surface, target in ordinary_targets.items():
+            normalized_surface = canonical(surface)
+            atomic_hyphen_pieces = reviewed_atomic_hyphen_pieces(
+                normalized_surface, target, atomic_hyphen_review,
+            )
+            wanted_signature = expected_signature(
+                target, atomic_hyphen_pieces,
+            )
+            matches = [
+                case for case in cases_by_surface[normalized_surface]
+                if case["signature"] == wanted_signature
+                and case.get("sources", {}).get(
+                    PHASE532_REFERENCE_SOURCE
+                ) == 1
+            ]
+            if len(matches) != 1:
+                raise ValueError(
+                    "Phase 532 selected Ruby reference is absent/ambiguous: "
+                    f"{surface!r} -> {target!r}"
+                )
+            selected_case_keys.add((normalized_surface, wanted_signature))
+        if len(ordinary_targets) != 57 or len(selected_case_keys) != 57:
+            raise ValueError("Phase 532 ordinary reference scope changed")
     for surface, decomposition in REVIEWED_GOLD_OVERRIDES.items():
         if surface in records:
             continue
@@ -1417,7 +1763,7 @@ def gold_cases(
     if used_atomic_hyphen_reviews != set(atomic_hyphen_review):
         missing = sorted(set(atomic_hyphen_review) - used_atomic_hyphen_reviews)
         raise ValueError(f"unused atomic-hyphen reviews: {missing!r}")
-    return {
+    result = {
         "path": str(path.resolve()),
         "sha256": digest,
         "expected_sha256": expected_sha256,
@@ -1447,6 +1793,15 @@ def gold_cases(
         "unmarked_conflicts": unmarked_conflicts,
         "atomic_hyphen_review": atomic_hyphen_identity,
     }
+    if phase532_enabled:
+        result["phase532_selected_ruby_policy"] = {
+            "source": PHASE532_REFERENCE_SOURCE,
+            "ordinary_reference_expressions": 57,
+            "bounded_multiword_expressions": 1,
+            "identity": phase532_reference_review["identity"],
+            "authority_carry_forward": phase532_carry.review_identity(),
+        }
+    return result
 
 
 def reference_conflicts(cases):
@@ -1535,10 +1890,13 @@ def git_repo_state(repo: Path):
     }
 
 
-def scope_projection(scope, cases, surfaces, conflicts):
+def scope_projection(
+    scope, cases, surfaces, conflicts, phase532_policy_identity=None,
+    phase532_carry_forward_identity=None,
+):
     corpus = scope["corpus"]
     gold = scope["gold"]
-    return {
+    projection = {
         "schema_version": REFERENCE_SCHEMA_VERSION,
         "case_count": len(cases),
         "surface_count": len(surfaces),
@@ -1577,6 +1935,26 @@ def scope_projection(scope, cases, surfaces, conflicts):
             )
         },
     }
+    if phase532_policy_identity is not None:
+        if (
+            phase532_policy_identity != phase532_policy.review_identity()
+            or phase532_carry_forward_identity
+            != phase532_carry.review_identity()
+            or gold.get("phase532_selected_ruby_policy", {}).get("identity")
+            != phase532_policy_identity
+            or gold.get("phase532_selected_ruby_policy", {}).get(
+                "authority_carry_forward"
+            ) != phase532_carry_forward_identity
+        ):
+            raise ValueError("Phase 532 projection policy identity changed")
+        projection["phase532_ruby_policy"] = phase532_policy_identity
+        projection["phase532_authority_carry_forward"] = (
+            phase532_carry_forward_identity
+        )
+        projection["gold"]["phase532_selected_ruby_policy"] = gold[
+            "phase532_selected_ruby_policy"
+        ]
+    return projection
 
 
 def validate_reviewed_reference_scope(projection, conflicts):
@@ -1989,6 +2367,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
     current_manifest_wrong = []
     current_override_wrong = []
     current_project_boundary_override_wrong = []
+    current_exact_required_wrong = []
     expected_signatures_by_surface = collections.defaultdict(set)
     cases_by_surface = collections.defaultdict(list)
     for case in cases.values():
@@ -2084,6 +2463,14 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
             "current_typed": current_result["typed_decomposition"],
             "expected_signature": signature_payload(expected),
         }
+        exact_sources = sorted(
+            set(case["sources"]) & EXACT_REQUIRED_REFERENCE_SOURCES
+        )
+        if exact_sources and not exact_current_ok:
+            current_exact_required_wrong.append({
+                **record,
+                "exact_required_sources": exact_sources,
+            })
         if "html_place_manifest" in case["sources"] and not exact_current_ok:
             current_manifest_wrong.append(record)
         if "gold_official_override" in case["sources"] and not exact_current_ok:
@@ -2168,6 +2555,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
         "current_project_ruby_boundary_override_wrong_cases": (
             current_project_boundary_override_wrong
         ),
+        "current_exact_required_wrong_cases": current_exact_required_wrong,
         "weighted_worsening_sources": weighted_worsening,
     }
     result["gate"] = not any((
@@ -2177,6 +2565,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
         current_manifest_wrong,
         current_override_wrong,
         current_project_boundary_override_wrong,
+        current_exact_required_wrong,
         weighted_worsening,
     ))
     return result
@@ -2405,7 +2794,7 @@ def print_language_result(result):
         print_comparison_result(result["language"], label, result[label])
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=2000)
     parser.add_argument(
@@ -2442,11 +2831,95 @@ def main():
         default=os.environ.get("ESP_EXPECTED_GOLD_SHA256"),
         help="Required hash of the pre-audited consistent gold snapshot.",
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        "--phase532-baseline-dir", type=Path,
+        help="Frozen Phase 513 source directory for candidate validation.",
+    )
+    parser.add_argument(
+        "--phase532-candidate-dir", type=Path,
+        help="Frozen Phase 532 source directory for candidate validation.",
+    )
+    parser.add_argument(
+        "--phase532-reference-manifest", type=Path,
+        help="External exact Phase 532 fake/coarse manifest candidate.",
+    )
+    parser.add_argument(
+        "--references-output", type=Path,
+        help=(
+            "Optional references-only output path; defaults to the local "
+            "out directory."
+        ),
+    )
+    args = parser.parse_args(argv)
     if not args.expected_gold_sha256:
         parser.error(
             "--expected-gold-sha256 (or ESP_EXPECTED_GOLD_SHA256) is required"
         )
+    phase532_args = (
+        args.phase532_baseline_dir,
+        args.phase532_candidate_dir,
+        args.phase532_reference_manifest,
+    )
+    if any(value is not None for value in phase532_args) and not all(
+        value is not None for value in phase532_args
+    ):
+        parser.error(
+            "Phase 532 candidate mode requires baseline-dir, candidate-dir "
+            "and reference-manifest together"
+        )
+    external_phase532 = all(value is not None for value in phase532_args)
+    if external_phase532 and not args.references_only:
+        parser.error(
+            "Phase 532 external authority is candidate-only; build with "
+            "--references-only, then use the dedicated adopter --check"
+        )
+    if args.references_output is not None and not args.references_only:
+        parser.error("--references-output requires --references-only")
+
+    tracked_phase532 = (
+        not external_phase532
+        and hashlib.sha256(
+            FAKE_COARSE_REFERENCE_PATH.read_bytes()
+        ).hexdigest().upper() == phase532_policy.CANDIDATE_MANIFEST_SHA256
+    )
+    phase532_enabled = external_phase532 or tracked_phase532
+    phase532_manifest_path = (
+        args.phase532_reference_manifest
+        if external_phase532 else FAKE_COARSE_REFERENCE_PATH
+    )
+    if external_phase532:
+        phase532_source_review = phase532_builder.validate_frozen_closure(
+            args.phase532_baseline_dir,
+            args.phase532_candidate_dir,
+            args.phase532_reference_manifest,
+        )
+        phase532_carry_review = (
+            phase532_carry_builder.validate_frozen_closure(
+                args.phase532_baseline_dir,
+                args.phase532_candidate_dir,
+                args.phase532_reference_manifest,
+            )
+        )
+        phase532_reference_review = load_phase532_reference_review(
+            args.phase532_reference_manifest,
+        )
+        if (
+            phase532_source_review.get("review_identity")
+            != phase532_reference_review["identity"]
+        ):
+            raise ValueError("Phase 532 frozen/reference identities differ")
+    elif tracked_phase532:
+        phase532_source_review = None
+        phase532_carry_review = {
+            "review_identity": phase532_carry.review_identity(),
+        }
+        phase532_reference_review = load_phase532_reference_review(
+            phase532_manifest_path,
+        )
+    else:
+        phase532_source_review = None
+        phase532_carry_review = None
+        phase532_reference_review = None
 
     corpus_root = Path(os.environ.get(
         "ESP_CORPUS_PATH",
@@ -2467,19 +2940,80 @@ def main():
             cases, gold_file, gold_raw, gold_identity,
             args.expected_gold_sha256,
             enforce_all_fake_coarse=args.enforce_all_fake_coarse,
+            fake_coarse_manifest_path=(
+                phase532_manifest_path if phase532_enabled else None
+            ),
+            phase532_reference_review=phase532_reference_review,
         ),
     }
     del gold_raw
     surfaces = sorted({case["surface"] for case in cases.values()})
     conflicts = reference_conflicts(cases)
-    projection = scope_projection(scope, cases, surfaces, conflicts)
+    projection = scope_projection(
+        scope, cases, surfaces, conflicts,
+        phase532_policy_identity=(
+            phase532_reference_review["identity"]
+            if phase532_enabled else None
+        ),
+        phase532_carry_forward_identity=(
+            phase532_carry_review["review_identity"]
+            if phase532_enabled else None
+        ),
+    )
     print(
         f"reference union: {len(cases)} cases / {len(surfaces)} surfaces / "
         f"conflicts={len(conflicts)} / gold SHA256={scope['gold']['sha256']}",
         flush=True,
     )
     if args.references_only:
-        candidate_path = HERE / "out" / "_audit_no_worsening_references.json"
+        if phase532_enabled:
+            corpus_at_end = corpus_content_fingerprint(corpus_root)
+            corpus_repository_at_end = git_repo_state(corpus_root)
+            _gold_raw_at_end, gold_identity_at_end = consistent_snapshot(
+                gold_file
+            )
+            if external_phase532:
+                source_review_at_end = phase532_builder.validate_frozen_closure(
+                    args.phase532_baseline_dir,
+                    args.phase532_candidate_dir,
+                    phase532_manifest_path,
+                )
+                carry_review_at_end = (
+                    phase532_carry_builder.validate_frozen_closure(
+                        args.phase532_baseline_dir,
+                        args.phase532_candidate_dir,
+                        phase532_manifest_path,
+                    )
+                )
+            else:
+                source_review_at_end = None
+                carry_review_at_end = {
+                    "review_identity": phase532_carry.review_identity(),
+                }
+            reference_review_at_end = load_phase532_reference_review(
+                phase532_manifest_path,
+            )
+            if (
+                corpus_at_end.get("files") != scope["corpus"]["files"]
+                or corpus_at_end.get("sha256")
+                != scope["corpus"]["content_sha256"]
+                or corpus_repository_at_end != scope["corpus_repository"]
+                or gold_identity_at_end["sha256"] != scope["gold"]["sha256"]
+                or source_review_at_end != phase532_source_review
+                or carry_review_at_end != phase532_carry_review
+                or reference_review_at_end["identity"]
+                != phase532_reference_review["identity"]
+                or reference_review_at_end["manifest_sha256"]
+                != phase532_reference_review["manifest_sha256"]
+            ):
+                raise ValueError(
+                    "Phase 532 reference input changed during candidate build"
+                )
+        candidate_path = (
+            args.references_output.resolve()
+            if args.references_output is not None
+            else HERE / "out" / "_audit_no_worsening_references.json"
+        )
         atomic_json_dump(candidate_path, {
             "projection": projection,
             "conflicts": conflicts,

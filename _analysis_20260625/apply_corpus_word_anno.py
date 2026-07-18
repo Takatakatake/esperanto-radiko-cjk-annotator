@@ -25,11 +25,15 @@ from build_fake_coarse_5e_transition_review import (
 from build_fake_coarse_phase511_transition_review import (
     validate as validate_fake_coarse_phase511_transition_review,
 )
+from phase532_ruby_policy import managed_morph_targets
+from phase532_activation import activation_report
 
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_analysis_20260625" / "out"
 WRITE = "--write" in sys.argv
+PHASE532_ACTIVATION = activation_report()
+PHASE532_FORMAL = PHASE532_ACTIVATION["phase532_active"]
 FAKE_COARSE_APP_REVIEW_PATH = (
     ROOT / "_analysis_20260625" / "_fake_coarse_transition_app_review.json"
 )
@@ -99,9 +103,17 @@ ATOMIC_ROOT_FAMILY_PATH = (
 ATOMIC_ROOT_FAMILY_REVIEW = json.loads(
     ATOMIC_ROOT_FAMILY_PATH.read_text(encoding="utf-8")
 )
+_phase513_fake_reference_path = (
+    ROOT / "_analysis_20260625"
+    / "_phase513_fake_coarse_reference_manifest.json"
+)
+_phase513_fake_reference_raw = _phase513_fake_reference_path.read_bytes()
+if hashlib.sha256(_phase513_fake_reference_raw).hexdigest().upper() != (
+    "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504"
+):
+    raise SystemExit("Phase 513 fake/coarse evidence raw identity mismatch")
 _fake_reference = json.loads(
-    (ROOT / "_analysis_20260625" / "_fake_coarse_reference_manifest.json")
-    .read_text(encoding="utf-8")
+    _phase513_fake_reference_raw.decode("utf-8")
 )
 if (
     ATOMIC_ROOT_FAMILY_REVIEW.get("schema_version") != 1
@@ -1032,6 +1044,18 @@ MANAGED_MORPH_TARGETS = {
     "azia-oceania": {"target": "azi/a/-/oceani/a"},
     "azian-oceanian": {"target": "azi/a/n/-/oceani/a/n"},
 }
+
+_phase532_managed_morph_targets = managed_morph_targets()
+_phase532_overlap = set(MANAGED_MORPH_TARGETS) & set(
+    _phase532_managed_morph_targets
+)
+if _phase532_overlap:
+    raise SystemExit(
+        "Phase 532 managed morphology duplicates an existing setting: "
+        f"{sorted(_phase532_overlap)!r}"
+    )
+if PHASE532_FORMAL:
+    MANAGED_MORPH_TARGETS.update(_phase532_managed_morph_targets)
 
 for _family in ATOMIC_ROOT_FAMILY_REVIEW["families"]:
     for _target in _family["morph_targets"]:
