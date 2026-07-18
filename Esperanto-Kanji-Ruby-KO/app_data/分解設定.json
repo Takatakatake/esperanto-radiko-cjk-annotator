@@ -26661,6 +26661,123 @@
   ]
  ],
  [
+  "supr/e/n/glis",
+  109000,
+  [
+   "verbo_s1",
+   "verbo_s2",
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary"
+  ]
+ ],
+ [
+  "lul/u",
+  49000,
+  [
+   "ne",
+   "word_boundary"
+  ]
+ ],
+ [
+  "pasiv/aĵ",
+  79000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary"
+  ]
+ ],
+ [
+  "pasiv/ig",
+  79000,
+  [
+   "verbo_s1",
+   "verbo_s2",
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary"
+  ]
+ ],
+ [
+  "neologism/em",
+  119000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "neologism/em/ul",
+  139000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "stenograf/ist/in",
+  149000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
   "bonaer",
   69000,
   [
@@ -39208,17 +39325,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RRRL"
-  ]
- ],
- [
-  "lulu",
-  49000,
-  [
-   "ne",
-   "atomic_no_split",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:R"
   ]
  ],
  [

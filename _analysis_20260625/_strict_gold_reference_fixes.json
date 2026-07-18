@@ -1,10 +1,10 @@
 {
  "schema_version": 1,
  "reference_schema_version": 5,
- "gold_sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
- "reference_sha256": "EB81086916F181D657D683EC5E983C5E0D3FE287E71AA9D059ABA98D1A33E357",
- "expected_entries": 933,
- "entries_sha256": "61B497E12602D03DF51FA82ACC49653070476E81216FCB9733FC40CAB7A75AAA",
+ "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+ "reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+ "expected_entries": 932,
+ "entries_sha256": "CA736E47CEAC5F128FFB491A976C930C0B37895D498ECF7656A9AC17F2C3B017",
  "entries": [
   {"w":"Alfonsino","target":"Alfons/in/o","typed_roles":"RRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"Amalekidoj","target":"Amalek/id/oj","typed_roles":"RRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
@@ -458,7 +458,6 @@
   {"w":"lo","target":"lo","typed_roles":"R","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"loganbero","target":"logan/ber/o","typed_roles":"RRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"loganberujo","target":"logan/ber/uj/o","typed_roles":"RRRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
-  {"w":"lulu","target":"lulu","typed_roles":"R","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"lunduono","target":"lun/du/on/o","typed_roles":"RRRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"lupino","target":"lup/in/o","typed_roles":"RRL","exact_only":true,"boundary_only":true,"case_sensitive":true},
   {"w":"luteino","target":"lutein/o","typed_roles":"RL","exact_only":true,"boundary_only":true,"case_sensitive":true},

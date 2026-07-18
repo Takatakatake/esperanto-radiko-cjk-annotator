@@ -524,6 +524,43 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
         )
         self.assertFalse(result["gate"])
 
+    def test_phase532_policy_source_cannot_hide_behind_an_alternative(self):
+        cases = {}
+        selected = audit.expected_signature("lul/u")
+        legacy = audit.expected_signature("lulu")
+        audit.add_case(
+            cases, "lulu", selected, "lul/u",
+            audit.PHASE532_REFERENCE_SOURCE, 1,
+        )
+        audit.add_case(
+            cases, "lulu", legacy, "lulu", "unit_alternative", 1,
+        )
+        legacy_output = {
+            "lulu": {
+                "signature": legacy,
+                "decomposition": "lulu",
+                "typed_decomposition": "R:lulu",
+            }
+        }
+        result = audit.compare_outputs(
+            "JA", "phase532_exact", legacy_output, legacy_output,
+            cases, ["lulu"],
+        )
+        self.assertFalse(result["current_unreferenced_wrong_surfaces"])
+        self.assertEqual(
+            result["current_exact_required_wrong_cases"][0][
+                "exact_required_sources"
+            ],
+            [audit.PHASE532_REFERENCE_SOURCE],
+        )
+        self.assertEqual(
+            result["sources"][audit.PHASE532_REFERENCE_SOURCE][
+                "current_correct_weight"
+            ],
+            0,
+        )
+        self.assertFalse(result["gate"])
+
     def test_case_is_preserved_in_reference_signature(self):
         self.assertEqual(
             audit.expected_signature("Kac/um/i"),

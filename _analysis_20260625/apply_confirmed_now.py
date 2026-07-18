@@ -6,7 +6,7 @@
   python apply_confirmed.py <tier> [--write]
 """
 import os
-import hashlib, json, sys, re
+import gc, hashlib, json, sys, re
 sys.stdout.reconfigure(encoding="utf-8")
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repoルート自動検出
 sys.path.insert(0, BASE + r"\_analysis_20260625")
@@ -22,6 +22,17 @@ from gen_replacement import (
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 from atomic_json import atomic_file_copy, atomic_json_dump
 from gold_snapshot import consistent_snapshot
+from phase532_ruby_policy import (
+    CANDIDATE_ACADEMIC_SHA256 as PHASE532_ACADEMIC_SHA256,
+    CANDIDATE_LEARNER_SHA256 as PHASE532_LEARNER_SHA256,
+    load_phase532_policy,
+    managed_morph_targets as phase532_managed_morph_targets,
+    strict_supersessions as phase532_strict_supersessions,
+)
+from phase532_runtime_signature_gate import validate_generated_payloads
+from phase532_activation import activation_report
+PHASE532_ACTIVATION = activation_report()
+PHASE532_FORMAL = PHASE532_ACTIVATION['phase532_active']
 OUT = BASE + r"\_analysis_20260625\out"
 BASE_SETTINGS_PATH = os.path.join(
     BASE, "_analysis_20260625", "_base_stemming_settings.json",
@@ -186,6 +197,14 @@ print(
     f"sha256={academic_identity['sha256']}",
     flush=True,
 )
+if PHASE532_FORMAL and (
+    gold_identity['sha256'] != PHASE532_LEARNER_SHA256
+    or academic_identity['sha256'] != PHASE532_ACADEMIC_SHA256
+):
+    raise ValueError(
+        'Phase 532 managed Ruby policy requires its frozen learner/academic '
+        'snapshot identities'
+    )
 for line in academic_raw.decode('utf-8').splitlines():
     if not line or line.startswith('##') or ':' not in line: continue
     for w in line.split(':')[0].split(' '):
@@ -228,6 +247,31 @@ if (
     != strict_fix_manifest.get('entries_sha256')
 ):
     raise ValueError('strict gold-reference fix manifest identity mismatch')
+_phase532_superseded_strict = phase532_strict_supersessions()
+_strict_by_word = {}
+_phase532_present_supersessions = set()
+for _entry in strict_gold_fixes:
+    _strict_by_word.setdefault(_entry.get('w'), []).append(_entry)
+for _word, _expected_entry in _phase532_superseded_strict.items():
+    _matches = _strict_by_word.get(_word, [])
+    if len(_matches) > 1:
+        raise ValueError(
+            f'duplicate Phase 532 superseded strict entry: {_word!r}'
+        )
+    if _matches and _matches[0] != _expected_entry:
+        raise ValueError(
+            f'Phase 532 superseded strict entry drift: {_matches[0]!r}'
+        )
+    if _matches:
+        _phase532_present_supersessions.add(_word)
+# The old atomic ``lulu`` pin remains active throughout Phase 513.  It is
+# removed only after the activation gate proves one coherent adopted Phase
+# 532 scope/strict/fake-manifest state.
+if PHASE532_FORMAL:
+    strict_gold_fixes = [
+        entry for entry in strict_gold_fixes
+        if entry.get('w') not in _phase532_superseded_strict
+    ]
 scope_path=os.path.join(
     os.path.dirname(__file__), '_no_worsening_scope_manifest.json',
 )
@@ -242,6 +286,21 @@ if (
     != strict_expected.get('reference_sha256')
 ):
     raise ValueError('strict gold-reference fixes do not match pinned authority')
+_strict_is_phase532 = (
+    strict_fix_manifest.get('gold_sha256') == PHASE532_LEARNER_SHA256
+)
+if (
+    _strict_is_phase532 != PHASE532_FORMAL
+    or
+    _strict_is_phase532
+    and _phase532_present_supersessions
+) or (
+    not _strict_is_phase532
+    and _phase532_present_supersessions != set(_phase532_superseded_strict)
+):
+    raise ValueError(
+        'Phase 532 strict supersession state does not match pinned authority'
+    )
 strict_words=set()
 for entry in strict_gold_fixes:
     word=entry.get('w')
@@ -261,7 +320,8 @@ for entry in strict_gold_fixes:
     strict_words.add(word)
 confirmed.extend(strict_gold_fixes)
 print(
-    f"[strict gold] entries={len(strict_gold_fixes)} "
+    f"[strict gold] manifest_entries={strict_fix_manifest['expected_entries']} "
+    f"effective_entries={len(strict_gold_fixes)} "
     f"sha256={strict_fix_manifest['entries_sha256']}",
     flush=True,
 )
@@ -509,6 +569,59 @@ for e in confirmed:
         c['word_nosl'], c['case_sensitive'],
     ))
 
+_phase532_expected_corrections = {}
+_phase532_safe_target_policy = (
+    load_phase532_policy()['safe_targets'] if PHASE532_FORMAL else {}
+)
+_phase532_managed_items = (
+    phase532_managed_morph_targets().items() if PHASE532_FORMAL else ()
+)
+for _surface, _spec in _phase532_managed_items:
+    _ruby_track_only = bool(_spec.get('ruby_track_only'))
+    _expected = make_correction(
+        _spec['target'], ruby_track_only=_ruby_track_only,
+    )
+    if _expected is None:
+        raise ValueError(
+            f'Phase 532 managed correction is empty: {_surface!r}'
+        )
+    _reviewed_target = _phase532_safe_target_policy[_surface]
+    if _reviewed_target['productive'] is False:
+        if (
+            _surface != 'lulu'
+            or _expected['stem'] != 'lul/u'
+            or set(_expected['suffixes']) != {'ne', 'word_boundary'}
+        ):
+            raise ValueError(
+                f'Phase 532 fixed-form setting became productive: {_expected!r}'
+            )
+    elif (
+        'ne' in _expected['suffixes']
+        or 'word_boundary' not in _expected['suffixes']
+        or not any(
+            action in _expected['suffixes']
+            for action in (*_NOMINAL, 'verbo_s1', 'verbo_s2')
+        )
+    ):
+        raise ValueError(
+            f'Phase 532 productive setting became fixed: {_expected!r}'
+        )
+    _expected_key = (
+        ('ruby_track_only', _expected['stem_nosl'])
+        if _ruby_track_only else _expected['stem_nosl']
+    )
+    if _expected['stem'] in _phase532_expected_corrections:
+        raise ValueError(
+            f'Phase 532 managed stem duplicated: {_expected["stem"]!r}'
+        )
+    _phase532_expected_corrections[_expected['stem']] = _expected
+    _actual = corrs.get(_expected_key)
+    if _actual != _expected:
+        raise ValueError(
+            'Phase 532 managed correction missing or merged: '
+            f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
+        )
+
 # These four reviewed stems resolve equal-length prefix/suffix competitions
 # that used to choose different decompositions by annotation language.  Keep
 # their full productive paradigms explicit: future gold drift must not silently
@@ -709,6 +822,10 @@ def prepare_settings(settings_path):
     }
     _expected_ruby_track_stems = {
         'novjork/an', *_strict_ruby_track_entries,
+        *(
+            stem for stem, expected in _phase532_expected_corrections.items()
+            if expected['ruby_track_only']
+        ),
     }
     if (
         {row[0] for row in _ruby_track_rows}
@@ -723,6 +840,10 @@ def prepare_settings(settings_path):
             _expected_actions = set(_NOMINAL) | {
                 'word_boundary', 'ruby_track_only',
             }
+        elif _row[0] in _phase532_expected_corrections:
+            _expected_actions = set(
+                _phase532_expected_corrections[_row[0]]['suffixes']
+            )
         else:
             _entry = _strict_ruby_track_entries[_row[0]]
             _expected_actions = {
@@ -782,7 +903,7 @@ def prepare_settings(settings_path):
         raise ValueError(f'5E Ruby-only promil setting drift: {_ruby_only_rows!r}')
     return settings, removed
 
-def process(key, write):
+def prepare_candidate(key):
     d,csvn,lang=APPS[key]; APPDIR=BASE+d; DATA=APPDIR+r"\app_data"
     sp=DATA+STEM
     # The morphology settings are language-independent.  Always rebuild from
@@ -791,20 +912,44 @@ def process(key, write):
     # different global key set.  Keep only the localized explanatory header.
     settings, removed = prepare_settings(sp)
     tmp=DATA+r"\_settings_confirmed_tmp.json"
-    with open(lp(tmp),'w',encoding='utf-8') as g: json.dump(settings,g,ensure_ascii=False,indent=1)
-    word_anno=WORD_ANNO_BY_LANGUAGE[lang]
-    combined=generate(APPDIR,DATA,DATA+csvn,tmp,DATA+USER,DATA+ESTEM,DATA+ROOTS,FMT,word_anno=word_anno)
+    try:
+        with open(lp(tmp),'w',encoding='utf-8') as g:
+            json.dump(settings,g,ensure_ascii=False,indent=1)
+        word_anno=WORD_ANNO_BY_LANGUAGE[lang]
+        combined=generate(
+            APPDIR,DATA,DATA+csvn,tmp,DATA+USER,DATA+ESTEM,DATA+ROOTS,
+            FMT,word_anno=word_anno,
+        )
+    finally:
+        if os.path.exists(lp(tmp)):
+            os.remove(lp(tmp))
+    return {
+        'key': key, 'settings_path': sp, 'data_dir': DATA,
+        'settings': settings, 'combined': combined, 'removed': removed,
+    }
+
+
+def write_prepared_candidate(prepared):
+    key=prepared['key']; sp=prepared['settings_path']
+    DATA=prepared['data_dir']; settings=prepared['settings']
+    combined=prepared['combined']; removed=prepared['removed']
+    atomic_file_copy(lp(sp), lp(sp+".bak_preTier"+str(TIER)+"confirmed"))
+    atomic_json_dump(sp, settings, indent=1)
+    # 大JSONはリポジトリの正規形(改行なし)で保存。
+    # pretty-print は数百万行の無意味な diff と中間失敗時の肥大化を生む。
+    atomic_json_dump(DATA+FINAL, combined)
+    print(f"  [{key}] 除去{removed} 追加{len(corrs)} → 書込完了")
+
+
+def process(key, write):
+    prepared=prepare_candidate(key)
     if write:
-        atomic_file_copy(lp(sp), lp(sp+".bak_preTier"+str(TIER)+"confirmed"))
-        atomic_json_dump(sp, settings, indent=1)
-        # 大JSONはリポジトリの正規形(改行なし)で保存。
-        # pretty-print は数百万行の無意味な diff と中間失敗時の肥大化を生む。
-        atomic_json_dump(DATA+FINAL, combined)
-        os.remove(lp(tmp))
-        print(f"  [{key}] 除去{removed} 追加{len(corrs)} → 書込完了")
+        write_prepared_candidate(prepared)
     else:
-        os.remove(lp(tmp)); print(f"  [{key}] 除去{removed} 追加{len(corrs)} (未書込)")
-    return combined
+        print(
+            f"  [{key}] 除去{prepared['removed']} 追加{len(corrs)} (未書込)"
+        )
+    return prepared['combined']
 
 
 if SETTINGS_AUDIT:
@@ -842,6 +987,33 @@ if not os.environ.get('SKIP_VERIFY'):
     for e in confirmed[:40]:
         full=''.join(p for p in e['target'].split('/') if p)
         print(f"    {full:20s} -> {segplain(full)}")
+    # ``combined`` is a full multi-million-rule payload.  A WRITE invocation
+    # subsequently holds three candidates until their cross-language gate has
+    # passed, so release this optional JP preview and its list aliases first.
+    del segplain, g_, l_, c_, combined
+    gc.collect()
 if WRITE:
-    process('ZH', True); process('KO', True); process('JP', True)
+    # Build all three payloads in memory first.  No settings or generated Ruby
+    # JSON is written until the frozen 58-row Phase 532 post-regen gate proves
+    # exact JA/ZH/KO signatures, including the dedicated multiword expression.
+    _prepared_candidates = {
+        key: prepare_candidate(key) for key in ('ZH', 'KO', 'JP')
+    }
+    if PHASE532_FORMAL:
+        _phase532_runtime_report = validate_generated_payloads({
+            'JA': _prepared_candidates['JP']['combined'],
+            'ZH': _prepared_candidates['ZH']['combined'],
+            'KO': _prepared_candidates['KO']['combined'],
+        }, 'post-regen')
+        print(
+            "[Phase 532 runtime gate] PASS: "
+            f"surfaces={_phase532_runtime_report['surfaces']} "
+            f"3lang_mismatch="
+            f"{_phase532_runtime_report['trilingual_mismatches']} "
+            f"signature_sha256="
+            f"{_phase532_runtime_report['signature_manifest_sha256']}",
+            flush=True,
+        )
+    for _key in ('ZH', 'KO', 'JP'):
+        write_prepared_candidate(_prepared_candidates[_key])
     print("\n3アプリ書込完了")

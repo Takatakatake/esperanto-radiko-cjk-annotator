@@ -27,9 +27,37 @@ import check_multilingual_structure as multilingual_structure
 import check_kanji_structure as kanji_structure
 import fix_ruby_postregen as postregen
 from gold_snapshot import consistent_snapshot
+import phase532_ruby_policy as phase532_policy
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
+
+
+def _phase532_scope_adopted():
+    scope = json.loads(
+        (HERE / "_no_worsening_scope_manifest.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    gold_sha256 = scope.get("expected", {}).get("gold", {}).get("sha256")
+    if gold_sha256 == phase532_policy.BASELINE_LEARNER_SHA256:
+        return False
+    if gold_sha256 == phase532_policy.CANDIDATE_LEARNER_SHA256:
+        return True
+    raise AssertionError(
+        f"unexpected no-worsening gold identity: {gold_sha256!r}"
+    )
+
+
+def _effective_managed_morph_targets():
+    phase532_surfaces = set(phase532_policy.managed_morph_targets())
+    return {
+        surface: spec
+        for surface, spec in corpus_data.MANAGED_MORPH_TARGETS.items()
+        if _phase532_scope_adopted() or surface not in phase532_surfaces
+    }
+
+
 FINAL_RUBY_RE = re.compile(
     r'<ruby>([^<]+)<rt class="[^"]+">((?:[^<]|<br>)*)</rt></ruby>',
     re.IGNORECASE,
@@ -827,6 +855,19 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertIn("--monitor-only", fast)
         self.assertIn("if mism:", fast)
 
+    def test_phase532_permission_gate_precedes_first_writer(self):
+        pipeline = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
+        pre_gate = "'--mode', 'pre-regen', '--deployed'"
+        first_writer = (
+            "'apply_corpus_word_anno.py'), '--write'"
+        )
+        self.assertEqual(pipeline.count(pre_gate), 1)
+        self.assertEqual(pipeline.count(first_writer), 1)
+        self.assertLess(
+            pipeline.index(pre_gate), pipeline.index(first_writer),
+            "Phase 532 permission gate must run before the first writer",
+        )
+
     def test_case_sensitive_bounded_phrase_runtime_padding(self):
         module = _runtime_module(ROOT / "Esperanto-Kanji-Ruby-JA", "phrase_padding")
         latin_ruby = '<ruby>Global Voices<rt class="S_S">entity</rt></ruby>'
@@ -1119,6 +1160,10 @@ class GenerationRuleTests(unittest.TestCase):
             "exact_only": True, "boundary_only": True, "corpus_managed": True,
         }])
         corpus_entries = [entry for entry in confirmed if entry.get("corpus_managed")]
+        phase532_managed_surfaces = set(
+            phase532_policy.managed_morph_targets()
+        )
+        effective_managed_morph_targets = _effective_managed_morph_targets()
         self.assertFalse(
             corpus_data.MANAGED_REMOVED_SURFACES & set(confirmed_words),
             "obsolete managed surfaces must not retain a competing pin",
@@ -1129,7 +1174,7 @@ class GenerationRuleTests(unittest.TestCase):
             + len(corpus_data.PRODUCTIVE_RUBY_LEFT_TARGETS)
             + len(corpus_data.COMPOSITIONAL_FAMILY_TARGETS)
             + len(corpus_data.KANJI_TRACK_PRODUCTIVE_TARGETS)
-            + len(corpus_data.MANAGED_MORPH_TARGETS)
+            + len(effective_managed_morph_targets)
             + len(corpus_data.MANAGED_TYPED_EXACT_TARGETS)
             + len(corpus_data.REVIEWED_TYPED_EXACT_TARGETS),
         )
@@ -1141,7 +1186,7 @@ class GenerationRuleTests(unittest.TestCase):
             if case_sensitive:
                 expected["case_sensitive"] = True
             self.assertIn(expected, corpus_entries)
-        for word, spec in corpus_data.MANAGED_MORPH_TARGETS.items():
+        for word, spec in effective_managed_morph_targets.items():
             expected = {
                 "w": word, "target": spec["target"], "corpus_managed": True,
             }
@@ -1156,6 +1201,12 @@ class GenerationRuleTests(unittest.TestCase):
             if spec.get("ruby_track_only"):
                 expected["ruby_track_only"] = True
             self.assertIn(expected, corpus_entries)
+        if not _phase532_scope_adopted():
+            self.assertFalse(
+                phase532_managed_surfaces
+                & {entry["w"] for entry in corpus_entries},
+                "pre-regen confirmed output must not contain the safe seven",
+            )
         for word, spec in corpus_data.MANAGED_TYPED_EXACT_TARGETS.items():
             expected = {
                 "w": word,
@@ -1258,10 +1309,14 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertEqual(payload["schema_version"], 1)
         self.assertEqual(payload["reference_schema_version"], 5)
         self.assertEqual(len(entries), payload["expected_entries"])
-        self.assertEqual(len(entries), 933)
+        self.assertEqual(len(entries), 932)
         self.assertEqual(
             hashlib.sha256(compact).hexdigest().upper(),
             payload["entries_sha256"],
+        )
+        self.assertEqual(
+            payload["entries_sha256"],
+            "CA736E47CEAC5F128FFB491A976C930C0B37895D498ECF7656A9AC17F2C3B017",
         )
         self.assertEqual(payload["gold_sha256"], scope["gold"]["sha256"])
         self.assertEqual(payload["reference_sha256"], scope["reference_sha256"])
@@ -1301,6 +1356,7 @@ class GenerationRuleTests(unittest.TestCase):
             "stakiozo": ("stakioz/o", "RL"),
         }
         by_surface = {entry["w"]: entry for entry in entries}
+        self.assertNotIn("lulu", by_surface)
         for surface, (target, roles) in newly_adjudicated.items():
             self.assertEqual(by_surface[surface]["target"], target)
             self.assertEqual(by_surface[surface]["typed_roles"], roles)
@@ -1430,10 +1486,12 @@ class GenerationRuleTests(unittest.TestCase):
             (HERE / "_no_worsening_scope_manifest.json")
             .read_text(encoding="utf-8")
         )["expected"]["gold"]["fake_coarse_transition"]
-        self.assertEqual(scope["evaluable_entries"], 157)
-        self.assertEqual(scope["historical_c679_b090"]["evaluable_entries"], 134)
+        self.assertEqual(scope["evaluable_entries"], 191)
+        self.assertEqual(scope["historical_c679_b090"]["evaluable_entries"], 133)
         self.assertEqual(scope["historical_c679_b090"]["superseded_lines"], [45205])
+        self.assertEqual(scope["historical_c679_b090"]["retired_lines"], [2704])
         self.assertEqual(scope["phase511_delta"]["evaluable_entries"], 21)
+        self.assertEqual(scope["phase532_delta"]["evaluable_entries"], 35)
 
     def test_indexed_exact_annotations_are_context_bounded_and_fail_closed(self):
         entry = next(
@@ -2139,7 +2197,7 @@ class DeployedRubyRegressionTests(unittest.TestCase):
         },
         **{
             surface: _target_decomposition(spec["target"])
-            for surface, spec in corpus_data.MANAGED_MORPH_TARGETS.items()
+            for surface, spec in _effective_managed_morph_targets().items()
         },
         **{
             row["surface"]: _manifest_decomposition(row)
@@ -2425,13 +2483,35 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     for entry in strict_payload["entries"]
                     if entry.get("ruby_track_only")
                 }
+                phase532_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in phase532_policy.managed_morph_targets().values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(phase532_ruby_track, {
+                    "neologism/em", "neologism/em/ul",
+                    "stenograf/ist/in",
+                })
+                expected_phase532_ruby_track = (
+                    phase532_ruby_track if _phase532_scope_adopted() else set()
+                )
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
-                    {"novjork/an", *strict_ruby_track},
+                    {
+                        "novjork/an", *strict_ruby_track,
+                        *expected_phase532_ruby_track,
+                    },
                 )
                 for row in ruby_track_rows:
                     if row[0] == "novjork/an":
                         self.assertIn("word_boundary", row[2])
+                        self.assertTrue(any(
+                            ending in row[2] for ending in _PARADIGM_ENDINGS
+                        ))
+                        continue
+                    if row[0] in expected_phase532_ruby_track:
+                        self.assertIn("word_boundary", row[2])
+                        self.assertIn("ruby_track_only", row[2])
                         self.assertTrue(any(
                             ending in row[2] for ending in _PARADIGM_ENDINGS
                         ))
@@ -2965,7 +3045,7 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         expected_signature,
                         f"{language} extended typed exact {row['surface']!r}",
                     )
-                for surface, spec in corpus_data.MANAGED_MORPH_TARGETS.items():
+                for surface, spec in _effective_managed_morph_targets().items():
                     self.assertEqual(
                         multilingual_structure.structural_signature(
                             rendered_by_word[surface]

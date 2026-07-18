@@ -17,7 +17,9 @@ from atomic_json import atomic_json_dump
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_MANIFEST = HERE / "_fake_coarse_transition_review.json"
-FULL_AUTHORITY_MANIFEST = HERE / "_fake_coarse_reference_manifest.json"
+FULL_AUTHORITY_MANIFEST = (
+    HERE / "_phase513_fake_coarse_reference_manifest.json"
+)
 SOURCE_CANDIDATE_SHA256 = (
     "0D62EA71A07499800AA49DAAEB8C9B9BA0D6870F3AF9D7158C249115D8BE34B3"
 )

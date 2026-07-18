@@ -7193,6 +7193,44 @@
   "corpus_managed": true
  },
  {
+  "w": "suprenglisi",
+  "target": "supr/e/n/glis/i",
+  "corpus_managed": true
+ },
+ {
+  "w": "lulu",
+  "target": "lul/u",
+  "corpus_managed": true
+ },
+ {
+  "w": "pasivaĵo",
+  "target": "pasiv/aĵ/o",
+  "corpus_managed": true
+ },
+ {
+  "w": "pasivigi",
+  "target": "pasiv/ig/i",
+  "corpus_managed": true
+ },
+ {
+  "w": "neologismemo",
+  "target": "neologism/em/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "neologismemulo",
+  "target": "neologism/em/ul/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "stenografistino",
+  "target": "stenograf/ist/in/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
   "w": "bonaero",
   "target": "bonaer/o",
   "corpus_managed": true,
