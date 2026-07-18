@@ -201,6 +201,15 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
 - resync_kanji_master.py      … 漢字正本の全面再同期(単独実行可)
 - audit_master_3lang_full_snapshot.py … 明示snapshot SHA・全行accounting・入力安定性を
   必須化した正式62K×3言語gate。正式一括生成はこれだけを使う。
+- audit_master_candidate_delta.py … 直前の正式全件報告と新しい固定snapshotの
+  runtime表層投影が完全同一の場合だけ、commitおよび実worktreeのruntime依存物を
+  拘束して描画結果を条件つきで継承し、変更された分解表層と新しい偽分解authorityを
+  3言語で再評価する候補専用監査。snapshot・台帳・実行依存物は解析開始前から
+  SHA-256で拘束し、出力先が入力snapshotやapp配下と重なる指定は拒否する。
+  旧正式報告はPython/pandas等の版を記録していないため、delta報告は
+  `complete_delta_proof=false`とし、昇格前には現環境で正式全件監査を必ず再実行する。
+  `candidate_only=true`・`promotion_gate=false`を固定し、正式全件監査の代用や
+  moving masterの自動昇格には使わない。
 - audit_master_3lang_fast.py  … moving absolute pathを読む`--monitor-only`高速診断。
   空白・約物等を除外するため正式証明には使用禁止。不一致時は非0終了する。
 

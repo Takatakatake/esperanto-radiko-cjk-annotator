@@ -349,6 +349,8 @@ def normalize_slash_decomposition(decomposition: str) -> str:
 def load_fake_coarse_authority(
     learner_raw: bytes, learner_text: str, academic_path: Path,
     expected_academic_sha256: str,
+    candidate_manifest_path: Path | None = None,
+    candidate_dispositions_path: Path | None = None,
 ):
     """Return all 3,382 fake-marked line authorities and staged scopes.
 
@@ -370,7 +372,21 @@ def load_fake_coarse_authority(
     if len(learner_lines) != len(academic_lines):
         raise ValueError("learner/academic line counts differ")
 
-    manifest_raw = FAKE_COARSE_MANIFEST.read_bytes()
+    candidate_mode = candidate_manifest_path is not None
+    if candidate_mode != (candidate_dispositions_path is not None):
+        raise ValueError(
+            "candidate fake-coarse manifest and transition dispositions "
+            "must be supplied together"
+        )
+    provenance_manifest_raw = FAKE_COARSE_MANIFEST.read_bytes()
+    provenance_manifest = json.loads(provenance_manifest_raw.decode("utf-8"))
+    if provenance_manifest.get("schema_version") != 1:
+        raise ValueError("unsupported provenance fake-coarse authority schema")
+    manifest_path = (
+        candidate_manifest_path.resolve()
+        if candidate_mode else FAKE_COARSE_MANIFEST
+    )
+    manifest_raw = manifest_path.read_bytes()
     manifest = json.loads(manifest_raw.decode("utf-8"))
     if manifest.get("schema_version") != 1:
         raise ValueError("unsupported fake-coarse authority schema")
@@ -381,6 +397,7 @@ def load_fake_coarse_authority(
     if sha256_bytes(serialized_entries) != manifest.get("entries_sha256"):
         raise ValueError("fake-coarse authority entry fingerprint mismatch")
     source_identity = manifest.get("sources", {})
+    provenance_source_identity = provenance_manifest.get("sources", {})
     for label, raw, lines in (
         ("learner", learner_raw, learner_lines),
         ("academic", academic_raw, academic_lines),
@@ -452,11 +469,11 @@ def load_fake_coarse_authority(
         != "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31"
         or ff33_transition.get("counts") != expected_ff33_counts
         or ff33_transition.get("source_fake_coarse_entries_sha256")
-        != manifest.get("entries_sha256")
+        != provenance_manifest.get("entries_sha256")
         or ff33_transition.get("sources", {}).get("learner")
-        != source_identity.get("learner")
+        != provenance_source_identity.get("learner")
         or ff33_transition.get("sources", {}).get("academic")
-        != source_identity.get("academic")
+        != provenance_source_identity.get("academic")
         or len(ff33_entries) != 1
     ):
         raise ValueError("FF33 fake-coarse transition entry fingerprint mismatch")
@@ -490,11 +507,11 @@ def load_fake_coarse_authority(
         or final_5e_transition.get("entries_sha256") != expected_final_5e_hash
         or final_5e_transition.get("counts") != expected_final_5e_counts
         or final_5e_transition.get("source_fake_coarse_entries_sha256")
-        != manifest.get("entries_sha256")
+        != provenance_manifest.get("entries_sha256")
         or final_5e_transition.get("sources", {}).get("learner")
-        != source_identity.get("learner")
+        != provenance_source_identity.get("learner")
         or final_5e_transition.get("sources", {}).get("academic")
-        != source_identity.get("academic")
+        != provenance_source_identity.get("academic")
         or len(final_5e_entries) != 1
     ):
         raise ValueError("5E fake-coarse transition entry fingerprint mismatch")
@@ -568,8 +585,9 @@ def load_fake_coarse_authority(
         or set(phase511_transition.get("sources", {})) != {"learner", "academic"}
         or phase511_transition.get("schema_version") != 2
         or phase511_transition.get("phase") != 511
-        or sha256_bytes(manifest_raw) != expected_phase511_source["sha256"]
-        or manifest.get("entries_sha256")
+        or sha256_bytes(provenance_manifest_raw)
+        != expected_phase511_source["sha256"]
+        or provenance_manifest.get("entries_sha256")
         != expected_phase511_source["entries_sha256"]
         or sha256_bytes(serialized_phase511) != expected_phase511_hash
         or phase511_transition.get("entries_sha256") != expected_phase511_hash
@@ -577,9 +595,9 @@ def load_fake_coarse_authority(
         or phase511_transition.get("source_fake_coarse_manifest")
         != expected_phase511_source
         or phase511_transition.get("sources", {}).get("learner")
-        != source_identity.get("learner")
+        != provenance_source_identity.get("learner")
         or phase511_transition.get("sources", {}).get("academic")
-        != source_identity.get("academic")
+        != provenance_source_identity.get("academic")
         or phase511_transition.get("supersedes")
         != expected_phase511_supersedes
         or len(phase511_entries) != 21
@@ -641,6 +659,124 @@ def load_fake_coarse_authority(
         or len(combined_transition_by_line) != 158
     ):
         raise ValueError("effective staged-transition scope count changed")
+
+    retired_transition_by_line = {}
+    candidate_disposition_identity = None
+    if candidate_mode:
+        dispositions_path = candidate_dispositions_path.resolve()
+        dispositions_raw = dispositions_path.read_bytes()
+        dispositions = json.loads(dispositions_raw.decode("utf-8"))
+        expected_disposition_sources = {
+            "learner_sha256": sha256_bytes(learner_raw),
+            "academic_sha256": academic_digest,
+            "candidate_manifest_sha256": sha256_bytes(manifest_raw),
+            "candidate_manifest_entries_sha256": manifest["entries_sha256"],
+        }
+        if (
+            set(dispositions) != {
+                "schema_version", "candidate_only", "source_phase",
+                "sources", "entries",
+            }
+            or dispositions.get("schema_version") != 1
+            or dispositions.get("candidate_only") is not True
+            or not isinstance(dispositions.get("source_phase"), int)
+            or dispositions.get("sources") != expected_disposition_sources
+            or not isinstance(dispositions.get("entries"), list)
+            or not dispositions["entries"]
+        ):
+            raise ValueError("invalid candidate transition dispositions")
+        for disposition in dispositions["entries"]:
+            line = disposition.get("learner_line")
+            previous = combined_transition_by_line.get(line)
+            if (
+                not isinstance(line, int)
+                or line in retired_transition_by_line
+                or previous is None
+                or disposition.get("surface") != previous.get("surface")
+                or disposition.get("previous_coarse_decomposition")
+                != previous.get("coarse_decomposition")
+                or disposition.get("status")
+                != "retired_fake_marker_transition_pending_review"
+                or disposition.get("decision") != "pending_review"
+            ):
+                raise ValueError(
+                    f"invalid candidate transition disposition at line {line!r}"
+                )
+            learner_line = learner_lines[line - 1]
+            academic_line = academic_lines[line - 1]
+            if (
+                audit.FAKE_MARKER_RE.search(learner_line)
+                or audit.FAKE_MARKER_RE.search(academic_line)
+            ):
+                raise ValueError(
+                    f"retired transition still has a fake marker at line {line}"
+                )
+            learner_decomposition = normalize_slash_decomposition(
+                strip_duplicate_metadata(
+                    learner_line.lstrip("\ufeff").split(":", 1)[0].strip()
+                )[0]
+            )
+            academic_decomposition = normalize_slash_decomposition(
+                strip_duplicate_metadata(
+                    academic_line.lstrip("\ufeff").split(":", 1)[0].strip()
+                )[0]
+            )
+            current_surface = audit.canonical(
+                learner_decomposition.replace("/", "")
+            )
+            if (
+                disposition.get("current_learner_decomposition")
+                != learner_decomposition
+                or disposition.get("current_academic_decomposition")
+                != academic_decomposition
+                or learner_decomposition != academic_decomposition
+                or disposition.get("surface") != current_surface
+            ):
+                raise ValueError(
+                    f"candidate transition disposition context drift at line {line}"
+                )
+            expected_scope = (
+                "phase511_supersession"
+                if line in phase511_transition_by_line
+                else "final_5e_delta"
+                if line in final_5e_transition_by_line
+                else "ff33_delta"
+                if line in ff33_transition_by_line
+                else "historical_c679_b090"
+            )
+            if disposition.get("previous_transition_scope") != expected_scope:
+                raise ValueError(
+                    f"candidate transition scope drift at line {line}"
+                )
+            retired_transition_by_line[line] = disposition
+        candidate_disposition_identity = {
+            "path": str(dispositions_path),
+            "sha256": sha256_bytes(dispositions_raw),
+            "source_phase": dispositions["source_phase"],
+            "entries": len(dispositions["entries"]),
+            "statuses": dict(collections.Counter(
+                row["status"] for row in dispositions["entries"]
+            )),
+        }
+
+    active_transition_by_line = {
+        line: entry for line, entry in combined_transition_by_line.items()
+        if line not in retired_transition_by_line
+    }
+    if len(active_transition_by_line) != (
+        len(combined_transition_by_line) - len(retired_transition_by_line)
+    ):
+        raise ValueError("candidate transition retirement accounting changed")
+    active_transition_scope_rows = collections.Counter()
+    for line in active_transition_by_line:
+        if line in phase511_transition_by_line:
+            active_transition_scope_rows["phase511_supersession"] += 1
+        elif line in final_5e_transition_by_line:
+            active_transition_scope_rows["final_5e_delta"] += 1
+        elif line in ff33_transition_by_line:
+            active_transition_scope_rows["ff33_delta"] += 1
+        else:
+            active_transition_scope_rows["historical_c679_b090"] += 1
 
     authority_rows = []
     used_entries = set()
@@ -728,7 +864,7 @@ def load_fake_coarse_authority(
         learner_surface = audit.canonical(learner_decomposition.replace("/", ""))
         if learner_surface.casefold() != surface.casefold():
             raise ValueError(f"fake-coarse learner surface drift at line {line_number}")
-        transition_entry = combined_transition_by_line.get(line_number)
+        transition_entry = active_transition_by_line.get(line_number)
         transition_scope = None
         if line_number in historical_effective_by_line:
             transition_scope = "historical_c679_b090"
@@ -769,10 +905,10 @@ def load_fake_coarse_authority(
             "unused fake-coarse manifest lines: "
             f"{sorted(set(entries_by_line) - used_entries)[:20]!r}"
         )
-    if used_transition != set(combined_transition_by_line):
+    if used_transition != set(active_transition_by_line):
         raise ValueError(
             "unused staged-transition lines: "
-            f"{sorted(set(combined_transition_by_line) - used_transition)[:20]!r}"
+            f"{sorted(set(active_transition_by_line) - used_transition)[:20]!r}"
         )
     if categories["unclassified_manifest_exclusion"]:
         raise ValueError(
@@ -795,10 +931,21 @@ def load_fake_coarse_authority(
             "lines": len(academic_lines),
         },
         "fake_coarse_manifest": {
-            "path": str(FAKE_COARSE_MANIFEST.relative_to(ROOT)),
+            "path": (
+                str(manifest_path.relative_to(ROOT))
+                if manifest_path.is_relative_to(ROOT)
+                else str(manifest_path)
+            ),
             "sha256": sha256_bytes(manifest_raw),
             "entries_sha256": manifest["entries_sha256"],
             "entries": len(manifest["entries"]),
+            "candidate_only": candidate_mode,
+            "provenance_manifest_path": str(
+                FAKE_COARSE_MANIFEST.relative_to(ROOT)
+            ),
+            "provenance_manifest_sha256": sha256_bytes(
+                provenance_manifest_raw
+            ),
         },
         "transition_manifests": {
             "historical_c679_b090": {
@@ -831,12 +978,16 @@ def load_fake_coarse_authority(
                 "supersedes": phase511_transition["supersedes"],
             },
             "combined_entries": len(combined_transition_by_line),
+            "active_entries": len(active_transition_by_line),
+            "active_scope_rows": dict(active_transition_scope_rows),
+            "retired_pending_entries": len(retired_transition_by_line),
             "historical_entries": len(transition_by_line),
             "historical_effective_entries": len(historical_effective_by_line),
             "ff33_entries": len(ff33_transition_by_line),
             "final_5e_entries": len(final_5e_transition_by_line),
             "phase511_entries": len(phase511_transition_by_line),
         },
+        "candidate_transition_dispositions": candidate_disposition_identity,
         "paired_invariant": dict(invariant),
         "coverage_categories": dict(categories),
     }
@@ -1279,6 +1430,20 @@ def parse_args(argv=None):
     parser.add_argument("--expected-academic-sha256", required=True)
     parser.add_argument("--expected-head", required=True)
     parser.add_argument(
+        "--candidate-fake-coarse-manifest", type=Path,
+        help=(
+            "External candidate-only coarse authority. Requires "
+            "--candidate-transition-dispositions; never promotes the report."
+        ),
+    )
+    parser.add_argument(
+        "--candidate-transition-dispositions", type=Path,
+        help=(
+            "Fail-closed ledger for reviewed historical transitions that the "
+            "candidate master retired or changed."
+        ),
+    )
+    parser.add_argument(
         "--enforce-all-fake-coarse", action="store_true",
         help=(
             "Fail on every fake-row coarse mismatch.  Without this flag the "
@@ -1302,6 +1467,11 @@ def parse_args(argv=None):
 def run(args):
     if args.batch_size <= 0:
         raise ValueError("--batch-size must be positive")
+    candidate_mode = args.candidate_fake_coarse_manifest is not None
+    if candidate_mode != (args.candidate_transition_dispositions is not None):
+        raise ValueError(
+            "candidate manifest and transition dispositions are both required"
+        )
     head_at_start = git_text("rev-parse", "HEAD")
     if head_at_start != args.expected_head:
         raise ValueError(f"app HEAD changed: {head_at_start} != {args.expected_head}")
@@ -1324,6 +1494,16 @@ def run(args):
         str(path.relative_to(ROOT)): sha256_file(path)
         for path in authority_manifest_paths
     }
+    candidate_files = (
+        (
+            args.candidate_fake_coarse_manifest.resolve(),
+            args.candidate_transition_dispositions.resolve(),
+        )
+        if candidate_mode else ()
+    )
+    candidate_file_hashes_at_start = {
+        str(path): sha256_file(path) for path in candidate_files
+    }
 
     (gold_raw, gold_text, records, exclusions, exclusion_rows,
      feature_counts, fast_counts) = parse_gold(
@@ -1332,6 +1512,8 @@ def run(args):
     fake_authority_rows, fake_authority_identity = load_fake_coarse_authority(
         gold_raw, gold_text, args.academic.resolve(),
         args.expected_academic_sha256,
+        args.candidate_fake_coarse_manifest,
+        args.candidate_transition_dispositions,
     )
     # Exact master surfaces retain spaces/punctuation/hyphens.  In parallel,
     # reproduce the legacy fast script's hyphen-stripped keys exactly.  Render
@@ -1580,20 +1762,22 @@ def run(args):
             str(path.relative_to(ROOT)): sha256_file(path)
             for path in authority_manifest_paths
         } == authority_manifest_hashes_at_start,
+        "candidate_files": {
+            str(path): sha256_file(path) for path in candidate_files
+        } == candidate_file_hashes_at_start,
     }
     fake_authority_all_assessed = all(
         row["counts"].get("rows", 0) == len(fake_authority_rows)
         for row in fake_authority_results
     )
-    expected_transition_scope_rows = {
-        "historical_c679_b090": 135,
-        "ff33_delta": 1,
-        "final_5e_delta": 1,
-        "phase511_supersession": 21,
-    }
+    expected_transition_scope_rows = dict(
+        fake_authority_identity["transition_manifests"]["active_scope_rows"]
+    )
+    expected_transition_rows = sum(expected_transition_scope_rows.values())
     fake_transition_gate = all(
-        row["counts"].get("transition_rows", 0) == 158
-        and row["counts"].get("transition_matched", 0) == 158
+        row["counts"].get("transition_rows", 0) == expected_transition_rows
+        and row["counts"].get("transition_matched", 0)
+        == expected_transition_rows
         and row["counts"].get("transition_mismatched", 0) == 0
         and {
             scope: counts.get("matched", 0)
@@ -1609,10 +1793,21 @@ def run(args):
         row["counts"].get("mismatched", 0) == 0
         for row in fake_authority_results
     )
+    runtime_gate = (
+        all_runtime_assessed
+        and fake_authority_all_assessed
+        and fake_transition_gate
+        and (fake_all_coarse_gate or not args.enforce_all_fake_coarse)
+        and not mismatches
+        and not token_mismatches
+        and issue_gate
+        and all(inputs_stable.values())
+    )
     report = {
         "schema_version": 1,
         "algorithm": {
             "id": "full-master-three-language-runtime-v1",
+            "batch_size": args.batch_size,
             "production_path": (
                 "runtime + committed user corrections + overlay autofix; no regeneration"
             ),
@@ -1654,20 +1849,19 @@ def run(args):
             "staged_transition_gate": fake_transition_gate,
             "staged_transition_expected_rows": {
                 **expected_transition_scope_rows,
-                "combined": 158,
+                "combined": expected_transition_rows,
+                "historical_total_before_candidate_dispositions": 158,
             },
             "all_fake_coarse_gate": fake_all_coarse_gate,
             "all_fake_coarse_enforced": args.enforce_all_fake_coarse,
             "languages": fake_authority_results,
             "staging_note": (
-                "Every fake-marked row remains in this line-keyed report. "
-                "The historical manifest remains frozen at 136 rows, with line "
-                "45205 superseded so that 135 historical rows, one FF33 lineage "
-                "delta, one final-5E delta, and twenty-one Phase 511 rows are "
-                "mandatory "
-                "until "
-                "the broader gloss/semantic queue is reviewed; use "
-                "--enforce-all-fake-coarse to promote the full queue to a gate."
+                "Every currently fake-marked row remains in this line-keyed "
+                "report. Historical transition manifests remain byte-frozen. "
+                "In candidate mode, an exact fail-closed disposition ledger may "
+                "move a retired marker transition to pending review; that makes "
+                "the report non-promotable. The broader gloss/semantic queue "
+                "remains unreviewed; --enforce-all-fake-coarse is not implied."
             ),
         },
         "accounting": {
@@ -1731,17 +1925,22 @@ def run(args):
         },
         "languages": language_results,
         "inputs_stable": inputs_stable,
+        "candidate_audit": {
+            "candidate_only": candidate_mode,
+            "source_phase": (
+                fake_authority_identity.get(
+                    "candidate_transition_dispositions"
+                ) or {}
+            ).get("source_phase"),
+            "runtime_gate": runtime_gate,
+            "promotion_gate": runtime_gate and not candidate_mode,
+            "retired_transition_pending_review": (
+                fake_authority_identity["transition_manifests"]
+                ["retired_pending_entries"]
+            ),
+        },
         "complete": all_runtime_assessed and fake_authority_all_assessed,
-        "gate": (
-            all_runtime_assessed
-            and fake_authority_all_assessed
-            and fake_transition_gate
-            and (fake_all_coarse_gate or not args.enforce_all_fake_coarse)
-            and not mismatches
-            and not token_mismatches
-            and issue_gate
-            and all(inputs_stable.values())
-        ),
+        "gate": runtime_gate and not candidate_mode,
         "interpretation": {
             "naked_fragments": (
                 "Not automatically a failure: terminal grammar is intentionally "
@@ -1763,6 +1962,7 @@ def main(argv=None):
     print(json.dumps({
         "report": str(args.report.resolve()),
         "gate": report["gate"],
+        "candidate_audit": report["candidate_audit"],
         "accounting": report["accounting"],
         "three_language_boundary": {
             key: value for key, value in report["three_language_boundary"].items()
