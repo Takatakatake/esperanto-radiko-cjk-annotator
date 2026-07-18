@@ -28,7 +28,7 @@ for key,vc in sorted(variants.items(),key=lambda x:-sum(x[1].values())):
     print(f"  [{key[:16]:16s}] {vs}"[:130])
     if found>=25: break
 print(f"揺れ総数: {sum(1 for k,v in variants.items() if len(v)>=2)}")
-# §3.5指名2ケース
-for key,target in [('たった今','たった<br>今'),('ある種の','ある<br>種の')]:
+# §3.5指名2ケース (ĵus統一先は2026-07-18に等分点原則側へ是正: たっ<br>た今)
+for key,target in [('たった今','たっ<br>た今'),('ある種の','ある<br>種の')]:
     vc=variants.get(key,{})
     print(f"指名ケース '{key}': {dict(vc)} → 統一先 '{target}'")
