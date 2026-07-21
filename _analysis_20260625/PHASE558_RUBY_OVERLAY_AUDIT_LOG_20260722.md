@@ -392,9 +392,12 @@ b769 clean cloneで再実行してPASSした値だけを採用した。
 
 ## 13. commit / push記録
 
-実装commit: 最終バッテリー後に記入する。
+実装commit: `adc2982ad8d7953cc364b2a7a2e278b1d87daafe`
+（tree `ba47c79fb02176ed364e3f03b769f33dfb04ba80`）。
 
-監査ログ確定commit: 本記録の最終化commit。
+監査ログ確定commit: 上記実装commitの直後に、本節の確定だけを独立commitとする。
 
-push: app origin/mainの先端が作業開始点から動いていないことを再確認してから、
-fast-forwardのみで行う。corpusは不一致0のため無変更とする。
+push前確認時点でapp origin/mainは作業開始点
+`dcfca809b711075788ee00b6323cdd2ea31618ff`のまま、corpus origin/mainは
+`e37337822cf31529ba50b8534227721e4ec39a38`かつcleanだった。appはこの記録の
+確定commitまでをfast-forwardのみでpushし、corpusは不一致0のため無変更とする。
