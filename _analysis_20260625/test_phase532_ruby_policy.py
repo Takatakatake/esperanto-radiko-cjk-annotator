@@ -312,7 +312,8 @@ class Phase532RubyPolicyTests(unittest.TestCase):
             encoding="utf-8"
         )
         self.assertIn("phase532_runtime_signature_gate.py", pipeline)
-        self.assertIn("'--mode', 'pre-regen', '--deployed'", pipeline)
+        self.assertIn('phase532_deployed_mode = "post-regen"', pipeline)
+        self.assertIn("'--mode', phase532_deployed_mode, '--deployed'", pipeline)
         self.assertIn("'--mode', 'post-regen', '--deployed'", pipeline)
         self.assertIn("build_phase532_authority_carry_forward.py", pipeline)
         self.assertIn("'--phase532-runtime-mode', 'post-regen'", pipeline)
@@ -323,7 +324,7 @@ class Phase532RubyPolicyTests(unittest.TestCase):
             "_phase532_runtime_report = validate_generated_payloads"
         )
         write_position = apply_source.index(
-            "write_prepared_candidate(_prepared_candidates[_key])"
+            "write_all_prepared_candidates(_prepared_candidates)"
         )
         self.assertLess(build_position, gate_position)
         self.assertLess(gate_position, write_position)

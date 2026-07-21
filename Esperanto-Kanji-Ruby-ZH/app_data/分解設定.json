@@ -26779,6 +26779,44 @@
   ]
  ],
  [
+  "kateĥism",
+  89000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase558-ruby:kateĥism",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "kateĥist",
+  89000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase558-ruby:kateĥist",
+   "ruby_track_only"
+  ]
+ ],
+ [
   "bonaer",
   69000,
   [
@@ -27762,6 +27800,39 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RL",
+   "ruby_only"
+  ]
+ ],
+ [
+  "magnetit/o",
+  99000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_only"
+  ]
+ ],
+ [
+  "Izrael/io",
+  89000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_only"
+  ]
+ ],
+ [
+  "tia/-/tia",
+  79000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RLR",
    "ruby_only"
   ]
  ],
@@ -41411,16 +41482,6 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:R"
-  ]
- ],
- [
-  "ti/a-/ti/a",
-  79000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RLRL"
   ]
  ],
  [

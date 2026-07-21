@@ -9,10 +9,12 @@ Usage: python apply_corpus_word_anno.py [--write]
 """
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 
-from atomic_json import atomic_json_dump
+from atomic_json import atomic_binary_copy, atomic_json_dump
+import build_word_anno_boundary_manifest as word_anno_boundary
 from build_fake_coarse_transition_app_review import (
     validate as validate_fake_coarse_transition_app_review,
 )
@@ -27,6 +29,15 @@ from build_fake_coarse_phase511_transition_review import (
 )
 from phase532_ruby_policy import managed_morph_targets
 from phase532_activation import activation_report
+from phase558_ruby_overlay import (
+    managed_morph_targets as phase558_managed_morph_targets,
+    morph_context_annotations as phase558_morph_context_annotations,
+    typed_context_glosses as phase558_typed_context_glosses,
+    typed_exact_targets as phase558_typed_exact_targets,
+)
+from phase558_ruby_overlay_activation import (
+    activation_report as phase558_activation_report,
+)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -34,6 +45,8 @@ OUT = ROOT / "_analysis_20260625" / "out"
 WRITE = "--write" in sys.argv
 PHASE532_ACTIVATION = activation_report()
 PHASE532_FORMAL = PHASE532_ACTIVATION["phase532_active"]
+PHASE558_ACTIVATION = phase558_activation_report()
+PHASE558_FORMAL = PHASE558_ACTIVATION["phase558_ruby_overlay_active"]
 FAKE_COARSE_APP_REVIEW_PATH = (
     ROOT / "_analysis_20260625" / "_fake_coarse_transition_app_review.json"
 )
@@ -695,6 +708,44 @@ for _fake_entry in (
             )
         TYPED_CONTEXT_GLOSSES[_fake_key] = dict(_fake_glosses)
 
+PHASE558_MORPH_CONTEXT_ANNOTATIONS = {
+    language: {} for language in ANNOTATIONS
+}
+if PHASE558_FORMAL:
+    for _phase558_key, _phase558_annotation in (
+        phase558_morph_context_annotations().items()
+    ):
+        _phase558_piece = _phase558_annotation["piece"]
+        _phase558_glosses = _phase558_annotation["glosses"]
+        if (
+            _phase558_key in ATOMIC_FAMILY_CONTEXT_KEYS.values()
+            or set(_phase558_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                f"invalid Phase 558 morph context annotation: {_phase558_key!r}"
+            )
+        for _phase558_language in ANNOTATIONS:
+            PHASE558_MORPH_CONTEXT_ANNOTATIONS[_phase558_language][
+                _phase558_key
+            ] = [[
+                _phase558_piece,
+                _phase558_glosses[_phase558_language],
+            ]]
+    for _phase558_typed_key, _phase558_glosses in (
+        phase558_typed_context_glosses().items()
+    ):
+        if (
+            _phase558_typed_key in TYPED_CONTEXT_GLOSSES
+            or set(_phase558_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                "invalid/duplicate Phase 558 typed annotation: "
+                f"{_phase558_typed_key!r}"
+            )
+        TYPED_CONTEXT_GLOSSES[_phase558_typed_key] = dict(
+            _phase558_glosses
+        )
+
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
 # Keep their localized glosses contextual: Andora in Andora-la-Velo is useful,
@@ -1057,6 +1108,18 @@ if _phase532_overlap:
 if PHASE532_FORMAL:
     MANAGED_MORPH_TARGETS.update(_phase532_managed_morph_targets)
 
+_phase558_managed_morph_targets = phase558_managed_morph_targets()
+_phase558_morph_overlap = set(MANAGED_MORPH_TARGETS) & set(
+    _phase558_managed_morph_targets
+)
+if _phase558_morph_overlap:
+    raise SystemExit(
+        "Phase 558 managed morphology duplicates an existing setting: "
+        f"{sorted(_phase558_morph_overlap)!r}"
+    )
+if PHASE558_FORMAL:
+    MANAGED_MORPH_TARGETS.update(_phase558_managed_morph_targets)
+
 for _family in ATOMIC_ROOT_FAMILY_REVIEW["families"]:
     for _target in _family["morph_targets"]:
         _surface = _target["surface"]
@@ -1162,6 +1225,25 @@ for _fake_entry in FAKE_COARSE_5E_ENTRIES:
         "ruby_only": True,
     }
     FAKE_COARSE_5E_TYPED_SURFACES.add(_fake_surface)
+
+PHASE558_TYPED_EXACT_SURFACES = set()
+_phase558_typed_exact_targets = phase558_typed_exact_targets()
+_phase558_typed_overlap = set(MANAGED_TYPED_EXACT_TARGETS) & set(
+    _phase558_typed_exact_targets
+)
+if _phase558_typed_overlap:
+    raise SystemExit(
+        "Phase 558 typed exact setting duplicates an existing setting: "
+        f"{sorted(_phase558_typed_overlap)!r}"
+    )
+if PHASE558_FORMAL:
+    for _phase558_surface, _phase558_spec in (
+        _phase558_typed_exact_targets.items()
+    ):
+        MANAGED_TYPED_EXACT_TARGETS[_phase558_surface] = dict(
+            _phase558_spec
+        )
+        PHASE558_TYPED_EXACT_SURFACES.add(_phase558_surface)
 
 REVIEWED_TYPED_EXACT_TARGETS = {}
 REVIEWED_TYPED_ANNOTATIONS = dict(REVIEWED_EXACT_MANIFEST["annotations"])
@@ -1272,7 +1354,60 @@ def targets(language):
     yield ROOT / f"Esperanto-Kanji-Ruby-{APP[language]}" / "app_data" / "word_anno.json"
 
 
+def transactional_json_writes(rows, *, replace=os.replace):
+    """Stage all annotation outputs before replacing any destination."""
+    staged = []
+    rollbacks = []
+    replaced = []
+    try:
+        for path, value, indent in rows:
+            destination = Path(path)
+            stage = destination.with_name(destination.name + ".phase558_staged")
+            rollback = destination.with_name(
+                destination.name + ".phase558_rollback"
+            )
+            if stage.exists() or rollback.exists():
+                raise ValueError(
+                    f"stale Phase 558 annotation transaction: {destination}"
+                )
+            # Register cleanup ownership before the writer can create a
+            # partial stage and then raise (disk-full/serialization faults).
+            staged.append((stage, destination))
+            atomic_json_dump(stage, value, indent=indent)
+            # The copy helper may likewise have installed its final rollback
+            # path before a post-copy validation error is raised.
+            rollbacks.append((rollback, destination))
+            atomic_binary_copy(destination, rollback)
+        for stage, destination in staged:
+            replace(stage, destination)
+            replaced.append(destination)
+    except Exception:
+        rollback_errors = []
+        for rollback, destination in rollbacks:
+            try:
+                if destination in replaced and rollback.exists():
+                    replace(rollback, destination)
+                elif rollback.exists():
+                    rollback.unlink()
+            except Exception as error:
+                rollback_errors.append((str(destination), repr(error)))
+        for stage, _destination in staged:
+            if stage.exists():
+                stage.unlink()
+        if rollback_errors:
+            raise RuntimeError(
+                f"Phase 558 annotation rollback failed: {rollback_errors!r}"
+            )
+        raise
+    else:
+        for rollback, _destination in rollbacks:
+            if rollback.exists():
+                rollback.unlink()
+
+
 def main():
+    pending_writes = []
+    pending_word_anno = {}
     for language, entries in ANNOTATIONS.items():
         target_paths = list(targets(language))
         # out/word_anno_*.json is the pipeline's canonical annotation master.
@@ -1287,6 +1422,11 @@ def main():
             if key.startswith("@typed:") and key not in desired_typed_keys:
                 del data[key]
             if (
+                key.startswith("@phase558-ruby:")
+                and key not in PHASE558_MORPH_CONTEXT_ANNOTATIONS[language]
+            ):
+                del data[key]
+            if (
                 key.startswith("@atomic-family:")
                 and key not in ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language]
             ):
@@ -1298,6 +1438,7 @@ def main():
                 continue
             data[root] = [[root, gloss]]
         data.update(ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language])
+        data.update(PHASE558_MORPH_CONTEXT_ANNOTATIONS[language])
         for key, pairs in SPLIT_CONTEXT_ANNOTATIONS[language].items():
             data[key] = pairs
         for (surface, index, piece), glosses in TYPED_CONTEXT_GLOSSES.items():
@@ -1317,8 +1458,12 @@ def main():
             data[root] = [[root, source_units[0][1]]]
         for path in target_paths:
             if WRITE:
-                atomic_json_dump(path, data)
-        print(f"[{language}] corpus atomic annotations: {len(entries)} ({'written' if WRITE else 'dry-run'})")
+                pending_writes.append((path, data, None))
+        pending_word_anno[language] = data
+        print(
+            f"[{language}] corpus atomic annotations: {len(entries)} "
+            f"({'prepared' if WRITE else 'dry-run'})"
+        )
 
     confirmed_path = OUT / "confirmed_tier30.json"
     confirmed = json.loads(confirmed_path.read_text(encoding="utf-8"))
@@ -1422,7 +1567,7 @@ def main():
             "reviewed_residual": True,
         })
     if WRITE:
-        atomic_json_dump(confirmed_path, confirmed, indent=1)
+        pending_writes.append((confirmed_path, confirmed, 1))
     print(
         "[confirmed] corpus rules: "
         f"exact={len(MANAGED_EXACT_TARGETS)} "
@@ -1433,8 +1578,23 @@ def main():
         f"typed={len(MANAGED_TYPED_EXACT_TARGETS)} "
         f"reviewed_typed={len(REVIEWED_TYPED_EXACT_TARGETS)} "
         f"removed={len(MANAGED_REMOVED_SURFACES)} "
-        f"({'written' if WRITE else 'dry-run'})"
+        f"({'prepared' if WRITE else 'dry-run'})"
     )
+    if WRITE:
+        candidate_boundary = word_anno_boundary.build(pending_word_anno)
+        expected_boundary = json.loads(
+            word_anno_boundary.DEFAULT_MANIFEST.read_text(encoding="utf-8")
+        )
+        if candidate_boundary != expected_boundary:
+            raise SystemExit(
+                "Phase 558 word_anno candidates violate the pinned "
+                "three-language boundary manifest before write"
+            )
+        transactional_json_writes(pending_writes)
+        print(
+            f"[Phase 558 annotation transaction] committed "
+            f"{len(pending_writes)} files"
+        )
 
 
 if __name__ == "__main__":

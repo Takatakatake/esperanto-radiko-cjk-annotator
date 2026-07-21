@@ -14,15 +14,18 @@ DEFAULT_MANIFEST = HERE / "_word_anno_boundary_scope_manifest.json"
 LANGUAGES = ("ja", "zh", "ko")
 
 
-def build():
-    maps = {
-        language: json.loads(
-            (HERE / "out" / f"word_anno_{language}.json").read_text(
-                encoding="utf-8"
+def build(maps=None):
+    if maps is None:
+        maps = {
+            language: json.loads(
+                (HERE / "out" / f"word_anno_{language}.json").read_text(
+                    encoding="utf-8"
+                )
             )
-        )
-        for language in LANGUAGES
-    }
+            for language in LANGUAGES
+        }
+    if set(maps) != set(LANGUAGES):
+        raise ValueError("word_anno candidate must contain exactly ja/zh/ko")
     key_union = set().union(*(set(mapping) for mapping in maps.values()))
     authority = {}
     for key in sorted(key_union):
@@ -43,7 +46,7 @@ def build():
         "schema_version": 1,
         "languages": list(LANGUAGES),
         "expected_key_counts": {
-            language: len(maps[language]) for language in LANGUAGES
+        language: len(maps[language]) for language in LANGUAGES
         },
         "authority_keys": len(authority),
         "authority_sha256": hashlib.sha256(serialized).hexdigest().upper(),

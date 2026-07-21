@@ -84,7 +84,14 @@ def localized_root_sets():
                     roots.add(row[0].strip())
         word_anno_path = HERE / "out" / f"word_anno_{language}.json"
         word_anno = load_json(word_anno_path)
-        roots.update(key for key in word_anno if not key.startswith("@typed:"))
+        # Context-only annotation namespaces are lookup metadata, not reusable
+        # localized roots.  Keep the historical @atomic-family treatment
+        # unchanged, but do not let the Phase 558 Ruby sidecar poison this
+        # frozen Phase 511 review's root-count identity after regeneration.
+        roots.update(
+            key for key in word_anno
+            if not key.startswith(("@typed:", "@phase558-ruby:"))
+        )
         result[language] = roots
         identities[language] = {
             "csv": csv_path.relative_to(ROOT).as_posix(),

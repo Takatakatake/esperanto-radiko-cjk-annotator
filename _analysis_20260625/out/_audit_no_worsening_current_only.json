@@ -5065,10 +5065,10 @@
      "gold_unmarked": {
       "total_weight": 52162,
       "total_cases": 52162,
-      "baseline_correct_weight": 52162,
-      "baseline_correct_cases": 52162,
-      "current_correct_weight": 52162,
-      "current_correct_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
       "regression_weight": 0,
       "regression_cases": 0,
       "improvement_weight": 0,
@@ -5102,10 +5102,10 @@
     "combined": {
      "total_weight": 323527,
      "total_cases": 74300,
-     "baseline_correct_weight": 323527,
-     "baseline_correct_cases": 74300,
-     "current_correct_weight": 323527,
-     "current_correct_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
      "regression_weight": 0,
      "regression_cases": 0,
      "improvement_weight": 0,
@@ -5113,20 +5113,115 @@
     },
     "regression_cases": [],
     "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
     "current_exact_required_wrong_cases": [],
     "weighted_worsening_sources": [],
-    "gate": true
+    "gate": false
    },
    "input_fingerprint": {
     "Esperanto-Kanji-Ruby-JA/main.py": "104A7797E453E62C2C2250A57A92B08C8004737A93755D003BE9019CA901C95B",
     "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
     "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
     "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
-    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "D4084D1F5F7600640A052D807F0B0CC194AC9B1415FE6A0741C1B9C455220185",
+    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
     "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5135,7 +5230,7 @@
     "Esperanto-Kanji-Ruby-JA/app_data/user_corrections.json": "D4956CE7C8AF5F958E604ACD2617A58018B58BB8ECACE3D05609E6BF45BDF6A8"
    },
    "input_stable": true,
-   "gate": true
+   "gate": false
   },
   {
    "language": "ZH",
@@ -5217,10 +5312,10 @@
      "gold_unmarked": {
       "total_weight": 52162,
       "total_cases": 52162,
-      "baseline_correct_weight": 52162,
-      "baseline_correct_cases": 52162,
-      "current_correct_weight": 52162,
-      "current_correct_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
       "regression_weight": 0,
       "regression_cases": 0,
       "improvement_weight": 0,
@@ -5254,10 +5349,10 @@
     "combined": {
      "total_weight": 323527,
      "total_cases": 74300,
-     "baseline_correct_weight": 323527,
-     "baseline_correct_cases": 74300,
-     "current_correct_weight": 323527,
-     "current_correct_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
      "regression_weight": 0,
      "regression_cases": 0,
      "improvement_weight": 0,
@@ -5265,20 +5360,115 @@
     },
     "regression_cases": [],
     "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
     "current_exact_required_wrong_cases": [],
     "weighted_worsening_sources": [],
-    "gate": true
+    "gate": false
    },
    "input_fingerprint": {
     "Esperanto-Kanji-Ruby-ZH/main.py": "8A73A5A148F416F583064A2ABB379D1E2485585D241C0B420595EF8CCF3D12B7",
     "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
     "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
-    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "7A94796288D2E7026ECC9F98CAF69C19EA1CD7DC6BF9E6B6D6F114DA4BB6D8B2",
+    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
     "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5287,7 +5477,7 @@
     "Esperanto-Kanji-Ruby-ZH/app_data/user_corrections.json": "A3D2B578D056B2AB5C46E0D00F7392891080F4672899D716C3854B93ABF38585"
    },
    "input_stable": true,
-   "gate": true
+   "gate": false
   },
   {
    "language": "KO",
@@ -5369,10 +5559,10 @@
      "gold_unmarked": {
       "total_weight": 52162,
       "total_cases": 52162,
-      "baseline_correct_weight": 52162,
-      "baseline_correct_cases": 52162,
-      "current_correct_weight": 52162,
-      "current_correct_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
       "regression_weight": 0,
       "regression_cases": 0,
       "improvement_weight": 0,
@@ -5406,10 +5596,10 @@
     "combined": {
      "total_weight": 323527,
      "total_cases": 74300,
-     "baseline_correct_weight": 323527,
-     "baseline_correct_cases": 74300,
-     "current_correct_weight": 323527,
-     "current_correct_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
      "regression_weight": 0,
      "regression_cases": 0,
      "improvement_weight": 0,
@@ -5417,20 +5607,115 @@
     },
     "regression_cases": [],
     "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
     "current_exact_required_wrong_cases": [],
     "weighted_worsening_sources": [],
-    "gate": true
+    "gate": false
    },
    "input_fingerprint": {
     "Esperanto-Kanji-Ruby-KO/main.py": "FF11E4A842D8D77CA0E7E76DE3008CB62D8E7044436E541C7AD01482E47AA437",
     "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
     "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
-    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "1BEBF7569880AFF255358C69238D16F3514CE859BBFE4CB964371D0317A83691",
+    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
     "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5439,7 +5724,7 @@
     "Esperanto-Kanji-Ruby-KO/app_data/user_corrections.json": "5377753038C41AD4E18DDB4784E2E9FEE214169F8075DDEA031CC679A7A7B558"
    },
    "input_stable": true,
-   "gate": true
+   "gate": false
   }
  ],
  "reference_projection": {
@@ -5681,9 +5966,9 @@
   "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6"
  },
  "reviewed_reference": {
-  "scope_manifest": "D:\\tmp\\codex_app_phase532_safe7_20260718\\_analysis_20260625\\_no_worsening_scope_manifest.json",
+  "scope_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_scope_manifest.json",
   "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
-  "conflict_manifest": "D:\\tmp\\codex_app_phase532_safe7_20260718\\_analysis_20260625\\_no_worsening_reference_conflicts.json",
+  "conflict_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_reference_conflicts.json",
   "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94",
   "reviewed_conflicts": 89,
   "contextual_multi_signature_conflicts": 50
@@ -5691,7 +5976,7 @@
  "checkpoint_context": {
   "checkpoint_schema_version": 2,
   "reference_schema_version": 5,
-  "head_oid": "06fdb7b31417d2750cabbd0d4b312c7ca33e657c",
+  "head_oid": "dcfca809b711075788ee00b6323cdd2ea31618ff",
   "raw_reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
   "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6",
   "surface_sha256": "CC3BAFBC6CD1558BF9BD3FCC680245819CA1C1059AE4AEE8BAAA0F64415576FE",
@@ -5700,7 +5985,7 @@
   "corpus_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
   "place_manifest_sha256": "54E1EF11A6FE8ED2D7AAE83AFCC7029D0FA39603F72FE30450EA24249F35A0C3",
   "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
-  "audit_code_sha256": "2D44E007115EDECE5627459A133D7BBAA76402B6350B1ABA4473B5FF3F100FA1",
+  "audit_code_sha256": "43FDC5AFEAD1F92DDF4D177D559FE411686443DA2D86665F912C82CE8018FEA3",
   "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
   "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94"
  },
@@ -5714,5 +5999,5 @@
   "app_inputs": true
  },
  "complete": true,
- "gate": true
+ "gate": false
 }

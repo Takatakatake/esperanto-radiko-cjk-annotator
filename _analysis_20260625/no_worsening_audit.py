@@ -49,7 +49,6 @@ sys.path.insert(0, str(HERE))
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
 from atomic_json import atomic_json_dump
 from gold_snapshot import consistent_snapshot
-from gen_replacement import load_app_replacement_helper
 import build_fake_coarse_phase511_transition_review as phase511_builder
 import build_phase532_authority_carry_forward as phase532_carry_builder
 import build_phase532_ruby_policy_review as phase532_builder
@@ -82,7 +81,7 @@ VISIBLE_TOKEN_RE = re.compile(rf"[{ESP_LETTERS}]+|[-']+", re.IGNORECASE)
 RAW_RUBY_OPEN_RE = re.compile(r"<ruby\b", re.IGNORECASE)
 RUBY_RE = re.compile(
     r"<ruby\b[^>]*>\s*(?P<rb>.*?)\s*"
-    r"<rt\b[^>]*>.*?</rt\s*>\s*</ruby\s*>",
+    r"<rt\b[^>]*>(?P<rt>.*?)</rt\s*>\s*</ruby\s*>",
     re.IGNORECASE | re.DOTALL,
 )
 FAKE_MARKER_RE = re.compile(r"##偽分解(?:\([^)]*\))?")
@@ -421,6 +420,27 @@ def rendered_typed_parts(rendered: str) -> list[tuple[str, bool]]:
             break
         parts.pop()
     return parts
+
+
+def rendered_ruby_annotations(rendered: str) -> list[dict[str, str]]:
+    """Return the exact visible ``rb``/``rt`` pairs in rendered order.
+
+    Boundary-only audits intentionally discard ``rt``.  Callers that license
+    annotation content can opt into this companion view without changing the
+    long-standing typed-signature representation.
+    """
+    annotations = []
+    for match in RUBY_RE.finditer(rendered):
+        rb = canonical(htmllib.unescape(
+            re.sub(r"<[^>]+>", "", match.group("rb"))
+        ))
+        rt = unicodedata.normalize("NFC", htmllib.unescape(
+            re.sub(r"<[^>]+>", "", match.group("rt"))
+        ))
+        rt = re.sub(r"\s+", " ", rt).strip()
+        if rb:
+            annotations.append({"rb": rb, "rt": rt})
+    return annotations
 
 
 def display_parts(parts: list[tuple[str, bool]]) -> str:
@@ -1864,6 +1884,19 @@ def git_head_oid():
     return completed.stdout.decode("ascii").strip()
 
 
+def git_revision_oid(revision):
+    completed = subprocess.run(
+        ["git", "rev-parse", "--verify", f"{revision}^{{commit}}"],
+        cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+    )
+    if completed.returncode:
+        raise ValueError(
+            "invalid baseline revision: "
+            + completed.stderr.decode("utf-8", errors="replace").strip()
+        )
+    return completed.stdout.decode("ascii").strip()
+
+
 def git_repo_state(repo: Path):
     def run(*args, binary=False):
         completed = subprocess.run(
@@ -1957,8 +1990,12 @@ def scope_projection(
     return projection
 
 
-def validate_reviewed_reference_scope(projection, conflicts):
-    scope_path = HERE / "_no_worsening_scope_manifest.json"
+def validate_reviewed_reference_scope(
+    projection, conflicts, *, scope_path=None,
+):
+    scope_path = Path(
+        scope_path or HERE / "_no_worsening_scope_manifest.json"
+    ).resolve()
     conflict_path = HERE / "_no_worsening_reference_conflicts.json"
     expected_scope = json.loads(scope_path.read_text(encoding="utf-8"))
     if expected_scope.get("manifest_schema_version") != 1:
@@ -2090,13 +2127,57 @@ def head_runtime_module(app_dir: Path, language: str, revision: str):
     return module
 
 
-def head_overlay_module(app_dir: Path, language: str, revision: str):
-    relative_path = app_dir.relative_to(ROOT) / "esp_overlay_module.py"
-    module = types.ModuleType(f"head_no_worsening_overlay_{language}")
-    module.__file__ = "HEAD:" + relative_path.as_posix()
-    source = load_head_text(relative_path, revision)
-    exec(compile(source, module.__file__, "exec"), module.__dict__)
-    return module
+def head_overlay_module(
+    app_dir: Path, language: str, revision: str, isolated_app_dir: Path,
+):
+    """Import the historical overlay from exact, real sibling files.
+
+    The deployed overlay resolves ``esp_replacement_json_make_module.py`` from
+    ``dirname(__file__)`` and intentionally catches automatic-repair failures.
+    Executing historical source under a synthetic ``HEAD:...`` filename made
+    that sibling path nonexistent; the swallowed import error then disabled
+    first-character autofix only in the comprehensive baseline.  Materialize
+    both code files from the pinned revision before importing the overlay so
+    its ``__file__`` and lazy helper resolution match a real checkout.
+    """
+    relative_app = app_dir.relative_to(ROOT)
+    isolated_app_dir = Path(isolated_app_dir)
+    isolated_app_dir.mkdir(parents=True, exist_ok=True)
+    fingerprints = {}
+    destinations = {}
+    for filename in (
+        "esp_overlay_module.py",
+        "esp_replacement_json_make_module.py",
+    ):
+        relative = relative_app / filename
+        raw = load_head_bytes(relative, revision)
+        destination = isolated_app_dir / filename
+        destination.write_bytes(raw)
+        if destination.read_bytes() != raw:
+            raise IOError(
+                f"failed to materialize HEAD overlay runtime: {relative}"
+            )
+        fingerprints[relative.as_posix()] = hashlib.sha256(raw).hexdigest().upper()
+        destinations[filename] = destination
+
+    overlay_path = destinations["esp_overlay_module.py"]
+    module_name = (
+        f"head_no_worsening_overlay_{language}_"
+        + hashlib.sha256(str(overlay_path).encode("utf-8")).hexdigest()[:12]
+    )
+    spec = importlib.util.spec_from_file_location(module_name, overlay_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"cannot import materialized HEAD overlay: {overlay_path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception:
+        sys.modules.pop(module_name, None)
+        raise
+    if Path(module.__file__).resolve() != overlay_path.resolve():
+        raise ImportError("materialized HEAD overlay has an unexpected __file__")
+    return module, fingerprints
 
 
 def extract_lists(payload):
@@ -2188,7 +2269,7 @@ def render_effective_text(
 def render_signatures(
     module, app_dir: Path, payload, surfaces, batch_size,
     placeholder_lists=None, overlay=None, corrections=None,
-    data_dir_override: Path | None = None,
+    data_dir_override: Path | None = None, *, include_annotations: bool = False,
 ):
     local_rules, global_rules, two_char_rules = extract_lists(payload)
     data_dir = (
@@ -2224,6 +2305,10 @@ def render_signatures(
                 "decomposition": display_parts(parts),
                 "typed_decomposition": display_typed_parts(parts),
             }
+            if include_annotations:
+                results[surface]["annotations"] = (
+                    rendered_ruby_annotations(line)
+                )
         print(
             f"    rendered {min(start + len(batch), len(surfaces))}/{len(surfaces)}",
             flush=True,
@@ -2303,10 +2388,6 @@ def current_app_fingerprint(app_dir):
     }
 
 
-def _semantic_text_bytes(raw: bytes) -> bytes:
-    return raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-
-
 def materialize_head_overlay_dependencies(
     app_dir, overlay, revision, isolated_data_dir,
 ):
@@ -2319,23 +2400,21 @@ def materialize_head_overlay_dependencies(
     copy their exact HEAD bytes into an isolated directory and point only the
     HEAD-overlay phase there.
 
-    The helper module imported lazily by the overlay remains code, not data. It
-    is therefore required to be semantically identical to HEAD; otherwise a
-    subprocess/import sandbox would be needed to reproduce it faithfully.
+    Historical overlay/helper code is independently materialized beside this
+    directory by :func:`head_overlay_module`; no working-tree code is used.
     """
-    current_data_dir = app_dir / "app_data"
-    ruby_csv = Path(overlay._ruby_csv(str(current_data_dir))).name
-    code_relative = (
-        app_dir.relative_to(ROOT) / "esp_replacement_json_make_module.py"
-    )
-    head_code = load_head_bytes(code_relative, revision)
-    current_code = (ROOT / code_relative).read_bytes()
-    if _semantic_text_bytes(head_code) != _semantic_text_bytes(current_code):
+    normalized_app_path = str(app_dir).lower().replace(os.sep, "/")
+    language_csv_matches = [
+        Path(filename).name
+        for tag, filename in overlay._LANG_CSV.items()
+        if tag in normalized_app_path
+    ]
+    if len(language_csv_matches) != 1:
         raise ValueError(
-            f"HEAD overlay code dependency differs in working tree: "
-            f"{code_relative}"
+            "historical overlay language CSV is not uniquely determined: "
+            f"{app_dir}: {language_csv_matches}"
         )
-
+    ruby_csv = language_csv_matches[0]
     data_relatives = [
         app_dir.relative_to(ROOT) / "app_data" / "char_widths.json",
         app_dir.relative_to(ROOT) / "app_data" / ruby_csv,
@@ -2344,9 +2423,6 @@ def materialize_head_overlay_dependencies(
     isolated_data_dir = Path(isolated_data_dir)
     isolated_data_dir.mkdir(parents=True, exist_ok=True)
     fingerprints = {}
-    fingerprints[code_relative.as_posix()] = hashlib.sha256(
-        _semantic_text_bytes(head_code)
-    ).hexdigest().upper()
     for relative in data_relatives:
         head_raw = load_head_bytes(relative, revision)
         destination = isolated_data_dir / relative.name
@@ -2354,7 +2430,7 @@ def materialize_head_overlay_dependencies(
         if destination.read_bytes() != head_raw:
             raise IOError(f"failed to materialize HEAD overlay data: {relative}")
         fingerprints[relative.as_posix()] = hashlib.sha256(
-            _semantic_text_bytes(head_raw)
+            head_raw
         ).hexdigest().upper()
     return fingerprints
 
@@ -2368,6 +2444,7 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
     current_override_wrong = []
     current_project_boundary_override_wrong = []
     current_exact_required_wrong = []
+    signature_changes = []
     expected_signatures_by_surface = collections.defaultdict(set)
     cases_by_surface = collections.defaultdict(list)
     for case in cases.values():
@@ -2376,6 +2453,23 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
     for surface in surfaces:
         old_result = baseline[surface]
         current_result = current[surface]
+        if (
+            label != "current_only"
+            and old_result["signature"] != current_result["signature"]
+        ):
+            signature_changes.append({
+                "surface": surface,
+                "baseline": old_result["decomposition"],
+                "baseline_typed": old_result["typed_decomposition"],
+                "baseline_signature": signature_payload(
+                    old_result["signature"]
+                ),
+                "current": current_result["decomposition"],
+                "current_typed": current_result["typed_decomposition"],
+                "current_signature": signature_payload(
+                    current_result["signature"]
+                ),
+            })
         old_surface_ok = (
             old_result["signature"] in expected_signatures_by_surface[surface]
         )
@@ -2558,6 +2652,11 @@ def compare_outputs(language, label, baseline, current, cases, surfaces):
         "current_exact_required_wrong_cases": current_exact_required_wrong,
         "weighted_worsening_sources": weighted_worsening,
     }
+    if label != "current_only":
+        # A full old->new audit must expose its entire observable delta so a
+        # separately reviewed sidecar can prove that no broad rule leaked.
+        # Current-only diagnostics deliberately keep their historical schema.
+        result["signature_changes"] = signature_changes
     result["gate"] = not any((
         regressions,
         changed_to_unreferenced_wrong,
@@ -2583,7 +2682,6 @@ def evaluate_language(
     current_module = runtime_module(app_dir, language)
     current_overlay = overlay_module(app_dir, language)
     historical_module = head_runtime_module(app_dir, language, revision)
-    historical_overlay = head_overlay_module(app_dir, language, revision)
     corrections_relative = (
         app_dir.relative_to(ROOT) / "app_data" / "user_corrections.json"
     )
@@ -2608,10 +2706,20 @@ def evaluate_language(
     with tempfile.TemporaryDirectory(
         prefix=f"no_worsening_head_overlay_{language.lower()}_"
     ) as temporary_directory:
-        isolated_head_data_dir = Path(temporary_directory) / "app_data"
-        head_overlay_dependencies = materialize_head_overlay_dependencies(
+        isolated_head_app_dir = (
+            Path(temporary_directory) / f"Esperanto-Kanji-Ruby-{language}"
+        )
+        historical_overlay, head_overlay_code = head_overlay_module(
+            app_dir, language, revision, isolated_head_app_dir,
+        )
+        isolated_head_data_dir = isolated_head_app_dir / "app_data"
+        head_overlay_data = materialize_head_overlay_dependencies(
             app_dir, historical_overlay, revision, isolated_head_data_dir,
         )
+        head_overlay_dependencies = {
+            **head_overlay_code,
+            **head_overlay_data,
+        }
 
         print(f"[{language}] HEAD data + current runtime rendering", flush=True)
         baseline_payload = load_head_payload(ruby_relative, revision)
@@ -2624,10 +2732,6 @@ def evaluate_language(
             input_fingerprint_before, checkpoint_context,
         )
         print(f"[{language}] HEAD data + HEAD runtime rendering", flush=True)
-        # The historical overlay imports its helper lazily under a generic
-        # module name.  Activate this language's exact sibling path before the
-        # render so a preceding JA/ZH/KO phase cannot leak its cached helper.
-        load_app_replacement_helper(app_dir)
         comprehensive_baseline = render_signatures(
             historical_module, app_dir, baseline_payload, surfaces, batch_size,
             placeholder_lists=head_placeholder_lists,
@@ -2820,6 +2924,20 @@ def main(argv=None):
         help="Render only current deployed inputs as a faster strict preflight.",
     )
     parser.add_argument(
+        "--scope-manifest", type=Path,
+        help=(
+            "Optional pinned reference-scope manifest. The default remains "
+            "the immutable parent manifest beside this script."
+        ),
+    )
+    parser.add_argument(
+        "--baseline-revision",
+        help=(
+            "Pinned historical app revision used for the old side of a full "
+            "audit. Defaults to the worktree HEAD captured at audit start."
+        ),
+    )
+    parser.add_argument(
         "--resume-language-results", action="store_true",
         help=(
             "Resume a partial full audit only after validating its exact "
@@ -2925,7 +3043,10 @@ def main(argv=None):
         "ESP_CORPUS_PATH",
         ROOT / "_project_root_misc" / "京大エス研html文書＿Github",
     ))
-    revision = git_head_oid()
+    worktree_head_at_start = git_head_oid()
+    revision = git_revision_oid(
+        args.baseline_revision or worktree_head_at_start
+    )
     audit_code_sha256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest().upper()
     place_path = HERE / "_place_alignment_manifest.json"
     place_sha256 = hashlib.sha256(place_path.read_bytes()).hexdigest().upper()
@@ -3042,7 +3163,7 @@ def main(argv=None):
         print(f"saved reference candidate: {candidate_path}", flush=True)
         return
     reviewed_reference, allowed_by_surface = validate_reviewed_reference_scope(
-        projection, conflicts
+        projection, conflicts, scope_path=args.scope_manifest,
     )
     resolved_cases = resolve_reviewed_reference_cases(
         cases, allowed_by_surface
@@ -3103,7 +3224,7 @@ def main(argv=None):
         diagnostic_corpus = corpus_content_fingerprint(corpus_root)
         diagnostic_stability = {
             "gold": diagnostic_gold_identity["sha256"] == scope["gold"]["sha256"],
-            "head": git_head_oid() == revision,
+            "head": git_head_oid() == worktree_head_at_start,
             "corpus": (
                 diagnostic_corpus["files"] == projection["corpus"]["files"]
                 and diagnostic_corpus["sha256"]
@@ -3241,7 +3362,7 @@ def main(argv=None):
     gold_source_matches_snapshot_at_end = (
         final_gold_sha256 == scope["gold"]["sha256"]
     )
-    head_stable_at_end = git_head_oid() == revision
+    head_stable_at_end = git_head_oid() == worktree_head_at_start
     corpus_at_end = corpus_content_fingerprint(corpus_root)
     corpus_repo_at_end = git_repo_state(corpus_root)
     corpus_stable_at_end = (
@@ -3282,6 +3403,8 @@ def main(argv=None):
         "languages": results,
         "requested_languages": args.languages,
         "head_oid": revision,
+        "worktree_head_oid_at_start": worktree_head_at_start,
+        "worktree_head_oid_at_end": git_head_oid(),
         "head_stable_at_end": head_stable_at_end,
         "reference_projection": projection,
         "resolved_reference": resolved_reference,

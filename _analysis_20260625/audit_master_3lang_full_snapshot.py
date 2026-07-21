@@ -29,10 +29,14 @@ sys.path.insert(0, str(HERE))
 from atomic_json import atomic_json_dump
 import build_phase532_authority_carry_forward as phase532_carry_builder
 import build_phase532_ruby_policy_review as phase532_builder
+import build_phase558_ruby_overlay_review as phase558_builder
 import no_worsening_audit as audit
 import phase532_authority_carry_forward as phase532_carry
 import phase532_ruby_policy as phase532_policy
 import phase532_runtime_signature_gate as phase532_runtime_gate
+import phase558_ruby_overlay as phase558_policy
+import phase558_ruby_overlay_activation as phase558_activation
+import phase558_ruby_overlay_runtime_gate as phase558_runtime_gate
 
 
 LANGUAGES = ("JA", "ZH", "KO")
@@ -73,6 +77,10 @@ CLASS_SCALE = {
     "XL_L": 0.7,
     "XXL_L": 0.8,
 }
+CSS_SCALE_RE = re.compile(
+    r"rt\.([A-Z_]+)\s*\{[^}]*?--ruby-font-size\s*:\s*([0-9.]+)em",
+    re.DOTALL,
+)
 TOP_LIMIT = 120
 LEGACY_HAT_MAP = {
     "c^": "ĉ", "g^": "ĝ", "h^": "ĥ", "j^": "ĵ", "s^": "ŝ", "u^": "ŭ",
@@ -93,6 +101,12 @@ FAKE_5E_TRANSITION_MANIFEST = (
 FAKE_PHASE511_TRANSITION_MANIFEST = (
     HERE / "_fake_coarse_phase511_transition_review.json"
 )
+PHASE558_FAKE_MANIFEST_SHA256 = (
+    "6C72C51EF8DB434E62D614D58CB5A9DB0D55352A642576BEC30B523C4F420D15"
+)
+PHASE558_TRANSITION_DISPOSITIONS_SHA256 = (
+    "35F1531BAC29B4842CED0F1F7E6FC1F5D588349FBF6A51D3BDCBA4EA533AF9A2"
+)
 ATOMIC_HYPHEN_REVIEW, _ATOMIC_HYPHEN_IDENTITY = audit.load_atomic_hyphen_review()
 
 
@@ -102,6 +116,22 @@ def sha256_bytes(raw: bytes) -> str:
 
 def sha256_file(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
+
+
+def deployed_css_class_scale(app_dir: Path) -> dict[str, float]:
+    runtime_path = app_dir / "esp_text_replacement_module.py"
+    observed = {
+        name: float(value)
+        for name, value in CSS_SCALE_RE.findall(
+            runtime_path.read_text(encoding="utf-8")
+        )
+    }
+    if observed != CLASS_SCALE:
+        raise ValueError(
+            f"deployed Ruby CSS scale mapping drift: {app_dir.name}: "
+            f"{observed!r}"
+        )
+    return observed
 
 
 def git_text(*args: str) -> str:
@@ -1156,6 +1186,7 @@ def render_language(language: str, surfaces: list[str], surface_records: dict,
     )
     char_width_path = data_dir / "char_widths.json"
     char_widths = json.loads(char_width_path.read_text(encoding="utf-8"))
+    css_class_scale = deployed_css_class_scale(app_dir)
 
     structural = {}
     issue_rows = {
@@ -1180,6 +1211,7 @@ def render_language(language: str, surfaces: list[str], surface_records: dict,
         "plain_gloss_over_2_unique": 0,
         "plain_gloss_over_2_line_weighted": 0,
         "missing_width_characters": collections.Counter(),
+        "unknown_rt_classes": collections.Counter(),
         "rt_class_unique": collections.Counter(),
         "rt_class_line_weighted": collections.Counter(),
         "br_count_unique": collections.Counter(),
@@ -1381,9 +1413,12 @@ def render_language(language: str, surfaces: list[str], surface_records: dict,
                 raw_width_ratio = rt_width / base_width if base_width else None
                 lines = rt_break_text.splitlines() or [rt_visible]
                 max_line_width = max((width(line) for line in lines), default=0.0)
-                scale = CLASS_SCALE.get(rt_class, 0.5)
+                scale = css_class_scale.get(rt_class)
+                if scale is None:
+                    ruby_stats["unknown_rt_classes"][rt_class] += weight
                 effective_width_ratio = (
-                    max_line_width * scale / base_width if base_width else None
+                    max_line_width * scale / base_width
+                    if base_width and scale is not None else None
                 )
                 for key, value in (
                     ("char_ratio", char_ratio),
@@ -1523,6 +1558,7 @@ def render_language(language: str, surfaces: list[str], surface_records: dict,
         "overlay_sha256": sha256_file(app_dir / "esp_overlay_module.py"),
         "payload_sha256": sha256_file(payload_path),
         "char_widths_sha256": sha256_file(char_width_path),
+        "css_class_scale": css_class_scale,
         "global_rules": len(global_rules),
         "localized_rules": len(local_rules),
         "two_char_rules": len(two_char_rules),
@@ -1588,6 +1624,18 @@ def parse_args(argv=None):
             "deployed safe-seven state, post-regen after formal regeneration."
         ),
     )
+    parser.add_argument("--phase558-candidate-dir", type=Path)
+    parser.add_argument("--phase558-ruby-disposition-ledger", type=Path)
+    parser.add_argument("--phase558-japanese-guide", type=Path)
+    parser.add_argument("--phase558-chinese-guide", type=Path)
+    parser.add_argument(
+        "--phase558-runtime-mode",
+        choices=phase558_runtime_gate.MODES,
+        help=(
+            "Enable the exact five-surface Phase 558 Ruby sidecar over its "
+            "Phase 532 parent. Formal promotion requires post-regen."
+        ),
+    )
     parser.add_argument(
         "--enforce-all-fake-coarse", action="store_true",
         help=(
@@ -1617,6 +1665,18 @@ def run(args):
         args.phase532_baseline_dir,
         args.phase532_candidate_dir,
     )
+    phase558_options = (
+        args.phase558_candidate_dir,
+        args.phase558_ruby_disposition_ledger,
+        args.phase558_japanese_guide,
+        args.phase558_chinese_guide,
+        args.phase558_runtime_mode,
+    )
+    phase558_enabled = any(value is not None for value in phase558_options)
+    if phase558_enabled and not all(
+        value is not None for value in phase558_options
+    ):
+        raise ValueError("all Phase 558 Ruby sidecar options are required")
     if any(path is not None for path in phase532_dirs) and not all(
         path is not None for path in phase532_dirs
     ):
@@ -1633,6 +1693,10 @@ def run(args):
         == phase532_policy.CANDIDATE_MANIFEST_SHA256
     )
     if phase532_enabled:
+        if phase558_enabled:
+            raise ValueError(
+                "Phase 558 sidecar requires its exact external candidate manifest"
+            )
         if args.candidate_transition_dispositions is not None:
             raise ValueError(
                 "Phase 532 retirement is owned by the exact Ruby policy"
@@ -1669,12 +1733,10 @@ def run(args):
         else:
             phase532_source_review = None
             phase532_carry_review = None
+        phase532_parent_reference_review = phase532_reference_review
+        phase558_source_review = None
+        phase558_activation_report = None
     else:
-        if (
-            any(path is not None for path in phase532_dirs)
-            or args.phase532_runtime_mode is not None
-        ):
-            raise ValueError("Phase 532 options require its exact manifest")
         if candidate_mode != (
             args.candidate_transition_dispositions is not None
         ):
@@ -1682,9 +1744,81 @@ def run(args):
                 "generic candidate manifest and transition dispositions "
                 "are both required"
             )
-        phase532_reference_review = None
-        phase532_source_review = None
-        phase532_carry_review = None
+        if phase558_enabled:
+            if (
+                not candidate_mode
+                or not all(path is not None for path in phase532_dirs)
+                or args.phase532_runtime_mode != "post-regen"
+                or args.phase558_runtime_mode != "post-regen"
+                or effective_manifest_sha256
+                != PHASE558_FAKE_MANIFEST_SHA256
+                or sha256_file(args.candidate_transition_dispositions.resolve())
+                != PHASE558_TRANSITION_DISPOSITIONS_SHA256
+                or args.expected_gold_sha256.upper()
+                != phase558_policy.EXPECTED_SOURCES[
+                    "phase558_learner"
+                ]["sha256"]
+                or args.expected_academic_sha256.upper()
+                != phase558_policy.EXPECTED_SOURCES[
+                    "phase558_academic"
+                ]["sha256"]
+            ):
+                raise ValueError("Phase 558 Ruby sidecar authority identity drift")
+            parent_manifest_path = FAKE_COARSE_MANIFEST.resolve()
+            phase532_parent_reference_review = (
+                audit.load_phase532_reference_review(parent_manifest_path)
+            )
+            phase532_source_review = phase532_builder.validate_frozen_closure(
+                args.phase532_baseline_dir,
+                args.phase532_candidate_dir,
+                parent_manifest_path,
+            )
+            phase532_carry_review = (
+                phase532_carry_builder.validate_frozen_closure(
+                    args.phase532_baseline_dir,
+                    args.phase532_candidate_dir,
+                    parent_manifest_path,
+                )
+            )
+            phase558_activation_report = phase558_activation.activation_report()
+            phase558_source_review = phase558_builder.validate_frozen_closure(
+                args.phase532_candidate_dir,
+                args.phase558_candidate_dir,
+                args.phase558_ruby_disposition_ledger,
+                args.phase558_japanese_guide,
+                args.phase558_chinese_guide,
+            )
+            if (
+                phase532_source_review["review_identity"]
+                != phase532_parent_reference_review["identity"]
+                or phase532_carry_review["review_identity"]
+                != phase532_carry.review_identity()
+                or phase558_source_review["review_identity"]
+                != phase558_policy.review_identity()
+                or phase558_activation_report.get(
+                    "phase558_ruby_overlay_active"
+                ) is not True
+                or phase558_activation_report["overlay_review"]
+                != phase558_policy.review_identity()
+            ):
+                raise ValueError("Phase 532/558 parent-sidecar closure differs")
+            # Generic Phase 558 fake authority remains report-only outside its
+            # staged reviewed transitions; it must not be reinterpreted as the
+            # exact Phase 532 fake-policy manifest.
+            phase532_reference_review = None
+        else:
+            if (
+                any(path is not None for path in phase532_dirs)
+                or args.phase532_runtime_mode is not None
+            ):
+                raise ValueError("Phase 532 options require its exact manifest")
+            phase532_reference_review = None
+            phase532_parent_reference_review = None
+            phase532_source_review = None
+            phase532_carry_review = None
+            phase558_source_review = None
+            phase558_activation_report = None
+    phase532_parent_enabled = phase532_enabled or phase558_enabled
     head_at_start = git_text("rev-parse", "HEAD")
     if head_at_start != args.expected_head:
         raise ValueError(f"app HEAD changed: {head_at_start} != {args.expected_head}")
@@ -1704,7 +1838,7 @@ def run(args):
         HERE / "_fake_coarse_project_boundary_review.json",
         HERE / "localized_atomic_root_families.json",
     ]
-    if phase532_enabled:
+    if phase532_parent_enabled:
         authority_manifest_paths.extend((
             phase532_policy.UNMARKED_REVIEW_PATH,
             phase532_policy.FAKE_TRANSITION_PATH,
@@ -1716,6 +1850,15 @@ def run(args):
             Path(phase532_carry_builder.__file__).resolve(),
             Path(audit.__file__).resolve(),
         ))
+    if phase558_enabled:
+        authority_manifest_paths.extend((
+            phase558_policy.REVIEW_PATH,
+            phase558_activation.ACTIVATION_PATH,
+            Path(phase558_policy.__file__).resolve(),
+            Path(phase558_activation.__file__).resolve(),
+            Path(phase558_runtime_gate.__file__).resolve(),
+            Path(phase558_builder.__file__).resolve(),
+        ))
     authority_manifest_hashes_at_start = {
         str(path.relative_to(ROOT)): sha256_file(path)
         for path in authority_manifest_paths
@@ -1725,6 +1868,12 @@ def run(args):
         candidate_files.append(args.candidate_fake_coarse_manifest.resolve())
     if args.candidate_transition_dispositions is not None:
         candidate_files.append(args.candidate_transition_dispositions.resolve())
+    if phase558_enabled:
+        candidate_files.extend((
+            args.phase558_ruby_disposition_ledger.resolve(),
+            args.phase558_japanese_guide.resolve(),
+            args.phase558_chinese_guide.resolve(),
+        ))
     candidate_file_hashes_at_start = {
         str(path): sha256_file(path) for path in candidate_files
     }
@@ -1745,7 +1894,14 @@ def run(args):
             phase532_runtime_gate.load_deployed_payloads(),
             args.phase532_runtime_mode,
         )
-        if phase532_enabled else None
+        if phase532_parent_enabled else None
+    )
+    phase558_signature_report = (
+        phase558_runtime_gate.validate_deployed_payloads(
+            args.phase558_runtime_mode,
+            batch_size=33,
+        )
+        if phase558_enabled else None
     )
     # Exact master surfaces retain spaces/punctuation/hyphens.  In parallel,
     # reproduce the legacy fast script's hyphen-stripped keys exactly.  Render
@@ -1998,36 +2154,55 @@ def run(args):
             str(path): sha256_file(path) for path in candidate_files
         } == candidate_file_hashes_at_start,
     }
-    if phase532_enabled:
+    if phase532_parent_enabled:
+        parent_manifest_at_end = (
+            effective_manifest_path if phase532_enabled
+            else FAKE_COARSE_MANIFEST.resolve()
+        )
         phase532_reference_at_end = audit.load_phase532_reference_review(
-            effective_manifest_path
+            parent_manifest_at_end
         )
         inputs_stable["phase532_policy"] = (
             phase532_reference_at_end["identity"]
-            == phase532_reference_review["identity"]
+            == phase532_parent_reference_review["identity"]
             and phase532_carry.review_identity()
             == phase532_carry_review["review_identity"]
             if phase532_carry_review is not None
             else phase532_reference_at_end["identity"]
-            == phase532_reference_review["identity"]
+            == phase532_parent_reference_review["identity"]
         )
         if phase532_source_review is not None:
             phase532_source_at_end = phase532_builder.validate_frozen_closure(
                 args.phase532_baseline_dir,
                 args.phase532_candidate_dir,
-                effective_manifest_path,
+                parent_manifest_at_end,
             )
             phase532_carry_at_end = (
                 phase532_carry_builder.validate_frozen_closure(
                     args.phase532_baseline_dir,
                     args.phase532_candidate_dir,
-                    effective_manifest_path,
+                    parent_manifest_at_end,
                 )
             )
             inputs_stable["phase532_frozen_closure"] = (
                 phase532_source_at_end == phase532_source_review
                 and phase532_carry_at_end == phase532_carry_review
             )
+    if phase558_enabled:
+        phase558_source_at_end = phase558_builder.validate_frozen_closure(
+            args.phase532_candidate_dir,
+            args.phase558_candidate_dir,
+            args.phase558_ruby_disposition_ledger,
+            args.phase558_japanese_guide,
+            args.phase558_chinese_guide,
+        )
+        phase558_activation_at_end = phase558_activation.activation_report()
+        inputs_stable["phase558_ruby_overlay"] = (
+            phase558_source_at_end == phase558_source_review
+            and phase558_activation_at_end == phase558_activation_report
+            and phase558_policy.review_identity()
+            == phase558_source_review["review_identity"]
+        )
     fake_authority_all_assessed = all(
         row["counts"].get("rows", 0) == len(fake_authority_rows)
         for row in fake_authority_results
@@ -2055,6 +2230,15 @@ def run(args):
         row["counts"].get("mismatched", 0) == 0
         for row in fake_authority_results
     )
+    width_gate = all(
+        not row["ruby_length_audit"]["missing_width_characters"]
+        and not row["ruby_length_audit"]["unknown_rt_classes"]
+        and (
+            row["ruby_length_audit"]["max_effective_width_ratio"] is None
+            or row["ruby_length_audit"]["max_effective_width_ratio"] <= 2
+        )
+        for row in language_results
+    )
     runtime_gate = (
         all_runtime_assessed
         and fake_authority_all_assessed
@@ -2063,11 +2247,32 @@ def run(args):
             phase532_signature_report is None
             or phase532_signature_report["gate"]
         )
+        and (
+            phase558_signature_report is None
+            or (
+                phase558_signature_report["gate"]
+                and phase558_signature_report["scope_guard_gate"]
+                and phase558_signature_report["payload_variant_gate"]
+                and phase558_signature_report["payload_gloss_gate"]
+                and phase558_signature_report[
+                    "deployed_snapshot_revalidated"
+                ]
+            )
+        )
         and (fake_all_coarse_gate or not args.enforce_all_fake_coarse)
         and not mismatches
         and not token_mismatches
         and issue_gate
+        and width_gate
         and all(inputs_stable.values())
+    )
+    ruby_overlay_adoption_authorized = not candidate_mode or phase558_enabled
+    master_candidate_promotion_authorized = (
+        not candidate_mode
+        or (
+            phase558_enabled
+            and phase558_source_review["master_candidate_promotion_gate"]
+        )
     )
     report = {
         "schema_version": 1,
@@ -2120,14 +2325,23 @@ def run(args):
             },
             "all_fake_coarse_gate": fake_all_coarse_gate,
             "all_fake_coarse_enforced": args.enforce_all_fake_coarse,
+            "effective_ruby_width_within_2x": width_gate,
             "languages": fake_authority_results,
             **({
-                "phase532_ruby_policy": phase532_reference_review["identity"],
+                "phase532_ruby_policy": (
+                    phase532_parent_reference_review["identity"]
+                ),
                 "phase532_authority_carry_forward": (
                     phase532_carry.review_identity()
                 ),
                 "phase532_runtime_signature_gate": phase532_signature_report,
-            } if phase532_enabled else {}),
+            } if phase532_parent_enabled else {}),
+            **({
+                "phase558_ruby_overlay": phase558_policy.review_identity(),
+                "phase558_activation": phase558_activation_report,
+                "phase558_frozen_closure": phase558_source_review,
+                "phase558_runtime_signature_gate": phase558_signature_report,
+            } if phase558_enabled else {}),
             "staging_note": (
                 "Every currently fake-marked row remains in this line-keyed "
                 "report. Historical transition manifests remain byte-frozen. "
@@ -2206,26 +2420,56 @@ def run(args):
                 ) or {}
             ).get("source_phase"),
             "runtime_gate": runtime_gate,
-            "promotion_gate": runtime_gate and not candidate_mode,
+            "promotion_gate": (
+                runtime_gate and master_candidate_promotion_authorized
+            ),
+            "master_candidate_promotion_authorized": (
+                master_candidate_promotion_authorized
+            ),
+            "master_candidate_promotion_blockers": (
+                phase558_source_review[
+                    "master_candidate_promotion_blockers"
+                ] if phase558_enabled else []
+            ),
+            "ruby_overlay_adoption_gate": (
+                runtime_gate and ruby_overlay_adoption_authorized
+            ),
             "retired_transition_pending_review": (
                 fake_authority_identity["transition_manifests"]
                 ["retired_pending_entries"]
             ),
-            "phase532_policy_active": phase532_enabled,
+            "phase532_policy_active": phase532_parent_enabled,
             "phase532_runtime_mode": (
-                args.phase532_runtime_mode if phase532_enabled else None
+                args.phase532_runtime_mode if phase532_parent_enabled else None
+            ),
+            "phase558_ruby_overlay_active": phase558_enabled,
+            "phase558_runtime_mode": (
+                args.phase558_runtime_mode if phase558_enabled else None
+            ),
+            "ruby_overlay_adoption_authorized_by_closed_phase558_sidecar": (
+                candidate_mode and phase558_enabled
             ),
         },
         "complete": all_runtime_assessed and fake_authority_all_assessed,
-        "gate": runtime_gate and not candidate_mode,
+        # Top-level gate describes the deployed Ruby runtime and its exact
+        # sidecar. It intentionally does not promote the broader Phase 558
+        # moving-master candidate; see candidate_audit.promotion_gate.
+        "gate": runtime_gate and ruby_overlay_adoption_authorized,
         "interpretation": {
             "naked_fragments": (
                 "Not automatically a failure: terminal grammar is intentionally "
                 "literal. Lexical/nonterminal rows are separated as review candidates."
             ),
             "ruby_length": (
-                "Ratios above 2 are review indicators, not boundary errors. "
-                "Annotation-like rows are separated heuristically from plain glosses."
+                "Raw text-width ratios above 2 remain review indicators; the "
+                "CSS-scaled maximum-line ratio must stay at or below 2 and all "
+                "width characters must be known. Width never changes boundaries."
+            ),
+            "candidate_promotion": (
+                "The five-surface Ruby overlay may pass independently while "
+                "the broader master candidate remains blocked by its disposition "
+                "ledger. Top-level gate must not be read as full-master semantic "
+                "promotion."
             ),
         },
     }

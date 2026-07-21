@@ -1,0 +1,320 @@
+{
+ "schema_version": 2,
+ "phase_from": 532,
+ "phase_to": 558,
+ "policy": "Evaluate the immutable Phase 532 no-worsening authority first, then accept only the closed five-surface Phase 558 Ruby overlay. Three coarse fusions are closed by the immutable parent fake/coarse authority and the deployed runtime closure over all five adjudicated rows and 63 expanded forms; they are not claimed as changes in the full historical reference, where those three surfaces are absent. Two reviewed replacements supersede exactly one old current-only expectation each and are the only full-reference signature changes. An old signature is predecessor evidence, never an alternative current allowance.",
+ "parent_authority": {
+  "app_head_oid": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+  "scope_manifest": {
+   "path": "_no_worsening_scope_manifest.json",
+   "bytes": 10354,
+   "sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215"
+  },
+  "strict_reference": {
+   "path": "_strict_gold_reference_fixes.json",
+   "bytes": 117394,
+   "sha256": "ABE0DC0FEBE4ADB3704CF80C595260BA0899D54864D9D34EEEF8DF68421FCF84"
+  },
+  "fake_coarse_reference": {
+   "path": "_fake_coarse_reference_manifest.json",
+   "bytes": 988365,
+   "sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060"
+  },
+  "phase558_overlay_review": {
+   "path": "_phase558_ruby_overlay_review.json",
+   "bytes": 6994,
+   "sha256": "90A8070F4BE8CEB97F4B08A6119F68C69BE6D281C2E358F0529E2D353CAEFD26",
+   "entries_sha256": "614C9FBF7435583A64FB8CD673D461FD5E9065589063978B7CEAAEB992EFE67C"
+  }
+ },
+ "audit_contract": {
+  "kind": "current_only",
+  "required_languages": [
+   "JA",
+   "ZH",
+   "KO"
+  ],
+  "required_input_stability": [
+   "gold",
+   "head",
+   "corpus",
+   "place_manifest",
+   "audit_code",
+   "review_manifests",
+   "app_inputs"
+  ],
+  "required_comparison_keys": [
+   "comparison",
+   "sources",
+   "combined",
+   "regression_cases",
+   "changed_to_unreferenced_wrong_surfaces",
+   "current_unreferenced_wrong_surfaces",
+   "current_place_manifest_wrong_cases",
+   "current_official_override_wrong_cases",
+   "current_project_ruby_boundary_override_wrong_cases",
+   "current_exact_required_wrong_cases",
+   "weighted_worsening_sources",
+   "gate"
+  ],
+  "always_empty_findings": [
+   "regression_cases",
+   "changed_to_unreferenced_wrong_surfaces",
+   "current_place_manifest_wrong_cases",
+   "current_official_override_wrong_cases",
+   "current_project_ruby_boundary_override_wrong_cases",
+   "weighted_worsening_sources"
+  ],
+  "candidate_runtime_mode": "post-regen",
+  "candidate_signature_manifest_sha256": "F2C589D6F2C0A4F57A1374CD68C727D618F9AC17D6C01A6B18177658974714CA",
+ "candidate_scope_guard_surfaces": 28,
+ "candidate_scope_guard_signature_manifest_sha256": "E9F63E8AF863F99434F446CE1A3E251DFCB6CA20794502D24285CB3D5101BAD4"
+ },
+ "full_audit_contract": {
+  "kind": "full_old_to_new",
+  "baseline_revision": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+    "worktree_head_policy": "stable_not_baseline_pinned",
+    "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
+    "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94",
+    "reference_projection": {
+   "raw_cases": 68524,
+   "surfaces": 68435,
+   "raw_reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+   "resolved_cases": 68485,
+   "resolved_reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6",
+   "surface_sha256": "CC3BAFBC6CD1558BF9BD3FCC680245819CA1C1059AE4AEE8BAAA0F64415576FE",
+   "corpus_head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "corpus_content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
+   "corpus_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "required_languages": [
+   "JA",
+   "ZH",
+   "KO"
+  ],
+  "required_comparisons": [
+   "data_isolated",
+   "comprehensive"
+  ],
+  "required_signature_change_surfaces": [
+   "Izraelio",
+   "tia-tia"
+  ],
+  "expected_combined_delta": {
+   "regression_cases": 2,
+   "improvement_cases": 0,
+   "current_minus_baseline_correct_cases": -2
+  },
+  "expected_source_deltas": {
+   "gold_unmarked": {
+    "regression_cases": 2,
+    "improvement_cases": 0,
+    "current_minus_baseline_correct_cases": -2
+   }
+  },
+  "expected_weighted_worsening_sources": [
+   "gold_unmarked",
+   "combined"
+  ],
+  "assumptions": [
+   "The full old-to-new reference projection contains only Izraelio and tia-tia among the five adjudicated Phase 558 source rows; therefore only those two may appear in full-audit signature_changes.",
+   "kateĥismo, kateĥisto, and magnetito are absent from the 68,435-surface full reference projection and are not claimed as full-reference improvements.",
+   "All five adjudicated source rows and their 63 expanded payload forms are proved separately by the deployed runtime closure (two productive rules x ten endings x three case variants plus three exact forms), with identical JA/ZH/KO boundaries required.",
+   "This contract is based on the fresh partial JA audit and the repaired HEAD-overlay harness; no completed JA/ZH/KO full-audit pass is claimed until the full audit finishes and satisfies this fail-closed contract."
+  ]
+ },
+ "current_e373_contract": {
+  "kind": "current_e373",
+  "scope_manifest": {
+   "path": "_phase558_current_corpus_scope_manifest.json",
+   "bytes": 10351,
+   "sha256": "AA293B609B91A12E38D77AAD6F3C3E02EF033CE762E9FF91B6A547B4A91AC9E2"
+  },
+  "worktree_head_policy": "stable_not_parent_pinned",
+  "corpus": {
+   "head_oid": "e37337822cf31529ba50b8534227721e4ec39a38",
+   "content_sha256": "9AC90579B5A935FCDF432BB0CC37CA6D6A0131A5049CFD4215B69FC7F6C369C6",
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "files": 169,
+   "html_weight": 271065
+  },
+  "reference_projection": {
+   "projection_sha256": "C5CAB61A2940E52D1BDDD83692EB989C438435C2F694E6B391083B6DD6C154AE",
+   "raw_cases": 68518,
+   "surfaces": 68429,
+   "raw_reference_sha256": "2A27673CF092CF25779F7C063A3B45770CB158BF3A0CC5D799C5428780BBE6E3",
+   "reference_conflicts": 89,
+   "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
+   "resolved_cases": 68479,
+   "resolved_reference_sha256": "15FBD64AC965844E37F07B41A5885087DECF330860A90A6CE0423B6128A51E28",
+   "surface_sha256": "434159C8552E876142BBBE0369A4F86FCF5E7F020EA77E74F02E65236F24B64A"
+  },
+  "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94",
+  "required_html_source": "html_corpus",
+  "required_current_wrong_surfaces": [
+   "Izraelio",
+   "tia-tia"
+  ]
+ },
+ "statistics_contract": {
+  "required_sources": [
+   "gold_fake_coarse_paired_academic",
+   "gold_fake_coarse_pejvo_original",
+   "gold_fake_coarse_project_reviewed_override",
+   "gold_official_override",
+   "gold_phase532_selected_ruby_policy",
+   "gold_project_ruby_boundary_override",
+   "gold_unmarked",
+   "html_corpus",
+   "html_place_manifest"
+  ],
+  "stat_keys": [
+   "baseline_correct_cases",
+   "baseline_correct_weight",
+   "current_correct_cases",
+   "current_correct_weight",
+   "improvement_cases",
+   "improvement_weight",
+   "regression_cases",
+   "regression_weight",
+   "total_cases",
+   "total_weight"
+  ],
+  "profiles": {
+   "parent-current": {
+    "comparison": "current_only",
+    "source_statistics_sha256": "69CB63BA1C59E90909BB3D84752FC69F9B9B4D7DD45C64D11EF78FBB5FC5FE41",
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 0,
+     "regression_cases": 0,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    }
+   },
+   "full-data-isolated": {
+    "comparison": "data_isolated",
+    "source_statistics_sha256": "8F6E8ECC69B11CEE45B08B0F00A963282F2004C59863C7F6079FF12D3923F685",
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    }
+   },
+   "full-comprehensive": {
+    "comparison": "comprehensive",
+    "source_statistics_sha256": "8F6E8ECC69B11CEE45B08B0F00A963282F2004C59863C7F6079FF12D3923F685",
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    }
+   },
+   "current-e373": {
+    "comparison": "current_only",
+    "source_statistics_sha256": "8A67A8E38E47B63839BD557AD124BC44796C73E83E11428029B5CC58E16AF0D1",
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74295,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74293,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74293,
+     "regression_weight": 0,
+     "regression_cases": 0,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    }
+   }
+  }
+ },
+ "expected_counts": {
+  "entries": 5,
+  "reference_alignment_improvement": 3,
+  "reviewed_expectation_replacement": 2,
+  "allowed_current_wrong_surfaces": 2,
+  "languages": 3
+ },
+ "entries_sha256": "161466E60AC09FA4848657710191F1237FF1A214ACAF11F777681AF43E2C464F",
+ "entries": [
+  {
+   "surface": "kateĥismo",
+   "disposition": "reference_alignment_improvement",
+   "old_decomposition": "kateĥ/ism/o",
+   "old_typed": "R:kateĥ|R:ism|L:o",
+   "new_decomposition": "kateĥism/o",
+   "new_typed": "R:kateĥism|L:o",
+   "new_is_only_current_allowance": true,
+   "expected_current_wrong_buckets": []
+  },
+  {
+   "surface": "kateĥisto",
+   "disposition": "reference_alignment_improvement",
+   "old_decomposition": "kateĥ/ist/o",
+   "old_typed": "R:kateĥ|R:ist|L:o",
+   "new_decomposition": "kateĥist/o",
+   "new_typed": "R:kateĥist|L:o",
+   "new_is_only_current_allowance": true,
+   "expected_current_wrong_buckets": []
+  },
+  {
+   "surface": "magnetito",
+   "disposition": "reference_alignment_improvement",
+   "old_decomposition": "magnet/it/o",
+   "old_typed": "R:magnet|R:it|L:o",
+   "new_decomposition": "magnetit/o",
+   "new_typed": "R:magnetit|L:o",
+   "new_is_only_current_allowance": true,
+   "expected_current_wrong_buckets": []
+  },
+  {
+   "surface": "Izraelio",
+   "disposition": "reviewed_expectation_replacement",
+   "old_decomposition": "Izraeli/o",
+   "old_typed": "R:Izraeli|L:o",
+   "new_decomposition": "Izrael/io",
+   "new_typed": "R:Izrael|L:io",
+   "new_is_only_current_allowance": true,
+   "required_reference_sources": [
+    "gold_unmarked"
+   ],
+   "expected_current_wrong_buckets": [
+    "current_unreferenced_wrong_surfaces"
+   ]
+  },
+  {
+   "surface": "tia-tia",
+   "disposition": "reviewed_expectation_replacement",
+   "old_decomposition": "ti/a-/ti/a",
+   "old_typed": "R:ti|L:a-|R:ti|L:a",
+   "new_decomposition": "tia/-/tia",
+   "new_typed": "R:tia|L:-|R:tia",
+   "new_is_only_current_allowance": true,
+   "required_reference_sources": [
+    "gold_unmarked"
+   ],
+   "expected_current_wrong_buckets": [
+    "current_unreferenced_wrong_surfaces"
+   ]
+  }
+ ]
+}

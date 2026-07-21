@@ -4761,8 +4761,8 @@
    "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
   },
   "corpus_repository": {
-   "head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
-   "branch": "agent/kyodai-proper-roots-20260714",
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "branch": "main",
    "status_entries": 0,
    "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
   },
@@ -4771,30 +4771,31 @@
    "instances": 74
   },
   "gold": {
-   "path": "D:\\tmp\\codex_gold_snapshot_5E972C8A_20260714\\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
-   "sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
-   "expected_sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
-   "bytes": 4366007,
-   "mtime_ns": 1784040592603000000,
+   "path": "D:\\tmp\\esperanto_stage_20260718_phase532_candidate\\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
+   "sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "expected_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "bytes": 4372552,
+   "mtime_ns": 1784360080003000000,
    "consistent_snapshot": true,
    "lines": 62313,
    "nul_bytes": 0,
    "replacement_chars": 0,
    "selected_records": 55413,
-   "included_unmarked": 52348,
-   "excluded_fake": 3054,
-   "included_fake_coarse_entries": 137,
-   "included_fake_coarse_surfaces": 136,
+   "included_unmarked": 52223,
+   "excluded_fake": 3179,
+   "included_fake_coarse_entries": 191,
+   "included_fake_coarse_surfaces": 190,
    "fake_coarse_sources": {
-    "gold_fake_coarse_pejvo_original": 31,
-    "gold_fake_coarse_paired_academic": 104,
+    "gold_fake_coarse_pejvo_original": 34,
+    "gold_phase532_selected_ruby_policy": 35,
+    "gold_fake_coarse_paired_academic": 120,
     "gold_fake_coarse_project_reviewed_override": 2
    },
    "fake_coarse_reference": {
     "path": "_analysis_20260625/_fake_coarse_reference_manifest.json",
-    "sha256": "91358ADDA30E3E120F335141F755AFE25B5118C4FC2490015683B8BC8B192195",
-    "entries_sha256": "A744696EED592AEAA01EBD7D9CB6380715F114D3BD144D638517B24146D48AEB",
-    "academic_sha256": "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D",
+    "sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+    "entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+    "academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
     "pejvo_original_sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF",
     "pejvo_disagreement_review": {
      "path": "_fake_coarse_pejvo_disagreement_review.json",
@@ -4807,31 +4808,31 @@
      "entries": 2
     },
     "paired_invariant": {
-     "unmarked_rows": 58930,
-     "unmarked_identical_decomposition": 58930,
+     "unmarked_rows": 58796,
+     "unmarked_identical_decomposition": 58796,
      "academic_rows_without_fake_marker": 62313,
-     "marked_rows": 3383,
-     "marked_different_decomposition": 3383,
-     "marked_gloss_context_matches_academic": 3383
+     "marked_rows": 3517,
+     "marked_different_decomposition": 3517,
+     "marked_gloss_context_matches_academic": 3517
     },
     "counts": {
-     "entries": 3113,
-     "marker_excluded_rows": 270,
+     "entries": 3238,
+     "marker_excluded_rows": 279,
      "marker_exclusions_by_reason": {
-      "contains_space": 260,
-      "non_evaluable_surface": 10
+      "contains_space": 264,
+      "non_evaluable_surface": 15
      },
      "source_rows": {
-      "pejvo_original": 1376,
+      "pejvo_original": 1402,
       "pejvo_reviewed_override": 9,
-      "paired_academic": 1726,
+      "paired_academic": 1825,
       "project_reviewed_override": 2
      },
      "academic_rows_with_nonmatching_pejvo_homographs": 13,
-     "exact_surfaces": 3099,
-     "duplicate_exact_surface_rows": 14,
-     "casefold_surfaces": 3088,
-     "duplicate_casefold_surface_rows": 25
+     "exact_surfaces": 3222,
+     "duplicate_exact_surface_rows": 16,
+     "casefold_surfaces": 3211,
+     "duplicate_casefold_surface_rows": 27
     }
    },
    "fake_coarse_transition": {
@@ -4840,15 +4841,25 @@
      "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
      "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
      "entries": 136,
-     "evaluable_entries": 135,
+     "effective_entries": 134,
+     "evaluable_entries": 133,
      "full_master_only_entries": 1,
      "full_master_only_lines": [
       15993
-     ]
+     ],
+     "superseded_entries": 1,
+     "superseded_lines": [
+      45205
+     ],
+     "retired_entries": 1,
+     "retired_lines": [
+      2704
+     ],
+     "retired_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
     },
     "ff33_delta": {
      "path": "_analysis_20260625/_fake_coarse_ff33_transition_review.json",
-     "sha256": "B809061FF930D8CCB96F39EF3C1D8CA813334EF12484DA552B672069E14EB8B6",
+     "sha256": "BD5E4B5A2BC7D6D37AB910E2A250F203CF402DFAF8BDF933265863D1FF3F247A",
      "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
      "entries": 1,
      "evaluable_entries": 1,
@@ -4856,25 +4867,43 @@
     },
     "final_5e_delta": {
      "path": "_analysis_20260625/_fake_coarse_5e_transition_review.json",
-     "sha256": "7B2A0DEADFD25A790C96FADEA8D91AFE5FAD3DEA333425AF15886C017B2BDB69",
+     "sha256": "4DB426E02930B87B9581C820DA0AF04F993180BBFC0DC16D39619A501AE59783",
      "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
      "entries": 1,
      "evaluable_entries": 1,
      "full_master_only_entries": 0
     },
-    "evaluable_entries": 137,
-    "full_master_only_entries": 1
+    "phase511_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase511_transition_review.json",
+     "sha256": "72D3CDE187680F4CD0DD178915FEBF9DD1FA421B1C4AC17B25374720FDB9CEA8",
+     "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+     "entries": 21,
+     "evaluable_entries": 21,
+     "full_master_only_entries": 0,
+     "historical_supersessions": 1
+    },
+    "evaluable_entries": 191,
+    "full_master_only_entries": 1,
+    "phase532_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase532_transition_review.json",
+     "sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "entries": 35,
+     "evaluable_entries": 35,
+     "full_master_only_entries": 0,
+     "retired_historical_entries": 1,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    }
    },
    "fake_coarse_enforcement": "reviewed_transitions",
    "official_overrides": 11,
    "project_ruby_boundary_overrides": 2,
    "duplicate_surfaces": 254,
    "duplicate_rows": 262,
-   "mixed_marker_surfaces": 38,
+   "mixed_marker_surfaces": 36,
    "mixed_marker_surface_list": [
     "Karolino",
     "Unesko",
-    "areno",
     "debati",
     "dominanto",
     "esperante",
@@ -4885,7 +4914,6 @@
     "haloo",
     "heroino",
     "interfaco",
-    "kalozo",
     "kaseto",
     "kateto",
     "korveto",
@@ -4916,12 +4944,46 @@
     "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
     "entries": 41,
     "sha256": "FC8DB5DDE724F0693512695E79D63059073E8D36CDBE0F025D4F6DEA829D2BC5"
+   },
+   "phase532_selected_ruby_policy": {
+    "source": "gold_phase532_selected_ruby_policy",
+    "ordinary_reference_expressions": 57,
+    "bounded_multiword_expressions": 1,
+    "identity": {
+     "phase": 532,
+     "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+     "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+     "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+     "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+     "unmarked_entries": 23,
+     "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "fake_transition_entries": 35,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+     "retired_historical_entries": 1,
+     "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+     "selected_expressions": 58,
+     "ordinary_reference_expressions": 57,
+     "bounded_multiword_expressions": 1
+    },
+    "authority_carry_forward": {
+     "phase_from": 513,
+     "phase_to": 532,
+     "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+     "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+     "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+     "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+     "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+     "authority_groups": 5,
+     "reviewed_learner_lines": 113,
+     "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
+    }
    }
   }
  },
- "case_count": 68556,
- "surface_count": 68506,
- "raw_case_count": 68596,
+ "case_count": 68485,
+ "surface_count": 68435,
+ "raw_case_count": 68524,
  "languages": [
   {
    "language": "JA",
@@ -4931,40 +4993,40 @@
     "comparison": "data_isolated",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
@@ -4978,6 +5040,18 @@
       "improvement_weight": 0,
       "improvement_cases": 0
      },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
       "total_cases": 2,
@@ -4991,28 +5065,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52297,
-      "baseline_correct_cases": 52297,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 11,
-      "improvement_cases": 11
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5028,76 +5102,321 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323465,
-     "baseline_correct_cases": 74268,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 132,
-     "improvement_cases": 102
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "comprehensive": {
     "comparison": "comprehensive",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
       "total_cases": 11,
-      "baseline_correct_weight": 10,
-      "baseline_correct_cases": 10,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
       "current_correct_weight": 11,
       "current_correct_cases": 11,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
@@ -5112,28 +5431,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52289,
-      "baseline_correct_cases": 52289,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 19,
-      "improvement_cases": 19
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5149,32 +5468,265 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323456,
-     "baseline_correct_cases": 74259,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 141,
-     "improvement_cases": 111
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "current_input_fingerprint": {
     "Esperanto-Kanji-Ruby-JA/main.py": "104A7797E453E62C2C2250A57A92B08C8004737A93755D003BE9019CA901C95B",
     "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
     "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
     "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
-    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "FE95477F35A3BD6013B6E8240C16207993312F949A8CD1957AEB6C04D67ABB21",
+    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
     "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5183,14 +5735,15 @@
     "Esperanto-Kanji-Ruby-JA/app_data/user_corrections.json": "D4956CE7C8AF5F958E604ACD2617A58018B58BB8ECACE3D05609E6BF45BDF6A8"
    },
    "head_overlay_dependency_fingerprint": {
+    "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
     "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
     "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
     "Esperanto-Kanji-Ruby-JA/app_data/エスペラント語根-日本語訳ルビ対応リスト.csv": "33CE469EFCE8D77111C281DF36585E981269409F1D33753DA620D56C6AD5CE0E",
-    "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "0B0C0C9F768B90BBB3F5A3B64C48F26C889097E21A390E8E4970B3E804EF9E9A"
+    "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC"
    },
    "current_input_stable_during_language_audit": true,
-   "gate": true,
-   "elapsed_seconds": 1017.298
+   "gate": false,
+   "elapsed_seconds": 1118.527
   },
   {
    "language": "ZH",
@@ -5200,40 +5753,40 @@
     "comparison": "data_isolated",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
@@ -5247,6 +5800,18 @@
       "improvement_weight": 0,
       "improvement_cases": 0
      },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
       "total_cases": 2,
@@ -5260,28 +5825,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52297,
-      "baseline_correct_cases": 52297,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 11,
-      "improvement_cases": 11
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5297,76 +5862,321 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323465,
-     "baseline_correct_cases": 74268,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 132,
-     "improvement_cases": 102
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "comprehensive": {
     "comparison": "comprehensive",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
       "total_cases": 11,
-      "baseline_correct_weight": 10,
-      "baseline_correct_cases": 10,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
       "current_correct_weight": 11,
       "current_correct_cases": 11,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
@@ -5381,28 +6191,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52289,
-      "baseline_correct_cases": 52289,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 19,
-      "improvement_cases": 19
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5418,32 +6228,265 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323456,
-     "baseline_correct_cases": 74259,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 141,
-     "improvement_cases": 111
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "current_input_fingerprint": {
     "Esperanto-Kanji-Ruby-ZH/main.py": "8A73A5A148F416F583064A2ABB379D1E2485585D241C0B420595EF8CCF3D12B7",
     "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
     "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
-    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "2B7B58D19D0B3C4B2281DBE176FAA46AF91E0F66AA4B1003CF2A26C490E3B924",
+    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
     "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5452,14 +6495,15 @@
     "Esperanto-Kanji-Ruby-ZH/app_data/user_corrections.json": "A3D2B578D056B2AB5C46E0D00F7392891080F4672899D716C3854B93ABF38585"
    },
    "head_overlay_dependency_fingerprint": {
+    "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
     "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
     "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-中文注释对应列表.csv": "13D248DACD526F7028A35BE28AA846E42FBBF17B718CE824A2AF7D22BC1903E6",
-    "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "0B0C0C9F768B90BBB3F5A3B64C48F26C889097E21A390E8E4970B3E804EF9E9A"
+    "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC"
    },
    "current_input_stable_during_language_audit": true,
-   "gate": true,
-   "elapsed_seconds": 1019.411
+   "gate": false,
+   "elapsed_seconds": 1124.78
   },
   {
    "language": "KO",
@@ -5469,40 +6513,40 @@
     "comparison": "data_isolated",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
@@ -5516,6 +6560,18 @@
       "improvement_weight": 0,
       "improvement_cases": 0
      },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
       "total_cases": 2,
@@ -5529,28 +6585,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52297,
-      "baseline_correct_cases": 52297,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 11,
-      "improvement_cases": 11
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5566,76 +6622,321 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323465,
-     "baseline_correct_cases": 74268,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 132,
-     "improvement_cases": 102
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "comprehensive": {
     "comparison": "comprehensive",
     "sources": {
      "gold_fake_coarse_paired_academic": {
-      "total_weight": 104,
-      "total_cases": 104,
-      "baseline_correct_weight": 33,
-      "baseline_correct_cases": 33,
-      "current_correct_weight": 104,
-      "current_correct_cases": 104,
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 71,
-      "improvement_cases": 71
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_pejvo_original": {
-      "total_weight": 31,
-      "total_cases": 30,
-      "baseline_correct_weight": 17,
-      "baseline_correct_cases": 17,
-      "current_correct_weight": 31,
-      "current_correct_cases": 30,
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 14,
-      "improvement_cases": 13
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_fake_coarse_project_reviewed_override": {
       "total_weight": 2,
       "total_cases": 2,
-      "baseline_correct_weight": 1,
-      "baseline_correct_cases": 1,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
       "current_correct_weight": 2,
       "current_correct_cases": 2,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_official_override": {
       "total_weight": 11,
       "total_cases": 11,
-      "baseline_correct_weight": 10,
-      "baseline_correct_cases": 10,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
       "current_correct_weight": 11,
       "current_correct_cases": 11,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 1,
-      "improvement_cases": 1
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "gold_project_ruby_boundary_override": {
       "total_weight": 2,
@@ -5650,28 +6951,28 @@
       "improvement_cases": 0
      },
      "gold_unmarked": {
-      "total_weight": 52308,
-      "total_cases": 52308,
-      "baseline_correct_weight": 52289,
-      "baseline_correct_cases": 52289,
-      "current_correct_weight": 52308,
-      "current_correct_cases": 52308,
-      "regression_weight": 0,
-      "regression_cases": 0,
-      "improvement_weight": 19,
-      "improvement_cases": 19
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52162,
+      "baseline_correct_cases": 52162,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 2,
+      "regression_cases": 2,
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_corpus": {
       "total_weight": 271065,
       "total_cases": 21877,
-      "baseline_correct_weight": 271030,
-      "baseline_correct_cases": 21871,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
       "current_correct_weight": 271065,
       "current_correct_cases": 21877,
       "regression_weight": 0,
       "regression_cases": 0,
-      "improvement_weight": 35,
-      "improvement_cases": 6
+      "improvement_weight": 0,
+      "improvement_cases": 0
      },
      "html_place_manifest": {
       "total_weight": 74,
@@ -5687,32 +6988,265 @@
      }
     },
     "combined": {
-     "total_weight": 323597,
-     "total_cases": 74370,
-     "baseline_correct_weight": 323456,
-     "baseline_correct_cases": 74259,
-     "current_correct_weight": 323597,
-     "current_correct_cases": 74370,
-     "regression_weight": 0,
-     "regression_cases": 0,
-     "improvement_weight": 141,
-     "improvement_cases": 111
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323527,
+     "baseline_correct_cases": 74300,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 2,
+     "regression_cases": 2,
+     "improvement_weight": 0,
+     "improvement_cases": 0
     },
-    "regression_cases": [],
-    "changed_to_unreferenced_wrong_surfaces": [],
-    "current_unreferenced_wrong_surfaces": [],
+    "regression_cases": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "changed_to_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io"
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia"
+     }
+    ],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
     "current_place_manifest_wrong_cases": [],
     "current_official_override_wrong_cases": [],
     "current_project_ruby_boundary_override_wrong_cases": [],
-    "weighted_worsening_sources": [],
-    "gate": true
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [
+     "gold_unmarked",
+     "combined"
+    ],
+    "signature_changes": [
+     {
+      "surface": "Izraelio",
+      "baseline": "Izraeli/o",
+      "baseline_typed": "R:Izraeli|L:o",
+      "baseline_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izraeli",
+         "ruby": true
+        },
+        {
+         "text": "o",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "baseline": "ti/a-/ti/a",
+      "baseline_typed": "R:ti|L:a-|R:ti|L:a",
+      "baseline_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a-",
+         "ruby": false
+        },
+        {
+         "text": "ti",
+         "ruby": true
+        },
+        {
+         "text": "a",
+         "ruby": false
+        }
+       ]
+      },
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "gate": false
    },
    "current_input_fingerprint": {
     "Esperanto-Kanji-Ruby-KO/main.py": "FF11E4A842D8D77CA0E7E76DE3008CB62D8E7044436E541C7AD01482E47AA437",
     "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
     "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
-    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "3758A3747B55D7A3D3EB0A640D5BA3A252AEA57315431429671B6B792C293846",
+    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
     "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
     "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
     "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5721,14 +7255,15 @@
     "Esperanto-Kanji-Ruby-KO/app_data/user_corrections.json": "5377753038C41AD4E18DDB4784E2E9FEE214169F8075DDEA031CC679A7A7B558"
    },
    "head_overlay_dependency_fingerprint": {
+    "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
     "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
     "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
     "Esperanto-Kanji-Ruby-KO/app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv": "29383FEB4A852818F3BEA424E65215A72FD28B302A3E38FEE1CC25599AC6F307",
-    "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "0B0C0C9F768B90BBB3F5A3B64C48F26C889097E21A390E8E4970B3E804EF9E9A"
+    "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC"
    },
    "current_input_stable_during_language_audit": true,
-   "gate": true,
-   "elapsed_seconds": 1020.031
+   "gate": false,
+   "elapsed_seconds": 1117.598
   }
  ],
  "requested_languages": [
@@ -5736,15 +7271,17 @@
   "ZH",
   "KO"
  ],
- "head_oid": "9515488f2c34e07660846c26e868a5358a10a913",
+ "head_oid": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+ "worktree_head_oid_at_start": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+ "worktree_head_oid_at_end": "dcfca809b711075788ee00b6323cdd2ea31618ff",
  "head_stable_at_end": true,
  "reference_projection": {
   "schema_version": 5,
-  "case_count": 68596,
-  "surface_count": 68506,
-  "reference_sha256": "F7C4755D70215A4DB78976A1AAFFA801B0374AE8B3248D1BADB480911F741B29",
-  "reference_conflict_count": 90,
-  "reference_conflicts_sha256": "78600D1BE475F5BC7124069174BBAC66DB8EA6B6A8A943E1D032DC453AD17986",
+  "case_count": 68524,
+  "surface_count": 68435,
+  "reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+  "reference_conflict_count": 89,
+  "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
   "corpus": {
    "files": 169,
    "raw_ruby": 348971,
@@ -5765,8 +7302,8 @@
    "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
   },
   "corpus_repository": {
-   "head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
-   "branch": "agent/kyodai-proper-roots-20260714",
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "branch": "main",
    "status_entries": 0,
    "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
   },
@@ -5775,28 +7312,29 @@
    "instances": 74
   },
   "gold": {
-   "sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
-   "bytes": 4366007,
+   "sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "bytes": 4372552,
    "lines": 62313,
    "nul_bytes": 0,
    "replacement_chars": 0,
    "selected_records": 55413,
-   "included_unmarked": 52348,
-   "excluded_fake": 3054,
+   "included_unmarked": 52223,
+   "excluded_fake": 3179,
    "official_overrides": 11,
    "project_ruby_boundary_overrides": 2,
-   "included_fake_coarse_entries": 137,
-   "included_fake_coarse_surfaces": 136,
+   "included_fake_coarse_entries": 191,
+   "included_fake_coarse_surfaces": 190,
    "fake_coarse_sources": {
-    "gold_fake_coarse_pejvo_original": 31,
-    "gold_fake_coarse_paired_academic": 104,
+    "gold_fake_coarse_pejvo_original": 34,
+    "gold_phase532_selected_ruby_policy": 35,
+    "gold_fake_coarse_paired_academic": 120,
     "gold_fake_coarse_project_reviewed_override": 2
    },
    "fake_coarse_reference": {
     "path": "_analysis_20260625/_fake_coarse_reference_manifest.json",
-    "sha256": "91358ADDA30E3E120F335141F755AFE25B5118C4FC2490015683B8BC8B192195",
-    "entries_sha256": "A744696EED592AEAA01EBD7D9CB6380715F114D3BD144D638517B24146D48AEB",
-    "academic_sha256": "0462E8D73512153C237252B74A87CF9D8D7A2FDF015823B79D5DA33603026D8D",
+    "sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+    "entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+    "academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
     "pejvo_original_sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF",
     "pejvo_disagreement_review": {
      "path": "_fake_coarse_pejvo_disagreement_review.json",
@@ -5809,31 +7347,31 @@
      "entries": 2
     },
     "paired_invariant": {
-     "unmarked_rows": 58930,
-     "unmarked_identical_decomposition": 58930,
+     "unmarked_rows": 58796,
+     "unmarked_identical_decomposition": 58796,
      "academic_rows_without_fake_marker": 62313,
-     "marked_rows": 3383,
-     "marked_different_decomposition": 3383,
-     "marked_gloss_context_matches_academic": 3383
+     "marked_rows": 3517,
+     "marked_different_decomposition": 3517,
+     "marked_gloss_context_matches_academic": 3517
     },
     "counts": {
-     "entries": 3113,
-     "marker_excluded_rows": 270,
+     "entries": 3238,
+     "marker_excluded_rows": 279,
      "marker_exclusions_by_reason": {
-      "contains_space": 260,
-      "non_evaluable_surface": 10
+      "contains_space": 264,
+      "non_evaluable_surface": 15
      },
      "source_rows": {
-      "pejvo_original": 1376,
+      "pejvo_original": 1402,
       "pejvo_reviewed_override": 9,
-      "paired_academic": 1726,
+      "paired_academic": 1825,
       "project_reviewed_override": 2
      },
      "academic_rows_with_nonmatching_pejvo_homographs": 13,
-     "exact_surfaces": 3099,
-     "duplicate_exact_surface_rows": 14,
-     "casefold_surfaces": 3088,
-     "duplicate_casefold_surface_rows": 25
+     "exact_surfaces": 3222,
+     "duplicate_exact_surface_rows": 16,
+     "casefold_surfaces": 3211,
+     "duplicate_casefold_surface_rows": 27
     }
    },
    "fake_coarse_transition": {
@@ -5842,15 +7380,25 @@
      "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
      "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
      "entries": 136,
-     "evaluable_entries": 135,
+     "effective_entries": 134,
+     "evaluable_entries": 133,
      "full_master_only_entries": 1,
      "full_master_only_lines": [
       15993
-     ]
+     ],
+     "superseded_entries": 1,
+     "superseded_lines": [
+      45205
+     ],
+     "retired_entries": 1,
+     "retired_lines": [
+      2704
+     ],
+     "retired_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
     },
     "ff33_delta": {
      "path": "_analysis_20260625/_fake_coarse_ff33_transition_review.json",
-     "sha256": "B809061FF930D8CCB96F39EF3C1D8CA813334EF12484DA552B672069E14EB8B6",
+     "sha256": "BD5E4B5A2BC7D6D37AB910E2A250F203CF402DFAF8BDF933265863D1FF3F247A",
      "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
      "entries": 1,
      "evaluable_entries": 1,
@@ -5858,60 +7406,142 @@
     },
     "final_5e_delta": {
      "path": "_analysis_20260625/_fake_coarse_5e_transition_review.json",
-     "sha256": "7B2A0DEADFD25A790C96FADEA8D91AFE5FAD3DEA333425AF15886C017B2BDB69",
+     "sha256": "4DB426E02930B87B9581C820DA0AF04F993180BBFC0DC16D39619A501AE59783",
      "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
      "entries": 1,
      "evaluable_entries": 1,
      "full_master_only_entries": 0
     },
-    "evaluable_entries": 137,
-    "full_master_only_entries": 1
+    "phase511_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase511_transition_review.json",
+     "sha256": "72D3CDE187680F4CD0DD178915FEBF9DD1FA421B1C4AC17B25374720FDB9CEA8",
+     "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+     "entries": 21,
+     "evaluable_entries": 21,
+     "full_master_only_entries": 0,
+     "historical_supersessions": 1
+    },
+    "evaluable_entries": 191,
+    "full_master_only_entries": 1,
+    "phase532_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase532_transition_review.json",
+     "sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "entries": 35,
+     "evaluable_entries": 35,
+     "full_master_only_entries": 0,
+     "retired_historical_entries": 1,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    }
    },
    "fake_coarse_enforcement": "reviewed_transitions",
    "duplicate_surfaces": 254,
    "duplicate_rows": 262,
-   "mixed_marker_surfaces": 38,
+   "mixed_marker_surfaces": 36,
    "atomic_hyphen_review": {
     "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
     "entries": 41,
     "sha256": "FC8DB5DDE724F0693512695E79D63059073E8D36CDBE0F025D4F6DEA829D2BC5"
+   },
+   "phase532_selected_ruby_policy": {
+    "source": "gold_phase532_selected_ruby_policy",
+    "ordinary_reference_expressions": 57,
+    "bounded_multiword_expressions": 1,
+    "identity": {
+     "phase": 532,
+     "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+     "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+     "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+     "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+     "unmarked_entries": 23,
+     "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "fake_transition_entries": 35,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+     "retired_historical_entries": 1,
+     "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+     "selected_expressions": 58,
+     "ordinary_reference_expressions": 57,
+     "bounded_multiword_expressions": 1
+    },
+    "authority_carry_forward": {
+     "phase_from": 513,
+     "phase_to": 532,
+     "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+     "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+     "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+     "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+     "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+     "authority_groups": 5,
+     "reviewed_learner_lines": 113,
+     "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
+    }
    }
+  },
+  "phase532_ruby_policy": {
+   "phase": 532,
+   "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+   "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+   "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+   "unmarked_entries": 23,
+   "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+   "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+   "fake_transition_entries": 35,
+   "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+   "retired_historical_entries": 1,
+   "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+   "selected_expressions": 58,
+   "ordinary_reference_expressions": 57,
+   "bounded_multiword_expressions": 1
+  },
+  "phase532_authority_carry_forward": {
+   "phase_from": 513,
+   "phase_to": 532,
+   "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+   "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+   "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+   "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+   "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+   "authority_groups": 5,
+   "reviewed_learner_lines": 113,
+   "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
   }
  },
  "resolved_reference": {
-  "case_count": 68556,
-  "surface_count": 68506,
-  "reference_sha256": "973C0E5C36A4EE45C2AF14BEBD4A5FF321C764B46DDDAC730BBF8499F652DC78"
+  "case_count": 68485,
+  "surface_count": 68435,
+  "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6"
  },
  "reviewed_reference": {
-  "scope_manifest": "D:\\tmp\\codex_app_main_master3lang_20260714\\_analysis_20260625\\_no_worsening_scope_manifest.json",
-  "scope_manifest_sha256": "E0325C4C431B105519F4E34273B68EEA28FC019E15636707ECA67AB70897769F",
-  "conflict_manifest": "D:\\tmp\\codex_app_main_master3lang_20260714\\_analysis_20260625\\_no_worsening_reference_conflicts.json",
-  "conflict_manifest_sha256": "9CBB373E8ABA4E758688087F5C1460A5A4A752597B1E8D54DC32D6051C30D3C7",
-  "reviewed_conflicts": 90,
+  "scope_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_scope_manifest.json",
+  "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
+  "conflict_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_reference_conflicts.json",
+  "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94",
+  "reviewed_conflicts": 89,
   "contextual_multi_signature_conflicts": 50
  },
  "checkpoint_context": {
   "checkpoint_schema_version": 2,
   "reference_schema_version": 5,
-  "head_oid": "9515488f2c34e07660846c26e868a5358a10a913",
-  "raw_reference_sha256": "F7C4755D70215A4DB78976A1AAFFA801B0374AE8B3248D1BADB480911F741B29",
-  "reference_sha256": "973C0E5C36A4EE45C2AF14BEBD4A5FF321C764B46DDDAC730BBF8499F652DC78",
-  "surface_sha256": "30D4488FAD31DA8A63756B7D9B084BF397806984F207CFE996620A82CC3968E8",
+  "head_oid": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+  "raw_reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+  "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6",
+  "surface_sha256": "CC3BAFBC6CD1558BF9BD3FCC680245819CA1C1059AE4AEE8BAAA0F64415576FE",
   "corpus_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
-  "corpus_head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
+  "corpus_head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
   "corpus_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
   "place_manifest_sha256": "54E1EF11A6FE8ED2D7AAE83AFCC7029D0FA39603F72FE30450EA24249F35A0C3",
-  "gold_sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
-  "audit_code_sha256": "2DC404F6C479CFFEF35062B261CAD2FB6D4ACC220F5A2F74479B096A134633E2",
-  "scope_manifest_sha256": "E0325C4C431B105519F4E34273B68EEA28FC019E15636707ECA67AB70897769F",
-  "conflict_manifest_sha256": "9CBB373E8ABA4E758688087F5C1460A5A4A752597B1E8D54DC32D6051C30D3C7"
+  "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+  "audit_code_sha256": "43FDC5AFEAD1F92DDF4D177D559FE411686443DA2D86665F912C82CE8018FEA3",
+  "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
+  "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94"
  },
  "resumed_from_audit_code_sha256": null,
  "corpus_stable_at_end": true,
  "corpus_repository_at_end": {
-  "head_oid": "5651cb2fcfdae48ddc4f95428fd503d0d738215d",
-  "branch": "agent/kyodai-proper-roots-20260714",
+  "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+  "branch": "main",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
  },
@@ -5925,7 +7555,7 @@
    "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
    "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
    "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
-   "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "FE95477F35A3BD6013B6E8240C16207993312F949A8CD1957AEB6C04D67ABB21",
+   "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5938,7 +7568,7 @@
    "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
    "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
    "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
-   "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "2B7B58D19D0B3C4B2281DBE176FAA46AF91E0F66AA4B1003CF2A26C490E3B924",
+   "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5951,7 +7581,7 @@
    "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
    "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
    "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
-   "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "3758A3747B55D7A3D3EB0A640D5BA3A252AEA57315431429671B6B792C293846",
+   "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5966,7 +7596,7 @@
    "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
    "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
    "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
-   "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "FE95477F35A3BD6013B6E8240C16207993312F949A8CD1957AEB6C04D67ABB21",
+   "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5979,7 +7609,7 @@
    "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
    "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
    "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
-   "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "2B7B58D19D0B3C4B2281DBE176FAA46AF91E0F66AA4B1003CF2A26C490E3B924",
+   "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -5992,7 +7622,7 @@
    "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
    "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
    "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
-   "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "3758A3747B55D7A3D3EB0A640D5BA3A252AEA57315431429671B6B792C293846",
+   "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
    "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
@@ -6002,9 +7632,9 @@
   }
  },
  "complete": true,
- "final_gold_sha256": "5E972C8AC9D8A8CA00097720C455871A871EE4D8F25A9F4B11A28FA30A01A1A0",
+ "final_gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
  "gold_source_matches_snapshot_at_end": true,
  "gold_snapshot_isolated_from_external_changes": true,
  "gold_snapshot_source_stable_during_audit": true,
- "gate": true
+ "gate": false
 }

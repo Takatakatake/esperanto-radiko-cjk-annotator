@@ -34,8 +34,12 @@ sys.path.insert(0, HERE)
 from gold_snapshot import consistent_snapshot
 import build_phase532_authority_carry_forward as phase532_carry_builder
 import build_phase532_ruby_policy_review as phase532_policy_builder
+import build_phase558_ruby_overlay_review as phase558_overlay_builder
+import phase532_activation
 import phase532_authority_carry_forward as phase532_carry
 import phase532_ruby_policy as phase532_policy
+import phase558_ruby_overlay as phase558_overlay
+import phase558_ruby_overlay_activation as phase558_activation
 
 
 def parse_args(argv=None):
@@ -127,7 +131,7 @@ def _assert_ruby_only_kanji_guard(expected, completed_step):
 # it can replace this snapshot.
 required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
-    "ESP_CORPUS_PATH",
+    "ESP_CORPUS_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
 ]
 if ARGS.all_tracks:
     required_inputs.append("ESP_KANJI_MASTER_PATH")
@@ -176,6 +180,48 @@ if phase532_formal:
         raise SystemExit("formal Phase 532 policy/carry identity mismatch")
 elif phase532_carry_identity is not None:
     raise SystemExit("Phase 532 carry identity exists without its Ruby policy")
+phase532_deployed_mode = None
+if phase532_formal:
+    phase532_activation_report = phase532_activation.activation_report()
+    if phase532_activation_report.get("phase532_active") is not True:
+        raise SystemExit("formal Phase 532 regeneration lacks active parent state")
+    # This pipeline is the repeatable post-adoption route.  The one-time
+    # pre-regen proof belongs to the reviewed promotion procedure, not every
+    # subsequent regeneration.
+    phase532_deployed_mode = "post-regen"
+
+phase558_activation_report = phase558_activation.activation_report()
+phase558_formal = phase558_activation_report.get(
+    "phase558_ruby_overlay_active"
+) is True
+if not phase558_formal:
+    raise SystemExit("formal regeneration requires the Phase 558 Ruby sidecar")
+for required in (
+    "ESP_PHASE558_CANDIDATE_DIR",
+    "ESP_PHASE558_RUBY_DISPOSITION_LEDGER",
+    "ESP_RUBY_HTML_GUIDE_JA",
+    "ESP_RUBY_HTML_GUIDE_ZH",
+    "ESP_PHASE558_FAKE_COARSE_MANIFEST",
+    "ESP_PHASE558_TRANSITION_DISPOSITIONS",
+):
+    if not os.environ.get(required):
+        raise SystemExit(
+            f"formal Phase 558 regeneration requires explicit {required}"
+        )
+phase558_source_review = phase558_overlay_builder.validate_frozen_closure(
+    os.environ["ESP_PHASE532_CANDIDATE_DIR"],
+    os.environ["ESP_PHASE558_CANDIDATE_DIR"],
+    os.environ["ESP_PHASE558_RUBY_DISPOSITION_LEDGER"],
+    os.environ["ESP_RUBY_HTML_GUIDE_JA"],
+    os.environ["ESP_RUBY_HTML_GUIDE_ZH"],
+)
+if (
+    phase558_source_review["review_identity"]
+    != phase558_overlay.review_identity()
+    or phase558_activation_report["overlay_review"]
+    != phase558_overlay.review_identity()
+):
+    raise SystemExit("formal Phase 558 source/activation identity mismatch")
 _gold_raw, gold_identity = consistent_snapshot(os.environ["ESP_GOLD_PATH"])
 if (
     gold_identity["sha256"] != expected_gold["sha256"]
@@ -186,7 +232,13 @@ if (
         f"expected {expected_gold['bytes']} bytes/{expected_gold['sha256']}, "
         f"got {gold_identity['bytes']} bytes/{gold_identity['sha256']}"
     )
-COMMON_ENV = {"ESP_EXPECTED_GOLD_SHA256": expected_gold["sha256"]}
+COMMON_ENV = {
+    "ESP_EXPECTED_GOLD_SHA256": expected_gold["sha256"],
+    # Windows' legacy cp932 console cannot represent all Chinese/Korean paths
+    # emitted by the formal reports.  Make every child deterministic UTF-8.
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONUTF8": "1",
+}
 with open(
     os.path.join(HERE, "_fake_coarse_reference_manifest.json"),
     encoding="utf-8",
@@ -307,16 +359,30 @@ STEPS = [
             '--check',
         ], {}),
     ] if phase532_formal else []),
-    # Permission to begin any Phase 532 write comes from the still-deployed
-    # reviewed state: 51 selected signatures plus exactly seven legacy
-    # signatures, with identical JA/ZH/KO boundaries.  Keep this before the
-    # first writer so a failed permission gate cannot leave intermediate
-    # word-annotation files partially advanced.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_phase558_ruby_overlay_review.py'),
+        '--phase532-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
+        '--phase558-dir', os.environ['ESP_PHASE558_CANDIDATE_DIR'],
+        '--disposition-ledger',
+        os.environ['ESP_PHASE558_RUBY_DISPOSITION_LEDGER'],
+        '--japanese-guide', os.environ['ESP_RUBY_HTML_GUIDE_JA'],
+        '--chinese-guide', os.environ['ESP_RUBY_HTML_GUIDE_ZH'],
+        '--check',
+    ], {}),
+    # Permission to begin any repeat regeneration comes from the already
+    # adopted Phase 532/558 state, with identical JA/ZH/KO boundaries.  The
+    # one-time legacy/pre-regen proof remains in the promotion audit log.
     *([([
         sys.executable,
         os.path.join(HERE, 'phase532_runtime_signature_gate.py'),
-        '--mode', 'pre-regen', '--deployed',
+        '--mode', phase532_deployed_mode, '--deployed',
     ], {})] if phase532_formal else []),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase558_ruby_overlay_runtime_gate.py'),
+        '--mode', 'post-regen', '--deployed', '--batch-size', '33',
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'apply_corpus_word_anno.py'), '--write'], {}),
     ([
         sys.executable,
@@ -336,6 +402,11 @@ STEPS = [
         os.path.join(HERE, 'phase532_runtime_signature_gate.py'),
         '--mode', 'post-regen', '--deployed',
     ], {})] if phase532_formal else []),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase558_ruby_overlay_runtime_gate.py'),
+        '--mode', 'post-regen', '--deployed', '--batch-size', '33',
+    ], {}),
     # 全21443 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_canonical_corpus_surfaces.py')], {}),
@@ -350,37 +421,47 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'anomaly_scan.py')], {}),
     # 生成規則の単体テスト + 3言語デプロイJSONの実機回帰テスト。
     ([sys.executable, os.path.join(HERE, 'test_generation_regressions.py')], {}),
+    ([sys.executable, os.path.join(HERE, 'test_phase558_ruby_overlay.py')], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'test_reviewed_exact_manifest.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_raw_apostrophe_structure.py')], {}),
-    # Formal expected-signature gate for the pinned Phase 513 snapshot plus
-    # the effective historical, FF33, final-5E and 21 reviewed Phase511 rows.
+    # Run both isolated Phase 558 authorities.  Each raw audit is expected to
+    # fail on exactly the closed five-row/two-row reviewed delta; only its
+    # matching fail-closed sidecar may admit that report.
     ([
         sys.executable,
-        os.path.join(HERE, 'no_worsening_audit.py'),
-        '--current-only-diagnostic',
-        '--languages', 'JA', 'ZH', 'KO',
-        '--expected-gold-sha256', expected_gold['sha256'],
+        os.path.join(HERE, 'run_phase558_no_worsening.py'),
     ], {}),
     # 固定gold snapshot全行（空白・約物・hyphenを含む）を3言語runtimeで監査。
     # fast版はmoving absolute pathのmonitor-onlyであり、正式工程では使用しない。
     ([
         sys.executable,
         os.path.join(HERE, 'audit_master_3lang_full_snapshot.py'),
-        '--gold', os.environ['ESP_GOLD_PATH'],
-        '--expected-gold-sha256', expected_gold['sha256'],
-        '--academic', os.environ['ESP_ACADEMIC_GOLD_PATH'],
+        '--gold', phase558_source_review['source_paths']['phase558_learner'],
+        '--expected-gold-sha256',
+        phase558_overlay.EXPECTED_SOURCES['phase558_learner']['sha256'],
+        '--academic', phase558_source_review['source_paths']['phase558_academic'],
         '--expected-academic-sha256',
-        fake_coarse_manifest['sources']['academic']['sha256'],
+        phase558_overlay.EXPECTED_SOURCES['phase558_academic']['sha256'],
         '--expected-head', FORMAL_HEAD,
+        '--candidate-fake-coarse-manifest',
+        os.environ['ESP_PHASE558_FAKE_COARSE_MANIFEST'],
+        '--candidate-transition-dispositions',
+        os.environ['ESP_PHASE558_TRANSITION_DISPOSITIONS'],
         '--allow-stable-tracked-changes',
-        *([
-            '--phase532-runtime-mode', 'post-regen',
-            '--phase532-baseline-dir',
-            os.environ['ESP_PHASE532_BASELINE_DIR'],
-            '--phase532-candidate-dir',
-            os.environ['ESP_PHASE532_CANDIDATE_DIR'],
-        ] if phase532_formal else []),
+        '--phase532-runtime-mode', 'post-regen',
+        '--phase532-baseline-dir', os.environ['ESP_PHASE532_BASELINE_DIR'],
+        '--phase532-candidate-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
+        '--phase558-candidate-dir', os.environ['ESP_PHASE558_CANDIDATE_DIR'],
+        '--phase558-ruby-disposition-ledger',
+        os.environ['ESP_PHASE558_RUBY_DISPOSITION_LEDGER'],
+        '--phase558-japanese-guide', os.environ['ESP_RUBY_HTML_GUIDE_JA'],
+        '--phase558-chinese-guide', os.environ['ESP_RUBY_HTML_GUIDE_ZH'],
+        '--phase558-runtime-mode', 'post-regen',
         '--report', os.path.join(
             tempfile.gettempdir(), 'esperanto_master_3lang_formal_report.json',
         ),

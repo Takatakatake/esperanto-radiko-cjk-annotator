@@ -20,7 +20,7 @@ from gen_replacement import (
     validate_multilingual_word_anno_boundaries,
 )
 from extract_lib import hat_to_circumflex, replace_esperanto_chars
-from atomic_json import atomic_file_copy, atomic_json_dump
+from atomic_json import atomic_binary_copy, atomic_file_copy, atomic_json_dump
 from gold_snapshot import consistent_snapshot
 from phase532_ruby_policy import (
     CANDIDATE_ACADEMIC_SHA256 as PHASE532_ACADEMIC_SHA256,
@@ -31,8 +31,21 @@ from phase532_ruby_policy import (
 )
 from phase532_runtime_signature_gate import validate_generated_payloads
 from phase532_activation import activation_report
+from phase558_ruby_overlay import (
+    managed_morph_targets as phase558_managed_morph_targets,
+    strict_supersessions as phase558_strict_supersessions,
+    typed_exact_targets as phase558_typed_exact_targets,
+)
+from phase558_ruby_overlay_activation import (
+    activation_report as phase558_activation_report,
+)
+from phase558_ruby_overlay_runtime_gate import (
+    validate_generated_payloads as validate_phase558_generated_payloads,
+)
 PHASE532_ACTIVATION = activation_report()
 PHASE532_FORMAL = PHASE532_ACTIVATION['phase532_active']
+PHASE558_ACTIVATION = phase558_activation_report()
+PHASE558_FORMAL = PHASE558_ACTIVATION['phase558_ruby_overlay_active']
 OUT = BASE + r"\_analysis_20260625\out"
 BASE_SETTINGS_PATH = os.path.join(
     BASE, "_analysis_20260625", "_base_stemming_settings.json",
@@ -272,6 +285,27 @@ if PHASE532_FORMAL:
         entry for entry in strict_gold_fixes
         if entry.get('w') not in _phase532_superseded_strict
     ]
+_phase558_superseded_strict = phase558_strict_supersessions()
+_phase558_present_supersessions = set()
+_strict_after_phase532_by_word = {}
+for _entry in strict_gold_fixes:
+    _strict_after_phase532_by_word.setdefault(_entry.get('w'), []).append(
+        _entry
+    )
+for _word, _expected_entry in _phase558_superseded_strict.items():
+    _matches = _strict_after_phase532_by_word.get(_word, [])
+    if len(_matches) != 1 or _matches[0] != _expected_entry:
+        raise ValueError(
+            f'Phase 558 superseded strict entry missing/drifted: {_word!r}'
+        )
+    _phase558_present_supersessions.add(_word)
+if PHASE558_FORMAL:
+    strict_gold_fixes = [
+        entry for entry in strict_gold_fixes
+        if entry.get('w') not in _phase558_superseded_strict
+    ]
+if _phase558_present_supersessions != set(_phase558_superseded_strict):
+    raise ValueError('Phase 558 strict supersession scope drift')
 scope_path=os.path.join(
     os.path.dirname(__file__), '_no_worsening_scope_manifest.json',
 )
@@ -622,6 +656,45 @@ for _surface, _spec in _phase532_managed_items:
             f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
         )
 
+_phase558_expected_corrections = {}
+_phase558_managed_items = (
+    phase558_managed_morph_targets().items() if PHASE558_FORMAL else ()
+)
+for _surface, _spec in _phase558_managed_items:
+    _context_key = _spec.get('ruby_context_annotation')
+    _expected = make_correction(
+        _spec['target'], ruby_track_only=True,
+        ruby_context_annotation=_context_key,
+    )
+    if (
+        _expected is None
+        or 'ne' in _expected['suffixes']
+        or 'word_boundary' not in _expected['suffixes']
+        or 'ruby_track_only' not in _expected['suffixes']
+        or f'ruby_context_annotation:{_context_key}'
+        not in _expected['suffixes']
+        or not set(_NOMINAL) & set(_expected['suffixes'])
+    ):
+        raise ValueError(
+            f'Phase 558 managed correction lost its bounded Ruby scope: '
+            f'{_surface!r}: {_expected!r}'
+        )
+    _expected_key = ('ruby_track_only', _expected['stem_nosl'])
+    if (
+        _expected['stem'] in _phase558_expected_corrections
+        or _expected['stem'] in _phase532_expected_corrections
+    ):
+        raise ValueError(
+            f'Phase 558 managed stem duplicated: {_expected["stem"]!r}'
+        )
+    _phase558_expected_corrections[_expected['stem']] = _expected
+    _actual = corrs.get(_expected_key)
+    if _actual != _expected:
+        raise ValueError(
+            'Phase 558 managed correction missing or merged: '
+            f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
+        )
+
 # These four reviewed stems resolve equal-length prefix/suffix competitions
 # that used to choose different decompositions by annotation language.  Keep
 # their full productive paradigms explicit: future gold drift must not silently
@@ -826,6 +899,7 @@ def prepare_settings(settings_path):
             stem for stem, expected in _phase532_expected_corrections.items()
             if expected['ruby_track_only']
         ),
+        *_phase558_expected_corrections,
     }
     if (
         {row[0] for row in _ruby_track_rows}
@@ -843,6 +917,10 @@ def prepare_settings(settings_path):
         elif _row[0] in _phase532_expected_corrections:
             _expected_actions = set(
                 _phase532_expected_corrections[_row[0]]['suffixes']
+            )
+        elif _row[0] in _phase558_expected_corrections:
+            _expected_actions = set(
+                _phase558_expected_corrections[_row[0]]['suffixes']
             )
         else:
             _entry = _strict_ruby_track_entries[_row[0]]
@@ -878,13 +956,24 @@ def prepare_settings(settings_path):
         row for row in settings
         if isinstance(row, list) and len(row) == 3 and 'ruby_only' in row[2]
     ]
-    if (
-        len(_ruby_only_rows) != 1
-        or _ruby_only_rows[0][0] != 'promil/o'
-        or set(_ruby_only_rows[0][2]) != {
+    _expected_ruby_only_rows = {
+        'promil/o': {
             'ne', 'word_boundary', 'case_sensitive',
             'typed_roles:RL', 'ruby_only',
-        }
+        },
+    }
+    if PHASE558_FORMAL:
+        for _surface, _spec in phase558_typed_exact_targets().items():
+            _expected_ruby_only_rows[_spec['target']] = {
+                'ne', 'word_boundary', 'case_sensitive',
+                f"typed_roles:{_spec['typed_roles']}", 'ruby_only',
+            }
+    _actual_ruby_only_rows = {
+        row[0]: set(row[2]) for row in _ruby_only_rows
+    }
+    if (
+        len(_actual_ruby_only_rows) != len(_ruby_only_rows)
+        or _actual_ruby_only_rows != _expected_ruby_only_rows
         or any(
             'ruby_only' in row[2]
             and (
@@ -900,7 +989,9 @@ def prepare_settings(settings_path):
             if isinstance(row, list) and len(row) == 3
         )
     ):
-        raise ValueError(f'5E Ruby-only promil setting drift: {_ruby_only_rows!r}')
+        raise ValueError(
+            f'Ruby-only exact setting drift: {_ruby_only_rows!r}'
+        )
     return settings, removed
 
 def prepare_candidate(key):
@@ -939,6 +1030,104 @@ def write_prepared_candidate(prepared):
     # pretty-print は数百万行の無意味な diff と中間失敗時の肥大化を生む。
     atomic_json_dump(DATA+FINAL, combined)
     print(f"  [{key}] 除去{removed} 追加{len(corrs)} → 書込完了")
+
+
+def write_all_prepared_candidates(prepared_by_key, *, replace=os.replace):
+    """Stage all six files, then replace them with rollback-on-error.
+
+    A filesystem cannot atomically rename files across the three app
+    directories.  Staging every settings/payload file before the first
+    replace and retaining same-directory rollback copies nevertheless avoids
+    the ordinary partial-write failure mode.  Persisted three-language gates
+    still run after the separate post-regeneration fixer.
+    """
+    if set(prepared_by_key) != {'ZH', 'KO', 'JP'}:
+        raise ValueError('three-language prepared candidate scope drift')
+    staged = []
+    rollbacks = []
+    replaced = []
+    try:
+        for key in ('ZH', 'KO', 'JP'):
+            prepared = prepared_by_key[key]
+            settings_path = lp(prepared['settings_path'])
+            payload_path = lp(prepared['data_dir'] + FINAL)
+            rows = (
+                (settings_path, prepared['settings'], 1, 'settings'),
+                (payload_path, prepared['combined'], None, 'payload'),
+            )
+            for destination, value, indent, label in rows:
+                stage = destination + '.phase558_staged'
+                rollback = destination + '.phase558_rollback'
+                if os.path.exists(stage) or os.path.exists(rollback):
+                    raise ValueError(
+                        f'stale Phase 558 transaction file: {destination}'
+                    )
+                # Register the path before writing so even a failed/partial
+                # stage dump is removed by the transaction cleanup below.
+                staged.append((stage, destination, key, label))
+                atomic_json_dump(stage, value, indent=indent)
+                with open(stage, encoding='utf-8') as staged_stream:
+                    staged_value = json.load(staged_stream)
+                    # ``generate`` may retain tuples in memory whereas JSON
+                    # necessarily restores them as arrays/lists.  Compare the
+                    # canonical JSON meaning, not Python container types.
+                    encoder = json.JSONEncoder(
+                        ensure_ascii=False,
+                        sort_keys=True,
+                        separators=(',', ':'),
+                    )
+                    expected_hash = hashlib.sha256()
+                    staged_hash = hashlib.sha256()
+                    for chunk in encoder.iterencode(value):
+                        expected_hash.update(chunk.encode('utf-8'))
+                    for chunk in encoder.iterencode(staged_value):
+                        staged_hash.update(chunk.encode('utf-8'))
+                    if staged_hash.digest() != expected_hash.digest():
+                        raise ValueError(
+                            f'Phase 558 staged JSON drift: {destination}'
+                        )
+                    del staged_value
+                rollbacks.append((rollback, destination))
+                # Register the rollback path before the copy.  The durable
+                # copy replaces its target before performing the final size
+                # check, so a post-replace validation error must still leave
+                # the artifact inside this transaction's cleanup scope.
+                atomic_binary_copy(destination, rollback)
+            atomic_file_copy(
+                settings_path,
+                settings_path + '.bak_preTier' + str(TIER) + 'confirmed',
+            )
+        for stage, destination, _key, _label in staged:
+            replace(stage, destination)
+            replaced.append(destination)
+    except Exception:
+        rollback_errors = []
+        for rollback, destination in rollbacks:
+            try:
+                if destination in replaced and os.path.exists(rollback):
+                    replace(rollback, destination)
+                elif os.path.exists(rollback):
+                    os.remove(rollback)
+            except Exception as error:
+                rollback_errors.append((destination, repr(error)))
+        for stage, _destination, _key, _label in staged:
+            if os.path.exists(stage):
+                os.remove(stage)
+        if rollback_errors:
+            raise RuntimeError(
+                f'Phase 558 three-language rollback failed: {rollback_errors!r}'
+            )
+        raise
+    else:
+        for rollback, _destination in rollbacks:
+            if os.path.exists(rollback):
+                os.remove(rollback)
+        for key in ('ZH', 'KO', 'JP'):
+            prepared = prepared_by_key[key]
+            print(
+                f"  [{key}] 除去{prepared['removed']} 追加{len(corrs)} "
+                "→ 三言語transaction書込完了"
+            )
 
 
 def process(key, write):
@@ -1014,6 +1203,20 @@ if WRITE:
             f"{_phase532_runtime_report['signature_manifest_sha256']}",
             flush=True,
         )
-    for _key in ('ZH', 'KO', 'JP'):
-        write_prepared_candidate(_prepared_candidates[_key])
+    if PHASE558_FORMAL:
+        _phase558_runtime_report = validate_phase558_generated_payloads({
+            'JA': _prepared_candidates['JP']['combined'],
+            'ZH': _prepared_candidates['ZH']['combined'],
+            'KO': _prepared_candidates['KO']['combined'],
+        }, 'post-regen')
+        print(
+            "[Phase 558 Ruby overlay runtime gate] PASS: "
+            f"surfaces={_phase558_runtime_report['surfaces']} "
+            f"3lang_mismatch="
+            f"{_phase558_runtime_report['trilingual_mismatches']} "
+            f"signature_sha256="
+            f"{_phase558_runtime_report['signature_manifest_sha256']}",
+            flush=True,
+        )
+    write_all_prepared_candidates(_prepared_candidates)
     print("\n3アプリ書込完了")

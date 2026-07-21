@@ -7231,6 +7231,20 @@
   "ruby_track_only": true
  },
  {
+  "w": "kateĥismo",
+  "target": "kateĥism/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase558-ruby:kateĥism",
+  "ruby_track_only": true
+ },
+ {
+  "w": "kateĥisto",
+  "target": "kateĥist/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase558-ruby:kateĥist",
+  "ruby_track_only": true
+ },
+ {
   "w": "bonaero",
   "target": "bonaer/o",
   "corpus_managed": true,
@@ -8175,6 +8189,36 @@
   "case_sensitive": true,
   "corpus_managed": true,
   "fake_coarse_5e_transition_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "magnetito",
+  "target": "magnetit/o",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "Izraelio",
+  "target": "Izrael/io",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "tia-tia",
+  "target": "tia/-/tia",
+  "typed_roles": "RLR",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
   "ruby_only": true
  },
  {

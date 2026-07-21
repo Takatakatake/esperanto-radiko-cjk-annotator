@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Fast unit checks for the no-worsening reference normalizer."""
 from pathlib import Path
-import importlib
 import sys
 import tempfile
 import unittest
@@ -30,32 +29,15 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
             current,
         ))
 
-    def test_historical_overlay_render_switches_generic_helper_by_app_path(self):
+    def test_identical_runtime_code_has_identical_full_and_data_only_delta(self):
+        """A swallowed sibling-import error must not create fake full deltas."""
         class FakeRuntime:
             @staticmethod
             def orchestrate_comprehensive_esperanto_text_replacement(
                 text, _skip, _local, _capture, _global, _two, _format,
             ):
-                return text
-
-        class LazyHistoricalOverlay:
-            seen_markers = []
-
-            @staticmethod
-            def merge_overlay(global_rules, _baseline_entries):
-                return global_rules
-
-            @classmethod
-            def autofix_render(
-                cls, text, skip, local, capture, global_rules, two, fmt,
-                _data_dir, _mode, orchestrate,
-            ):
-                helper = importlib.import_module(
-                    "esp_replacement_json_make_module"
-                )
-                cls.seen_markers.append(helper.MARKER)
-                return orchestrate(
-                    text, skip, local, capture, global_rules, two, fmt,
+                return text.replace(
+                    "belo", "b<ruby>el<rt>x</rt></ruby>o",
                 )
 
         payload = {
@@ -63,36 +45,103 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
             "localized_string": [],
             "replacements_list_for_2char": [],
         }
-        previous_path = list(sys.path)
-        previous_helper = sys.modules.get("esp_replacement_json_make_module")
-        try:
-            with tempfile.TemporaryDirectory() as temporary_directory:
-                root = Path(temporary_directory)
-                for marker in ("JA", "ZH", "KO"):
-                    app_dir = root / f"App-{marker}"
-                    app_dir.mkdir()
-                    (app_dir / "app_data").mkdir()
-                    (app_dir / "esp_replacement_json_make_module.py").write_text(
-                        f"MARKER = {marker!r}\n", encoding="utf-8"
-                    )
-                    # This is the explicit activation performed immediately
-                    # before each historical-overlay render in evaluate_language.
-                    audit.load_app_replacement_helper(app_dir)
-                    audit.render_signatures(
-                        FakeRuntime, app_dir, payload, ["vorto"], 1,
-                        placeholder_lists=([], []),
-                        overlay=LazyHistoricalOverlay,
-                        corrections=[],
-                    )
-            self.assertEqual(
-                LazyHistoricalOverlay.seen_markers, ["JA", "ZH", "KO"]
+        overlay_source = b'''\
+import importlib.util
+import os
+
+def _replacement_helper():
+    path = os.path.join(os.path.dirname(__file__), "esp_replacement_json_make_module.py")
+    spec = importlib.util.spec_from_file_location("synthetic_first_char_helper", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+def merge_overlay(global_rules, _entries):
+    return global_rules
+
+def auto_overlay_entries(html, _data_dir, _mode):
+    try:
+        return _replacement_helper().repair_first_char(html)
+    except Exception:
+        return None
+
+def autofix_render(text, ps, local, capture, global_rules, two, fmt,
+                   data_dir, mode, orchestrate):
+    first = orchestrate(text, ps, local, capture, global_rules, two, fmt)
+    return auto_overlay_entries(first, data_dir, mode) or first
+'''
+        helper_source = b'''\
+def repair_first_char(html):
+    return html.replace(
+        "b<ruby>el<rt>x</rt></ruby>o",
+        "<ruby>bel<rt>x</rt></ruby>o",
+    )
+'''
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            app_dir = root / "App"
+            app_dir.mkdir()
+            (app_dir / "app_data").mkdir()
+            (app_dir / "esp_overlay_module.py").write_bytes(overlay_source)
+            (app_dir / "esp_replacement_json_make_module.py").write_bytes(
+                helper_source
             )
-        finally:
-            sys.path[:] = previous_path
-            if previous_helper is None:
-                sys.modules.pop("esp_replacement_json_make_module", None)
-            else:
-                sys.modules["esp_replacement_json_make_module"] = previous_helper
+            current_overlay = audit.overlay_module(app_dir, "JA")
+
+            head_sources = {
+                "App/esp_overlay_module.py": overlay_source,
+                "App/esp_replacement_json_make_module.py": helper_source,
+            }
+            with (
+                mock.patch.object(audit, "ROOT", root),
+                mock.patch.object(
+                    audit, "load_head_bytes",
+                    side_effect=lambda relative, _revision: head_sources[
+                        relative.as_posix()
+                    ],
+                ),
+            ):
+                historical_overlay, _fingerprints = audit.head_overlay_module(
+                    app_dir, "JA", "HEAD", root / "App-head",
+                )
+
+            common = dict(
+                module=FakeRuntime,
+                app_dir=app_dir,
+                payload=payload,
+                surfaces=["belo"],
+                batch_size=1,
+                placeholder_lists=([], []),
+                corrections=[],
+            )
+            data_isolated_baseline = audit.render_signatures(
+                overlay=current_overlay, **common,
+            )
+            comprehensive_baseline = audit.render_signatures(
+                overlay=historical_overlay, **common,
+            )
+            current = audit.render_signatures(
+                overlay=current_overlay, **common,
+            )
+        expected_signature = current["belo"]["signature"]
+        cases = {
+            "synthetic": {
+                "surface": "belo",
+                "signature": expected_signature,
+                "expected": "bel/o",
+                "sources": {"synthetic": 1},
+            },
+        }
+        data_delta = audit.compare_outputs(
+            "JA", "data_isolated", data_isolated_baseline, current,
+            cases, ["belo"],
+        )["signature_changes"]
+        full_delta = audit.compare_outputs(
+            "JA", "comprehensive", comprehensive_baseline, current,
+            cases, ["belo"],
+        )["signature_changes"]
+        self.assertEqual(full_delta, data_delta)
+        self.assertEqual(full_delta, [])
 
     def test_current_fingerprint_tracks_the_kanji_csv_used_by_overlay(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -128,25 +177,19 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
     def test_head_overlay_data_is_materialized_from_git_not_worktree(self):
         class FakeOverlay:
             KANJI_CSV = "kanji.csv"
-
-            @staticmethod
-            def _ruby_csv(_data_dir):
-                return "ruby.csv"
+            _LANG_CSV = {"app": "ruby.csv"}
 
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
             app_dir = root / "App"
             data_dir = app_dir / "app_data"
             data_dir.mkdir(parents=True)
-            code_path = app_dir / "esp_replacement_json_make_module.py"
-            code_path.write_bytes(b"same\r\ncode\r\n")
             # These working-tree bytes intentionally differ from HEAD.
             (data_dir / "char_widths.json").write_bytes(b"current-widths")
             (data_dir / "ruby.csv").write_bytes(b"current-ruby")
             (data_dir / "kanji.csv").write_bytes(b"current-kanji")
             isolated = root / "isolated"
             head_bytes = {
-                "App/esp_replacement_json_make_module.py": b"same\ncode\n",
                 "App/app_data/char_widths.json": b"head-widths",
                 "App/app_data/ruby.csv": b"head-ruby",
                 "App/app_data/kanji.csv": b"head-kanji",
@@ -168,35 +211,58 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
             )
             self.assertEqual((isolated / "ruby.csv").read_bytes(), b"head-ruby")
             self.assertEqual((isolated / "kanji.csv").read_bytes(), b"head-kanji")
-            self.assertEqual(len(fingerprints), 4)
+            self.assertEqual(len(fingerprints), 3)
 
-    def test_head_overlay_code_dependency_must_still_match_head(self):
-        class FakeOverlay:
-            KANJI_CSV = "kanji.csv"
-
-            @staticmethod
-            def _ruby_csv(_data_dir):
-                return "ruby.csv"
-
+    def test_head_overlay_and_sibling_helper_are_exact_real_files(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
             app_dir = root / "App"
-            (app_dir / "app_data").mkdir(parents=True)
+            app_dir.mkdir()
+            (app_dir / "esp_overlay_module.py").write_bytes(b"worktree-overlay")
             (app_dir / "esp_replacement_json_make_module.py").write_bytes(
-                b"working-tree-code"
+                b"worktree-helper"
             )
+            overlay_source = b'''\
+import importlib.util
+import os
+def helper_marker():
+    path = os.path.join(os.path.dirname(__file__), "esp_replacement_json_make_module.py")
+    spec = importlib.util.spec_from_file_location("exact_head_helper", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.MARKER
+'''
+            helper_source = b'MARKER = "HEAD"\n'
+            sources = {
+                "App/esp_overlay_module.py": overlay_source,
+                "App/esp_replacement_json_make_module.py": helper_source,
+            }
+            isolated = root / "isolated-App"
             with (
                 mock.patch.object(audit, "ROOT", root),
                 mock.patch.object(
-                    audit, "load_head_bytes", return_value=b"head-code"
+                    audit, "load_head_bytes",
+                    side_effect=lambda relative, _revision: sources[
+                        relative.as_posix()
+                    ],
                 ),
             ):
-                with self.assertRaisesRegex(
-                    ValueError, "HEAD overlay code dependency differs"
-                ):
-                    audit.materialize_head_overlay_dependencies(
-                        app_dir, FakeOverlay, "HEAD", root / "isolated",
-                    )
+                module, fingerprints = audit.head_overlay_module(
+                    app_dir, "JA", "HEAD", isolated,
+                )
+            self.assertEqual(module.helper_marker(), "HEAD")
+            self.assertEqual(Path(module.__file__).resolve(), (
+                isolated / "esp_overlay_module.py"
+            ).resolve())
+            self.assertEqual(
+                (isolated / "esp_overlay_module.py").read_bytes(),
+                overlay_source,
+            )
+            self.assertEqual(
+                (isolated / "esp_replacement_json_make_module.py").read_bytes(),
+                helper_source,
+            )
+            self.assertEqual(len(fingerprints), 2)
 
     def test_internal_an_is_ruby_but_adjective_accusative_is_bare(self):
         self.assertEqual(
@@ -639,6 +705,19 @@ class ExpectedPiecePolicyTests(unittest.TestCase):
         )
         self.assertTrue(result["gate"])
         self.assertEqual(result["regression_cases"], [])
+        self.assertEqual(result["signature_changes"], [{
+            "surface": "Temis",
+            "baseline": "Temis",
+            "baseline_typed": "R:Temis",
+            "baseline_signature": audit.signature_payload(name),
+            "current": "Tem/is",
+            "current_typed": "R:Tem|R:is",
+            "current_signature": audit.signature_payload(verb),
+        }])
+        current_only = audit.compare_outputs(
+            "JA", "current_only", current, current, cases, ["Temis"]
+        )
+        self.assertNotIn("signature_changes", current_only)
 
     def test_deployed_strand_autofix_is_applied_only_to_initial_consonant(self):
         class FakeOverlay:

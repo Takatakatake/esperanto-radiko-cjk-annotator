@@ -12,6 +12,7 @@ import subprocess
 import sys
 import types
 import unittest
+from unittest import mock
 import tempfile
 
 
@@ -26,8 +27,11 @@ import build_fake_coarse_phase511_transition_review as phase511_review
 import check_multilingual_structure as multilingual_structure
 import check_kanji_structure as kanji_structure
 import fix_ruby_postregen as postregen
+import build_word_anno_boundary_manifest as word_anno_boundary
 from gold_snapshot import consistent_snapshot
 import phase532_ruby_policy as phase532_policy
+import phase558_ruby_overlay as phase558_policy
+import phase558_ruby_overlay_activation as phase558_activation
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
@@ -855,16 +859,17 @@ class GenerationRuleTests(unittest.TestCase):
         self.assertIn("--monitor-only", fast)
         self.assertIn("if mism:", fast)
 
-    def test_phase532_permission_gate_precedes_first_writer(self):
+    def test_phase532_repeat_permission_gate_precedes_first_writer(self):
         pipeline = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
-        pre_gate = "'--mode', 'pre-regen', '--deployed'"
+        permission_gate = "'--mode', phase532_deployed_mode, '--deployed'"
         first_writer = (
             "'apply_corpus_word_anno.py'), '--write'"
         )
-        self.assertEqual(pipeline.count(pre_gate), 1)
+        self.assertIn('phase532_deployed_mode = "post-regen"', pipeline)
+        self.assertEqual(pipeline.count(permission_gate), 1)
         self.assertEqual(pipeline.count(first_writer), 1)
         self.assertLess(
-            pipeline.index(pre_gate), pipeline.index(first_writer),
+            pipeline.index(permission_gate), pipeline.index(first_writer),
             "Phase 532 permission gate must run before the first writer",
         )
 
@@ -2466,8 +2471,25 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     if isinstance(row, list) and len(row) == 3
                     and "ruby_only" in row[2]
                 ]
-                self.assertEqual(len(ruby_only_rows), 1, language)
-                self.assertEqual(ruby_only_rows[0][0], "promil/o")
+                self.assertTrue(
+                    phase558_activation.phase558_ruby_overlay_active()
+                )
+                phase558_ruby_only = {
+                    spec["target"]
+                    for spec in phase558_policy.typed_exact_targets().values()
+                }
+                self.assertEqual(phase558_ruby_only, {
+                    "magnetit/o", "Izrael/io", "tia/-/tia",
+                })
+                self.assertEqual(
+                    {row[0] for row in ruby_only_rows},
+                    {"promil/o", *phase558_ruby_only},
+                    language,
+                )
+                for row in ruby_only_rows:
+                    self.assertIn("word_boundary", row[2])
+                    self.assertIn("case_sensitive", row[2])
+                    self.assertIn("ruby_only", row[2])
                 ruby_track_rows = [
                     row for row in settings
                     if isinstance(row, list) and len(row) == 3
@@ -2495,11 +2517,19 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 expected_phase532_ruby_track = (
                     phase532_ruby_track if _phase532_scope_adopted() else set()
                 )
+                phase558_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in phase558_policy.managed_morph_targets().values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(
+                    phase558_ruby_track, {"kateĥism", "kateĥist"}
+                )
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
                     {
                         "novjork/an", *strict_ruby_track,
-                        *expected_phase532_ruby_track,
+                        *expected_phase532_ruby_track, *phase558_ruby_track,
                     },
                 )
                 for row in ruby_track_rows:
@@ -2509,7 +2539,9 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                             ending in row[2] for ending in _PARADIGM_ENDINGS
                         ))
                         continue
-                    if row[0] in expected_phase532_ruby_track:
+                    if row[0] in (
+                        expected_phase532_ruby_track | phase558_ruby_track
+                    ):
                         self.assertIn("word_boundary", row[2])
                         self.assertIn("ruby_track_only", row[2])
                         self.assertTrue(any(
@@ -3196,6 +3228,183 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 )
                 del payload, global_rules, local_rules, two_char_rules
                 gc.collect()
+
+
+class Phase558TransactionTests(unittest.TestCase):
+    @staticmethod
+    def _failing_second_stage_replace():
+        state = {"stages": 0, "failed": False}
+
+        def replace(source, destination):
+            source_name = Path(source).name
+            if "staged" in source_name and not state["failed"]:
+                state["stages"] += 1
+                if state["stages"] == 2:
+                    state["failed"] = True
+                    raise OSError("injected second-stage replace failure")
+            os.replace(source, destination)
+
+        return replace
+
+    def test_annotation_transaction_rolls_back_exact_bytes(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            destinations = [root / f"annotation-{index}.json" for index in range(3)]
+            originals = {}
+            for index, destination in enumerate(destinations):
+                raw = (f'{{"old":{index}}}\n').encode("utf-8")
+                destination.write_bytes(raw)
+                originals[destination] = raw
+            rows = [
+                (destination, {"new": index}, 1)
+                for index, destination in enumerate(destinations)
+            ]
+            with self.assertRaisesRegex(OSError, "injected"):
+                corpus_data.transactional_json_writes(
+                    rows, replace=self._failing_second_stage_replace(),
+                )
+            self.assertEqual(
+                {path: path.read_bytes() for path in destinations}, originals,
+            )
+            self.assertEqual(list(root.glob("*.phase558_*")), [])
+
+    def test_postregen_transaction_rolls_back_exact_bytes(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            destinations = [root / f"payload-{index}.json" for index in range(3)]
+            originals = {}
+            for index, destination in enumerate(destinations):
+                raw = (f'{{"old":{index}}}\n').encode("utf-8")
+                destination.write_bytes(raw)
+                originals[destination] = raw
+            prepared = [
+                (destination, {"new": index}, index)
+                for index, destination in enumerate(destinations)
+            ]
+            with self.assertRaisesRegex(OSError, "injected"):
+                postregen.transactional_payload_writes(
+                    prepared, replace=self._failing_second_stage_replace(),
+                )
+            self.assertEqual(
+                {path: path.read_bytes() for path in destinations}, originals,
+            )
+            self.assertEqual(list(root.glob("*.phase558_*")), [])
+
+    def test_annotation_stage_dump_failure_leaves_no_transaction_artifact(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            destination = root / "annotation.json"
+            original = b'{"preserved":true}\n'
+            destination.write_bytes(original)
+
+            def create_stage_then_fail(path, _value, **_kwargs):
+                Path(path).write_bytes(b'{"partial":')
+                raise OSError("injected annotation stage dump failure")
+
+            with mock.patch.object(
+                corpus_data, "atomic_json_dump",
+                side_effect=create_stage_then_fail,
+            ):
+                with self.assertRaisesRegex(OSError, "stage dump failure"):
+                    corpus_data.transactional_json_writes([
+                        (destination, {"new": 1}, 1),
+                    ])
+            self.assertEqual(destination.read_bytes(), original)
+            self.assertEqual(list(root.glob("*.phase558_*")), [])
+
+    def test_postregen_stage_dump_failure_leaves_no_transaction_artifact(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            destination = root / "payload.json"
+            original = b'{"preserved":true}\n'
+            destination.write_bytes(original)
+
+            def create_stage_then_fail(path, _value, **_kwargs):
+                Path(path).write_bytes(b'{"partial":')
+                raise OSError("injected postregen stage dump failure")
+
+            with mock.patch.object(
+                postregen, "atomic_json_dump",
+                side_effect=create_stage_then_fail,
+            ):
+                with self.assertRaisesRegex(OSError, "stage dump failure"):
+                    postregen.transactional_payload_writes([
+                        (destination, {"new": 1}, 1),
+                    ])
+            self.assertEqual(destination.read_bytes(), original)
+            self.assertEqual(list(root.glob("*.phase558_*")), [])
+
+    def test_confirmed_postcopy_validation_failure_is_cleaned(self):
+        """Exercise the transaction function without importing its CLI body."""
+        source_path = HERE / "apply_confirmed_now.py"
+        parsed = ast.parse(source_path.read_text(encoding="utf-8"))
+        function = next(
+            node for node in parsed.body
+            if isinstance(node, ast.FunctionDef)
+            and node.name == "write_all_prepared_candidates"
+        )
+        isolated = ast.Module(body=[function], type_ignores=[])
+        ast.fix_missing_locations(isolated)
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            prepared = {}
+            originals = {}
+            for key in ("ZH", "KO", "JP"):
+                data_dir = root / key
+                data_dir.mkdir()
+                settings = data_dir / "settings.json"
+                payload = data_dir / "payload.json"
+                settings.write_bytes(b'{"old":"settings"}\n')
+                payload.write_bytes(b'{"old":"payload"}\n')
+                originals[settings] = settings.read_bytes()
+                originals[payload] = payload.read_bytes()
+                prepared[key] = {
+                    "key": key,
+                    "settings_path": str(settings),
+                    "data_dir": str(data_dir),
+                    "settings": {"new": "settings"},
+                    "combined": {"new": "payload"},
+                    "removed": 0,
+                }
+
+            def copy_then_fail(source, destination):
+                # Model atomic_binary_copy after its os.replace but before its
+                # final size validation returns successfully.
+                Path(destination).write_bytes(Path(source).read_bytes())
+                raise OSError("injected post-copy validation failure")
+
+            namespace = {
+                "os": os,
+                "json": json,
+                "hashlib": hashlib,
+                "lp": lambda path: path,
+                "atomic_json_dump": atomic_json_dump,
+                "atomic_binary_copy": copy_then_fail,
+                "atomic_file_copy": lambda *_args, **_kwargs: None,
+                "TIER": 30,
+                "FINAL": os.sep + "payload.json",
+                "corrs": [],
+            }
+            exec(compile(isolated, str(source_path), "exec"), namespace)
+            with self.assertRaisesRegex(OSError, "post-copy validation"):
+                namespace["write_all_prepared_candidates"](prepared)
+            self.assertEqual(
+                {path: path.read_bytes() for path in originals}, originals,
+            )
+            self.assertEqual(list(root.rglob("*.phase558_*")), [])
+
+    def test_word_anno_boundary_candidate_is_checked_in_memory(self):
+        maps = {
+            language: {"radik": [["radik", language]]}
+            for language in word_anno_boundary.LANGUAGES
+        }
+        report = word_anno_boundary.build(maps)
+        self.assertEqual(report["authority_keys"], 1)
+        conflicting = {key: dict(value) for key, value in maps.items()}
+        conflicting["zh"]["radik"] = [["ra", "x"], ["dik", "y"]]
+        with self.assertRaisesRegex(ValueError, "multilingual boundary conflict"):
+            word_anno_boundary.build(conflicting)
 
 
 if __name__ == "__main__":

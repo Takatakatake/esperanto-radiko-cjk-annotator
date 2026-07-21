@@ -4,7 +4,7 @@
  - 形容詞 lama/laman/lamaj/lamajn/lame → lam+語尾 (僧lamao=ラマ僧はword_anno側)
 再生成のたびに実行: python fix_ruby_postregen.py
 """
-import json, sys, re, unicodedata
+import json, os, sys, re, unicodedata
 from pathlib import Path
 
 from atomic_json import atomic_file_copy, atomic_json_dump
@@ -141,7 +141,7 @@ def rewrite_surface_core(src, app, format_piece):
     return None
 
 
-def process_app(app):
+def prepare_app(app):
     base=ROOT / f"Esperanto-Kanji-Ruby-{app}" / "app_data"
     dep=base / "置換リスト_ルビ.json"
     with dep.open(encoding="utf-8") as stream:
@@ -173,14 +173,78 @@ def process_app(app):
             if rewritten is not None:
                 nb=leading+rewritten+trailing
                 if nb!=e[1]: e[1]=nb; n+=1
-    atomic_file_copy(dep, str(dep)+".bak_postregen")
-    atomic_json_dump(dep, d)
-    return n
+    return dep, d, n
+
+
+def transactional_payload_writes(prepared, *, replace=os.replace):
+    """Replace all three payloads as one rollback-protected transaction."""
+    staged = []
+    rollbacks = []
+    replaced = []
+    try:
+        for destination, payload, _count in prepared:
+            stage = destination.with_name(
+                destination.name + ".phase558_postregen_staged"
+            )
+            rollback = destination.with_name(
+                destination.name + ".phase558_postregen_rollback"
+            )
+            if stage.exists() or rollback.exists():
+                raise ValueError(
+                    f"stale Phase 558 postregen transaction: {destination}"
+                )
+            # Own the path before the dump begins so a writer that creates a
+            # partial stage and then raises cannot strand a stale transaction.
+            staged.append((stage, destination))
+            atomic_json_dump(stage, payload)
+            # Re-read every staged JSON before the first deployed byte changes.
+            if json.loads(stage.read_text(encoding="utf-8")) != payload:
+                raise ValueError(f"postregen staged payload drift: {destination}")
+            # Register before copy for the same reason: a copy may complete its
+            # replace and fail only in its subsequent validation.
+            rollbacks.append((rollback, destination))
+            atomic_file_copy(destination, rollback)
+        for stage, destination in staged:
+            replace(stage, destination)
+            replaced.append(destination)
+    except Exception:
+        rollback_errors = []
+        for rollback, destination in rollbacks:
+            try:
+                if destination in replaced and rollback.exists():
+                    replace(rollback, destination)
+                elif rollback.exists():
+                    rollback.unlink()
+            except Exception as error:
+                rollback_errors.append((str(destination), repr(error)))
+        for stage, _destination in staged:
+            if stage.exists():
+                stage.unlink()
+        if rollback_errors:
+            raise RuntimeError(
+                f"Phase 558 postregen rollback failed: {rollback_errors!r}"
+            )
+        raise
+    else:
+        for rollback, _destination in rollbacks:
+            if rollback.exists():
+                rollback.unlink()
+
+
+def process_app(app):
+    """Compatibility helper for a single app; formal main writes all three."""
+    prepared = prepare_app(app)
+    transactional_payload_writes([prepared])
+    return prepared[2]
 
 
 def main():
-    for app in ("JA", "ZH", "KO"):
-        print(f"[{app}] postregen fixup {process_app(app)}")
+    prepared = [prepare_app(app) for app in ("JA", "ZH", "KO")]
+    transactional_payload_writes(prepared)
+    for app, (_destination, _payload, count) in zip(
+        ("JA", "ZH", "KO"), prepared,
+    ):
+        print(f"[{app}] postregen fixup {count}")
     print("完了")
 
 
