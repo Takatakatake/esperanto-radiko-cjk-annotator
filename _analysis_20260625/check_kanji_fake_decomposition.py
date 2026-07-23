@@ -140,7 +140,7 @@ def main():
         compact_sha(final_5e_policy)
         != manifest.get("final_5e_policy_sha256")
         or manifest.get("final_5e_policy_sha256")
-        != "C21E7FA515401C1D2EDDF346B9952A1691195A242E65D336BFD8784CE977C067"
+        != "76E9772C3D0FDCBD8517FF38D1C46A4B514A728860E723BD85F0646ED0846ADE"
     ):
         raise SystemExit("final-5E promil Kanji policy drift")
     final_5e_transition = json.loads(

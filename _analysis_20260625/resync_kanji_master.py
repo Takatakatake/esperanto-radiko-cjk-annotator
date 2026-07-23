@@ -66,7 +66,11 @@ authority = {r: disp.get(r, k) for r, k in master.items()}
 print(f"正本語根: {len(authority)} (識別子込み表示形 {len(disp)})")
 
 # --- 2) 語単位: 漢字注入_学習者版 ⟦…⟧ → word_kanji ---
-GRAM = {'o','a','i','e','u','n','j','oj','on','aj','an','en','as','is','os','us'}
+# 2026-07-24 met同形異義修正(マスター裁定②案A): an/enをGRAMから除外。
+# met/an/o(メタン)のanはアルカン接尾-aneで文法語尾でない→剥がすと裸met=甲に誤爆し
+# met/i(置く)と衝突する。an/en非除去でmet/an=甲/an語幹を保持し裸metはmet/i/met/o由来=置。
+# (成員-anも城/员ᴬ等でkanji化されるのが現行マスター描画=注入版に忠実)。
+GRAM = {'o','a','i','e','u','n','j','oj','on','aj','as','is','os','us'}
 wk_new = {}
 bad = 0
 for ln in pinned_text('漢字注入_学習者版_20260620.txt').splitlines():
@@ -97,10 +101,10 @@ if bad:
         "Esperanto/Kanji piece counts"
     )
 
-# The read-only Kanji master predates the final 5E learner delta. Derive the
-# reviewed pro/mil stem locally from two already pinned root assignments; do
-# not edit or guess an external master entry. The paired transition remains
-# the authority that Ruby is coarse promil while Kanji is deep pro/mil.
+# 2026-07-24 master adjudication ③: promil's pro is Latin pro(=per), kept latin
+# like its pro/cent family; 因ᴾ(causal) was wrong.  When the injection master
+# provides pro/mil (it does), the master render wins; the locally derived 因ᴾ
+# pairs remain only as a fallback for older masters predating the 5E delta.
 _final_5e_path = os.path.join(
     BASE, '_analysis_20260625', '_fake_coarse_5e_transition_review.json',
 )
@@ -112,23 +116,27 @@ _promil_stem = '/'.join(
     piece for piece in _promil_entry['learner_decomposition'].split('/')
     if piece and piece not in GRAM
 )
-_promil_pairs = [
-    ['pro', authority.get('pro')],
-    ['mil', authority.get('mil')],
-]
-if (
-    _promil_entry.get('learner_line') != 53890
-    or _promil_stem != 'pro/mil'
-    or _promil_pairs != [['pro', '因ᴾ'], ['mil', '千']]
-):
+if _promil_entry.get('learner_line') != 53890 or _promil_stem != 'pro/mil':
     raise SystemExit(
-        f'5E promil Kanji authority drift: stem={_promil_stem!r} '
-        f'pairs={_promil_pairs!r}'
+        f'5E promil transition drift: stem={_promil_stem!r} '
+        f'entry={_promil_entry!r}'
     )
-if _promil_stem in wk_new and wk_new[_promil_stem] != _promil_pairs:
-    raise SystemExit('5E pro/mil conflicts with pinned injected word_kanji')
-wk_new[_promil_stem] = _promil_pairs
-print(f"5E reviewed word_kanji override: {_promil_stem} -> {_promil_pairs}")
+if _promil_stem in wk_new:
+    print(
+        f"5E pro/mil: injection master provides {wk_new[_promil_stem]} "
+        "(master authority; derived fallback unused)"
+    )
+else:
+    _promil_pairs = [
+        ['pro', authority.get('pro')],
+        ['mil', authority.get('mil')],
+    ]
+    if _promil_pairs != [['pro', '因ᴾ'], ['mil', '千']]:
+        raise SystemExit(
+            f'5E promil Kanji fallback authority drift: pairs={_promil_pairs!r}'
+        )
+    wk_new[_promil_stem] = _promil_pairs
+    print(f"5E reviewed word_kanji fallback: {_promil_stem} -> {_promil_pairs}")
 
 if WRITE:
     # 3) app_data CSV(3アプリ) + out/kanji_root.csv
