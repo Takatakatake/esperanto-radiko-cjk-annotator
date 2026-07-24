@@ -73,6 +73,7 @@ print(f"正本語根: {len(authority)} (識別子込み表示形 {len(disp)})")
 GRAM = {'o','a','i','e','u','n','j','oj','on','aj','as','is','os','us'}
 wk_new = {}
 bad = 0
+valid_stem_nosl = set()
 for ln in pinned_text('漢字注入_学習者版_20260620.txt').splitlines():
     m = re.match(r'^([^:⟦{]+)⟦([^⟧]+)⟧', ln.strip().lstrip('﻿'))
     if not m: continue
@@ -80,6 +81,12 @@ for ln in pinned_text('漢字注入_学習者版_20260620.txt').splitlines():
     kj = circ(m.group(2).strip())
     dp = [p for p in dec.split('/') if p]
     kp = [p for p in kj.split('/') if p]
+    # 見出しの「全部品」「末尾1部品を除く語幹」を正当キー集合に収集(第61R裁定,
+    # 複数語句見出しも含む=61R実測手順と同一)
+    if dp:
+        valid_stem_nosl.add(''.join(p.lower() for p in dp))
+        if len(dp) > 1:
+            valid_stem_nosl.add(''.join(p.lower() for p in dp[:-1]))
     if len(dp) != len(kp) or not dp: bad += 1; continue
     # 語幹化(末尾文法語尾を両列から除去)
     while dp and dp[-1].lower() in GRAM and kp[-1].lower() == dp[-1].lower():
@@ -91,6 +98,12 @@ for ln in pinned_text('漢字注入_学習者版_20260620.txt').splitlines():
     key = '/'.join(p.lower() for p in dp)
     if key in wk_new: continue  # 先勝ち(同語幹の重複派生)
     wk_new[key] = [[p.lower(), k] for p, k in zip(dp, kp)]
+# 2026-07-24 第61R裁定の恒久化: 中間語幹の過収穫防止フィルタ。
+# 例: but/an/on/o から末尾GRAM連続剥ぎで but/an が生まれると butano(語根but+ano)
+# を丁an化する誤爆になる。キーのnosl(スラッシュ除去)が正当集合(=いずれかの見出しの
+# 「全部品」or「末尾1部品を除いた語幹」)に一致するもののみ残す。
+wk_new = {k: v for k, v in wk_new.items()
+          if k.replace('/', '') in valid_stem_nosl}
 print(f"語単位(注入版→word_kanji): {len(wk_new)} (形不一致スキップ {bad})")
 print("  例:", {k: ''.join(g for _, g in v) for k, v in list(wk_new.items())[:5]})
 amp = [k for k in wk_new if k.startswith('amplifik')]
