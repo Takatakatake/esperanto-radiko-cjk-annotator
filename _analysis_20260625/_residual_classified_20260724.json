@@ -1,0 +1,675 @@
+{
+ "generated": "2026-07-24 第63R",
+ "master_injection_sha256": "D5EEA24427C340331A3BF47F7FDD8F6BAC404BAD4327F90AE8303CC2CDDD35C4",
+ "total_residual": 266,
+ "note": "第63R後の配信vs新マスター(d5eea244)残差266の全分類。app側で安全に閉じた分は完了済。以下は各々マスター側(map第2段/語根分解authority)の管轄。",
+ "hyphen_cosmetic_count": 122,
+ "map_gap_passthrough_count": 47,
+ "homograph_verb_excluded_count": 12,
+ "master_latin_fragment_count": 55,
+ "per_word_value_diff_count": 30,
+ "hyphen_cosmetic": [
+  "Hbombo",
+  "Tortilo",
+  "Tĉemizo",
+  "Ubombo",
+  "Xradioj",
+  "adenozintrifosfata",
+  "advokatkonsilanto",
+  "akvoneafina",
+  "alfadiseriĝo",
+  "alfahelico",
+  "alfakorpuskloj",
+  "alfapartikloj",
+  "ananassuko",
+  "anarkisindikatismo",
+  "astempo",
+  "avorto",
+  "aŭfunkcio",
+  "barmicvo",
+  "benzoilglicino",
+  "betadiseriĝo",
+  "cerebrospina",
+  "cinerarisenecio",
+  "dekdua",
+  "dekduo",
+  "dekkvara",
+  "dekkvina",
+  "deksesa",
+  "dektria",
+  "dentalveolsono",
+  "desegnistokartografo",
+  "diktamnorigano",
+  "disemise",
+  "dogamo",
+  "eista",
+  "eisto",
+  "eksportimporta",
+  "elibro",
+  "enspezofonto",
+  "espisto",
+  "eventoentrepreno",
+  "evorto",
+  "fajrejinaŭguro",
+  "fojefoje",
+  "folioelektroskopo",
+  "gamadiseriĝo",
+  "generalleŭtenanto",
+  "heroakomika",
+  "ieletiele",
+  "ieletrapele",
+  "imodalo",
+  "iroreiro",
+  "istempo",
+  "ivorto",
+  "kabloreto",
+  "kajfunkcio",
+  "kajligaĵo",
+  "kajsigno",
+  "kakinokodiospiro",
+  "kalaazaro",
+  "kalamakoro",
+  "keto",
+  "kontraŭmanifestacio",
+  "kulminkonferenco",
+  "lentanoviburno",
+  "lipdentosono",
+  "literacifera",
+  "litercifera",
+  "majstrojkantistoj",
+  "malvorto",
+  "mirobolanprunuso",
+  "napobrasiko",
+  "neaŭfunkcio",
+  "neesperantlingva",
+  "nefunkcio",
+  "nekajfunkcio",
+  "njoknabo",
+  "nnombraj",
+  "nro",
+  "oksidoreduktiĝo",
+  "ostempo",
+  "otorinolaringologo",
+  "ovorto",
+  "pitangeŭgenio",
+  "princoedzo",
+  "princoelektisto",
+  "rabarboreumo",
+  "rapobrasiko",
+  "romonatoj",
+  "salamotaktiko",
+  "sendricevilo",
+  "skisemajno",
+  "studentoasistanto",
+  "tempokurumo",
+  "terbutanolo",
+  "terpomfritoj",
+  "toĉemizo",
+  "tradukprogramo",
+  "umodo",
+  "unueinfektiĝo",
+  "usmodo",
+  "venuskombilskandiko",
+  "vetorajto",
+  "vidatepresote",
+  "vidatevidote",
+  "ĉiflanke",
+  "ĉifoje",
+  "ĉijara",
+  "ĉijare",
+  "ĉikune",
+  "ĉilanda",
+  "ĉimatene",
+  "ĉimomente",
+  "ĉinokte",
+  "ĉiokaze",
+  "ĉiprie",
+  "ĉirilate",
+  "ĉisemajne",
+  "ĉisube",
+  "ĉisupre",
+  "ĉitiea",
+  "ĉitieulo",
+  "ĉivespere"
+ ],
+ "map_gap_passthrough": [
+  "ac",
+  "ad",
+  "an",
+  "ant",
+  "asistolio",
+  "at",
+  "aĉ",
+  "aĵ",
+  "bio",
+  "dro",
+  "ec",
+  "ed",
+  "eg",
+  "ej",
+  "eko",
+  "em",
+  "er",
+  "esk",
+  "fic",
+  "ge",
+  "hekto",
+  "icid",
+  "id",
+  "ig",
+  "ik",
+  "il",
+  "in",
+  "int",
+  "ist",
+  "it",
+  "iv",
+  "iz",
+  "iĝ",
+  "kdo",
+  "mikro",
+  "nj",
+  "oid",
+  "oligarĥio",
+  "ont",
+  "op",
+  "ot",
+  "oz",
+  "re",
+  "roeoj",
+  "sro",
+  "uj",
+  "ul"
+ ],
+ "homograph_verb_excluded": [
+  {
+   "w": "elektrokardiografi",
+   "app": "电o心ᴷᴰo志ᴳ",
+   "master": "电o心ᴷᴰo记ᴳi"
+  },
+  {
+   "w": "fototelegrafi",
+   "app": "拍o远志ᴳ",
+   "master": "拍o远记ᴳi"
+  },
+  {
+   "w": "goniometri",
+   "app": "角ᴳo测ᴹᵀ",
+   "master": "角ᴳo计ᴹi"
+  },
+  {
+   "w": "kinematografi",
+   "app": "kinemato志ᴳ",
+   "master": "kinemato记ᴳi"
+  },
+  {
+   "w": "kronometri",
+   "app": "时ᴷo测ᴹᵀ",
+   "master": "时ᴷo计ᴹi"
+  },
+  {
+   "w": "ksilografi",
+   "app": "木ᴷo志ᴳ",
+   "master": "木ᴷo记ᴳi"
+  },
+  {
+   "w": "litografi",
+   "app": "石ᴸo志ᴳ",
+   "master": "石ᴸo记ᴳi"
+  },
+  {
+   "w": "radiografi",
+   "app": "射ᴿo志ᴳ",
+   "master": "射ᴿo记ᴳi"
+  },
+  {
+   "w": "stenografi",
+   "app": "steno志ᴳ",
+   "master": "steno记ᴳi"
+  },
+  {
+   "w": "telegrafi",
+   "app": "远志ᴳ",
+   "master": "远记ᴳi"
+  },
+  {
+   "w": "telemetri",
+   "app": "远测ᴹᵀ",
+   "master": "远计ᴹi"
+  },
+  {
+   "w": "topografi",
+   "app": "地ᵀᴾ志ᴳ",
+   "master": "地ᵀᴾ记ᴳi"
+  }
+ ],
+ "master_latin_fragment": [
+  {
+   "w": "akinezio",
+   "app": "a动ᴷᶻio",
+   "master": "无ᴬ动ᴷᶻio"
+  },
+  {
+   "w": "aktiniidoj",
+   "app": "海葵子oj",
+   "master": "aktini子oj"
+  },
+  {
+   "w": "antikodono",
+   "app": "抗ᴬ密码子o",
+   "master": "抗ᴬ码ono"
+  },
+  {
+   "w": "bibliofilio",
+   "app": "经o儿io",
+   "master": "经o爱ᶠio"
+  },
+  {
+   "w": "cikloheksanono",
+   "app": "环ᶜoheksanono",
+   "master": "环ᶜo己anono"
+  },
+  {
+   "w": "daktiloskopio",
+   "app": "枣o镜ˢᴷio",
+   "master": "指ᴰo镜ˢᴷio"
+  },
+  {
+   "w": "datumad",
+   "app": "期未対応行",
+   "master": "期um行"
+  },
+  {
+   "w": "datumant",
+   "app": "期未対応在",
+   "master": "期um在"
+  },
+  {
+   "w": "datumas",
+   "app": "期未対応as",
+   "master": "期umas"
+  },
+  {
+   "w": "datumat",
+   "app": "期未対応被",
+   "master": "期um被"
+  },
+  {
+   "w": "datumont",
+   "app": "期未対応将",
+   "master": "期um将"
+  },
+  {
+   "w": "datumos",
+   "app": "期未対応os",
+   "master": "期umos"
+  },
+  {
+   "w": "datumot",
+   "app": "期未対応待",
+   "master": "期um待"
+  },
+  {
+   "w": "demokratia",
+   "app": "民ᴰa",
+   "master": "民ᴰᴱia"
+  },
+  {
+   "w": "demokratio",
+   "app": "民ᴰo",
+   "master": "民ᴰᴱio"
+  },
+  {
+   "w": "dodekafonio",
+   "app": "十二底ᶠᴼio",
+   "master": "十二声ᶠᴼio"
+  },
+  {
+   "w": "efedrino",
+   "app": "麻黄碱o",
+   "master": "木ᴱᶠino"
+  },
+  {
+   "w": "ekzoftalmia",
+   "app": "凸眼a",
+   "master": "ekz目ᴼᶠia"
+  },
+  {
+   "w": "ekzoftalmio",
+   "app": "凸眼o",
+   "master": "ekz目ᴼᶠio"
+  },
+  {
+   "w": "filantropio",
+   "app": "儿人ᴬio",
+   "master": "爱ᶠ人ᴬio"
+  },
+  {
+   "w": "filozofia",
+   "app": "哲ᶠᴵa",
+   "master": "哲ia"
+  },
+  {
+   "w": "filozofio",
+   "app": "哲ᶠᴵo",
+   "master": "哲io"
+  },
+  {
+   "w": "gajlotanino",
+   "app": "树瘤otanino",
+   "master": "树瘤o制革ino"
+  },
+  {
+   "w": "geumi",
+   "app": "双未対応i",
+   "master": "双umi"
+  },
+  {
+   "w": "gonadostimulino",
+   "app": "性腺o激素ˢo",
+   "master": "性腺o激ˢino"
+  },
+  {
+   "w": "kacumi",
+   "app": "阳具未対応i",
+   "master": "阳具umi"
+  },
+  {
+   "w": "ketogrupo",
+   "app": "k-小o团o",
+   "master": "keto团o"
+  },
+  {
+   "w": "kirurgia",
+   "app": "外科ᴷᴵa",
+   "master": "外科ia"
+  },
+  {
+   "w": "kirurgio",
+   "app": "外科ᴷᴵo",
+   "master": "外科io"
+  },
+  {
+   "w": "kodono",
+   "app": "密码子o",
+   "master": "码ono"
+  },
+  {
+   "w": "kontraŭkodono",
+   "app": "对密码子o",
+   "master": "对码ono"
+  },
+  {
+   "w": "kseroftalmio",
+   "app": "干目o",
+   "master": "干ᴷ目ᴼᶠio"
+  },
+  {
+   "w": "monarkio",
+   "app": "君主ᴹᴵo",
+   "master": "君主io"
+  },
+  {
+   "w": "monarĥio",
+   "app": "君主ᴹᴼo",
+   "master": "君主ᴹᴴ̂io"
+  },
+  {
+   "w": "nekrofilio",
+   "app": "死ᴺo儿io",
+   "master": "死ᴺo爱ᶠio"
+  },
+  {
+   "w": "neŭrokirurgio",
+   "app": "神经ᴺᵁ̆o外科ᴷᴵo",
+   "master": "神经ᴺᵁ̆o外科io"
+  },
+  {
+   "w": "otoskopio",
+   "app": "待o镜ˢᴷio",
+   "master": "耳ᴼᵀo镜ˢᴷio"
+  },
+  {
+   "w": "pedofilio",
+   "app": "童ᴾ儿io",
+   "master": "童ᴾ爱ᶠio"
+  },
+  {
+   "w": "polifonia",
+   "app": "多ᴾ底ᶠᴼia",
+   "master": "多ᴾ声ᶠᴼia"
+  },
+  {
+   "w": "polifonio",
+   "app": "多ᴾ底ᶠᴼio",
+   "master": "多ᴾ声ᶠᴼio"
+  },
+  {
+   "w": "pseŭdoefedrino",
+   "app": "伪ᴾ麻黄碱o",
+   "master": "伪ᴾ木ᴱᶠino"
+  },
+  {
+   "w": "psikokirurgio",
+   "app": "心ᴾˢo外科ᴷᴵo",
+   "master": "心ᴾˢo外科io"
+  },
+  {
+   "w": "radiotelefonio",
+   "app": "射ᴿo远底ᶠᴼio",
+   "master": "射ᴿo远声ᶠᴼio"
+  },
+  {
+   "w": "rastrumero",
+   "app": "锄未対応粒o",
+   "master": "锄um粒o"
+  },
+  {
+   "w": "rozanilino",
+   "app": "玫anilino",
+   "master": "玫草ᴬᴵino"
+  },
+  {
+   "w": "sesdeknaŭumi",
+   "app": "六十九未対応i",
+   "master": "六十九umi"
+  },
+  {
+   "w": "skopofilio",
+   "app": "镜ˢᴷo儿io",
+   "master": "镜ˢᴷo爱ᶠio"
+  },
+  {
+   "w": "stereofonia",
+   "app": "立体底ᶠᴼia",
+   "master": "立体声ᶠᴼia"
+  },
+  {
+   "w": "stereofonio",
+   "app": "立体底ᶠᴼio",
+   "master": "立体声ᶠᴼio"
+  },
+  {
+   "w": "stimulino",
+   "app": "激素ˢo",
+   "master": "激ˢino"
+  },
+  {
+   "w": "tiroidstimulino",
+   "app": "甲状激素ˢo",
+   "master": "甲状激ˢino"
+  },
+  {
+   "w": "tuberkulinizado",
+   "app": "结核素化行o",
+   "master": "结ᵀin化行o"
+  },
+  {
+   "w": "tuberkulino",
+   "app": "结核素o",
+   "master": "结ᵀino"
+  },
+  {
+   "w": "tujono",
+   "app": "即分o",
+   "master": "侧柏ono"
+  },
+  {
+   "w": "tutEŭropa",
+   "app": "整未対応a",
+   "master": "整Eŭropa"
+  }
+ ],
+ "per_word_value_diff": [
+  {
+   "w": "aneksito",
+   "app": "并ᴬ受o",
+   "master": "并ᴬ炎ᵀo"
+  },
+  {
+   "w": "ator",
+   "app": "a环ᵀ",
+   "master": "具ᴬ"
+  },
+  {
+   "w": "centi",
+   "app": "百i",
+   "master": "厘"
+  },
+  {
+   "w": "debato",
+   "app": "从打o",
+   "master": "辩ᴰo"
+  },
+  {
+   "w": "deoksi",
+   "app": "de氧",
+   "master": "从氧"
+  },
+  {
+   "w": "diazotato",
+   "app": "二ᴰᴵ氮ᴬ被o",
+   "master": "二ᴰᴵ氮ᴬ盐ᴬo"
+  },
+  {
+   "w": "gami",
+   "app": "阶ᴳi",
+   "master": "配ᴳ"
+  },
+  {
+   "w": "gastronomia",
+   "app": "g星ᴬo学ᴺa",
+   "master": "胃ᴳo学ᴺa"
+  },
+  {
+   "w": "gastronomio",
+   "app": "g星ᴬo学ᴺo",
+   "master": "胃ᴳo学ᴺo"
+  },
+  {
+   "w": "gastronomo",
+   "app": "g星ᴬo学ᴺᴼo",
+   "master": "胃ᴳo学ᴺᴼo"
+  },
+  {
+   "w": "glugluglu",
+   "app": "gluglu胶",
+   "master": "胶胶胶"
+  },
+  {
+   "w": "kanalizi",
+   "app": "k析i",
+   "master": "渠化i"
+  },
+  {
+   "w": "kromiato",
+   "app": "金ᴷᴿ被o",
+   "master": "金ᴷᴿ盐ᴬo"
+  },
+  {
+   "w": "magnetito",
+   "app": "磁受o",
+   "master": "磁铁矿o"
+  },
+  {
+   "w": "mega",
+   "app": "m巨a",
+   "master": "百万ᴹᴳ"
+  },
+  {
+   "w": "mikot",
+   "app": "mi泥",
+   "master": "菌ᴹᴵ"
+  },
+  {
+   "w": "morf",
+   "app": "m孤",
+   "master": "形ᴹ"
+  },
+  {
+   "w": "nukleono",
+   "app": "核ᴺono",
+   "master": "核ᴺ子ᴼo"
+  },
+  {
+   "w": "platenato",
+   "app": "白金被o",
+   "master": "白金盐ᴬo"
+  },
+  {
+   "w": "pliolunu",
+   "app": "更ol一",
+   "master": "更比一"
+  },
+  {
+   "w": "plumbato",
+   "app": "铅被o",
+   "master": "铅盐ᴬo"
+  },
+  {
+   "w": "plumbito",
+   "app": "铅受o",
+   "master": "铅盐ᴵo"
+  },
+  {
+   "w": "prigardi",
+   "app": "p看i",
+   "master": "于守i"
+  },
+  {
+   "w": "pseŭdo",
+   "app": "伪ᴾˢo",
+   "master": "伪ᴾ"
+  },
+  {
+   "w": "sinsekvo",
+   "app": "怀随o",
+   "master": "己n随o"
+  },
+  {
+   "w": "stomi",
+   "app": "s切ᵀᴹ",
+   "master": "漏ˢ"
+  },
+  {
+   "w": "sukerato",
+   "app": "糖被o",
+   "master": "糖盐ᴬo"
+  },
+  {
+   "w": "tele",
+   "app": "t木ᴱᴸ",
+   "master": "远"
+  },
+  {
+   "w": "trop",
+   "app": "喻",
+   "master": "向ᵀ"
+  },
+  {
+   "w": "ultra",
+   "app": "ul穿",
+   "master": "极ᵁ"
+  }
+ ]
+}
