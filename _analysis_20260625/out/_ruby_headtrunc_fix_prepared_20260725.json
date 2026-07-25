@@ -1,0 +1,69 @@
+{
+ "generated": "2026-07-25 第67R準備",
+ "purpose": "ルビ語頭食い込み(head truncation)の是正。confirmed_tier30.json へ追記して apply_confirmed_now.py 30 --write で適用する。",
+ "blocked_by": "apply_confirmed_now の fail-closed ゲート「academic Ruby authority mismatch」。ルビ軌道は _fake_coarse_reference_manifest.json で gold(学術版) の SHA を固定しており、マスター側が 2026-07-25 に更新(FE632820→BA50ABB9)したため再生成が拒否される。適用には gold ドリフトに対する 55K×3言語の再認証が必要。",
+ "safety": "全件 boundary_only(空白パディングで完全一致のみ) + exact_only。SATano は satano/Satano(サタン)と別語のため case_sensitive 必須。gold全62,046表層で部分文字列共食いを事前検証済み(psikanalizo/klisteraĵo/flegantino/satanismo へは word_boundary により波及しない)。",
+ "entries": [
+  {
+   "w": "gastronomio",
+   "target": "gastr/o/nomi/o",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "gastronomia",
+   "target": "gastr/o/nomi/a",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "gastronomo",
+   "target": "gastr/o/nom/o",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "kanalizi",
+   "target": "kanal/iz/i",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "klisteri",
+   "target": "klister/i",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "anaerobia",
+   "target": "a/n/aer/o/bi/a",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "fleganto",
+   "target": "fleg/ant/o",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "spontono",
+   "target": "sponton/o",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "prigardi",
+   "target": "pri/gard/i",
+   "boundary_only": true,
+   "exact_only": true
+  },
+  {
+   "w": "SATano",
+   "target": "SATan/o",
+   "case_sensitive": true,
+   "boundary_only": true,
+   "exact_only": true
+  }
+ ]
+}
