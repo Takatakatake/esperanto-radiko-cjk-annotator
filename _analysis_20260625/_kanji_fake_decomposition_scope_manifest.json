@@ -152,7 +152,7 @@
    ]
   }
  ],
- "localized_atomic_policy_sha256": "A0E90778850C4A9CA46039867A6D464BFD62E33F212413A8A64B9837B690A8C7",
+ "localized_atomic_policy_sha256": "60ECC7040A140993159DA9517EDE4D221D548FD32B1A13A25A79163691DC80A1",
  "localized_atomic_policy": {
   "family_manifest_sha256": "BCB852B525953F2440299FB93CC86245129773CDD5BD99998822D0BA1EBEE267",
   "learner_sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
@@ -214,7 +214,7 @@
      [
       "R",
       "an",
-      "员ᴬ"
+      "员"
      ],
      [
       "L",
@@ -445,5 +445,5 @@
    ]
   }
  },
- "note": "All 53 fake/deep roots are gated in all three deployed Kanji JSONs. Forty-two use pinned word_kanji piece/Kanji pairs, including the final-5E pro/mil overlay; the 11 without an exact per-word entry use an explicit reviewed fallback surface/signature so coverage cannot pass vacuously. Seven promil inflections and the localized Bonaer/Novjork families have separate deployed probes. FF33 Tomisto remains a literal fallback; natria klorido remains a pinned unmarked deep-decomposition probe."
+ "note": "All 53 fake/deep roots are gated in all three deployed Kanji JSONs. Forty-two use pinned word_kanji piece/Kanji pairs, including the final-5E pro/mil overlay; the 11 without an exact per-word entry use an explicit reviewed fallback surface/signature so coverage cannot pass vacuously. Seven promil inflections and the localized Bonaer/Novjork families have separate deployed probes. FF33 Tomisto remains a literal fallback; natria klorido remains a pinned unmarked deep-decomposition probe. 2026-07-26 第68R: マスターgen-gの識別子整備(an: 员ᴬ→员)に追随。"
 }

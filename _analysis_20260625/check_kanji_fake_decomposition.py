@@ -101,7 +101,11 @@ def main():
         compact_sha(atomic_policy)
         != manifest.get("localized_atomic_policy_sha256")
         or manifest.get("localized_atomic_policy_sha256")
-        != "A0E90778850C4A9CA46039867A6D464BFD62E33F212413A8A64B9837B690A8C7"
+        # 2026-07-26 第68R: マスター gen-g が識別子層を整備し、接尾辞 an の表示形が
+        # 员ᴬ -> 员 に変わった(_identifier_sidecar.tsv / エクスポート461語で一斉変更)。
+        # novjorkano の pinned signature もこれに追随させ、定数を更新した。
+        # 旧: A0E90778850C4A9CA46039867A6D464BFD62E33F212413A8A64B9837B690A8C7 (gen-f)
+        != "60ECC7040A140993159DA9517EDE4D221D548FD32B1A13A25A79163691DC80A1"
     ):
         raise SystemExit("localized atomic-root Kanji policy drift")
     atomic_family_raw = ATOMIC_FAMILY_PATH.read_bytes()
