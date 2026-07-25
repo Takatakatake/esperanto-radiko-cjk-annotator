@@ -1,7 +1,7 @@
 {
- "generated": "2026-07-25 第65R",
- "master_injection_sha256": "31A10FCAE3EA797127709B5C4694CD335B345ED2A41139E05CE518E9E4A2EC47",
- "note": "gen-e(注入版31a10fca/map 2ef8f646 10026行/ラテン固定13語根)世代で再計測した残差からハイフン表示のみを除いた対象。マスター世代更新時はr136系監査で再計測して更新する。",
+ "generated": "2026-07-25 第66R",
+ "master_injection_sha256": "E66F7E230AA941041BBC6206E00D158EF8D30246C8DEC44815A6A0DD18F24518",
+ "note": "gen-f世代で再計測した残差からハイフン表示のみを除いた対象。",
  "targets": [
   "ac",
   "ad",

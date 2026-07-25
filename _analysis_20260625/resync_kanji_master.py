@@ -89,6 +89,29 @@ for ln in pinned_text('_identifier_sidecar.tsv').splitlines():
             continue
         disp[circ(ps[0])] = ps[4]
 _sentinel_set = set(latin_sentinel_roots)
+# 2026-07-25 第66R: マスターが判定用 companion を新設した(第27回続14)。
+#   _ラテン維持センチネル語根_20260725.tsv  列= band / 語根 / LATIN_IDENTITY
+# 値そのものは同期バリデータ互換のため「未対応」のまま据え置く、という設計なので、
+# こちらを「宣言された正典」として採用し、値からの推定と一致することを検証する。
+# 一致しない場合はマスター側の意図と食い違っているので fail-closed で止める。
+_sentinel_declared = None
+for _cand in ('_ラテン維持センチネル語根_20260725.tsv',):
+    if os.path.exists(LP(os.path.join(KM, _cand))):
+        _sentinel_declared = set()
+        for ln in pinned_text(_cand).splitlines():
+            if ln.startswith('#'):
+                continue
+            ps = [p.strip() for p in ln.rstrip('\n').split('\t')]
+            if len(ps) >= 3 and ps[1] and ps[2] == 'LATIN_IDENTITY':
+                _sentinel_declared.add(circ(ps[1]))
+        print(f"ラテン維持センチネル companion: {_cand} ({len(_sentinel_declared)}語根)")
+        break
+if _sentinel_declared is not None and _sentinel_declared != _sentinel_set:
+    raise SystemExit(
+        'ラテン維持センチネルの宣言とマップ値が不一致: '
+        f'宣言のみ={sorted(_sentinel_declared - _sentinel_set)} / '
+        f'マップ値のみ={sorted(_sentinel_set - _sentinel_declared)}'
+    )
 authority = {r: (r if r in _sentinel_set else disp.get(r, k))
              for r, k in master.items()}
 if MASTER_LATIN_SENTINEL in set(authority.values()):
