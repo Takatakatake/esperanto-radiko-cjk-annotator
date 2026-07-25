@@ -43,7 +43,13 @@ def scan(app, kind):
                     if CJK.search(nobr_rt) or HANGUL.search(nobr_rt) or KANA.search(nobr_rt):
                         note('K:rtにCJK(逆転?)', f"{main_s}<rt:{rt[:15]}>")
                     if LATIN.search(nobr_main) and not CJK.search(nobr_main):
-                        note('K:mainがラテンのみ(逆転?)', f"{main_s}<rt:{rt[:15]}>")
+                        # 2026-07-25 第65R: ラテン固定(漢字マスターが「未対応」=意味訳不能で
+                        # ラテン語形のまま残すと指定した13語根)は、恒等値でCSVへ載せることで
+                        # 綴りを保護している。その描画は main も rt も同じエス語根になるため
+                        # 「逆転」ではない(逆転なら main は訳語・rt は語根で別物になる)。
+                        # 大小のみの差(german / German)も同一とみなして除外する。
+                        if nobr_main.strip().lower() != nobr_rt.strip().lower():
+                            note('K:mainがラテンのみ(逆転?)', f"{main_s}<rt:{rt[:15]}>")
                 else:
                     # ルビモード: main=エス(ラテン), rt=訳
                     if CJK.search(nobr_main) or HANGUL.search(nobr_main) or KANA.search(nobr_main):

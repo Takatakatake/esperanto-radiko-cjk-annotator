@@ -34,7 +34,18 @@ def xconv(s):
     for a,b in X.items(): s=s.replace(a,b)
     return unicodedata.normalize('NFC',s)
 
-_t_path = os.path.join(ROOT, '_analysis_20260625', '_residual_targets_20260724.json')
+# 2026-07-25 第65R: マスター世代更新のたびに残差対象を再計測して差し替える。
+# 最新世代のファイルがあればそれを使い、無ければ従来世代へフォールバックする。
+_t_candidates = ['_residual_targets_20260725.json', '_residual_targets_20260724.json']
+_t_path = None
+for _cand in _t_candidates:
+    _p = os.path.join(ROOT, '_analysis_20260625', _cand)
+    if os.path.exists(_p):
+        _t_path = _p
+        break
+if _t_path is None:
+    raise SystemExit('残差対象リストが見つからない: ' + ' / '.join(_t_candidates))
+print(f'残差対象リスト: {os.path.basename(_t_path)}')
 with open(_t_path, encoding='utf-8') as f:
     _tdata = json.load(f)
 # 監査駆動で退行を出した対象は除外リストへ回す(prefix-bleed同形異義=grafi動詞/grafio名詞型など)。

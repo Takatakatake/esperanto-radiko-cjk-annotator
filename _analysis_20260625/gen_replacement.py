@@ -915,6 +915,11 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
             if not E_root.isdigit() and not E_root.endswith(("!", "?")):
                 temporary_replacements_dict[E_root] = [E_root, len(E_root)]
 
+    # 2026-07-25 第65R 注記: 漢字CSVの恒等行(語根==値)は「ラテン固定」を表す
+    # (漢字マスターが「未対応」=意味訳不能でラテン語形のまま残す、と指定した語根)。
+    # ここで dictionary_output を通して <ruby>語根<rt>語根</rt></ruby> にすることが、
+    # プレースホルダ保護を効かせて内側の短い語根(in/at 等)の発火を防ぐ役割を担っている。
+    # 素のラテンへ畳むと保護が外れ ĉina→ĉ女a / latina→l被女a に戻るため、畳んではならない。
     for _, (E_root, hanzi_or_meaning) in CSV_data_imported.iterrows():
         if pd.notna(E_root) and pd.notna(hanzi_or_meaning) and '#' not in E_root and (E_root != '') and (hanzi_or_meaning != ''):
             temporary_replacements_dict[E_root] = [dictionary_output(E_root, hanzi_or_meaning), len(E_root)]

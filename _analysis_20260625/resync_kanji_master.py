@@ -52,18 +52,55 @@ def pinned_text(name):
     return raw.decode('utf-8')
 
 # --- 1) 正本の語根→表示形(識別子込み) ---
+# 2026-07-25 第65R: 語根マップの「未対応」は漢字値ではなくカテゴリ名。
+# マスター方針書 漢字化方針_v2 §2 用語定義:
+#   「未対応 | 意味訳不能でラテン語形のまま残す語根。」
+# 漢字と同じCJK文字列であるため既存の「CJKを含むか」判定を素通りし、第64Rまで
+# authority に漢字値として取り込まれていた。結果、配信3アプリが literal「未対応」を
+# 出力していた(angl/german/rus/ĉin/eŭrop/kaf/islam/latin/Krist/Petr/Oceani/
+# esperant/um の13語根、置換リスト内949箇所。例: "la angla"→"la 未対応a")。
+# 正本の描画層(注入版・注入エクスポート・_p_work.csv・_homonym*.tsv)には
+# この文字列が一切現れない=ラテン維持が正しい描画である、が根拠。
+#
+# 正しい扱いは「語根ごと落とす」ではなく「ラテン固定(恒等値)で登録する」。
+# 落とすと語根の綴りが保護されなくなり、内側の短い語根が発火して別の偽分解になる
+# (実測: ĉin→ĉ/in で ĉina→ĉ女a、latin→l/at/in で latina→l被女a など52派生形)。
+# 恒等値で登録すると置換表に長さ順で載るため内側の2字語根より先に一致し、
+# 綴りをそのまま保ったまま保護できる。gen_replacement は CSV の
+# `E_root == hanzi_or_meaning` 行をルビ無しの素のラテンとして扱う既存機構
+# (gen_replacement.py の局部置換構築部)を持つので、描画も追加処理なしで正しい。
+MASTER_LATIN_SENTINEL = '未対応'
 master = {}
+latin_sentinel_roots = []
 for ln in pinned_text('_kanji_map_master.tsv').splitlines():
     ps = ln.rstrip('\n').split('\t')
     if len(ps) >= 3 and ps[1] and ps[2]:
-        master[circ(ps[1].strip())] = ps[2].strip()
+        root, val = circ(ps[1].strip()), ps[2].strip()
+        if val == MASTER_LATIN_SENTINEL:
+            latin_sentinel_roots.append(root)
+            master[root] = root      # ラテン固定(恒等値)
+            continue
+        master[root] = val
 disp = {}
 for ln in pinned_text('_identifier_sidecar.tsv').splitlines():
     ps = [p.strip().strip('"') for p in ln.rstrip('\n').split('\t')]
     if len(ps) >= 5 and ps[0] and ps[4]:
+        if ps[4].strip() == MASTER_LATIN_SENTINEL:
+            continue
         disp[circ(ps[0])] = ps[4]
-authority = {r: disp.get(r, k) for r, k in master.items()}
+_sentinel_set = set(latin_sentinel_roots)
+authority = {r: (r if r in _sentinel_set else disp.get(r, k))
+             for r, k in master.items()}
+if MASTER_LATIN_SENTINEL in set(authority.values()):
+    raise SystemExit(
+        f'Kanji master sentinel leaked into authority: {MASTER_LATIN_SENTINEL!r}'
+    )
+for _r in _sentinel_set:
+    if authority.get(_r) != _r:
+        raise SystemExit(f'latin-lock root lost its identity value: {_r!r}')
 print(f"正本語根: {len(authority)} (識別子込み表示形 {len(disp)})")
+print(f"ラテン固定(未対応=恒等値)の語根: {len(latin_sentinel_roots)} "
+      f"{sorted(latin_sentinel_roots)}")
 
 # --- 2) 語単位: 漢字注入_学習者版 ⟦…⟧ → word_kanji ---
 # 2026-07-24 met同形異義修正(マスター裁定②案A): an/enをGRAMから除外。
