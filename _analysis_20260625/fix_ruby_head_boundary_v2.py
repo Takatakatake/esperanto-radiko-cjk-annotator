@@ -212,7 +212,9 @@ dJA = json.load(open(LP(os.path.join(ROOT, 'Esperanto-Kanji-Ruby-JA',
                                      'app_data', '置換リスト_ルビ.json')), encoding='utf-8'))
 GLj = dJA['局部文字替换用のリスト(列表)型配列(replacements_list_for_localized_string)']
 G2j = dJA['二文字词根替换用のリスト(列表)型配列(replacements_list_for_2char)']
-GGj = dJA[KEY]
+# 前回の投入分($R68W)を外した状態で「本来どう出るか」を測る(再実行できるように)。
+# これをしないと、適用済みのリストに対して走査してしまい欠陥が0件に見える。
+GGj = [e for e in dJA[KEY] if not (len(e) > 2 and isinstance(e[2], str) and '$R68W' in e[2])]
 psj = M.import_placeholders(os.path.join(ROOT, 'Esperanto-Kanji-Ruby-JA', 'app_data', 'placeholders_skip.txt'))
 plj = M.import_placeholders(os.path.join(ROOT, 'Esperanto-Kanji-Ruby-JA', 'app_data', 'placeholders_localcapture.txt'))
 def conv(t):
@@ -355,6 +357,7 @@ for i in range(0, len(allw), B):
 
 # ── 追加キーの構築 ──────────────────────────────────────────────
 entries = []        # (キー(素), {lang: 値}, 理由)
+_pieces_of = {}     # 語 -> 部品列(大小変種の展開に使う)
 _added = set()
 def add(word, pieces, why):
     if word in _added: return False            # 二重登録の防止
@@ -362,6 +365,7 @@ def add(word, pieces, why):
     if built is None: return False
     if word in cur and struct(built['JA']).strip() == struct(cur[word]).strip(): return False
     entries.append((word, built, why)); _added.add(word)
+    _pieces_of[word] = pieces
     return True
 
 def bases(v): return '/'.join(m.group(1) for m in RUBY.finditer(v))
@@ -408,6 +412,34 @@ for src, w in targets:
         continue
     stat['未処理(要照会)'] += 1
     skipped.append((w, '未処理: 語頭欠陥だが再分割の妥当性が未確認'))
+
+# ── 大小変種の補完 ──────────────────────────────────────────────
+#   走査対象(gold見出し+コーパス語彙)に現れなかった変種は素通りしてしまう。
+#   実測: teatristoj は直ったが **文頭大文字の Teatristoj は trist(悲しい) のまま**だった。
+#   文頭大文字は実文で頻出するので、同じ欠陥が出る変種にだけ同じ是正を与える。
+_var_todo = []
+for _w in list(_added):
+    for _v in (_w[0].upper() + _w[1:], _w.upper(), _w.lower()):
+        if _v == _w or _v in _added: continue
+        # 固有名詞・略号は綴りの大小自体が語を決めるので、小文字化は行わない
+        if _v == _w.lower() and _w != _w.lower(): continue
+        _var_todo.append((_v, _w))
+_seen_v = set()
+_var_todo = [(v, w) for v, w in _var_todo if not (v in _seen_v or _seen_v.add(v))]
+if _var_todo:
+    _vw = [v for v, _ in _var_todo]
+    for i in range(0, len(_vw), B):
+        ch = _vw[i:i+B]
+        o = conv(' ' + (' ' + SEP + ' ').join(ch) + ' ')
+        parts = o.split(SEP)
+        if len(parts) != len(ch): parts = [conv(' ' + w + ' ') for w in ch]
+        for w, s in zip(ch, parts): cur[w] = s.strip()
+    _nv = 0
+    for v, w in _var_todo:
+        if not head_defect(v, cur[v]): continue      # その変種が健全なら触らない
+        ps_v = case_apply(_pieces_of[w], 'UPPER' if v == w.upper() else 'Cap')
+        if add(v, ps_v, f'VAR:{w}'): _nv += 1
+    print(f'大小変種の補完: {_nv} 件を追加(候補 {len(_var_todo)})')
 
 def show(v): return ' + '.join(f'{b}({TAG.sub("", g)[:14]})' for b, g in RUBY.findall(v)) or '(ルビ無)'
 
@@ -493,7 +525,9 @@ def splice(GG, new_rows):
 for lang in ('JA', 'ZH', 'KO'):
     path = os.path.join(ROOT, f'Esperanto-Kanji-Ruby-{lang}', 'app_data', '置換リスト_ルビ.json')
     d = json.load(open(LP(path), encoding='utf-8'))
-    GG = d[KEY]
+    # 再実行できるように、前回の投入分($R68W)をいったん取り除いてから入れ直す
+    GG = [e for e in d[KEY]
+          if not (len(e) > 2 and isinstance(e[2], str) and '$R68W' in e[2])]
     used = {e[2] for e in GG if len(e) > 2}
     # 既に同じ語境界キーがある場合は **その場で値を差し替える**。
     # 同キーを別途足すとリスト内に重複キーが生まれ、test_generation_regressions の
