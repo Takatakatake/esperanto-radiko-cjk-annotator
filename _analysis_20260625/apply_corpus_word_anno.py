@@ -38,6 +38,12 @@ from phase558_ruby_overlay import (
 from phase558_ruby_overlay_activation import (
     activation_report as phase558_activation_report,
 )
+from reviewed_di_semantic_policy import (
+    REVIEWED_DI_GLOSSES,
+    REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS,
+    REVIEWED_SEND_GLOSSES,
+    REVIEWED_THEOLOGICAL_DI_KEYS,
+)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -1354,6 +1360,80 @@ def targets(language):
     yield ROOT / f"Esperanto-Kanji-Ruby-{APP[language]}" / "app_data" / "word_anno.json"
 
 
+def apply_reviewed_theological_di_glosses(data, language):
+    """Correct only the reviewed God/two homographs in one word_anno map."""
+    if language not in REVIEWED_DI_GLOSSES:
+        raise ValueError(f"unsupported di semantic language: {language!r}")
+    scientific = REVIEWED_DI_GLOSSES[language]["scientific"]
+    theological = REVIEWED_DI_GLOSSES[language]["theological"]
+    if data.get("di") != [["di", theological]]:
+        raise ValueError(
+            f"{language}: standalone di theological authority drift: "
+            f"{data.get('di')!r}"
+        )
+
+    changed = 0
+    for key in REVIEWED_THEOLOGICAL_DI_KEYS:
+        expected_pieces = tuple(key.split("/"))
+        row = data.get(key)
+        if (
+            not isinstance(row, list)
+            or tuple(
+                pair[0]
+                for pair in row
+                if isinstance(pair, list) and len(pair) == 2
+            )
+            != expected_pieces
+            or len(row) != len(expected_pieces)
+            or expected_pieces.count("di") != 1
+        ):
+            raise ValueError(
+                f"{language}: reviewed theological di boundary drift "
+                f"for {key!r}: {row!r}"
+            )
+        di_index = expected_pieces.index("di")
+        current = row[di_index][1]
+        if current not in (scientific, theological):
+            raise ValueError(
+                f"{language}: reviewed theological di gloss drift "
+                f"for {key!r}: {current!r}"
+            )
+        if current == scientific:
+            replacement = [list(pair) for pair in row]
+            replacement[di_index][1] = theological
+            data[key] = replacement
+            changed += 1
+
+    # These exact compounds are the paired negative authority: their ``di``
+    # really is the scientific two/di- combining form and must stay untouched.
+    for key in REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS:
+        expected_pieces = tuple(key.split("/"))
+        row = data.get(key)
+        if (
+            not isinstance(row, list)
+            or tuple(
+                pair[0]
+                for pair in row
+                if isinstance(pair, list) and len(pair) == 2
+            )
+            != expected_pieces
+            or len(row) != len(expected_pieces)
+            or expected_pieces.count("di") != 1
+            or row[expected_pieces.index("di")][1] != scientific
+        ):
+            raise ValueError(
+                f"{language}: reviewed scientific di negative drift "
+                f"for {key!r}: {row!r}"
+            )
+
+    # ``sen/di`` and the ordinary verb ``send/i`` share letters, not roots.
+    # This explicit negative prevents a future shortcut from swallowing sendi.
+    send_row = data.get("send")
+    if send_row != [["send", REVIEWED_SEND_GLOSSES[language]]]:
+        raise ValueError(f"{language}: ordinary send negative drift: {send_row!r}")
+    return changed
+
+
 def transactional_json_writes(rows, *, replace=os.replace):
     """Stage all annotation outputs before replacing any destination."""
     staged = []
@@ -1456,12 +1536,16 @@ def main():
             if not source_units or len(source_units) != 1:
                 raise SystemExit(f"{language}: cannot mirror {source!r} to {root!r}")
             data[root] = [[root, source_units[0][1]]]
+        di_semantic_changes = apply_reviewed_theological_di_glosses(
+            data, language,
+        )
         for path in target_paths:
             if WRITE:
                 pending_writes.append((path, data, None))
         pending_word_anno[language] = data
         print(
             f"[{language}] corpus atomic annotations: {len(entries)} "
+            f"theological_di={di_semantic_changes} "
             f"({'prepared' if WRITE else 'dry-run'})"
         )
 

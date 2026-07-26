@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Regression tests for morphology generation and deployed ruby JSONs."""
 import ast
+from collections import Counter
 import gc
 import hashlib
 import importlib.util
@@ -629,6 +630,106 @@ class GenerationRuleTests(unittest.TestCase):
                     )
                 )
 
+    def test_postregen_theological_di_is_closed_against_science_and_sendi(self):
+        self.assertEqual(
+            len(postregen.THEOLOGICAL_DI_RUNTIME_AUTHORITY), 89,
+        )
+        self.assertNotIn("sendi", postregen.THEOLOGICAL_DI_RUNTIME_AUTHORITY)
+        for surface in postregen.THEOLOGICAL_DI_RUNTIME_AUTHORITY:
+            for case_variant in (
+                surface, surface.capitalize(), surface.upper(),
+            ):
+                self.assertFalse(
+                    postregen.is_authoritative_exact_surface(case_variant),
+                    case_variant,
+                )
+        cases = {
+            "JA": ("二", "神"),
+            "ZH": ("二", "神"),
+            "KO": ("이", "신"),
+        }
+        for language, (old_gloss, new_gloss) in cases.items():
+            with self.subTest(language=language, surface="diino"):
+                rendered = (
+                    f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>'
+                    '<ruby>in<rt class="M_M">female</rt></ruby>o'
+                )
+                self.assertEqual(
+                    postregen.rewrite_reviewed_theological_di(
+                        "diino", rendered, language,
+                    ),
+                    (
+                        f'<ruby>di<rt class="XL_L">{new_gloss}</rt></ruby>'
+                        '<ruby>in<rt class="M_M">female</rt></ruby>o'
+                    ),
+                )
+            with self.subTest(language=language, surface="sendia"):
+                rendered = (
+                    '<ruby>sen<rt class="M_M">without</rt></ruby>'
+                    f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>a'
+                )
+                corrected = postregen.rewrite_reviewed_theological_di(
+                    "sendia", rendered, language,
+                )
+                self.assertIn(
+                    (
+                        f'<ruby>di<rt class="XL_L">'
+                        f'{new_gloss}</rt></ruby>'
+                    ),
+                    corrected,
+                )
+            with self.subTest(language=language, surface="sendi"):
+                self.assertIsNone(
+                    postregen.rewrite_reviewed_theological_di(
+                        "sendi",
+                        '<ruby>send<rt class="M_M">send</rt></ruby>i',
+                        language,
+                    )
+                )
+            with self.subTest(language=language, surface="dioksido"):
+                self.assertIsNone(
+                    postregen.rewrite_reviewed_theological_di(
+                        "dioksido",
+                        (
+                            f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>'
+                            '<ruby>oksid<rt class="M_M">oxide</rt></ruby>o'
+                        ),
+                        language,
+                    )
+                )
+            with self.subTest(language=language, drift="signature"):
+                with self.assertRaisesRegex(ValueError, "signature drift"):
+                    postregen.rewrite_reviewed_theological_di(
+                        "diino",
+                        (
+                            f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>'
+                            '<ruby>an<rt class="M_M">member</rt></ruby>o'
+                        ),
+                        language,
+                    )
+            with self.subTest(language=language, drift="multiple-di"):
+                with self.assertRaisesRegex(ValueError, "signature drift"):
+                    postregen.rewrite_reviewed_theological_di(
+                        "diino",
+                        (
+                            f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>'
+                            '<ruby>in<rt class="M_M">female</rt></ruby>'
+                            f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>o'
+                        ),
+                        language,
+                    )
+            with self.subTest(language=language, drift="extra-non-di-piece"):
+                with self.assertRaisesRegex(ValueError, "signature drift"):
+                    postregen.rewrite_reviewed_theological_di(
+                        "diino",
+                        (
+                            f'<ruby>di<rt class="XL_L">{old_gloss}</rt></ruby>'
+                            '<ruby>in<rt class="M_M">female</rt></ruby>'
+                            '<ruby>ec<rt class="M_M">quality</rt></ruby>o'
+                        ),
+                        language,
+                    )
+
     def test_typed_ruby_annotation_prefers_context_then_exact_plain(self):
         annotations = {
             "kaj": [["kaj", "and"]],
@@ -799,6 +900,83 @@ class GenerationRuleTests(unittest.TestCase):
             canonical.validate_multilingual_word_anno_boundaries(
                 key_variant, manifest,
             )
+
+    def test_reviewed_di_word_anno_semantics_are_exact_and_idempotent(self):
+        maps = {
+            language: json.loads(
+                (HERE / "out" / f"word_anno_{language}.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            for language in ("ja", "zh", "ko")
+        }
+        for language, data in maps.items():
+            scientific = corpus_data.REVIEWED_DI_GLOSSES[language][
+                "scientific"
+            ]
+            theological = corpus_data.REVIEWED_DI_GLOSSES[language][
+                "theological"
+            ]
+            for key in corpus_data.REVIEWED_THEOLOGICAL_DI_KEYS:
+                pieces = key.split("/")
+                row = data[key]
+                self.assertEqual([pair[0] for pair in row], pieces)
+                self.assertEqual(
+                    row[pieces.index("di")][1], theological,
+                    f"{language} {key}",
+                )
+            for key in corpus_data.REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS:
+                pieces = key.split("/")
+                row = data[key]
+                self.assertEqual([pair[0] for pair in row], pieces)
+                self.assertEqual(
+                    row[pieces.index("di")][1], scientific,
+                    f"{language} scientific negative {key}",
+                )
+            self.assertEqual(
+                data["send"],
+                [["send", corpus_data.REVIEWED_SEND_GLOSSES[language]]],
+            )
+
+            reset = json.loads(json.dumps(data, ensure_ascii=False))
+            non_di_before = {}
+            for key in corpus_data.REVIEWED_THEOLOGICAL_DI_KEYS:
+                pieces = key.split("/")
+                di_index = pieces.index("di")
+                reset[key][di_index][1] = scientific
+                non_di_before[key] = [
+                    tuple(pair)
+                    for index, pair in enumerate(reset[key])
+                    if index != di_index
+                ]
+            self.assertEqual(
+                corpus_data.apply_reviewed_theological_di_glosses(
+                    reset, language,
+                ),
+                25,
+            )
+            self.assertEqual(
+                corpus_data.apply_reviewed_theological_di_glosses(
+                    reset, language,
+                ),
+                0,
+            )
+            for key in corpus_data.REVIEWED_THEOLOGICAL_DI_KEYS:
+                pieces = key.split("/")
+                di_index = pieces.index("di")
+                self.assertEqual(
+                    [
+                        tuple(pair)
+                        for index, pair in enumerate(reset[key])
+                        if index != di_index
+                    ],
+                    non_di_before[key],
+                )
+
+        expected_manifest = json.loads(
+            word_anno_boundary.DEFAULT_MANIFEST.read_text(encoding="utf-8")
+        )
+        self.assertEqual(word_anno_boundary.build(maps), expected_manifest)
 
     def test_reviewed_local_exact_scope_preserves_unreviewed_local_semantics(self):
         review = json.loads(
@@ -2644,6 +2822,72 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 global_rules = next(value for key, value in payload.items() if "replacements_final_list" in key)
                 local_rules = next(value for key, value in payload.items() if "localized_string" in key)
                 two_char_rules = next(value for key, value in payload.items() if "2char" in key)
+                for label, rules in (
+                    ("local", local_rules),
+                    ("two_char", two_char_rules),
+                ):
+                    self.assertEqual(
+                        [
+                            rule[0]
+                            for rule in rules
+                            if rule[0].strip().casefold()
+                            in postregen.THEOLOGICAL_DI_RUNTIME_AUTHORITY
+                        ],
+                        [],
+                        f"{language} theological di leaked into {label}",
+                    )
+                theological_rules = [
+                    rule for rule in global_rules
+                    if rule[0].strip().casefold()
+                    in postregen.THEOLOGICAL_DI_RUNTIME_AUTHORITY
+                ]
+                self.assertEqual(
+                    len(theological_rules),
+                    postregen.EXPECTED_THEOLOGICAL_DI_GLOBAL_RULES,
+                    f"{language} theological di deployed rule scope",
+                )
+                self.assertEqual(
+                    Counter(
+                        rule[0].strip().casefold()
+                        for rule in theological_rules
+                    ),
+                    Counter(
+                        postregen.THEOLOGICAL_DI_RUNTIME_RULE_MULTIPLICITY
+                    ),
+                    f"{language} theological di deployed multiplicity scope",
+                )
+                theological_gloss = postregen.THEOLOGICAL_DI_GLOSSES[
+                    language
+                ][1]
+                for old, new, _placeholder in theological_rules:
+                    di_blocks = [
+                        match
+                        for match in postregen.RUBY_BLOCK_RE.finditer(new)
+                        if match.group("piece").casefold() == "di"
+                    ]
+                    self.assertEqual(
+                        len(di_blocks), 1,
+                        f"{language} theological di block count: {old!r}",
+                    )
+                    self.assertEqual(
+                        di_blocks[0].group("gloss"), theological_gloss,
+                        f"{language} theological di gloss: {old!r}",
+                    )
+                ordinary_sendi_rules = [
+                    rule for rule in global_rules
+                    if rule[0].strip().casefold() == "sendi"
+                ]
+                self.assertEqual(
+                    len(ordinary_sendi_rules), 6,
+                    f"{language} ordinary sendi rule scope",
+                )
+                for old, new, _placeholder in ordinary_sendi_rules:
+                    pieces = [
+                        match.group("piece").casefold()
+                        for match in postregen.RUBY_BLOCK_RE.finditer(new)
+                    ]
+                    self.assertIn("send", pieces, f"{language} {old!r}")
+                    self.assertNotIn("di", pieces, f"{language} {old!r}")
                 replacement_helper = canonical.load_app_replacement_helper(app_dir)
                 char_widths = json.loads(
                     (data_dir / "char_widths.json").read_text(encoding="utf-8")
