@@ -63,6 +63,14 @@ WORD_PIECES={
   'anestezi': [('an',{'JA':'無','ZH':'无','KO':'무'}),
                ('estez',{'JA':'感覚','ZH':'感觉','KO':'감각'}),
                ('i',None)],
+  # 粗ルビでは dinamism を一体化する（PEJVO原典・学術版と一致）。
+  # 学習者版の dinam/ism は漢字トラック用の偽分解として別途そのまま尊重する。
+  'dinamism': [('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'})],
+  'elektrodinamism': [
+               ('elektr',{'JA':'電気','ZH':'电','KO':'전기'}),
+               ('o',None),
+               ('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'}),
+  ],
   # 医学-it-(炎症)・化学-at-(塩)は分詞ではなく「偽の友」。E_stem既定の it=受動完了/at=受動継続
   # を、既存 wa['mening/it']/wa['nitr/at'] と同じ正しいグロス(炎/酸塩)へ後処理で是正。
   # (コーパスの粗ルビ meningit=髄膜炎/nitrat=硝酸塩 とも意味整合。漢字トラックは元より正)

@@ -570,6 +570,65 @@ class GenerationRuleTests(unittest.TestCase):
             "<an:無><estez:感覚>io",
         )
 
+    def test_postregen_keeps_dinamism_coarse_without_spilling_to_neighbors(self):
+        formatter = lambda piece, gloss: f"<{piece}:{gloss}>"
+        glosses = {
+            "JA": ("力動主義", "電気"),
+            "ZH": ("动力主义", "电"),
+            "KO": ("역동주의", "전기"),
+        }
+        for language, (dinamism_gloss, elektr_gloss) in glosses.items():
+            with self.subTest(language=language, surface="dinamismo"):
+                self.assertEqual(
+                    postregen.rewrite_surface_core(
+                        "dinamismo", language, formatter,
+                    ),
+                    f"<dinamism:{dinamism_gloss}>o",
+                )
+            with self.subTest(language=language, surface="elektrodinamismo"):
+                self.assertEqual(
+                    postregen.rewrite_surface_core(
+                        "elektrodinamismo", language, formatter,
+                    ),
+                    (
+                        f"<elektr:{elektr_gloss}>o"
+                        f"<dinamism:{dinamism_gloss}>o"
+                    ),
+                )
+            with self.subTest(language=language, surface="Dinamismoj"):
+                self.assertEqual(
+                    postregen.rewrite_surface_core(
+                        "Dinamismoj", language, formatter,
+                    ),
+                    f"<Dinamism:{dinamism_gloss}>oj",
+                )
+
+        for non_target in (
+            "dinamo",
+            "dinamolado",
+            "izodinamo",
+            "dinamika",
+            "aerodinamiko",
+            "hidrodinamismo",
+            "hidrodinamiko",
+            "geodinamiko",
+            "termodinamiko",
+            "kvantumkromodinamiko",
+            "elektrodinamiko",
+            "dinamito",
+            "dinamometro",
+            "elektrodinamometro",
+            "dinamotoro",
+            "superdinamismo",
+            "elektrodinamismeco",
+        ):
+            with self.subTest(non_target=non_target):
+                self.assertIsNone(
+                    postregen.rewrite_surface_core(
+                        non_target, "JA", formatter,
+                    )
+                )
+
     def test_typed_ruby_annotation_prefers_context_then_exact_plain(self):
         annotations = {
             "kaj": [["kaj", "and"]],
