@@ -94,8 +94,8 @@ aerobi,气生
 aerodrom,气道
 aerogram,气图
 aerolit,气石
-aerolog,气学家
-aerologi,气学
+aerolog,气学家ᴬ
+aerologi,气学ᴬ
 aerometr,气计ᴬ
 aerometri,气测
 aeronaŭt,气航
@@ -336,9 +336,9 @@ alteraci,蚀变
 altern,替
 alternativ,替ᴬᵀ
 alternator,替具
-altimetr,高计
+altimetr,高计ᴬᴵ
 altitud,高ᴬᵀ
-altometr,高计ᴬᴼ
+altometr,高计
 altometri,高测
 altru,他ᴬ
 altruism,他主义
@@ -2299,7 +2299,7 @@ ensembl,套ᴱ
 entel,猴ᴱ
 enter,肠ᴱ
 enteralgi,肠痛
-enterit,肠炎ᴱ
+enterit,肠炎
 entjer,整ᴱ
 entolom,菌ᴱᴺ
 entom,虫ᴱ
@@ -3453,8 +3453,8 @@ heder,藤
 hedisar,豆ᴴ
 hedizar,豆ᴴᶻ
 hedon,乐ᴴ
-hedonism,乐主义
-hedonist,乐家
+hedonism,乐主义ᴴ
+hedonist,乐家ᴴ
 hegemoni,霸
 hejm,家ᴴ
 hejt,热
@@ -3828,7 +3828,7 @@ iktiologi,鱼学
 iktiosaŭr,鱼龙
 il,具
 ile,肠ᴵᴸ
-ileit,肠炎
+ileit,肠炎ᴵ
 ileks,冬青
 ili,他们
 iliak,盆骨
@@ -6065,8 +6065,8 @@ metazo,后生
 metempsikoz,轮回
 meten,亚甲ᴹᴺ
 meteo,气ᴹ
-meteolog,气学家ᴹ
-meteologi,气学ᴹ
+meteolog,气学家
+meteologi,气学
 meteor,陨
 meteorism,陨主义
 meteorolog,气学家ᴹᴿ
@@ -6164,11 +6164,11 @@ mil,千
 mild,柔
 mile,黄米
 mileni,千年
-mili,毫ᴹᴵ
+mili,毫
 miliard,十亿
 milic,民兵
 miligram,毫克
-milimetr,毫
+milimetr,毫ᴹᴹ
 milion,百万
 milit,战
 militar,军ᴹ
@@ -6463,6 +6463,7 @@ naŭ,九
 naŭkrat,鱼ᴺ
 naŭl,木ᴺ
 naŭpli,虾ᴺ
+naŭt,航ᴺᴬ
 naŭtik,航ᴺᵁ̆
 naŭtil,鹦螺
 naŭz,呕
@@ -6792,8 +6793,8 @@ opres,迫ᴼ
 opt,视ᴼ
 optik,光学
 optim,乐ᴼᴾ
-optimism,乐主义ᴼ
-optimist,乐家ᴼ
+optimism,乐主义
+optimist,乐家
 optimum,优ᴼ
 optometr,视计
 optometri,视测
@@ -7991,7 +7992,7 @@ ranunkol,草ᴿᴺ
 ranĝ,调车
 rap,萝卜ᴿᴾ
 rapid,速
-rapidometr,速计ᴿ
+rapidometr,速计
 rapir,剑ᴿ
 raport,报ᴿ
 rapunkol,草ᴿᴾ
@@ -9224,7 +9225,7 @@ tak,倾ᵀᴷ
 taki,速ᵀ
 takigraf,速记
 takikardi,速心
-takimetr,速计
+takimetr,速计ᵀ
 taks,评
 taksi,车ᵀᴷ
 taksimetr,车计

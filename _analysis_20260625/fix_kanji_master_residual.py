@@ -36,7 +36,7 @@ def xconv(s):
 
 # 2026-07-25 第65R: マスター世代更新のたびに残差対象を再計測して差し替える。
 # 最新世代のファイルがあればそれを使い、無ければ従来世代へフォールバックする。
-_t_candidates = ['_residual_targets_20260727.json', '_residual_targets_20260726.json',
+_t_candidates = ['_residual_targets_20260728.json', '_residual_targets_20260727.json', '_residual_targets_20260726.json',
                  '_residual_targets_20260725.json',
                  '_residual_targets_20260724.json']
 _t_path = None

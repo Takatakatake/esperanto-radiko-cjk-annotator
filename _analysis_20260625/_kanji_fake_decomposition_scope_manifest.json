@@ -2,8 +2,8 @@
  "schema_version": 1,
  "decompose_roots": 53,
  "decompose_roots_sha256": "53885056F92C162E9ADED20844BBBADF818FF530B0A1BCCCE7AF3E462488458C",
- "evaluable_word_kanji": 42,
- "evaluable_word_kanji_sha256": "3A7CFBC9D42BDFE672FFC9C7B966AC38E4042182D23EBE3E868F1484DC8659C7",
+ "evaluable_word_kanji": 41,
+ "evaluable_word_kanji_sha256": "50602F087AEA708B6E2F576B87E23AFD30FF91AD9410686AEF80E5D7C84893BA",
  "expected_missing_word_kanji": [
   "aŭstri",
   "butano",
@@ -12,13 +12,14 @@
   "gerda",
   "jugoslavi",
   "peĉjo",
+  "radiofoni",
   "romi",
   "rumani",
   "sovetuni",
   "video"
  ],
- "fallback_reviewed_count": 11,
- "fallback_reviewed_sha256": "8CED814FE418E5A88561C3186FC9C0E5A1270C63746458E41D2337C1E042E832",
+ "fallback_reviewed_count": 12,
+ "fallback_reviewed_sha256": "6CF9613AA2C74B5560E6000BF7B2CB6D02FF9DE39C6EADC21CD2399491F0CA4F",
  "fallback_reviewed": [
   {
    "root": "aŭstri",
@@ -98,6 +99,30 @@
     [
      "L",
      "peĉjo"
+    ]
+   ]
+  },
+  {
+   "root": "radiofoni",
+   "surface": "radiofonio",
+   "signature": [
+    [
+     "R",
+     "radi",
+     "射ᴿ"
+    ],
+    [
+     "L",
+     "o"
+    ],
+    [
+     "R",
+     "fon",
+     "声ᶠᴼ"
+    ],
+    [
+     "L",
+     "io"
     ]
    ]
   },
@@ -445,5 +470,5 @@
    ]
   }
  },
- "note": "All 53 fake/deep roots are gated in all three deployed Kanji JSONs. Forty-two use pinned word_kanji piece/Kanji pairs, including the final-5E pro/mil overlay; the 11 without an exact per-word entry use an explicit reviewed fallback surface/signature so coverage cannot pass vacuously. Seven promil inflections and the localized Bonaer/Novjork families have separate deployed probes. FF33 Tomisto remains a literal fallback; natria klorido remains a pinned unmarked deep-decomposition probe. 2026-07-26 第68R: マスターgen-gの識別子整備(an: 员ᴬ→员)に追随。"
+ "note": "All 53 fake/deep roots are gated in all three deployed Kanji JSONs. Forty-two use pinned word_kanji piece/Kanji pairs, including the final-5E pro/mil overlay; the 11 without an exact per-word entry use an explicit reviewed fallback surface/signature so coverage cannot pass vacuously. Seven promil inflections and the localized Bonaer/Novjork families have separate deployed probes. FF33 Tomisto remains a literal fallback; natria klorido remains a pinned unmarked deep-decomposition probe. 2026-07-26 第68R: マスターgen-gの識別子整備(an: 员ᴬ→员)に追随。 2026-07-26 第76R: gold が radiofonio を radi/o/foni/o -> radi/o/fon/i/o と割り直したため語幹 radiofoni が word_kanji から正当に消えた。expected_missing に追加(マスター追随)。 radiofoni のフォールバック行を追加(surface=radiofonio, 実配信描画射ᴿo声ᶠᴼio はマスターexport/注入版と完全一致・3言語同一)。"
 }
