@@ -38,6 +38,15 @@ from phase558_ruby_overlay import (
 from phase558_ruby_overlay_activation import (
     activation_report as phase558_activation_report,
 )
+from phase598_technical_on_policy import (
+    managed_morph_targets as phase598_managed_morph_targets,
+    morph_context_annotations as phase598_morph_context_annotations,
+    typed_context_glosses as phase598_typed_context_glosses,
+    typed_exact_targets as phase598_typed_exact_targets,
+)
+from phase598_technical_on_activation import (
+    activation_report as phase598_activation_report,
+)
 from reviewed_di_semantic_policy import (
     REVIEWED_DI_GLOSSES,
     REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS,
@@ -53,6 +62,8 @@ PHASE532_ACTIVATION = activation_report()
 PHASE532_FORMAL = PHASE532_ACTIVATION["phase532_active"]
 PHASE558_ACTIVATION = phase558_activation_report()
 PHASE558_FORMAL = PHASE558_ACTIVATION["phase558_ruby_overlay_active"]
+PHASE598_ACTIVATION = phase598_activation_report()
+PHASE598_FORMAL = PHASE598_ACTIVATION["phase598_technical_on_active"]
 FAKE_COARSE_APP_REVIEW_PATH = (
     ROOT / "_analysis_20260625" / "_fake_coarse_transition_app_review.json"
 )
@@ -752,6 +763,50 @@ if PHASE558_FORMAL:
             _phase558_glosses
         )
 
+PHASE598_MORPH_CONTEXT_ANNOTATIONS = {
+    language: {} for language in ANNOTATIONS
+}
+if PHASE598_FORMAL:
+    for _phase598_key, _phase598_annotation in (
+        phase598_morph_context_annotations().items()
+    ):
+        _phase598_piece = _phase598_annotation["piece"]
+        _phase598_glosses = _phase598_annotation["glosses"]
+        if (
+            _phase598_key in ATOMIC_FAMILY_CONTEXT_KEYS.values()
+            or _phase598_key in {
+                key
+                for rows in PHASE558_MORPH_CONTEXT_ANNOTATIONS.values()
+                for key in rows
+            }
+            or set(_phase598_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                f"invalid Phase 598 morph context annotation: "
+                f"{_phase598_key!r}"
+            )
+        for _phase598_language in ANNOTATIONS:
+            PHASE598_MORPH_CONTEXT_ANNOTATIONS[_phase598_language][
+                _phase598_key
+            ] = [[
+                _phase598_piece,
+                _phase598_glosses[_phase598_language],
+            ]]
+    for _phase598_typed_key, _phase598_glosses in (
+        phase598_typed_context_glosses().items()
+    ):
+        if (
+            _phase598_typed_key in TYPED_CONTEXT_GLOSSES
+            or set(_phase598_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                "invalid/duplicate Phase 598 typed annotation: "
+                f"{_phase598_typed_key!r}"
+            )
+        TYPED_CONTEXT_GLOSSES[_phase598_typed_key] = dict(
+            _phase598_glosses
+        )
+
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
 # Keep their localized glosses contextual: Andora in Andora-la-Velo is useful,
@@ -1126,6 +1181,18 @@ if _phase558_morph_overlap:
 if PHASE558_FORMAL:
     MANAGED_MORPH_TARGETS.update(_phase558_managed_morph_targets)
 
+_phase598_managed_morph_targets = phase598_managed_morph_targets()
+_phase598_morph_overlap = set(MANAGED_MORPH_TARGETS) & set(
+    _phase598_managed_morph_targets
+)
+if _phase598_morph_overlap:
+    raise SystemExit(
+        "Phase 598 managed morphology duplicates an existing setting: "
+        f"{sorted(_phase598_morph_overlap)!r}"
+    )
+if PHASE598_FORMAL:
+    MANAGED_MORPH_TARGETS.update(_phase598_managed_morph_targets)
+
 for _family in ATOMIC_ROOT_FAMILY_REVIEW["families"]:
     for _target in _family["morph_targets"]:
         _surface = _target["surface"]
@@ -1250,6 +1317,25 @@ if PHASE558_FORMAL:
             _phase558_spec
         )
         PHASE558_TYPED_EXACT_SURFACES.add(_phase558_surface)
+
+PHASE598_TYPED_EXACT_SURFACES = set()
+_phase598_typed_exact_targets = phase598_typed_exact_targets()
+_phase598_typed_overlap = set(MANAGED_TYPED_EXACT_TARGETS) & set(
+    _phase598_typed_exact_targets
+)
+if _phase598_typed_overlap:
+    raise SystemExit(
+        "Phase 598 typed exact setting duplicates an existing setting: "
+        f"{sorted(_phase598_typed_overlap)!r}"
+    )
+if PHASE598_FORMAL:
+    for _phase598_surface, _phase598_spec in (
+        _phase598_typed_exact_targets.items()
+    ):
+        MANAGED_TYPED_EXACT_TARGETS[_phase598_surface] = dict(
+            _phase598_spec
+        )
+        PHASE598_TYPED_EXACT_SURFACES.add(_phase598_surface)
 
 REVIEWED_TYPED_EXACT_TARGETS = {}
 REVIEWED_TYPED_ANNOTATIONS = dict(REVIEWED_EXACT_MANIFEST["annotations"])
@@ -1507,6 +1593,11 @@ def main():
             ):
                 del data[key]
             if (
+                key.startswith("@phase598-ruby:technical-on:")
+                and key not in PHASE598_MORPH_CONTEXT_ANNOTATIONS[language]
+            ):
+                del data[key]
+            if (
                 key.startswith("@atomic-family:")
                 and key not in ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language]
             ):
@@ -1519,6 +1610,7 @@ def main():
             data[root] = [[root, gloss]]
         data.update(ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language])
         data.update(PHASE558_MORPH_CONTEXT_ANNOTATIONS[language])
+        data.update(PHASE598_MORPH_CONTEXT_ANNOTATIONS[language])
         for key, pairs in SPLIT_CONTEXT_ANNOTATIONS[language].items():
             data[key] = pairs
         for (surface, index, piece), glosses in TYPED_CONTEXT_GLOSSES.items():

@@ -42,10 +42,22 @@ from phase558_ruby_overlay_activation import (
 from phase558_ruby_overlay_runtime_gate import (
     validate_generated_payloads as validate_phase558_generated_payloads,
 )
+from phase598_technical_on_policy import (
+    managed_morph_targets as phase598_managed_morph_targets,
+    typed_exact_targets as phase598_typed_exact_targets,
+)
+from phase598_technical_on_activation import (
+    activation_report as phase598_activation_report,
+)
+from phase598_technical_on_runtime_gate import (
+    validate_generated_payloads as validate_phase598_generated_payloads,
+)
 PHASE532_ACTIVATION = activation_report()
 PHASE532_FORMAL = PHASE532_ACTIVATION['phase532_active']
 PHASE558_ACTIVATION = phase558_activation_report()
 PHASE558_FORMAL = PHASE558_ACTIVATION['phase558_ruby_overlay_active']
+PHASE598_ACTIVATION = phase598_activation_report()
+PHASE598_FORMAL = PHASE598_ACTIVATION['phase598_technical_on_active']
 OUT = BASE + r"\_analysis_20260625\out"
 BASE_SETTINGS_PATH = os.path.join(
     BASE, "_analysis_20260625", "_base_stemming_settings.json",
@@ -695,6 +707,46 @@ for _surface, _spec in _phase558_managed_items:
             f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
         )
 
+_phase598_expected_corrections = {}
+_phase598_managed_items = (
+    phase598_managed_morph_targets().items() if PHASE598_FORMAL else ()
+)
+for _surface, _spec in _phase598_managed_items:
+    _context_key = _spec.get('ruby_context_annotation')
+    _expected = make_correction(
+        _spec['target'], ruby_track_only=True,
+        ruby_context_annotation=_context_key,
+    )
+    if (
+        _expected is None
+        or 'ne' in _expected['suffixes']
+        or 'word_boundary' not in _expected['suffixes']
+        or 'ruby_track_only' not in _expected['suffixes']
+        or f'ruby_context_annotation:{_context_key}'
+        not in _expected['suffixes']
+        or set(_NOMINAL) - set(_expected['suffixes'])
+    ):
+        raise ValueError(
+            f'Phase 598 managed correction lost its complete bounded Ruby '
+            f'scope: {_surface!r}: {_expected!r}'
+        )
+    _expected_key = ('ruby_track_only', _expected['stem_nosl'])
+    if (
+        _expected['stem'] in _phase598_expected_corrections
+        or _expected['stem'] in _phase558_expected_corrections
+        or _expected['stem'] in _phase532_expected_corrections
+    ):
+        raise ValueError(
+            f'Phase 598 managed stem duplicated: {_expected["stem"]!r}'
+        )
+    _phase598_expected_corrections[_expected['stem']] = _expected
+    _actual = corrs.get(_expected_key)
+    if _actual != _expected:
+        raise ValueError(
+            'Phase 598 managed correction missing or merged: '
+            f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
+        )
+
 # These four reviewed stems resolve equal-length prefix/suffix competitions
 # that used to choose different decompositions by annotation language.  Keep
 # their full productive paradigms explicit: future gold drift must not silently
@@ -900,6 +952,7 @@ def prepare_settings(settings_path):
             if expected['ruby_track_only']
         ),
         *_phase558_expected_corrections,
+        *_phase598_expected_corrections,
     }
     if (
         {row[0] for row in _ruby_track_rows}
@@ -921,6 +974,10 @@ def prepare_settings(settings_path):
         elif _row[0] in _phase558_expected_corrections:
             _expected_actions = set(
                 _phase558_expected_corrections[_row[0]]['suffixes']
+            )
+        elif _row[0] in _phase598_expected_corrections:
+            _expected_actions = set(
+                _phase598_expected_corrections[_row[0]]['suffixes']
             )
         else:
             _entry = _strict_ruby_track_entries[_row[0]]
@@ -964,6 +1021,12 @@ def prepare_settings(settings_path):
     }
     if PHASE558_FORMAL:
         for _surface, _spec in phase558_typed_exact_targets().items():
+            _expected_ruby_only_rows[_spec['target']] = {
+                'ne', 'word_boundary', 'case_sensitive',
+                f"typed_roles:{_spec['typed_roles']}", 'ruby_only',
+            }
+    if PHASE598_FORMAL:
+        for _surface, _spec in phase598_typed_exact_targets().items():
             _expected_ruby_only_rows[_spec['target']] = {
                 'ne', 'word_boundary', 'case_sensitive',
                 f"typed_roles:{_spec['typed_roles']}", 'ruby_only',
@@ -1216,6 +1279,23 @@ if WRITE:
             f"{_phase558_runtime_report['trilingual_mismatches']} "
             f"signature_sha256="
             f"{_phase558_runtime_report['signature_manifest_sha256']}",
+            flush=True,
+        )
+    if PHASE598_FORMAL:
+        _phase598_runtime_report = validate_phase598_generated_payloads({
+            'JA': _prepared_candidates['JP']['combined'],
+            'ZH': _prepared_candidates['ZH']['combined'],
+            'KO': _prepared_candidates['KO']['combined'],
+        })
+        print(
+            "[Phase 598 technical-on runtime gate] PASS: "
+            f"positive={_phase598_runtime_report['positive_surfaces']} "
+            f"negative={_phase598_runtime_report['negative_surfaces']} "
+            f"combined={_phase598_runtime_report['combined_surfaces']} "
+            f"3lang_mismatch="
+            f"{_phase598_runtime_report['trilingual_boundary_mismatches']} "
+            f"width_max="
+            f"{max(_phase598_runtime_report['max_effective_width_ratio'].values()):.6f}",
             flush=True,
         )
     write_all_prepared_candidates(_prepared_candidates)

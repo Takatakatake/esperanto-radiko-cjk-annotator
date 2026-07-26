@@ -33,6 +33,8 @@ from gold_snapshot import consistent_snapshot
 import phase532_ruby_policy as phase532_policy
 import phase558_ruby_overlay as phase558_policy
 import phase558_ruby_overlay_activation as phase558_activation
+import phase598_technical_on_policy as phase598_policy
+import phase598_technical_on_activation as phase598_activation
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
@@ -2718,9 +2720,22 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 self.assertEqual(phase558_ruby_only, {
                     "magnetit/o", "Izrael/io", "tia/-/tia",
                 })
+                self.assertTrue(
+                    phase598_activation.phase598_technical_on_active()
+                )
+                phase598_ruby_only = {
+                    spec["target"]
+                    for spec in phase598_policy.typed_exact_targets().values()
+                }
+                self.assertEqual(
+                    phase598_ruby_only, {"giga/elektron/volt/o"},
+                )
                 self.assertEqual(
                     {row[0] for row in ruby_only_rows},
-                    {"promil/o", *phase558_ruby_only},
+                    {
+                        "promil/o", *phase558_ruby_only,
+                        *phase598_ruby_only,
+                    },
                     language,
                 )
                 for row in ruby_only_rows:
@@ -2762,11 +2777,21 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 self.assertEqual(
                     phase558_ruby_track, {"kateĥism", "kateĥist"}
                 )
+                phase598_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in phase598_policy.managed_morph_targets().values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(phase598_ruby_track, {
+                    "fonon", "foton", "ganglion", "magneton",
+                    "mezon", "nukleon", "termoelektron",
+                })
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
                     {
                         "novjork/an", *strict_ruby_track,
                         *expected_phase532_ruby_track, *phase558_ruby_track,
+                        *phase598_ruby_track,
                     },
                 )
                 for row in ruby_track_rows:
@@ -2777,7 +2802,9 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         ))
                         continue
                     if row[0] in (
-                        expected_phase532_ruby_track | phase558_ruby_track
+                        expected_phase532_ruby_track
+                        | phase558_ruby_track
+                        | phase598_ruby_track
                     ):
                         self.assertIn("word_boundary", row[2])
                         self.assertIn("ruby_track_only", row[2])

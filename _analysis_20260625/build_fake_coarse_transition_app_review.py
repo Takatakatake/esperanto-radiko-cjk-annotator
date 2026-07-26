@@ -90,7 +90,10 @@ def localized_root_sets():
         # frozen Phase 511 review's root-count identity after regeneration.
         roots.update(
             key for key in word_anno
-            if not key.startswith(("@typed:", "@phase558-ruby:"))
+            if not key.startswith((
+                "@typed:", "@phase558-ruby:",
+                "@phase598-ruby:technical-on:",
+            ))
         )
         result[language] = roots
         identities[language] = {

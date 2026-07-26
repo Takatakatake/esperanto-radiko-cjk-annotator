@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "phase": 598,
+  "candidate_only": false,
+  "policy": "Repair only eight reviewed technical lexical roots whose internal on was confused with the fraction root. Keep Kyoto-HTML-level coarse Ruby identical in JA/ZH/KO, preserve the learner fake/deep split for Kanji, and never generalize the generic on annotation.",
+  "sources": {
+    "base_app_parent": {
+      "commit": "4682D32496F166802B4A2CF28626F376E12AAE3E",
+      "tree": "2C494DB69EBAC28EF63A192BEFA017A22710CCD7",
+      "required_r71_ancestor": "2E05403756DB6A4D1081BDD0EF95ADD77C3BFA87"
+    },
+    "phase597_learner": {
+      "bytes": 4373830,
+      "lines": 62313,
+      "sha256": "9A610D086E60A1863E1D59D61FE0F844B3EACF4DCEBDBF6AE6354E0D16D99700"
+    },
+    "phase597_academic": {
+      "bytes": 4277601,
+      "lines": 62313,
+      "sha256": "63DAB5BAF932605A2D94843AD249FBE32CB1E8A40B8D244714A17744C0384261"
+    },
+    "phase597_pejvo_original": {
+      "bytes": 2211329,
+      "lines": 44621,
+      "sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF"
+    },
+    "phase597_fake_coarse_manifest": {
+      "bytes": 1013538,
+      "entries": 3321,
+      "sha256": "E699B6BF5CE737CF1DAFBF61C9B256DF0339A48B3AA7F24E215F2136B6D00541",
+      "entries_sha256": "63BF80872496A0644BE75ADC8554E130F49F30990870D3B47956727387FA97A6"
+    }
+  },
+  "expected_counts": {
+    "entries": 8,
+    "productive_ruby_morph": 7,
+    "exact_typed_ruby_only": 1,
+    "positive_surfaces_per_language": 211,
+    "genuine_fraction_guards": 120,
+    "bare_homograph_guards": 21,
+    "adjacent_technical_guards": 14,
+    "exact_leakage_guards": 4,
+    "negative_surfaces_per_language": 159,
+    "combined_runtime_surfaces_per_language": 370
+  },
+  "entries_sha256": "EA66E4EF6BEB585A15114F86C4A4A8A14E30F47B0C7FA099958D3B20ED97ACAE",
+  "entries": [
+    {
+      "surface": "fonono",
+      "learner_line": 11579,
+      "learner_line_text": "fon/on/o:【理】フォノン##偽分解(PIV正式分解)",
+      "academic_line_text": "fonon/o:【理】フォノン",
+      "learner_decomposition": "fon/on/o",
+      "academic_decomposition": "fonon/o",
+      "selected_ruby_target": "fonon/o",
+      "authority": "pejvo_original",
+      "authority_lines": [11723],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:fonon",
+      "piece": "fonon",
+      "glosses": {
+        "ja": "フォノン",
+        "zh": "声子",
+        "ko": "포논"
+      }
+    },
+    {
+      "surface": "fotono",
+      "learner_line": 11925,
+      "learner_line_text": "fot/on/o:【理】光子##偽分解",
+      "academic_line_text": "foton/o:【理】光子",
+      "learner_decomposition": "fot/on/o",
+      "academic_decomposition": "foton/o",
+      "selected_ruby_target": "foton/o",
+      "authority": "pejvo_original",
+      "authority_lines": [12070],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:foton",
+      "piece": "foton",
+      "glosses": {
+        "ja": "光子",
+        "zh": "光子",
+        "ko": "광자"
+      }
+    },
+    {
+      "surface": "gangliono",
+      "learner_line": 12551,
+      "learner_line_text": "gangli/on/o:【解】=limfonodo（リンパ節）##偽分解##過細分解 gangli/o/n/o",
+      "academic_line_text": "ganglion/o:【解】=limfonodo（リンパ節）",
+      "learner_decomposition": "gangli/on/o",
+      "academic_decomposition": "ganglion/o",
+      "selected_ruby_target": "ganglion/o",
+      "authority": "pejvo_original",
+      "authority_lines": [12709],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:ganglion",
+      "piece": "ganglion",
+      "glosses": {
+        "ja": "リンパ節",
+        "zh": "淋巴结",
+        "ko": "림프절"
+      }
+    },
+    {
+      "surface": "gigaelektronvolto",
+      "learner_line": 12887,
+      "learner_line_text": "giga/elektr/on/volt/o:【理】ギガ電子ボルト（エネルギーの単位，GeV）##偽分解",
+      "academic_line_text": "giga/elektron/volt/o:【理】ギガ電子ボルト（エネルギーの単位，GeV）",
+      "learner_decomposition": "giga/elektr/on/volt/o",
+      "academic_decomposition": "giga/elektron/volt/o",
+      "selected_ruby_target": "giga/elektron/volt/o",
+      "authority": "pejvo_original",
+      "authority_lines": [13049],
+      "kind": "exact_typed_ruby_only",
+      "typed_roles": "RRRL",
+      "exact_annotations": [
+        {
+          "index": 0,
+          "piece": "giga",
+          "glosses": {
+            "ja": "ギガ",
+            "zh": "吉",
+            "ko": "기가"
+          }
+        },
+        {
+          "index": 1,
+          "piece": "elektron",
+          "glosses": {
+            "ja": "電子",
+            "zh": "电子",
+            "ko": "전자"
+          }
+        },
+        {
+          "index": 2,
+          "piece": "volt",
+          "glosses": {
+            "ja": "ボルト",
+            "zh": "伏特",
+            "ko": "볼트"
+          }
+        }
+      ]
+    },
+    {
+      "surface": "magnetono",
+      "learner_line": 22882,
+      "learner_line_text": "magnet/on/o:【理】磁子##偽分解",
+      "academic_line_text": "magneton/o:【理】磁子",
+      "learner_decomposition": "magnet/on/o",
+      "academic_decomposition": "magneton/o",
+      "selected_ruby_target": "magneton/o",
+      "authority": "pejvo_original",
+      "authority_lines": [23154],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:magneton",
+      "piece": "magneton",
+      "glosses": {
+        "ja": "磁子",
+        "zh": "磁子",
+        "ko": "마그네톤"
+      }
+    },
+    {
+      "surface": "mezono",
+      "learner_line": 25285,
+      "learner_line_text": "mez/on/o:【理】中間子##偽分解",
+      "academic_line_text": "mezon/o:【理】中間子",
+      "learner_decomposition": "mez/on/o",
+      "academic_decomposition": "mezon/o",
+      "selected_ruby_target": "mezon/o",
+      "authority": "pejvo_original",
+      "authority_lines": [25585],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:mezon",
+      "piece": "mezon",
+      "glosses": {
+        "ja": "中間子",
+        "zh": "介子",
+        "ko": "중간자"
+      }
+    },
+    {
+      "surface": "nukleono",
+      "learner_line": 27949,
+      "learner_line_text": "nukle/on/o:【理】核子,>>protono,>>neu^trono##偽分解",
+      "academic_line_text": "nukleon/o:【理】核子,>>protono,>>neu^trono",
+      "learner_decomposition": "nukle/on/o",
+      "academic_decomposition": "nukleon/o",
+      "selected_ruby_target": "nukleon/o",
+      "authority": "pejvo_original",
+      "authority_lines": [28288],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:nukleon",
+      "piece": "nukleon",
+      "glosses": {
+        "ja": "核子",
+        "zh": "核子",
+        "ko": "핵자"
+      }
+    },
+    {
+      "surface": "termoelektrono",
+      "learner_line": 40412,
+      "learner_line_text": "term/o/elektr/on/o:【理】熱電子##偽分解(PIV正式分解)##過細分解 t/e/r/m/o/elektr/on/o",
+      "academic_line_text": "termoelektron/o:【理】熱電子",
+      "learner_decomposition": "term/o/elektr/on/o",
+      "academic_decomposition": "termoelektron/o",
+      "selected_ruby_target": "termoelektron/o",
+      "authority": "pejvo_original",
+      "authority_lines": [40890],
+      "kind": "productive_ruby_morph",
+      "context_key": "@phase598-ruby:technical-on:termoelektron",
+      "piece": "termoelektron",
+      "glosses": {
+        "ja": "熱電子",
+        "zh": "热电子",
+        "ko": "열전자"
+      }
+    }
+  ]
+}
