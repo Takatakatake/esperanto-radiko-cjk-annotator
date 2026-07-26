@@ -154,7 +154,11 @@ FORCE_BARE = {
     'ramen': '借用語(ラーメン)。amen(アーメン)も ram(破城槌)も誤り',
     'SATan': 'SAT(世界無国民協会)の会員。訳語がマスターに無い。Tan(なめす)は誤り',
     'SieraNevad': 'gold=SieraNevad/o(1片)。Si(自分)は誤り',
-    'Temis': 'gold=Temis(正義の女神)。Tem(主題)+is(過去)は誤り',
+    # ★第74R訂正: Temis を裸化したのは**実文用法に対して誤り**だった。
+    #   京大コーパスの Temis 6件は**すべて動詞 tem/is**(「それは…についてでした」)で、
+    #   女神テミスの用例は0件。日本語対訳も「それは…でした」と対応している。
+    #   裸化すると実際に現れる形だけが注釈を失うため、tem(主題)+is(過去)へ戻す
+    #   (=第68R以前の長年の配信挙動)。名詞形 Temiso は語尾-oが付き女神を指すため裸のまま。
     'Kokoro': '日本語の固有名詞。Kok(ニワトリ)+or(金)も kor(心)も語形として偶然',
     'Kurenai': '日本語の固有名詞', 'MURAKAMI': '日本語の姓', 'LOMANOV': '固有名詞',
     'Merento': '固有名詞', 'Naviado': '固有名詞', 'Sagrada': '固有名詞(西語)',
@@ -401,7 +405,7 @@ for stem, pieces in MANUAL.items():
             w = stem_c + e2
             if add(w, ps_ + [('B', e2)], f'MANUAL:{stem}'): man_added += 1
 # 語尾を持たない固有名詞・擬音語
-for w, why in (('Temis', FORCE_BARE['Temis']), ('Temiso', FORCE_BARE['Temis']),
+for w, why in (('Temiso', 'gold=Temis(正義の女神)。語尾-o付きは女神を指すため裸のまま'),
                ('glu-glu-glu', FORCE_BARE['glu-glu-glu'])):
     add(w, [('B', w)], f'BARE:{why}')
 
