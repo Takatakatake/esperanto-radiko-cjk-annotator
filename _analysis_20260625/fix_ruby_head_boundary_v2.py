@@ -126,7 +126,24 @@ RESEG = {
     'portan': 'ort(直角の) → port(運ぶ)',
     'nekante': 'ek(開始) → nek(~もまた~ない)+ant',
     'nita': 'it(受動完了) → nit(リベット)',
+    # ── 第69R追加: 京大エス研コーパスとの分節比較で見つかった**語中**の欠陥 ──
+    #   第68Rは語頭食い込みだけを対象にしていたため、語頭から始まっていても
+    #   途中の分節が誤っている語を取りこぼしていた。いずれも実在の普通の語。
+    'eksterkastuloj': 'ek(開始)+sterk(家畜糞肥)+as+tul → ekster(外)+kast+ul  ※京大=ekster/kast/ul',
+    'ordinarajn': 'or([化]金)+dinar(ディナール) → ordinar(普通の)  ※ordinara は正しいのに -ajn だけ壊れる',
+    'ordinaraj': '同上',
+    'fabrikistoj': 'fabrik+is(過去形) → fabrik(工場)+ist(従事者)  ※京大=fabrik/ist',
+    'fabrikisto': '同上', 'fabrikiston': '同上', 'fabrikistojn': '同上',
+    'teriĝi': 'teri(獣類) → ter(土地)+iĝ(なる)  ※京大=ter/iĝ',
+    'teriĝo': '同上', 'teriĝis': '同上', 'teriĝas': '同上',
+    'korona': 'kor(心) → koron(冠)+a  ※京大=korona',
+    'bombaj': 'bombaj(ボンベイ) → bomb(爆弾)+aj  ※小文字形は爆弾の形容詞',
+    'bombajn': '同上',
 }
+# RESEG は「語頭欠陥」の有無に関わらず処理する(語中の欠陥も対象にするため)
+RESEG_FORCE = {'eksterkastuloj', 'ordinarajn', 'ordinaraj', 'fabrikistoj', 'fabrikisto',
+               'fabrikiston', 'fabrikistojn', 'teriĝi', 'teriĝo', 'teriĝis', 'teriĝas',
+               'korona', 'bombaj', 'bombajn'}
 # ── 明示的に全裸化する語(語頭に語根はあるが、当てると意味を成さない) ──────
 FORCE_BARE = {
     'glu-glu-glu': '擬音語(七面鳥の鳴き声)。glu(糊)を3つ当てるのは誤り',
@@ -393,7 +410,8 @@ stat = collections.Counter()
 skipped = []
 for src, w in targets:
     out = cur[w]
-    if not head_defect(w, out): continue
+    # RESEG_FORCE は語頭欠陥が無くても処理する(語中の分節誤りを拾うため)
+    if not head_defect(w, out) and w not in RESEG_FORCE: continue
     if w in _added: stat['手組みで対応済'] += 1; continue
     if w in KEEP: stat['据置(照会)'] += 1; skipped.append((w, 'KEEP: ' + KEEP[w])); continue
     base = w
@@ -412,6 +430,23 @@ for src, w in targets:
         continue
     stat['未処理(要照会)'] += 1
     skipped.append((w, '未処理: 語頭欠陥だが再分割の妥当性が未確認'))
+
+# ── RESEG_FORCE の取りこぼし補完 ────────────────────────────────
+#   走査対象は gold見出し + コーパス語彙なので、そこに無い語形(fabrikisto 等の
+#   常用語の別活用)は上の走査で処理されない。明示ホワイトリストは必ず処理する。
+_rf = [w for w in RESEG_FORCE if w not in _added and w not in cur]
+if _rf:
+    for i in range(0, len(_rf), B):
+        ch = _rf[i:i+B]
+        o = conv(' ' + (' ' + SEP + ' ').join(ch) + ' ')
+        parts = o.split(SEP)
+        if len(parts) != len(ch): parts = [conv(' ' + w + ' ') for w in ch]
+        for w, s_ in zip(ch, parts): cur[w] = s_.strip()
+    _n = 0
+    for w in _rf:
+        pieces = gold_segment(w, decomp[w]) if w in decomp else dp_segment(w)
+        if pieces and add(w, pieces, f'RESEG:{RESEG.get(w, "")}'): _n += 1
+    print(f'RESEG_FORCE の取りこぼし補完: {_n} 件(候補 {len(_rf)})')
 
 # ── 大小変種の補完 ──────────────────────────────────────────────
 #   走査対象(gold見出し+コーパス語彙)に現れなかった変種は素通りしてしまう。
@@ -436,7 +471,10 @@ if _var_todo:
         for w, s in zip(ch, parts): cur[w] = s.strip()
     _nv = 0
     for v, w in _var_todo:
-        if not head_defect(v, cur[v]): continue      # その変種が健全なら触らない
+        # RESEG_FORCE 由来は「語中の欠陥」なので head_defect では捕まらない。
+        # その変種も同じ誤り方をしているため、明示的に通す(最終の検証パスで
+        # 描画が変わらないものは落ちる)。
+        if not head_defect(v, cur[v]) and w not in RESEG_FORCE: continue
         ps_v = case_apply(_pieces_of[w], 'UPPER' if v == w.upper() else 'Cap')
         if add(v, ps_v, f'VAR:{w}'): _nv += 1
     print(f'大小変種の補完: {_nv} 件を追加(候補 {len(_var_todo)})')
