@@ -7245,6 +7245,55 @@
   "ruby_track_only": true
  },
  {
+  "w": "fonono",
+  "target": "fonon/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:fonon",
+  "ruby_track_only": true
+ },
+ {
+  "w": "fotono",
+  "target": "foton/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:foton",
+  "ruby_track_only": true
+ },
+ {
+  "w": "gangliono",
+  "target": "ganglion/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:ganglion",
+  "ruby_track_only": true
+ },
+ {
+  "w": "magnetono",
+  "target": "magneton/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:magneton",
+  "ruby_track_only": true
+ },
+ {
+  "w": "mezono",
+  "target": "mezon/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:mezon",
+  "ruby_track_only": true
+ },
+ {
+  "w": "nukleono",
+  "target": "nukleon/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:nukleon",
+  "ruby_track_only": true
+ },
+ {
+  "w": "termoelektrono",
+  "target": "termoelektron/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase598-ruby:technical-on:termoelektron",
+  "ruby_track_only": true
+ },
+ {
   "w": "bonaero",
   "target": "bonaer/o",
   "corpus_managed": true,
@@ -8215,6 +8264,16 @@
   "w": "tia-tia",
   "target": "tia/-/tia",
   "typed_roles": "RLR",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "gigaelektronvolto",
+  "target": "giga/elektron/volt/o",
+  "typed_roles": "RRRL",
   "exact_only": true,
   "boundary_only": true,
   "case_sensitive": true,

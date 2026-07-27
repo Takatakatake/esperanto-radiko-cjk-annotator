@@ -40,6 +40,8 @@ import phase532_authority_carry_forward as phase532_carry
 import phase532_ruby_policy as phase532_policy
 import phase558_ruby_overlay as phase558_overlay
 import phase558_ruby_overlay_activation as phase558_activation
+import phase598_technical_on_policy as phase598_policy
+import phase598_technical_on_activation as phase598_activation
 
 
 def parse_args(argv=None):
@@ -132,6 +134,7 @@ def _assert_ruby_only_kanji_guard(expected, completed_step):
 required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
     "ESP_CORPUS_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
+    "ESP_PHASE597_CANDIDATE_DIR",
 ]
 if ARGS.all_tracks:
     required_inputs.append("ESP_KANJI_MASTER_PATH")
@@ -222,6 +225,45 @@ if (
     != phase558_overlay.review_identity()
 ):
     raise SystemExit("formal Phase 558 source/activation identity mismatch")
+
+phase598_activation_report = phase598_activation.activation_report()
+if phase598_activation_report.get("phase598_technical_on_active") is not True:
+    raise SystemExit(
+        "formal regeneration requires the Phase 598 technical-on sidecar"
+    )
+phase597_candidate_dir = os.environ["ESP_PHASE597_CANDIDATE_DIR"]
+phase598_bound_sources = {}
+for source_name in (
+    "phase597_learner",
+    "phase597_academic",
+    "phase597_pejvo_original",
+    "phase597_fake_coarse_manifest",
+):
+    expected = phase598_policy.EXPECTED_SOURCES[source_name]
+    matches = []
+    for name in os.listdir(phase597_candidate_dir):
+        path = os.path.join(phase597_candidate_dir, name)
+        if not os.path.isfile(path):
+            continue
+        with open(path, "rb") as handle:
+            raw = handle.read()
+        if (
+            len(raw) == expected["bytes"]
+            and hashlib.sha256(raw).hexdigest().upper()
+            == expected["sha256"]
+        ):
+            matches.append(path)
+    if len(matches) != 1:
+        raise SystemExit(
+            f"formal Phase 598 source binding failed for {source_name}: "
+            f"{matches!r}"
+        )
+    phase598_bound_sources[source_name] = matches[0]
+if (
+    phase598_activation_report["phase598_review"]
+    != phase598_policy.review_identity()
+):
+    raise SystemExit("formal Phase 598 source/activation identity mismatch")
 _gold_raw, gold_identity = consistent_snapshot(os.environ["ESP_GOLD_PATH"])
 if (
     gold_identity["sha256"] != expected_gold["sha256"]
@@ -269,6 +311,10 @@ COMMON_ENV["ESP_EXPECTED_ACADEMIC_SHA256"] = (
 FORMAL_HEAD = subprocess.check_output(
     ["git", "rev-parse", "HEAD"], cwd=os.path.dirname(HERE), text=True,
 ).strip()
+R67_R68_OVERLAY_SNAPSHOT = os.path.join(
+    tempfile.gettempdir(),
+    f"esperanto_r67_r68_overlay_{os.getpid()}.json",
+)
 if ARGS.all_tracks:
     kanji_manifest_path = os.path.join(
         HERE, "_kanji_master_scope_manifest.json",
@@ -383,6 +429,19 @@ STEPS = [
         os.path.join(HERE, 'phase558_ruby_overlay_runtime_gate.py'),
         '--mode', 'post-regen', '--deployed', '--batch-size', '33',
     ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase598_technical_on_runtime_gate.py'),
+        '--deployed', '--batch-size', '20',
+    ], {}),
+    # R67/R68 are reviewed post-generation layers.  Seal their exact deployed
+    # rows before apply_confirmed rebuilds the large Ruby payloads; re-running
+    # the historical discovery script would consult a moving absolute master.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
+        'capture', '--output', R67_R68_OVERLAY_SNAPSHOT,
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'apply_corpus_word_anno.py'), '--write'], {}),
     ([
         sys.executable,
@@ -394,7 +453,20 @@ STEPS = [
     # apply_confirmed builds all three payloads in memory and runs the matching
     # post-regen 58/58 runtime gate before its first persistent write.
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--write'], {'SKIP_VERIFY': '1'}),
+    # Carry forward only the pinned R67H 336 + R68W 1,013 rows per language
+    # (plus the reviewed Auster exact override), transactionally across JA/ZH/KO.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
+        'apply', '--input', R67_R68_OVERLAY_SNAPSHOT,
+        '--expected-global-rows', '572501',
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'fix_ruby_postregen.py')], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
+        'audit', '--expected-global-rows', '572501',
+    ], {}),
     # Re-render the persisted payloads after post-processing as well: the
     # in-memory gate above cannot license a later fixer to alter any of the 58.
     *([([
@@ -406,6 +478,16 @@ STEPS = [
         sys.executable,
         os.path.join(HERE, 'phase558_ruby_overlay_runtime_gate.py'),
         '--mode', 'post-regen', '--deployed', '--batch-size', '33',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase598_technical_on_runtime_gate.py'),
+        '--deployed', '--batch-size', '20',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase598_parent_payload_delta_gate.py'),
+        '--deployed',
     ], {}),
     # 全21443 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
@@ -422,6 +504,12 @@ STEPS = [
     # 生成規則の単体テスト + 3言語デプロイJSONの実機回帰テスト。
     ([sys.executable, os.path.join(HERE, 'test_generation_regressions.py')], {}),
     ([sys.executable, os.path.join(HERE, 'test_phase558_ruby_overlay.py')], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_phase598_technical_on.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_r67_r68_overlay_carry_forward.py',
+    )], {}),
     ([
         sys.executable,
         os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),

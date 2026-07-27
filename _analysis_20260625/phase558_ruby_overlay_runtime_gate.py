@@ -354,7 +354,7 @@ def validate_payload_variant_closure(payloads_by_language: dict) -> dict:
         rows_by_surface = {surface: [] for surface in expected}
         for rows in audit.extract_lists(payload):
             for row in rows:
-                if not isinstance(row, list) or len(row) < 2:
+                if not isinstance(row, (list, tuple)) or len(row) < 2:
                     continue
                 source = row[0]
                 if not isinstance(source, str):

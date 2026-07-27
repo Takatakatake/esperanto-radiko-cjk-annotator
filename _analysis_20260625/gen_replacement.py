@@ -1268,6 +1268,21 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
             custom_stemming_setting_list.pop(0)
     for i in custom_stemming_setting_list:
         if len(i) == 3:
+            _reviewed_track_setting = (
+                isinstance(i[2], list)
+                and (
+                    "ruby_only" in i[2]
+                    or _RUBY_TRACK_ONLY_ACTION in i[2]
+                    or _KANJI_TRACK_ONLY_ACTION in i[2]
+                    or any(
+                        isinstance(action, str)
+                        and action.startswith(
+                            _RUBY_CONTEXT_ANNOTATION_PREFIX
+                        )
+                        for action in i[2]
+                    )
+                )
+            )
             try:
                 _explicit_word_boundary = "word_boundary" in i[2]
                 _ruby_left_boundary = "ruby_left_boundary" in i[2]
@@ -1722,7 +1737,12 @@ def generate(app_module_dir, data_dir, csv_path, stemming_json_path,
                 # authority.  A missing/malformed localized annotation must
                 # fail the build instead of silently dropping the exact rule.
                 raise
-            except Exception:
+            except Exception as error:
+                if _reviewed_track_setting:
+                    raise RuntimeError(
+                        "reviewed track-scoped setting failed during "
+                        f"generation: {i[0]!r}"
+                    ) from error
                 continue
 
     # user_replacement_item_setting_list

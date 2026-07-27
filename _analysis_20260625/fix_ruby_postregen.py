@@ -5,10 +5,17 @@
 再生成のたびに実行: python fix_ruby_postregen.py
 """
 import json, os, sys, re, unicodedata
+from collections import Counter
 from pathlib import Path
 
 from atomic_json import atomic_file_copy, atomic_json_dump
 from gen_replacement import load_app_replacement_helper
+from reviewed_di_semantic_policy import (
+    EXPECTED_THEOLOGICAL_DI_GLOBAL_RULES,
+    THEOLOGICAL_DI_GLOSSES,
+    THEOLOGICAL_DI_RUNTIME_AUTHORITY,
+    THEOLOGICAL_DI_RUNTIME_RULE_MULTIPLICITY,
+)
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -58,11 +65,24 @@ def is_authoritative_exact_surface(surface):
     )
 
 CORR_CIEL={'JA':'色々に','ZH':'以各种方式','KO':'여러모로'}
+RUBY_BLOCK_RE = re.compile(
+    r'<ruby>(?P<piece>[^<]+)<rt class="[^"]+">'
+    r'(?P<gloss>.*?)</rt></ruby>'
+)
+
 # E_stem語幹キーがwa未収録/別noslで root既定に落ちる語の per-word piece 再構築
 WORD_PIECES={
   'anestezi': [('an',{'JA':'無','ZH':'无','KO':'무'}),
                ('estez',{'JA':'感覚','ZH':'感觉','KO':'감각'}),
                ('i',None)],
+  # 粗ルビでは dinamism を一体化する（PEJVO原典・学術版と一致）。
+  # 学習者版の dinam/ism は漢字トラック用の偽分解として別途そのまま尊重する。
+  'dinamism': [('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'})],
+  'elektrodinamism': [
+               ('elektr',{'JA':'電気','ZH':'电','KO':'전기'}),
+               ('o',None),
+               ('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'}),
+  ],
   # 医学-it-(炎症)・化学-at-(塩)は分詞ではなく「偽の友」。E_stem既定の it=受動完了/at=受動継続
   # を、既存 wa['mening/it']/wa['nitr/at'] と同じ正しいグロス(炎/酸塩)へ後処理で是正。
   # (コーパスの粗ルビ meningit=髄膜炎/nitrat=硝酸塩 とも意味整合。漢字トラックは元より正)
@@ -90,6 +110,59 @@ LAMA_FORMS={'lama','laman','lamaj','lamajn','lame'}
 CAP_WORD_PIECES={
   'butan': [('butan',{'JA':'[地名]ブータン','ZH':'[地名]不丹','KO':'[지명]부탄'})],
 }
+
+
+def rewrite_reviewed_theological_di(src, rendered, app):
+    """Return one exact God/two semantic correction, or ``None`` off-scope."""
+    normalized_src = unicodedata.normalize('NFC', src)
+    expected_signature = THEOLOGICAL_DI_RUNTIME_AUTHORITY.get(
+        normalized_src.casefold()
+    )
+    if expected_signature is None:
+        return None
+    if is_authoritative_exact_surface(normalized_src):
+        raise ValueError(
+            f'theological di/exact-surface authority collision: {src!r}'
+        )
+    if app not in THEOLOGICAL_DI_GLOSSES:
+        raise ValueError(f'unsupported theological di language: {app!r}')
+
+    matches = list(RUBY_BLOCK_RE.finditer(rendered))
+    actual_signature = tuple(
+        unicodedata.normalize('NFC', match.group('piece')).casefold()
+        for match in matches
+    )
+    if actual_signature != expected_signature:
+        raise ValueError(
+            f'theological di ruby signature drift for {src!r}: '
+            f'{actual_signature!r} != {expected_signature!r}'
+        )
+    di_indexes = [
+        index for index, piece in enumerate(actual_signature)
+        if piece == 'di'
+    ]
+    expected_di_index = expected_signature.index('di')
+    if di_indexes != [expected_di_index]:
+        raise ValueError(
+            f'theological di ruby position drift for {src!r}: '
+            f'{di_indexes!r} != {[expected_di_index]!r}'
+        )
+
+    old_gloss, new_gloss = THEOLOGICAL_DI_GLOSSES[app]
+    di_match = matches[expected_di_index]
+    current_gloss = di_match.group('gloss')
+    if current_gloss not in (old_gloss, new_gloss):
+        raise ValueError(
+            f'theological di gloss drift for {src!r}: {current_gloss!r}'
+        )
+    # The reviewed old/new glosses have identical Arial16 widths.  Replace
+    # only the rt text span: rb, class, tags and authored breaks remain bytes.
+    return (
+        rendered[:di_match.start('gloss')]
+        + new_gloss
+        + rendered[di_match.end('gloss'):]
+    )
+
 
 def rewrite_surface_core(src, app, format_piece):
     """Return a replacement core, or ``None`` when no fixup may apply."""
@@ -152,6 +225,28 @@ def prepare_app(app):
     with (base / "char_widths.json").open(encoding="utf-8") as stream:
         cw=json.load(stream)
     FMT='HTML格式_Ruby文字_大小调整'
+    old_di_gloss, new_di_gloss = THEOLOGICAL_DI_GLOSSES[app]
+    try:
+        old_di_width = sum(cw[character] for character in old_di_gloss)
+        new_di_width = sum(cw[character] for character in new_di_gloss)
+    except KeyError as error:
+        raise ValueError(
+            f'{app}: theological di gloss has no Arial16 width: {error.args[0]!r}'
+        ) from error
+    if old_di_width != new_di_width:
+        raise ValueError(
+            f'{app}: theological di gloss width drift: '
+            f'{old_di_width!r} != {new_di_width!r}'
+        )
+    global_buckets = [
+        key for key in d if 'replacements_final_list' in key
+    ]
+    if len(global_buckets) != 1:
+        raise ValueError(
+            f'{app}: global replacement bucket drift: {global_buckets!r}'
+        )
+    global_bucket = global_buckets[0]
+    theological_di_rows = []
     n=0
     for k in d:
         for e in d[k]:
@@ -163,6 +258,32 @@ def prepare_app(app):
             leading=old[:left_len]
             trailing=old[core_end:]
             src=unicodedata.normalize('NFC',old[left_len:core_end])
+            theological_surface = src.casefold()
+            if (
+                theological_surface in THEOLOGICAL_DI_RUNTIME_AUTHORITY
+                and k != global_bucket
+            ):
+                raise ValueError(
+                    f'{app}: theological di surface leaked outside global '
+                    f'bucket: {k!r} {src!r}'
+                )
+            rendered_core_end = (
+                len(e[1]) - right_len if right_len else len(e[1])
+            )
+            theological_di = (
+                rewrite_reviewed_theological_di(
+                    src,
+                    e[1][left_len:rendered_core_end],
+                    app,
+                )
+                if k == global_bucket
+                else None
+            )
+            if theological_di is not None:
+                theological_di_rows.append(theological_surface)
+                nb=leading+theological_di+trailing
+                if nb!=e[1]: e[1]=nb; n+=1
+                continue
             rewritten = rewrite_surface_core(
                 src,
                 app,
@@ -173,6 +294,18 @@ def prepare_app(app):
             if rewritten is not None:
                 nb=leading+rewritten+trailing
                 if nb!=e[1]: e[1]=nb; n+=1
+    actual_theological_di_multiplicity = Counter(theological_di_rows)
+    if (
+        len(theological_di_rows) != EXPECTED_THEOLOGICAL_DI_GLOBAL_RULES
+        or actual_theological_di_multiplicity
+        != Counter(THEOLOGICAL_DI_RUNTIME_RULE_MULTIPLICITY)
+    ):
+        raise ValueError(
+            f'{app}: theological di deployed scope drift: '
+            f'rows={len(theological_di_rows)} '
+            f'surfaces={len(actual_theological_di_multiplicity)} '
+            f'multiplicity={dict(actual_theological_di_multiplicity)!r}'
+        )
     return dep, d, n
 
 
