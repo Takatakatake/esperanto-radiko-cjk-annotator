@@ -78,6 +78,18 @@ TARGETS = [
     # bombaj 族: ★小文字のみ。大文字形は固有名詞ボンベイのまま据置
     ('bombaj',   [('bomb', 'bomb'), (None, 'aj')],            ['lower']),
     ('bombajn',  [('bomb', 'bomb'), (None, 'ajn')],           ['lower']),
+    # miriad 族(第83Rで追加): gold は miria/d/o ##偽分解。ルビ側は一語根に粗くするのが正しい。
+    #   現行 miria[万]«do» は語根 miriad(無数) を miria(万)+d に割ってしまい、
+    #   しかも d が裸で落ちる。miriadoj は京大コーパスに実在する。
+    #   ★miriadoj だけは以前のラウンドで既に miriad[無数] に直っていたが、
+    #     miriado / miriadon / miriadojn と裸の語根形が miria[万]+d のまま取り残されていた
+    #     (「見出しの一部だけ直して語尾変化形を落とす」型の残骸)。族ごと揃える。
+    #     なお miria(万)自体は別語根で miriametro=万メートル に使われるので触らない。
+    ('miriad',   [('miriad', 'miriad')],                      ['lower', 'title', 'upper']),
+    ('miriado',  [('miriad', 'miriad'), (None, 'o')],         ['lower', 'title', 'upper']),
+    ('miriadoj', [('miriad', 'miriad'), (None, 'oj')],        ['lower', 'title', 'upper']),
+    ('miriadon', [('miriad', 'miriad'), (None, 'on')],        ['lower', 'title', 'upper']),
+    ('miriadojn',[('miriad', 'miriad'), (None, 'ojn')],       ['lower', 'title', 'upper']),
 ]
 
 # ── 約物パディング(エンジンの照合形を再現) ──────────────────────────
