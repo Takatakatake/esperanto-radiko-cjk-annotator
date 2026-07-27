@@ -2,15 +2,15 @@
  "schema_version": 1,
  "description": "Pinned exact case-sensitive app rules for every non-app-alphabet ruby-bearing unit in the reviewed Kyoto corpus.",
  "source": {
-  "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
-  "branch": "main",
+  "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+  "branch": "agent/iniciatoro-coarse-ruby",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
   "content_files": 169,
-  "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
-  "raw_ruby": 348971,
-  "parsed_ruby": 348971,
-  "parsed_units": 271065
+  "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+  "raw_ruby": 348580,
+  "parsed_ruby": 348580,
+  "parsed_units": 270763
  },
  "counts": {
   "exact_surfaces": 426,

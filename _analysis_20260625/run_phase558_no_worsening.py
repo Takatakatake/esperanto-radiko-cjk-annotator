@@ -35,7 +35,7 @@ PHASE532_GOLD_SHA256 = (
 )
 REQUIRED_ENVIRONMENT = (
     "ESP_GOLD_PATH",
-    "ESP_CORPUS_PATH",
+    "ESP_PHASE558_PARENT_CORPUS_PATH",
     "ESP_PHASE558_CURRENT_CORPUS_PATH",
 )
 UTF8_ENVIRONMENT = {
@@ -309,7 +309,13 @@ def run_formal_audits(
     common_environment.update(UTF8_ENVIRONMENT)
 
     parent_environment = dict(common_environment)
-    parent_environment["ESP_CORPUS_PATH"] = environ["ESP_CORPUS_PATH"]
+    # ``ESP_CORPUS_PATH`` is the active exact/canonical corpus and is allowed
+    # to advance.  The Phase 558 proof, however, is historical evidence whose
+    # parent must remain the immutable b769 snapshot.  Never inherit or reuse
+    # the active value here.
+    parent_environment["ESP_CORPUS_PATH"] = environ[
+        "ESP_PHASE558_PARENT_CORPUS_PATH"
+    ]
     parent_command = [
         sys.executable,
         str(RAW_AUDITOR),

@@ -434,7 +434,12 @@ class Phase558RubyOverlayTests(unittest.TestCase):
 
     def test_repeat_pipeline_closes_sources_prewrite_postfix_and_full_audit(self):
         pipeline = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
-        full_audit = (HERE / "audit_master_3lang_full_snapshot.py").read_text(
+        successor = (
+            HERE / "run_phase597_full_master_successor.py"
+        ).read_text(encoding="utf-8")
+        successor_sidecar = (
+            HERE / "phase597_full_master_successor_sidecar_gate.py"
+        ).read_text(
             encoding="utf-8"
         )
         self.assertIn("ESP_PHASE558_CANDIDATE_DIR", pipeline)
@@ -452,20 +457,53 @@ class Phase558RubyOverlayTests(unittest.TestCase):
         )
         self.assertLess(first_gate, first_writer)
         self.assertLess(fixer, second_gate)
-        for flag in (
+        self.assertIn("run_phase597_full_master_successor.py", pipeline)
+        self.assertIn("'--phase597-dir', phase597_candidate_dir", pipeline)
+        self.assertNotIn(
+            "os.path.join(HERE, 'audit_master_3lang_full_snapshot.py')",
+            pipeline,
+        )
+        self.assertIn(
+            'RAW_AUDITOR = HERE / "audit_master_3lang_full_snapshot.py"',
+            successor,
+        )
+        for forbidden_raw_flag in (
+            "--phase532-baseline-dir",
+            "--phase532-candidate-dir",
+            "--phase532-runtime-mode",
             "--phase558-candidate-dir",
             "--phase558-ruby-disposition-ledger",
             "--phase558-japanese-guide",
             "--phase558-chinese-guide",
             "--phase558-runtime-mode",
         ):
-            self.assertIn(flag, pipeline)
-            self.assertIn(flag, full_audit)
-        self.assertIn("ruby_overlay_adoption_authorized", full_audit)
-        self.assertIn("master_candidate_promotion_authorized", full_audit)
-        self.assertIn("master_candidate_promotion_blockers", full_audit)
-        self.assertIn("effective_ruby_width_within_2x", full_audit)
-        self.assertIn('phase558_signature_report["payload_gloss_gate"]', full_audit)
+            self.assertIn(forbidden_raw_flag, successor)
+        self.assertIn(
+            "if any(option in command for option in forbidden):",
+            successor,
+        )
+        for phase_import in (
+            "import phase532_activation",
+            "import phase532_runtime_signature_gate as phase532_runtime",
+            "import phase558_ruby_overlay_activation",
+            "import phase558_ruby_overlay_runtime_gate as phase558_runtime",
+            "import phase598_technical_on_activation",
+            "import phase598_technical_on_runtime_gate as phase598_runtime",
+        ):
+            self.assertIn(phase_import, successor_sidecar)
+        self.assertIn(
+            "predecessor_reports = predecessor_runner(batch_size=batch_size)",
+            successor_sidecar,
+        )
+        self.assertIn(
+            "predecessor_summary = validate_deployed_predecessor_reports(",
+            successor_sidecar,
+        )
+        for phase in ("phase532", "phase558", "phase598"):
+            self.assertIn(
+                f'requirements["{phase}"]',
+                successor_sidecar,
+            )
 
     @unittest.skipUnless(
         PHASE532_DIR.is_dir() and PHASE558_DIR.is_dir()

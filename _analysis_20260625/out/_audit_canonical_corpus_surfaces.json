@@ -9,37 +9,78 @@
       "Group every observed typed signature by canonical surface.",
       "Narrow all reviewed evaluable surfaces to their reviewed-manifest signature.",
       "Render every surface through each selected deployed Ruby runtime/payload.",
-      "Require visible identity, expected typed signature, and no placeholder token."
+      "Require visible identity, expected typed signature, and no placeholder token.",
+      "Require the deployed Phase 599 five-phrase Temis promotion gate.",
+      "Admit only the sealed isolated L:Temis residual while rejecting any global Temis split or any additional residual."
     ]
   },
-  "algorithm_sha256": "6A68969E3B4A0FF6580D52BE8645F39E74DC12C525317DEB3FD339F594771B97",
-  "script_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\check_canonical_corpus_surfaces.py",
-  "script_sha256": "A633D1BEF31025C2AFF699814818F69540D3982C1BB043E6691426EC5003C04E",
+  "algorithm_sha256": "E1DE302311B3DD60F0B156B9541938AC50A1448B86B450DA9DDE3BDEE98077E0",
+  "script_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\_analysis_20260625\\check_canonical_corpus_surfaces.py",
+  "script_sha256": "CA6C3CB2DCA337A05DBCB86673086A4D953551D26FAF42EA3567A1EEF0F5E43A",
   "corpus": {
-    "path": "D:\\tmp\\codex_corpus_postmerge_b769038_audit_20260715",
-    "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
-    "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
+    "path": "D:\\tmp\\codex_corpus_iniciator_candidate_20260726",
+    "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+    "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B"
   },
-  "exact_manifest_sha256": "B5FCC22DF33F5A60E3887DB6C77B99AA2ADCDE3745E2BE43FCE22EDE10C39D7F",
-  "reviewed_manifest_sha256": "2F463A3A8178E997108AD15924997503B6BEB858F53900FFFDB7169EB6ED857E",
+  "exact_manifest_sha256": "1D402A255DA138248E81E5C5FE39E068EDCBB0DA22EF1C82FE8FA96FFAEF6A62",
+  "reviewed_manifest_sha256": "C59DE88777E7AE6A5F66BD3E432AA0643CCAC887068AE52626E4D5CAD0ACDD32",
+  "contextual_exceptions": {
+    "authority_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\_analysis_20260625\\_canonical_contextual_exceptions_d1642c2.json",
+    "authority_sha256": "E0328B52FA8B01B6172EE10F43245D0F065C69F0513DC44E43FD0B231F06AD3A",
+    "raw_residual_language_surfaces": 3,
+    "raw_residual_language_instances": 18,
+    "admitted_language_surfaces": 3,
+    "unadmitted_language_surfaces": 0,
+    "trilingual_surface_identity": true,
+    "global_surface_rule_added": false,
+    "phase599_promotion_audit_gate": true,
+    "admissions": [
+      {
+        "language": "JA",
+        "surface": "Temis",
+        "instances": 6
+      },
+      {
+        "language": "ZH",
+        "surface": "Temis",
+        "instances": 6
+      },
+      {
+        "language": "KO",
+        "surface": "Temis",
+        "instances": 6
+      }
+    ],
+    "gate": true
+  },
+  "phase599_promotion": {
+    "ledger_sha256": "0A24AECF19564B49452E355A14E43ECE1183B2A7023B7F22E4C65DDE7DFB5E74",
+    "managed_rows_per_language": {
+      "JA": 5,
+      "ZH": 5,
+      "KO": 5
+    },
+    "post_promotion_global_rows_per_language": 572506,
+    "promotion_audit_gate": true
+  },
   "scope": {
     "content_files": 169,
-    "raw_ruby": 348971,
-    "parsed_ruby": 348971,
-    "parsed_units": 271065,
-    "evaluable_instances": 269879,
-    "canonical_surfaces": 21443,
-    "reviewed_overrides": 628
+    "raw_ruby": 348580,
+    "parsed_ruby": 348580,
+    "parsed_units": 270763,
+    "evaluable_instances": 269577,
+    "canonical_surfaces": 21438,
+    "reviewed_overrides": 625
   },
   "languages": [
     {
       "language": "JA",
-      "payload_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-JA\\app_data\\置換リスト_ルビ.json",
-      "payload_sha256": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
-      "runtime_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-JA\\esp_text_replacement_module.py",
+      "payload_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-JA\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "591C7EA887504B9248F3406A971CAB8CC6EB3F4B06AAAFA824ED4ECF881FF40E",
+      "runtime_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-JA\\esp_text_replacement_module.py",
       "runtime_sha256": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
-      "global_rules": 571007,
-      "render_seconds": 99.74855160713196,
+      "global_rules": 572558,
+      "render_seconds": 87.49774169921875,
       "residual_surfaces": 0,
       "residual_instances": 0,
       "visible_failures": 0,
@@ -47,16 +88,43 @@
       "pass": true,
       "residuals": [],
       "visible_failure_rows": [],
-      "placeholder_surfaces": []
+      "placeholder_surfaces": [],
+      "raw_residual_surfaces": 1,
+      "raw_residual_instances": 6,
+      "raw_residuals": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ]
+        }
+      ],
+      "contextual_residuals_admitted": 1,
+      "contextual_admissions": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ],
+          "kind": "contextual_homograph",
+          "resolution_phase": 599,
+          "global_surface_rule_added": false,
+          "deployed_long_phrase_gate": true
+        }
+      ]
     },
     {
       "language": "ZH",
-      "payload_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-ZH\\app_data\\置換リスト_ルビ.json",
-      "payload_sha256": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
-      "runtime_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-ZH\\esp_text_replacement_module.py",
+      "payload_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-ZH\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "277278C0C7A46AB1FCC93CDA54165EF4A235826EBAD76EDC379691169B95B6F1",
+      "runtime_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-ZH\\esp_text_replacement_module.py",
       "runtime_sha256": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
-      "global_rules": 571007,
-      "render_seconds": 97.4793758392334,
+      "global_rules": 572558,
+      "render_seconds": 87.10100555419922,
       "residual_surfaces": 0,
       "residual_instances": 0,
       "visible_failures": 0,
@@ -64,16 +132,43 @@
       "pass": true,
       "residuals": [],
       "visible_failure_rows": [],
-      "placeholder_surfaces": []
+      "placeholder_surfaces": [],
+      "raw_residual_surfaces": 1,
+      "raw_residual_instances": 6,
+      "raw_residuals": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ]
+        }
+      ],
+      "contextual_residuals_admitted": 1,
+      "contextual_admissions": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ],
+          "kind": "contextual_homograph",
+          "resolution_phase": 599,
+          "global_surface_rule_added": false,
+          "deployed_long_phrase_gate": true
+        }
+      ]
     },
     {
       "language": "KO",
-      "payload_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-KO\\app_data\\置換リスト_ルビ.json",
-      "payload_sha256": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
-      "runtime_path": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\Esperanto-Kanji-Ruby-KO\\esp_text_replacement_module.py",
+      "payload_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-KO\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "C0A83D84EF6AD98FA8F9FC4FBA18C57A3361992700E5CF54566C05FCEFDE30AC",
+      "runtime_path": "D:\\tmp\\codex_app_r72_di_candidate_20260726\\Esperanto-Kanji-Ruby-KO\\esp_text_replacement_module.py",
       "runtime_sha256": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
-      "global_rules": 571007,
-      "render_seconds": 97.52136421203613,
+      "global_rules": 572558,
+      "render_seconds": 87.27062511444092,
       "residual_surfaces": 0,
       "residual_instances": 0,
       "visible_failures": 0,
@@ -81,9 +176,38 @@
       "pass": true,
       "residuals": [],
       "visible_failure_rows": [],
-      "placeholder_surfaces": []
+      "placeholder_surfaces": [],
+      "raw_residual_surfaces": 1,
+      "raw_residual_instances": 6,
+      "raw_residuals": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ]
+        }
+      ],
+      "contextual_residuals_admitted": 1,
+      "contextual_admissions": [
+        {
+          "surface": "Temis",
+          "instances": 6,
+          "actual": "L:Temis",
+          "expected": [
+            "R:Tem|R:is"
+          ],
+          "kind": "contextual_homograph",
+          "resolution_phase": 599,
+          "global_surface_rule_added": false,
+          "deployed_long_phrase_gate": true
+        }
+      ]
     }
   ],
+  "raw_residual_language_surfaces": 3,
+  "contextual_admitted_language_surfaces": 3,
   "residual_language_surfaces": 0,
   "visible_failures": 0,
   "placeholder_residual_surfaces": 0,

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "canonical_corpus_isolated_surface_contextual_exceptions",
+  "policy": "Admit an isolated canonical-surface mismatch only when the mismatch is the exact reviewed contextual homograph below and the deployed Phase 599 long-phrase runtime gate has already repaired every attested ordinary-verb context. Never convert this exception into a global Temis split.",
+  "source": {
+    "corpus_commit": "D1642C276857C1FE400A6D597214FF7A923E7BD2",
+    "corpus_content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+    "exact_manifest_sha256": "1D402A255DA138248E81E5C5FE39E068EDCBB0DA22EF1C82FE8FA96FFAEF6A62",
+    "reviewed_exact_manifest_sha256": "C59DE88777E7AE6A5F66BD3E432AA0643CCAC887068AE52626E4D5CAD0ACDD32",
+    "phase599_candidate_review_sha256": "36632BC256E435103A3CA2BCC5B41E11D184C68BBEC544D16457441EBFB00F32",
+    "phase599_promotion_ledger_sha256": "0A24AECF19564B49452E355A14E43ECE1183B2A7023B7F22E4C65DDE7DFB5E74"
+  },
+  "languages": [
+    "JA",
+    "ZH",
+    "KO"
+  ],
+  "expected_counts": {
+    "exceptions": 1,
+    "isolated_residual_surfaces_per_language": 1,
+    "isolated_residual_instances_per_language": 6,
+    "attested_positive_phrases": 5,
+    "attested_positive_instances": 6
+  },
+  "exceptions": [
+    {
+      "surface": "Temis",
+      "kind": "contextual_homograph",
+      "reason": "Sentence-initial ordinary past-tense temis conflicts with the proper name Temis (Themis). A global split would damage the proper name, so only five attested long phrases are promoted.",
+      "corpus_expected_typed": "R:Tem|R:is",
+      "isolated_runtime_typed": "L:Temis",
+      "isolated_runtime_annotations": {
+        "JA": [],
+        "ZH": [],
+        "KO": []
+      },
+      "corpus_instances": 6,
+      "resolution": {
+        "phase": 599,
+        "mode": "exact_case_sensitive_long_phrase",
+        "global_surface_rule_added": false,
+        "promoted_rows_per_language": 5,
+        "attested_phrases": [
+          {
+            "phrase": "Temis tamen pri aparatoj",
+            "instances": 1
+          },
+          {
+            "phrase": "Temis pri tre noveca",
+            "instances": 1
+          },
+          {
+            "phrase": "Temis pri la volo",
+            "instances": 1
+          },
+          {
+            "phrase": "Temis pri la distrikto",
+            "instances": 1
+          },
+          {
+            "phrase": "Temis pri malnovaj",
+            "instances": 2
+          }
+        ],
+        "requires_deployed_phase599_runtime_gate": true
+      }
+    }
+  ]
+}

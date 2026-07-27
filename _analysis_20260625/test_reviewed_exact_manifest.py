@@ -11,10 +11,48 @@ import unittest
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import build_corpus_reviewed_exact_manifest as reviewed  # noqa: E402
+import build_corpus_exact_manifest as exact  # noqa: E402
 import no_worsening_audit as audit  # noqa: E402
 
 
 class ReviewedExactManifestTests(unittest.TestCase):
+    def test_checkout_branch_is_provenance_not_manifest_identity(self):
+        main = {
+            "schema_version": 1,
+            "source": {
+                "head_oid": "SAME",
+                "branch": "main",
+                "content_sha256": "SAME-CONTENT",
+            },
+            "counts": {"exact_surfaces": 1},
+        }
+        audit_branch = {
+            **main,
+            "source": {
+                **main["source"],
+                "branch": "agent/audit",
+            },
+        }
+        self.assertEqual(
+            exact.semantic_manifest(main),
+            exact.semantic_manifest(audit_branch),
+        )
+        self.assertEqual(
+            reviewed.semantic_manifest(main),
+            reviewed.semantic_manifest(audit_branch),
+        )
+        changed_head = {
+            **audit_branch,
+            "source": {
+                **audit_branch["source"],
+                "head_oid": "DIFFERENT",
+            },
+        }
+        self.assertNotEqual(
+            exact.semantic_manifest(main),
+            exact.semantic_manifest(changed_head),
+        )
+
     def test_source_refresh_requires_identical_reviewed_rules(self):
         current = {
             "schema_version": 1,

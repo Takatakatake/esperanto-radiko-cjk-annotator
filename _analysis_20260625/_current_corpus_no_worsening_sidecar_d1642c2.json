@@ -1,0 +1,220 @@
+{
+ "schema_version": 1,
+ "policy": "Keep the reviewed 7c04 corpus immutable while applying the successor-only atomic glu-glu-glu reference decision in memory. Treat d1642c2 as the active corpus, retain the reviewed Izraelio and tia-tia Ruby authorities, admit iniciatoro as the reviewed active-corpus improvement, and admit bare isolated Temis only through the sealed Phase 599 contextual promotion. Phase 600 must remove the four glu/nor defects. The predecessor Phase 558 and e373 authorities remain byte-immutable. Post-Phase600 fingerprints and absolute statistics must be sealed only from a fresh complete three-language raw audit; no projected values may authorize deployment.",
+ "immutable_predecessors": {
+  "phase558_sidecar": {
+   "path": "_phase558_no_worsening_sidecar.json",
+   "bytes": 11530,
+   "sha256": "7468D660EC39089E9F931BE9F79BF45D0AD5DFEC38F6281651F489D94FAE7FBA"
+  },
+  "e373_scope": {
+   "path": "_phase558_current_corpus_scope_manifest.json",
+   "bytes": 10351,
+   "sha256": "AA293B609B91A12E38D77AAD6F3C3E02EF033CE762E9FF91B6A547B4A91AC9E2"
+  },
+  "conflict_review": {
+   "path": "_no_worsening_reference_conflicts.json",
+   "bytes": 111045,
+   "sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94"
+  }
+ },
+ "reference_authority": {
+  "role": "immutable_7c04_reference",
+  "scope": {
+   "path": "_current_corpus_scope_d1642c2.json",
+   "bytes": 10421,
+   "sha256": "F7257CF4EB3819183912BEAC14F728E05A7213C8258EE745476D0B73A1FE2FBE"
+  },
+  "corpus": {
+   "head_oid": "7c04f97c51a7cecf88918d2abc2e6bf2f34601a6",
+   "content_sha256": "4F04FD2F3DBE0FC79909CBBEA61ED2848FC093AE2DFE3F0ADEB79882AEB04F52",
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "files": 169,
+   "raw_ruby": 348581,
+   "parsed_units": 270763,
+   "corpus_cases": 21872
+  },
+  "projection": {
+   "projection_sha256": "2F3ABE5657E0EB54CA45556D0D809EEF43B35CBEB4B1B032B5CEB74D24E415C4",
+   "raw_cases": 68518,
+   "surfaces": 68429,
+   "raw_reference_sha256": "51D51B1F2FCB32B94FB5F904714AB39AB772884410DE35A20B5B7955BEA868BB",
+   "case_set_sha256": "D28146FE46119D3C58DEB47A6C9E9971FBB599F62C507839BCD218FE364AFB3E",
+   "surface_sha256": "434159C8552E876142BBBE0369A4F86FCF5E7F020EA77E74F02E65236F24B64A",
+   "reference_conflicts": 89,
+   "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
+   "resolved_cases": 68479,
+   "resolved_reference_sha256": "AD032F3FF47F327179339828BB2B1E7A945ED6AE72D2D5C0CBC5743EC9728143"
+  }
+ },
+ "active_current_authority": {
+  "role": "active_d1642c2_corpus",
+  "corpus": {
+   "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+   "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "files": 169,
+   "raw_ruby": 348580,
+   "parsed_units": 270763,
+   "corpus_cases": 21872
+  },
+  "direct_projection_diagnostic": {
+   "raw_cases": 68517,
+   "surfaces": 68429,
+   "raw_reference_sha256": "C7E3FEAAC509C2C0CC3206EE773BE75299C1E98F6C4EA0EE26879C934F6F7727",
+   "case_set_sha256": "72FC79C41ED60DF979A295E3C3AFEA0A18770B3D591B2406977B936E470C6859",
+   "surface_sha256": "434159C8552E876142BBBE0369A4F86FCF5E7F020EA77E74F02E65236F24B64A",
+   "reference_conflicts": 88,
+   "reference_conflicts_sha256": "3053607AF028F7A58A161B6182963F5E2230B13E0D80C8274EB520E0CEE5274D",
+   "resolved_cases": 68479,
+   "resolved_reference_sha256": "17E0AB9CA576BB07C5090448AABE296EC0B5B7D7AE34A9EE20EDE75A8F365D10"
+  }
+ },
+ "e373_to_7c04_weight_transition": {
+  "case_key_set_unchanged": true,
+  "conflicts_unchanged": true,
+  "surfaces_unchanged": true,
+  "case_set_sha256": "60760E500C0C2A9F1233C87EC312CC813C19C66526BF860BFD109EC6FCFF6CBF",
+  "surface_sha256": "434159C8552E876142BBBE0369A4F86FCF5E7F020EA77E74F02E65236F24B64A",
+  "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
+  "changed_weight_rows": 110,
+  "changed_surfaces": 110,
+  "aggregate_weight_delta": -302,
+  "weight_rows_sha256": "BE7963E5B99AA28BC9FCBEFC2EBBF695226E6543D4B56EF25BFAD810E8484E04"
+ },
+ "reference_to_active_transition": {
+  "changed_files": 1,
+  "changed_file": {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "reference_bytes": 224575,
+   "reference_sha256": "6F1DCAB019E1817FED2E53D347B95595EC50A56B537DA45BFCD2331065B9E21A",
+   "active_bytes": 224520,
+   "active_sha256": "BEF11D61085F0B9F784AC4B76EB81AF95AE4AD58E5EF3AE17D00A716008994C5"
+  },
+  "changed_weight_rows": 2,
+  "aggregate_weight_delta": 0,
+  "weight_rows_sha256": "A15E8735FCEBE2DAA5D5619FFFFEFC8BB9F04FB1D6778865DE737FE8A325016C",
+  "surface": "iniciatoro",
+  "reference_decomposition": "iniciat/or/o",
+  "reference_typed": "R:iniciat|R:or|L:o",
+  "active_decomposition": "iniciator/o",
+  "active_typed": "R:iniciator|L:o",
+  "reference_weight": 1,
+  "active_weight": 1,
+  "disposition": "reviewed_active_corpus_improvement"
+ },
+ "current_only_audit_contract": {
+  "raw_audit_reference": "immutable_7c04_reference",
+  "active_corpus": "active_d1642c2_corpus",
+  "required_languages": [
+   "JA",
+   "ZH",
+   "KO"
+  ],
+  "trilingual_boundary_contract": {
+   "surface_count": 68429,
+   "fingerprint_definition": "stable_json_sha256([[surface,signature_payload],...]) in the immutable reference surface order",
+   "all_language_fingerprints_must_match": true,
+   "mismatches": 0
+  },
+  "required_input_stability": [
+   "gold",
+   "head",
+   "corpus",
+   "place_manifest",
+   "audit_code",
+   "review_manifests",
+   "app_inputs"
+  ],
+  "raw_current_wrong_surfaces": [
+   "Izraelio",
+   "Temis",
+   "iniciatoro",
+   "tia-tia"
+  ],
+  "active_semantic_wrong_surfaces": [],
+  "retained_reviewed_ruby_authorities": [
+   "Izraelio",
+   "tia-tia"
+  ],
+  "reviewed_active_improvements": [
+   "iniciatoro"
+  ],
+  "contextual_admissions": [
+   {
+    "surface": "Temis",
+    "kind": "phrase_bounded_phase599_promotion",
+    "global_surface_rule_added": false,
+    "authority": {
+     "path": "_phase599_temis_context_promotion.json",
+     "bytes": 3417,
+     "sha256": "0A24AECF19564B49452E355A14E43ECE1183B2A7023B7F22E4C65DDE7DFB5E74"
+    }
+   }
+  ],
+  "expected_phase600_repairs": [
+   "glu-glu-glu",
+   "nor",
+   "nor-adrenalino",
+   "nor-epinefrino"
+  ],
+  "required_sources": [
+   "gold_fake_coarse_paired_academic",
+   "gold_fake_coarse_pejvo_original",
+   "gold_fake_coarse_project_reviewed_override",
+   "gold_official_override",
+   "gold_phase532_selected_ruby_policy",
+   "gold_project_ruby_boundary_override",
+   "gold_unmarked",
+   "html_corpus",
+   "html_place_manifest"
+  ],
+  "post_phase600_measurement": {
+   "status": "sealed_full_raw_audit",
+   "required_pins": [
+    "trilingual_signature_sha256",
+    "raw_source_statistics_sha256",
+    "raw_combined",
+    "raw_html_corpus"
+   ],
+   "trilingual_signature_sha256": "3CA7979E3AE68D39BED1DEC229757B56C8AF51394F73EF9EB70C0F2ED8D673E9",
+   "raw_source_statistics_sha256": "E66300BD03550FDCABADD63F1439BCE9FB5583F9E2C9467A2D1CA4AF27B3FDF3",
+   "raw_combined": {
+    "total_weight": 323225,
+    "total_cases": 74295,
+    "baseline_correct_weight": 323215,
+    "baseline_correct_cases": 74290,
+    "current_correct_weight": 323215,
+    "current_correct_cases": 74290,
+    "regression_weight": 0,
+    "regression_cases": 0,
+    "improvement_weight": 0,
+    "improvement_cases": 0
+   },
+   "raw_html_corpus": {
+    "total_weight": 270763,
+    "total_cases": 21872,
+    "baseline_correct_weight": 270756,
+    "baseline_correct_cases": 21870,
+    "current_correct_weight": 270756,
+    "current_correct_cases": 21870,
+    "regression_weight": 0,
+    "regression_cases": 0,
+    "improvement_weight": 0,
+    "improvement_cases": 0
+   }
+  }
+ },
+ "expected_counts": {
+  "immutable_predecessors": 3,
+  "languages": 3,
+  "e373_to_7c04_weight_rows": 110,
+  "reference_to_active_weight_rows": 2,
+  "reviewed_active_improvements": 1,
+  "raw_current_wrong_surfaces": 4,
+  "retained_reviewed_ruby_authorities": 2,
+  "contextual_admissions": 1,
+  "expected_phase600_repairs": 4,
+  "active_semantic_wrong_surfaces": 0
+ }
+}

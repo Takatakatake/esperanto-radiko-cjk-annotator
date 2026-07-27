@@ -1,0 +1,621 @@
+{
+ "schema_version": 1,
+ "description": "Read-only fail-closed audit of the two Kyoto HTML guides from b769038 to immutable predecessor 7c04f97 and current remote main d1642c2.",
+ "source": {
+  "old": {
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "tree_oid": "47995a849c6f06dc536b533642ad6974ddd8586e",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "new": {
+   "head_oid": "7c04f97c51a7cecf88918d2abc2e6bf2f34601a6",
+   "tree_oid": "52a92cafc2234eeea5b8d39a3ac0163f47e67462",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "active": {
+   "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+   "tree_oid": "6a202620a7de26f9b88b022c76a084bbff7b578c",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  }
+ },
+ "guides": {
+  "old": {
+   "files": {
+    "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": {
+     "sha256": "1EEAA8B4E2C4518F72ACCDD89AA0FAB427DC012BC76429E25607B2BAB0CB9FA0",
+     "git_blob_sha1": "c6211e2177640a19728ec97964b66a6184629b6f",
+     "bytes": 115234,
+     "lines": 1653,
+     "lf": 1653,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": {
+     "sha256": "4FDE80DD5B1B6BB822A5D7CF9BAF5FAA23AC7FE4C129F3E7BD128DE3DEBF8DCF",
+     "git_blob_sha1": "7cf090405665231955b09481b4fee4d8d6d03391",
+     "bytes": 106413,
+     "lines": 1738,
+     "lf": 1738,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    }
+   },
+   "guide_set_sha256": "3C552BB2E13407688DCB16C2211378293B4457B914A140C7710AED461AAF6D95"
+  },
+  "new": {
+   "files": {
+    "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": {
+     "sha256": "B8F21605E019A394560A6E4ED5238FE4BEDE7B2A949A0CBC6927189ADADFB965",
+     "git_blob_sha1": "19bf6fd0457023f41951e4e4767a9e96f1a19575",
+     "bytes": 131181,
+     "lines": 1835,
+     "lf": 1835,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": {
+     "sha256": "A3AF2F18004A63A2C6ECB438B9ABBABF62A9B40D15494FC6B6FC0CADA7ECEA46",
+     "git_blob_sha1": "148ebe9a0209f84af6eac2f7c27618df80f24087",
+     "bytes": 118657,
+     "lines": 1907,
+     "lf": 1907,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    }
+   },
+   "guide_set_sha256": "01AF3A4CEF661820BB8AFECFCA2E4E53CCECF2A1BAA3B9A2AB30DFD7D7BA6249"
+  },
+  "active": {
+   "files": {
+    "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": {
+     "sha256": "B8F21605E019A394560A6E4ED5238FE4BEDE7B2A949A0CBC6927189ADADFB965",
+     "git_blob_sha1": "19bf6fd0457023f41951e4e4767a9e96f1a19575",
+     "bytes": 131181,
+     "lines": 1835,
+     "lf": 1835,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": {
+     "sha256": "A3AF2F18004A63A2C6ECB438B9ABBABF62A9B40D15494FC6B6FC0CADA7ECEA46",
+     "git_blob_sha1": "148ebe9a0209f84af6eac2f7c27618df80f24087",
+     "bytes": 118657,
+     "lines": 1907,
+     "lf": 1907,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    }
+   },
+   "guide_set_sha256": "01AF3A4CEF661820BB8AFECFCA2E4E53CCECF2A1BAA3B9A2AB30DFD7D7BA6249"
+  }
+ },
+ "diff": {
+  "totals": {
+   "insertions": 452,
+   "deletions": 101,
+   "hunks": 14
+  },
+  "by_guide": {
+   "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": {
+    "insertions": 236,
+    "deletions": 54,
+    "hunks": 8
+   },
+   "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": {
+    "insertions": 216,
+    "deletions": 47,
+    "hunks": 6
+   }
+  },
+  "by_category": {
+   "g8_layout": {
+    "insertions": 436,
+    "deletions": 13,
+    "hunks": 5
+   },
+   "provenance_pin": {
+    "insertions": 11,
+    "deletions": 8,
+    "hunks": 5
+   },
+   "ruby_semantic": {
+    "insertions": 5,
+    "deletions": 1,
+    "hunks": 2
+   },
+   "stale_appendix_removal": {
+    "insertions": 0,
+    "deletions": 79,
+    "hunks": 2
+   }
+  },
+  "hunks": {
+   "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": [
+    {
+     "category": "ruby_semantic",
+     "tag": "replace",
+     "old_start_zero": 438,
+     "old_count": 1,
+     "new_start_zero": 438,
+     "new_count": 1,
+     "old_lines_sha256": "D4D1931FA77E2B00D3EC3A049E3CA5E8F9E40135435E760B13C43FFC1529E613",
+     "new_lines_sha256": "7EF442C91474CB4B0F31C272073A6F9A54453EF7C21688FBB98960248FA40E7F"
+    },
+    {
+     "category": "ruby_semantic",
+     "tag": "insert",
+     "old_start_zero": 443,
+     "old_count": 0,
+     "new_start_zero": 443,
+     "new_count": 4,
+     "old_lines_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+     "new_lines_sha256": "37297113B2F7CA52C7143DA9DFDEA70AE642E970F369EA7D721FAE2A8A81915F"
+    },
+    {
+     "category": "provenance_pin",
+     "tag": "replace",
+     "old_start_zero": 988,
+     "old_count": 2,
+     "new_start_zero": 992,
+     "new_count": 1,
+     "old_lines_sha256": "45119FE921FCFDBA873FB703D21298ADEFD117BA9793CFFD803D7B3820AC41DD",
+     "new_lines_sha256": "3392449338E62179BB6F5C239FEF65A84D50F5ACDF9C65AA3B5743CE938F7302"
+    },
+    {
+     "category": "provenance_pin",
+     "tag": "replace",
+     "old_start_zero": 1464,
+     "old_count": 2,
+     "new_start_zero": 1467,
+     "new_count": 4,
+     "old_lines_sha256": "1FF067E1A5BDF6BF74AF153A723341BF7B19AC5A2B5A247DB893F7E03C946B22",
+     "new_lines_sha256": "4EEB4A6B6752BB278A409DA76737406D0564B7EC6872BF6043F34B5F12F0D08C"
+    },
+    {
+     "category": "provenance_pin",
+     "tag": "replace",
+     "old_start_zero": 1473,
+     "old_count": 1,
+     "new_start_zero": 1478,
+     "new_count": 1,
+     "old_lines_sha256": "236229045717A97AD2B016EADE64B5381E2E2DA6E5FC9F528054E3718E2BCDB8",
+     "new_lines_sha256": "01D8F1C8A83F916199BD70236A7DAF2005652BF736DA7E800C90B0AE8D4B07F0"
+    },
+    {
+     "category": "g8_layout",
+     "tag": "insert",
+     "old_start_zero": 1510,
+     "old_count": 0,
+     "new_start_zero": 1515,
+     "new_count": 218,
+     "old_lines_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+     "new_lines_sha256": "233AB8E7215C05962694904DF802A43DB7C74B88374CC4CC3F29925B1465F568"
+    },
+    {
+     "category": "g8_layout",
+     "tag": "replace",
+     "old_start_zero": 1517,
+     "old_count": 6,
+     "new_start_zero": 1740,
+     "new_count": 7,
+     "old_lines_sha256": "441B11519129A2BCAA3582E9CF6ACC93E78A73A447EDFBE3EC086CEA2A39F34E",
+     "new_lines_sha256": "5F2F357B593882F86D1D300A6E1E511B66B28387A676C9B16463155E9C254839"
+    },
+    {
+     "category": "stale_appendix_removal",
+     "tag": "delete",
+     "old_start_zero": 1611,
+     "old_count": 42,
+     "new_start_zero": 1835,
+     "new_count": 0,
+     "old_lines_sha256": "943B4B0971A560FC72371371807A3A0229BEBCEE3D80B04ADC9B391A28C88B19",
+     "new_lines_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+   ],
+   "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": [
+    {
+     "category": "provenance_pin",
+     "tag": "replace",
+     "old_start_zero": 1507,
+     "old_count": 2,
+     "new_start_zero": 1507,
+     "new_count": 4,
+     "old_lines_sha256": "46E89C77CDB2E8F3E5488F8C80F417067DE23BD6C6D5B68F35A9F598B51B7ABF",
+     "new_lines_sha256": "A40C90C6A018EDB2643EBBA8BBF0DEFD6B4080E2C15EB0B4501C7A8D9224BD32"
+    },
+    {
+     "category": "provenance_pin",
+     "tag": "replace",
+     "old_start_zero": 1516,
+     "old_count": 1,
+     "new_start_zero": 1518,
+     "new_count": 1,
+     "old_lines_sha256": "EDE94E9C342C57A2FC4D82308F73AEE5DF0EDEF4CD22C0FB38098EC416BBDBB1",
+     "new_lines_sha256": "A8C6C6DB2797E257988EB1C4D97FA61383A7B057FBE3E0CDFF0DD03F79A06CC6"
+    },
+    {
+     "category": "g8_layout",
+     "tag": "insert",
+     "old_start_zero": 1576,
+     "old_count": 0,
+     "new_start_zero": 1578,
+     "new_count": 203,
+     "old_lines_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+     "new_lines_sha256": "7CD67341FF3B2773B37AD13DA444A98B5B8D83537C8844D7B08ADF99A14541E2"
+    },
+    {
+     "category": "g8_layout",
+     "tag": "replace",
+     "old_start_zero": 1583,
+     "old_count": 6,
+     "new_start_zero": 1788,
+     "new_count": 7,
+     "old_lines_sha256": "C50A9919A9EB1BB5FF88D66A91B797A485D047179DE9173645A4A7BB1B981B2D",
+     "new_lines_sha256": "2FAF1444F8362365355CFA28C4571EB615923B3453A448E39B7F21C9AAFFAD28"
+    },
+    {
+     "category": "g8_layout",
+     "tag": "replace",
+     "old_start_zero": 1590,
+     "old_count": 1,
+     "new_start_zero": 1796,
+     "new_count": 1,
+     "old_lines_sha256": "DFFDF7CA08BC18E3C8B1B09663D3FB43A97DB98E81C6AF51E41218763D56DE65",
+     "new_lines_sha256": "8A8963B2BF43AAE71F170785E44AC7B80E492C2F8625855A5199997B4180FD72"
+    },
+    {
+     "category": "stale_appendix_removal",
+     "tag": "delete",
+     "old_start_zero": 1701,
+     "old_count": 37,
+     "new_start_zero": 1907,
+     "new_count": 0,
+     "old_lines_sha256": "EB76AE7CF7F4D607A31B33259C7A22C776F6CEA5F93EB46C44C3DAA3CF9A8F28",
+     "new_lines_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+   ]
+  }
+ },
+ "guide_policy": {
+  "anchor_set_sha256": {
+   "esperanto_html_redaktado/エスペラントルビHTML修正ガイド260328.txt": "93F8967ADB48CCAA82EF5522798431975B584EA5ECB2CF44EF946131CB817593",
+   "esperanto_html_redaktado/世界语HTML修正指南_中文注释版.txt": "C29E945BDC2438D567B687711A5FA40155039D95550F59FC2E016F5CA4426B8F"
+  },
+  "ja_jus_canonical_break": "たっ<br>た今",
+  "ruby_track": "coarse",
+  "width_role": "CSS scale and rt line breaks only",
+  "width_changes_root_boundaries": false,
+  "effective_display_width_limit": 2.0
+ },
+ "translation_marking": {
+  "old_exists": false,
+  "new": {
+   "sha256": "0CE5A8F8283DABCCA257EF5A5798A77BE0B929A9FC0FA8211843BB686E51DBF0",
+   "git_blob_sha1": "993e15557c012e8db623adc8ebb9a64ba6be9459",
+   "bytes": 15623,
+   "lines": 348,
+   "lf": 348,
+   "crlf": 0,
+   "bom": false,
+   "final_lf": true
+  },
+  "active": {
+   "sha256": "0CE5A8F8283DABCCA257EF5A5798A77BE0B929A9FC0FA8211843BB686E51DBF0",
+   "git_blob_sha1": "993e15557c012e8db623adc8ebb9a64ba6be9459",
+   "bytes": 15623,
+   "lines": 348,
+   "lf": 348,
+   "crlf": 0,
+   "bom": false,
+   "final_lf": true
+  },
+  "command": [
+   "python",
+   "esperanto_html_redaktado/translation_marking_checker.py",
+   "--require-zero"
+  ],
+  "exit_code": 0,
+  "report": {
+   "content_html_files": 152,
+   "ruby_with_ja_translation": 119,
+   "ruby_only": 3,
+   "korean_translation": 1,
+   "zero_ruby_with_ja_translation": 29,
+   "title_mismatches": 0,
+   "index_badge_mismatches": 0,
+   "long_translation_blocks": 0,
+   "missing_badge_css": 0,
+   "violations": 0
+  }
+ },
+ "ruby_css_margin": {
+  "verifier": {
+   "sha256": "67CBEEC6D4D6F3EB745FCE533CF224096959D6967C3C648F72E4CBA5C0FFE073",
+   "git_blob_sha1": "dbd673e18a557aafb8cff5553672dc05e42666a2",
+   "bytes": 23064,
+   "lines": 581,
+   "lf": 581,
+   "crlf": 0,
+   "bom": false,
+   "final_lf": true
+  },
+  "width_table": {
+   "sha256": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+   "git_blob_sha1": "272db4034766c71c06b31f92b8ba2211fed00b35",
+   "bytes": 1122864,
+   "lines": 63493,
+   "lf": 63489,
+   "crlf": 0,
+   "bom": false,
+   "final_lf": false
+  },
+  "margin": 0.05,
+  "content_html_files_before_exclusion": 169,
+  "excluded_paths": [
+   "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+  ],
+  "selected_path_list_sha256": "C731C78ED68D9A14DA6AD0794C226D9C76DBEB22A979B16A8A7C1E92657EBFF0",
+  "per_file_rows_sha256": "87435CEFF499973AF650EAF34B345BBEED287AC192FD022CD9D4C17D46072E4E",
+  "boundary_pair_rows": 57,
+  "boundary_pair_rows_sha256": "3CA01BCB660B8FE96BA37EAA0B8DFB06418AF385E18DE245E52F109A74CE79A8",
+  "summary": {
+   "files": 168,
+   "raw_ruby": 333941,
+   "parsed_ruby": 333941,
+   "unparsed": 0,
+   "mismatches": 551,
+   "class_mismatches": 551,
+   "break_mismatches": 0,
+   "break_only_mismatches": 0,
+   "smart_quote_mismatches": 0,
+   "boundary_skips": 551,
+   "fixable": 0,
+   "files_with_mismatches": 70
+  },
+  "interpretation": {
+   "raw_cli_mismatches_are_not_fixable_count": true,
+   "accepted_only_as_boundary_skips": true,
+   "auto_fix_authorized": false,
+   "corpus_edit_authorized": false
+  },
+  "pass": true
+ },
+ "app_runtime": {
+  "app_baseline_head_oid": "3f338920f59efd80333616af6192e0f099c3d07c",
+  "baseline_is_ancestor": true,
+  "boundary_authority": {
+   "builder": {
+    "sha256": "71DBD617083DA3F63C26BCECD8259947AD28A62C4EDDF75ED49EEA21FC549B72",
+    "git_blob_sha1": "2d729eafd7e1dcdbc8396d82c86eaeb6d56dd05e",
+    "bytes": 3275,
+    "lines": 90,
+    "lf": 90,
+    "crlf": 90,
+    "bom": false,
+    "final_lf": true
+   },
+   "manifest": {
+    "sha256": "17CF4AFEA6CCDE674DAB4AD1BCB531AB61FD7DA525AADD13BF5504D819050246",
+    "git_blob_sha1": "8e4b5c9e17f9f75e55ea0dc6c34ad50ab50ebe8b",
+    "bytes": 1086,
+    "lines": 61,
+    "lf": 61,
+    "crlf": 0,
+    "bom": false,
+    "final_lf": true
+   },
+   "word_anno": {
+    "ja": {
+     "sha256": "D298820FF370A7DFA59B4A0E83BFBED3BACB768068C9A45FDE48F5A8F4220AB4",
+     "git_blob_sha1": "fcc39993ccc66e97abf02c986ca380e2ce2b2e82",
+     "bytes": 2739047,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    },
+    "zh": {
+     "sha256": "EEFF53D0EA7F30CE60C6B82060A22B1E72EE9E4612770E23691D4235AE4800AE",
+     "git_blob_sha1": "82531a1524c5b74ea8c982c05623a4ade6c0741e",
+     "bytes": 2585862,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    },
+    "ko": {
+     "sha256": "E0EEC71CE3728F19CA4D3AB5569C8A4DA59C45AE07CE8776FA0075B2360AB421",
+     "git_blob_sha1": "aa502700c19adf45c7f900bb8f9748421c9dde7d",
+     "bytes": 2728498,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    }
+   },
+   "expected_key_counts": {
+    "ja": 49309,
+    "zh": 49348,
+    "ko": 49348
+   },
+   "authority_keys": 49348,
+   "authority_sha256": "198D130AAEAA02216C3B28EFE0FF38DC9CF54E4145822C91BDE293E574D73637",
+   "missing_by_language": {
+    "ja": 39,
+    "zh": 0,
+    "ko": 0
+   },
+   "jus_boundary_signature": [
+    [
+     "ĵus",
+     "R"
+    ]
+   ],
+   "all_observed_cross_language_boundaries_identical": true
+  },
+  "width_policy_source": {
+   "sha256": "F3AF9A7084807ED6B5FD34C8970375E7820C74AF4179EFB95E3808847B76370E",
+   "git_blob_sha1": "bc7228c78b2e09a0b54c9a752438aab8e4cbe12f",
+   "bytes": 111849,
+   "lines": 2512,
+   "lf": 2512,
+   "crlf": 2512,
+   "bom": false,
+   "final_lf": true
+  },
+  "shared_char_width_table": {
+   "sha256": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+   "git_blob_sha1": "272db4034766c71c06b31f92b8ba2211fed00b35",
+   "bytes": 1122864,
+   "lines": 63493,
+   "lf": 63489,
+   "crlf": 0,
+   "bom": false,
+   "final_lf": false
+  },
+  "languages": {
+   "JA": {
+    "payload": {
+     "sha256": "591C7EA887504B9248F3406A971CAB8CC6EB3F4B06AAAFA824ED4ECF881FF40E",
+     "git_blob_sha1": "15e9649051e77402ab85d7b2158c370ca9d5cd5d",
+     "bytes": 72413901,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    },
+    "runtime": {
+     "sha256": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
+     "git_blob_sha1": "a0ecef268e0aad4e45b8b2502043c976f266796c",
+     "bytes": 33742,
+     "lines": 614,
+     "lf": 614,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "rendered": " <ruby>ĵus<rt class=\"XXS_S\">たっ<br>た今</rt></ruby> ",
+    "probe": {
+     "rt": "たっ<br>た今",
+     "class": "XXS_S",
+     "boundary_signature": [
+      [
+       "ĵus",
+       "R"
+      ]
+     ],
+     "effective_max_line_width_ratio": 0.469150872648,
+     "missing_width_characters": [],
+     "within_2x": true
+    }
+   },
+   "ZH": {
+    "payload": {
+     "sha256": "277278C0C7A46AB1FCC93CDA54165EF4A235826EBAD76EDC379691169B95B6F1",
+     "git_blob_sha1": "6d77b8bc24911ab7f1fcf622da14bd112fa3e1fc",
+     "bytes": 70142084,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    },
+    "runtime": {
+     "sha256": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
+     "git_blob_sha1": "f5b2196f052807518efd9b36dcda8fd17503d0a1",
+     "bytes": 26715,
+     "lines": 598,
+     "lf": 598,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "rendered": " <ruby>ĵus<rt class=\"M_M\">刚才</rt></ruby> ",
+    "probe": {
+     "rt": "刚才",
+     "class": "M_M",
+     "boundary_signature": [
+      [
+       "ĵus",
+       "R"
+      ]
+     ],
+     "effective_max_line_width_ratio": 0.781918121079,
+     "missing_width_characters": [],
+     "within_2x": true
+    }
+   },
+   "KO": {
+    "payload": {
+     "sha256": "C0A83D84EF6AD98FA8F9FC4FBA18C57A3361992700E5CF54566C05FCEFDE30AC",
+     "git_blob_sha1": "9d0200e59180eb0c9bfa6a2720b8ac2fc610dd02",
+     "bytes": 71714312,
+     "lines": 1,
+     "lf": 0,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": false
+    },
+    "runtime": {
+     "sha256": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
+     "git_blob_sha1": "a6c11e55f289e4dc10616aa37c5bf801b519618d",
+     "bytes": 27807,
+     "lines": 615,
+     "lf": 615,
+     "crlf": 0,
+     "bom": false,
+     "final_lf": true
+    },
+    "rendered": " <ruby>ĵus<rt class=\"L_L\">방금</rt></ruby> ",
+    "probe": {
+     "rt": "방금",
+     "class": "L_L",
+     "boundary_signature": [
+      [
+       "ĵus",
+       "R"
+      ]
+     ],
+     "effective_max_line_width_ratio": 0.863530847338,
+     "missing_width_characters": [],
+     "within_2x": true
+    }
+   }
+  },
+  "policy": {
+   "ruby_track": "coarse",
+   "trilingual_boundary_identity_required": true,
+   "effective_css_scaled_max_line_width_limit": 2.0,
+   "width_changes_root_boundaries": false
+  }
+ },
+ "scope": {
+  "corpus_or_guide_payload_edits": 0,
+  "app_payload_edits": 0,
+  "auto_fix_runs": 0,
+  "commit_or_push": false
+ },
+ "gate": {
+  "exact_git_authorities": true,
+  "active_guides_byte_identical_to_latest": true,
+  "closed_diff_classification": true,
+  "translation_require_zero": true,
+  "css_fixable_zero": true,
+  "trilingual_boundaries_identical": true,
+  "jus_exact_runtime": true,
+  "pass": true
+ }
+}

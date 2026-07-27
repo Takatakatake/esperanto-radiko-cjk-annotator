@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "phase": 599,
+  "status": "candidate_only",
+  "policy": "Split the ordinary past-tense verb Temis as Tem/is only when one of the five reviewed Kyoto-corpus long phrases matches exactly. Preserve every following Ruby boundary and annotation in JA/ZH/KO, leave every guard and the Kanji track unchanged, and keep this candidate out of the deployed generator.",
+  "scope": {
+    "track": "Ruby",
+    "activation": "in_memory_candidate_only",
+    "match_mode": "exact_case_sensitive_long_phrase",
+    "generator_integration": false,
+    "filesystem_writes": false,
+    "kanji_paths": [],
+    "allowed_languages": [
+      "JA",
+      "ZH",
+      "KO"
+    ]
+  },
+  "sources": {
+    "base_app": {
+      "commit": "3F338920F59EFD80333616AF6192E0F099C3D07C"
+    },
+    "deployed_ruby_payloads": {
+      "JA": {
+        "path": "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json",
+        "bytes": 72404214,
+        "sha256": "3D9EDF76DC2857350742D9473388AF97C49823DCAF523CD56EE6491C478C6873"
+      },
+      "ZH": {
+        "path": "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json",
+        "bytes": 70132667,
+        "sha256": "0557CBD1DB91F30CF824E27E894E8008F61E2789B24AEEF6922089F1256FE37A"
+      },
+      "KO": {
+        "path": "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json",
+        "bytes": 71704722,
+        "sha256": "CFF51B7F9AA9D251311D78DA5349891350E9379618C8365F00C4BFE6E9CD50E0"
+      }
+    },
+    "kyoto_corpus": {
+      "commit": "7C04F97C51A7CECF88918D2ABC2E6BF2F34601A6",
+      "content_fingerprint": "4F04FD2F3DBE0FC79909CBBEA61ED2848FC093AE2DFE3F0ADEB79882AEB04F52",
+      "documents": 169,
+      "raw_ruby": 348581,
+      "parsed_ruby": 348581,
+      "parsed_units": 270763,
+      "evaluable_units": 269577,
+      "canonical_surfaces": 21438,
+      "temis_instances": 6
+    },
+    "semantic_collision": {
+      "force_bare": {
+        "path": "_analysis_20260625/fix_ruby_head_boundary_v2.py",
+        "line": 157,
+        "sha256": "B6F36F3224B0F8E5853CA0C260F8ECBF190BD251ADCFD3073B0D77E220C407AF"
+      },
+      "reference_conflicts": {
+        "path": "_analysis_20260625/_no_worsening_reference_conflicts.json",
+        "category": "contextual_homograph",
+        "sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94"
+      },
+      "two_track_decision": {
+        "path": "_analysis_20260625/PHASE595_R71_TWO_TRACK_AUDIT_LOG_20260726.md",
+        "lines": [
+          159,
+          160
+        ],
+        "sha256": "CD44F91E9E2AA80C4C63BC3D1569BA1C5AD1BBB1A4CB922A7BC0863EB2DAE892"
+      }
+    }
+  },
+  "expected_counts": {
+    "positive_phrases": 5,
+    "corpus_instances": 6,
+    "duplicate_corpus_instances": 1,
+    "negative_cases": 6,
+    "languages": 3,
+    "added_annotations_per_positive": 2,
+    "candidate_rows_per_language": 5,
+    "candidate_rows_total": 15,
+    "generator_files_changed": 0,
+    "kanji_files_changed": 0
+  },
+  "added_annotations": {
+    "JA": [
+      {
+        "rb": "Tem",
+        "rt": "主題"
+      },
+      {
+        "rb": "is",
+        "rt": "過去"
+      }
+    ],
+    "ZH": [
+      {
+        "rb": "Tem",
+        "rt": "主题"
+      },
+      {
+        "rb": "is",
+        "rt": "过去"
+      }
+    ],
+    "KO": [
+      {
+        "rb": "Tem",
+        "rt": "주제"
+      },
+      {
+        "rb": "is",
+        "rt": "과거"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "phrase": "Temis tamen pri aparatoj",
+      "corpus_instances": 1,
+      "corpus_locations": [
+        {
+          "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+          "instances": 1
+        }
+      ],
+      "target_typed_parts": [
+        {
+          "text": "Tem",
+          "ruby": true
+        },
+        {
+          "text": "is",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "tamen",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "aparat",
+          "ruby": true
+        },
+        {
+          "text": "oj",
+          "ruby": false
+        }
+      ],
+      "preserved_annotations": {
+        "JA": [
+          {
+            "rb": "tamen",
+            "rt": "とはいえ"
+          },
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "aparat",
+            "rt": "装置"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "tamen",
+            "rt": "然而"
+          },
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "aparat",
+            "rt": "一套装置"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "tamen",
+            "rt": "그래도"
+          },
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "aparat",
+            "rt": "장치"
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Temis pri tre noveca",
+      "corpus_instances": 1,
+      "corpus_locations": [
+        {
+          "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+          "instances": 1
+        }
+      ],
+      "target_typed_parts": [
+        {
+          "text": "Tem",
+          "ruby": true
+        },
+        {
+          "text": "is",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "tre",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "nov",
+          "ruby": true
+        },
+        {
+          "text": "ec",
+          "ruby": true
+        },
+        {
+          "text": "a",
+          "ruby": false
+        }
+      ],
+      "preserved_annotations": {
+        "JA": [
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "tre",
+            "rt": "とても"
+          },
+          {
+            "rb": "nov",
+            "rt": "新しい"
+          },
+          {
+            "rb": "ec",
+            "rt": "性質"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "tre",
+            "rt": "很"
+          },
+          {
+            "rb": "nov",
+            "rt": "新"
+          },
+          {
+            "rb": "ec",
+            "rt": "性质"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "tre",
+            "rt": "매우"
+          },
+          {
+            "rb": "nov",
+            "rt": "새로운"
+          },
+          {
+            "rb": "ec",
+            "rt": "성질"
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Temis pri la volo",
+      "corpus_instances": 1,
+      "corpus_locations": [
+        {
+          "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+          "instances": 1
+        }
+      ],
+      "target_typed_parts": [
+        {
+          "text": "Tem",
+          "ruby": true
+        },
+        {
+          "text": "is",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "la",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "vol",
+          "ruby": true
+        },
+        {
+          "text": "o",
+          "ruby": false
+        }
+      ],
+      "preserved_annotations": {
+        "JA": [
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "la",
+            "rt": "定冠詞"
+          },
+          {
+            "rb": "vol",
+            "rt": "意志"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "la",
+            "rt": "定冠词"
+          },
+          {
+            "rb": "vol",
+            "rt": "想要"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "la",
+            "rt": "정관사"
+          },
+          {
+            "rb": "vol",
+            "rt": "의지"
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Temis pri la distrikto",
+      "corpus_instances": 1,
+      "corpus_locations": [
+        {
+          "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+          "instances": 1
+        }
+      ],
+      "target_typed_parts": [
+        {
+          "text": "Tem",
+          "ruby": true
+        },
+        {
+          "text": "is",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "la",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "distrikt",
+          "ruby": true
+        },
+        {
+          "text": "o",
+          "ruby": false
+        }
+      ],
+      "preserved_annotations": {
+        "JA": [
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "la",
+            "rt": "定冠詞"
+          },
+          {
+            "rb": "distrikt",
+            "rt": "行政区"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "la",
+            "rt": "定冠词"
+          },
+          {
+            "rb": "distrikt",
+            "rt": "行政区"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "la",
+            "rt": "정관사"
+          },
+          {
+            "rb": "distrikt",
+            "rt": "행정구역"
+          }
+        ]
+      }
+    },
+    {
+      "phrase": "Temis pri malnovaj",
+      "corpus_instances": 2,
+      "corpus_locations": [
+        {
+          "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+          "instances": 1
+        },
+        {
+          "path": "lernolibroj/fujimaki/fujimaki9.html",
+          "instances": 1
+        }
+      ],
+      "target_typed_parts": [
+        {
+          "text": "Tem",
+          "ruby": true
+        },
+        {
+          "text": "is",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "mal",
+          "ruby": true
+        },
+        {
+          "text": "nov",
+          "ruby": true
+        },
+        {
+          "text": "aj",
+          "ruby": false
+        }
+      ],
+      "preserved_annotations": {
+        "JA": [
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "mal",
+            "rt": "正反対"
+          },
+          {
+            "rb": "nov",
+            "rt": "新しい"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "mal",
+            "rt": "相反"
+          },
+          {
+            "rb": "nov",
+            "rt": "新的"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "mal",
+            "rt": "정반대"
+          },
+          {
+            "rb": "nov",
+            "rt": "새로운"
+          }
+        ]
+      }
+    }
+  ],
+  "negative_cases": [
+    {
+      "surface": "Temis",
+      "kind": "bare_ambiguous_surface",
+      "current_typed_parts": [
+        {
+          "text": "Temis",
+          "ruby": false
+        }
+      ],
+      "current_annotations": {
+        "JA": [],
+        "ZH": [],
+        "KO": []
+      }
+    },
+    {
+      "surface": "Temiso",
+      "kind": "goddess_name_derivative",
+      "current_typed_parts": [
+        {
+          "text": "Temiso",
+          "ruby": false
+        }
+      ],
+      "current_annotations": {
+        "JA": [],
+        "ZH": [],
+        "KO": []
+      }
+    },
+    {
+      "surface": "TEMIS",
+      "kind": "case_guard_preserve_deployed_behavior",
+      "current_typed_parts": [
+        {
+          "text": "TEM",
+          "ruby": true
+        },
+        {
+          "text": "IS",
+          "ruby": true
+        }
+      ],
+      "current_annotations": {
+        "JA": [
+          {
+            "rb": "TEM",
+            "rt": "主題"
+          },
+          {
+            "rb": "IS",
+            "rt": "過去"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "TEM",
+            "rt": "主题"
+          },
+          {
+            "rb": "IS",
+            "rt": "过去"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "TEM",
+            "rt": "주제"
+          },
+          {
+            "rb": "IS",
+            "rt": "과거"
+          }
+        ]
+      }
+    },
+    {
+      "surface": "La diino Temis pri justeco",
+      "kind": "goddess_name_context",
+      "current_typed_parts": [
+        {
+          "text": "La",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "di",
+          "ruby": true
+        },
+        {
+          "text": "in",
+          "ruby": true
+        },
+        {
+          "text": "o Temis ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "just",
+          "ruby": true
+        },
+        {
+          "text": "ec",
+          "ruby": true
+        },
+        {
+          "text": "o",
+          "ruby": false
+        }
+      ],
+      "current_annotations": {
+        "JA": [
+          {
+            "rb": "La",
+            "rt": "定冠詞"
+          },
+          {
+            "rb": "di",
+            "rt": "神"
+          },
+          {
+            "rb": "in",
+            "rt": "女性"
+          },
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "just",
+            "rt": "公正な"
+          },
+          {
+            "rb": "ec",
+            "rt": "性質"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "La",
+            "rt": "定冠词"
+          },
+          {
+            "rb": "di",
+            "rt": "神"
+          },
+          {
+            "rb": "in",
+            "rt": "女性"
+          },
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "just",
+            "rt": "公正"
+          },
+          {
+            "rb": "ec",
+            "rt": "性质"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "La",
+            "rt": "정관사"
+          },
+          {
+            "rb": "di",
+            "rt": "신"
+          },
+          {
+            "rb": "in",
+            "rt": "여성"
+          },
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "just",
+            "rt": "공정한"
+          },
+          {
+            "rb": "ec",
+            "rt": "성질"
+          }
+        ]
+      }
+    },
+    {
+      "surface": "Temis tamen bela",
+      "kind": "unreviewed_predicate_context",
+      "current_typed_parts": [
+        {
+          "text": "Temis ",
+          "ruby": false
+        },
+        {
+          "text": "tamen",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "bel",
+          "ruby": true
+        },
+        {
+          "text": "a",
+          "ruby": false
+        }
+      ],
+      "current_annotations": {
+        "JA": [
+          {
+            "rb": "tamen",
+            "rt": "とはいえ"
+          },
+          {
+            "rb": "bel",
+            "rt": "美しい"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "tamen",
+            "rt": "然而"
+          },
+          {
+            "rb": "bel",
+            "rt": "美丽"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "tamen",
+            "rt": "그래도"
+          },
+          {
+            "rb": "bel",
+            "rt": "아름답다"
+          }
+        ]
+      }
+    },
+    {
+      "surface": "Temis, pri justeco",
+      "kind": "punctuation_guard",
+      "current_typed_parts": [
+        {
+          "text": "Temis, ",
+          "ruby": false
+        },
+        {
+          "text": "pri",
+          "ruby": true
+        },
+        {
+          "text": " ",
+          "ruby": false
+        },
+        {
+          "text": "just",
+          "ruby": true
+        },
+        {
+          "text": "ec",
+          "ruby": true
+        },
+        {
+          "text": "o",
+          "ruby": false
+        }
+      ],
+      "current_annotations": {
+        "JA": [
+          {
+            "rb": "pri",
+            "rt": "ついて"
+          },
+          {
+            "rb": "just",
+            "rt": "公正な"
+          },
+          {
+            "rb": "ec",
+            "rt": "性質"
+          }
+        ],
+        "ZH": [
+          {
+            "rb": "pri",
+            "rt": "关于"
+          },
+          {
+            "rb": "just",
+            "rt": "公正"
+          },
+          {
+            "rb": "ec",
+            "rt": "性质"
+          }
+        ],
+        "KO": [
+          {
+            "rb": "pri",
+            "rt": "관해"
+          },
+          {
+            "rb": "just",
+            "rt": "공정한"
+          },
+          {
+            "rb": "ec",
+            "rt": "성질"
+          }
+        ]
+      }
+    }
+  ]
+}

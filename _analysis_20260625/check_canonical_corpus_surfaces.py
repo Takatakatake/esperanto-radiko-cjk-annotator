@@ -34,14 +34,27 @@ import no_worsening_audit as audit
 RUBY_PAYLOAD_NAME = "置換リスト_ルビ.json"
 DEFAULT_REPORT = HERE / "out" / "_audit_canonical_corpus_surfaces.json"
 PLACEHOLDER_RE = re.compile(r"\$(?:[A-Za-z]+)?\d+\$")
+CONTEXTUAL_EXCEPTIONS_PATH = (
+    HERE / "_canonical_contextual_exceptions_d1642c2.json"
+)
+EXPECTED_CONTEXTUAL_EXCEPTIONS_SHA256 = (
+    "E0328B52FA8B01B6172EE10F43245D0F065C69F0513DC44E43FD0B231F06AD3A"
+)
+EXPECTED_CONTEXTUAL_POLICY = (
+    "Admit an isolated canonical-surface mismatch only when the mismatch is "
+    "the exact reviewed contextual homograph below and the deployed Phase "
+    "599 long-phrase runtime gate has already repaired every attested "
+    "ordinary-verb context. Never convert this exception into a global "
+    "Temis split."
+)
 EXPECTED_SCOPE = {
     "content_files": 169,
-    "raw_ruby": 348971,
-    "parsed_ruby": 348971,
-    "parsed_units": 271065,
-    "evaluable_instances": 269879,
-    "canonical_surfaces": 21443,
-    "reviewed_overrides": 628,
+    "raw_ruby": 348580,
+    "parsed_ruby": 348580,
+    "parsed_units": 270763,
+    "evaluable_instances": 269577,
+    "canonical_surfaces": 21438,
+    "reviewed_overrides": 625,
 }
 ALGORITHM = {
     "id": "canonical-corpus-surfaces-v1",
@@ -53,6 +66,8 @@ ALGORITHM = {
         "Narrow all reviewed evaluable surfaces to their reviewed-manifest signature.",
         "Render every surface through each selected deployed Ruby runtime/payload.",
         "Require visible identity, expected typed signature, and no placeholder token.",
+        "Require the deployed Phase 599 five-phrase Temis promotion gate.",
+        "Admit only the sealed isolated L:Temis residual while rejecting any global Temis split or any additional residual.",
     ],
 }
 
@@ -76,6 +91,112 @@ def validate_scope(scope: dict) -> None:
     }
     if differences:
         raise ValueError(f"canonical corpus scope changed: {differences!r}")
+
+
+def load_contextual_exceptions(
+    path: Path = CONTEXTUAL_EXCEPTIONS_PATH,
+) -> dict:
+    """Load the one closed contextual exception without weakening the gate."""
+    raw = Path(path).read_bytes()
+    if hashlib.sha256(raw).hexdigest().upper() != (
+        EXPECTED_CONTEXTUAL_EXCEPTIONS_SHA256
+    ):
+        raise ValueError("canonical contextual-exception authority drift")
+    payload = json.loads(raw.decode("utf-8"))
+    expected_keys = {
+        "schema_version", "scope", "policy", "source", "languages",
+        "expected_counts", "exceptions",
+    }
+    if (
+        not isinstance(payload, dict)
+        or set(payload) != expected_keys
+        or payload.get("schema_version") != 1
+        or payload.get("scope")
+        != "canonical_corpus_isolated_surface_contextual_exceptions"
+        or payload.get("policy") != EXPECTED_CONTEXTUAL_POLICY
+        or payload.get("languages") != ["JA", "ZH", "KO"]
+        or payload.get("expected_counts") != {
+            "exceptions": 1,
+            "isolated_residual_surfaces_per_language": 1,
+            "isolated_residual_instances_per_language": 6,
+            "attested_positive_phrases": 5,
+            "attested_positive_instances": 6,
+        }
+        or not isinstance(payload.get("exceptions"), list)
+        or len(payload["exceptions"]) != 1
+    ):
+        raise ValueError("canonical contextual-exception schema drift")
+    source = payload["source"]
+    expected_source = {
+        "corpus_commit": (
+            "D1642C276857C1FE400A6D597214FF7A923E7BD2"
+        ),
+        "corpus_content_sha256": (
+            "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B"
+        ),
+        "exact_manifest_sha256": sha256_file(
+            HERE / "_corpus_exact_app_manifest.json"
+        ),
+        "reviewed_exact_manifest_sha256": sha256_file(
+            HERE / "_corpus_reviewed_exact_app_manifest.json"
+        ),
+        "phase599_candidate_review_sha256": sha256_file(
+            HERE / "_phase599_temis_context_review.json"
+        ),
+        "phase599_promotion_ledger_sha256": sha256_file(
+            HERE / "_phase599_temis_context_promotion.json"
+        ),
+    }
+    if source != expected_source:
+        raise ValueError(
+            "canonical contextual-exception source binding drift"
+        )
+    exception = payload["exceptions"][0]
+    expected_exception_keys = {
+        "surface", "kind", "reason", "corpus_expected_typed",
+        "isolated_runtime_typed", "isolated_runtime_annotations",
+        "corpus_instances", "resolution",
+    }
+    resolution = exception.get("resolution", {})
+    phrases = resolution.get("attested_phrases", [])
+    if (
+        not isinstance(exception, dict)
+        or set(exception) != expected_exception_keys
+        or exception.get("surface") != "Temis"
+        or exception.get("kind") != "contextual_homograph"
+        or not isinstance(exception.get("reason"), str)
+        or not exception["reason"]
+        or exception.get("corpus_expected_typed") != "R:Tem|R:is"
+        or exception.get("isolated_runtime_typed") != "L:Temis"
+        or exception.get("isolated_runtime_annotations")
+        != {"JA": [], "ZH": [], "KO": []}
+        or exception.get("corpus_instances") != 6
+        or set(resolution) != {
+            "phase", "mode", "global_surface_rule_added",
+            "promoted_rows_per_language", "attested_phrases",
+            "requires_deployed_phase599_runtime_gate",
+        }
+        or resolution.get("phase") != 599
+        or resolution.get("mode")
+        != "exact_case_sensitive_long_phrase"
+        or resolution.get("global_surface_rule_added") is not False
+        or resolution.get("promoted_rows_per_language") != 5
+        or resolution.get(
+            "requires_deployed_phase599_runtime_gate"
+        ) is not True
+        or not isinstance(phrases, list)
+        or [row.get("phrase") for row in phrases] != [
+            "Temis tamen pri aparatoj",
+            "Temis pri tre noveca",
+            "Temis pri la volo",
+            "Temis pri la distrikto",
+            "Temis pri malnovaj",
+        ]
+        or [row.get("instances") for row in phrases] != [1, 1, 1, 1, 2]
+        or any(set(row) != {"phrase", "instances"} for row in phrases)
+    ):
+        raise ValueError("canonical Temis contextual authority drift")
+    return payload
 
 
 def verify_pinned_corpus(corpus_root: Path, exact_manifest: dict):
@@ -247,6 +368,104 @@ def render_language(language: str, cases: dict, batch_size: int):
     return result
 
 
+def admit_contextual_residuals(
+    language_results: list[dict],
+    cases: dict,
+    authority: dict,
+    phase599_report: dict,
+) -> dict:
+    """Admit only the sealed isolated Temis mismatch after its context gate."""
+    if (
+        not isinstance(phase599_report, dict)
+        or phase599_report.get("promotion_audit_gate") is not True
+        or phase599_report.get(
+            "post_promotion_global_rows_per_language"
+        ) != 572506
+        or phase599_report.get("managed_rows_per_language")
+        != {"JA": 5, "ZH": 5, "KO": 5}
+        or phase599_report.get("kanji_nonintervention") is not True
+    ):
+        raise ValueError(
+            "canonical contextual admission lacks deployed Phase 599 gate"
+        )
+    exception = authority["exceptions"][0]
+    surface = exception["surface"]
+    expected_signature = audit.signature_from_typed_parts([
+        ("Tem", True), ("is", True),
+    ])
+    case = cases.get(surface)
+    if (
+        case is None
+        or case["instances"] != exception["corpus_instances"]
+        or set(case["options"]) != {expected_signature}
+    ):
+        raise ValueError("canonical Temis corpus authority drift")
+    expected_residual = {
+        "surface": surface,
+        "instances": exception["corpus_instances"],
+        "actual": exception["isolated_runtime_typed"],
+        "expected": [exception["corpus_expected_typed"]],
+    }
+    admitted = []
+    for result in language_results:
+        language = result.get("language")
+        raw_residuals = list(result.get("residuals", []))
+        if (
+            language not in authority["languages"]
+            or raw_residuals != [expected_residual]
+            or result.get("residual_surfaces") != 1
+            or result.get("residual_instances")
+            != exception["corpus_instances"]
+            or result.get("visible_failures") != 0
+            or result.get("placeholder_residual_surfaces") != 0
+        ):
+            raise ValueError(
+                f"canonical contextual residual drift: {language!r}"
+            )
+        admission = {
+            **expected_residual,
+            "kind": exception["kind"],
+            "resolution_phase": 599,
+            "global_surface_rule_added": False,
+            "deployed_long_phrase_gate": True,
+        }
+        result.update({
+            "raw_residual_surfaces": 1,
+            "raw_residual_instances": exception["corpus_instances"],
+            "raw_residuals": raw_residuals,
+            "contextual_residuals_admitted": 1,
+            "contextual_admissions": [admission],
+            "residual_surfaces": 0,
+            "residual_instances": 0,
+            "residuals": [],
+            "pass": True,
+        })
+        admitted.append({
+            "language": language,
+            "surface": surface,
+            "instances": exception["corpus_instances"],
+        })
+    if [row["language"] for row in admitted] != authority["languages"]:
+        raise ValueError(
+            "canonical contextual admission language order drift"
+        )
+    return {
+        "authority_path": str(CONTEXTUAL_EXCEPTIONS_PATH),
+        "authority_sha256": EXPECTED_CONTEXTUAL_EXCEPTIONS_SHA256,
+        "raw_residual_language_surfaces": len(admitted),
+        "raw_residual_language_instances": sum(
+            row["instances"] for row in admitted
+        ),
+        "admitted_language_surfaces": len(admitted),
+        "unadmitted_language_surfaces": 0,
+        "trilingual_surface_identity": True,
+        "global_surface_rule_added": False,
+        "phase599_promotion_audit_gate": True,
+        "admissions": admitted,
+        "gate": True,
+    }
+
+
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -264,11 +483,21 @@ def run(args):
         raise ValueError("ESP_CORPUS_PATH is required")
     if args.batch_size <= 0:
         raise ValueError("--batch-size must be positive")
+    if args.languages != ["JA", "ZH", "KO"]:
+        raise ValueError(
+            "canonical contextual gate requires JA, ZH, KO together"
+        )
+    import phase599_temis_context_promotion as phase599_promotion
+
     corpus_root = Path(corpus_value).resolve()
     exact_path = HERE / "_corpus_exact_app_manifest.json"
     reviewed_path = HERE / "_corpus_reviewed_exact_app_manifest.json"
     exact_manifest = json.loads(exact_path.read_text(encoding="utf-8"))
     reviewed_manifest = json.loads(reviewed_path.read_text(encoding="utf-8"))
+    contextual_authority = load_contextual_exceptions()
+    phase599_report = phase599_promotion.audit_deployed_promotion(
+        batch_size=min(args.batch_size, 50),
+    )
     state, fingerprint = verify_pinned_corpus(corpus_root, exact_manifest)
     cases, scope = collect_canonical_cases(corpus_root)
     reviewed_rows = reviewed_manifest["exact_surfaces"]
@@ -279,6 +508,12 @@ def run(args):
         render_language(language, cases, args.batch_size)
         for language in args.languages
     ]
+    contextual_report = admit_contextual_residuals(
+        language_results,
+        cases,
+        contextual_authority,
+        phase599_report,
+    )
     report = {
         "schema_version": 1,
         "algorithm": ALGORITHM,
@@ -292,8 +527,29 @@ def run(args):
         },
         "exact_manifest_sha256": sha256_file(exact_path),
         "reviewed_manifest_sha256": sha256_file(reviewed_path),
+        "contextual_exceptions": contextual_report,
+        "phase599_promotion": {
+            "ledger_sha256": phase599_report["promotion"]["ledger_sha256"],
+            "managed_rows_per_language": (
+                phase599_report["managed_rows_per_language"]
+            ),
+            "post_promotion_global_rows_per_language": (
+                phase599_report[
+                    "post_promotion_global_rows_per_language"
+                ]
+            ),
+            "promotion_audit_gate": (
+                phase599_report["promotion_audit_gate"]
+            ),
+        },
         "scope": scope,
         "languages": language_results,
+        "raw_residual_language_surfaces": (
+            contextual_report["raw_residual_language_surfaces"]
+        ),
+        "contextual_admitted_language_surfaces": (
+            contextual_report["admitted_language_surfaces"]
+        ),
         "residual_language_surfaces": sum(
             row["residual_surfaces"] for row in language_results
         ),
@@ -329,6 +585,12 @@ def main(argv=None) -> None:
         "report": str(args.report),
         "algorithm_sha256": report["algorithm_sha256"],
         "scope": report["scope"],
+        "raw_residual_language_surfaces": report[
+            "raw_residual_language_surfaces"
+        ],
+        "contextual_admitted_language_surfaces": report[
+            "contextual_admitted_language_surfaces"
+        ],
         "residual_language_surfaces": report["residual_language_surfaces"],
         "visible_failures": report["visible_failures"],
         "placeholder_residual_surfaces": report[

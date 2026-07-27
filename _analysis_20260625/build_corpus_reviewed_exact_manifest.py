@@ -39,6 +39,15 @@ OUTPUT = HERE / "_corpus_reviewed_exact_app_manifest.json"
 MARKER_RE = re.compile(r"(\x01\d+\x01)")
 
 
+def semantic_manifest(payload: dict) -> dict:
+    """Exclude only non-semantic checkout-branch provenance."""
+    projected = dict(payload)
+    source = dict(projected.get("source", {}))
+    source.pop("branch", None)
+    projected["source"] = source
+    return projected
+
+
 def require_source_only_refresh(current: dict, refreshed: dict) -> None:
     """Permit a corpus re-pin only when all reviewed rules are unchanged.
 
@@ -411,7 +420,7 @@ def main() -> None:
             for row in current.get("exact_surfaces", [])
         }
         payload = build(corpus_root, selected, current["source"].get("report"))
-        if current != payload:
+        if semantic_manifest(current) != semantic_manifest(payload):
             raise SystemExit("reviewed corpus exact manifest is stale")
     print(json.dumps({
         "output": str(OUTPUT),

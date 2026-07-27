@@ -17,7 +17,8 @@ class Phase558FormalRunnerTests(unittest.TestCase):
     def environment(self):
         return {
             "ESP_GOLD_PATH": "phase532-gold.txt",
-            "ESP_CORPUS_PATH": "parent-b769",
+            "ESP_CORPUS_PATH": "active-7c04",
+            "ESP_PHASE558_PARENT_CORPUS_PATH": "parent-b769",
             "ESP_PHASE558_CURRENT_CORPUS_PATH": "current-e373",
         }
 
@@ -103,6 +104,8 @@ class Phase558FormalRunnerTests(unittest.TestCase):
         self.assertEqual(calls[0][1]["ESP_CORPUS_PATH"], "parent-b769")
         self.assertEqual(calls[2][1]["ESP_CORPUS_PATH"], "parent-b769")
         self.assertEqual(calls[4][1]["ESP_CORPUS_PATH"], "current-e373")
+        self.assertNotEqual(calls[0][1]["ESP_CORPUS_PATH"], "active-7c04")
+        self.assertNotEqual(calls[2][1]["ESP_CORPUS_PATH"], "active-7c04")
         self.assertTrue(all(call[1]["PYTHONUTF8"] == "1" for call in calls))
         self.assertIn("parent-current", calls[1][0])
         self.assertIn("full-old-to-new", calls[3][0])

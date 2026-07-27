@@ -35,6 +35,7 @@ import phase558_ruby_overlay as phase558_policy
 import phase558_ruby_overlay_activation as phase558_activation
 import phase598_technical_on_policy as phase598_policy
 import phase598_technical_on_activation as phase598_activation
+import phase600_master_ruby_policy as phase600_policy
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
@@ -1090,11 +1091,46 @@ class GenerationRuleTests(unittest.TestCase):
 
     def test_formal_regeneration_uses_snapshot_full_master_audit(self):
         pipeline = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
+        successor = (
+            HERE / "run_phase597_full_master_successor.py"
+        ).read_text(encoding="utf-8")
+        full_audit = (
+            HERE / "audit_master_3lang_full_snapshot.py"
+        ).read_text(encoding="utf-8")
         fast = (HERE / "audit_master_3lang_fast.py").read_text(encoding="utf-8")
-        self.assertIn("audit_master_3lang_full_snapshot.py", pipeline)
+        self.assertIn("run_phase597_full_master_successor.py", pipeline)
+        self.assertIn("'--phase597-dir', phase597_candidate_dir", pipeline)
+        self.assertNotIn(
+            "os.path.join(HERE, 'audit_master_3lang_full_snapshot.py')",
+            pipeline,
+        )
         self.assertNotIn("'audit_master_3lang_fast.py'", pipeline)
-        self.assertIn("--expected-gold-sha256", pipeline)
-        self.assertIn("--expected-head", pipeline)
+        self.assertIn(
+            'RAW_AUDITOR = HERE / "audit_master_3lang_full_snapshot.py"',
+            successor,
+        )
+        for pin in (
+            '"--expected-gold-sha256"',
+            '"--expected-academic-sha256"',
+            '"--expected-head"',
+        ):
+            self.assertIn(pin, successor)
+        self.assertIn(
+            'parser.add_argument("--expected-gold-sha256", required=True)',
+            full_audit,
+        )
+        self.assertIn(
+            "if digest != expected_sha256.upper():",
+            full_audit,
+        )
+        self.assertIn(
+            "if head_at_start != args.expected_head:",
+            full_audit,
+        )
+        self.assertIn(
+            "head_at_end == head_at_start == args.expected_head",
+            full_audit,
+        )
         self.assertIn("--monitor-only", fast)
         self.assertIn("if mism:", fast)
 
@@ -2919,6 +2955,59 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 char_widths = json.loads(
                     (data_dir / "char_widths.json").read_text(encoding="utf-8")
                 )
+                phase600_rows = phase600_policy.validate_optional_layer(
+                    payload, language, require_present=True,
+                )
+                payload_before_phase600, stripped_phase600_rows = (
+                    phase600_policy.strip_optional_layer(
+                        payload, language, require_present=True,
+                    )
+                )
+                self.assertEqual(
+                    stripped_phase600_rows, phase600_rows, language,
+                )
+                self.assertEqual(
+                    len(phase600_rows), phase600_policy.MANAGED_ROWS, language,
+                )
+                (
+                    _local_key,
+                    global_key,
+                    _two_char_key,
+                ) = phase600_policy.rule_keys(payload)
+                base_global_rules = payload_before_phase600[global_key]
+                base_old_sequence = [rule[0] for rule in base_global_rules]
+                self.assertEqual(
+                    len(base_old_sequence), len(set(base_old_sequence)),
+                    f"{language} global base contains duplicate old keys "
+                    "after exact Phase 600 removal",
+                )
+                final_global_counts = Counter(
+                    rule[0] for rule in global_rules
+                )
+                expected_phase600_duplicates = {
+                    " glu-glu-glu ",
+                    *(
+                        f" {surface} "
+                        for surface in phase600_policy.compound_surfaces()
+                    ),
+                }
+                self.assertEqual(
+                    {
+                        old: count
+                        for old, count in final_global_counts.items()
+                        if count > 1
+                    },
+                    {
+                        old: 2
+                        for old in expected_phase600_duplicates
+                    },
+                    f"{language} unmanaged global duplicate old keys",
+                )
+                self.assertEqual(
+                    len(global_rules) - len(final_global_counts),
+                    len(expected_phase600_duplicates),
+                    f"{language} Phase 600 duplicate excess",
+                )
                 width_cache = {}
                 for label, rules in (
                     ("global", global_rules),
@@ -2926,10 +3015,11 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     ("two_char", two_char_rules),
                 ):
                     old_sequence = [rule[0] for rule in rules]
-                    self.assertEqual(
-                        len(old_sequence), len(set(old_sequence)),
-                        f"{language} {label} contains duplicate old keys",
-                    )
+                    if label != "global":
+                        self.assertEqual(
+                            len(old_sequence), len(set(old_sequence)),
+                            f"{language} {label} contains duplicate old keys",
+                        )
                     malformed_break_tags = [
                         (rule[0], rule[1])
                         for rule in rules
@@ -2953,8 +3043,16 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         f"{language} {label} invalid rt markup="
                         f"{len(invalid_rt_markup)}",
                     )
+                    # Phase 600 seals its exact managed renderings above and
+                    # has a dedicated effective-width-below-2x gate.  Its
+                    # fixed classes need not equal a fresh output_format
+                    # choice, so retain this older canonical-class check on
+                    # the strictly validated pre-Phase-600 base only.
+                    width_rules = (
+                        base_global_rules if label == "global" else rules
+                    )
                     width_mismatches = []
-                    for old, new, _placeholder in rules:
+                    for old, new, _placeholder in width_rules:
                         for match in FINAL_RUBY_RE.finditer(new):
                             rb = match.group(1)
                             rt = re.sub(

@@ -120,6 +120,21 @@ def target_from_signature(signature) -> str:
     return "/".join(pieces)
 
 
+def semantic_manifest(payload: dict) -> dict:
+    """Exclude only the checkout branch label from manifest identity.
+
+    A commit can be checked out on ``main``, a temporary audit branch, or in
+    detached-HEAD state without changing a single corpus byte.  The immutable
+    HEAD/content/status pins remain authoritative; ``source.branch`` is kept
+    solely as acquisition provenance.
+    """
+    projected = dict(payload)
+    source = dict(projected.get("source", {}))
+    source.pop("branch", None)
+    projected["source"] = source
+    return projected
+
+
 def build(corpus_root: Path) -> dict:
     repo_state = audit.git_repo_state(corpus_root)
     if repo_state["status_entries"]:
@@ -270,7 +285,7 @@ def main() -> None:
         atomic_json_dump(OUTPUT, payload, indent=1)
     elif args.check:
         current = json.loads(OUTPUT.read_text(encoding="utf-8"))
-        if current != payload:
+        if semantic_manifest(current) != semantic_manifest(payload):
             raise SystemExit("corpus exact manifest is stale")
     print(json.dumps({
         "output": str(OUTPUT),

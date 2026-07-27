@@ -1,0 +1,473 @@
+{
+ "schema_version": 1,
+ "description": "Independent fail-closed review of Kyoto HTML corpus b769038 -> 7c04f97.",
+ "normalization": {
+  "hash": "SHA-256 uppercase over JSON ensure_ascii=true, sort_keys=true, separators=(',', ':')",
+  "ruby_record": "NFC(rb), NFC rt lines split at <br>, exact CSS class",
+  "visible_body": "NFC; remove head/script/style/rt, tr-tag and num spans, HTML tags and whitespace"
+ },
+ "source": {
+  "old": {
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "tree_oid": "47995a849c6f06dc536b533642ad6974ddd8586e",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "all_html_files": 172,
+   "html_path_set_sha256": "8D69D6CF4AD403C2F25224F4E0D36A22A28B8BA9B3C238A68A45BC5B7B47A093",
+   "files": 169,
+   "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
+   "raw_ruby": 348971,
+   "parsed_ruby": 348971,
+   "rt": 348971,
+   "rb": 0,
+   "parsed_units": 271065
+  },
+  "new": {
+   "head_oid": "7c04f97c51a7cecf88918d2abc2e6bf2f34601a6",
+   "tree_oid": "52a92cafc2234eeea5b8d39a3ac0163f47e67462",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "all_html_files": 172,
+   "html_path_set_sha256": "8D69D6CF4AD403C2F25224F4E0D36A22A28B8BA9B3C238A68A45BC5B7B47A093",
+   "files": 169,
+   "content_sha256": "4F04FD2F3DBE0FC79909CBBEA61ED2848FC093AE2DFE3F0ADEB79882AEB04F52",
+   "raw_ruby": 348581,
+   "parsed_ruby": 348581,
+   "rt": 348581,
+   "rb": 0,
+   "parsed_units": 270763
+  }
+ },
+ "file_set": {
+  "added": [],
+  "removed": [],
+  "renamed": []
+ },
+ "classification": {
+  "byte_identical": {
+   "files": 24,
+   "path_list_sha256": "8E3B007448B8229F9EDBBB6D2A0D36E6E1971FCBDC1D7C86F9DA7F7412447602"
+  },
+  "format_order_preserved": {
+   "files": 110,
+   "path_list_sha256": "937CEAD9092E6BE22C68353E080EEF01A17F19D38284C65710A9C9590D2F9629"
+  },
+  "reorder_multiset_preserved": {
+   "files": 29,
+   "path_list_sha256": "039B7A9E55F2BCF7FC6A016A3674A887DD492FDD6BCCFCA6FE0CAA05765E3E65"
+  },
+  "reviewed_content_delta": {
+   "files": 9,
+   "path_list_sha256": "FFFC029F05204E39C85F90164CFC8DED07C2956E1252DC544E99B247080D242B",
+   "paths": [
+    "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+    "legajxoj/historio-kaj-biografioj/osakakenji.html",
+    "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+    "lernolibroj/fujimaki/fujimaki10.html",
+    "lernolibroj/fujimaki/fujimaki13.html",
+    "lernolibroj/fujimaki/fujimaki14.html",
+    "lernolibroj/fujimaki/fujimaki4.html",
+    "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+    "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+   ]
+  }
+ },
+ "ruby_transition": {
+  "old_ruby": 348971,
+  "new_ruby": 348581,
+  "ruby_delta": -390,
+  "old_parsed_units": 271065,
+  "new_parsed_units": 270763,
+  "parsed_units_delta": -302,
+  "record_counter_removed": 407,
+  "record_counter_added": 17,
+  "sequence_changed_files": 10,
+  "sequence_changed_path_list_sha256": "9F82511C61A0959FF3ED0349DF0B666F5101CD49E51061D7E8D1B194C0CC5B29",
+  "counter_changed_files": 9,
+  "counter_changed_path_list_sha256": "FFFC029F05204E39C85F90164CFC8DED07C2956E1252DC544E99B247080D242B",
+  "duplicate_removal": {
+   "files": 2,
+   "ruby_records_per_file": 195,
+   "removed_ruby_total": 390,
+   "rows": [
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "ruby_records": 195,
+     "old_occurrences": 2,
+     "new_occurrences": 1,
+     "old_start_indices_zero_based": [
+      12562,
+      12757
+     ],
+     "new_start_indices_zero_based": [
+      12562
+     ],
+     "record_block_sha256": "CCF2C90F5C40461BBE5E8C40B10A5DF7801E04D405F6EEAFB28FAB01B4903BB9",
+     "rb_sequence_sha256": "92AA64302E1DC8EA268A9FA1F3FF6C4E74E603F49CA35FB548F334A9162ADAA1",
+     "first_rb": [
+      "Por",
+      "jun",
+      "vir",
+      "in",
+      "mi"
+     ],
+     "last_rb": [
+      "ni",
+      "bezon",
+      "as",
+      "feminism",
+      "solv"
+     ],
+     "old_file_sha256": "9629B2988C21D081160BF19F1A3C773BB73D7CC627A885C95C965A779FBC4CF5",
+     "new_file_sha256": "E33697CFE13489D74FEC8C41ADB6A0E2DD852E3A2E27CC6DE1C96336CF811C84"
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "ruby_records": 195,
+     "old_occurrences": 2,
+     "new_occurrences": 1,
+     "old_start_indices_zero_based": [
+      12566,
+      12761
+     ],
+     "new_start_indices_zero_based": [
+      12566
+     ],
+     "record_block_sha256": "7E6A022F1DFD350657AC4F8A861AE7E3BF776D2044613FA199533162282CB656",
+     "rb_sequence_sha256": "92AA64302E1DC8EA268A9FA1F3FF6C4E74E603F49CA35FB548F334A9162ADAA1",
+     "first_rb": [
+      "Por",
+      "jun",
+      "vir",
+      "in",
+      "mi"
+     ],
+     "last_rb": [
+      "ni",
+      "bezon",
+      "as",
+      "feminism",
+      "solv"
+     ],
+     "old_file_sha256": "4FEC5FC2E7914780835BD3EB843FBC0165E46BF998E0F5AD05C3E2DA7DD9CA33",
+     "new_file_sha256": "C56328E1E277EEAC7D99444517E29FA89080BC0CFEE0084FB61DB6E1271B0ABE"
+    }
+   ]
+  },
+  "spelling_corrections": {
+   "kinds": 9,
+   "instances": 15,
+   "path_rows": 14,
+   "rows_sha256": "6B0314F4D9173EAFAE2BE635D349B6E677EB9D238B75AE56712B7AB9F644C440",
+   "rows": [
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "old": {
+      "rb": "ŝanĉ",
+      "rt_lines": [
+       "幸運"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "ŝanc",
+      "rt_lines": [
+       "幸運"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "old": {
+      "rb": "fron",
+      "rt_lines": [
+       "面する"
+      ],
+      "class": "M_M"
+     },
+     "new": {
+      "rb": "front",
+      "rt_lines": [
+       "面する"
+      ],
+      "class": "L_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "old": {
+      "rb": "lecjon",
+      "rt_lines": [
+       "レッスン"
+      ],
+      "class": "M_M"
+     },
+     "new": {
+      "rb": "lecion",
+      "rt_lines": [
+       "レッスン"
+      ],
+      "class": "M_M"
+     },
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "old": {
+      "rb": "jurnal",
+      "rt_lines": [
+       "新聞"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "ĵurnal",
+      "rt_lines": [
+       "新聞"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "old": {
+      "rb": "argent",
+      "rt_lines": [
+       "銀"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "arĝent",
+      "rt_lines": [
+       "銀"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki4.html",
+     "old": {
+      "rb": "argent",
+      "rt_lines": [
+       "銀"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "arĝent",
+      "rt_lines": [
+       "銀"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "old": {
+      "rb": "pseudonim",
+      "rt_lines": [
+       "偽名"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "pseŭdonim",
+      "rt_lines": [
+       "偽名"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "old": {
+      "rb": "pseudonim",
+      "rt_lines": [
+       "偽名"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "pseŭdonim",
+      "rt_lines": [
+       "偽名"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "old": {
+      "rb": "adekv",
+      "rt_lines": [
+       "適切な"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "adekvat",
+      "rt_lines": [
+       "適切な"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki13.html",
+     "old": {
+      "rb": "adekv",
+      "rt_lines": [
+       "適切な"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "adekvat",
+      "rt_lines": [
+       "適切な"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "old": {
+      "rb": "ŝang",
+      "rt_lines": [
+       "交換する"
+      ],
+      "class": "S_S"
+     },
+     "new": {
+      "rb": "ŝanĝ",
+      "rt_lines": [
+       "交換する"
+      ],
+      "class": "S_S"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki14.html",
+     "old": {
+      "rb": "ŝang",
+      "rt_lines": [
+       "交換する"
+      ],
+      "class": "S_S"
+     },
+     "new": {
+      "rb": "ŝanĝ",
+      "rt_lines": [
+       "交換する"
+      ],
+      "class": "S_S"
+     },
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "old": {
+      "rb": "distrik",
+      "rt_lines": [
+       "[政]地区"
+      ],
+      "class": "L_L"
+     },
+     "new": {
+      "rb": "distrikt",
+      "rt_lines": [
+       "[政]地区"
+      ],
+      "class": "XL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "old": {
+      "rb": "distrik",
+      "rt_lines": [
+       "구역"
+      ],
+      "class": "XXL_L"
+     },
+     "new": {
+      "rb": "distrikt",
+      "rt_lines": [
+       "구역"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    }
+   ]
+  },
+  "annotation_corrections": {
+   "kinds": 1,
+   "instances": 2,
+   "path_rows": 2,
+   "rows_sha256": "54E5D821256EFA2CFE324C87F4C89394453BEBE5C30D797AAE097F6A1ACC059E",
+   "rows": [
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "old": {
+      "rb": "Aposterior",
+      "rt_lines": [
+       "ア・ポステリオリ"
+      ],
+      "class": "M_M"
+     },
+     "new": {
+      "rb": "Aposterior",
+      "rt_lines": [
+       "後天的"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "old": {
+      "rb": "Aposterior",
+      "rt_lines": [
+       "ア・ポステリオリ"
+      ],
+      "class": "M_M"
+     },
+     "new": {
+      "rb": "Aposterior",
+      "rt_lines": [
+       "後天的"
+      ],
+      "class": "XXL_L"
+     },
+     "count": 1
+    }
+   ]
+  },
+  "boundary_only_changes": 0,
+  "unexplained_removed_records": 0,
+  "unexplained_added_records": 0
+ },
+ "gate": {
+  "clean_checkouts": true,
+  "same_html_path_set": true,
+  "ruby_fully_parsed": true,
+  "no_rb_elements": true,
+  "no_unexplained_record_delta": true,
+  "pass": true
+ }
+}

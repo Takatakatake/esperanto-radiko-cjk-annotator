@@ -2,27 +2,32 @@
  "schema_version": 1,
  "description": "Pinned case-sensitive typed exact app rules for reviewed evaluable residuals after productive morphology.",
  "source": {
-  "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
-  "branch": "main",
+  "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+  "branch": "agent/iniciatoro-coarse-ruby",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
   "content_files": 169,
-  "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
-  "raw_ruby": 348971,
-  "parsed_ruby": 348971,
-  "parsed_units": 271065,
+  "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+  "raw_ruby": 348580,
+  "parsed_ruby": 348580,
+  "parsed_units": 270763,
   "report": {
-   "filename": "_audit_reviewed_exact_residual.json",
-   "sha256": "620B40AEE6C90AEEF185E4911946DB977D75BC13C8FCB5CB8E476ACFB44A2814",
+   "kind": "explicit_retirement_transition",
+   "filename": "_corpus_reviewed_exact_transition_d1642c2.json",
+   "sha256": "A0758659DB22089E27E23F1CC1E11B734E56641775E6804245F7A1BE980B4A0F",
    "schema_version": 1,
-   "surface_count": 21443,
-   "temp_mismatch": 628
+   "parent_residual_report_sha256": "620B40AEE6C90AEEF185E4911946DB977D75BC13C8FCB5CB8E476ACFB44A2814",
+   "retired_surfaces": [
+    "bonŝanĉulo",
+    "fronantaj",
+    "jurnal"
+   ]
   }
  },
  "counts": {
-  "exact_surfaces": 628,
-  "exact_instances": 2743,
-  "ruby_context_annotations": 930
+  "exact_surfaces": 625,
+  "exact_instances": 2740,
+  "ruby_context_annotations": 924
  },
  "exact_surfaces": [
   {
@@ -14209,48 +14214,6 @@
    ]
   },
   {
-   "surface": "bonŝanĉulo",
-   "target": "bon/ŝanĉ/ul/o",
-   "typed_roles": "RRRL",
-   "signature": {
-    "reconstruction": "bonŝanĉulo",
-    "spans": [
-     {
-      "text": "bon",
-      "ruby": true
-     },
-     {
-      "text": "ŝanĉ",
-      "ruby": true
-     },
-     {
-      "text": "ul",
-      "ruby": true
-     },
-     {
-      "text": "o",
-      "ruby": false
-     }
-    ]
-   },
-   "typed": "R:bon|R:ŝanĉ|R:ul|L:o",
-   "count": 1,
-   "available_expected_options": [
-    "R:bon|R:ŝanĉ|R:ul|L:o"
-   ],
-   "annotation_keys": {
-    "0": "@typed:bonŝanĉulo:0",
-    "1": "@typed:bonŝanĉulo:1",
-    "2": "@typed:bonŝanĉulo:2"
-   },
-   "paths": [
-    {
-     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
-     "count": 1
-    }
-   ]
-  },
-  {
    "surface": "cel-orientitaj",
    "target": "cel/-/orient/it/aj",
    "typed_roles": "RLRRL",
@@ -15932,43 +15895,6 @@
    ]
   },
   {
-   "surface": "fronantaj",
-   "target": "fron/ant/aj",
-   "typed_roles": "RRL",
-   "signature": {
-    "reconstruction": "fronantaj",
-    "spans": [
-     {
-      "text": "fron",
-      "ruby": true
-     },
-     {
-      "text": "ant",
-      "ruby": true
-     },
-     {
-      "text": "aj",
-      "ruby": false
-     }
-    ]
-   },
-   "typed": "R:fron|R:ant|L:aj",
-   "count": 1,
-   "available_expected_options": [
-    "R:fron|R:ant|L:aj"
-   ],
-   "annotation_keys": {
-    "0": "@typed:fronantaj:0",
-    "1": "@typed:fronantaj:1"
-   },
-   "paths": [
-    {
-     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
-     "count": 1
-    }
-   ]
-  },
-  {
    "surface": "fruen",
    "target": "fru/en",
    "typed_roles": "RL",
@@ -16750,34 +16676,6 @@
     },
     {
      "path": "lernolibroj/fujimaki/fujimaki16.html",
-     "count": 1
-    }
-   ]
-  },
-  {
-   "surface": "jurnal",
-   "target": "jurnal",
-   "typed_roles": "R",
-   "signature": {
-    "reconstruction": "jurnal",
-    "spans": [
-     {
-      "text": "jurnal",
-      "ruby": true
-     }
-    ]
-   },
-   "typed": "R:jurnal",
-   "count": 1,
-   "available_expected_options": [
-    "R:jurnal"
-   ],
-   "annotation_keys": {
-    "0": "@typed:jurnal:0"
-   },
-   "paths": [
-    {
-     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
      "count": 1
     }
    ]
@@ -31093,54 +30991,6 @@
     ]
    }
   },
-  "@typed:bonŝanĉulo:0": {
-   "piece": "bon",
-   "glosses": {
-    "ja": "良い",
-    "zh": "[词]bon",
-    "ko": "[어휘]bon"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "良い",
-      "count": 1
-     }
-    ]
-   }
-  },
-  "@typed:bonŝanĉulo:1": {
-   "piece": "ŝanĉ",
-   "glosses": {
-    "ja": "幸運",
-    "zh": "[词]ŝanĉ",
-    "ko": "[어휘]ŝanĉ"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "幸運",
-      "count": 1
-     }
-    ]
-   }
-  },
-  "@typed:bonŝanĉulo:2": {
-   "piece": "ul",
-   "glosses": {
-    "ja": "人",
-    "zh": "[词]ul",
-    "ko": "[어휘]ul"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "人",
-      "count": 1
-     }
-    ]
-   }
-  },
   "@typed:cel-orientitaj:0": {
    "piece": "cel",
    "glosses": {
@@ -32695,38 +32545,6 @@
     ]
    }
   },
-  "@typed:fronantaj:0": {
-   "piece": "fron",
-   "glosses": {
-    "ja": "面する",
-    "zh": "[词]fron",
-    "ko": "[어휘]fron"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "面する",
-      "count": 1
-     }
-    ]
-   }
-  },
-  "@typed:fronantaj:1": {
-   "piece": "ant",
-   "glosses": {
-    "ja": "能動;<br>継続",
-    "zh": "[词]ant",
-    "ko": "[어휘]ant"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "能動;<br>継続",
-      "count": 1
-     }
-    ]
-   }
-  },
   "@typed:fruen:0": {
    "piece": "fru",
    "glosses": {
@@ -33279,22 +33097,6 @@
      {
       "gloss": "[地名]横浜",
       "count": 2
-     }
-    ]
-   }
-  },
-  "@typed:jurnal:0": {
-   "piece": "jurnal",
-   "glosses": {
-    "ja": "新聞",
-    "zh": "[词]jurnal",
-    "ko": "[어휘]jurnal"
-   },
-   "variants": {
-    "ja": [
-     {
-      "gloss": "新聞",
-      "count": 1
      }
     ]
    }

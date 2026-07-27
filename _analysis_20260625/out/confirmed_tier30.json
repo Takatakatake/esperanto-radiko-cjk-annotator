@@ -12622,16 +12622,6 @@
   "reviewed_residual": true
  },
  {
-  "w": "bonŝanĉulo",
-  "target": "bon/ŝanĉ/ul/o",
-  "typed_roles": "RRRL",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
   "w": "cel-orientitaj",
   "target": "cel/-/orient/it/aj",
   "typed_roles": "RLRRL",
@@ -13042,16 +13032,6 @@
   "reviewed_residual": true
  },
  {
-  "w": "fronantaj",
-  "target": "fron/ant/aj",
-  "typed_roles": "RRL",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
   "w": "fruen",
   "target": "fru/en",
   "typed_roles": "RL",
@@ -13244,16 +13224,6 @@
  {
   "w": "jokohama",
   "target": "jokohama",
-  "typed_roles": "R",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
-  "w": "jurnal",
-  "target": "jurnal",
   "typed_roles": "R",
   "exact_only": true,
   "boundary_only": true,

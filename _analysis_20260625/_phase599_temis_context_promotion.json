@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "phase": 599,
+  "status": "promotion_authorized",
+  "policy": "Promote only the five sealed Phase 599 long-phrase Ruby rows. Normalize any already-promoted exact rows away, revalidate the R67/R68 and R73 parent layers plus the candidate-only Temis precondition in memory, stage JA/ZH/KO together, and publish only after candidate runtime, guard, width, and Kanji-nonintervention gates pass.",
+  "authorization": {
+    "kind": "explicit_user_instruction",
+    "date": "2026-07-26",
+    "from_status": "candidate_only",
+    "to_status": "deployed_ruby_overlay",
+    "scope": "five_exact_temis_context_rows_in_JA_ZH_KO"
+  },
+  "candidate_authority": {
+    "path": "_analysis_20260625/_phase599_temis_context_review.json",
+    "review_sha256": "36632BC256E435103A3CA2BCC5B41E11D184C68BBEC544D16457441EBFB00F32",
+    "decisions_sha256": "96AB0FC5C4D8C8E269B694E43E0BF8C464752C5F87445C59A3A99CF1689467CB",
+    "base_app_commit": "3F338920F59EFD80333616AF6192E0F099C3D07C",
+    "kyoto_corpus_commit": "7C04F97C51A7CECF88918D2ABC2E6BF2F34601A6"
+  },
+  "required_preconditions": {
+    "normalized_global_rows_per_language": 572501,
+    "r67_r68_overlay_audit": true,
+    "r73_parent_payload_delta_gate": true,
+    "candidate_temis_precondition_gate": true,
+    "candidate_runtime_gate": true,
+    "strict_added_ruby_width_below_2x": true,
+    "negative_nonintervention": true,
+    "trilingual_boundary_rb_identity": true
+  },
+  "transaction": {
+    "languages": [
+      "JA",
+      "ZH",
+      "KO"
+    ],
+    "track": "Ruby",
+    "managed_bucket": "replacements_final_list",
+    "remove_existing_managed_rows_before_add": true,
+    "rows_added_per_language": 5,
+    "post_promotion_global_rows_per_language": 572506,
+    "stage_all_before_replace": true,
+    "rollback_on_replace_or_postcondition_failure": true,
+    "idempotent_noop_when_exactly_promoted": true,
+    "kanji_paths_written": [],
+    "generator_hook": "after_r67_r68_audit_and_r73_parent_delta_gate"
+  },
+  "row_manifests": {
+    "JA": {
+      "rows": 5,
+      "rows_sha256": "718937629A418E6F5CCA9845592FACC2D11553053642F1FC0F35AE91ACE5A615",
+      "sources_sha256": "D3EA5D42A4C1CADE1209E37B3CF787834F821FCF778474FC1FD9CCEF8BB24AE3",
+      "rendered_sha256": "51C14115CF180ECD347C2CE0B45779DDD115DBFFE9EF9FE31F7A5BB02D1A8C9D",
+      "placeholders_sha256": "2B936726FEE78881ED3A6B074A398520E2A22A0632DC4D76557C544332373436"
+    },
+    "ZH": {
+      "rows": 5,
+      "rows_sha256": "11474B651D8406BCB6B38C7534B45053F75E61EFFF871635F7759AA3463C3187",
+      "sources_sha256": "D3EA5D42A4C1CADE1209E37B3CF787834F821FCF778474FC1FD9CCEF8BB24AE3",
+      "rendered_sha256": "BE07A6BF3BE722A3377FC5F7FFBF49EFBABCC2D8611C9421C56554619807A0A3",
+      "placeholders_sha256": "F8B5550E4A9FA936ED3E0A66F079719E731C51E781B334F736EAB455516F42E0"
+    },
+    "KO": {
+      "rows": 5,
+      "rows_sha256": "82EB1A3530DB03A80511BB06A0A540F3758C75FC88CE2D2B9C5EAC6981C55F81",
+      "sources_sha256": "D3EA5D42A4C1CADE1209E37B3CF787834F821FCF778474FC1FD9CCEF8BB24AE3",
+      "rendered_sha256": "8F2D259F616E46D5A0B1DD3BEE05FC387E626CC4DB3A2A00E09645D7CAD26A97",
+      "placeholders_sha256": "0B960A152BD7CB56CE497C6257C81FF9B76705C7E882F32BD1E5370B4C6DA22C"
+    }
+  },
+  "expected_counts": {
+    "unique_phrases": 5,
+    "corpus_instances": 6,
+    "languages": 3,
+    "managed_rows_total": 15,
+    "negative_cases": 6,
+    "kanji_files_written": 0
+  }
+}

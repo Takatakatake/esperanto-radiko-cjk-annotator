@@ -41,6 +41,16 @@ PINNED_PARENT_COMMIT = "4682D32496F166802B4A2CF28626F376E12AAE3E"
 PINNED_PARENT_TREE = "2C494DB69EBAC28EF63A192BEFA017A22710CCD7"
 PINNED_PARENT_GLOBAL_ROWS = 572_356
 EXPECTED_POST_R73_GLOBAL_ROWS = 572_501
+# Phase 599 is a separate exact five-row post-generation promotion layer.
+# Capture ignores those rows, but repeat regeneration must still accept their
+# presence before apply_confirmed rebuilds the base payload.
+EXPECTED_POST_PHASE599_GLOBAL_ROWS = 572_506
+# Phase 600 is a later, independently managed 52-row master-only repair
+# (50 correction rows plus two exact lowercase ``*-nor`` non-worsening
+# guards).
+# It must never be folded into the historical R67/R68 snapshot, but a repeat
+# regeneration starts from a deployed payload in which those rows are present.
+EXPECTED_POST_PHASE600_GLOBAL_ROWS = 572_558
 
 EXPECTED_OVERLAYS = {
     "JA": {
@@ -317,6 +327,19 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
         raise ValueError(
             f"pinned parent global row count drift: {deployed_counts!r}"
         )
+    if git_ref is None and (
+        len(set(deployed_counts.values())) != 1
+        or not set(deployed_counts.values())
+        <= {
+            PINNED_PARENT_GLOBAL_ROWS,
+            EXPECTED_POST_R73_GLOBAL_ROWS,
+            EXPECTED_POST_PHASE599_GLOBAL_ROWS,
+            EXPECTED_POST_PHASE600_GLOBAL_ROWS,
+        }
+    ):
+        raise ValueError(
+            f"deployed overlay capture-count drift: {deployed_counts!r}"
+        )
 
     snapshot = {
         "schema_version": SCHEMA_VERSION,
@@ -359,7 +382,12 @@ def load_snapshot(path: Path) -> dict:
         set(captured_counts or {}) != set(LANGUAGES)
         or len(set(captured_counts.values())) != 1
         or not set(captured_counts.values())
-        <= {PINNED_PARENT_GLOBAL_ROWS, EXPECTED_POST_R73_GLOBAL_ROWS}
+        <= {
+            PINNED_PARENT_GLOBAL_ROWS,
+            EXPECTED_POST_R73_GLOBAL_ROWS,
+            EXPECTED_POST_PHASE599_GLOBAL_ROWS,
+            EXPECTED_POST_PHASE600_GLOBAL_ROWS,
+        }
     ):
         raise ValueError("historical overlay capture-count drift")
     if snapshot.get("source_git_ref") is not None:

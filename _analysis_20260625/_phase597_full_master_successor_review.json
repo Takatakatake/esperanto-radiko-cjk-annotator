@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "phase": 597,
+  "review_kind": "full_master_successor_runtime_integrity_sidecar",
+  "policy": {
+    "two_track_rule": "Ruby keeps Kyoto-corpus-level coarse boundaries; Kanji/master conversion keeps learner fake decompositions where they are explicitly marked and reviewed.",
+    "trilingual_rule": "JA, ZH, and KO Ruby boundaries must be exactly identical even when Ruby is deliberately coarser than the learner/Kanji track.",
+    "width_rule": "Ruby annotation width must remain at or below two times the rendered Esperanto base after the deployed CSS class scale; width never licenses a boundary change.",
+    "promotion_rule": "This sidecar may close deployed Ruby runtime integrity only. It never promotes the complete Phase 597 master and never declares the full fake/coarse semantic queue resolved.",
+    "freshness_rule": "Runtime-dependent identities may be sealed only from one fresh Phase 597 raw report produced by the successor runner against the same deployed app snapshot. Historical reports are evidence only and must not supply current pins."
+  },
+  "sources": {
+    "learner": {
+      "path": "learner.txt",
+      "bytes": 4373830,
+      "lines": 62313,
+      "sha256": "9A610D086E60A1863E1D59D61FE0F844B3EACF4DCEBDBF6AE6354E0D16D99700"
+    },
+    "academic": {
+      "path": "academic.txt",
+      "bytes": 4277601,
+      "lines": 62313,
+      "sha256": "63DAB5BAF932605A2D94843AD249FBE32CB1E8A40B8D244714A17744C0384261"
+    },
+    "pejvo_original": {
+      "path": "pejvo_original.txt",
+      "bytes": 2211329,
+      "lines": 44621,
+      "sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF"
+    },
+    "candidate_fake_coarse_manifest": {
+      "path": "candidate_fake_coarse_manifest.json",
+      "bytes": 1013538,
+      "lines": 40060,
+      "sha256": "E699B6BF5CE737CF1DAFBF61C9B256DF0339A48B3AA7F24E215F2136B6D00541",
+      "entries": 3321,
+      "entries_sha256": "63BF80872496A0644BE75ADC8554E130F49F30990870D3B47956727387FA97A6"
+    },
+    "candidate_pejvo_disagreement_review": {
+      "path": "candidate_pejvo_disagreement_review.json",
+      "bytes": 5110,
+      "lines": 132,
+      "sha256": "455E2C1FE3C0CF36362FEEC9464D15E2F04E791A44B20146D0292054B0463211",
+      "entries": 14
+    },
+    "candidate_transition_dispositions": {
+      "path": "candidate_transition_dispositions.json",
+      "bytes": 1100,
+      "lines": 24,
+      "sha256": "7736F1AF0DCA855C5744D054BF2C0DAE7051BC237ECCFFF5A5E8B7A157973096",
+      "entries": 1
+    }
+  },
+  "atletiko_two_track_adjudication": {
+    "learner_line": 2704,
+    "surface": "atletiko",
+    "previous_transition_scope": "historical_c679_b090",
+    "raw_candidate_status": "retired_fake_marker_transition_pending_review",
+    "raw_candidate_decision": "pending_review",
+    "raw_candidate_reason": "Phase 597 retains the earlier marker retirement while deployed Kyoto-level Ruby still uses atletik/o. Keep the historical decision visible until Ruby granularity is explicitly adjudicated.",
+    "ruby_track": {
+      "decomposition": "atletik/o",
+      "typed_signature": "R:atletik|L:o",
+      "ruby_bases": [
+        "atletik"
+      ],
+      "granularity": "Kyoto-level coarse Ruby",
+      "languages": {
+        "JA": {
+          "rb": "atletik",
+          "rt": "陸上競技"
+        },
+        "ZH": {
+          "rb": "atletik",
+          "rt": "田径"
+        },
+        "KO": {
+          "rb": "atletik",
+          "rt": "육상경기"
+        }
+      }
+    },
+    "kanji_master_track": {
+      "learner_decomposition": "atlet/ik/o",
+      "academic_decomposition": "atlet/ik/o",
+      "learner_line_text": "atlet/ik/o:運動競技;【運】陸上競技",
+      "academic_line_text": "atlet/ik/o:運動競技;【運】陸上競技",
+      "fake_decomposition_preserved_for_kanji": true
+    },
+    "sidecar_disposition": "admit_exactly_one_two_track_runtime_residual",
+    "master_candidate_promotion_authorized": false,
+    "full_fake_coarse_semantic_gate": false
+  },
+  "raw_audit_contract": {
+    "schema_version": 1,
+    "algorithm_id": "full-master-three-language-runtime-v1",
+    "batch_size": 1000,
+    "required_languages": [
+      "JA",
+      "ZH",
+      "KO"
+    ],
+    "accounting": {
+      "input_lines": 62313,
+      "excluded_lines": 202,
+      "exclusions_by_reason": {
+        "comment": 202
+      },
+      "runtime_candidate_lines": 62111,
+      "runtime_unique_surfaces": 61844,
+      "duplicate_surface_line_excess": 267,
+      "duplicate_surface_groups": 259,
+      "input_token_occurrences_line_weighted": 68702,
+      "unique_input_token_values": 57354,
+      "zero_token_candidate_lines": 0,
+      "fast_filter_included_unique_surfaces": 55383,
+      "render_union_unique_surfaces": 62305,
+      "fake_coarse_authority_unique_surfaces": 3590,
+      "fake_coarse_authority_line_rows": 3608,
+      "legacy_fast_only_synthetic_surfaces": 440,
+      "all_candidate_lines_mapped_to_surface": true,
+      "all_runtime_candidates_assessed_in_all_languages": true,
+      "unevaluated_runtime_candidate_lines": 0
+    },
+    "boundary_zero_fields": [
+      "render_union_mismatch_unique_surfaces",
+      "full_exact_mismatch_unique_surfaces",
+      "full_exact_mismatch_line_occurrences",
+      "legacy_fast_mismatch_unique_surfaces",
+      "legacy_fast_mismatch_line_occurrences",
+      "token_mismatch_unique_contexts",
+      "full_exact_token_mismatch_unique_contexts",
+      "legacy_fast_token_mismatch_unique_contexts"
+    ],
+    "issue_buckets": [
+      "runtime_errors",
+      "visible_failures",
+      "placeholder_residuals",
+      "empty_rt",
+      "empty_rb",
+      "zero_token_outputs"
+    ],
+    "rendered_unique_surfaces": 62305,
+    "rendered_full_exact_surfaces": 61844,
+    "rendered_legacy_fast_surfaces": 55383,
+    "authority_rows": 3608,
+    "staged_transition_expected_rows": {
+      "historical_c679_b090": 134,
+      "ff33_delta": 1,
+      "final_5e_delta": 1,
+      "phase511_supersession": 21,
+      "combined": 157,
+      "historical_total_before_candidate_dispositions": 158
+    },
+    "required_input_stability": [
+      "gold",
+      "academic",
+      "head",
+      "tracked_worktree",
+      "app_inputs",
+      "audit_script",
+      "authority_manifests",
+      "candidate_files"
+    ],
+    "candidate_audit": {
+      "candidate_only": true,
+      "source_phase": 597,
+      "runtime_gate": true,
+      "promotion_gate": false,
+      "master_candidate_promotion_authorized": false,
+      "master_candidate_promotion_blockers": [],
+      "ruby_overlay_adoption_gate": false,
+      "retired_transition_pending_review": 1,
+      "phase532_policy_active": false,
+      "phase532_runtime_mode": null,
+      "phase558_ruby_overlay_active": false,
+      "phase558_runtime_mode": null,
+      "ruby_overlay_adoption_authorized_by_closed_phase558_sidecar": false
+    },
+    "complete": true,
+    "top_level_gate": false,
+    "master_promotion_gate": false,
+    "full_fake_coarse_semantic_gate": false,
+    "admitted_residuals": 1
+  },
+  "deployed_predecessor_requirements": {
+    "phase532": {
+      "activation_required": true,
+      "runtime_mode": "post-regen",
+      "surfaces": 58,
+      "selected_target_mismatches": 0,
+      "trilingual_mismatches": 0,
+      "deployed_snapshot_revalidation_required": true
+    },
+    "phase558": {
+      "activation_required": true,
+      "runtime_mode": "post-regen",
+      "surfaces": 5,
+      "scope_guard_gate": true,
+      "payload_variant_gate": true,
+      "payload_gloss_gate": true,
+      "trilingual_mismatches": 0,
+      "deployed_snapshot_revalidation_required": true
+    },
+    "phase598": {
+      "activation_required": true,
+      "positive_surfaces": 211,
+      "negative_surfaces": 159,
+      "combined_surfaces": 370,
+      "positive_payload_gate": true,
+      "width_gate": true,
+      "trilingual_boundary_mismatches": 0,
+      "trilingual_rb_mismatches": 0,
+      "deployed_snapshot_revalidation_required": true
+    },
+    "phase599": {
+      "deployed_promotion_audit_required": true,
+      "final_global_rows_per_language": 572558,
+      "phase600_rows_preserved_per_language": 52,
+      "kanji_nonintervention": true
+    },
+    "phase600": {
+      "deployed_repair_audit_required": true,
+      "final_global_rows_per_language": 572558,
+      "managed_rows_per_language": 52,
+      "trilingual_gate": true,
+      "width_gate": true,
+      "kanji_nonintervention": true
+    }
+  },
+  "runtime_measurement": {
+    "sealed": true,
+    "seal_source": "fresh_successor_runner_report_only",
+    "raw_audit_script_sha256": "F3AF9A7084807ED6B5FD34C8970375E7820C74AF4179EFB95E3808847B76370E",
+    "raw_semantic_projection_sha256": "B574021AF5DC842494C177FA81979D6D16626B2D6C318B55A9CF121873BC7FC2",
+    "comment_line_numbers_sha256": "9979008ACE1B9F72B61345BB7FF825AC2EA3AF96AC5F8E76414901C3B334CED4",
+    "fake_mismatch_count_per_language": 2561,
+    "fake_mismatch_projection_sha256": "BD4F9A1CC41086FB8C93FE24B3F2EAAA129D3FE71B8303086341F40A25110C2B",
+    "current_app_fingerprints": {
+      "JA": {
+        "Esperanto-Kanji-Ruby-JA/main.py": "104A7797E453E62C2C2250A57A92B08C8004737A93755D003BE9019CA901C95B",
+        "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
+        "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
+        "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
+        "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "591C7EA887504B9248F3406A971CAB8CC6EB3F4B06AAAFA824ED4ECF881FF40E",
+        "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-JA/app_data/エスペラント語根-日本語訳ルビ対応リスト.csv": "33CE469EFCE8D77111C281DF36585E981269409F1D33753DA620D56C6AD5CE0E",
+        "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "6B46C0998D924C6D1A2708061668C307B497F2FF2CC37C2A9F9320525942958C",
+        "Esperanto-Kanji-Ruby-JA/app_data/user_corrections.json": "D4956CE7C8AF5F958E604ACD2617A58018B58BB8ECACE3D05609E6BF45BDF6A8"
+      },
+      "ZH": {
+        "Esperanto-Kanji-Ruby-ZH/main.py": "8A73A5A148F416F583064A2ABB379D1E2485585D241C0B420595EF8CCF3D12B7",
+        "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
+        "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
+        "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
+        "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "277278C0C7A46AB1FCC93CDA54165EF4A235826EBAD76EDC379691169B95B6F1",
+        "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-中文注释对应列表.csv": "13D248DACD526F7028A35BE28AA846E42FBBF17B718CE824A2AF7D22BC1903E6",
+        "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "6B46C0998D924C6D1A2708061668C307B497F2FF2CC37C2A9F9320525942958C",
+        "Esperanto-Kanji-Ruby-ZH/app_data/user_corrections.json": "A3D2B578D056B2AB5C46E0D00F7392891080F4672899D716C3854B93ABF38585"
+      },
+      "KO": {
+        "Esperanto-Kanji-Ruby-KO/main.py": "FF11E4A842D8D77CA0E7E76DE3008CB62D8E7044436E541C7AD01482E47AA437",
+        "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
+        "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
+        "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
+        "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "C0A83D84EF6AD98FA8F9FC4FBA18C57A3361992700E5CF54566C05FCEFDE30AC",
+        "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-KO/app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv": "29383FEB4A852818F3BEA424E65215A72FD28B302A3E38FEE1CC25599AC6F307",
+        "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "6B46C0998D924C6D1A2708061668C307B497F2FF2CC37C2A9F9320525942958C",
+        "Esperanto-Kanji-Ruby-KO/app_data/user_corrections.json": "5377753038C41AD4E18DDB4784E2E9FEE214169F8075DDEA031CC679A7A7B558"
+      }
+    },
+    "language_semantic_projection_sha256": {
+      "JA": "E58292DC1222DE112EC185353F63FEB45A6CE7AB54DC37244A5144653A6DCED3",
+      "ZH": "38AD7BDDA2C187763BE7C8128CFC001F3AEBD244A4C2B24CC3DBA6F74F0876E0",
+      "KO": "85D9460C4F484EBA06D6EEB0CE7BD948F92931128B48B66E2525AFFC35908A1F"
+    }
+  }
+}

@@ -4,19 +4,14 @@
 使い方:
   python regenerate_all.py --ruby-only
   python regenerate_all.py --all-tracks
-  1-6. 偽分解reference/transition/app-reviewの固定manifestを検証
-  7-11. corpus exact/reviewed/bare/word_anno境界を検証・同期
- 12-16. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
- 17. 漢字マスター正本との全面再同期(CSV+word_kanji再構築)
- 18. 漢字3言語再生成
- 19. 漢字38語互換パッチ(fix_kanji_2890: 旧安全網)
- 20. 漢字の偽分解/深分解を固定authorityに対し3言語全件照合
- 21. 純粋置換版JSONの再導出
- 22-26. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
- 27-28. no-worsening診断と固定62,313行の正式3言語監査
- 29. .bak掃除(prune_baks: 肥大化防止、--all-tracksのみ)
+  1-18. 固定authority、京大corpus移行、Ruby親状態を検証・再生成
+ 19-21. Phase599昇格、Phase600閉集合補正、Phase599再監査
+ 22-23. 最新ガイド再検査、canonical全数検査
+ 24-29. 漢字再生成・偽分解照合・異常検査
+ 30-36. 生成回帰、no-worsening、固定62,313行の正式3言語監査
+ 37. .bak掃除(prune_baks: 肥大化防止、--all-tracksのみ)
 
-track modeは必須である。--ruby-onlyは17-19/21の漢字書込工程を実行せず、
+track modeは必須である。--ruby-onlyは24-26/28の漢字書込工程を実行せず、
 配備済み漢字成果物9本が各工程の前後で不変であることをSHA-256で監視する。
 --all-tracksだけが固定漢字マスターから漢字成果物を再構築する。
 
@@ -25,7 +20,9 @@ track modeは必須である。--ruby-onlyは17-19/21の漢字書込工程を実
   ESP_ACADEMIC_GOLD_PATH … 同じ行に対応する学術版マスター辞書
   ESP_PEJVO_ORIGINAL_PATH … 固定した原典PEJVO snapshot
   ESP_KANJI_MASTER_PATH  … 漢字割り当てマスター
-  ESP_CORPUS_PATH        … 固定exact manifestの元になったcleanな京大HTML repo
+  ESP_CORPUS_PATH        … 現行d164 exact/canonical manifestのcleanな京大HTML repo
+  ESP_PHASE558_PARENT_CORPUS_PATH … 歴史的Phase558親(b769)のclean checkout
+  ESP_LATEST_KYOTO_MAIN_PATH … 後方互換名。読取専用の不変7c04比較checkout
 """
 import argparse, hashlib, json, subprocess, sys, os, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -133,7 +130,8 @@ def _assert_ruby_only_kanji_guard(expected, completed_step):
 # it can replace this snapshot.
 required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
-    "ESP_CORPUS_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
+    "ESP_CORPUS_PATH", "ESP_PHASE558_PARENT_CORPUS_PATH",
+    "ESP_LATEST_KYOTO_MAIN_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
     "ESP_PHASE597_CANDIDATE_DIR",
 ]
 if ARGS.all_tracks:
@@ -280,6 +278,13 @@ COMMON_ENV = {
     # emitted by the formal reports.  Make every child deterministic UTF-8.
     "PYTHONIOENCODING": "utf-8",
     "PYTHONUTF8": "1",
+    # The successor no-worsening runner uses explicit role names so that the
+    # immutable 7c04 reference can never be confused with current-main d1642c2.
+    "ESP_CURRENT_CORPUS_E373_PATH":
+        os.environ["ESP_PHASE558_CURRENT_CORPUS_PATH"],
+    "ESP_CURRENT_CORPUS_REFERENCE_PATH":
+        os.environ["ESP_LATEST_KYOTO_MAIN_PATH"],
+    "ESP_CURRENT_CORPUS_ACTIVE_PATH": os.environ["ESP_CORPUS_PATH"],
 }
 with open(
     os.path.join(HERE, "_fake_coarse_reference_manifest.json"),
@@ -384,9 +389,52 @@ STEPS = [
         os.path.join(HERE, 'build_fake_coarse_transition_app_review.py'),
         '--check',
     ], {}),
-    ([sys.executable, os.path.join(HERE, 'build_corpus_exact_manifest.py'), '--check'], {}),
-    ([sys.executable, os.path.join(HERE, 'build_corpus_reviewed_exact_manifest.py'), '--check'], {}),
-    ([sys.executable, os.path.join(HERE, 'bare_word_audit.py'), '--require-zero'], {}),
+    # Keep the already-polished Kyoto corpus and guides read-only.  These
+    # transition gates prove which structural/layout changes occurred before
+    # the current remote-main d164 corpus is used by any writer.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_corpus_7c04_transition_review.py'),
+        '--old', os.environ['ESP_PHASE558_PARENT_CORPUS_PATH'],
+        '--new', os.environ['ESP_LATEST_KYOTO_MAIN_PATH'],
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'check_latest_kyoto_guide_transition.py'),
+        '--old', os.environ['ESP_PHASE558_PARENT_CORPUS_PATH'],
+        '--new', os.environ['ESP_LATEST_KYOTO_MAIN_PATH'],
+        '--active', os.environ['ESP_CORPUS_PATH'],
+        '--app-root', REPO_ROOT,
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_corpus_exact_manifest.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_corpus_reviewed_exact_transition.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_corpus_reviewed_exact_manifest.py'),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_bare_word_review_7c04f97.py'),
+        '--parent-corpus', os.environ['ESP_PHASE558_PARENT_CORPUS_PATH'],
+        '--corpus', os.environ['ESP_LATEST_KYOTO_MAIN_PATH'],
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'bare_word_audit_7c04f97.py'),
+        '--corpus', os.environ['ESP_LATEST_KYOTO_MAIN_PATH'],
+        '--successor-corpus', os.environ['ESP_CORPUS_PATH'],
+    ], {}),
     *([
         ([
             sys.executable,
@@ -448,6 +496,10 @@ STEPS = [
         os.path.join(HERE, 'build_word_anno_boundary_manifest.py'),
         '--check',
     ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'test_word_anno_boundary_transition.py'),
+    ], {}),
     # 3言語とも同一の固定正本 + 確定補正になることを、生成前にfail-closedで検査する。
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--settings-audit'], {'SKIP_VERIFY': '1'}),
     # apply_confirmed builds all three payloads in memory and runs the matching
@@ -467,6 +519,12 @@ STEPS = [
         os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
         'audit', '--expected-global-rows', '572501',
     ], {}),
+    # Run the deployed R67/R68 regression while the normalized R73 payload is
+    # still present.  Phase 599 is promoted only after the full R73 parent
+    # delta gate below, so the historical test keeps its exact 572,501 premise.
+    ([sys.executable, os.path.join(
+        HERE, 'test_r67_r68_overlay_carry_forward.py',
+    )], {}),
     # Re-render the persisted payloads after post-processing as well: the
     # in-memory gate above cannot license a later fixer to alter any of the 58.
     *([([
@@ -489,7 +547,54 @@ STEPS = [
         os.path.join(HERE, 'phase598_parent_payload_delta_gate.py'),
         '--deployed',
     ], {}),
-    # 全21443 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
+    # Phase 599 remains candidate-only in its original review/runtime gate.
+    # A separate explicit ledger normalizes away any prior exact five-row
+    # promotion, rechecks R67/R68 + the R73 parent delta in memory, then stages
+    # and publishes JA/ZH/KO together with rollback and Kanji nonintervention.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase599_temis_context_promotion.py'),
+        'apply', '--promote', '--batch-size', '20',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase599_temis_context_promotion.py'),
+        'audit', '--deployed', '--batch-size', '20',
+    ], {}),
+    # Phase 600 is a separate closed master-only Ruby layer.  It must follow
+    # Phase 599 so its 52 exact rows sit immediately behind the five Temis
+    # rows.  Both the transactional apply and a deployed no-op audit are
+    # mandatory before any corpus-wide gate.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase600_master_ruby_repair.py'),
+        'apply', '--batch-size', '20',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase600_master_ruby_repair.py'),
+        'audit', '--batch-size', '20',
+    ], {}),
+    # Re-audit Phase 599 in the final 572,558-row state.  Its normalizer must
+    # validate, remove in memory, and restore the exact later Phase-600 layer;
+    # partial/tampered/reordered rows therefore fail closed here.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase599_temis_context_promotion.py'),
+        'audit', '--deployed', '--batch-size', '20',
+    ], {}),
+    # Recheck the read-only latest-guide authority against the regenerated
+    # payload before the full canonical corpus render.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'check_latest_kyoto_guide_transition.py'),
+        '--old', os.environ['ESP_PHASE558_PARENT_CORPUS_PATH'],
+        '--new', os.environ['ESP_LATEST_KYOTO_MAIN_PATH'],
+        '--active', os.environ['ESP_CORPUS_PATH'],
+        '--app-root', REPO_ROOT,
+    ], {}),
+    # 全21438 canonical表記を配置済み3言語runtimeで描画し、未裁定残差0を
+    # 漢字工程前に強制する。Temisの生残差は閉じた文脈台帳で別掲する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_canonical_corpus_surfaces.py')], {}),
     # 漢字は正本(エスペラント語根＿漢字割り当て＿20260630)から全面再同期してから統合する(第18R以降の正道)
@@ -508,7 +613,28 @@ STEPS = [
         HERE, 'test_phase598_technical_on.py',
     )], {}),
     ([sys.executable, os.path.join(
-        HERE, 'test_r67_r68_overlay_carry_forward.py',
+        HERE, 'test_phase599_temis_context_promotion.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_phase600_master_ruby_repair.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_7c04_transition_review.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_reviewed_exact_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_bare_word_audit_7c04f97.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_latest_kyoto_guide_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_current_corpus_no_worsening_sidecar.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_phase597_full_master_successor_gate.py',
     )], {}),
     ([
         sys.executable,
@@ -524,34 +650,23 @@ STEPS = [
         sys.executable,
         os.path.join(HERE, 'run_phase558_no_worsening.py'),
     ], {}),
-    # 固定gold snapshot全行（空白・約物・hyphenを含む）を3言語runtimeで監査。
-    # fast版はmoving absolute pathのmonitor-onlyであり、正式工程では使用しない。
+    # The historical Phase558 proof stays immutable.  This separate successor
+    # runner renders the immutable 7c04 reference across all three languages
+    # and admits only current-main d1642c2's reviewed iniciatoro improvement.
     ([
         sys.executable,
-        os.path.join(HERE, 'audit_master_3lang_full_snapshot.py'),
-        '--gold', phase558_source_review['source_paths']['phase558_learner'],
-        '--expected-gold-sha256',
-        phase558_overlay.EXPECTED_SOURCES['phase558_learner']['sha256'],
-        '--academic', phase558_source_review['source_paths']['phase558_academic'],
-        '--expected-academic-sha256',
-        phase558_overlay.EXPECTED_SOURCES['phase558_academic']['sha256'],
-        '--expected-head', FORMAL_HEAD,
-        '--candidate-fake-coarse-manifest',
-        os.environ['ESP_PHASE558_FAKE_COARSE_MANIFEST'],
-        '--candidate-transition-dispositions',
-        os.environ['ESP_PHASE558_TRANSITION_DISPOSITIONS'],
-        '--allow-stable-tracked-changes',
-        '--phase532-runtime-mode', 'post-regen',
-        '--phase532-baseline-dir', os.environ['ESP_PHASE532_BASELINE_DIR'],
-        '--phase532-candidate-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
-        '--phase558-candidate-dir', os.environ['ESP_PHASE558_CANDIDATE_DIR'],
-        '--phase558-ruby-disposition-ledger',
-        os.environ['ESP_PHASE558_RUBY_DISPOSITION_LEDGER'],
-        '--phase558-japanese-guide', os.environ['ESP_RUBY_HTML_GUIDE_JA'],
-        '--phase558-chinese-guide', os.environ['ESP_RUBY_HTML_GUIDE_ZH'],
-        '--phase558-runtime-mode', 'post-regen',
+        os.path.join(HERE, 'run_current_corpus_no_worsening.py'),
+    ], {}),
+    # Phase597の固定6ファイルをgeneric candidateとして全行描画する。raw側の
+    # runtime gateだけを認証し、atletiko 1件を二軌道sidecarへ明示的に残して、
+    # master全体および未裁定fake/coarse queueは昇格させない。
+    ([
+        sys.executable,
+        os.path.join(HERE, 'run_phase597_full_master_successor.py'),
+        '--phase597-dir', phase597_candidate_dir,
         '--report', os.path.join(
-            tempfile.gettempdir(), 'esperanto_master_3lang_formal_report.json',
+            tempfile.gettempdir(),
+            'esperanto_master_3lang_phase597_successor_formal_report.json',
         ),
     ], {}),
     # 全工程合格後に .bak_* を掃除(放置すると3GB超に膨張。現行成果物はgit+SSDで三重保全済み)
