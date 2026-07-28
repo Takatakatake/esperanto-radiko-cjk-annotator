@@ -30,6 +30,7 @@ from atomic_json import atomic_json_dump
 import build_phase532_authority_carry_forward as phase532_carry_builder
 import build_phase532_ruby_policy_review as phase532_builder
 import build_phase558_ruby_overlay_review as phase558_builder
+import build_phase619_ordinary_ruby_review as phase619_builder
 import no_worsening_audit as audit
 import phase532_authority_carry_forward as phase532_carry
 import phase532_ruby_policy as phase532_policy
@@ -37,6 +38,9 @@ import phase532_runtime_signature_gate as phase532_runtime_gate
 import phase558_ruby_overlay as phase558_policy
 import phase558_ruby_overlay_activation as phase558_activation
 import phase558_ruby_overlay_runtime_gate as phase558_runtime_gate
+import phase619_ordinary_ruby_policy as phase619_policy
+import phase619_ordinary_ruby_activation as phase619_activation
+import phase619_ordinary_ruby_runtime_gate as phase619_runtime_gate
 
 
 LANGUAGES = ("JA", "ZH", "KO")
@@ -1636,6 +1640,10 @@ def parse_args(argv=None):
             "Phase 532 parent. Formal promotion requires post-regen."
         ),
     )
+    parser.add_argument("--phase597-candidate-dir", type=Path)
+    parser.add_argument("--phase619-candidate-dir", type=Path)
+    parser.add_argument("--phase619-japanese-guide", type=Path)
+    parser.add_argument("--phase619-chinese-guide", type=Path)
     parser.add_argument(
         "--enforce-all-fake-coarse", action="store_true",
         help=(
@@ -1677,6 +1685,19 @@ def run(args):
         value is not None for value in phase558_options
     ):
         raise ValueError("all Phase 558 Ruby sidecar options are required")
+    phase619_options = (
+        args.phase597_candidate_dir,
+        args.phase619_candidate_dir,
+        args.phase619_japanese_guide,
+        args.phase619_chinese_guide,
+    )
+    phase619_enabled = any(value is not None for value in phase619_options)
+    if phase619_enabled and not all(
+        value is not None for value in phase619_options
+    ):
+        raise ValueError("all Phase 619 Ruby sidecar options are required")
+    if phase558_enabled and phase619_enabled:
+        raise ValueError("Phase 558 and Phase 619 candidate modes are exclusive")
     if any(path is not None for path in phase532_dirs) and not all(
         path is not None for path in phase532_dirs
     ):
@@ -1693,9 +1714,9 @@ def run(args):
         == phase532_policy.CANDIDATE_MANIFEST_SHA256
     )
     if phase532_enabled:
-        if phase558_enabled:
+        if phase558_enabled or phase619_enabled:
             raise ValueError(
-                "Phase 558 sidecar requires its exact external candidate manifest"
+                "later sidecar requires its exact external candidate manifest"
             )
         if args.candidate_transition_dispositions is not None:
             raise ValueError(
@@ -1736,6 +1757,8 @@ def run(args):
         phase532_parent_reference_review = phase532_reference_review
         phase558_source_review = None
         phase558_activation_report = None
+        phase619_source_review = None
+        phase619_activation_report = None
     else:
         if candidate_mode != (
             args.candidate_transition_dispositions is not None
@@ -1744,7 +1767,61 @@ def run(args):
                 "generic candidate manifest and transition dispositions "
                 "are both required"
             )
-        if phase558_enabled:
+        if phase619_enabled:
+            if (
+                not candidate_mode
+                or any(path is not None for path in phase532_dirs)
+                or args.phase532_runtime_mode is not None
+                or effective_manifest_sha256
+                != phase619_policy.EXPECTED_SOURCES[
+                    "phase619_fake_coarse_manifest"
+                ]["sha256"]
+                or sha256_file(
+                    args.candidate_transition_dispositions.resolve()
+                )
+                != phase619_policy.EXPECTED_SOURCES[
+                    "phase619_transition_dispositions"
+                ]["sha256"]
+                or args.expected_gold_sha256.upper()
+                != phase619_policy.EXPECTED_SOURCES[
+                    "phase619_learner"
+                ]["sha256"]
+                or args.expected_academic_sha256.upper()
+                != phase619_policy.EXPECTED_SOURCES[
+                    "phase619_academic"
+                ]["sha256"]
+            ):
+                raise ValueError(
+                    "Phase 619 Ruby sidecar authority identity drift"
+                )
+            phase619_source_review = (
+                phase619_builder.validate_frozen_closure(
+                    args.phase597_candidate_dir,
+                    args.phase619_candidate_dir,
+                    args.phase619_japanese_guide,
+                    args.phase619_chinese_guide,
+                )
+            )
+            phase619_activation_report = (
+                phase619_activation.activation_report()
+            )
+            if (
+                phase619_source_review["review_identity"]
+                != phase619_policy.review_identity()
+                or phase619_activation_report.get(
+                    "phase619_ordinary_ruby_active"
+                ) is not True
+                or phase619_activation_report["phase619_review"]
+                != phase619_policy.review_identity()
+            ):
+                raise ValueError("Phase 619 source/activation closure differs")
+            phase532_reference_review = None
+            phase532_parent_reference_review = None
+            phase532_source_review = None
+            phase532_carry_review = None
+            phase558_source_review = None
+            phase558_activation_report = None
+        elif phase558_enabled:
             if (
                 not candidate_mode
                 or not all(path is not None for path in phase532_dirs)
@@ -1806,6 +1883,8 @@ def run(args):
             # staged reviewed transitions; it must not be reinterpreted as the
             # exact Phase 532 fake-policy manifest.
             phase532_reference_review = None
+            phase619_source_review = None
+            phase619_activation_report = None
         else:
             if (
                 any(path is not None for path in phase532_dirs)
@@ -1818,6 +1897,8 @@ def run(args):
             phase532_carry_review = None
             phase558_source_review = None
             phase558_activation_report = None
+            phase619_source_review = None
+            phase619_activation_report = None
     phase532_parent_enabled = phase532_enabled or phase558_enabled
     head_at_start = git_text("rev-parse", "HEAD")
     if head_at_start != args.expected_head:
@@ -1859,6 +1940,15 @@ def run(args):
             Path(phase558_runtime_gate.__file__).resolve(),
             Path(phase558_builder.__file__).resolve(),
         ))
+    if phase619_enabled:
+        authority_manifest_paths.extend((
+            phase619_policy.REVIEW_PATH,
+            phase619_activation.ACTIVATION_PATH,
+            Path(phase619_policy.__file__).resolve(),
+            Path(phase619_activation.__file__).resolve(),
+            Path(phase619_runtime_gate.__file__).resolve(),
+            Path(phase619_builder.__file__).resolve(),
+        ))
     authority_manifest_hashes_at_start = {
         str(path.relative_to(ROOT)): sha256_file(path)
         for path in authority_manifest_paths
@@ -1873,6 +1963,11 @@ def run(args):
             args.phase558_ruby_disposition_ledger.resolve(),
             args.phase558_japanese_guide.resolve(),
             args.phase558_chinese_guide.resolve(),
+        ))
+    if phase619_enabled:
+        candidate_files.extend((
+            args.phase619_japanese_guide.resolve(),
+            args.phase619_chinese_guide.resolve(),
         ))
     candidate_file_hashes_at_start = {
         str(path): sha256_file(path) for path in candidate_files
@@ -1902,6 +1997,10 @@ def run(args):
             batch_size=33,
         )
         if phase558_enabled else None
+    )
+    phase619_signature_report = (
+        phase619_runtime_gate.validate_deployed_payloads(batch_size=32)
+        if phase619_enabled else None
     )
     # Exact master surfaces retain spaces/punctuation/hyphens.  In parallel,
     # reproduce the legacy fast script's hyphen-stripped keys exactly.  Render
@@ -2203,6 +2302,24 @@ def run(args):
             and phase558_policy.review_identity()
             == phase558_source_review["review_identity"]
         )
+    if phase619_enabled:
+        phase619_source_at_end = (
+            phase619_builder.validate_frozen_closure(
+                args.phase597_candidate_dir,
+                args.phase619_candidate_dir,
+                args.phase619_japanese_guide,
+                args.phase619_chinese_guide,
+            )
+        )
+        phase619_activation_at_end = (
+            phase619_activation.activation_report()
+        )
+        inputs_stable["phase619_ordinary_ruby"] = (
+            phase619_source_at_end == phase619_source_review
+            and phase619_activation_at_end == phase619_activation_report
+            and phase619_policy.review_identity()
+            == phase619_source_review["review_identity"]
+        )
     fake_authority_all_assessed = all(
         row["counts"].get("rows", 0) == len(fake_authority_rows)
         for row in fake_authority_results
@@ -2259,6 +2376,17 @@ def run(args):
                 ]
             )
         )
+        and (
+            phase619_signature_report is None
+            or (
+                phase619_signature_report["gate"]
+                and phase619_signature_report["positive_payload_gate"]
+                and phase619_signature_report["width_gate"]
+                and phase619_signature_report[
+                    "deployed_snapshot_revalidated"
+                ]
+            )
+        )
         and (fake_all_coarse_gate or not args.enforce_all_fake_coarse)
         and not mismatches
         and not token_mismatches
@@ -2266,7 +2394,9 @@ def run(args):
         and width_gate
         and all(inputs_stable.values())
     )
-    ruby_overlay_adoption_authorized = not candidate_mode or phase558_enabled
+    ruby_overlay_adoption_authorized = (
+        not candidate_mode or phase558_enabled or phase619_enabled
+    )
     master_candidate_promotion_authorized = (
         not candidate_mode
         or (
@@ -2342,6 +2472,16 @@ def run(args):
                 "phase558_frozen_closure": phase558_source_review,
                 "phase558_runtime_signature_gate": phase558_signature_report,
             } if phase558_enabled else {}),
+            **({
+                "phase619_ordinary_ruby": (
+                    phase619_policy.review_identity()
+                ),
+                "phase619_activation": phase619_activation_report,
+                "phase619_frozen_closure": phase619_source_review,
+                "phase619_runtime_signature_gate": (
+                    phase619_signature_report
+                ),
+            } if phase619_enabled else {}),
             "staging_note": (
                 "Every currently fake-marked row remains in this line-keyed "
                 "report. Historical transition manifests remain byte-frozen. "
@@ -2429,7 +2569,13 @@ def run(args):
             "master_candidate_promotion_blockers": (
                 phase558_source_review[
                     "master_candidate_promotion_blockers"
-                ] if phase558_enabled else []
+                ] if phase558_enabled else (
+                    [
+                        "The broader Phase 619 master remains candidate-only; "
+                        "only the sealed seven ordinary-word Ruby repairs are "
+                        "authorized by this sidecar."
+                    ] if phase619_enabled else []
+                )
             ),
             "ruby_overlay_adoption_gate": (
                 runtime_gate and ruby_overlay_adoption_authorized
@@ -2446,8 +2592,12 @@ def run(args):
             "phase558_runtime_mode": (
                 args.phase558_runtime_mode if phase558_enabled else None
             ),
+            "phase619_ordinary_ruby_active": phase619_enabled,
             "ruby_overlay_adoption_authorized_by_closed_phase558_sidecar": (
                 candidate_mode and phase558_enabled
+            ),
+            "ruby_overlay_adoption_authorized_by_closed_phase619_sidecar": (
+                candidate_mode and phase619_enabled
             ),
         },
         "complete": all_runtime_assessed and fake_authority_all_assessed,
@@ -2466,9 +2616,9 @@ def run(args):
                 "width characters must be known. Width never changes boundaries."
             ),
             "candidate_promotion": (
-                "The five-surface Ruby overlay may pass independently while "
-                "the broader master candidate remains blocked by its disposition "
-                "ledger. Top-level gate must not be read as full-master semantic "
+                "A sealed Ruby sidecar may pass independently while the "
+                "broader moving-master candidate remains unpromoted. "
+                "Top-level gate must not be read as full-master semantic "
                 "promotion."
             ),
         },

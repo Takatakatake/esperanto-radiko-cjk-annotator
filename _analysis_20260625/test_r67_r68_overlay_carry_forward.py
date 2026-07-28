@@ -46,6 +46,7 @@ class HistoricalRubyOverlayCarryForwardTests(unittest.TestCase):
         )
         overlay.validate_overlay_matrix(
             self.snapshot["overlays"],
+            "historical-r72-r73",
         )
 
     def test_parent_rows_round_trip_exactly(self):
@@ -92,12 +93,13 @@ class HistoricalRubyOverlayCarryForwardTests(unittest.TestCase):
         }
         report = overlay.audit_payloads(
             payloads,
-            overlay.EXPECTED_POST_R73_GLOBAL_ROWS,
+            overlay.CURRENT_DEPLOYED_GLOBAL_ROWS,
+            "current-post-temis",
         )
         self.assertTrue(report["gate"])
         self.assertEqual(
             set(report["global_rows"].values()),
-            {overlay.EXPECTED_POST_R73_GLOBAL_ROWS},
+            {overlay.CURRENT_DEPLOYED_GLOBAL_ROWS},
         )
 
 

@@ -452,6 +452,9 @@ class Phase558RubyOverlayTests(unittest.TestCase):
         )
         self.assertLess(first_gate, first_writer)
         self.assertLess(fixer, second_gate)
+        # The historical Phase 558 source closure remains a required parent,
+        # but the final full-master invocation now uses the closed Phase 619
+        # sidecar.  Passing both candidate modes is deliberately forbidden.
         for flag in (
             "--phase558-candidate-dir",
             "--phase558-ruby-disposition-ledger",
@@ -459,9 +462,24 @@ class Phase558RubyOverlayTests(unittest.TestCase):
             "--phase558-chinese-guide",
             "--phase558-runtime-mode",
         ):
+            self.assertIn(flag, full_audit)
+        for flag in (
+            "--phase597-candidate-dir",
+            "--phase619-candidate-dir",
+            "--phase619-japanese-guide",
+            "--phase619-chinese-guide",
+        ):
             self.assertIn(flag, pipeline)
             self.assertIn(flag, full_audit)
+        self.assertIn(
+            "Phase 558 and Phase 619 candidate modes are exclusive",
+            full_audit,
+        )
         self.assertIn("ruby_overlay_adoption_authorized", full_audit)
+        self.assertIn(
+            "ruby_overlay_adoption_authorized_by_closed_phase619_sidecar",
+            full_audit,
+        )
         self.assertIn("master_candidate_promotion_authorized", full_audit)
         self.assertIn("master_candidate_promotion_blockers", full_audit)
         self.assertIn("effective_ruby_width_within_2x", full_audit)

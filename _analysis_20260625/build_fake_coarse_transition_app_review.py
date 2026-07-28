@@ -93,7 +93,12 @@ def localized_root_sets():
             if not key.startswith((
                 "@typed:", "@phase558-ruby:",
                 "@phase598-ruby:technical-on:",
+                "@phase619-ruby:",
             ))
+            # ``mukoz/aĵ`` is an exact split-context lookup used only by the
+            # Phase 619 Ruby sidecar.  It is not a reusable root and must not
+            # mutate this historical Phase 511 root-count fixture.
+            and key != "mukoz/aĵ"
         )
         result[language] = roots
         identities[language] = {

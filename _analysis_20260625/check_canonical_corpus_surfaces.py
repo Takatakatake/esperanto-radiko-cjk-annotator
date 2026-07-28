@@ -36,12 +36,12 @@ DEFAULT_REPORT = HERE / "out" / "_audit_canonical_corpus_surfaces.json"
 PLACEHOLDER_RE = re.compile(r"\$(?:[A-Za-z]+)?\d+\$")
 EXPECTED_SCOPE = {
     "content_files": 169,
-    "raw_ruby": 348971,
-    "parsed_ruby": 348971,
-    "parsed_units": 271065,
-    "evaluable_instances": 269879,
-    "canonical_surfaces": 21443,
-    "reviewed_overrides": 628,
+    "raw_ruby": 348580,
+    "parsed_ruby": 348580,
+    "parsed_units": 270763,
+    "evaluable_instances": 269577,
+    "canonical_surfaces": 21438,
+    "reviewed_overrides": 625,
 }
 ALGORITHM = {
     "id": "canonical-corpus-surfaces-v1",

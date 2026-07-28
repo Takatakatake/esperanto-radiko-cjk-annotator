@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "transition": "reviewed-exact-retirement-boundary-transition-d1642c2",
+  "parent": {
+    "app_commit": "8af4c19f50ea34d8c84767173c716e9b3f45ec5c",
+    "manifest_path": "_analysis_20260625/_word_anno_boundary_scope_manifest.json",
+    "manifest_sha256": "F35D21D2C0FD498B29A17326898B1CC14F5E332C97905877FC325EB311DB972A",
+    "authority_keys": 49354,
+    "authority_sha256": "CDE9FD59D2D7F996B75FA8FE25049A9A9649B06F5600C92CC9C775C4B4A94FE8",
+    "expected_key_counts": {
+      "ja": 49315,
+      "zh": 49354,
+      "ko": 49354
+    }
+  },
+  "candidate": {
+    "authority_keys": 49348,
+    "authority_sha256": "198D130AAEAA02216C3B28EFE0FF38DC9CF54E4145822C91BDE293E574D73637",
+    "expected_key_counts": {
+      "ja": 49309,
+      "zh": 49348,
+      "ko": 49348
+    }
+  },
+  "removed_keys": [
+    "@typed:bonŝanĉulo:0",
+    "@typed:bonŝanĉulo:1",
+    "@typed:bonŝanĉulo:2",
+    "@typed:fronantaj:0",
+    "@typed:fronantaj:1",
+    "@typed:jurnal:0"
+  ],
+  "policy": {
+    "removed_keys_are_exactly_reviewed_typo_retirements": true,
+    "three_language_boundary_identity_required": true,
+    "wildcard_or_productive_rule_removal": false
+  }
+}

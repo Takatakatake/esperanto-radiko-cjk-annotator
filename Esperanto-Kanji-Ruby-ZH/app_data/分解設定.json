@@ -14018,6 +14018,13 @@
   ]
  ],
  [
+  "fron/ant/aj",
+  94000,
+  [
+   "ne"
+  ]
+ ],
+ [
   "kaŝtel/estr",
   104000,
   [
@@ -26950,6 +26957,138 @@
   ]
  ],
  [
+  "imperialist",
+  119000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:imperialist",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "provincialism",
+  139000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:provincialism",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "endoskopi",
+  99000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:endoskopi",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "mikroskopi",
+  109000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:mikroskopi",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "mukoz/aĵ",
+  79000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ditionat",
+  89000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:ditionat",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "tetrationat",
+  119000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_context_annotation:@phase619-ruby:tetrationat",
+   "ruby_track_only"
+  ]
+ ],
+ [
   "bonaer",
   69000,
   [
@@ -32672,16 +32811,6 @@
   ]
  ],
  [
-  "bon/ŝanĉ/ul/o",
-  109000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRRL"
-  ]
- ],
- [
   "cel/-/orient/it/aj",
   149000,
   [
@@ -33084,16 +33213,6 @@
   ]
  ],
  [
-  "fron/ant/aj",
-  99000,
-  [
-   "ne",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:RRL"
-  ]
- ],
- [
   "fru/en",
   59000,
   [
@@ -33290,17 +33409,6 @@
  [
   "jokohama",
   89000,
-  [
-   "ne",
-   "atomic_no_split",
-   "word_boundary",
-   "case_sensitive",
-   "typed_roles:R"
-  ]
- ],
- [
-  "jurnal",
-  69000,
   [
    "ne",
    "atomic_no_split",

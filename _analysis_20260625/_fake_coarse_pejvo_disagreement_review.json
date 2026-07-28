@@ -1,7 +1,16 @@
 {
  "schema_version": 1,
- "expected_entries": 13,
+ "expected_entries": 15,
  "entries": [
+  {
+   "learner_line": 2560,
+   "surface": "Asirio",
+   "academic_decomposition": "Asiri/o",
+   "pejvo_decompositions": ["Asir/i/o"],
+   "selected_decomposition": "Asiri/o",
+   "decision": "paired_academic",
+   "reason": "The line-paired academic row preserves the proper-name root Asiri; the learner and historical PEJVO split is explicitly marked fake and would expose a literal io tail in Ruby."
+  },
   {
    "learner_line": 3631,
    "surface": "bibliofilio",
@@ -12,13 +21,13 @@
    "reason": "The direct long-root reading is the conservative Ruby boundary; splitting final -i/o would expose an unsupported literal io tail."
   },
   {
-   "learner_line": 4042,
-   "surface": "Bonaero",
-   "academic_decomposition": "Bonaer/o",
-   "pejvo_decompositions": ["Bon/aer/o"],
-   "selected_decomposition": "Bonaer/o",
+   "learner_line": 8902,
+   "surface": "elektrodinamismo",
+   "academic_decomposition": "elektr/o/dinamism/o",
+   "pejvo_decompositions": ["elektrodinamism/o"],
+   "selected_decomposition": "elektr/o/dinamism/o",
    "decision": "paired_academic",
-   "reason": "The same-line academic row is the proper-name sense Buenos Aires; the surface-only PEJVO split is not safe homograph evidence."
+   "reason": "The paired academic row keeps the productive elektr/o compound boundary while treating the explicitly fake dinam/ism split as the coarse root dinamism; the deployed Ruby already follows this two-track boundary."
   },
   {
    "learner_line": 8966,
@@ -82,6 +91,15 @@
    "selected_decomposition": "hipocikloid/o",
    "decision": "pejvo_coarse",
    "reason": "PIV explicitly heads hipocikloid/o as a whole; the conservative Ruby boundary follows that long root."
+  },
+  {
+   "learner_line": 26156,
+   "surface": "Moravio",
+   "academic_decomposition": "Moravi/o",
+   "pejvo_decompositions": ["Morav/i/o"],
+   "selected_decomposition": "Moravi/o",
+   "decision": "paired_academic",
+   "reason": "The line-paired academic row preserves the geographical root Moravi; the learner and historical PEJVO split is explicitly marked fake and would expose a literal io tail in Ruby."
   },
   {
    "learner_line": 37924,

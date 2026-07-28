@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "transition": "b769038-reviewed-exact-to-d1642c2-active-corpus",
+  "parent": {
+    "app_commit": "8af4c19f50ea34d8c84767173c716e9b3f45ec5c",
+    "manifest_path": "_analysis_20260625/_corpus_reviewed_exact_app_manifest.json",
+    "manifest_sha256": "2F463A3A8178E997108AD15924997503B6BEB858F53900FFFDB7169EB6ED857E",
+    "residual_report_sha256": "620B40AEE6C90AEEF185E4911946DB977D75BC13C8FCB5CB8E476ACFB44A2814",
+    "source": {
+      "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+      "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
+      "raw_ruby": 348971,
+      "parsed_ruby": 348971,
+      "parsed_units": 271065
+    },
+    "counts": {
+      "exact_surfaces": 628,
+      "exact_instances": 2743,
+      "ruby_context_annotations": 930
+    }
+  },
+  "intermediate_remote_main": {
+    "head_oid": "7c04f97c51a7cecf88918d2abc2e6bf2f34601a6",
+    "content_sha256": "4F04FD2F3DBE0FC79909CBBEA61ED2848FC093AE2DFE3F0ADEB79882AEB04F52",
+    "reason": "Latest clean remote main after paragraph and source-spelling cleanup."
+  },
+  "candidate": {
+    "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+    "tree_oid": "6a202620a7de26f9b88b022c76a084bbff7b578c",
+    "branch": "main",
+    "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+    "content_files": 169,
+    "raw_ruby": 348580,
+    "parsed_ruby": 348580,
+    "parsed_units": 270763,
+    "counts": {
+      "exact_surfaces": 625,
+      "exact_instances": 2740,
+      "ruby_context_annotations": 924
+    },
+    "canonical_scope": {
+      "evaluable_instances": 269577,
+      "canonical_surfaces": 21438
+    }
+  },
+  "retirements": [
+    {
+      "surface": "bonŝanĉulo",
+      "count": 1,
+      "annotation_keys": [
+        "@typed:bonŝanĉulo:0",
+        "@typed:bonŝanĉulo:1",
+        "@typed:bonŝanĉulo:2"
+      ],
+      "replacement_surface": "bonŝanculo",
+      "reason": "Corpus source spelling corrected; the corrected form is handled by productive Esperanto rules."
+    },
+    {
+      "surface": "fronantaj",
+      "count": 1,
+      "annotation_keys": [
+        "@typed:fronantaj:0",
+        "@typed:fronantaj:1"
+      ],
+      "replacement_surface": "frontantaj",
+      "reason": "Corpus source spelling corrected; the corrected form is handled by productive Esperanto rules."
+    },
+    {
+      "surface": "jurnal",
+      "count": 1,
+      "annotation_keys": [
+        "@typed:jurnal:0"
+      ],
+      "replacement_surface": "ĵurnal",
+      "reason": "Corpus source spelling corrected. The bounded jurnalisto compatibility rule is retained, while standard ĵurnalisto is independently runtime-tested."
+    }
+  ],
+  "survivor_hashes": {
+    "algorithm": "UTF-8 canonical JSON; ensure_ascii=false, sort_keys=true, separators=[comma,colon]",
+    "exact_surfaces_sha256": "073EF3B0C7FA0CF3937A8C288EABCA1CDD70CC2DCC921C5C7F915EB017417B71",
+    "annotations_sha256": "D8083C5ED86620990E0B5E5B4304E63299A0AF5C02300D0C7BBE5C1C8C835581",
+    "survivor_payload_sha256": "E96DBF3AE0B4C90A0603B952808AB62F1D5C0064BA53B24B83A07D63F459170E"
+  },
+  "policy": {
+    "old_residual_report_reuse": false,
+    "source_only_refresh": false,
+    "retirement_scope_closed": true,
+    "retain_bounded_jurnalisto_compatibility": true,
+    "require_standard_ĵurnalisto_runtime": true
+  }
+}

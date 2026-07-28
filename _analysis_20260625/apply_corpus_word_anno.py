@@ -47,6 +47,14 @@ from phase598_technical_on_policy import (
 from phase598_technical_on_activation import (
     activation_report as phase598_activation_report,
 )
+from phase619_ordinary_ruby_policy import (
+    managed_morph_targets as phase619_managed_morph_targets,
+    morph_context_annotations as phase619_morph_context_annotations,
+    split_context_annotations as phase619_split_context_annotations,
+)
+from phase619_ordinary_ruby_activation import (
+    activation_report as phase619_activation_report,
+)
 from reviewed_di_semantic_policy import (
     REVIEWED_DI_GLOSSES,
     REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS,
@@ -58,12 +66,17 @@ from reviewed_di_semantic_policy import (
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_analysis_20260625" / "out"
 WRITE = "--write" in sys.argv
+REFRESH_BOUNDARY_MANIFEST = "--refresh-boundary-manifest" in sys.argv
+if REFRESH_BOUNDARY_MANIFEST and not WRITE:
+    raise SystemExit("--refresh-boundary-manifest requires --write")
 PHASE532_ACTIVATION = activation_report()
 PHASE532_FORMAL = PHASE532_ACTIVATION["phase532_active"]
 PHASE558_ACTIVATION = phase558_activation_report()
 PHASE558_FORMAL = PHASE558_ACTIVATION["phase558_ruby_overlay_active"]
 PHASE598_ACTIVATION = phase598_activation_report()
 PHASE598_FORMAL = PHASE598_ACTIVATION["phase598_technical_on_active"]
+PHASE619_ACTIVATION = phase619_activation_report()
+PHASE619_FORMAL = PHASE619_ACTIVATION["phase619_ordinary_ruby_active"]
 FAKE_COARSE_APP_REVIEW_PATH = (
     ROOT / "_analysis_20260625" / "_fake_coarse_transition_app_review.json"
 )
@@ -807,6 +820,40 @@ if PHASE598_FORMAL:
             _phase598_glosses
         )
 
+PHASE619_MORPH_CONTEXT_ANNOTATIONS = {
+    language: {} for language in ANNOTATIONS
+}
+if PHASE619_FORMAL:
+    _prior_morph_context_keys = {
+        key
+        for rows in (
+            *PHASE558_MORPH_CONTEXT_ANNOTATIONS.values(),
+            *PHASE598_MORPH_CONTEXT_ANNOTATIONS.values(),
+        )
+        for key in rows
+    }
+    for _phase619_key, _phase619_annotation in (
+        phase619_morph_context_annotations().items()
+    ):
+        _phase619_piece = _phase619_annotation["piece"]
+        _phase619_glosses = _phase619_annotation["glosses"]
+        if (
+            _phase619_key in ATOMIC_FAMILY_CONTEXT_KEYS.values()
+            or _phase619_key in _prior_morph_context_keys
+            or set(_phase619_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                f"invalid Phase 619 morph context annotation: "
+                f"{_phase619_key!r}"
+            )
+        for _phase619_language in ANNOTATIONS:
+            PHASE619_MORPH_CONTEXT_ANNOTATIONS[_phase619_language][
+                _phase619_key
+            ] = [[
+                _phase619_piece,
+                _phase619_glosses[_phase619_language],
+            ]]
+
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
 # Keep their localized glosses contextual: Andora in Andora-la-Velo is useful,
@@ -952,6 +999,25 @@ SPLIT_CONTEXT_ANNOTATIONS = {
         "pasi/grafi": [["pasi", "전체"], ["grafi", "기술"]],
     },
 }
+if PHASE619_FORMAL:
+    for _phase619_split_key, _phase619_rows in (
+        phase619_split_context_annotations().items()
+    ):
+        if any(
+            _phase619_split_key in SPLIT_CONTEXT_ANNOTATIONS[language]
+            for language in ANNOTATIONS
+        ):
+            raise SystemExit(
+                f"duplicate Phase 619 split context annotation: "
+                f"{_phase619_split_key!r}"
+            )
+        for _phase619_language in ANNOTATIONS:
+            SPLIT_CONTEXT_ANNOTATIONS[_phase619_language][
+                _phase619_split_key
+            ] = [
+                [row["piece"], row["glosses"][_phase619_language]]
+                for row in _phase619_rows
+            ]
 
 # The pinned corpus manifest supplies every multi-word, Latin-Extended and
 # punctuated atomic base.  Existing hand-written entries remain authoritative
@@ -1192,6 +1258,18 @@ if _phase598_morph_overlap:
     )
 if PHASE598_FORMAL:
     MANAGED_MORPH_TARGETS.update(_phase598_managed_morph_targets)
+
+_phase619_managed_morph_targets = phase619_managed_morph_targets()
+_phase619_morph_overlap = set(MANAGED_MORPH_TARGETS) & set(
+    _phase619_managed_morph_targets
+)
+if _phase619_morph_overlap:
+    raise SystemExit(
+        "Phase 619 managed morphology duplicates an existing setting: "
+        f"{sorted(_phase619_morph_overlap)!r}"
+    )
+if PHASE619_FORMAL:
+    MANAGED_MORPH_TARGETS.update(_phase619_managed_morph_targets)
 
 for _family in ATOMIC_ROOT_FAMILY_REVIEW["families"]:
     for _target in _family["morph_targets"]:
@@ -1598,6 +1676,11 @@ def main():
             ):
                 del data[key]
             if (
+                key.startswith("@phase619-ruby:")
+                and key not in PHASE619_MORPH_CONTEXT_ANNOTATIONS[language]
+            ):
+                del data[key]
+            if (
                 key.startswith("@atomic-family:")
                 and key not in ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language]
             ):
@@ -1611,6 +1694,7 @@ def main():
         data.update(ATOMIC_FAMILY_CONTEXT_ANNOTATIONS[language])
         data.update(PHASE558_MORPH_CONTEXT_ANNOTATIONS[language])
         data.update(PHASE598_MORPH_CONTEXT_ANNOTATIONS[language])
+        data.update(PHASE619_MORPH_CONTEXT_ANNOTATIONS[language])
         for key, pairs in SPLIT_CONTEXT_ANNOTATIONS[language].items():
             data[key] = pairs
         for (surface, index, piece), glosses in TYPED_CONTEXT_GLOSSES.items():
@@ -1762,13 +1846,46 @@ def main():
             word_anno_boundary.DEFAULT_MANIFEST.read_text(encoding="utf-8")
         )
         if candidate_boundary != expected_boundary:
-            raise SystemExit(
-                "Phase 558 word_anno candidates violate the pinned "
-                "three-language boundary manifest before write"
+            if not REFRESH_BOUNDARY_MANIFEST:
+                raise SystemExit(
+                    "word_anno candidates violate the pinned three-language "
+                    "boundary manifest before write"
+                )
+            expected_phase619_keys = (
+                set(phase619_morph_context_annotations())
+                | set(phase619_split_context_annotations())
             )
+            for language in ANNOTATIONS:
+                current = json.loads(
+                    next(iter(targets(language))).read_text(encoding="utf-8")
+                )
+                candidate = pending_word_anno[language]
+                added = set(candidate) - set(current)
+                removed = set(current) - set(candidate)
+                changed = {
+                    key
+                    for key in set(current) & set(candidate)
+                    if current[key] != candidate[key]
+                }
+                if (
+                    added != expected_phase619_keys
+                    or removed
+                    or changed
+                ):
+                    raise SystemExit(
+                        f"{language}: Phase 619 boundary refresh is not the "
+                        f"closed seven-key addition: added={sorted(added)!r} "
+                        f"removed={sorted(removed)!r} "
+                        f"changed={sorted(changed)!r}"
+                    )
+            pending_writes.append((
+                word_anno_boundary.DEFAULT_MANIFEST,
+                candidate_boundary,
+                1,
+            ))
         transactional_json_writes(pending_writes)
         print(
-            f"[Phase 558 annotation transaction] committed "
+            f"[annotation transaction] committed "
             f"{len(pending_writes)} files"
         )
 

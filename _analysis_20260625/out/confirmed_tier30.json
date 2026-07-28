@@ -7294,6 +7294,54 @@
   "ruby_track_only": true
  },
  {
+  "w": "imperialisto",
+  "target": "imperialist/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:imperialist",
+  "ruby_track_only": true
+ },
+ {
+  "w": "provincialismo",
+  "target": "provincialism/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:provincialism",
+  "ruby_track_only": true
+ },
+ {
+  "w": "endoskopio",
+  "target": "endoskopi/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:endoskopi",
+  "ruby_track_only": true
+ },
+ {
+  "w": "mikroskopio",
+  "target": "mikroskopi/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:mikroskopi",
+  "ruby_track_only": true
+ },
+ {
+  "w": "mukozaĵo",
+  "target": "mukoz/aĵ/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "ditionato",
+  "target": "ditionat/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:ditionat",
+  "ruby_track_only": true
+ },
+ {
+  "w": "tetrationato",
+  "target": "tetrationat/o",
+  "corpus_managed": true,
+  "ruby_context_annotation": "@phase619-ruby:tetrationat",
+  "ruby_track_only": true
+ },
+ {
   "w": "bonaero",
   "target": "bonaer/o",
   "corpus_managed": true,
@@ -12622,16 +12670,6 @@
   "reviewed_residual": true
  },
  {
-  "w": "bonŝanĉulo",
-  "target": "bon/ŝanĉ/ul/o",
-  "typed_roles": "RRRL",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
   "w": "cel-orientitaj",
   "target": "cel/-/orient/it/aj",
   "typed_roles": "RLRRL",
@@ -13042,16 +13080,6 @@
   "reviewed_residual": true
  },
  {
-  "w": "fronantaj",
-  "target": "fron/ant/aj",
-  "typed_roles": "RRL",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
   "w": "fruen",
   "target": "fru/en",
   "typed_roles": "RL",
@@ -13244,16 +13272,6 @@
  {
   "w": "jokohama",
   "target": "jokohama",
-  "typed_roles": "R",
-  "exact_only": true,
-  "boundary_only": true,
-  "case_sensitive": true,
-  "corpus_managed": true,
-  "reviewed_residual": true
- },
- {
-  "w": "jurnal",
-  "target": "jurnal",
   "typed_roles": "R",
   "exact_only": true,
   "boundary_only": true,

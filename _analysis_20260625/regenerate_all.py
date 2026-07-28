@@ -4,19 +4,15 @@
 使い方:
   python regenerate_all.py --ruby-only
   python regenerate_all.py --all-tracks
-  1-6. 偽分解reference/transition/app-reviewの固定manifestを検証
-  7-11. corpus exact/reviewed/bare/word_anno境界を検証・同期
- 12-16. 設定監査、Ruby 3言語再生成、事後修正、canonical全数検査
- 17. 漢字マスター正本との全面再同期(CSV+word_kanji再構築)
- 18. 漢字3言語再生成
- 19. 漢字38語互換パッチ(fix_kanji_2890: 旧安全網)
- 20. 漢字の偽分解/深分解を固定authorityに対し3言語全件照合
- 21. 純粋置換版JSONの再導出
- 22-26. 異常・生成回帰・reviewed exact・日中韓構造・apostrophe検査
- 27-28. no-worsening診断と固定62,313行の正式3言語監査
- 29. .bak掃除(prune_baks: 肥大化防止、--all-tracksのみ)
+  1. 偽分解・corpus・Phase532/558/619の固定authorityを検証
+  2. Phase532/558/598/619 pre-gate後にRuby 3言語を一括再生成
+  3. R67/R68復元と4つの事後層を経て572,729行をpost-gate
+  4. canonical 21,438表層・apostrophe・構造・回帰を検査
+  5. Phase619 learnerとword_kanjiのdirect-key coverageを限定監査
+  6. 固定62,313行を3言語で正式全量監査
+  7. --all-tracksだけ漢字正本再同期・漢字生成・pure導出・.bak掃除
 
-track modeは必須である。--ruby-onlyは17-19/21の漢字書込工程を実行せず、
+track modeは必須である。--ruby-onlyは漢字書込工程を実行せず、
 配備済み漢字成果物9本が各工程の前後で不変であることをSHA-256で監視する。
 --all-tracksだけが固定漢字マスターから漢字成果物を再構築する。
 
@@ -26,6 +22,8 @@ track modeは必須である。--ruby-onlyは17-19/21の漢字書込工程を実
   ESP_PEJVO_ORIGINAL_PATH … 固定した原典PEJVO snapshot
   ESP_KANJI_MASTER_PATH  … 漢字割り当てマスター
   ESP_CORPUS_PATH        … 固定exact manifestの元になったcleanな京大HTML repo
+  ESP_PHASE619_CANDIDATE_DIR … 固定Phase619入力一式
+  ESP_PHASE619_RUBY_HTML_GUIDE_JA/ZH … 現行京大HTML修正ガイド
 """
 import argparse, hashlib, json, subprocess, sys, os, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -42,6 +40,9 @@ import phase558_ruby_overlay as phase558_overlay
 import phase558_ruby_overlay_activation as phase558_activation
 import phase598_technical_on_policy as phase598_policy
 import phase598_technical_on_activation as phase598_activation
+import build_phase619_ordinary_ruby_review as phase619_review_builder
+import phase619_ordinary_ruby_policy as phase619_policy
+import phase619_ordinary_ruby_activation as phase619_activation
 
 
 def parse_args(argv=None):
@@ -134,7 +135,9 @@ def _assert_ruby_only_kanji_guard(expected, completed_step):
 required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
     "ESP_CORPUS_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
-    "ESP_PHASE597_CANDIDATE_DIR",
+    "ESP_PHASE597_CANDIDATE_DIR", "ESP_PHASE619_CANDIDATE_DIR",
+    "ESP_PHASE619_RUBY_HTML_GUIDE_JA",
+    "ESP_PHASE619_RUBY_HTML_GUIDE_ZH",
 ]
 if ARGS.all_tracks:
     required_inputs.append("ESP_KANJI_MASTER_PATH")
@@ -264,6 +267,25 @@ if (
     != phase598_policy.review_identity()
 ):
     raise SystemExit("formal Phase 598 source/activation identity mismatch")
+
+phase619_activation_report = phase619_activation.activation_report()
+if phase619_activation_report.get("phase619_ordinary_ruby_active") is not True:
+    raise SystemExit(
+        "formal regeneration requires the Phase 619 ordinary Ruby sidecar"
+    )
+phase619_source_review = phase619_review_builder.validate_frozen_closure(
+    os.environ["ESP_PHASE597_CANDIDATE_DIR"],
+    os.environ["ESP_PHASE619_CANDIDATE_DIR"],
+    os.environ["ESP_PHASE619_RUBY_HTML_GUIDE_JA"],
+    os.environ["ESP_PHASE619_RUBY_HTML_GUIDE_ZH"],
+)
+if (
+    phase619_source_review["review_identity"]
+    != phase619_policy.review_identity()
+    or phase619_activation_report["phase619_review"]
+    != phase619_policy.review_identity()
+):
+    raise SystemExit("formal Phase 619 source/activation identity mismatch")
 _gold_raw, gold_identity = consistent_snapshot(os.environ["ESP_GOLD_PATH"])
 if (
     gold_identity["sha256"] != expected_gold["sha256"]
@@ -416,6 +438,17 @@ STEPS = [
         '--chinese-guide', os.environ['ESP_RUBY_HTML_GUIDE_ZH'],
         '--check',
     ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_phase619_ordinary_ruby_review.py'),
+        '--phase597-dir', os.environ['ESP_PHASE597_CANDIDATE_DIR'],
+        '--phase619-dir', os.environ['ESP_PHASE619_CANDIDATE_DIR'],
+        '--japanese-guide',
+        os.environ['ESP_PHASE619_RUBY_HTML_GUIDE_JA'],
+        '--chinese-guide',
+        os.environ['ESP_PHASE619_RUBY_HTML_GUIDE_ZH'],
+        '--check',
+    ], {}),
     # Permission to begin any repeat regeneration comes from the already
     # adopted Phase 532/558 state, with identical JA/ZH/KO boundaries.  The
     # one-time legacy/pre-regen proof remains in the promotion audit log.
@@ -434,6 +467,11 @@ STEPS = [
         os.path.join(HERE, 'phase598_technical_on_runtime_gate.py'),
         '--deployed', '--batch-size', '20',
     ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'phase619_ordinary_ruby_runtime_gate.py'),
+        '--deployed', '--batch-size', '32',
+    ], {}),
     # R67/R68 are reviewed post-generation layers.  Seal their exact deployed
     # rows before apply_confirmed rebuilds the large Ruby payloads; re-running
     # the historical discovery script would consult a moving absolute master.
@@ -450,22 +488,37 @@ STEPS = [
     ], {}),
     # 3言語とも同一の固定正本 + 確定補正になることを、生成前にfail-closedで検査する。
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--settings-audit'], {'SKIP_VERIFY': '1'}),
-    # apply_confirmed builds all three payloads in memory and runs the matching
-    # post-regen 58/58 runtime gate before its first persistent write.
+    # apply_confirmed builds all three payloads in memory and runs every active
+    # Phase 532/558/598/619 runtime gate before its first persistent write.
     ([sys.executable, os.path.join(HERE, 'apply_confirmed_now.py'), '30', '--write'], {'SKIP_VERIFY': '1'}),
-    # Carry forward only the pinned R67H 336 + R68W 1,013 rows per language
+    # Carry forward only the pinned R67H 336 + R68W 1,012 rows per language
     # (plus the reviewed Auster exact override), transactionally across JA/ZH/KO.
     ([
         sys.executable,
         os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
         'apply', '--input', R67_R68_OVERLAY_SNAPSHOT,
-        '--expected-global-rows', '572501',
+        '--expected-global-rows', '572713',
     ], {}),
     ([sys.executable, os.path.join(HERE, 'fix_ruby_postregen.py')], {}),
     ([
         sys.executable,
+        os.path.join(HERE, 'fix_ruby_kyodai_meaning_break.py'),
+        '--apply',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_hyphen_joiner.py'),
+        '--apply',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_zhko_diminutive_gloss.py'),
+        '--apply',
+    ], {}),
+    ([
+        sys.executable,
         os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
-        'audit', '--expected-global-rows', '572501',
+        'audit', '--expected-global-rows', '572729',
     ], {}),
     # Re-render the persisted payloads after post-processing as well: the
     # in-memory gate above cannot license a later fixer to alter any of the 58.
@@ -486,16 +539,26 @@ STEPS = [
     ], {}),
     ([
         sys.executable,
-        os.path.join(HERE, 'phase598_parent_payload_delta_gate.py'),
-        '--deployed',
+        os.path.join(HERE, 'phase619_ordinary_ruby_runtime_gate.py'),
+        '--deployed', '--batch-size', '32',
     ], {}),
-    # 全21443 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
+    # 全21438 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_canonical_corpus_surfaces.py')], {}),
     # 漢字は正本(エスペラント語根＿漢字割り当て＿20260630)から全面再同期してから統合する(第18R以降の正道)
     ([sys.executable, os.path.join(HERE, 'resync_kanji_master.py'), '--write'], {}),
     ([sys.executable, os.path.join(HERE, 'apply_kanji_now.py'), '--write'], {}),
     ([sys.executable, os.path.join(HERE, 'fix_kanji_2890.py'), '--apply'], {}),  # 旧安全網(resync後は実質no-op)
+    # This is intentionally coverage-only: it proves direct learner-master
+    # key/piece alignment without claiming all-path deployed render fidelity.
+    ([
+        sys.executable,
+        os.path.join(
+            HERE, 'audit_phase619_learner_word_kanji_key_coverage.py',
+        ),
+        '--phase619-dir', os.environ['ESP_PHASE619_CANDIDATE_DIR'],
+        '--check',
+    ], {}),
     # 偽分解/深分解のpiece列と漢字割当を、固定word_kanji authorityに対し3言語全件照合。
     ([sys.executable, os.path.join(HERE, 'check_kanji_fake_decomposition.py')], {}),
     # 純粋置換版(タグなし)はHTML漢字JSONから毎回再導出する(忘れると陳腐化する成果物)
@@ -508,6 +571,12 @@ STEPS = [
         HERE, 'test_phase598_technical_on.py',
     )], {}),
     ([sys.executable, os.path.join(
+        HERE, 'test_phase619_ordinary_ruby.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_phase619_learner_word_kanji_key_coverage.py',
+    )], {}),
+    ([sys.executable, os.path.join(
         HERE, 'test_r67_r68_overlay_carry_forward.py',
     )], {}),
     ([
@@ -515,6 +584,15 @@ STEPS = [
         os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),
     ], {}),
     ([sys.executable, os.path.join(HERE, 'test_reviewed_exact_manifest.py')], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_reviewed_exact_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_word_anno_boundary_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_fake_coarse_review_drift.py',
+    )], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_raw_apostrophe_structure.py')], {}),
     # Run both isolated Phase 558 authorities.  Each raw audit is expected to
@@ -529,27 +607,31 @@ STEPS = [
     ([
         sys.executable,
         os.path.join(HERE, 'audit_master_3lang_full_snapshot.py'),
-        '--gold', phase558_source_review['source_paths']['phase558_learner'],
+        '--gold', phase619_source_review['source_paths']['phase619_learner'],
         '--expected-gold-sha256',
-        phase558_overlay.EXPECTED_SOURCES['phase558_learner']['sha256'],
-        '--academic', phase558_source_review['source_paths']['phase558_academic'],
+        phase619_policy.EXPECTED_SOURCES['phase619_learner']['sha256'],
+        '--academic',
+        phase619_source_review['source_paths']['phase619_academic'],
         '--expected-academic-sha256',
-        phase558_overlay.EXPECTED_SOURCES['phase558_academic']['sha256'],
+        phase619_policy.EXPECTED_SOURCES['phase619_academic']['sha256'],
         '--expected-head', FORMAL_HEAD,
         '--candidate-fake-coarse-manifest',
-        os.environ['ESP_PHASE558_FAKE_COARSE_MANIFEST'],
+        phase619_source_review[
+            'source_paths'
+        ]['phase619_fake_coarse_manifest'],
         '--candidate-transition-dispositions',
-        os.environ['ESP_PHASE558_TRANSITION_DISPOSITIONS'],
+        phase619_source_review[
+            'source_paths'
+        ]['phase619_transition_dispositions'],
+        '--phase597-candidate-dir',
+        os.environ['ESP_PHASE597_CANDIDATE_DIR'],
+        '--phase619-candidate-dir',
+        os.environ['ESP_PHASE619_CANDIDATE_DIR'],
+        '--phase619-japanese-guide',
+        os.environ['ESP_PHASE619_RUBY_HTML_GUIDE_JA'],
+        '--phase619-chinese-guide',
+        os.environ['ESP_PHASE619_RUBY_HTML_GUIDE_ZH'],
         '--allow-stable-tracked-changes',
-        '--phase532-runtime-mode', 'post-regen',
-        '--phase532-baseline-dir', os.environ['ESP_PHASE532_BASELINE_DIR'],
-        '--phase532-candidate-dir', os.environ['ESP_PHASE532_CANDIDATE_DIR'],
-        '--phase558-candidate-dir', os.environ['ESP_PHASE558_CANDIDATE_DIR'],
-        '--phase558-ruby-disposition-ledger',
-        os.environ['ESP_PHASE558_RUBY_DISPOSITION_LEDGER'],
-        '--phase558-japanese-guide', os.environ['ESP_RUBY_HTML_GUIDE_JA'],
-        '--phase558-chinese-guide', os.environ['ESP_RUBY_HTML_GUIDE_ZH'],
-        '--phase558-runtime-mode', 'post-regen',
         '--report', os.path.join(
             tempfile.gettempdir(), 'esperanto_master_3lang_formal_report.json',
         ),
@@ -575,6 +657,13 @@ if ARGS.ruby_only:
         raise SystemExit("Ruby-only plan unexpectedly contains a writer")
     if "check_kanji_fake_decomposition.py" not in planned_scripts:
         raise SystemExit("Ruby-only plan lost the read-only Kanji integrity gate")
+    if (
+        "audit_phase619_learner_word_kanji_key_coverage.py"
+        not in planned_scripts
+    ):
+        raise SystemExit(
+            "Ruby-only plan lost the Phase 619 Kanji coverage-only audit"
+        )
     ruby_only_kanji_guard = _capture_ruby_only_kanji_guard()
 else:
     ruby_only_kanji_guard = None

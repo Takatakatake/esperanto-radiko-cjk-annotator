@@ -35,6 +35,8 @@ import phase558_ruby_overlay as phase558_policy
 import phase558_ruby_overlay_activation as phase558_activation
 import phase598_technical_on_policy as phase598_policy
 import phase598_technical_on_activation as phase598_activation
+import phase619_ordinary_ruby_policy as phase619_policy
+import phase619_ordinary_ruby_activation as phase619_activation
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
@@ -2786,12 +2788,25 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     "fonon", "foton", "ganglion", "magneton",
                     "mezon", "nukleon", "termoelektron",
                 })
+                self.assertTrue(
+                    phase619_activation.phase619_ordinary_ruby_active()
+                )
+                phase619_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in phase619_policy.managed_morph_targets().values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(phase619_ruby_track, {
+                    "imperialist", "provincialism",
+                    "endoskopi", "mikroskopi", "mukoz/aĵ",
+                    "ditionat", "tetrationat",
+                })
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
                     {
                         "novjork/an", *strict_ruby_track,
                         *expected_phase532_ruby_track, *phase558_ruby_track,
-                        *phase598_ruby_track,
+                        *phase598_ruby_track, *phase619_ruby_track,
                     },
                 )
                 for row in ruby_track_rows:
@@ -2805,6 +2820,7 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         expected_phase532_ruby_track
                         | phase558_ruby_track
                         | phase598_ruby_track
+                        | phase619_ruby_track
                     ):
                         self.assertIn("word_boundary", row[2])
                         self.assertIn("ruby_track_only", row[2])

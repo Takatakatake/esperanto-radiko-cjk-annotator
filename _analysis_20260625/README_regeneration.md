@@ -4,12 +4,20 @@
 **唯一の正式ルート**が収録されています。アプリ内の旧「JSON生成ページ」は
 最新の品質修正を含まないため撤去されました。
 
+2026-07-29 Phase619 の凍結入力、京大最新版、普通語7件、三言語境界、ルビ幅、
+漢字非破壊、未証明範囲を含む詳細な判断記録は
+`PHASE619_KYOTO_ORDINARY_RUBY_RECERT_AUDIT_LOG_20260729.md` を参照してください。
+
 ## 明示trackで一括実行
     $env:ESP_GOLD_PATH = '<監査済みgold snapshot>'
     $env:ESP_ACADEMIC_GOLD_PATH = '<同一行対応の学術版snapshot>'
     $env:ESP_PEJVO_ORIGINAL_PATH = '<監査済み原典PEJVO snapshot>'
     $env:ESP_CORPUS_PATH = '<cleanな京大HTML repo>'
+    $env:ESP_PHASE558_CURRENT_CORPUS_PATH = '<同じcleanな京大HTML repo>'
     $env:ESP_PHASE597_CANDIDATE_DIR = '<Phase598裁定の固定入力一式>'
+    $env:ESP_PHASE619_CANDIDATE_DIR = '<Phase619裁定の固定入力一式>'
+    $env:ESP_PHASE619_RUBY_HTML_GUIDE_JA = '<現行日本語ガイド>'
+    $env:ESP_PHASE619_RUBY_HTML_GUIDE_ZH = '<現行中国語ガイド>'
     python _analysis_20260625/regenerate_all.py --ruby-only
 
 漢字成果物も意図的に再構築する場合だけ、固定漢字正本を追加して実行する。
@@ -19,13 +27,19 @@
     python _analysis_20260625/regenerate_all.py --all-tracks
 
 track modeは必須であり、引数なしでは最初の書き込み前に停止する。
-Ruby-onlyでは先頭5環境変数、all-tracksでは6環境変数すべてを必須とする。
+上記に加え、activeなPhase532/558 authorityを閉じる
+`ESP_PHASE532_BASELINE_DIR`、`ESP_PHASE532_CANDIDATE_DIR`、
+`ESP_PHASE558_CANDIDATE_DIR`、disposition ledger、歴史ガイド、fake-coarse
+manifest、transition dispositionsも明示する。固定本数ではなく、
+`regenerate_all.py` の `required_inputs` と各active sidecarが要求する入力を
+すべて指定し、場所だけでなくbytes/行数/SHA-256が一致しなければならない。
 さらにall-tracksは、Phase511由来21件のKanji authority gateが未整備である間は
 candidate-onlyとし、`ESP_ALLOW_UNREVIEWED_KANJI_CANDIDATE=1`を明示した隔離worktreeでしか
 実行できない。候補は個別裁定前に配備成果物へ昇格してはならない。
 学習者版・学術版・原典PEJVOは
 `_fake_coarse_reference_manifest.json` のbytes/line count/SHA-256と一致し、
-正式生成は書き込み前に全62,313行の対応、偽分解3,492行の語義gloss一致、
+正式生成は書き込み前に全62,313行の対応、Phase619の偽分解3,656行の
+学術版との語義gloss一致、
 および粗い分解参照表を`--check`で再構成する。goldは
 `_no_worsening_scope_manifest.json` のbytes/SHA-256と一致し、corpusは2つの
 exact manifestが記録したHEAD/status/content hashと一致すること。漢字正本は
@@ -33,11 +47,22 @@ all-tracksの場合に限り、`_kanji_master_scope_manifest.json` の4ファイ
 bytes/SHA-256と一致すること。
 いずれかが異なれば最初の書き込み前に停止する。
 
-Ruby-onlyは21・22・23・25の漢字書込工程と34のbackup一括掃除を計画から除外する。
+Ruby-onlyは漢字正本resync、漢字JSON生成、旧互換patch、pure漢字再導出、
+backup一括掃除を計画から除外する。
 開始時に配備済み漢字成果物9本がHEADと同一であることを確認し、各工程の成功時・
-失敗時の双方でbytes/SHA-256不変を再確認する。20の偽分解/deep分解照合は
+失敗時の双方でbytes/SHA-256不変を再確認する。偽分解/deep分解照合は
 read-only gateとして残す。これにより、Rubyの粗境界修正を漢字成果物へ暗黙に
 伝播させない。漢字を更新する場合はall-tracksを明示し、差分を別途裁定する。
+
+さらに `audit_phase619_learner_word_kanji_key_coverage.py --check` を
+Ruby-onlyでも実行する。ただしこれは学習者版から投影したdirect
+`word_kanji` keyとEsperanto piece列の一致だけを測るcoverage-only監査である。
+Phase619では62,313入力行中62,085行を非空keyへ投影し、52,775 unique keyのうち
+44,284（83.910943%）、偽分解3,644評価行のうち3,445（94.538968%）を直接照合し、
+covered piece driftは0だった。未被覆8,491 key／偽分解199行は
+per-root・fallback・literal経路を含むため欠陥件数ではない。
+`full_deployed_render_fidelity_certified=false` であり、全経路の配備漢字描画保証を
+この数字から主張してはならない。
 
 Phase598 technical-on サイドカーは、Phase558を親として8見出しだけを追加採用する。
 `fonon/foton/ganglion/magneton/mezon/nukleon/termoelektron` の7語幹は
@@ -51,17 +76,30 @@ Arial 16の `char_widths.json` と実配備CSSで幅を再計算し、未知文�
 実効幅比2以下を要求する。Phase597の入力はlive masterではなく、bytes/行数/
 SHA-256を固定した `ESP_PHASE597_CANDIDATE_DIR` からのみ再認証する。
 
+Phase619 ordinary-Ruby サイドカーは、Phase598を親として普通語7見出しだけを
+追加採用する。対象は `imperialisto`、`provincialismo`、`endoskopio`、
+`mikroskopio`、`mukozaĵo`、`ditionato`、`tetrationato` で、固有名詞変更は0。
+6件は粗いatomic語幹、`mukozaĵo`だけは `mukoz/aĵ/o` の2 Ruby片とし、
+全件を `ruby_track_only`・whole-word boundary・通常10語尾へ閉じる。
+10語尾×lower/initial/upperで210表層/言語、240注釈/言語を実機描画し、
+negative 64表層への専用注釈漏洩0、JA/ZH/KO境界・rb不一致0だった。
+実効幅比の最大はJA 0.899599、ZH 0.898877、KO 0.868610で、2倍超過・
+自動`<br>`とも0。漢字側は学習者版のdeep/偽分解を維持し、ルビの粗い境界を
+漢字へ流用しない。
+
 R67/R68の語頭保護は、再生成元マスターへ混ぜ戻さない歴史sidecarである。
 再生成前に `preserve_r67_r68_ruby_overlays.py capture` が配備済み
-`R67H` 336行・`R68W` 1,013行/言語と `Auster` exact overrideをsealし、
+`R67H` 336行・`R68W` 1,012行/言語と `Auster` exact overrideをsealし、
 全面再生成後に同じ行triples・順序をJA/ZH/KOへtransactionalにcarry-forwardする。
 各言語のrows SHA-256と親R72 commit/treeを固定し、衝突・欠落・順序変化は停止する。
 旧R68 discoveryをlive master上で再実行してscopeを広げてはならない。
-復元後は全域572,501行/言語を要求し、
-`phase598_parent_payload_delta_gate.py` が親R72との差を
-R73正例211形（旧66規則の置換を含む）だけへ閉じる。
+carry-forward直後は全域572,713行/言語を要求する。その後、
+`fix_ruby_postregen.py`、京大meaning-break、hyphen-joiner、
+ZH/KO diminutive-glossの4層を順に再適用し、最終572,729行/言語を要求する。
+Phase619を含むpre/post runtime gateと最終overlay auditで閉じ、
+削除済みの歴史的 `phase598_parent_payload_delta_gate.py` には依存しない。
 
-Phase513 Ruby設定を固定Kanji snapshotへ隔離再生成した比較では、配備版に対して
+（歴史記録）Phase513 Ruby設定を固定Kanji snapshotへ隔離再生成した比較では、配備版に対して
 全域表16表層（追加10・削除6）のsemantic差が生じた。偽分解/deep分解53件×3言語は
 不一致0だが、この16件はRuby設定由来であり、今回のRuby-only更新には吸収しない。
 62K実機差分8行には改善（celulozo、laktozo、siria系、nen）と同時に、bifeniloが
@@ -69,41 +107,30 @@ Phase513 Ruby設定を固定Kanji snapshotへ隔離再生成した比較では�
 Phase511 transition 21件のKanji authorityとfail-closed gateを整備してから、
 次回all-tracks更新時に固定候補treeで個別裁定する。
 
-実行順(2026-07-26版。番号は論理工程順):
-1. build_fake_coarse_reference_manifest.py --check … Phase513学習者版・学術版・PEJVO原典を再読し、62,313行対応・語義一致・3,213行の粗分解authorityを検証
-2. build_fake_coarse_transition_review.py --check … 歴史的C679→B090 manifestのraw 136行を由来ごと改変せず固定
-3. build_fake_coarse_ff33_transition_review.py --check … FF33で新たに偽分解となったTomisto 1行を別scopeとして固定
-4. build_fake_coarse_5e_transition_review.py --check … final 5Eのpromilo 1行を別scopeとして固定（Ruby=promil/o、Kanji=pro/mil）
-5. build_fake_coarse_phase511_transition_review.py --check … Phase511由来でRuby用に閉集合裁定した21行をPhase513 snapshotで再認証し、歴史manifestのline 45205を後発authorityでsupersede
-6. build_fake_coarse_transition_app_review.py --check … アプリ移行対象を固定authorityと照合
-7. build_corpus_exact_manifest.py --check … 固定exact manifestと指定コーパスのclean HEAD・内容hashを照合
-8. build_corpus_reviewed_exact_manifest.py --check … 汎用規則後に残ったevaluable表記のtyped exact固定を照合
-9. bare_word_audit.py --require-zero … ガイド必須rubyの裸語レビュー漏れを0件に固定
-10. preserve_r67_r68_ruby_overlays.py capture … 配備済みR67/R68行を固定snapshotへseal
-11. apply_corpus_word_anno.py --write … コーパス確定注釈・exact境界・Phase598予約文脈10キーを日中韓へ同期
-12. build_word_anno_boundary_manifest.py --check … 日中韓の語根境界signatureを照合
-13. apply_confirmed_now.py 30 --settings-audit … 補正後の設定が日中韓で意味的に同一か検査
-14. apply_confirmed_now.py 30 --write … Ruby 3言語候補を生成し、Phase532/558/598書込み前ゲート後に一括反映
-15. preserve_r67_r68_ruby_overlays.py apply … R67H 336＋R68W 1,013行/言語を三言語一括復元
-16. fix_ruby_postregen.py … Ruby事後修正
-17. preserve_r67_r68_ruby_overlays.py audit … 歴史行SHA・順序・全域572,501行を再照合
-18. Phase532/558/598 runtime gates＋phase598_parent_payload_delta_gate.py … 配備状態と親差分閉包を再実行
-19. test_canonical_corpus_surfaces.py … canonical全数ゲートの純粋関数回帰
-20. check_canonical_corpus_surfaces.py … 21,443表記を日中韓runtimeで全数検査
-21. resync_kanji_master.py --write … all-tracksのみ。漢字正本と全面再同期（CSVはヘッダーなし9,813語根・未対応13を含む、互換パッチ前word_kanji 43,738語幹）
-22. apply_kanji_now.py --write … all-tracksのみ。漢字3言語再生成（偽分解を深分解authorityへ戻す）
-23. fix_kanji_2890.py --apply … all-tracksのみ。38語の旧互換安全網（適用後word_kanji 43,776語幹）
-24. check_kanji_fake_decomposition.py … 深分解piece列と漢字割当を3言語で全件照合
-25. derive_pure_kanji.py … all-tracksのみ。純粋置換版JSON再導出
-26. anomaly_scan.py … 6JSON異常スキャン
-27. test_generation_regressions.py＋Phase558/598/carry-forward tests … 生成規則・配置済み三言語・歴史sidecarの回帰
-28. test_reviewed_exact_manifest.py … 残差manifest回帰
-29. check_multilingual_structure.py … 全域ルールの日中韓語根分節一致
-30. check_raw_apostrophe_structure.py … U+2019原表記の全コーパス3言語runtime回帰
-31. no_worsening_audit.py --current-only-diagnostic … 固定referenceに対する現行runtime残差0を再確認（単語投影の正式移行scope 157行）
-32. run_phase558_no_worsening.py … Phase558 parent/current・full historical sidecarを別authorityで検証
-33. audit_master_3lang_full_snapshot.py … Phase513でpinした学習者版・学術版の全62,313行を3言語runtimeで正式監査（full-master scope 158行）
-34. prune_baks.py … all-tracksのみ。全工程合格後に一時バックアップを掃除
+実行順（2026-07-29 Phase619正式経路。番号は論理グループ）:
+1. fake-coarse reference／歴史transition／FF33／5E／Phase511／app-reviewをすべて`--check`
+2. 京大corpus exact・reviewed exact・d1642c2 typo-retirement transitionをclean HEADと照合
+3. `bare_word_audit.py --require-zero`
+4. active Phase532 policy/carryとPhase558 overlayの固定source closureを再検証
+5. `build_phase619_ordinary_ruby_review.py --check`でPhase597→619、両現行ガイド、7普通語を閉じる
+6. Phase532/558/598/619 deployed runtime gateを最初の書込み前に実行
+7. `preserve_r67_r68_ruby_overlays.py capture`
+8. `apply_corpus_word_anno.py --write`でcorpus authorityとPhase619 7注釈keyを日中韓同期
+9. `build_word_anno_boundary_manifest.py --check`
+10. `apply_confirmed_now.py 30 --settings-audit`後、候補3言語をメモリ生成し全active gate後に`--write`
+11. R67/R68を復元して572,713行を要求
+12. postregen／京大meaning-break／hyphen-joiner／ZH-KO diminutiveを順に再適用
+13. R67/R68を最終572,729行で監査し、Phase532/558/598/619 post gateを再実行
+14. canonical 21,438表層とraw apostropheをclean d1642c2 corpusから日中韓全数検査
+15. all-tracksだけ漢字正本resync・漢字3言語生成・旧互換patchを実行
+16. `audit_phase619_learner_word_kanji_key_coverage.py --check`（coverage-only）
+17. `check_kanji_fake_decomposition.py`でreview済み53件×3言語を配備描画照合
+18. all-tracksだけpure漢字を再導出し、6 JSONを異常scan
+19. generation／Phase558／Phase598／Phase619／coverage／R67-R68／transition各test
+20. multilingual structureとraw apostrophe structureを検査
+21. Phase558 no-worsening parent/currentと歴史sidecarを別authorityで検証
+22. Phase619 learner/academic/manifest/dispositions＋現行両ガイドで全62,313行×3言語を正式監査
+23. all-tracksだけ、全工程合格後に一時backupを掃除
 
 Phase511由来の `_fake_coarse_phase511_transition_review.json` は、裁定済み21行だけを
 `ruby_track_only` で固定する。歴史manifestのraw 136行は変更せず、重なるline 45205
@@ -126,15 +153,19 @@ strict exact台帳を933件へ再束縛する
 一回限りの専用adopterである。通常の一括再生成には含めず、候補・gold・corpusの全identityを
 照合してから明示的に実行する。Phase512/513で増加・深化したfake 11行の一括採用には使用しない。
 
-`audit_master_3lang_full_snapshot.py` は偽分解指定3,492行を毎回すべて測定するが、
-正式既定ゲートで粗いルビ境界を強制するのは上記158行だけである。その他の不一致は
+`audit_master_3lang_full_snapshot.py` は指定snapshotの偽分解行を毎回すべて測定する。
+Phase619では3,656行を測定し、正式既定ゲートで粗いルビ境界を強制するのは
+candidate retirement後のactive transition 157行と閉じた7普通語sidecarだけである。
+その他の不一致は
 未裁定キューとして報告し、個別の語義・京大コーパス・日中韓境界を確認してからreview
 manifestへ追加する。`--enforce-all-fake-coarse` は全件裁定後だけ使用する。
-また、完全無注釈の語彙候補45件と非終端無注釈断片候補202件も報告専用の確認キューであり、
+また、Phase619全量報告の完全無注釈語彙候補53件と非終端無注釈断片候補203件も
+報告専用の確認キューであり、
 自動修正や幅合わせのための細分化対象ではない。ルビ幅は原綴りのおおむね2倍以内を表示ゲートで
 検査するが、幅を短くする目的だけで語根境界を増やさない。
 
-2026-07-16のPhase513固定snapshotによるRuby-only正式再走は、入力62,313行からコメント
+（歴史参考。現行Phase619認証値ではない）2026-07-16のPhase513固定snapshotによる
+Ruby-only正式再走は、入力62,313行からコメント
 202行を明示除外し、runtime候補62,111行をJA/ZH/KOすべてで評価した（未評価0）。render
 union 62,299表層の3言語境界不一致、runtime error、可視文字列不一致、placeholder残留はすべて0。
 偽分解authority 3,492行は各言語で一致910／不一致2,582であり、一致910の内数である
@@ -148,6 +179,16 @@ CSSと実文字幅を反映した
 `complete=true` / `gate=true`。正式report SHA-256は
 `8E0E8568A80A985178C69004CBDBE039422D9368DADA8ABD02906627C46C0201`。
 reportは正式工程がOS一時ディレクトリの`esperanto_master_3lang_formal_report.json`へ再生成する。
+
+2026-07-29のPhase619固定snapshotによる全量再認証は、入力62,313行からコメント202行を
+除外し、runtime候補62,111行・unique 61,844表層をJA/ZH/KOすべてで評価した。
+境界不一致、runtime error、可視文字不一致、placeholder残留、empty rt/rbはすべて0。
+偽分解authority 3,656行は各言語で一致1,096／未裁定不一致2,560、段階的transition
+157行は157/157一致した。7普通語だけを閉じたRuby sidecarとして認可し、より広い
+Phase619 master promotionは明示的にfalseのままである。実効幅2倍超は0で、最大は
+JA 1.533750、ZH 1.366875、KO 1.104375。`complete=true`／`gate=true`、
+report SHA-256は
+`7C7549784D4E8D8B92FEA693DE07DFE498DBC79AFCEF5D3F1DC27682325916B3`。
 
 ## 構成
 - gen_replacement.py      … 置換リスト生成の中核(AN/ONリスト等の拡張点を含む)
@@ -215,7 +256,9 @@ deep/偽分解（例: `et/an`, `met/an`）をRuby設定へ流用して短い語�
   (_kanji_map_master.tsv + _identifier_sidecar.tsv + 漢字注入_学習者版)
 外部環境では ESP_GOLD_PATH / ESP_ACADEMIC_GOLD_PATH /
 ESP_PEJVO_ORIGINAL_PATH / ESP_KANJI_MASTER_PATH / ESP_CORPUS_PATH /
-ESP_PHASE597_CANDIDATE_DIR
+ESP_PHASE558_CURRENT_CORPUS_PATH / ESP_PHASE597_CANDIDATE_DIR /
+ESP_PHASE619_CANDIDATE_DIR / ESP_PHASE619_RUBY_HTML_GUIDE_JA /
+ESP_PHASE619_RUBY_HTML_GUIDE_ZH
 環境変数で場所を指定します。正式生成時は場所だけでなく、gold・漢字正本の
 固定bytes/SHA-256も一致しなければ停止します。`ESP_CORPUS_PATH` は固定manifestを生成した
 cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容hashが一致しない場合は
@@ -250,9 +293,9 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   typed signatureと文脈注釈ごと固定（監査reportとclean corpus hashを照合）
 - check_raw_apostrophe_structure.py … canonical化でASCIIと統合されるU+2019表記を
   raw visibleのまま3言語runtimeに通し、可視文字とruby/literal役割を全数検証
-- check_canonical_corpus_surfaces.py … 169文書・348,971 rubyから得た
-  evaluable 269,879件/21,443表記を3言語の配置済みruntimeで再描画し、reviewed
-  628表記を含むtyped signature・可視文字・placeholder残留を残差0に固定
+- check_canonical_corpus_surfaces.py … 169文書・348,580 rubyから得た
+  evaluable 269,577件/21,438表記を3言語の配置済みruntimeで再描画し、reviewed
+  625表記を含むtyped signature・可視文字・placeholder残留を残差0に固定
 - `_strict_gold_reference_fixes.json` … no-worsening参照に残った辞書語を、
   case-sensitive・bounded・typed exact規則として参照hash付きで固定する
   （Phase513 pinでは933件）。

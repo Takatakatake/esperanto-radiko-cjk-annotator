@@ -8,9 +8,10 @@ R68 discovery script is not an acceptable recovery mechanism: it scans a
 moving absolute master and can widen its scope.
 
 This module instead seals the already-deployed, reviewed rows before a rebuild
-and restores exactly that closed set afterwards.  The row identities, order,
-and localized renderings are pinned to the R72 parent.  Any collision or drift
-fails before the three deployed payloads are replaced.
+and restores exactly that closed set afterwards.  Historical recovery keeps
+the original R72/R73 profile immutable, while ordinary current regeneration
+uses the separately pinned post-Temis profile.  Any collision or drift fails
+before the three deployed payloads are replaced.
 """
 
 from __future__ import annotations
@@ -35,14 +36,16 @@ RUBY_PAYLOAD_NAME = (
 )
 GLOBAL_BUCKET_TOKEN = "replacements_final_list"
 OVERLAY_PREFIXES = ("R67H", "R68W")
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 PINNED_PARENT_COMMIT = "4682D32496F166802B4A2CF28626F376E12AAE3E"
 PINNED_PARENT_TREE = "2C494DB69EBAC28EF63A192BEFA017A22710CCD7"
 PINNED_PARENT_GLOBAL_ROWS = 572_356
 EXPECTED_POST_R73_GLOBAL_ROWS = 572_501
+CURRENT_PRE_R81_GLOBAL_ROWS = 572_713
+CURRENT_DEPLOYED_GLOBAL_ROWS = 572_729
 
-EXPECTED_OVERLAYS = {
+HISTORICAL_EXPECTED_OVERLAYS = {
     "JA": {
         "R67H": {
             "count": 336,
@@ -103,6 +106,49 @@ EXPECTED_OVERLAYS = {
             ),
         },
     },
+}
+
+CURRENT_EXPECTED_OVERLAYS = {
+    "JA": {
+        "R67H": HISTORICAL_EXPECTED_OVERLAYS["JA"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "2A43539F873A792F3F50712B575871318A3A96A1E8EE7A90EDBD55D51F342CC0"
+            ),
+            "sources_sha256": (
+                "E6B91C551DD567EEC6B9BA16262F704140B28CA8BF3ED7048C3E5F9AF2672B79"
+            ),
+        },
+    },
+    "ZH": {
+        "R67H": HISTORICAL_EXPECTED_OVERLAYS["ZH"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "88A914F4E8BF443585C9319C19DB88BC64DF6EBDE400ED604C64F70F3758865C"
+            ),
+            "sources_sha256": (
+                "E6B91C551DD567EEC6B9BA16262F704140B28CA8BF3ED7048C3E5F9AF2672B79"
+            ),
+        },
+    },
+    "KO": {
+        "R67H": HISTORICAL_EXPECTED_OVERLAYS["KO"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "8A9E699E29B860B609883A2FAB4D6256F3ADB67BEF385A503DFE9B7C6B7207EB"
+            ),
+            "sources_sha256": (
+                "E6B91C551DD567EEC6B9BA16262F704140B28CA8BF3ED7048C3E5F9AF2672B79"
+            ),
+        },
+    },
+}
+OVERLAY_PROFILES = {
+    "historical-r72-r73": HISTORICAL_EXPECTED_OVERLAYS,
+    "current-post-temis": CURRENT_EXPECTED_OVERLAYS,
 }
 
 EXACT_OVERRIDE_SOURCE = " Auster "
@@ -168,8 +214,18 @@ def overlay_rows(rows: list, prefix: str) -> list:
     ]
 
 
-def validate_rows(language: str, prefix: str, rows: list) -> dict:
-    expected = EXPECTED_OVERLAYS[language][prefix]
+def validate_rows(
+    language: str,
+    prefix: str,
+    rows: list,
+    overlay_profile: str,
+) -> dict:
+    try:
+        expected = OVERLAY_PROFILES[overlay_profile][language][prefix]
+    except KeyError as error:
+        raise ValueError(
+            f"unsupported Ruby overlay profile: {overlay_profile!r}"
+        ) from error
     if any(
         not isinstance(row, list)
         or len(row) != 3
@@ -196,7 +252,14 @@ def validate_rows(language: str, prefix: str, rows: list) -> dict:
     return actual
 
 
-def validate_overlay_matrix(matrix: dict) -> dict:
+def validate_overlay_matrix(
+    matrix: dict,
+    overlay_profile: str = "current-post-temis",
+) -> dict:
+    if overlay_profile not in OVERLAY_PROFILES:
+        raise ValueError(
+            f"unsupported Ruby overlay profile: {overlay_profile!r}"
+        )
     if set(matrix) != set(LANGUAGES):
         raise ValueError("overlay snapshot must contain exactly JA/ZH/KO")
     report = {}
@@ -208,9 +271,7 @@ def validate_overlay_matrix(matrix: dict) -> dict:
         report[language] = {}
         for prefix in OVERLAY_PREFIXES:
             report[language][prefix] = validate_rows(
-                language,
-                prefix,
-                matrix[language][prefix],
+                language, prefix, matrix[language][prefix], overlay_profile,
             )
     for prefix in OVERLAY_PREFIXES:
         source_lists = {
@@ -253,6 +314,7 @@ def resolve_git_identity(git_ref: str) -> dict:
 
 def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
     if git_ref is not None:
+        overlay_profile = "historical-r72-r73"
         identity = resolve_git_identity(git_ref)
         expected = {
             "commit": PINNED_PARENT_COMMIT,
@@ -263,6 +325,7 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
                 f"recovery parent identity drift: {identity!r} != {expected!r}"
             )
     else:
+        overlay_profile = "current-post-temis"
         identity = {
             "commit": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"],
@@ -309,7 +372,7 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
         }
         deployed_counts[language] = len(rows)
 
-    overlay_report = validate_overlay_matrix(matrix)
+    overlay_report = validate_overlay_matrix(matrix, overlay_profile)
     if git_ref is not None and any(
         count != PINNED_PARENT_GLOBAL_ROWS
         for count in deployed_counts.values()
@@ -317,10 +380,19 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
         raise ValueError(
             f"pinned parent global row count drift: {deployed_counts!r}"
         )
+    if git_ref is None and any(
+        count != CURRENT_DEPLOYED_GLOBAL_ROWS
+        for count in deployed_counts.values()
+    ):
+        raise ValueError(
+            f"current deployed global row count drift: "
+            f"{deployed_counts!r}"
+        )
 
     snapshot = {
         "schema_version": SCHEMA_VERSION,
         "authority": "reviewed-r67-r68-deployed-carry-forward",
+        "overlay_profile": overlay_profile,
         "source_identity": identity,
         "source_git_ref": git_ref,
         "global_rows_at_capture": deployed_counts,
@@ -351,23 +423,40 @@ def load_snapshot(path: Path) -> dict:
             f"historical overlay snapshot digest drift: "
             f"{actual} != {recorded}"
         )
-    overlay_report = validate_overlay_matrix(snapshot.get("overlays"))
+    overlay_profile = snapshot.get("overlay_profile")
+    if overlay_profile not in OVERLAY_PROFILES:
+        raise ValueError("historical overlay snapshot profile drift")
+    overlay_report = validate_overlay_matrix(
+        snapshot.get("overlays"), overlay_profile,
+    )
     if snapshot.get("overlay_report") != overlay_report:
         raise ValueError("historical overlay report drift")
     captured_counts = snapshot.get("global_rows_at_capture")
     if (
         set(captured_counts or {}) != set(LANGUAGES)
         or len(set(captured_counts.values())) != 1
-        or not set(captured_counts.values())
-        <= {PINNED_PARENT_GLOBAL_ROWS, EXPECTED_POST_R73_GLOBAL_ROWS}
+        or (
+            overlay_profile == "historical-r72-r73"
+            and not set(captured_counts.values())
+            <= {PINNED_PARENT_GLOBAL_ROWS, EXPECTED_POST_R73_GLOBAL_ROWS}
+        )
+        or (
+            overlay_profile == "current-post-temis"
+            and set(captured_counts.values())
+            != {CURRENT_DEPLOYED_GLOBAL_ROWS}
+        )
     ):
         raise ValueError("historical overlay capture-count drift")
     if snapshot.get("source_git_ref") is not None:
+        if overlay_profile != "historical-r72-r73":
+            raise ValueError("recovery snapshot profile drift")
         if snapshot.get("source_identity") != {
             "commit": PINNED_PARENT_COMMIT,
             "tree": PINNED_PARENT_TREE,
         }:
             raise ValueError("recovery snapshot parent identity drift")
+    elif overlay_profile != "current-post-temis":
+        raise ValueError("current snapshot profile drift")
     exact_overrides = snapshot.get("exact_overrides")
     if set(exact_overrides or {}) != set(LANGUAGES):
         raise ValueError("exact override language closure drift")
@@ -528,7 +617,11 @@ def restore_bucket(language: str, rows: list, snapshot: dict) -> list:
     return restored
 
 
-def audit_payloads(payloads: dict, expected_global_rows: int | None) -> dict:
+def audit_payloads(
+    payloads: dict,
+    expected_global_rows: int | None,
+    overlay_profile: str = "current-post-temis",
+) -> dict:
     matrix = {}
     counts = {}
     exact_values = {}
@@ -557,7 +650,7 @@ def audit_payloads(payloads: dict, expected_global_rows: int | None) -> dict:
             raise ValueError(
                 f"{language}: deployed exact override rendering drift"
             )
-    overlay_report = validate_overlay_matrix(matrix)
+    overlay_report = validate_overlay_matrix(matrix, overlay_profile)
     if expected_global_rows is not None and any(
         count != expected_global_rows for count in counts.values()
     ):
@@ -570,6 +663,7 @@ def audit_payloads(payloads: dict, expected_global_rows: int | None) -> dict:
         "languages": list(LANGUAGES),
         "global_rows": counts,
         "expected_global_rows": expected_global_rows,
+        "overlay_profile": overlay_profile,
         "overlay_report": overlay_report,
         "exact_override_rendered": exact_values,
     }
@@ -577,6 +671,7 @@ def audit_payloads(payloads: dict, expected_global_rows: int | None) -> dict:
 
 def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
     snapshot = load_snapshot(path)
+    overlay_profile = snapshot["overlay_profile"]
     payloads = {
         language: load_payload(language)
         for language in LANGUAGES
@@ -592,7 +687,9 @@ def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
             snapshot,
         )
         candidates[language] = candidate
-    report = audit_payloads(candidates, expected_global_rows)
+    report = audit_payloads(
+        candidates, expected_global_rows, overlay_profile,
+    )
 
     stages = {}
     rollbacks = {}
@@ -620,8 +717,7 @@ def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
             for language in LANGUAGES
         }
         deployed_report = audit_payloads(
-            deployed,
-            expected_global_rows,
+            deployed, expected_global_rows, overlay_profile,
         )
         if deployed_report != report:
             raise ValueError(
@@ -662,14 +758,14 @@ def parse_args() -> argparse.Namespace:
     apply.add_argument(
         "--expected-global-rows",
         type=int,
-        default=EXPECTED_POST_R73_GLOBAL_ROWS,
+        default=CURRENT_PRE_R81_GLOBAL_ROWS,
     )
 
     audit = subparsers.add_parser("audit")
     audit.add_argument(
         "--expected-global-rows",
         type=int,
-        default=EXPECTED_POST_R73_GLOBAL_ROWS,
+        default=CURRENT_DEPLOYED_GLOBAL_ROWS,
     )
     return parser.parse_args()
 
@@ -683,6 +779,7 @@ def main() -> None:
             "snapshot": str(args.output),
             "snapshot_sha256": snapshot["snapshot_sha256"],
             "source_identity": snapshot["source_identity"],
+            "overlay_profile": snapshot["overlay_profile"],
             "global_rows_at_capture": snapshot["global_rows_at_capture"],
         }
     elif args.command == "apply":
@@ -696,8 +793,7 @@ def main() -> None:
             for language in LANGUAGES
         }
         report = audit_payloads(
-            payloads,
-            args.expected_global_rows,
+            payloads, args.expected_global_rows, "current-post-temis",
         )
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
