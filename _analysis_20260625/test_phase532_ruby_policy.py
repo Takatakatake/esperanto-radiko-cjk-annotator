@@ -316,7 +316,14 @@ class Phase532RubyPolicyTests(unittest.TestCase):
         self.assertIn("'--mode', phase532_deployed_mode, '--deployed'", pipeline)
         self.assertIn("'--mode', 'post-regen', '--deployed'", pipeline)
         self.assertIn("build_phase532_authority_carry_forward.py", pipeline)
-        self.assertIn("'--phase532-runtime-mode', 'post-regen'", pipeline)
+        # 第89R: 正式62k監査の引数が Phase 619 世代へ移行した。
+        #   旧: --phase532-runtime-mode / --phase532-baseline-dir / --phase532-candidate-dir
+        #   新: --phase597-candidate-dir / --phase619-candidate-dir
+        #   旧フラグは audit_master_3lang_full_snapshot.py 側からも削除されており、
+        #   固定文字列を残すと「ツールに無いフラグ」を要求する死んだ検査になる。
+        #   ゲートが走ること自体は次の2行で担保する(緩めていない)。
+        self.assertIn("audit_master_3lang_full_snapshot.py", pipeline)
+        self.assertIn("'--phase619-candidate-dir'", pipeline)
         self.assertIn("'ESP_PHASE532_BASELINE_DIR'", pipeline)
         self.assertIn("'ESP_PHASE532_CANDIDATE_DIR'", pipeline)
         build_position = apply_source.index("_prepared_candidates =")

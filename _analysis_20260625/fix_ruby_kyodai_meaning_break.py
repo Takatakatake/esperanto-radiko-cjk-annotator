@@ -90,6 +90,33 @@ TARGETS = [
     ('miriadoj', [('miriad', 'miriad'), (None, 'oj')],        ['lower', 'title', 'upper']),
     ('miriadon', [('miriad', 'miriad'), (None, 'on')],        ['lower', 'title', 'upper']),
     ('miriadojn',[('miriad', 'miriad'), (None, 'ojn')],       ['lower', 'title', 'upper']),
+    # ── 第89R: 京大コーパス21,321語との全数照合(分節一致 99.597%)で残った
+    #    「接尾辞が裸で落ちる」8語。いずれも**アプリ自身の同族が既に正しく振れている**
+    #    取り残しであり、京大コーパスの実ルビとも、マスターの分解とも一致する。
+    #        venis -> ven[(に)来る] is[過去形]   ↔ fortis  -> fort[強い]«is»      ✘
+    #        duono -> du[二] on[分数]«o»        ↔ duon    -> du[二]«on»          ✘
+    #        urbano-> urb[都市] an[成員]«o»     ↔ klasano -> klas[クラス]«ano»    ✘
+    #        deveno-> de[の;から] ven[来る]«o»  ↔ devenaj -> deven[起源]«aj»     ✘(アプリ内で不一致)
+    #        promenado -> promen ad[継続行為]«o» ↔ misiad -> misi[使命]«ad»      ✘
+    #    gold も両版とも du/on/…・de/ven/…・kvar/on/o で一致(照合済み)。
+    ('duon',     [('du', 'du'), ('on', 'on')],                ['lower', 'title', 'upper']),
+    ('kvaron',   [('kvar', 'kvar'), ('on', 'on')],            ['lower', 'title', 'upper']),
+    ('fortis',   [('fort', 'fort'), ('is', 'is')],            ['lower', 'title', 'upper']),
+    ('klasano',  [('klas', 'klas'), ('an', 'an'), (None, 'o')],   ['lower', 'title', 'upper']),
+    ('klasanoj', [('klas', 'klas'), ('an', 'an'), (None, 'oj')],  ['lower', 'title', 'upper']),
+    ('klasanon', [('klas', 'klas'), ('an', 'an'), (None, 'on')],  ['lower', 'title', 'upper']),
+    ('klasanojn',[('klas', 'klas'), ('an', 'an'), (None, 'ojn')], ['lower', 'title', 'upper']),
+    ('misiad',   [('misi', 'misi'), ('ad', 'ad')],            ['lower', 'title', 'upper']),
+    ('misiado',  [('misi', 'misi'), ('ad', 'ad'), (None, 'o')],   ['lower', 'title', 'upper']),
+    ('vortanim', [('vort', 'vort'), ('anim', 'anim')],        ['lower', 'title', 'upper']),
+    # ★deven* は**意図的に外した**(第89Rで一度入れて実測で取り消した)。
+    #   単独形は京大も de/ven と振る(deveno ×6, devenis ×4, devenaj ×1)が、
+    #   **複合語の中では京大自身が deven[出身] を一語根として扱う**(hungardevena ×2)。
+    #     アプリ before: hungar[ハンガリー] deven[起源] «a»   = 京大と一致
+    #     入れた後     : hungar[ハンガリー] de[の;から] ven[来る] «a» = ★京大と食い違う
+    #   このリストのキーは**パディング無し**の既存キーを差し替えるため語境界で止まらず、
+    #   devenaj(1件)を直すと hungardevena(2件)を壊す。差し引きで損なので入れない。
+    #   単独形と複合語内で扱いを変えるには語境界付きの別機構が要る(保留)。
 ]
 
 # ── 約物パディング(エンジンの照合形を再現) ──────────────────────────

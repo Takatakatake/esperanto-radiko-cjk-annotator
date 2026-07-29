@@ -6,7 +6,7 @@
   python regenerate_all.py --all-tracks
   1. 偽分解・corpus・Phase532/558/619の固定authorityを検証
   2. Phase532/558/598/619 pre-gate後にRuby 3言語を一括再生成
-  3. R67/R68復元と4つの事後層を経て572,729行をpost-gate
+  3. R67/R68復元と4つの事後層を経て572,771行をpost-gate
   4. canonical 21,438表層・apostrophe・構造・回帰を検査
   5. Phase619 learnerとword_kanjiのdirect-key coverageを限定監査
   6. 固定62,313行を3言語で正式全量監査
