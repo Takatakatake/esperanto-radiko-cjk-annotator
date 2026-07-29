@@ -6,12 +6,12 @@
   "ko"
  ],
  "expected_key_counts": {
-  "ja": 49316,
-  "zh": 49355,
-  "ko": 49355
+  "ja": 49317,
+  "zh": 49356,
+  "ko": 49356
  },
- "authority_keys": 49355,
- "authority_sha256": "521A26E54F7C124652A9D7F3F375AAA620D7E13DAE7302197992A43FA50D9A08",
+ "authority_keys": 49356,
+ "authority_sha256": "386FD7889E2074271D619D526F510F5FB9712964E51410145F30D7AA5F2B83A3",
  "expected_missing_by_language": {
   "ja": [
    "anstataŭ",

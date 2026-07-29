@@ -2801,12 +2801,21 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     "endoskopi", "mikroskopi", "mukoz/aĵ",
                     "ditionat", "tetrationat",
                 })
+                # 第88R: Phase 619 サイドカーは派生語 mukoz/aĵ だけを採り、
+                # 同じ gold 扱い(学習者版 muk/oz/o##偽分解 / 学術版 mukoz/o)の
+                # **基語 mukoz** を採り残していた。族内で
+                #   mukozaĵo -> mukoz[粘膜]aĵ[事物]o
+                #   mukozo   -> muk[粘液]oz[膜]o      ← 食い違い
+                # となるため、Phase 619 の封印されたポリシーは変えず、同じ注釈
+                # 名前空間に1エントリだけ重ねて解消した(訳語は mukoz/aĵ から継承)。
+                r88_ruby_track = {"mukoz"}
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
                     {
                         "novjork/an", *strict_ruby_track,
                         *expected_phase532_ruby_track, *phase558_ruby_track,
                         *phase598_ruby_track, *phase619_ruby_track,
+                        *r88_ruby_track,
                     },
                 )
                 for row in ruby_track_rows:
@@ -2821,6 +2830,7 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         | phase558_ruby_track
                         | phase598_ruby_track
                         | phase619_ruby_track
+                        | r88_ruby_track
                     ):
                         self.assertIn("word_boundary", row[2])
                         self.assertIn("ruby_track_only", row[2])

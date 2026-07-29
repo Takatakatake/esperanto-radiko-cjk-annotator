@@ -57,6 +57,12 @@ class WordAnnoBoundaryTransitionTests(unittest.TestCase):
             payload["authority_sha256"], parent["authority_sha256"],
         )
 
+    # 第88R: Phase 619 サイドカーは派生語 mukoz/aĵ だけを採り、同じ gold 扱い
+    # (学習者版 muk/oz/o##偽分解 / 学術版 mukoz/o)の**基語 mukoz** を採り残していた。
+    # Phase 619 の封印されたポリシーは変えず、同じ注釈名前空間に1件だけ重ねた分を
+    # ここで明示的に数える(黙って +1 して通さない)。
+    R88_ADDED_KEYS = {"@phase619-ruby:mukoz"}
+
     def test_active_manifest_is_candidate_plus_phase619_sidecar(self):
         active = json.loads(
             boundary.DEFAULT_MANIFEST.read_text(encoding="utf-8")
@@ -67,21 +73,23 @@ class WordAnnoBoundaryTransitionTests(unittest.TestCase):
             | set(phase619_policy.split_context_annotations())
         )
         self.assertEqual(len(added_keys), 7)
+        total_added = added_keys | self.R88_ADDED_KEYS
+        self.assertEqual(len(total_added), 8)
         self.assertEqual(
             active["authority_keys"],
-            candidate["authority_keys"] + len(added_keys),
+            candidate["authority_keys"] + len(total_added),
         )
         self.assertEqual(
             active["expected_key_counts"],
             {
-                language: count + len(added_keys)
+                language: count + len(total_added)
                 for language, count
                 in candidate["expected_key_counts"].items()
             },
         )
         self.assertEqual(
             active["authority_sha256"],
-            "521A26E54F7C124652A9D7F3F375AAA620D7E13DAE7302197992A43FA50D9A08",
+            "386FD7889E2074271D619D526F510F5FB9712964E51410145F30D7AA5F2B83A3",
         )
 
     def test_only_six_authority_keys_retire(self):
