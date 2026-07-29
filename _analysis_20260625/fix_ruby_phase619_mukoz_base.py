@@ -189,7 +189,9 @@ for lang in ('JA', 'ZH', 'KO'):
     else:
         s[exist] = [STEM, PRIORITY, flags]; act = '更新'
     atomic_file_copy(LP(sp), LP(sp + '.bak_preR88M'))
-    atomic_json_dump(LP(sp), s)
+    # ★分解設定.json は indent=1 の可読JSON。atomic_json_dump の既定(indent=None)で
+    #   書くと 44,135行が1行に潰れ、差分が読めなくなる(第88Rで実際に踏んだ)。
+    atomic_json_dump(LP(sp), s, indent=1)
     print(f'[{lang}] 分解設定: {act} ["{STEM}", {PRIORITY}, …]')
 
     # (3) word_anno.json と out/ の鏡
