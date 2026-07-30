@@ -109,6 +109,23 @@ TARGETS = [
     ('misiad',   [('misi', 'misi'), ('ad', 'ad')],            ['lower', 'title', 'upper']),
     ('misiado',  [('misi', 'misi'), ('ad', 'ad'), (None, 'o')],   ['lower', 'title', 'upper']),
     ('vortanim', [('vort', 'vort'), ('anim', 'anim')],        ['lower', 'title', 'upper']),
+    # ── 第91R: roman/o の語義が**両軌道で食い違っていた**(ルビ=ローマの / 漢字=小说)。
+    #    gold は roman/o を2見出し持ち、**無印(主要義)が「{Ｂ}小説,長編小説」**、
+    #    「【史】ローマ人」の方に ##偽分解(衝突語) が付く。つまりルビは衝突語側を出していた。
+    #    京大コーパス本体も名詞形は全て長編小説:
+    #        romano ×16 / romanojn ×10 / romanoj ×6 / romanon ×5 / Romano ×2 /
+    #        Romanojn ×2 / romaneto ×4 / romaneton ×2  すべて roman[長編小説]
+    #    語根CSVも roman=長編小説/小说/소설・et=弱小/小/작은 で一致(発明ゼロ)。
+    #    ★形容詞形 romana* は触らない: gold が「小説の」と「ローマ人の##偽分解(衝突語)」の
+    #      両方を持ち、京大はさらに第3の語義(ロマンス系の/ロマ)を使っているため。
+    ('romano',    [('roman', 'roman'), (None, 'o')],          ['lower', 'title', 'upper']),
+    ('romanoj',   [('roman', 'roman'), (None, 'oj')],         ['lower', 'title', 'upper']),
+    ('romanon',   [('roman', 'roman'), (None, 'on')],         ['lower', 'title', 'upper']),
+    ('romanojn',  [('roman', 'roman'), (None, 'ojn')],        ['lower', 'title', 'upper']),
+    ('romaneto',  [('roman', 'roman'), ('et', 'et'), (None, 'o')],   ['lower', 'title', 'upper']),
+    ('romanetoj', [('roman', 'roman'), ('et', 'et'), (None, 'oj')],  ['lower', 'title', 'upper']),
+    ('romaneton', [('roman', 'roman'), ('et', 'et'), (None, 'on')],  ['lower', 'title', 'upper']),
+    ('romanetojn',[('roman', 'roman'), ('et', 'et'), (None, 'ojn')], ['lower', 'title', 'upper']),
     # ★deven* は**意図的に外した**(第89Rで一度入れて実測で取り消した)。
     #   単独形は京大も de/ven と振る(deveno ×6, devenis ×4, devenaj ×1)が、
     #   **複合語の中では京大自身が deven[出身] を一語根として扱う**(hungardevena ×2)。
@@ -162,6 +179,17 @@ def cased(s, mode):
     if mode == 'title': return s[:1].upper() + s[1:]
     return s.upper()
 
+# ★語根CSVの値と**配信の実態**が食い違う接辞は、配信の多数派に合わせる。
+#   実測(第91R): et は JA 弱小×8,019 / ZH 弱小×7,925 / KO 작음×7,952 が圧倒的多数で、
+#   CSVの 小 / 작은 は少数派。CSVから引き直すと7,900行超と食い違う接辞になる。
+#   京大コーパスも et[弱小] と振っている。 → aĵ(事物×9,834 vs CSV 物品×8) と同型の罠。
+GLOSS_DEPLOYED_OVERRIDE = {
+    'et': {'JA': '弱小', 'ZH': '弱小', 'KO': '작음'},
+}
+def gloss_of(lang, root, csv_map):
+    ov = GLOSS_DEPLOYED_OVERRIDE.get(root)
+    return ov[lang] if ov and lang in ov else csv_map[root]
+
 # ── 語根グロスの在庫確認(1言語でも欠けたらその語を中止) ────────────────
 GL = {}
 for lang in ('JA', 'ZH', 'KO'):
@@ -209,7 +237,8 @@ for lang in ('JA', 'ZH', 'KO'):
 
     rows = []; n_rep = 0
     for n, (w, cp) in enumerate(plan):
-        val = ''.join(seg if r is None else helper.output_format(seg, GL[lang][r], FMT, cw)
+        val = ''.join(seg if r is None
+                      else helper.output_format(seg, gloss_of(lang, r, GL[lang]), FMT, cw)
                       for r, seg in cp)
         # 検証: ルビを剥いだ表層が語形と一致するか
         vis = ''.join(TAG.sub('', m.group(1)) if m else '' for m in [None])  # placeholder
