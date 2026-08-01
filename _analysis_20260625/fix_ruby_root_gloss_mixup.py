@@ -66,6 +66,9 @@ if A.targets:
             'keys': set(c['keys']) if c.get('keys') else None,
             # ★現在値ガード: 指定があれば、その言語の現在値が一致する行だけ触る(fail-closed)
             'guard': c.get('guard') or None,
+            # ★リスト限定: 'GL'/'G2'/'GG' の集合。GL(局部)がCSVを忠実に写しているとき、
+            #   CSV由来の値を GG だけ直して GL/CSV は保全する用途(第98R: firma/ekspon/kvot)。
+            'lists': set(c['lists']) if c.get('lists') else None,
         }
 if not TARGETS:
     raise SystemExit('★TARGETS が空。--targets で裁定結果JSONを渡すこと(機械的一括変換はしない設計)')
@@ -112,6 +115,9 @@ for lang in LANGS:
                 # ★キー限定モード: 指定キー以外は触らない
                 if t['keys'] is not None and e[0].strip() not in t['keys']:
                     skipped[f'{lb[i]}: キー限定の対象外'] += 1; continue
+                # ★リスト限定: 指定リスト以外は触らない
+                if t['lists'] is not None and ('GL', 'G2', 'GG')[li] not in t['lists']:
+                    skipped[f'{lb[i]}: リスト限定の対象外({("GL","G2","GG")[li]})'] += 1; continue
                 # ★現在値ガード: 想定した現在値でなければ触らない(fail-closed)
                 g = t['guard']
                 if g and g.get(lang) is not None and newg[i] != g[lang]:
@@ -196,7 +202,8 @@ if A.report:
     #   「レポートで落ちて適用が走らない」のは事故なので必ず直列化可能な形にする。
     def ser(t):
         return {'now': t['now'], 'new': t['new'], 'src': t['src'],
-                'keys': sorted(t['keys']) if t['keys'] else None, 'guard': t['guard']}
+                'keys': sorted(t['keys']) if t['keys'] else None, 'guard': t['guard'],
+                'lists': sorted(t['lists']) if t.get('lists') else None}
     json.dump({'stat': dict(stat), 'skipped': dict(skipped),
                'targets': {k: ser(v) for k, v in TARGETS.items()},
                'samples': {f'{l}:{r}': v for (l, r), v in samples.items()}},
