@@ -58,8 +58,14 @@ if A.targets:
     for c in conf:
         TARGETS[c['root']] = {
             'now': {'JA': c.get('now', '')},
-            'new': {'JA': c['new_ja'], 'ZH': c['new_zh'], 'KO': c['new_ko']},
+            # ★言語ごとに独立。null/未指定ならその言語は触らない(既に正しい/裁定で却下)
+            'new': {l: c.get('new_' + l.lower()) for l in ('JA', 'ZH', 'KO')},
             'src': c.get('source', ''),
+            # ★キー限定モード: 指定があればそのキーだけを対象にする。
+            #   ルビのベースが語根と一致しない場合に使う(例 romanet 族はベースが roman)。
+            'keys': set(c['keys']) if c.get('keys') else None,
+            # ★現在値ガード: 指定があれば、その言語の現在値が一致する行だけ触る(fail-closed)
+            'guard': c.get('guard') or None,
         }
 if not TARGETS:
     raise SystemExit('★TARGETS が空。--targets で裁定結果JSONを渡すこと(機械的一括変換はしない設計)')
@@ -102,7 +108,14 @@ for lang in LANGS:
                 t = TARGETS[lb[i]]
                 want = t['new'].get(lang)
                 if not want:
-                    skipped[f'{lb[i]}: {lang} の新値が無い'] += 1; continue
+                    skipped[f'{lb[i]}: {lang} は対象外(裁定で据置)'] += 1; continue
+                # ★キー限定モード: 指定キー以外は触らない
+                if t['keys'] is not None and e[0].strip() not in t['keys']:
+                    skipped[f'{lb[i]}: キー限定の対象外'] += 1; continue
+                # ★現在値ガード: 想定した現在値でなければ触らない(fail-closed)
+                g = t['guard']
+                if g and g.get(lang) is not None and newg[i] != g[lang]:
+                    skipped[f'{lb[i]}: {lang} の現在値がガードと違う'] += 1; continue
                 if newg[i] == want: continue
                 newg[i] = want; changed = True
             if not changed:
@@ -178,8 +191,14 @@ for (lang, r0), ss in sorted(samples.items()):
     for k, o, n in ss:
         print(f'   {k}\n     現在 {o}\n     以後 {n}')
 if A.report:
+    # ★TARGETS の 'keys' は set なのでそのままでは JSON 化できない(第96Rで実際に落ちた)。
+    #   幸い report 出力は適用ループより前にあるので部分書き込みは起きなかったが、
+    #   「レポートで落ちて適用が走らない」のは事故なので必ず直列化可能な形にする。
+    def ser(t):
+        return {'now': t['now'], 'new': t['new'], 'src': t['src'],
+                'keys': sorted(t['keys']) if t['keys'] else None, 'guard': t['guard']}
     json.dump({'stat': dict(stat), 'skipped': dict(skipped),
-               'targets': TARGETS,
+               'targets': {k: ser(v) for k, v in TARGETS.items()},
                'samples': {f'{l}:{r}': v for (l, r), v in samples.items()}},
               open(LP(A.report), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 if DRY:
