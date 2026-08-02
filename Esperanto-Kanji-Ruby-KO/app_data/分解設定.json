@@ -20739,6 +20739,106 @@
   ]
  ],
  [
+  "Hannja-ĝi",
+  99000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Asahi",
+  59000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "HKDSE",
+  59000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Mondial",
+  79000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Primico",
+  79000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Sinzyuku-ku",
+  119000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "TK",
+  29000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Waseda-mati",
+  119000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Watanabe",
+  89000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Yae",
+  39000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "EU",
   29000,
   [
@@ -21953,6 +22053,16 @@
   ]
  ],
  [
+  "Chan Sunglong",
+  139000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Chapecó",
   79000,
   [
@@ -22661,6 +22771,16 @@
   ]
  ],
  [
+  "Hasegaŭa Joŝihumi",
+  179000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Hasegaŭa Teru",
   139000,
   [
@@ -23141,6 +23261,16 @@
   ]
  ],
  [
+  "Kato Tokiko",
+  119000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Kawazumi Takaki",
   159000,
   [
@@ -23181,6 +23311,16 @@
   ]
  ],
  [
+  "Kimura Goro Christoph",
+  219000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Kimura Kishiro",
   149000,
   [
@@ -23193,6 +23333,16 @@
  [
   "Kita Ikki",
   99000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Kitagawa Ikuko",
+  149000,
   [
    "ne",
    "atomic_no_split",
@@ -23880,6 +24030,16 @@
   ]
  ],
  [
+  "New York",
+  89000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Nigra Maro",
   109000,
   [
@@ -24079,6 +24239,16 @@
   ]
  ],
  [
+  "Probal Dasgupta",
+  159000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Pu Songling",
   119000,
   [
@@ -24149,8 +24319,38 @@
   ]
  ],
  [
+  "Rabindranath Tagore",
+  199000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Racława",
   79000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Radio Kansai",
+  129000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Radio Nippon",
+  129000,
   [
    "ne",
    "atomic_no_split",
@@ -24369,6 +24569,16 @@
   ]
  ],
  [
+  "Sasaki Takao",
+  129000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Sasaki Teruhiro",
   159000,
   [
@@ -24380,6 +24590,16 @@
  ],
  [
   "Sato Ryusuke",
+  129000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Senda Noriko",
   129000,
   [
    "ne",
@@ -24769,6 +24989,16 @@
   ]
  ],
  [
+  "Tôkyô-to",
+  89000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "UMESAO Tadao",
   129000,
   [
@@ -24978,6 +25208,16 @@
   ]
  ],
  [
+  "Watanabe Katsuyoshi",
+  199000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "Wei Ningna",
   109000,
   [
@@ -25019,6 +25259,16 @@
  [
   "William AULD",
   129000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Witold Hulewicz",
+  159000,
   [
    "ne",
    "atomic_no_split",
@@ -25436,6 +25686,16 @@
   ]
  ],
  [
+  "tel.",
+  49000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
   "vd.",
   39000,
   [
@@ -25565,6 +25825,16 @@
  ],
  [
   "Świętopełek",
+  119000,
+  [
+   "ne",
+   "atomic_no_split",
+   "word_boundary",
+   "case_sensitive"
+  ]
+ ],
+ [
+  "Ŝikoku Goro",
   119000,
   [
    "ne",
@@ -26668,6 +26938,260 @@
   ]
  ],
  [
+  "apud",
+  49000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "dek/ok/jar/ul",
+  109000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "hongkong/an",
+  109000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "hongkong/an/o/-/japan",
+  179000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "kore/o/-/hongkong/an",
+  169000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "nederland/an/o/-/hongkong/an",
+  239000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "miks/deven",
+  99000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "mult/deven/ul",
+  119000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "premi/-/ceremoni",
+  149000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "radio/program",
+  129000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "radio/el/send",
+  119000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "radio/-/el/send",
+  129000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "reprezent",
+  99000,
+  [
+   "verbo_s1",
+   "verbo_s2",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "sam",
+  39000,
+  [
+   "verbo_s1",
+   "verbo_s2",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
+  "ĉin/o/-/japan",
+  109000,
+  [
+   "o",
+   "oj",
+   "on",
+   "ojn",
+   "a",
+   "aj",
+   "an",
+   "ajn",
+   "e",
+   "en",
+   "word_boundary",
+   "ruby_track_only"
+  ]
+ ],
+ [
   "supr/e/n/glis",
   109000,
   [
@@ -27220,6 +27744,17 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RL"
+  ]
+ ],
+ [
+  "Fukuwarai/'",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
+   "ruby_only"
   ]
  ],
  [
@@ -28134,6 +28669,17 @@
    "word_boundary",
    "case_sensitive",
    "typed_roles:RRRL",
+   "ruby_only"
+  ]
+ ],
+ [
+  "Fukuwarai/’",
+  109000,
+  [
+   "ne",
+   "word_boundary",
+   "case_sensitive",
+   "typed_roles:RL",
    "ruby_only"
   ]
  ],
@@ -39816,7 +40362,8 @@
    "ne",
    "word_boundary",
    "case_sensitive",
-   "typed_roles:RRRL"
+   "typed_roles:RRRL",
+   "kanji_track_only"
   ]
  ],
  [

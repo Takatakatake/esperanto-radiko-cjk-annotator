@@ -37,6 +37,7 @@ import phase598_technical_on_policy as phase598_policy
 import phase598_technical_on_activation as phase598_activation
 import phase619_ordinary_ruby_policy as phase619_policy
 import phase619_ordinary_ruby_activation as phase619_activation
+import r88_mukoz_ruby_policy as r88_mukoz_policy
 
 
 RUBY_RE = re.compile(r"<ruby>(.*?)<rt[^>]*>.*?</rt></ruby>", re.DOTALL)
@@ -176,11 +177,96 @@ class GenerationRuleTests(unittest.TestCase):
             self.assertEqual(new_exact[0][0], " sportino ", language)
             self.assertEqual(new_exact[1][0], "sporti", language)
 
+    def test_automatic_overlay_is_limited_to_observed_case_spelling(self):
+        variants = {
+            "ruby": [
+                ["watanabe", "LOWER"],
+                ["WATANABE", "UPPER"],
+                ["Watanabe", "TITLE"],
+            ],
+        }
+        for language in ("JA", "ZH", "KO"):
+            overlay = _overlay_module(
+                ROOT / f"Esperanto-Kanji-Ruby-{language}", language,
+            )
+            with (
+                mock.patch.object(
+                    overlay, "find_stranded_words", return_value={"watanabe"},
+                ),
+                mock.patch.object(
+                    overlay, "autofix_decomp", return_value="watanabe",
+                ),
+                mock.patch.object(
+                    overlay, "build_correction", return_value=variants,
+                ),
+            ):
+                entries = overlay.auto_overlay_entries(
+                    "ignored first-pass markup", "ignored-data-dir", "ruby",
+                )
+            self.assertEqual(
+                [entry[0] for entry in entries], ["watanabe"], language,
+            )
+
+            with mock.patch.object(
+                overlay, "find_stranded_words", return_value={"Watanabe"},
+            ), mock.patch.object(
+                overlay, "autofix_decomp", return_value="watanabe",
+            ), mock.patch.object(
+                overlay, "build_correction", return_value=variants,
+            ):
+                entries = overlay.auto_overlay_entries(
+                    "ignored first-pass markup", "ignored-data-dir", "ruby",
+                )
+            self.assertEqual(
+                [entry[0] for entry in entries], ["Watanabe"], language,
+            )
+
+            with mock.patch.object(
+                overlay, "find_stranded_words", return_value={"WATANABE"},
+            ), mock.patch.object(
+                overlay, "autofix_decomp", return_value="watanabe",
+            ), mock.patch.object(
+                overlay, "build_correction", return_value=variants,
+            ):
+                entries = overlay.auto_overlay_entries(
+                    "ignored first-pass markup", "ignored-data-dir", "ruby",
+                )
+            self.assertEqual(
+                [entry[0] for entry in entries], ["WATANABE"], language,
+            )
+
     def test_explicit_typed_ruby_keeps_authored_apostrophe_atomic(self):
         self.assertEqual(
             canonical.split_typed_ruby_piece_punctuation("klak'", "カチ音'"),
             ("klak'", "カチ音'", ""),
         )
+
+    def test_managed_typed_exact_rule_gets_only_its_curly_apostrophe_alias(self):
+        self.assertEqual(
+            corpus_data.MANAGED_TYPED_CURLY_APOSTROPHE_SURFACES,
+            {"Fukuwarai’"},
+        )
+        canonical_spec = corpus_data.MANAGED_TYPED_EXACT_TARGETS[
+            "Fukuwarai'"
+        ]
+        curly_spec = corpus_data.MANAGED_TYPED_EXACT_TARGETS["Fukuwarai’"]
+        self.assertEqual(
+            curly_spec,
+            {**canonical_spec, "target": "Fukuwarai/’"},
+        )
+        self.assertEqual(
+            corpus_data.MANAGED_TYPED_CURLY_APOSTROPHE_CONTEXT_KEYS,
+            {("Fukuwarai’", 0, "Fukuwarai")},
+        )
+        self.assertEqual(
+            corpus_data.TYPED_CONTEXT_GLOSSES[
+                ("Fukuwarai’", 0, "Fukuwarai")
+            ],
+            corpus_data.TYPED_CONTEXT_GLOSSES[
+                ("Fukuwarai'", 0, "Fukuwarai")
+            ],
+        )
+        self.assertNotIn("fukuwarai’", corpus_data.MANAGED_TYPED_EXACT_TARGETS)
 
     def test_typed_annotation_failure_policy_distinguishes_ruby_and_kanji(self):
         source = (HERE / "gen_replacement.py").read_text(encoding="utf-8")
@@ -2732,11 +2818,39 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 self.assertEqual(
                     phase598_ruby_only, {"giga/elektron/volt/o"},
                 )
+                r94_canonical_ruby_only = {
+                    spec["target"]
+                    for spec in corpus_data.R94_RESIDUAL_POLICY[
+                        "managed_typed_exact_targets"
+                    ].values()
+                    if spec.get("ruby_only") is True
+                }
+                self.assertEqual(
+                    r94_canonical_ruby_only, {"Fukuwarai/'"}
+                )
+                r94_curly_ruby_only = {
+                    corpus_data.MANAGED_TYPED_EXACT_TARGETS[surface][
+                        "target"
+                    ]
+                    for surface in (
+                        corpus_data.MANAGED_TYPED_CURLY_APOSTROPHE_SURFACES
+                    )
+                    if corpus_data.MANAGED_TYPED_EXACT_TARGETS[surface].get(
+                        "ruby_only"
+                    ) is True
+                }
+                self.assertEqual(
+                    r94_curly_ruby_only, {"Fukuwarai/’"}
+                )
+                r94_ruby_only = (
+                    r94_canonical_ruby_only | r94_curly_ruby_only
+                )
                 self.assertEqual(
                     {row[0] for row in ruby_only_rows},
                     {
                         "promil/o", *phase558_ruby_only,
                         *phase598_ruby_only,
+                        *r94_ruby_only,
                     },
                     language,
                 )
@@ -2808,14 +2922,44 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                 #   mukozo   -> muk[粘液]oz[膜]o      ← 食い違い
                 # となるため、Phase 619 の封印されたポリシーは変えず、同じ注釈
                 # 名前空間に1エントリだけ重ねて解消した(訳語は mukoz/aĵ から継承)。
-                r88_ruby_track = {"mukoz"}
+                r88_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in r88_mukoz_policy.managed_morph_targets().values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(r88_ruby_track, {"mukoz"})
+                r94_ruby_track = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in corpus_data.R94_RESIDUAL_POLICY[
+                        "managed_morph_targets"
+                    ].values()
+                    if spec.get("ruby_track_only") is True
+                }
+                self.assertEqual(r94_ruby_track, {
+                    "apud", "dek/ok/jar/ul", "hongkong/an",
+                    "hongkong/an/o/-/japan", "kore/o/-/hongkong/an",
+                    "miks/deven", "mult/deven/ul",
+                    "nederland/an/o/-/hongkong/an", "premi/-/ceremoni",
+                    "radio/-/el/send", "radio/el/send", "radio/program",
+                    "reprezent", "sam", "ĉin/o/-/japan",
+                })
+                r94_ruby_verbs = {
+                    spec["target"].rsplit("/", 1)[0]
+                    for spec in corpus_data.R94_RESIDUAL_POLICY[
+                        "managed_morph_targets"
+                    ].values()
+                    if spec.get("ruby_track_only") is True
+                    and spec["target"].rsplit("/", 1)[-1]
+                    in {"i", "u", "as", "is", "os", "us"}
+                }
+                self.assertEqual(r94_ruby_verbs, {"reprezent", "sam"})
                 self.assertEqual(
                     {row[0] for row in ruby_track_rows},
                     {
                         "novjork/an", *strict_ruby_track,
                         *expected_phase532_ruby_track, *phase558_ruby_track,
                         *phase598_ruby_track, *phase619_ruby_track,
-                        *r88_ruby_track,
+                        *r88_ruby_track, *r94_ruby_track,
                     },
                 )
                 for row in ruby_track_rows:
@@ -2824,6 +2968,16 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                         self.assertTrue(any(
                             ending in row[2] for ending in _PARADIGM_ENDINGS
                         ))
+                        continue
+                    if row[0] in r94_ruby_track:
+                        expected_actions = {
+                            "word_boundary", "ruby_track_only",
+                        }
+                        if row[0] in r94_ruby_verbs:
+                            expected_actions.update({"verbo_s1", "verbo_s2"})
+                        else:
+                            expected_actions.update(_PARADIGM_ENDINGS)
+                        self.assertEqual(set(row[2]), expected_actions)
                         continue
                     if row[0] in (
                         expected_phase532_ruby_track
@@ -2854,12 +3008,37 @@ class DeployedRubyRegressionTests(unittest.TestCase):
                     if isinstance(row, list) and len(row) == 3
                     and "kanji_track_only" in row[2]
                 ]
-                self.assertEqual(len(kanji_track_rows), 1, language)
-                self.assertEqual(kanji_track_rows[0][0], "pro/mil")
-                self.assertIn("word_boundary", kanji_track_rows[0][2])
-                self.assertTrue(
-                    set(_PARADIGM_ENDINGS).issubset(kanji_track_rows[0][2])
+                r94_kanji_track = {
+                    partition["effective_entry"]["target"]:
+                        partition["effective_entry"]
+                    for partition in corpus_data.R94_RESIDUAL_POLICY[
+                        "strict_track_partitions"
+                    ].values()
+                    if partition["effective_entry"].get("kanji_track_only")
+                    is True
+                }
+                self.assertEqual(set(r94_kanji_track), {"miks/de/ven/a"})
+                self.assertEqual(
+                    {row[0] for row in kanji_track_rows},
+                    {"pro/mil", *r94_kanji_track},
+                    language,
                 )
+                for row in kanji_track_rows:
+                    self.assertIn("word_boundary", row[2])
+                    if row[0] == "pro/mil":
+                        self.assertTrue(
+                            set(_PARADIGM_ENDINGS).issubset(row[2])
+                        )
+                        continue
+                    entry = r94_kanji_track[row[0]]
+                    self.assertEqual(
+                        set(row[2]),
+                        {
+                            "ne", "word_boundary", "case_sensitive",
+                            f"typed_roles:{entry['typed_roles']}",
+                            "kanji_track_only",
+                        },
+                    )
                 self.assertFalse(any(
                     {"ruby_track_only", "kanji_track_only"}.issubset(row[2])
                     or (

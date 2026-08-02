@@ -6,7 +6,11 @@
 /_analysis_20260625/no_worsening_audit.py text eol=lf
 /_analysis_20260625/check_canonical_corpus_surfaces.py text eol=lf
 /_analysis_20260625/out/_audit_no_worsening.json text eol=lf
-/_analysis_20260625/out/_audit_canonical_corpus_surfaces.json text eol=lf
+/_analysis_20260625/out/_audit_no_worsening_current_only.json text eol=lf
+/_analysis_20260625/out/_audit_no_worsening_current_e373.json text eol=lf
+/_analysis_20260625/out/_audit_no_worsening_references_dd55318.json text eol=lf
+/_analysis_20260625/out/_audit_no_worsening_post_r93*.json text eol=lf
+/_analysis_20260625/out/_audit_canonical_corpus_surfaces*.json text eol=lf
 /_analysis_20260625/out/confirmed_tier30.json text eol=lf
 /_analysis_20260625/out/word_anno_*.json text eol=lf
 /_analysis_20260625/out/word_kanji.json text eol=lf

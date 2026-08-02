@@ -104,6 +104,16 @@
       "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
     },
     {
+      "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+      "token": "Kunrei",
+      "lines": [
+        113
+      ],
+      "expected_count": 1,
+      "category": "romanization_label",
+      "reason": "Label introducing the Kunrei-shiki romanization of the adjacent Japanese name, not Esperanto prose."
+    },
+    {
       "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
       "token": "BY-SA",
       "lines": [
@@ -756,7 +766,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "Guk-kon",
       "lines": [
-        3136
+        3133
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -766,7 +776,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "Gukkon",
       "lines": [
-        3143
+        3140
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -776,7 +786,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "Kadó",
       "lines": [
-        3875
+        3872
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -786,7 +796,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "Malamikete",
       "lines": [
-        3874
+        3871
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -796,7 +806,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "a'n",
       "lines": [
-        11132
+        11124
       ],
       "expected_count": 1,
       "category": "grammar_or_pronunciation_notation",
@@ -806,7 +816,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ac",
       "lines": [
-        3769
+        3766
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -816,7 +826,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "aca",
       "lines": [
-        3770
+        3767
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -826,7 +836,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ad",
       "lines": [
-        3769
+        3766
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -836,7 +846,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ba",
       "lines": [
-        3769
+        3766
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -846,7 +856,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "da",
       "lines": [
-        3769
+        3766
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -856,8 +866,8 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ec",
       "lines": [
-        3770,
-        3773
+        3767,
+        3770
       ],
       "expected_count": 2,
       "category": "foreign_or_constructed_example",
@@ -867,7 +877,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ed",
       "lines": [
-        3770
+        3767
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -877,7 +887,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "in",
       "lines": [
-        3876
+        3873
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -887,7 +897,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "komenius",
       "lines": [
-        6117
+        6109
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -897,7 +907,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "las",
       "lines": [
-        3874
+        3871
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -907,7 +917,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "loo",
       "lines": [
-        6859
+        6851
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -917,7 +927,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "lui",
       "lines": [
-        6656
+        6648
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -927,7 +937,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "temp",
       "lines": [
-        3875
+        3872
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -937,7 +947,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "tot",
       "lines": [
-        3876
+        3873
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -947,7 +957,7 @@
       "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
       "token": "ĉe",
       "lines": [
-        7212
+        7204
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -1017,7 +1027,7 @@
       "path": "lernolibroj/fujimaki/fujimaki5.html",
       "token": "Guk-kon",
       "lines": [
-        494
+        491
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -1027,7 +1037,7 @@
       "path": "lernolibroj/fujimaki/fujimaki5.html",
       "token": "Gukkon",
       "lines": [
-        501
+        498
       ],
       "expected_count": 1,
       "category": "foreign_or_constructed_example",
@@ -1168,7 +1178,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Foundation",
       "lines": [
-        360
+        330
       ],
       "expected_count": 1,
       "category": "source_credit",
@@ -1178,7 +1188,27 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Fūsui",
       "lines": [
-        285
+        260
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Ki",
+      "lines": [
+        260
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_term",
+      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+      "token": "Qi",
+      "lines": [
+        260
       ],
       "expected_count": 1,
       "category": "quoted_source_term",
@@ -1188,7 +1218,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Jo",
       "lines": [
-        465
+        417
       ],
       "expected_count": 2,
       "category": "source_credit",
@@ -1196,19 +1226,9 @@
     },
     {
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-      "token": "Ki",
-      "lines": [
-        285
-      ],
-      "expected_count": 1,
-      "category": "quoted_source_term",
-      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
-    },
-    {
-      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Lecture",
       "lines": [
-        358
+        328
       ],
       "expected_count": 1,
       "category": "source_credit",
@@ -1218,9 +1238,9 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Nobel",
       "lines": [
-        358,
-        360,
-        465
+        328,
+        330,
+        417
       ],
       "expected_count": 4,
       "category": "source_credit",
@@ -1230,7 +1250,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Outreach",
       "lines": [
-        465
+        417
       ],
       "expected_count": 1,
       "category": "source_credit",
@@ -1240,7 +1260,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Peace",
       "lines": [
-        465
+        417
       ],
       "expected_count": 1,
       "category": "source_credit",
@@ -1250,7 +1270,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Prize",
       "lines": [
-        465
+        417
       ],
       "expected_count": 2,
       "category": "source_credit",
@@ -1258,19 +1278,9 @@
     },
     {
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-      "token": "Qi",
-      "lines": [
-        285
-      ],
-      "expected_count": 1,
-      "category": "quoted_source_term",
-      "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
-    },
-    {
-      "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "Straube",
       "lines": [
-        465
+        417
       ],
       "expected_count": 2,
       "category": "source_credit",
@@ -1280,7 +1290,7 @@
       "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
       "token": "The",
       "lines": [
-        360
+        330
       ],
       "expected_count": 1,
       "category": "source_credit",
@@ -1689,9 +1699,39 @@
     },
     {
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Basi",
+      "lines": [
+        479
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not Esperanto prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Dim",
+      "lines": [
+        599
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Cantonese dish name quoted with its Chinese spelling, not Esperanto prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "Sum",
+      "lines": [
+        599
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Cantonese dish name quoted with its Chinese spelling, not Esperanto prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "JP",
       "lines": [
-        680
+        678
       ],
       "expected_count": 1,
       "category": "postal_address",
@@ -1701,7 +1741,7 @@
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "Sinzyuku-ku",
       "lines": [
-        680
+        678
       ],
       "expected_count": 1,
       "category": "postal_address",
@@ -1721,7 +1761,7 @@
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "Tôkyô-to",
       "lines": [
-        680
+        678
       ],
       "expected_count": 1,
       "category": "postal_address",
@@ -1731,7 +1771,7 @@
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "Waseda-mati",
       "lines": [
-        680
+        678
       ],
       "expected_count": 1,
       "category": "postal_address",
@@ -1741,17 +1781,38 @@
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "goi",
       "lines": [
-        444
+        444,
+        479
       ],
-      "expected_count": 1,
+      "expected_count": 2,
       "category": "quoted_source_language",
       "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
     },
     {
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "jau",
+      "lines": [
+        479
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not Esperanto prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+      "token": "lok",
+      "lines": [
+        479
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not the Esperanto root lok."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "tea",
       "lines": [
-        554
+        552
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -1761,7 +1822,7 @@
       "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
       "token": "tel",
       "lines": [
-        680
+        678
       ],
       "expected_count": 1,
       "category": "postal_address",
@@ -1979,10 +2040,80 @@
       "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
     },
     {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "JP",
+      "lines": [
+        314
+      ],
+      "expected_count": 1,
+      "category": "postal_address",
+      "reason": "Country prefix in the publisher's postal address, outside the annotated article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "La",
+      "lines": [
+        115
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "Orienta",
+      "lines": [
+        115
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "RO",
+      "lines": [
+        115
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "Revuo",
+      "lines": [
+        115
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+    },
+    {
+      "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+      "token": "sept",
+      "lines": [
+        115
+      ],
+      "expected_count": 1,
+      "category": "source_credit",
+      "reason": "Issue-range abbreviation in the Japanese source-credit line, not article prose."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+      "token": "Idaenam",
+      "lines": [
+        1787
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Korean sociological term quoted with its Hangul spelling, not Esperanto prose."
+    },
+    {
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "ale",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -1992,7 +2123,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "dol",
       "lines": [
-        471
+        1105
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2002,7 +2133,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "guan",
       "lines": [
-        716
+        1533
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2012,7 +2143,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "jan",
       "lines": [
-        557
+        1272
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2022,7 +2153,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "luka",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2032,7 +2163,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "mute",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2042,7 +2173,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
       "token": "sike",
       "lines": [
-        569
+        1299
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2050,9 +2181,19 @@
     },
     {
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+      "token": "Idaenam",
+      "lines": [
+        1787
+      ],
+      "expected_count": 1,
+      "category": "quoted_source_language",
+      "reason": "Korean sociological term quoted with its Hangul spelling, not Esperanto prose."
+    },
+    {
+      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "ale",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2062,7 +2203,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "dol",
       "lines": [
-        471
+        1108
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2072,7 +2213,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "guan",
       "lines": [
-        716
+        1533
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2082,7 +2223,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "jan",
       "lines": [
-        557
+        1275
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2092,7 +2233,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "luka",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2102,7 +2243,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "mute",
       "lines": [
-        584
+        1341
       ],
       "expected_count": 1,
       "category": "quoted_source_language",
@@ -2112,7 +2253,7 @@
       "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
       "token": "sike",
       "lines": [
-        569
+        1299
       ],
       "expected_count": 1,
       "category": "quoted_source_language",

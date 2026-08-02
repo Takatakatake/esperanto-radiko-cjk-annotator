@@ -1,0 +1,6178 @@
+{
+ "manifest_schema_version": 1,
+ "reference_schema_version": 5,
+ "raw_conflicts_sha256": "5FEAD5FA9E21065B204FCC0C790B7460AADC9A0B35A9DD9D03836812DC65A61B",
+ "entries": [
+  {
+   "surface": "Alberto",
+   "options": [
+    {
+     "expected": "Albert/o",
+     "signature": {
+      "reconstruction": "Alberto",
+      "spans": [
+       {
+        "text": "Albert",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Alberto",
+     "signature": {
+      "reconstruction": "Alberto",
+      "spans": [
+       {
+        "text": "Alberto",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 18
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Alberto",
+     "spans": [
+      {
+       "text": "Albert",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Alberto",
+     "spans": [
+      {
+       "text": "Alberto",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Anjo",
+   "options": [
+    {
+     "expected": "Anj/o",
+     "signature": {
+      "reconstruction": "Anjo",
+      "spans": [
+       {
+        "text": "Anj",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Anjo",
+     "signature": {
+      "reconstruction": "Anjo",
+      "spans": [
+       {
+        "text": "Anjo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 56
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Anjo",
+     "spans": [
+      {
+       "text": "Anj",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Anjo",
+     "spans": [
+      {
+       "text": "Anjo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Antananarivo",
+   "options": [
+    {
+     "expected": "Antananariv/o",
+     "signature": {
+      "reconstruction": "Antananarivo",
+      "spans": [
+       {
+        "text": "Antananariv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Antananarivo",
+     "signature": {
+      "reconstruction": "Antananarivo",
+      "spans": [
+       {
+        "text": "Antananarivo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Antananarivo",
+     "spans": [
+      {
+       "text": "Antananariv",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Antananarivo",
+     "spans": [
+      {
+       "text": "Antananarivo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Aŭstrio",
+   "options": [
+    {
+     "expected": "Aŭstr/i/o",
+     "signature": {
+      "reconstruction": "Aŭstrio",
+      "spans": [
+       {
+        "text": "Aŭstr",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Aŭstri/o",
+     "signature": {
+      "reconstruction": "Aŭstrio",
+      "spans": [
+       {
+        "text": "Aŭstri",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 18
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Aŭstrio",
+     "spans": [
+      {
+       "text": "Aŭstri",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_geographical_root",
+   "reason": "The Kyoto corpus and the project guide's special treatment of country-name endings support the HTML analysis 'Aŭstri/o'; the learner-gold alternative is not retained for this surface."
+  },
+  {
+   "surface": "Aŭstrio-Hungario",
+   "options": [
+    {
+     "expected": "Aŭstr/i/o-Hungar/i/o",
+     "signature": {
+      "reconstruction": "Aŭstrio-Hungario",
+      "spans": [
+       {
+        "text": "Aŭstr",
+        "ruby": true
+       },
+       {
+        "text": "io-",
+        "ruby": false
+       },
+       {
+        "text": "Hungar",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Aŭstri/o-/Hungar/io",
+     "signature": {
+      "reconstruction": "Aŭstrio-Hungario",
+      "spans": [
+       {
+        "text": "Aŭstri",
+        "ruby": true
+       },
+       {
+        "text": "o-",
+        "ruby": false
+       },
+       {
+        "text": "Hungar",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Aŭstrio-Hungario",
+     "spans": [
+      {
+       "text": "Aŭstri",
+       "ruby": true
+      },
+      {
+       "text": "o-",
+       "ruby": false
+      },
+      {
+       "text": "Hungar",
+       "ruby": true
+      },
+      {
+       "text": "io",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_geographical_root",
+   "reason": "The Kyoto corpus and the project guide's special treatment of country-name endings support the HTML analysis 'Aŭstri/o-/Hungar/io'; the learner-gold alternative is not retained for this surface."
+  },
+  {
+   "surface": "Brno",
+   "options": [
+    {
+     "expected": "Brn/o",
+     "signature": {
+      "reconstruction": "Brno",
+      "spans": [
+       {
+        "text": "Brn",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Brno",
+     "signature": {
+      "reconstruction": "Brno",
+      "spans": [
+       {
+        "text": "Brno",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Brno",
+     "spans": [
+      {
+       "text": "Brn",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Brno",
+     "spans": [
+      {
+       "text": "Brno",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Burgundio",
+   "options": [
+    {
+     "expected": "Burgund/i/o",
+     "signature": {
+      "reconstruction": "Burgundio",
+      "spans": [
+       {
+        "text": "Burgund",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Burgundi/o",
+     "signature": {
+      "reconstruction": "Burgundio",
+      "spans": [
+       {
+        "text": "Burgundi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Burgundio",
+     "spans": [
+      {
+       "text": "Burgundi",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_geographical_root",
+   "reason": "The Kyoto corpus and the project guide's special treatment of country-name endings support the HTML analysis 'Burgundi/o'; the learner-gold alternative is not retained for this surface."
+  },
+  {
+   "surface": "Eminjo",
+   "options": [
+    {
+     "expected": "Eminj/o",
+     "signature": {
+      "reconstruction": "Eminjo",
+      "spans": [
+       {
+        "text": "Eminj",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Eminjo",
+     "signature": {
+      "reconstruction": "Eminjo",
+      "spans": [
+       {
+        "text": "Eminjo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 7
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Eminjo",
+     "spans": [
+      {
+       "text": "Eminj",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Eminjo",
+     "spans": [
+      {
+       "text": "Eminjo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Eneado",
+   "options": [
+    {
+     "expected": "Ene/ad/o",
+     "signature": {
+      "reconstruction": "Eneado",
+      "spans": [
+       {
+        "text": "Ene",
+        "ruby": true
+       },
+       {
+        "text": "ad",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Enead/o",
+     "signature": {
+      "reconstruction": "Eneado",
+      "spans": [
+       {
+        "text": "Enead",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Eneado",
+     "spans": [
+      {
+       "text": "Enead",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'Enead/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "Esperanto-Domo",
+   "options": [
+    {
+     "expected": "Esperant/o-/Dom/o",
+     "signature": {
+      "reconstruction": "Esperanto-Domo",
+      "spans": [
+       {
+        "text": "Esperant",
+        "ruby": true
+       },
+       {
+        "text": "o-",
+        "ruby": false
+       },
+       {
+        "text": "Dom",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 3
+     }
+    },
+    {
+     "expected": "Esperanto-Domo",
+     "signature": {
+      "reconstruction": "Esperanto-Domo",
+      "spans": [
+       {
+        "text": "Esperanto-Domo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Esperanto-Domo",
+     "spans": [
+      {
+       "text": "Esperant",
+       "ruby": true
+      },
+      {
+       "text": "o-",
+       "ruby": false
+      },
+      {
+       "text": "Dom",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Esperanto-Domo",
+     "spans": [
+      {
+       "text": "Esperanto-Domo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "named_entity_or_compositional_reading",
+   "reason": "The corpus attests both an atomic title/institution reading and a transparent Esperanto compositional reading; entity context determines the typed signature."
+  },
+  {
+   "surface": "Esperanto-Societo",
+   "options": [
+    {
+     "expected": "Esperant/o-/Societ/o",
+     "signature": {
+      "reconstruction": "Esperanto-Societo",
+      "spans": [
+       {
+        "text": "Esperant",
+        "ruby": true
+       },
+       {
+        "text": "o-",
+        "ruby": false
+       },
+       {
+        "text": "Societ",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 11
+     }
+    },
+    {
+     "expected": "Esperanto-Societo",
+     "signature": {
+      "reconstruction": "Esperanto-Societo",
+      "spans": [
+       {
+        "text": "Esperanto-Societo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Esperanto-Societo",
+     "spans": [
+      {
+       "text": "Esperant",
+       "ruby": true
+      },
+      {
+       "text": "o-",
+       "ruby": false
+      },
+      {
+       "text": "Societ",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Esperanto-Societo",
+     "spans": [
+      {
+       "text": "Esperanto-Societo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "named_entity_or_compositional_reading",
+   "reason": "The corpus attests both an atomic title/institution reading and a transparent Esperanto compositional reading; entity context determines the typed signature."
+  },
+  {
+   "surface": "Eva",
+   "options": [
+    {
+     "expected": "Ev/a",
+     "signature": {
+      "reconstruction": "Eva",
+      "spans": [
+       {
+        "text": "Ev",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Eva",
+     "signature": {
+      "reconstruction": "Eva",
+      "spans": [
+       {
+        "text": "Eva",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Eva",
+     "spans": [
+      {
+       "text": "Ev",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Eva",
+     "spans": [
+      {
+       "text": "Eva",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Frederiko",
+   "options": [
+    {
+     "expected": "Frederik/o",
+     "signature": {
+      "reconstruction": "Frederiko",
+      "spans": [
+       {
+        "text": "Frederik",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Frederiko",
+     "signature": {
+      "reconstruction": "Frederiko",
+      "spans": [
+       {
+        "text": "Frederiko",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Frederiko",
+     "spans": [
+      {
+       "text": "Frederik",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Frederiko",
+     "spans": [
+      {
+       "text": "Frederiko",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Gerda",
+   "options": [
+    {
+     "expected": "Gerd/a",
+     "signature": {
+      "reconstruction": "Gerda",
+      "spans": [
+       {
+        "text": "Gerd",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Gerda",
+     "signature": {
+      "reconstruction": "Gerda",
+      "spans": [
+       {
+        "text": "Gerda",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 113
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Gerda",
+     "spans": [
+      {
+       "text": "Gerd",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Gerda",
+     "spans": [
+      {
+       "text": "Gerda",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Gustavo",
+   "options": [
+    {
+     "expected": "Gustav/o",
+     "signature": {
+      "reconstruction": "Gustavo",
+      "spans": [
+       {
+        "text": "Gustav",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Gustavo",
+     "signature": {
+      "reconstruction": "Gustavo",
+      "spans": [
+       {
+        "text": "Gustavo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Gustavo",
+     "spans": [
+      {
+       "text": "Gustav",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Gustavo",
+     "spans": [
+      {
+       "text": "Gustavo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Henriko",
+   "options": [
+    {
+     "expected": "Henrik/o",
+     "signature": {
+      "reconstruction": "Henriko",
+      "spans": [
+       {
+        "text": "Henrik",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Henriko",
+     "signature": {
+      "reconstruction": "Henriko",
+      "spans": [
+       {
+        "text": "Henriko",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Henriko",
+     "spans": [
+      {
+       "text": "Henrik",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Henriko",
+     "spans": [
+      {
+       "text": "Henriko",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Hirundo",
+   "options": [
+    {
+     "expected": "Hirund/o",
+     "signature": {
+      "reconstruction": "Hirundo",
+      "spans": [
+       {
+        "text": "Hirund",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 3
+     }
+    },
+    {
+     "expected": "Hirundo",
+     "signature": {
+      "reconstruction": "Hirundo",
+      "spans": [
+       {
+        "text": "Hirundo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Hirundo",
+     "spans": [
+      {
+       "text": "Hirund",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Hirundo",
+     "spans": [
+      {
+       "text": "Hirundo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "named_entity_or_compositional_reading",
+   "reason": "The corpus attests both an atomic title/institution reading and a transparent Esperanto compositional reading; entity context determines the typed signature."
+  },
+  {
+   "surface": "Ido",
+   "options": [
+    {
+     "expected": "Id/o",
+     "signature": {
+      "reconstruction": "Ido",
+      "spans": [
+       {
+        "text": "Id",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Ido",
+     "signature": {
+      "reconstruction": "Ido",
+      "spans": [
+       {
+        "text": "Ido",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 14
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Ido",
+     "spans": [
+      {
+       "text": "Id",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Ido",
+     "spans": [
+      {
+       "text": "Ido",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Inocento",
+   "options": [
+    {
+     "expected": "Inocent/o",
+     "signature": {
+      "reconstruction": "Inocento",
+      "spans": [
+       {
+        "text": "Inocent",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Inocento",
+     "signature": {
+      "reconstruction": "Inocento",
+      "spans": [
+       {
+        "text": "Inocento",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Inocento",
+     "spans": [
+      {
+       "text": "Inocent",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Inocento",
+     "spans": [
+      {
+       "text": "Inocento",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Ivano",
+   "options": [
+    {
+     "expected": "Ivan/o",
+     "signature": {
+      "reconstruction": "Ivano",
+      "spans": [
+       {
+        "text": "Ivan",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Ivano",
+     "signature": {
+      "reconstruction": "Ivano",
+      "spans": [
+       {
+        "text": "Ivano",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 12
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Ivano",
+     "spans": [
+      {
+       "text": "Ivan",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Ivano",
+     "spans": [
+      {
+       "text": "Ivano",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Ivo",
+   "options": [
+    {
+     "expected": "Iv/o",
+     "signature": {
+      "reconstruction": "Ivo",
+      "spans": [
+       {
+        "text": "Iv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Ivo",
+     "signature": {
+      "reconstruction": "Ivo",
+      "spans": [
+       {
+        "text": "Ivo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 62
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Ivo",
+     "spans": [
+      {
+       "text": "Iv",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Ivo",
+     "spans": [
+      {
+       "text": "Ivo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Jakobo",
+   "options": [
+    {
+     "expected": "Jakob/o",
+     "signature": {
+      "reconstruction": "Jakobo",
+      "spans": [
+       {
+        "text": "Jakob",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Jakobo",
+     "signature": {
+      "reconstruction": "Jakobo",
+      "spans": [
+       {
+        "text": "Jakobo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Jakobo",
+     "spans": [
+      {
+       "text": "Jakob",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Jakobo",
+     "spans": [
+      {
+       "text": "Jakobo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Joĉjo",
+   "options": [
+    {
+     "expected": "Joĉj/o",
+     "signature": {
+      "reconstruction": "Joĉjo",
+      "spans": [
+       {
+        "text": "Joĉj",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Joĉjo",
+     "signature": {
+      "reconstruction": "Joĉjo",
+      "spans": [
+       {
+        "text": "Joĉjo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 10
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Joĉjo",
+     "spans": [
+      {
+       "text": "Joĉj",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Joĉjo",
+     "spans": [
+      {
+       "text": "Joĉjo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Kana",
+   "options": [
+    {
+     "expected": "Kan/a",
+     "signature": {
+      "reconstruction": "Kana",
+      "spans": [
+       {
+        "text": "Kan",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Kana",
+     "signature": {
+      "reconstruction": "Kana",
+      "spans": [
+       {
+        "text": "Kana",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Kana",
+     "spans": [
+      {
+       "text": "Kan",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Kana",
+     "spans": [
+      {
+       "text": "Kana",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Karolo",
+   "options": [
+    {
+     "expected": "Karol/o",
+     "signature": {
+      "reconstruction": "Karolo",
+      "spans": [
+       {
+        "text": "Karol",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Karolo",
+     "signature": {
+      "reconstruction": "Karolo",
+      "spans": [
+       {
+        "text": "Karolo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Karolo",
+     "spans": [
+      {
+       "text": "Karol",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Karolo",
+     "spans": [
+      {
+       "text": "Karolo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Kazimiro",
+   "options": [
+    {
+     "expected": "Kazimir/o",
+     "signature": {
+      "reconstruction": "Kazimiro",
+      "spans": [
+       {
+        "text": "Kazimir",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Kazimiro",
+     "signature": {
+      "reconstruction": "Kazimiro",
+      "spans": [
+       {
+        "text": "Kazimiro",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Kazimiro",
+     "spans": [
+      {
+       "text": "Kazimir",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Kazimiro",
+     "spans": [
+      {
+       "text": "Kazimiro",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Kioto",
+   "options": [
+    {
+     "expected": "Kiot/o",
+     "signature": {
+      "reconstruction": "Kioto",
+      "spans": [
+       {
+        "text": "Kiot",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Kioto",
+     "signature": {
+      "reconstruction": "Kioto",
+      "spans": [
+       {
+        "text": "Kioto",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 31
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Kioto",
+     "spans": [
+      {
+       "text": "Kiot",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Kioto",
+     "spans": [
+      {
+       "text": "Kioto",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Konfuceo",
+   "options": [
+    {
+     "expected": "Konfuce/o",
+     "signature": {
+      "reconstruction": "Konfuceo",
+      "spans": [
+       {
+        "text": "Konfuce",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Konfuceo",
+     "signature": {
+      "reconstruction": "Konfuceo",
+      "spans": [
+       {
+        "text": "Konfuceo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 7
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Konfuceo",
+     "spans": [
+      {
+       "text": "Konfuce",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Konfuceo",
+     "spans": [
+      {
+       "text": "Konfuceo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Kongo",
+   "options": [
+    {
+     "expected": "Kong/o",
+     "signature": {
+      "reconstruction": "Kongo",
+      "spans": [
+       {
+        "text": "Kong",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Kongo",
+     "signature": {
+      "reconstruction": "Kongo",
+      "spans": [
+       {
+        "text": "Kongo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Kongo",
+     "spans": [
+      {
+       "text": "Kong",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Kongo",
+     "spans": [
+      {
+       "text": "Kongo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Kontakto",
+   "options": [
+    {
+     "expected": "Kontakt/o",
+     "signature": {
+      "reconstruction": "Kontakto",
+      "spans": [
+       {
+        "text": "Kontakt",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    },
+    {
+     "expected": "Kontakto",
+     "signature": {
+      "reconstruction": "Kontakto",
+      "spans": [
+       {
+        "text": "Kontakto",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 24
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Kontakto",
+     "spans": [
+      {
+       "text": "Kontakt",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Kontakto",
+     "spans": [
+      {
+       "text": "Kontakto",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "contextual_homograph",
+   "reason": "Both the ordinary lexical analysis and the title/entity analysis are attested; capitalization and document context determine the intended reading."
+  },
+  {
+   "surface": "Lanti",
+   "options": [
+    {
+     "expected": "Lant/i",
+     "signature": {
+      "reconstruction": "Lanti",
+      "spans": [
+       {
+        "text": "Lant",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Lanti",
+     "signature": {
+      "reconstruction": "Lanti",
+      "spans": [
+       {
+        "text": "Lanti",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Lanti",
+     "spans": [
+      {
+       "text": "Lant",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Lanti",
+     "spans": [
+      {
+       "text": "Lanti",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Leonardo",
+   "options": [
+    {
+     "expected": "Leonard/o",
+     "signature": {
+      "reconstruction": "Leonardo",
+      "spans": [
+       {
+        "text": "Leonard",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Leonardo",
+     "signature": {
+      "reconstruction": "Leonardo",
+      "spans": [
+       {
+        "text": "Leonardo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Leonardo",
+     "spans": [
+      {
+       "text": "Leonard",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Leonardo",
+     "spans": [
+      {
+       "text": "Leonardo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Lian",
+   "options": [
+    {
+     "expected": "Li/an",
+     "signature": {
+      "reconstruction": "Lian",
+      "spans": [
+       {
+        "text": "Li",
+        "ruby": true
+       },
+       {
+        "text": "an",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    },
+    {
+     "expected": "Lian",
+     "signature": {
+      "reconstruction": "Lian",
+      "spans": [
+       {
+        "text": "Lian",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Lian",
+     "spans": [
+      {
+       "text": "Li",
+       "ruby": true
+      },
+      {
+       "text": "an",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Lian",
+     "spans": [
+      {
+       "text": "Lian",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "contextual_homograph",
+   "reason": "The same spelling is attested both as an Esperanto inflected form and as a proper name; document context determines the typed signature."
+  },
+  {
+   "surface": "Maria",
+   "options": [
+    {
+     "expected": "Mari/a",
+     "signature": {
+      "reconstruction": "Maria",
+      "spans": [
+       {
+        "text": "Mari",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Maria",
+     "signature": {
+      "reconstruction": "Maria",
+      "spans": [
+       {
+        "text": "Maria",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 31
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Maria",
+     "spans": [
+      {
+       "text": "Mari",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Maria",
+     "spans": [
+      {
+       "text": "Maria",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Marta",
+   "options": [
+    {
+     "expected": "Mart/a",
+     "signature": {
+      "reconstruction": "Marta",
+      "spans": [
+       {
+        "text": "Mart",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Marta",
+     "signature": {
+      "reconstruction": "Marta",
+      "spans": [
+       {
+        "text": "Marta",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 30
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Marta",
+     "spans": [
+      {
+       "text": "Mart",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Marta",
+     "spans": [
+      {
+       "text": "Marta",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Mateo",
+   "options": [
+    {
+     "expected": "Mate/o",
+     "signature": {
+      "reconstruction": "Mateo",
+      "spans": [
+       {
+        "text": "Mate",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Mateo",
+     "signature": {
+      "reconstruction": "Mateo",
+      "spans": [
+       {
+        "text": "Mateo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Mateo",
+     "spans": [
+      {
+       "text": "Mate",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Mateo",
+     "spans": [
+      {
+       "text": "Mateo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Mindanao",
+   "options": [
+    {
+     "expected": "Mindana/o",
+     "signature": {
+      "reconstruction": "Mindanao",
+      "spans": [
+       {
+        "text": "Mindana",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Mindanao",
+     "signature": {
+      "reconstruction": "Mindanao",
+      "spans": [
+       {
+        "text": "Mindanao",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Mindanao",
+     "spans": [
+      {
+       "text": "Mindana",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Mindanao",
+     "spans": [
+      {
+       "text": "Mindanao",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Mozi",
+   "options": [
+    {
+     "expected": "Moz/i",
+     "signature": {
+      "reconstruction": "Mozi",
+      "spans": [
+       {
+        "text": "Moz",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Mozi",
+     "signature": {
+      "reconstruction": "Mozi",
+      "spans": [
+       {
+        "text": "Mozi",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Mozi",
+     "spans": [
+      {
+       "text": "Moz",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Mozi",
+     "spans": [
+      {
+       "text": "Mozi",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Nagoja",
+   "options": [
+    {
+     "expected": "Nagoj/a",
+     "signature": {
+      "reconstruction": "Nagoja",
+      "spans": [
+       {
+        "text": "Nagoj",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    },
+    {
+     "expected": "Nagoja",
+     "signature": {
+      "reconstruction": "Nagoja",
+      "spans": [
+       {
+        "text": "Nagoja",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Nagoja",
+     "spans": [
+      {
+       "text": "Nagoj",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Nagoja",
+     "spans": [
+      {
+       "text": "Nagoja",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Oomoto",
+   "options": [
+    {
+     "expected": "Oomot/o",
+     "signature": {
+      "reconstruction": "Oomoto",
+      "spans": [
+       {
+        "text": "Oomot",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Oomoto",
+     "signature": {
+      "reconstruction": "Oomoto",
+      "spans": [
+       {
+        "text": "Oomoto",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 53
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Oomoto",
+     "spans": [
+      {
+       "text": "Oomot",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Oomoto",
+     "spans": [
+      {
+       "text": "Oomoto",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Oslo",
+   "options": [
+    {
+     "expected": "Osl/o",
+     "signature": {
+      "reconstruction": "Oslo",
+      "spans": [
+       {
+        "text": "Osl",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Oslo",
+     "signature": {
+      "reconstruction": "Oslo",
+      "spans": [
+       {
+        "text": "Oslo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Oslo",
+     "spans": [
+      {
+       "text": "Osl",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Oslo",
+     "spans": [
+      {
+       "text": "Oslo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Petro",
+   "options": [
+    {
+     "expected": "Petr/o",
+     "signature": {
+      "reconstruction": "Petro",
+      "spans": [
+       {
+        "text": "Petr",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Petro",
+     "signature": {
+      "reconstruction": "Petro",
+      "spans": [
+       {
+        "text": "Petro",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 21
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Petro",
+     "spans": [
+      {
+       "text": "Petr",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Petro",
+     "spans": [
+      {
+       "text": "Petro",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Peĉjo",
+   "options": [
+    {
+     "expected": "Peĉj/o",
+     "signature": {
+      "reconstruction": "Peĉjo",
+      "spans": [
+       {
+        "text": "Peĉj",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Peĉjo",
+     "signature": {
+      "reconstruction": "Peĉjo",
+      "spans": [
+       {
+        "text": "Peĉjo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 38
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Peĉjo",
+     "spans": [
+      {
+       "text": "Peĉj",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Peĉjo",
+     "spans": [
+      {
+       "text": "Peĉjo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Rajmondo",
+   "options": [
+    {
+     "expected": "Rajmond/o",
+     "signature": {
+      "reconstruction": "Rajmondo",
+      "spans": [
+       {
+        "text": "Rajmond",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Rajmondo",
+     "signature": {
+      "reconstruction": "Rajmondo",
+      "spans": [
+       {
+        "text": "Rajmondo",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Rajmondo",
+     "spans": [
+      {
+       "text": "Rajmond",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Rajmondo",
+     "spans": [
+      {
+       "text": "Rajmondo",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Renato",
+   "options": [
+    {
+     "expected": "Renat/o",
+     "signature": {
+      "reconstruction": "Renato",
+      "spans": [
+       {
+        "text": "Renat",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Renato",
+     "signature": {
+      "reconstruction": "Renato",
+      "spans": [
+       {
+        "text": "Renato",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Renato",
+     "spans": [
+      {
+       "text": "Renat",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Renato",
+     "spans": [
+      {
+       "text": "Renato",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "SabatEJO",
+   "options": [
+    {
+     "expected": "Sabat/EJ/O",
+     "signature": {
+      "reconstruction": "SabatEJO",
+      "spans": [
+       {
+        "text": "Sabat",
+        "ruby": true
+       },
+       {
+        "text": "EJ",
+        "ruby": true
+       },
+       {
+        "text": "O",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    },
+    {
+     "expected": "SabatEJO",
+     "signature": {
+      "reconstruction": "SabatEJO",
+      "spans": [
+       {
+        "text": "SabatEJO",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "SabatEJO",
+     "spans": [
+      {
+       "text": "Sabat",
+       "ruby": true
+      },
+      {
+       "text": "EJ",
+       "ruby": true
+      },
+      {
+       "text": "O",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "SabatEJO",
+     "spans": [
+      {
+       "text": "SabatEJO",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "named_entity_or_compositional_reading",
+   "reason": "The corpus attests both an atomic title/institution reading and a transparent Esperanto compositional reading; entity context determines the typed signature."
+  },
+  {
+   "surface": "Temis",
+   "options": [
+    {
+     "expected": "Tem/is",
+     "signature": {
+      "reconstruction": "Temis",
+      "spans": [
+       {
+        "text": "Tem",
+        "ruby": true
+       },
+       {
+        "text": "is",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    },
+    {
+     "expected": "Temis",
+     "signature": {
+      "reconstruction": "Temis",
+      "spans": [
+       {
+        "text": "Temis",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Temis",
+     "spans": [
+      {
+       "text": "Tem",
+       "ruby": true
+      },
+      {
+       "text": "is",
+       "ruby": true
+      }
+     ]
+    },
+    {
+     "reconstruction": "Temis",
+     "spans": [
+      {
+       "text": "Temis",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "contextual_homograph",
+   "reason": "The same spelling is attested both as the verb tem/is and as an atomic proper name; document context determines the typed signature."
+  },
+  {
+   "surface": "Tokio",
+   "options": [
+    {
+     "expected": "Toki/o",
+     "signature": {
+      "reconstruction": "Tokio",
+      "spans": [
+       {
+        "text": "Toki",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Tokio",
+     "signature": {
+      "reconstruction": "Tokio",
+      "spans": [
+       {
+        "text": "Tokio",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 65
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Tokio",
+     "spans": [
+      {
+       "text": "Toki",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Tokio",
+     "spans": [
+      {
+       "text": "Tokio",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "Unesko",
+   "options": [
+    {
+     "expected": "Unesk/o",
+     "signature": {
+      "reconstruction": "Unesko",
+      "spans": [
+       {
+        "text": "Unesk",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "Unesko",
+     "signature": {
+      "reconstruction": "Unesko",
+      "spans": [
+       {
+        "text": "Unesko",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "Unesko",
+     "spans": [
+      {
+       "text": "Unesk",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "Unesko",
+     "spans": [
+      {
+       "text": "Unesko",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "proper_name_spelling_or_esperanto_ending",
+   "reason": "The project convention permits the proper name as an atomic spelling in entity context, while the Esperanto-final-vowel segmentation remains a valid morphological reading; exact document context decides."
+  },
+  {
+   "surface": "agresiva",
+   "options": [
+    {
+     "expected": "agres/iv/a",
+     "signature": {
+      "reconstruction": "agresiva",
+      "spans": [
+       {
+        "text": "agres",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "agresiv/a",
+     "signature": {
+      "reconstruction": "agresiva",
+      "spans": [
+       {
+        "text": "agresiv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "agresiva",
+     "spans": [
+      {
+       "text": "agresiv",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'agresiv/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "akvedukto",
+   "options": [
+    {
+     "expected": "akv/e/dukt/o",
+     "signature": {
+      "reconstruction": "akvedukto",
+      "spans": [
+       {
+        "text": "akv",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       },
+       {
+        "text": "dukt",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "akvedukt/o",
+     "signature": {
+      "reconstruction": "akvedukto",
+      "spans": [
+       {
+        "text": "akvedukt",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "akvedukto",
+     "spans": [
+      {
+       "text": "akvedukt",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'akvedukt/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "demokratia",
+   "options": [
+    {
+     "expected": "demokrat/i/a",
+     "signature": {
+      "reconstruction": "demokratia",
+      "spans": [
+       {
+        "text": "demokrat",
+        "ruby": true
+       },
+       {
+        "text": "ia",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "demokrati/a",
+     "signature": {
+      "reconstruction": "demokratia",
+      "spans": [
+       {
+        "text": "demokrati",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "demokratia",
+     "spans": [
+      {
+       "text": "demokrati",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'demokrati/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "demokratio",
+   "options": [
+    {
+     "expected": "demokrat/i/o",
+     "signature": {
+      "reconstruction": "demokratio",
+      "spans": [
+       {
+        "text": "demokrat",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "demokrati/o",
+     "signature": {
+      "reconstruction": "demokratio",
+      "spans": [
+       {
+        "text": "demokrati",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "demokratio",
+     "spans": [
+      {
+       "text": "demokrati",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'demokrati/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "diplomatio",
+   "options": [
+    {
+     "expected": "diplomat/i/o",
+     "signature": {
+      "reconstruction": "diplomatio",
+      "spans": [
+       {
+        "text": "diplomat",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "diplomati/o",
+     "signature": {
+      "reconstruction": "diplomatio",
+      "spans": [
+       {
+        "text": "diplomati",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "diplomatio",
+     "spans": [
+      {
+       "text": "diplomati",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'diplomati/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "efektiva",
+   "options": [
+    {
+     "expected": "efekt/iv/a",
+     "signature": {
+      "reconstruction": "efektiva",
+      "spans": [
+       {
+        "text": "efekt",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "efektiv/a",
+     "signature": {
+      "reconstruction": "efektiva",
+      "spans": [
+       {
+        "text": "efektiv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "efektiva",
+     "spans": [
+      {
+       "text": "efektiv",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'efektiv/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "efektive",
+   "options": [
+    {
+     "expected": "efekt/iv/e",
+     "signature": {
+      "reconstruction": "efektive",
+      "spans": [
+       {
+        "text": "efekt",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "efektiv/e",
+     "signature": {
+      "reconstruction": "efektive",
+      "spans": [
+       {
+        "text": "efektiv",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 41
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "efektive",
+     "spans": [
+      {
+       "text": "efektiv",
+       "ruby": true
+      },
+      {
+       "text": "e",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'efektiv/e'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "efektivigi",
+   "options": [
+    {
+     "expected": "efekt/iv/ig/i",
+     "signature": {
+      "reconstruction": "efektivigi",
+      "spans": [
+       {
+        "text": "efekt",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "efektiv/ig/i",
+     "signature": {
+      "reconstruction": "efektivigi",
+      "spans": [
+       {
+        "text": "efektiv",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 12
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "efektivigi",
+     "spans": [
+      {
+       "text": "efektiv",
+       "ruby": true
+      },
+      {
+       "text": "ig",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'efektiv/ig/i'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "f-ino",
+   "options": [
+    {
+     "expected": "f-in/o",
+     "signature": {
+      "reconstruction": "f-ino",
+      "spans": [
+       {
+        "text": "f",
+        "ruby": true
+       },
+       {
+        "text": "-",
+        "ruby": false
+       },
+       {
+        "text": "in",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "f-ino",
+     "signature": {
+      "reconstruction": "f-ino",
+      "spans": [
+       {
+        "text": "f-ino",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "f-ino",
+     "spans": [
+      {
+       "text": "f",
+       "ruby": true
+      },
+      {
+       "text": "-",
+       "ruby": false
+      },
+      {
+       "text": "in",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "f-ino",
+     "spans": [
+      {
+       "text": "f-ino",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "abbreviation_or_morphology",
+   "reason": "The guide permits the conventional honorific abbreviation as an atomic spelling, while the segmented Esperanto reading is also structurally valid; exact context decides."
+  },
+  {
+   "surface": "filozofia",
+   "options": [
+    {
+     "expected": "filozof/i/a",
+     "signature": {
+      "reconstruction": "filozofia",
+      "spans": [
+       {
+        "text": "filozof",
+        "ruby": true
+       },
+       {
+        "text": "ia",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "filozofi/a",
+     "signature": {
+      "reconstruction": "filozofia",
+      "spans": [
+       {
+        "text": "filozofi",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "filozofia",
+     "spans": [
+      {
+       "text": "filozofi",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'filozofi/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "filozofio",
+   "options": [
+    {
+     "expected": "filozof/i/o",
+     "signature": {
+      "reconstruction": "filozofio",
+      "spans": [
+       {
+        "text": "filozof",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "filozofi/o",
+     "signature": {
+      "reconstruction": "filozofio",
+      "spans": [
+       {
+        "text": "filozofi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "filozofio",
+     "spans": [
+      {
+       "text": "filozofi",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'filozofi/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "gelato",
+   "options": [
+    {
+     "expected": "gelat/o",
+     "signature": {
+      "reconstruction": "gelato",
+      "spans": [
+       {
+        "text": "gelat",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "gelato",
+     "signature": {
+      "reconstruction": "gelato",
+      "spans": [
+       {
+        "text": "gelato",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "gelato",
+     "spans": [
+      {
+       "text": "gelat",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "gelato",
+     "spans": [
+      {
+       "text": "gelato",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "foreign_word_or_esperanto_homograph",
+   "reason": "The corpus contains an atomic foreign-word reading, while gel/at/o is also a valid Esperanto morphological reading; exact language and sentence context decide."
+  },
+  {
+   "surface": "imperialismo",
+   "options": [
+    {
+     "expected": "imperial/ism/o",
+     "signature": {
+      "reconstruction": "imperialismo",
+      "spans": [
+       {
+        "text": "imperial",
+        "ruby": true
+       },
+       {
+        "text": "ism",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "imperialism/o",
+     "signature": {
+      "reconstruction": "imperialismo",
+      "spans": [
+       {
+        "text": "imperialism",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "imperialismo",
+     "spans": [
+      {
+       "text": "imperialism",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'imperialism/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "karakteriza",
+   "options": [
+    {
+     "expected": "karakter/iz/a",
+     "signature": {
+      "reconstruction": "karakteriza",
+      "spans": [
+       {
+        "text": "karakter",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "karakteriz/a",
+     "signature": {
+      "reconstruction": "karakteriza",
+      "spans": [
+       {
+        "text": "karakteriz",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 7
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "karakteriza",
+     "spans": [
+      {
+       "text": "karakteriz",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'karakteriz/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "karakterizi",
+   "options": [
+    {
+     "expected": "karakter/iz/i",
+     "signature": {
+      "reconstruction": "karakterizi",
+      "spans": [
+       {
+        "text": "karakter",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "karakteriz/i",
+     "signature": {
+      "reconstruction": "karakterizi",
+      "spans": [
+       {
+        "text": "karakteriz",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "karakterizi",
+     "spans": [
+      {
+       "text": "karakteriz",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'karakteriz/i'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "kirurgia",
+   "options": [
+    {
+     "expected": "kirurg/i/a",
+     "signature": {
+      "reconstruction": "kirurgia",
+      "spans": [
+       {
+        "text": "kirurg",
+        "ruby": true
+       },
+       {
+        "text": "ia",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "kirurgi/a",
+     "signature": {
+      "reconstruction": "kirurgia",
+      "spans": [
+       {
+        "text": "kirurgi",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "kirurgia",
+     "spans": [
+      {
+       "text": "kirurgi",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'kirurgi/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "kirurgio",
+   "options": [
+    {
+     "expected": "kirurg/i/o",
+     "signature": {
+      "reconstruction": "kirurgio",
+      "spans": [
+       {
+        "text": "kirurg",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "kirurgi/o",
+     "signature": {
+      "reconstruction": "kirurgio",
+      "spans": [
+       {
+        "text": "kirurgi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "kirurgio",
+     "spans": [
+      {
+       "text": "kirurgi",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'kirurgi/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "kolektiva",
+   "options": [
+    {
+     "expected": "kolekt/iv/a",
+     "signature": {
+      "reconstruction": "kolektiva",
+      "spans": [
+       {
+        "text": "kolekt",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "kolektiv/a",
+     "signature": {
+      "reconstruction": "kolektiva",
+      "spans": [
+       {
+        "text": "kolektiv",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "kolektiva",
+     "spans": [
+      {
+       "text": "kolektiv",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'kolektiv/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "masivo",
+   "options": [
+    {
+     "expected": "mas/iv/o",
+     "signature": {
+      "reconstruction": "masivo",
+      "spans": [
+       {
+        "text": "mas",
+        "ruby": true
+       },
+       {
+        "text": "iv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "masiv/o",
+     "signature": {
+      "reconstruction": "masivo",
+      "spans": [
+       {
+        "text": "masiv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "masivo",
+     "spans": [
+      {
+       "text": "masiv",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'masiv/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "miksdevena",
+   "options": [
+    {
+     "expected": "miks/de/ven/a",
+     "signature": {
+      "reconstruction": "miksdevena",
+      "spans": [
+       {
+        "text": "miks",
+        "ruby": true
+       },
+       {
+        "text": "de",
+        "ruby": true
+       },
+       {
+        "text": "ven",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "miks/deven/a",
+     "signature": {
+      "reconstruction": "miksdevena",
+      "spans": [
+       {
+        "text": "miks",
+        "ruby": true
+       },
+       {
+        "text": "deven",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "miksdevena",
+     "spans": [
+      {
+       "text": "miks",
+       "ruby": true
+      },
+      {
+       "text": "deven",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "ruby_track_coarse_two_track_partition",
+   "reason": "The learner/Kanji track retains miks/de/ven/a, while the Kyoto annotation-Ruby convention intentionally uses the coarser lexical unit miks/deven/a."
+  },
+  {
+   "surface": "monarkio",
+   "options": [
+    {
+     "expected": "monark/i/o",
+     "signature": {
+      "reconstruction": "monarkio",
+      "spans": [
+       {
+        "text": "monark",
+        "ruby": true
+       },
+       {
+        "text": "io",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "monarki/o",
+     "signature": {
+      "reconstruction": "monarkio",
+      "spans": [
+       {
+        "text": "monarki",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 3
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "monarkio",
+     "spans": [
+      {
+       "text": "monarki",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'monarki/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organiza",
+   "options": [
+    {
+     "expected": "organ/iz/a",
+     "signature": {
+      "reconstruction": "organiza",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/a",
+     "signature": {
+      "reconstruction": "organiza",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organiza",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organizado",
+   "options": [
+    {
+     "expected": "organ/iz/ad/o",
+     "signature": {
+      "reconstruction": "organizado",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "ad",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/ad/o",
+     "signature": {
+      "reconstruction": "organizado",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "ad",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organizado",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "ad",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/ad/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organizaĵo",
+   "options": [
+    {
+     "expected": "organ/iz/aĵ/o",
+     "signature": {
+      "reconstruction": "organizaĵo",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "aĵ",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/aĵ/o",
+     "signature": {
+      "reconstruction": "organizaĵo",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "aĵ",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 20
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organizaĵo",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "aĵ",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/aĵ/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organizi",
+   "options": [
+    {
+     "expected": "organ/iz/i",
+     "signature": {
+      "reconstruction": "organizi",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/i",
+     "signature": {
+      "reconstruction": "organizi",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 19
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organizi",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/i'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organizita",
+   "options": [
+    {
+     "expected": "organ/iz/it/a",
+     "signature": {
+      "reconstruction": "organizita",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "it",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/it/a",
+     "signature": {
+      "reconstruction": "organizita",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "it",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 9
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organizita",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "it",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/it/a'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "organizo",
+   "options": [
+    {
+     "expected": "organ/iz/o",
+     "signature": {
+      "reconstruction": "organizo",
+      "spans": [
+       {
+        "text": "organ",
+        "ruby": true
+       },
+       {
+        "text": "iz",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "organiz/o",
+     "signature": {
+      "reconstruction": "organizo",
+      "spans": [
+       {
+        "text": "organiz",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 33
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "organizo",
+     "spans": [
+      {
+       "text": "organiz",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'organiz/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "orkidacoj",
+   "options": [
+    {
+     "expected": "orkid/ac/oj",
+     "signature": {
+      "reconstruction": "orkidacoj",
+      "spans": [
+       {
+        "text": "orkid",
+        "ruby": true
+       },
+       {
+        "text": "ac",
+        "ruby": true
+       },
+       {
+        "text": "oj",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "orkidac/oj",
+     "signature": {
+      "reconstruction": "orkidacoj",
+      "spans": [
+       {
+        "text": "orkidac",
+        "ruby": true
+       },
+       {
+        "text": "oj",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "orkidacoj",
+     "spans": [
+      {
+       "text": "orkidac",
+       "ruby": true
+      },
+      {
+       "text": "oj",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'orkidac/oj'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "poetiko",
+   "options": [
+    {
+     "expected": "poet/ik/o",
+     "signature": {
+      "reconstruction": "poetiko",
+      "spans": [
+       {
+        "text": "poet",
+        "ruby": true
+       },
+       {
+        "text": "ik",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "poetik/o",
+     "signature": {
+      "reconstruction": "poetiko",
+      "spans": [
+       {
+        "text": "poetik",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "poetiko",
+     "spans": [
+      {
+       "text": "poetik",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_lexical_root",
+   "reason": "Corpus occurrences and lexical context support the reviewed HTML root analysis 'poetik/o'; the competing learner-gold form is a productive-looking over-segmentation."
+  },
+  {
+   "surface": "radio",
+   "options": [
+    {
+     "expected": "radi/o",
+     "signature": {
+      "reconstruction": "radio",
+      "spans": [
+       {
+        "text": "radi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1,
+      "html_corpus": 8
+     }
+    },
+    {
+     "expected": "radio",
+     "signature": {
+      "reconstruction": "radio",
+      "spans": [
+       {
+        "text": "radio",
+        "ruby": true
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 5
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "radio",
+     "spans": [
+      {
+       "text": "radi",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "radio",
+     "spans": [
+      {
+       "text": "radio",
+       "ruby": true
+      }
+     ]
+    }
+   ],
+   "category": "contextual_homograph",
+   "reason": "The spelling radio is context-sensitive: radi/o is the radiation/electromagnetic noun, while atomic radio is the media/broadcast lexical unit. Both are attested; document context determines the Ruby boundary."
+  },
+  {
+   "surface": "radioelsendo",
+   "options": [
+    {
+     "expected": "radi/o/el/send/o",
+     "signature": {
+      "reconstruction": "radioelsendo",
+      "spans": [
+       {
+        "text": "radi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       },
+       {
+        "text": "el",
+        "ruby": true
+       },
+       {
+        "text": "send",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "radio/el/send/o",
+     "signature": {
+      "reconstruction": "radioelsendo",
+      "spans": [
+       {
+        "text": "radio",
+        "ruby": true
+       },
+       {
+        "text": "el",
+        "ruby": true
+       },
+       {
+        "text": "send",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "radioelsendo",
+     "spans": [
+      {
+       "text": "radio",
+       "ruby": true
+      },
+      {
+       "text": "el",
+       "ruby": true
+      },
+      {
+       "text": "send",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "ruby_track_coarse_two_track_partition",
+   "reason": "This corpus occurrence means a radio broadcast, so the media root radio is required; radi/o is the competing radiation/electromagnetic analysis from the frozen gold."
+  },
+  {
+   "surface": "radioprogramo",
+   "options": [
+    {
+     "expected": "radi/o/program/o",
+     "signature": {
+      "reconstruction": "radioprogramo",
+      "spans": [
+       {
+        "text": "radi",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       },
+       {
+        "text": "program",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "radio/program/o",
+     "signature": {
+      "reconstruction": "radioprogramo",
+      "spans": [
+       {
+        "text": "radio",
+        "ruby": true
+       },
+       {
+        "text": "program",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "radioprogramo",
+     "spans": [
+      {
+       "text": "radio",
+       "ruby": true
+      },
+      {
+       "text": "program",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "ruby_track_coarse_two_track_partition",
+   "reason": "This corpus occurrence means a radio program, so the media root radio is required; it must not be split as the physical radi/o analysis merely to shorten Ruby."
+  },
+  {
+   "surface": "resumi",
+   "options": [
+    {
+     "expected": "re/sum/i",
+     "signature": {
+      "reconstruction": "resumi",
+      "spans": [
+       {
+        "text": "re",
+        "ruby": true
+       },
+       {
+        "text": "sum",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "resum/i",
+     "signature": {
+      "reconstruction": "resumi",
+      "spans": [
+       {
+        "text": "resum",
+        "ruby": true
+       },
+       {
+        "text": "i",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "resumi",
+     "spans": [
+      {
+       "text": "re",
+       "ruby": true
+      },
+      {
+       "text": "sum",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "resumi",
+     "spans": [
+      {
+       "text": "resum",
+       "ruby": true
+      },
+      {
+       "text": "i",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "lexical_homograph_context",
+   "reason": "B090 line 33885 is the summary verb resum/i (also the Kyoto HTML reading), while line 33886 is the distinct productive re/sum/i sense 'sum again'. A context-free app may expose either reviewed signature; deployed ordinary resumi remains resum/i."
+  },
+  {
+   "surface": "sendota",
+   "options": [
+    {
+     "expected": "sen/dot/a",
+     "signature": {
+      "reconstruction": "sendota",
+      "spans": [
+       {
+        "text": "sen",
+        "ruby": true
+       },
+       {
+        "text": "dot",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "send/ot/a",
+     "signature": {
+      "reconstruction": "sendota",
+      "spans": [
+       {
+        "text": "send",
+        "ruby": true
+       },
+       {
+        "text": "ot",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sendota",
+     "spans": [
+      {
+       "text": "sen",
+       "ruby": true
+      },
+      {
+       "text": "dot",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    },
+    {
+     "reconstruction": "sendota",
+     "spans": [
+      {
+       "text": "send",
+       "ruby": true
+      },
+      {
+       "text": "ot",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "contextual_homograph",
+   "reason": "Both send/ot/a (to be sent) and sen/dot/a (without a dowry) are valid and attested; sentence context determines the analysis."
+  },
+  {
+   "surface": "sindevigo",
+   "options": [
+    {
+     "expected": "si/n/dev/ig/o",
+     "signature": {
+      "reconstruction": "sindevigo",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "dev",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/dev/ig/o",
+     "signature": {
+      "reconstruction": "sindevigo",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "dev",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sindevigo",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "dev",
+       "ruby": true
+      },
+      {
+       "text": "ig",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/dev/ig/o' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "singarda",
+   "options": [
+    {
+     "expected": "si/n/gard/a",
+     "signature": {
+      "reconstruction": "singarda",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "gard",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/gard/a",
+     "signature": {
+      "reconstruction": "singarda",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "gard",
+        "ruby": true
+       },
+       {
+        "text": "a",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "singarda",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "gard",
+       "ruby": true
+      },
+      {
+       "text": "a",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/gard/a' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "singarde",
+   "options": [
+    {
+     "expected": "si/n/gard/e",
+     "signature": {
+      "reconstruction": "singarde",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "gard",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/gard/e",
+     "signature": {
+      "reconstruction": "singarde",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "gard",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 2
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "singarde",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "gard",
+       "ruby": true
+      },
+      {
+       "text": "e",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/gard/e' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "sinmortigo",
+   "options": [
+    {
+     "expected": "si/n/mort/ig/o",
+     "signature": {
+      "reconstruction": "sinmortigo",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "mort",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/mort/ig/o",
+     "signature": {
+      "reconstruction": "sinmortigo",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "mort",
+        "ruby": true
+       },
+       {
+        "text": "ig",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 6
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sinmortigo",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "mort",
+       "ruby": true
+      },
+      {
+       "text": "ig",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/mort/ig/o' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "sinprezento",
+   "options": [
+    {
+     "expected": "si/n/prezent/o",
+     "signature": {
+      "reconstruction": "sinprezento",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "prezent",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/prezent/o",
+     "signature": {
+      "reconstruction": "sinprezento",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "prezent",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 1
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sinprezento",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "prezent",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/prezent/o' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "sinsekve",
+   "options": [
+    {
+     "expected": "si/n/sekv/e",
+     "signature": {
+      "reconstruction": "sinsekve",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "sekv",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/sekv/e",
+     "signature": {
+      "reconstruction": "sinsekve",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "sekv",
+        "ruby": true
+       },
+       {
+        "text": "e",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 10
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sinsekve",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "sekv",
+       "ruby": true
+      },
+      {
+       "text": "e",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/sekv/e' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "sinsekvo",
+   "options": [
+    {
+     "expected": "si/n/sekv/o",
+     "signature": {
+      "reconstruction": "sinsekvo",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "sekv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/sekv/o",
+     "signature": {
+      "reconstruction": "sinsekvo",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "sekv",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 4
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sinsekvo",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "sekv",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/sekv/o' is retained and the mechanical si/n split is rejected."
+  },
+  {
+   "surface": "sinteno",
+   "options": [
+    {
+     "expected": "si/n/ten/o",
+     "signature": {
+      "reconstruction": "sinteno",
+      "spans": [
+       {
+        "text": "si",
+        "ruby": true
+       },
+       {
+        "text": "n",
+        "ruby": false
+       },
+       {
+        "text": "ten",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "gold_unmarked": 1
+     }
+    },
+    {
+     "expected": "sin/ten/o",
+     "signature": {
+      "reconstruction": "sinteno",
+      "spans": [
+       {
+        "text": "sin",
+        "ruby": true
+       },
+       {
+        "text": "ten",
+        "ruby": true
+       },
+       {
+        "text": "o",
+        "ruby": false
+       }
+      ]
+     },
+     "sources": {
+      "html_corpus": 32
+     }
+    }
+   ],
+   "allowed_signatures": [
+    {
+     "reconstruction": "sinteno",
+     "spans": [
+      {
+       "text": "sin",
+       "ruby": true
+      },
+      {
+       "text": "ten",
+       "ruby": true
+      },
+      {
+       "text": "o",
+       "ruby": false
+      }
+     ]
+    }
+   ],
+   "category": "reviewed_reflexive_compound",
+   "reason": "The corpus consistently treats sin as the reflexive compound component here; 'sin/ten/o' is retained and the mechanical si/n split is rejected."
+  }
+ ]
+}

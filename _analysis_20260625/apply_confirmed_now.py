@@ -69,6 +69,44 @@ PHASE598_ACTIVATION = phase598_activation_report()
 PHASE598_FORMAL = PHASE598_ACTIVATION['phase598_technical_on_active']
 PHASE619_ACTIVATION = phase619_activation_report()
 PHASE619_FORMAL = PHASE619_ACTIVATION['phase619_ordinary_ruby_active']
+R94_RESIDUAL_LEDGER_PATH = os.path.join(
+    BASE, "_analysis_20260625", "_corpus_r94_ccb9398_residual_closure.json",
+)
+with open(lp(R94_RESIDUAL_LEDGER_PATH), encoding="utf-8") as _handle:
+    R94_RESIDUAL_LEDGER = json.load(_handle)
+if (
+    R94_RESIDUAL_LEDGER.get("schema_version") != 1
+    or R94_RESIDUAL_LEDGER.get("ledger_id")
+    != "corpus-r94-ccb9398-ruby-residual-closure-v1"
+):
+    raise ValueError("invalid ccb9398 residual-closure ledger")
+R94_RESIDUAL_POLICY = R94_RESIDUAL_LEDGER.get("policy", {})
+if {
+    "ruby_track_only": R94_RESIDUAL_POLICY.get("ruby_track_only"),
+    "kanji_planned_changes": R94_RESIDUAL_POLICY.get("kanji_planned_changes"),
+    "kanji_artifacts_must_remain_byte_identical": R94_RESIDUAL_POLICY.get(
+        "kanji_artifacts_must_remain_byte_identical"
+    ),
+    "trilingual_boundary_identity_required": R94_RESIDUAL_POLICY.get(
+        "trilingual_boundary_identity_required"
+    ),
+} != {
+    "ruby_track_only": True,
+    "kanji_planned_changes": 0,
+    "kanji_artifacts_must_remain_byte_identical": True,
+    "trilingual_boundary_identity_required": True,
+}:
+    raise ValueError("ccb9398 residual-closure track policy drift")
+R94_STRICT_TRACK_PARTITIONS = R94_RESIDUAL_POLICY.get(
+    "strict_track_partitions", {}
+)
+
+
+def curly_apostrophe_variant(value):
+    """Return the exact U+2019 spelling of an ASCII-apostrophe value."""
+    return value.replace("'", "’") if "'" in value else None
+
+
 OUT = BASE + r"\_analysis_20260625\out"
 BASE_SETTINGS_PATH = os.path.join(
     BASE, "_analysis_20260625", "_base_stemming_settings.json",
@@ -329,6 +367,44 @@ if PHASE558_FORMAL:
     ]
 if _phase558_present_supersessions != set(_phase558_superseded_strict):
     raise ValueError('Phase 558 strict supersession scope drift')
+_r94_partitioned_strict = set()
+_r94_effective_strict = []
+for _entry in strict_gold_fixes:
+    _word = _entry.get("w")
+    _partition = R94_STRICT_TRACK_PARTITIONS.get(_word)
+    if _partition is None:
+        _r94_effective_strict.append(_entry)
+        continue
+    if _word in _r94_partitioned_strict:
+        raise ValueError(f'duplicate R94 strict track partition: {_word!r}')
+    if (
+        set(_partition)
+        != {
+            "operation", "source_entry", "effective_entry", "ruby_target",
+            "kanji_output_change",
+        }
+        or _partition.get("operation")
+        != "retag_existing_strict_as_kanji_track_only"
+        or _partition.get("kanji_output_change") is not False
+        or _entry != _partition.get("source_entry")
+        or _partition.get("effective_entry")
+        != {**_entry, "kanji_track_only": True}
+        or R94_RESIDUAL_POLICY.get("managed_morph_targets", {}).get(
+            _word, {}
+        ).get("target") != _partition.get("ruby_target")
+        or normalize_esperanto_surface_notation(_word)
+        != normalize_esperanto_surface_notation(
+            str(_partition["ruby_target"]).replace("/", "")
+        )
+    ):
+        raise ValueError(
+            f'R94 strict track partition drift: {_word!r}: {_partition!r}'
+        )
+    _r94_effective_strict.append(_partition["effective_entry"])
+    _r94_partitioned_strict.add(_word)
+if _r94_partitioned_strict != set(R94_STRICT_TRACK_PARTITIONS):
+    raise ValueError("R94 strict track partition source missing")
+strict_gold_fixes = _r94_effective_strict
 scope_path=os.path.join(
     os.path.dirname(__file__), '_no_worsening_scope_manifest.json',
 )
@@ -801,6 +877,87 @@ for _surface, _spec in _phase619_managed_items:
             f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
         )
 
+_r94_expected_corrections = {}
+_r94_managed_items = R94_RESIDUAL_POLICY.get("managed_morph_targets", {}).items()
+for _surface, _spec in _r94_managed_items:
+    if set(_spec) != {"target", "ruby_track_only"} or _spec.get(
+        "ruby_track_only"
+    ) is not True:
+        raise ValueError(
+            f'R94 managed morphology lost its Ruby-only policy: '
+            f'{_surface!r}: {_spec!r}'
+        )
+    _expected = make_correction(_spec["target"], ruby_track_only=True)
+    if (
+        _expected is None
+        or not _expected["ruby_track_only"]
+        or _expected["kanji_track_only"]
+        or "word_boundary" not in _expected["suffixes"]
+        or "ruby_track_only" not in _expected["suffixes"]
+        or "kanji_track_only" in _expected["suffixes"]
+        or "ruby_only" in _expected["suffixes"]
+    ):
+        raise ValueError(
+            f'R94 managed correction lost its bounded Ruby scope: '
+            f'{_surface!r}: {_expected!r}'
+        )
+    _expected_key = ("ruby_track_only", _expected["stem_nosl"])
+    if (
+        _expected["stem"] in _r94_expected_corrections
+        or _expected["stem"] in _phase619_expected_corrections
+        or _expected["stem"] in _phase598_expected_corrections
+        or _expected["stem"] in _phase558_expected_corrections
+        or _expected["stem"] in _phase532_expected_corrections
+    ):
+        raise ValueError(
+            f'R94 managed stem duplicated: {_expected["stem"]!r}'
+        )
+    _r94_expected_corrections[_expected["stem"]] = _expected
+    _actual = corrs.get(_expected_key)
+    if _actual != _expected:
+        raise ValueError(
+            'R94 managed correction missing or merged: '
+            f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
+        )
+
+_r94_expected_kanji_corrections = {}
+for _surface, _partition in R94_STRICT_TRACK_PARTITIONS.items():
+    _entry = _partition["effective_entry"]
+    _expected = make_correction(
+        _entry["target"],
+        boundary_only=bool(_entry.get("boundary_only")),
+        exact_only=bool(_entry.get("exact_only")),
+        case_sensitive=bool(_entry.get("case_sensitive")),
+        typed_roles=_entry.get("typed_roles"),
+        kanji_track_only=bool(_entry.get("kanji_track_only")),
+    )
+    if (
+        _expected is None
+        or _expected["ruby_track_only"]
+        or not _expected["kanji_track_only"]
+        or set(_expected["suffixes"])
+        != {
+            "ne", "word_boundary", "case_sensitive",
+            f'typed_roles:{_entry["typed_roles"]}', "kanji_track_only",
+        }
+    ):
+        raise ValueError(
+            f'R94 Kanji preservation correction lost exact deep scope: '
+            f'{_surface!r}: {_expected!r}'
+        )
+    _expected_key = ("kanji_track_only", _expected["stem_nosl"])
+    if _expected["stem"] in _r94_expected_kanji_corrections:
+        raise ValueError(
+            f'R94 Kanji preservation stem duplicated: {_expected["stem"]!r}'
+        )
+    _r94_expected_kanji_corrections[_expected["stem"]] = _expected
+    _actual = corrs.get(_expected_key)
+    if _actual != _expected:
+        raise ValueError(
+            'R94 Kanji preservation correction missing or merged: '
+            f'{_surface!r}: expected={_expected!r}, got={_actual!r}'
+        )
+
 # These four reviewed stems resolve equal-length prefix/suffix competitions
 # that used to choose different decompositions by annotation language.  Keep
 # their full productive paradigms explicit: future gold drift must not silently
@@ -1008,6 +1165,7 @@ def prepare_settings(settings_path):
         *_phase558_expected_corrections,
         *_phase598_expected_corrections,
         *_phase619_expected_corrections,
+        *_r94_expected_corrections,
     }
     if (
         {row[0] for row in _ruby_track_rows}
@@ -1038,6 +1196,10 @@ def prepare_settings(settings_path):
             _expected_actions = set(
                 _phase619_expected_corrections[_row[0]]['suffixes']
             )
+        elif _row[0] in _r94_expected_corrections:
+            _expected_actions = set(
+                _r94_expected_corrections[_row[0]]["suffixes"]
+            )
         else:
             _entry = _strict_ruby_track_entries[_row[0]]
             _expected_actions = {
@@ -1059,14 +1221,24 @@ def prepare_settings(settings_path):
         if isinstance(row, list) and len(row) == 3
         and 'kanji_track_only' in row[2]
     ]
+    _expected_kanji_track_rows = {
+        'pro/mil': set(_NOMINAL) | {
+            'word_boundary', 'kanji_track_only',
+        },
+        **{
+            stem: set(expected["suffixes"])
+            for stem, expected in _r94_expected_kanji_corrections.items()
+        },
+    }
+    _actual_kanji_track_rows = {
+        row[0]: set(row[2]) for row in _kanji_track_rows
+    }
     if (
-        len(_kanji_track_rows) != 1
-        or _kanji_track_rows[0][0] != 'pro/mil'
-        or set(_kanji_track_rows[0][2])
-        != set(_NOMINAL) | {'word_boundary', 'kanji_track_only'}
+        len(_actual_kanji_track_rows) != len(_kanji_track_rows)
+        or _actual_kanji_track_rows != _expected_kanji_track_rows
     ):
         raise ValueError(
-            f'final 5E Kanji-track morphology drift: {_kanji_track_rows!r}'
+            f'Kanji-track morphology drift: {_kanji_track_rows!r}'
         )
     _ruby_only_rows = [
         row for row in settings
@@ -1090,6 +1262,51 @@ def prepare_settings(settings_path):
                 'ne', 'word_boundary', 'case_sensitive',
                 f"typed_roles:{_spec['typed_roles']}", 'ruby_only',
             }
+    for _surface, _spec in R94_RESIDUAL_POLICY.get(
+        "managed_typed_exact_targets", {}
+    ).items():
+        if (
+            set(_spec)
+            != {"target", "typed_roles", "case_sensitive", "ruby_only"}
+            or _spec.get("case_sensitive") is not True
+            or _spec.get("ruby_only") is not True
+            or normalize_esperanto_surface_notation(_surface)
+            != normalize_esperanto_surface_notation(
+                str(_spec.get("target", "")).replace("/", "")
+            )
+        ):
+            raise ValueError(
+                f'R94 typed-exact policy drift: {_surface!r}: {_spec!r}'
+            )
+        _variants = [(_surface, _spec["target"])]
+        _curly_surface = curly_apostrophe_variant(_surface)
+        if _curly_surface is not None:
+            _variants.append((
+                _curly_surface,
+                curly_apostrophe_variant(_spec["target"])
+                or _spec["target"],
+            ))
+        for _variant_surface, _target in _variants:
+            if normalize_esperanto_surface_notation(_variant_surface) != (
+                normalize_esperanto_surface_notation(
+                    _target.replace("/", "")
+                )
+            ):
+                raise ValueError(
+                    "R94 apostrophe variant reconstruction drift: "
+                    f"{_variant_surface!r} -> {_target!r}"
+                )
+            if _target in _expected_ruby_only_rows:
+                raise ValueError(
+                    f'R94 typed-exact target duplicated: {_target!r}'
+                )
+            _actions = {
+                "ne", "word_boundary", "case_sensitive",
+                f'typed_roles:{_spec["typed_roles"]}', "ruby_only",
+            }
+            if len([part for part in _target.split("/") if part]) == 1:
+                _actions.add("atomic_no_split")
+            _expected_ruby_only_rows[_target] = _actions
     _actual_ruby_only_rows = {
         row[0]: set(row[2]) for row in _ruby_only_rows
     }

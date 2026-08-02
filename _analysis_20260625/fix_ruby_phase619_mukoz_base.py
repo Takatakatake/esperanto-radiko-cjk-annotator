@@ -46,9 +46,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, '_analysis_20260625'))
 from atomic_json import atomic_file_copy, atomic_json_dump
 from gen_replacement import load_app_replacement_helper
+from r88_mukoz_ruby_policy import normalize_existing_payload_row
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--apply', action='store_true')
+ap.add_argument(
+    '--no-backup', action='store_true',
+    help='formal regeneration only: skip large .bak_preR88M copies',
+)
 A = ap.parse_args()
 DRY = not A.apply
 FMT = 'HTML格式_Ruby文字_大小调整'
@@ -62,6 +67,11 @@ ANNO_KEY = '@phase619-ruby:mukoz'
 SIBLING = 'mukoz/aĵ'                       # 訳語の出所(Phase 619 が登録済み)
 ENDINGS = ['o', 'oj', 'on', 'ojn', 'a', 'aj', 'an', 'ajn', 'e', 'en']
 PRIORITY = len(STEM) * 10000 + 9000        # 既存規則: 表層長×10000+9000
+
+
+def backup_before_write(path):
+    if not A.no_backup:
+        atomic_file_copy(LP(path), LP(path + '.bak_preR88M'))
 
 # ── 約物パディング(第68Rで確定した挿入作法) ─────────────────────────
 _BOL = chr(1)
@@ -163,14 +173,18 @@ for lang in ('JA', 'ZH', 'KO'):
         k = ' ' + surf + ' '
         j = where.get(k, where.get(surf))
         if j is not None:
-            gg[j] = [gg[j][0], (' ' + val + ' ') if gg[j][0].startswith(' ') else val,
-                     gg[j][2] if len(gg[j]) > 2 else None]
+            # Existing noun rows predate R88 and keep their placeholder core,
+            # but all three fields must share the same word-boundary padding.
+            # Updating only the rendered field makes mukoz leak into amukozo.
+            gg[j] = normalize_existing_payload_row(
+                gg[j], surface=surf, rendered=val,
+            )
             replaced += 1; continue
         ph = f' {MARK}{n:05d}{"" if lang == "JA" else lang}$ '
         if ph in used: raise SystemExit(f'placeholder collision: {ph}')
         new_rows.append([k, ' ' + val + ' ', ph])
     d[KEY] = splice(gg, new_rows)
-    atomic_file_copy(LP(path), LP(path + '.bak_preR88M'))
+    backup_before_write(path)
     atomic_json_dump(LP(path), d)
     print(f'[{lang}] ルビ: 挿入 {len(new_rows)} / 差替 {replaced}')
 
@@ -188,7 +202,7 @@ for lang in ('JA', 'ZH', 'KO'):
         act = '挿入'
     else:
         s[exist] = [STEM, PRIORITY, flags]; act = '更新'
-    atomic_file_copy(LP(sp), LP(sp + '.bak_preR88M'))
+    backup_before_write(sp)
     # ★分解設定.json は indent=1 の可読JSON。atomic_json_dump の既定(indent=None)で
     #   書くと 44,135行が1行に潰れ、差分が読めなくなる(第88Rで実際に踏んだ)。
     atomic_json_dump(LP(sp), s, indent=1)
@@ -200,7 +214,7 @@ for lang in ('JA', 'ZH', 'KO'):
                             f'word_anno_{lang.lower()}.json')):
         w = json.load(open(LP(wp), encoding='utf-8'))
         w[ANNO_KEY] = [[STEM, GLOSS[lang]]]
-        atomic_file_copy(LP(wp), LP(wp + '.bak_preR88M'))
+        backup_before_write(wp)
         atomic_json_dump(LP(wp), w)
     print(f'[{lang}] word_anno: {ANNO_KEY} = {GLOSS[lang]} (配信＋out鏡)')
 print('適用完了 — 続けて build_word_anno_boundary_manifest.py で台帳を再生成すること')

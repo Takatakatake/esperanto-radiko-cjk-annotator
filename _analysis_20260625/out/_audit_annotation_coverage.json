@@ -1,7 +1,7 @@
 {
  "scope": "all_corpus_content_html",
- "files": 169,
- "annotated_documents": 123,
+ "files": 170,
+ "annotated_documents": 124,
  "annotated_document_paths": [
   "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
   "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_00.html",
@@ -123,6 +123,7 @@
   "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
   "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
   "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
   "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
   "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
   "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
@@ -321,33 +322,33 @@
  ],
  "document_accounting_gate": true,
  "totals": {
-  "ruby": 348971,
+  "ruby": 350519,
   "url_spans": 95,
-  "attached_morphology_tokens": 116304,
-  "attached_allowed_internal": 1190,
-  "attached_allowed_terminal": 115114,
+  "attached_morphology_tokens": 117692,
+  "attached_allowed_internal": 1206,
+  "attached_allowed_terminal": 116486,
   "attached_unexpected_tokens": 7,
-  "lines_non_annotation_block": 31799,
-  "lines_translation_or_note": 22012,
-  "lines_annotated_body": 80802,
-  "lines_plain_line_in_annotated_document": 101,
+  "lines_non_annotation_block": 32577,
+  "lines_translation_or_note": 22600,
+  "lines_annotated_body": 81296,
+  "lines_plain_line_in_annotated_document": 102,
   "lines_foreign_source_block": 2
  },
  "attached_watch_inventory": {
-  "an:after_ruby_terminal": 4398,
-  "en:after_ruby_terminal": 285,
+  "an:after_ruby_terminal": 4447,
+  "en:after_ruby_terminal": 287,
   "en:between_rubies": 46,
   "ia:after_ruby_terminal": 3,
-  "io:after_ruby_terminal": 567,
-  "on:after_ruby_terminal": 9130
+  "io:after_ruby_terminal": 571,
+  "on:after_ruby_terminal": 9220
  },
- "candidate_occurrences": 241,
- "candidate_unique_path_token": 209,
- "reviewed_occurrences": 241,
+ "candidate_occurrences": 256,
+ "candidate_unique_path_token": 223,
+ "reviewed_occurrences": 256,
  "unresolved_true_missing": 0,
  "coverage_gate": true,
- "review_config_entries": 209,
- "review_keys_used": 235,
+ "review_config_entries": 223,
+ "review_keys_used": 250,
  "review_config_gate": true,
  "review_unused_keys": [],
  "review_count_mismatches": [],
@@ -375,7 +376,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3136,
+   "line": 3133,
    "token": "Guk-kon",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -385,7 +386,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3143,
+   "line": 3140,
    "token": "Gukkon",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -395,7 +396,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3769,
+   "line": 3766,
    "token": "ac",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -405,7 +406,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3769,
+   "line": 3766,
    "token": "ad",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -415,7 +416,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3769,
+   "line": 3766,
    "token": "ba",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -425,7 +426,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3769,
+   "line": 3766,
    "token": "da",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -435,7 +436,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3770,
+   "line": 3767,
    "token": "ec",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -445,7 +446,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3770,
+   "line": 3767,
    "token": "ed",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -455,7 +456,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3770,
+   "line": 3767,
    "token": "aca",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -465,7 +466,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3773,
+   "line": 3770,
    "token": "ec",
    "kind": "esperanto_word",
    "line_class": "plain_line_in_annotated_document",
@@ -475,7 +476,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3874,
+   "line": 3871,
    "token": "Malamikete",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -485,7 +486,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3874,
+   "line": 3871,
    "token": "las",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -495,7 +496,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3875,
+   "line": 3872,
    "token": "Kadó",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -505,7 +506,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3875,
+   "line": 3872,
    "token": "temp",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -515,7 +516,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3876,
+   "line": 3873,
    "token": "tot",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -525,7 +526,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 3876,
+   "line": 3873,
    "token": "in",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -535,7 +536,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 6117,
+   "line": 6109,
    "token": "komenius",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -545,7 +546,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 6656,
+   "line": 6648,
    "token": "lui",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -555,7 +556,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 6859,
+   "line": 6851,
    "token": "loo",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -565,7 +566,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 7212,
+   "line": 7204,
    "token": "ĉe",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -575,7 +576,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
-   "line": 11132,
+   "line": 11124,
    "token": "a'n",
    "kind": "attached_unexpected_token",
    "line_class": "annotated_body",
@@ -645,7 +646,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/fujimaki5.html",
-   "line": 494,
+   "line": 491,
    "token": "Guk-kon",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -655,7 +656,7 @@
   },
   {
    "path": "lernolibroj/fujimaki/fujimaki5.html",
-   "line": 501,
+   "line": 498,
    "token": "Gukkon",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -912,6 +913,16 @@
    "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_tokipona",
    "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+   "line": 113,
+   "token": "Kunrei",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "- [R] (小坂狷二; Kunrei: [R]; [R]a [R] 28-an [R] [R]o 1888 [R] [R]; [R]a [R] 1-an [R] [R]o 1969) [R] [R]a [R]o [R] [R]a [R]o, [R]o [R] [R]a [R]o, [R]o.[R]o [R] [R] [R]o [R] [R]o.",
+   "review_category": "romanization_label",
+   "reason": "Label introducing the Kunrei-shiki romanization of the adjacent Japanese name, not Esperanto prose."
   },
   {
    "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
@@ -1625,37 +1636,37 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 285,
+   "line": 260,
    "token": "Fūsui",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
-   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "context": "[R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o.",
    "review_category": "quoted_source_term",
    "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 285,
+   "line": 260,
    "token": "Qi",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
-   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "context": "[R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o.",
    "review_category": "quoted_source_term",
    "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 285,
+   "line": 260,
    "token": "Ki",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
-   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "context": "[R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o.",
    "review_category": "quoted_source_term",
    "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 358,
+   "line": 328,
    "token": "Nobel",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1665,7 +1676,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 358,
+   "line": 328,
    "token": "Lecture",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1675,7 +1686,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 360,
+   "line": 330,
    "token": "The",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1685,7 +1696,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 360,
+   "line": 330,
    "token": "Nobel",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1695,7 +1706,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 360,
+   "line": 330,
    "token": "Foundation",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1705,7 +1716,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Nobel",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1715,7 +1726,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Peace",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1725,7 +1736,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Prize",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1735,7 +1746,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Nobel",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1745,7 +1756,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Prize",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1755,7 +1766,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Outreach",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1765,7 +1776,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Jo",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1775,7 +1786,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Straube",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1785,7 +1796,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Jo",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -1795,7 +1806,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
-   "line": 465,
+   "line": 417,
    "token": "Straube",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -2355,7 +2366,47 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 554,
+   "line": 479,
+   "token": "Basi",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]e [R]a [R]i [R] [R]o [R]e: \"Basi zaam jau lok, m goi! (巴士站有落,唔 該!)”*² [R] [R] [R] [R]i [R]ojn [R] [R]oj [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not Esperanto prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 479,
+   "token": "jau",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]e [R]a [R]i [R] [R]o [R]e: \"Basi zaam jau lok, m goi! (巴士站有落,唔 該!)”*² [R] [R] [R] [R]i [R]ojn [R] [R]oj [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not Esperanto prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 479,
+   "token": "lok",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]e [R]a [R]i [R] [R]o [R]e: \"Basi zaam jau lok, m goi! (巴士站有落,唔 該!)”*² [R] [R] [R] [R]i [R]ojn [R] [R]oj [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Cantonese romanization quoted together with the corresponding Chinese text, not the Esperanto root lok."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 479,
+   "token": "goi",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]e [R]a [R]i [R] [R]o [R]e: \"Basi zaam jau lok, m goi! (巴士站有落,唔 該!)”*² [R] [R] [R] [R]i [R]ojn [R] [R]oj [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 552,
    "token": "tea",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -2365,7 +2416,27 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 680,
+   "line": 599,
+   "token": "Dim",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R] [R]o [R] [R] [R] [R]o. [R] [R] [R]n [R] [R]o [R] [R]i Dim Sum(點 心), [R]aj [R]aj [R]oj, [R] [R]e [R] [R]a [R]a [R]o [R] [R].",
+   "review_category": "quoted_source_language",
+   "reason": "Cantonese dish name quoted with its Chinese spelling, not Esperanto prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 599,
+   "token": "Sum",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R] [R]o [R] [R] [R] [R]o. [R] [R] [R]n [R] [R]o [R] [R]i Dim Sum(點 心), [R]aj [R]aj [R]oj, [R] [R]e [R] [R]a [R]a [R]o [R] [R].",
+   "review_category": "quoted_source_language",
+   "reason": "Cantonese dish name quoted with its Chinese spelling, not Esperanto prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 678,
    "token": "JP",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -2375,7 +2446,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 680,
+   "line": 678,
    "token": "Tôkyô-to",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -2385,7 +2456,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 680,
+   "line": 678,
    "token": "Sinzyuku-ku",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -2395,7 +2466,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 680,
+   "line": 678,
    "token": "Waseda-mati",
    "kind": "proper_or_acronym",
    "line_class": "annotated_body",
@@ -2405,7 +2476,7 @@
   },
   {
    "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
-   "line": 680,
+   "line": 678,
    "token": "tel",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -2624,18 +2695,78 @@
    "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
   },
   {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 115,
+   "token": "La",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "出典: La Revuo Orienta 2026 aŭg.-sept. (RO_2026-0809.pdf)",
+   "review_category": "source_credit",
+   "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 115,
+   "token": "Revuo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "出典: La Revuo Orienta 2026 aŭg.-sept. (RO_2026-0809.pdf)",
+   "review_category": "source_credit",
+   "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 115,
+   "token": "Orienta",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "出典: La Revuo Orienta 2026 aŭg.-sept. (RO_2026-0809.pdf)",
+   "review_category": "source_credit",
+   "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 115,
+   "token": "sept",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "出典: La Revuo Orienta 2026 aŭg.-sept. (RO_2026-0809.pdf)",
+   "review_category": "source_credit",
+   "reason": "Issue-range abbreviation in the Japanese source-credit line, not article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 115,
+   "token": "RO",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "出典: La Revuo Orienta 2026 aŭg.-sept. (RO_2026-0809.pdf)",
+   "review_category": "source_credit",
+   "reason": "Journal title and issue filename in the Japanese source-credit line, not article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+   "line": 314,
+   "token": "JP",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 [R] [R] [R] 12-3",
+   "review_category": "postal_address",
+   "reason": "Country prefix in the publisher's postal address, outside the annotated article prose."
+  },
+  {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 471,
+   "line": 1105,
    "token": "dol",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R]e, [R] [R] [R]a [R]o [R] [R]-[R]aj [R]oj. [R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io. [R] [R]aj [R]oj [R]e [R] [R] [R] [R] [R]oj, [R] [R] [R]a [R]o [R] [R]a [R]a [R]o.",
+   "context": "[R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io.",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 557,
+   "line": 1272,
    "token": "jan",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -2645,67 +2776,77 @@
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 569,
+   "line": 1299,
    "token": "sike",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R] [R]i [R]ojn [R] [R]j [R] [R] [R]a [R]o, [R] [R]e [R] [R] [R] [R] [R]ojn [R]e. [R] [R] “[R]o” [R]e [R] [R]i [R]i waso ([R]o). [R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
+   "context": "[R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 584,
+   "line": 1341,
    "token": "luka",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 584,
+   "line": 1341,
    "token": "mute",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 584,
+   "line": 1341,
    "token": "ale",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-   "line": 716,
+   "line": 1533,
    "token": "guan",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o. [R] [R] [R]a [R]o [R] [R]aj [R]oj [R] [R] [R]e [R]a, [R] [R]o [R] [R]aj [R]oj. [R] [R]o [R] [R] [R]a [R]o [R] [R] [R]oj [R]e [R]aj [R] [R] [R]o, [R] [R]o [R] [R]o, [R]aj [R]oj, [R]j [R] [R]on [R] [R] [R]en[R]on [R] [R]a [R]o [R] [R]oj, [R]o [R] [R]oj [R] [R]o [R] [R]o.",
+   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o.",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 1787,
+   "token": "Idaenam",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]a [R] [R]o “ Idaenam ” (이대남), [R]o [R] [R]e [R] [R]ojn [R] [R] 20-aj [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Korean sociological term quoted with its Hangul spelling, not Esperanto prose."
+  },
+  {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 471,
+   "line": 1108,
    "token": "dol",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R]e, [R] [R] [R]a [R]o [R] [R]-[R]aj [R]oj. [R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io. [R] [R]aj [R]oj [R]e [R] [R] [R] [R] [R]oj, [R] [R] [R]a [R]o [R] [R]a [R]a [R]o.",
+   "context": "[R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io.",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 557,
+   "line": 1275,
    "token": "jan",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
@@ -2715,53 +2856,63 @@
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 569,
+   "line": 1299,
    "token": "sike",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R] [R]i [R]ojn [R] [R]j [R] [R] [R]a [R]o, [R] [R]e [R] [R] [R] [R] [R]ojn [R]e. [R] [R] “[R]o” [R]e [R] [R]i [R]i waso ([R]o). [R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
+   "context": "[R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 584,
+   "line": 1341,
    "token": "luka",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 584,
+   "line": 1341,
    "token": "mute",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 584,
+   "line": 1341,
    "token": "ale",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
   },
   {
    "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-   "line": 716,
+   "line": 1533,
    "token": "guan",
    "kind": "esperanto_word",
    "line_class": "annotated_body",
-   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o. [R] [R] [R]a [R]o [R] [R]aj [R]oj [R] [R] [R]e [R]a, [R] [R]o [R] [R]aj [R]oj. [R] [R]o [R] [R] [R]a [R]o [R] [R] [R]oj [R]e [R]aj [R] [R] [R]o, [R] [R]o [R] [R]o, [R]aj [R]oj, [R]j [R] [R]on [R] [R] [R]en[R]on [R] [R]a [R]o [R] [R]oj, [R]o [R] [R]oj [R] [R]o [R] [R]o.",
+   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o.",
    "review_category": "quoted_source_language",
    "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 1787,
+   "token": "Idaenam",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R]a [R] [R]o “ Idaenam ” (이대남), [R]o [R] [R]e [R] [R]ojn [R] [R] 20-aj [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Korean sociological term quoted with its Hangul spelling, not Esperanto prose."
   }
  ]
 }

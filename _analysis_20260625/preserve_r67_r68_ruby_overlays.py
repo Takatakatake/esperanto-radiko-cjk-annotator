@@ -42,12 +42,32 @@ PINNED_PARENT_COMMIT = "4682D32496F166802B4A2CF28626F376E12AAE3E"
 PINNED_PARENT_TREE = "2C494DB69EBAC28EF63A192BEFA017A22710CCD7"
 PINNED_PARENT_GLOBAL_ROWS = 572_356
 EXPECTED_POST_R73_GLOBAL_ROWS = 572_501
-CURRENT_PRE_R81_GLOBAL_ROWS = 572_713
+PRE_R94_PRE_R81_GLOBAL_ROWS = 572_713
+PRE_R94_DEPLOYED_GLOBAL_ROWS = 572_771
+CCB9398_PRE_R81_GLOBAL_ROWS = 573_240
+CCB9398_DEPLOYED_GLOBAL_ROWS = 573_298
+CURRENT_PRE_R81_GLOBAL_ROWS = 573_241
 # 世代ごとの全域ルビ行数(履歴)。増分の出所を必ず書き残す。
 #   572_729  第87R(Phase 619 サイドカー)まで
 #   +18      第88R  Phase 619 の族取り残し mukoz 基語(30語形のうち新規18)
 #   +24      第89R  京大コーパス全数照合で残った「接尾辞が裸で落ちる」8語族
-CURRENT_DEPLOYED_GLOBAL_ROWS = 572_771
+#   +527     第94R  ccb9398 residual closure + 202608 exact word_anno scope
+#   +1       dd55318 U+2019 exact/case-sensitive/Ruby-only alias
+CURRENT_DEPLOYED_GLOBAL_ROWS = 573_299
+OVERLAY_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625" / "_r67_r68_overlay_transition_ccb9398.json"
+)
+WORD_ANNO_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625" / "_word_anno_boundary_transition_ccb9398.json"
+)
+SUCCESSOR_OVERLAY_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_r67_r68_overlay_transition_dd55318_u2019.json"
+)
+SUCCESSOR_WORD_ANNO_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_word_anno_boundary_transition_dd55318_u2019.json"
+)
 
 HISTORICAL_EXPECTED_OVERLAYS = {
     "JA": {
@@ -150,9 +170,63 @@ CURRENT_EXPECTED_OVERLAYS = {
         },
     },
 }
+CCB9398_EXPECTED_OVERLAYS = {
+    "JA": {
+        "R67H": CURRENT_EXPECTED_OVERLAYS["JA"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "7F1E4662EB048D3AE7F85D7D3EB670A6111FBB5055EE9A9466D91419242C970D"
+            ),
+            "sources_sha256": (
+                "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+            ),
+        },
+    },
+    "ZH": {
+        "R67H": CURRENT_EXPECTED_OVERLAYS["ZH"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "727AFE5890EAD1BD01C797ADB6DA84FC0B0ABE742799D9650CD78EDAEEA3AEB0"
+            ),
+            "sources_sha256": (
+                "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+            ),
+        },
+    },
+    "KO": {
+        "R67H": CURRENT_EXPECTED_OVERLAYS["KO"]["R67H"],
+        "R68W": {
+            "count": 1_012,
+            "rows_sha256": (
+                "71D9584663CAC086BB1D4AB2329DB9387CBDB9CD211BA52416A84D0C4A8AD95C"
+            ),
+            "sources_sha256": (
+                "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+            ),
+        },
+    },
+}
 OVERLAY_PROFILES = {
     "historical-r72-r73": HISTORICAL_EXPECTED_OVERLAYS,
     "current-post-temis": CURRENT_EXPECTED_OVERLAYS,
+    "current-ccb9398": CCB9398_EXPECTED_OVERLAYS,
+}
+CURRENT_PROFILE_GLOBAL_ROWS = {
+    "current-post-temis": PRE_R94_DEPLOYED_GLOBAL_ROWS,
+    "current-ccb9398": CURRENT_DEPLOYED_GLOBAL_ROWS,
+}
+# A one-time successor rebuild legitimately restores the exact ccb9398 overlay
+# snapshot captured immediately before the U+2019 raw rule was generated.
+# Future captures still require CURRENT_PROFILE_GLOBAL_ROWS exactly; only the
+# signed snapshot loader accepts this explicitly named historical row count.
+ALLOWED_CURRENT_SNAPSHOT_ROWS = {
+    "current-post-temis": {PRE_R94_DEPLOYED_GLOBAL_ROWS},
+    "current-ccb9398": {
+        CCB9398_DEPLOYED_GLOBAL_ROWS,
+        CURRENT_DEPLOYED_GLOBAL_ROWS,
+    },
 }
 
 EXACT_OVERRIDE_SOURCE = " Auster "
@@ -171,6 +245,224 @@ def compact_sha256(value) -> str:
         separators=(",", ":"),
     ).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest().upper()
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest().upper()
+
+
+def load_ccb9398_overlay_transition() -> dict:
+    transition = json.loads(
+        OVERLAY_TRANSITION_PATH.read_text(encoding="utf-8")
+    )
+    word_transition = json.loads(
+        WORD_ANNO_TRANSITION_PATH.read_text(encoding="utf-8")
+    )
+    expected_top = {
+        "schema_version", "transition", "source_app_commit",
+        "word_anno_transition", "profiles", "global_rows",
+        "candidate_raw_payload_sha256", "overlay_transition",
+        "target_overlay_identity", "policy",
+    }
+    expected_move = {
+        "unchanged_prefix": "R67H",
+        "reordered_prefix": "R68W",
+        "rows": 1012,
+        "row_content_changes": 0,
+        "source_set_changes": 0,
+        "moved_source": " York ",
+        "source_index_before": 862,
+        "source_index_after": 1006,
+        "shifted_intermediate_rows": 144,
+        "sequence_moved_rows": 145,
+        "sequence_descents": 1,
+    }
+    expected_policy = {
+        "overlay_row_content_must_remain_identical": True,
+        "overlay_source_set_must_remain_identical": True,
+        "only_reviewed_order_transition_is_allowed": True,
+        "three_language_source_order_must_match": True,
+        "kanji_artifacts_must_remain_byte_identical": True,
+    }
+    word_authority = transition.get("word_anno_transition", {})
+    if (
+        set(transition) != expected_top
+        or transition.get("schema_version") != 1
+        or transition.get("transition")
+        != "r68-new-york-order-transition-ccb9398"
+        or transition.get("profiles")
+        != {"source": "current-post-temis", "target": "current-ccb9398"}
+        or transition.get("global_rows")
+        != {
+            "source_deployed": PRE_R94_DEPLOYED_GLOBAL_ROWS,
+            "candidate_raw": 571_892,
+            "target_after_overlay_restore": CCB9398_PRE_R81_GLOBAL_ROWS,
+            "target_after_existing_postfix_layers": CCB9398_DEPLOYED_GLOBAL_ROWS,
+        }
+        or transition.get("overlay_transition") != expected_move
+        or transition.get("target_overlay_identity")
+        != CCB9398_EXPECTED_OVERLAYS
+        or transition.get("policy") != expected_policy
+        or word_authority.get("path")
+        != WORD_ANNO_TRANSITION_PATH.relative_to(ROOT).as_posix()
+        or word_authority.get("file_sha256")
+        != file_sha256(WORD_ANNO_TRANSITION_PATH)
+        or word_authority.get("required_added_key") != "New York"
+        or "New York" not in word_transition.get("added_keys", [])
+        or word_transition.get("policy", {}).get(
+            "three_language_boundary_identity_required"
+        ) is not True
+        or word_transition.get("policy", {}).get(
+            "kanji_master_decomposition_is_not_changed"
+        ) is not True
+    ):
+        raise ValueError("invalid ccb9398 R67/R68 overlay transition")
+    return transition
+
+
+def load_dd55318_u2019_overlay_transition(
+    raw_payloads: dict | None = None,
+) -> dict:
+    """Validate the immutable ccb9398 -> one-rule U+2019 successor."""
+    transition = json.loads(
+        SUCCESSOR_OVERLAY_TRANSITION_PATH.read_text(encoding="utf-8")
+    )
+    predecessor = load_ccb9398_overlay_transition()
+    word_successor = json.loads(
+        SUCCESSOR_WORD_ANNO_TRANSITION_PATH.read_text(encoding="utf-8")
+    )
+    expected_top = {
+        "schema_version", "transition", "description", "source_app_commit",
+        "authority", "profiles", "global_rows",
+        "predecessor_raw_payload_sha256",
+        "candidate_raw_payload_sha256", "raw_generation_delta",
+        "overlay_transition", "target_overlay_identity", "kanji_artifacts",
+        "policy",
+    }
+    authority = transition.get("authority", {})
+    old_authority = authority.get("historical_overlay_transition", {})
+    word_authority = authority.get("word_anno_successor_transition", {})
+    expected_policy = {
+        "historical_overlay_ledger_rewritten": False,
+        "word_anno_successor_required": True,
+        "only_one_reviewed_u2019_exact_rule_is_added": True,
+        "case_sensitive": True,
+        "ruby_only": True,
+        "wildcard_or_substring_authorization": False,
+        "overlay_row_content_must_remain_identical": True,
+        "overlay_row_order_must_remain_identical": True,
+        "overlay_source_set_must_remain_identical": True,
+        "three_language_source_order_must_match": True,
+        "kanji_artifacts_must_remain_byte_identical": True,
+        "learner_master_changed": False,
+        "corpus_changed": False,
+    }
+    raw_delta = transition.get("raw_generation_delta", {})
+    expected_raw_delta_projection = {
+        "added_surface": "Fukuwarai’",
+        "added_source": " Fukuwarai’ ",
+        "ascii_authority_surface": "Fukuwarai'",
+        "word_anno_context_key": "@typed:Fukuwarai’:0",
+        "target": "Fukuwarai/’",
+        "typed_roles": "RL",
+        "following_placeholder_delta": 1,
+        "exact_only": True,
+        "case_sensitive": True,
+        "ruby_only": True,
+        "wildcard_or_substring_authorization": False,
+    }
+    if (
+        set(transition) != expected_top
+        or transition.get("schema_version") != 1
+        or transition.get("transition")
+        != "r67-r68-overlay-dd55318-u2019-successor-v1"
+        or transition.get("source_app_commit")
+        != "6a707dd8da4be04da8dba0968b8de9255411af76"
+        or transition.get("profiles")
+        != {
+            "source": "current-ccb9398",
+            "target": "current-dd55318-u2019",
+        }
+        or transition.get("global_rows")
+        != {
+            "source_deployed": CCB9398_DEPLOYED_GLOBAL_ROWS,
+            "predecessor_raw": 571_892,
+            "candidate_raw": 571_893,
+            "candidate_raw_delta": 1,
+            "target_after_overlay_restore": CURRENT_PRE_R81_GLOBAL_ROWS,
+            "target_after_existing_postfix_layers": CURRENT_DEPLOYED_GLOBAL_ROWS,
+            "overlay_rows_restored": 1_348,
+            "existing_postfix_rows": 58,
+        }
+        or transition.get("target_overlay_identity")
+        != predecessor.get("target_overlay_identity")
+        or transition.get("overlay_transition")
+        != {
+            "identity_source": (
+                "historical_overlay_transition.target_overlay_identity"
+            ),
+            "unchanged_prefixes": ["R67H", "R68W"],
+            "rows": 1_348,
+            "row_content_changes": 0,
+            "row_order_changes": 0,
+            "source_set_changes": 0,
+        }
+        or transition.get("policy") != expected_policy
+        or {
+            key: raw_delta.get(key)
+            for key in expected_raw_delta_projection
+        } != expected_raw_delta_projection
+        or old_authority.get("path")
+        != OVERLAY_TRANSITION_PATH.relative_to(ROOT).as_posix()
+        or old_authority.get("file_sha256")
+        != file_sha256(OVERLAY_TRANSITION_PATH)
+        or old_authority.get("required_transition")
+        != predecessor.get("transition")
+        or word_authority.get("path")
+        != SUCCESSOR_WORD_ANNO_TRANSITION_PATH.relative_to(ROOT).as_posix()
+        or word_authority.get("file_sha256")
+        != file_sha256(SUCCESSOR_WORD_ANNO_TRANSITION_PATH)
+        or word_authority.get("required_ledger_id")
+        != word_successor.get("ledger_id")
+        or word_authority.get("required_added_key")
+        not in word_successor.get("delta", {}).get("added_keys", [])
+    ):
+        raise ValueError("invalid dd55318 U+2019 R67/R68 successor")
+    if (
+        set(transition.get("kanji_artifacts", {})) != set(LANGUAGES)
+        or set(transition.get("candidate_raw_payload_sha256", {}))
+        != set(LANGUAGES)
+        or set(transition.get("predecessor_raw_payload_sha256", {}))
+        != set(LANGUAGES)
+    ):
+        raise ValueError("invalid U+2019 language/hash closure")
+    for language, artifacts in transition.get("kanji_artifacts", {}).items():
+        if language not in LANGUAGES or not artifacts:
+            raise ValueError("invalid U+2019 Kanji artifact closure")
+        for relative, expected_sha256 in artifacts.items():
+            if file_sha256(ROOT / relative) != expected_sha256:
+                raise ValueError(
+                    f"{language}: U+2019 changed Kanji artifact {relative}"
+                )
+    if raw_payloads is not None:
+        if set(raw_payloads) != set(LANGUAGES):
+            raise ValueError("U+2019 raw payload language closure drift")
+        for language, payload in raw_payloads.items():
+            _key, rows = global_bucket(payload)
+            if (
+                len(rows) != transition["global_rows"]["candidate_raw"]
+                or compact_sha256(payload)
+                != transition["candidate_raw_payload_sha256"][language]
+                or any(overlay_rows(rows, prefix) for prefix in OVERLAY_PREFIXES)
+            ):
+                raise ValueError(
+                    f"{language}: U+2019 raw payload authority drift"
+                )
+    return transition
 
 
 def payload_path(language: str) -> Path:
@@ -302,6 +594,34 @@ def validate_overlay_matrix(
     return report
 
 
+def detect_current_overlay_profile(matrix: dict) -> str:
+    matches = []
+    for profile in CURRENT_PROFILE_GLOBAL_ROWS:
+        try:
+            validate_overlay_matrix(matrix, profile)
+        except ValueError:
+            continue
+        matches.append(profile)
+    if len(matches) != 1:
+        raise ValueError(
+            f"current overlay profile is ambiguous or unknown: {matches!r}"
+        )
+    return matches[0]
+
+
+def target_overlay_profile(source_profile: str) -> str:
+    if source_profile == "historical-r72-r73":
+        return source_profile
+    transition = load_ccb9398_overlay_transition()
+    source = transition["profiles"]["source"]
+    target = transition["profiles"]["target"]
+    if source_profile not in {source, target}:
+        raise ValueError(
+            f"unsupported current overlay source profile: {source_profile!r}"
+        )
+    return target
+
+
 def resolve_git_identity(git_ref: str) -> dict:
     commit = subprocess.check_output(
         ["git", "rev-parse", f"{git_ref}^{{commit}}"],
@@ -329,7 +649,7 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
                 f"recovery parent identity drift: {identity!r} != {expected!r}"
             )
     else:
-        overlay_profile = "current-post-temis"
+        overlay_profile = None
         identity = {
             "commit": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"],
@@ -376,6 +696,8 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
         }
         deployed_counts[language] = len(rows)
 
+    if overlay_profile is None:
+        overlay_profile = detect_current_overlay_profile(matrix)
     overlay_report = validate_overlay_matrix(matrix, overlay_profile)
     if git_ref is not None and any(
         count != PINNED_PARENT_GLOBAL_ROWS
@@ -385,7 +707,7 @@ def capture_snapshot(output: Path, git_ref: str | None = None) -> dict:
             f"pinned parent global row count drift: {deployed_counts!r}"
         )
     if git_ref is None and any(
-        count != CURRENT_DEPLOYED_GLOBAL_ROWS
+        count != CURRENT_PROFILE_GLOBAL_ROWS[overlay_profile]
         for count in deployed_counts.values()
     ):
         raise ValueError(
@@ -445,9 +767,9 @@ def load_snapshot(path: Path) -> dict:
             <= {PINNED_PARENT_GLOBAL_ROWS, EXPECTED_POST_R73_GLOBAL_ROWS}
         )
         or (
-            overlay_profile == "current-post-temis"
-            and set(captured_counts.values())
-            != {CURRENT_DEPLOYED_GLOBAL_ROWS}
+            overlay_profile in CURRENT_PROFILE_GLOBAL_ROWS
+            and not set(captured_counts.values())
+            <= ALLOWED_CURRENT_SNAPSHOT_ROWS[overlay_profile]
         )
     ):
         raise ValueError("historical overlay capture-count drift")
@@ -459,7 +781,7 @@ def load_snapshot(path: Path) -> dict:
             "tree": PINNED_PARENT_TREE,
         }:
             raise ValueError("recovery snapshot parent identity drift")
-    elif overlay_profile != "current-post-temis":
+    elif overlay_profile not in CURRENT_PROFILE_GLOBAL_ROWS:
         raise ValueError("current snapshot profile drift")
     exact_overrides = snapshot.get("exact_overrides")
     if set(exact_overrides or {}) != set(LANGUAGES):
@@ -675,11 +997,17 @@ def audit_payloads(
 
 def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
     snapshot = load_snapshot(path)
-    overlay_profile = snapshot["overlay_profile"]
+    source_overlay_profile = snapshot["overlay_profile"]
+    overlay_profile = target_overlay_profile(source_overlay_profile)
     payloads = {
         language: load_payload(language)
         for language in LANGUAGES
     }
+    if source_overlay_profile == "current-ccb9398":
+        # Current formal regeneration is authorized only for the sealed
+        # one-rule U+2019 raw candidate.  Historical recovery deliberately
+        # bypasses this successor-only check.
+        load_dd55318_u2019_overlay_transition(payloads)
     candidates = {}
     for language in LANGUAGES:
         payload = payloads[language]
@@ -694,6 +1022,7 @@ def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
     report = audit_payloads(
         candidates, expected_global_rows, overlay_profile,
     )
+    report["source_overlay_profile"] = source_overlay_profile
 
     stages = {}
     rollbacks = {}
@@ -723,6 +1052,7 @@ def apply_snapshot(path: Path, expected_global_rows: int | None) -> dict:
         deployed_report = audit_payloads(
             deployed, expected_global_rows, overlay_profile,
         )
+        deployed_report["source_overlay_profile"] = source_overlay_profile
         if deployed_report != report:
             raise ValueError(
                 "deployed overlay audit differs from staged audit"
@@ -796,8 +1126,16 @@ def main() -> None:
             language: load_payload(language)
             for language in LANGUAGES
         }
+        matrix = {}
+        for language in LANGUAGES:
+            _key, rows = global_bucket(payloads[language])
+            matrix[language] = {
+                prefix: overlay_rows(rows, prefix)
+                for prefix in OVERLAY_PREFIXES
+            }
+        overlay_profile = detect_current_overlay_profile(matrix)
         report = audit_payloads(
-            payloads, args.expected_global_rows, "current-post-temis",
+            payloads, args.expected_global_rows, overlay_profile,
         )
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

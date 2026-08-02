@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "ledger_id": "corpus-source-radioelsendo-ccb9398-to-dd55318-v1",
+  "description": "Fail-closed source transition for the one reviewed Kyoto-corpus radioelsendo media-sense correction. Historical ccb9398 app evidence remains immutable; dd55318 changes one corpus signature only.",
+  "corpus": {
+    "branch": "agent/r94-kyoto-ruby-audit",
+    "empty_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "parent": {
+      "head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029",
+      "tree_oid": "250af9cf8dd9011cd296604787584c516ed2fb79",
+      "content_sha256": "05C4A95250515BF3CBCBE382843DC2A48BC255B4A34FDF6F96771237F7D8B79B"
+    },
+    "candidate": {
+      "head_oid": "dd55318c33b36128e64561d4ae7fca587ad974fa",
+      "tree_oid": "8ceca918f5a54fd04a09f1af73c8ee4c65accd81",
+      "content_sha256": "33ED6EA94E45A5434B3AAE035F8C44D97278ACABA9A83714A0167EC0754C70B8"
+    },
+    "scope": {
+      "content_files": 170,
+      "raw_ruby": 350519,
+      "parsed_ruby": 350519,
+      "parsed_units": 272297,
+      "evaluable_instances": 271079,
+      "canonical_surfaces": 21572,
+      "canonical_case_rows": 21580
+    }
+  },
+  "changed_file": {
+    "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+    "added_lines": 1,
+    "removed_lines": 1,
+    "parent_blob_oid": "f4958b169db2cfdfa8df24ea592f976e6003fc55",
+    "candidate_blob_oid": "ffe5ae1b604e657153e0ae2b10ae6be39139f25a",
+    "parent_bytes": 65232,
+    "candidate_bytes": 65227,
+    "parent_sha256": "FE0AA029FF6610CF108EAE041B7E318FE73AA186ACDC9750112B24C57B9494D0",
+    "candidate_sha256": "8C9840590D9C166E545CDCC5ECA4D2757C7CD958F1594844FF864A54556A4400",
+    "full_index_binary_diff_bytes": 3451,
+    "full_index_binary_diff_sha256": "AC415D61AEE263DA4F8CC8EEDE942796815EADB464CB6ABB07C06118BB4AD571"
+  },
+  "canonical_transition": {
+    "parent_projection_sha256": "B084464B63875973B1AEFF3941785B825549EDB7B99DA7C921378BA8FC64A9FA",
+    "candidate_projection_sha256": "9DCBA41A7C2D0690AAA51BA9738F7C83863F0CBDB6735DD106841A66FA6A306B",
+    "delta_sha256": "0263A64E138B93356857394415FB7F624B51461BF8C8635377AE9382683A3748",
+    "removed": [
+      {
+        "surface": "radioelsendo",
+        "typed": "R:radi|L:o|R:el|R:send|L:o",
+        "count": 1
+      }
+    ],
+    "added": [
+      {
+        "surface": "radioelsendo",
+        "typed": "R:radio|R:el|R:send|L:o",
+        "count": 1
+      }
+    ],
+    "parent_rich": [
+      {"piece": "radi", "ruby": true, "rt": "放射;電波"},
+      {"piece": "o", "ruby": false, "rt": null},
+      {"piece": "el", "ruby": true, "rt": "中か<br>ら"},
+      {"piece": "send", "ruby": true, "rt": "(を)送る"},
+      {"piece": "o", "ruby": false, "rt": null}
+    ],
+    "candidate_rich": [
+      {"piece": "radio", "ruby": true, "rt": "ラジオ"},
+      {"piece": "el", "ruby": true, "rt": "中か<br>ら"},
+      {"piece": "send", "ruby": true, "rt": "(を)送る"},
+      {"piece": "o", "ruby": false, "rt": null}
+    ]
+  },
+  "active_manifests": {
+    "exact": {
+      "path": "_analysis_20260625/_corpus_exact_app_manifest.json",
+      "file_sha256": "492A12BE2D1F80C185B5BDA72E6BFE6CEFA8A1C3DC5AED8CABD37614706C1580",
+      "counts": {
+        "exact_surfaces": 443,
+        "exact_instances": 1218,
+        "atomic_whole_surfaces": 431,
+        "component_surfaces": 12,
+        "annotation_roots": 437
+      },
+      "rows_sha256": "F08A3A54E7D1EBE161A345D2E26D351202CF83DF58C14DC00CEBB78D0C289B18",
+      "annotations_sha256": "2A0FE524CFE5EBADF68906E16D349F361DE7271FFA11B908C56BC294D3A2097C",
+      "non_source_sha256": "0C6C96A594F69D6B54DB27368EC660B5F144728CC0E7BE62074484365E23E9DD"
+    },
+    "reviewed": {
+      "path": "_analysis_20260625/_corpus_reviewed_exact_app_manifest.json",
+      "file_sha256": "05AC16F610140C78D63797854DE91AE0552E4EC3AC076189C5BD46665B5D6299",
+      "counts": {
+        "exact_surfaces": 625,
+        "exact_instances": 2745,
+        "ruby_context_annotations": 924
+      },
+      "rows_sha256": "DE424F930F6DB698B45AD872CD8C0DCF1BCC445857B5C7C4C0221F21B8261676",
+      "annotations_sha256": "3E3F2D6C6432BC5754F263AFA117D0289F4921D6FF627346D674CCBFF7650370",
+      "non_source_sha256": "1A83C271C9A6180880B08DD4B31F159F5B589938B32BCEF251E96A5A1DD99256",
+      "report_sha256": "B6883A83A7E9E72E2487022F6F36AF45BAE4A286B14558885FA1E5DFEBE7DD0E"
+    },
+    "word_anno_boundary": {
+      "path": "_analysis_20260625/_word_anno_boundary_scope_manifest.json",
+      "file_sha256": "E0ABAAAC7DED1D26F783C2CFD2AB8C0884AF05F354E2D28FA156F9290E6C7016",
+      "canonical_payload_sha256": "DBA373A4D7CBF3A6488A73405DC4167F3DD930B8EF46DE19411976A3F1CE649C",
+      "authority_keys": 49387,
+      "authority_sha256": "06F6B256269DE3A195E959FE4962E98EDBFD77E5AB6F4E81F9472C91B3A3983B",
+      "expected_key_counts": {"ja": 49348, "zh": 49387, "ko": 49387}
+    }
+  },
+  "historical_evidence": {
+    "r94_residual_ledger": {
+      "path": "_analysis_20260625/_corpus_r94_ccb9398_residual_closure.json",
+      "file_sha256": "3745A14C9F6AEDA5375B56C2D2A58C8E34C72973B6182980F26467C3B3FD8A57",
+      "corpus_head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029"
+    },
+    "reviewed_evidence_transition": {
+      "path": "_analysis_20260625/_corpus_reviewed_exact_evidence_transition_ccb9398.json",
+      "file_sha256": "B6883A83A7E9E72E2487022F6F36AF45BAE4A286B14558885FA1E5DFEBE7DD0E"
+    },
+    "word_anno_transition": {
+      "path": "_analysis_20260625/_word_anno_boundary_transition_ccb9398.json",
+      "file_sha256": "A9FFBC5EC596A4CD7B1927185BD2553845CA3DEC2B0F5F1B342F1132A09B1303"
+    }
+  },
+  "policy": {
+    "source_only_transition": true,
+    "corpus_change_reviewed": true,
+    "ruby_track_coarse_media_root": "radio",
+    "split_for_width_allowed": false,
+    "app_runtime_rules_changed_by_transition": false,
+    "word_anno_changed_by_transition": false,
+    "kanji_track_changed_by_transition": false,
+    "learner_fake_decomposition_changed_by_transition": false,
+    "ja_zh_ko_boundary_gate_required": true,
+    "historical_ccb9398_evidence_rewritten": false
+  }
+}

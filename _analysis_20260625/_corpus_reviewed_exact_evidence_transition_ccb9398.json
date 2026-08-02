@@ -1,0 +1,101 @@
+{
+ "schema_version": 1,
+ "transition": "d1642c2-reviewed-exact-to-ccb9398-evidence-refresh",
+ "parent": {
+  "app_commit": "6a707dd8da4be04da8dba0968b8de9255411af76",
+  "manifest_path": "_analysis_20260625/_corpus_reviewed_exact_app_manifest.json",
+  "manifest_sha256": "CB51DAA4DB1A4BE8B0673201A0F059E3AD939E97F6A3C3D2BBCCF5711A2CE900",
+  "report_sha256": "E4A77FD506FE17FC04543DE37560EBAB3A1E869AAD0E5C231C718DF1530AABD8",
+  "source": {
+   "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
+   "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
+   "content_files": 169,
+   "raw_ruby": 348580,
+   "parsed_ruby": 348580,
+   "parsed_units": 270763
+  },
+  "counts": {
+   "exact_surfaces": 625,
+   "exact_instances": 2740,
+   "ruby_context_annotations": 924
+  }
+ },
+ "candidate": {
+  "head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029",
+  "tree_oid": "250af9cf8dd9011cd296604787584c516ed2fb79",
+  "content_sha256": "05C4A95250515BF3CBCBE382843DC2A48BC255B4A34FDF6F96771237F7D8B79B",
+  "content_files": 170,
+  "raw_ruby": 350519,
+  "parsed_ruby": 350519,
+  "parsed_units": 272297,
+  "counts": {
+   "exact_surfaces": 625,
+   "exact_instances": 2745,
+   "ruby_context_annotations": 924
+  },
+  "canonical_scope": {
+   "evaluable_instances": 271079,
+   "canonical_surfaces": 21572
+  }
+ },
+ "evidence_deltas": [
+  {
+   "surface": "Chiba",
+   "old_count": 7,
+   "new_count": 8,
+   "cause": "new_202608_document",
+   "path_deltas": {
+    "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html": 1
+   }
+  },
+  {
+   "surface": "Gugyeol",
+   "old_count": 2,
+   "new_count": 4,
+   "cause": "reviewed_missing_ruby_repairs",
+   "path_deltas": {
+    "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html": 1,
+    "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html": 1
+   }
+  },
+  {
+   "surface": "Sophia-Universitato",
+   "old_count": 7,
+   "new_count": 8,
+   "cause": "new_202608_document",
+   "path_deltas": {
+    "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html": 1
+   }
+  },
+  {
+   "surface": "Tokio",
+   "old_count": 64,
+   "new_count": 65,
+   "cause": "new_202608_document",
+   "path_deltas": {
+    "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html": 1
+   }
+  }
+ ],
+ "semantic_hashes": {
+  "algorithm": "UTF-8 canonical JSON; runtime-bearing row fields and annotation piece/glosses only",
+  "parent_exact_rules_sha256": "8500B20FE25EB91E935BA30AE4DF30A97EE4A2B03C3038A3D348ED4F41F6A412",
+  "candidate_exact_rules_sha256": "8500B20FE25EB91E935BA30AE4DF30A97EE4A2B03C3038A3D348ED4F41F6A412",
+  "parent_annotation_glosses_sha256": "95FAF8AE3C26396F5DDF976C6B257C22C639AE31002B51FC9F4FF8FB09B03517",
+  "candidate_annotation_glosses_sha256": "95FAF8AE3C26396F5DDF976C6B257C22C639AE31002B51FC9F4FF8FB09B03517"
+ },
+ "candidate_hashes": {
+  "exact_surfaces_sha256": "DE424F930F6DB698B45AD872CD8C0DCF1BCC445857B5C7C4C0221F21B8261676",
+  "annotations_sha256": "3E3F2D6C6432BC5754F263AFA117D0289F4921D6FF627346D674CCBFF7650370",
+  "payload_sha256": "1A83C271C9A6180880B08DD4B31F159F5B589938B32BCEF251E96A5A1DD99256"
+ },
+ "policy": {
+  "old_residual_report_reuse": false,
+  "source_only_refresh": false,
+  "explicit_evidence_transition": true,
+  "selected_surface_set_unchanged": true,
+  "typed_boundaries_unchanged": true,
+  "selected_glosses_unchanged": true,
+  "runtime_rules_changed": false
+ }
+}

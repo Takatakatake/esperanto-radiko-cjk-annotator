@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "transition": "r67-r68-overlay-dd55318-u2019-successor-v1",
+  "description": "Fail-closed carry-forward authority for the one corpus-observed U+2019 Fukuwarai exact Ruby alias. The historical ccb9398 overlay transition is retained byte-for-byte; no overlay content, order, source set, or Kanji artifact changes.",
+  "source_app_commit": "6a707dd8da4be04da8dba0968b8de9255411af76",
+  "authority": {
+    "historical_overlay_transition": {
+      "path": "_analysis_20260625/_r67_r68_overlay_transition_ccb9398.json",
+      "file_sha256": "EC041BCBC1E691003C757C70A64A1A5CD94127C37AA508FB3B3193BBB1BD6EC5",
+      "required_transition": "r68-new-york-order-transition-ccb9398"
+    },
+    "word_anno_successor_transition": {
+      "path": "_analysis_20260625/_word_anno_boundary_transition_dd55318_u2019.json",
+      "file_sha256": "149B0E3C085D99E3269504FA6AC23E65F0375DA65B9783C270817350F368317F",
+      "required_ledger_id": "word-anno-boundary-dd55318-u2019-successor-v1",
+      "required_added_key": "@typed:Fukuwarai’:0"
+    }
+  },
+  "profiles": {
+    "source": "current-ccb9398",
+    "target": "current-dd55318-u2019"
+  },
+  "global_rows": {
+    "source_deployed": 573298,
+    "predecessor_raw": 571892,
+    "candidate_raw": 571893,
+    "candidate_raw_delta": 1,
+    "target_after_overlay_restore": 573241,
+    "target_after_existing_postfix_layers": 573299,
+    "overlay_rows_restored": 1348,
+    "existing_postfix_rows": 58
+  },
+  "predecessor_raw_payload_sha256": {
+    "JA": "CE75728209A1BD2FB3DA41733B0B0856E6FBD0A213297C7ACD3FF8F8C0AD767A",
+    "ZH": "3DAB75729FBB7305002D5AECFD6AAA2FF6F1FA8AD2698994609BE42A33108C20",
+    "KO": "5631FB089A0B69D0084ED4EF6A924EA56EDDC1188E1C50E77BA1EEF8B307EBBB"
+  },
+  "candidate_raw_payload_sha256": {
+    "JA": "DD1AC7BB12FE4CF9743BBD59C2A1118626BE3250137B145CFBF7AABEAFB77D17",
+    "ZH": "0C961B996E1CA60A8A2CC2D4C1E23E704D2A721387DC6BE8FB3034BA17D7F9CE",
+    "KO": "8005DC406E6AA9472ECCC0FD42CB17FBD3720DD494A8F2ACCBD3ABB67CA214BD"
+  },
+  "raw_generation_delta": {
+    "added_surface": "Fukuwarai’",
+    "added_source": " Fukuwarai’ ",
+    "ascii_authority_surface": "Fukuwarai'",
+    "word_anno_context_key": "@typed:Fukuwarai’:0",
+    "target": "Fukuwarai/’",
+    "typed_roles": "RL",
+    "insertion_index": 29511,
+    "placeholder_number": 31068,
+    "following_placeholder_delta": 1,
+    "added_rows": {
+      "JA": [
+        " Fukuwarai’ ",
+        " <ruby>Fukuwarai<rt class=\"XXL_L\">[日]福笑い</rt></ruby>’ ",
+        " $31068$ "
+      ],
+      "ZH": [
+        " Fukuwarai’ ",
+        " <ruby>Fukuwarai<rt class=\"XXL_L\">[日语]福笑</rt></ruby>’ ",
+        " $31068$ "
+      ],
+      "KO": [
+        " Fukuwarai’ ",
+        " <ruby>Fukuwarai<rt class=\"L_L\">[일]후쿠와라이</rt></ruby>’ ",
+        " $31068$ "
+      ]
+    },
+    "settings_flags": [
+      "ne",
+      "word_boundary",
+      "case_sensitive",
+      "typed_roles:RL",
+      "ruby_only"
+    ],
+    "exact_only": true,
+    "case_sensitive": true,
+    "ruby_only": true,
+    "wildcard_or_substring_authorization": false
+  },
+  "overlay_transition": {
+    "identity_source": "historical_overlay_transition.target_overlay_identity",
+    "unchanged_prefixes": [
+      "R67H",
+      "R68W"
+    ],
+    "rows": 1348,
+    "row_content_changes": 0,
+    "row_order_changes": 0,
+    "source_set_changes": 0
+  },
+  "target_overlay_identity": {
+    "JA": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "EFF64DE3C95FEC66209CA72E1EFE5A8E0EB0C438A89AEA4C200A6C41130F340A",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "7F1E4662EB048D3AE7F85D7D3EB670A6111FBB5055EE9A9466D91419242C970D",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    },
+    "ZH": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "2BE0D3D80BFCFF668D771DB4891A9F8A0E52BBBB4C5F10A7B364A3DA6625D609",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "727AFE5890EAD1BD01C797ADB6DA84FC0B0ABE742799D9650CD78EDAEEA3AEB0",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    },
+    "KO": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "3341E8260981925082A3E4D156B64FA2C21A7B7FB6FED8FB97973B941C73B056",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "71D9584663CAC086BB1D4AB2329DB9387CBDB9CD211BA52416A84D0C4A8AD95C",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    }
+  },
+  "kanji_artifacts": {
+    "JA": {
+      "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_漢字.json": "644B823BD1C8D6ACCCEE75FBA6A3E6E2D7870B6AAB37CF158460817A066488FE",
+      "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_漢字_純粋置換.json": "988E2A5616976D2A7B6E872AA8089ED49AB5A13830BD516F967AC304C446F285"
+    },
+    "ZH": {
+      "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_漢字.json": "DE0A149325B481C30F82B8F4669920132DD34CACD4C30FE9D2B0A643FDB63FEF"
+    },
+    "KO": {
+      "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_漢字.json": "29B7D78681402AA65C0B99DE009CDE0F3CCDB9B6E07526D6A7579ABE3A09C71B"
+    }
+  },
+  "policy": {
+    "historical_overlay_ledger_rewritten": false,
+    "word_anno_successor_required": true,
+    "only_one_reviewed_u2019_exact_rule_is_added": true,
+    "case_sensitive": true,
+    "ruby_only": true,
+    "wildcard_or_substring_authorization": false,
+    "overlay_row_content_must_remain_identical": true,
+    "overlay_row_order_must_remain_identical": true,
+    "overlay_source_set_must_remain_identical": true,
+    "three_language_source_order_must_match": true,
+    "kanji_artifacts_must_remain_byte_identical": true,
+    "learner_master_changed": false,
+    "corpus_changed": false
+  }
+}

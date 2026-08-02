@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import copy
+from collections import Counter
 import tempfile
 from pathlib import Path
 import unittest
@@ -91,16 +92,72 @@ class HistoricalRubyOverlayCarryForwardTests(unittest.TestCase):
             language: overlay.load_payload(language)
             for language in overlay.LANGUAGES
         }
+        matrix = {}
+        for language, payload in payloads.items():
+            _key, rows = overlay.global_bucket(payload)
+            matrix[language] = {
+                prefix: overlay.overlay_rows(rows, prefix)
+                for prefix in overlay.OVERLAY_PREFIXES
+            }
+        profile = overlay.detect_current_overlay_profile(matrix)
+        self.assertEqual(profile, "current-ccb9398")
         report = overlay.audit_payloads(
             payloads,
             overlay.CURRENT_DEPLOYED_GLOBAL_ROWS,
-            "current-post-temis",
+            profile,
         )
         self.assertTrue(report["gate"])
         self.assertEqual(
             set(report["global_rows"].values()),
             {overlay.CURRENT_DEPLOYED_GLOBAL_ROWS},
         )
+
+    def test_ccb9398_transition_only_reorders_york_after_new_york(self):
+        transition = overlay.load_ccb9398_overlay_transition()
+        source_ref = transition["source_app_commit"]
+        movement = transition["overlay_transition"]
+        for language in overlay.LANGUAGES:
+            with self.subTest(language=language):
+                old_payload = overlay.load_payload(language, source_ref)
+                new_payload = overlay.load_payload(language)
+                _old_key, old_rows = overlay.global_bucket(old_payload)
+                _new_key, new_rows = overlay.global_bucket(new_payload)
+                old_r67 = overlay.overlay_rows(old_rows, "R67H")
+                new_r67 = overlay.overlay_rows(new_rows, "R67H")
+                old_r68 = overlay.overlay_rows(old_rows, "R68W")
+                new_r68 = overlay.overlay_rows(new_rows, "R68W")
+                self.assertEqual(new_r67, old_r67)
+                self.assertEqual(
+                    Counter(map(tuple, new_r68)),
+                    Counter(map(tuple, old_r68)),
+                )
+                old_position = {
+                    tuple(row): index for index, row in enumerate(old_r68)
+                }
+                permutation = [
+                    old_position[tuple(row)] for row in new_r68
+                ]
+                self.assertEqual(len(permutation), movement["rows"])
+                self.assertEqual(
+                    sum(index != old for index, old in enumerate(permutation)),
+                    movement["sequence_moved_rows"],
+                )
+                self.assertEqual(
+                    sum(left > right for left, right in zip(
+                        permutation, permutation[1:]
+                    )),
+                    movement["sequence_descents"],
+                )
+                old_york = next(
+                    index for index, row in enumerate(old_r68)
+                    if row[0] == movement["moved_source"]
+                )
+                new_york = next(
+                    index for index, row in enumerate(new_r68)
+                    if row[0] == movement["moved_source"]
+                )
+                self.assertEqual(old_york, movement["source_index_before"])
+                self.assertEqual(new_york, movement["source_index_after"])
 
 
 if __name__ == "__main__":

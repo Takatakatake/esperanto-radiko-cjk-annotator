@@ -412,7 +412,16 @@ def auto_overlay_entries(html_pass1, data_dir, mode):
                 continue
             corr = build_correction(d, data_dir)
             for pair in corr.get(mode, []):
-                if len(pair) >= 2 and pair[0] and pair[1]:
+                # Automatic repair is evidence for the spelling that was
+                # actually stranded, not for its other case variants.  A
+                # lowercase foreign-looking token can coexist with a reviewed
+                # case-sensitive proper name (watanabe / Watanabe); promoting
+                # the heuristic to all three variants would shadow the already
+                # correct exact-name rule during the second pass.
+                if (
+                    len(pair) >= 2 and pair[0] and pair[1]
+                    and pair[0] == w
+                ):
                     entries.append(pair)
         except Exception:
             continue

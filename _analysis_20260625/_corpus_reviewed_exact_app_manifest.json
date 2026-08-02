@@ -2,31 +2,32 @@
  "schema_version": 1,
  "description": "Pinned case-sensitive typed exact app rules for reviewed evaluable residuals after productive morphology.",
  "source": {
-  "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
-  "branch": "main",
+  "head_oid": "dd55318c33b36128e64561d4ae7fca587ad974fa",
+  "branch": "agent/r94-kyoto-ruby-audit",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
-  "content_files": 169,
-  "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
-  "raw_ruby": 348580,
-  "parsed_ruby": 348580,
-  "parsed_units": 270763,
+  "content_files": 170,
+  "content_sha256": "33ED6EA94E45A5434B3AAE035F8C44D97278ACABA9A83714A0167EC0754C70B8",
+  "raw_ruby": 350519,
+  "parsed_ruby": 350519,
+  "parsed_units": 272297,
   "report": {
-   "kind": "explicit_retirement_transition",
-   "filename": "_corpus_reviewed_exact_transition_d1642c2.json",
-   "sha256": "E4A77FD506FE17FC04543DE37560EBAB3A1E869AAD0E5C231C718DF1530AABD8",
+   "kind": "explicit_evidence_transition",
+   "filename": "_corpus_reviewed_exact_evidence_transition_ccb9398.json",
+   "sha256": "B6883A83A7E9E72E2487022F6F36AF45BAE4A286B14558885FA1E5DFEBE7DD0E",
    "schema_version": 1,
-   "parent_residual_report_sha256": "620B40AEE6C90AEEF185E4911946DB977D75BC13C8FCB5CB8E476ACFB44A2814",
-   "retired_surfaces": [
-    "bonŝanĉulo",
-    "fronantaj",
-    "jurnal"
+   "parent_report_sha256": "E4A77FD506FE17FC04543DE37560EBAB3A1E869AAD0E5C231C718DF1530AABD8",
+   "changed_surfaces": [
+    "Chiba",
+    "Gugyeol",
+    "Sophia-Universitato",
+    "Tokio"
    ]
   }
  },
  "counts": {
   "exact_surfaces": 625,
-  "exact_instances": 2740,
+  "exact_instances": 2745,
   "ruby_context_annotations": 924
  },
  "exact_surfaces": [
@@ -1731,7 +1732,7 @@
     ]
    },
    "typed": "R:Chiba",
-   "count": 7,
+   "count": 8,
    "available_expected_options": [
     "R:Chiba"
    ],
@@ -1765,6 +1766,10 @@
     },
     {
      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -3564,7 +3569,7 @@
     ]
    },
    "typed": "R:Gugyeol",
-   "count": 2,
+   "count": 4,
    "available_expected_options": [
     "R:Gugyeol"
    ],
@@ -3574,11 +3579,11 @@
    "paths": [
     {
      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
-     "count": 1
+     "count": 2
     },
     {
      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
-     "count": 1
+     "count": 2
     }
    ]
   },
@@ -10925,7 +10930,7 @@
     ]
    },
    "typed": "R:Sophia|L:-|R:Universitat|L:o",
-   "count": 7,
+   "count": 8,
    "available_expected_options": [
     "R:Sophia|L:-|R:Universitat|L:o"
    ],
@@ -10952,6 +10957,10 @@
     },
     {
      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -11902,7 +11911,7 @@
     ]
    },
    "typed": "R:Tokio",
-   "count": 64,
+   "count": 65,
    "available_expected_options": [
     "R:Tokio"
    ],
@@ -11989,6 +11998,10 @@
     {
      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
      "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
     },
     {
      "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
@@ -23686,7 +23699,7 @@
     "ja": [
      {
       "gloss": "[地名]千葉",
-      "count": 7
+      "count": 8
      }
     ]
    }
@@ -24692,13 +24705,13 @@
     "ja": [
      {
       "gloss": "[語]口訣",
-      "count": 1
+      "count": 2
      }
     ],
     "ko": [
      {
       "gloss": "[어]Gugyeol",
-      "count": 1
+      "count": 2
      }
     ]
    }
@@ -28921,6 +28934,10 @@
      {
       "gloss": "[大学名]上智",
       "count": 6
+     },
+     {
+      "gloss": "[校名]上智",
+      "count": 1
      }
     ]
    }
@@ -28936,7 +28953,7 @@
     "ja": [
      {
       "gloss": "大学",
-      "count": 7
+      "count": 8
      }
     ]
    }
@@ -29488,7 +29505,7 @@
      },
      {
       "gloss": "東京",
-      "count": 33
+      "count": 34
      }
     ]
    }

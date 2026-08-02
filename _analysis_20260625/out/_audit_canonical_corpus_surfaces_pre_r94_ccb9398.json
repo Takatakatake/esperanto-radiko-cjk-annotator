@@ -1,0 +1,718 @@
+{
+  "schema_version": 1,
+  "algorithm": {
+    "id": "canonical-corpus-surfaces-v1",
+    "steps": [
+      "Verify the corpus checkout is clean and matches the pinned HEAD/content hash.",
+      "Parse CONTENT_DIRS with no_worsening_audit.parse_corpus_words.",
+      "Canonicalize Esperanto notation and retain only audit.evaluable surfaces.",
+      "Group every observed typed signature by canonical surface.",
+      "Narrow all reviewed evaluable surfaces to their reviewed-manifest signature.",
+      "Render every surface through each selected deployed Ruby runtime/payload.",
+      "Require visible identity, expected typed signature, and no placeholder token."
+    ]
+  },
+  "algorithm_sha256": "6A68969E3B4A0FF6580D52BE8645F39E74DC12C525317DEB3FD339F594771B97",
+  "script_path": "D:\\tmp\\r93_main_audit_20260801\\_analysis_20260625\\check_canonical_corpus_surfaces.py",
+  "script_sha256": "CA50F38BCA2215150DD346A6E3CBE77816D360CB5DB4A1A91890DB50424AA927",
+  "corpus": {
+    "path": "D:\\tmp\\r78_root_corpus_20260729",
+    "head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029",
+    "content_sha256": "05C4A95250515BF3CBCBE382843DC2A48BC255B4A34FDF6F96771237F7D8B79B"
+  },
+  "exact_manifest_sha256": "53076BF775F13CCDC98A694778F8555BFCAC3BD403A99DE45A8EAF9888BC7B58",
+  "reviewed_manifest_sha256": "3FC3F9F201AD202F845041240992531F5FCB388B630C50C69FE8BA9CF699319B",
+  "scope": {
+    "content_files": 170,
+    "raw_ruby": 350519,
+    "parsed_ruby": 350519,
+    "parsed_units": 272297,
+    "evaluable_instances": 271079,
+    "canonical_surfaces": 21572,
+    "reviewed_overrides": 625
+  },
+  "languages": [
+    {
+      "language": "JA",
+      "payload_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-JA\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "9981A78E5DC8FE1644901A430F53643706512ED516FB76938DD946B8CFE23A99",
+      "runtime_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-JA\\esp_text_replacement_module.py",
+      "runtime_sha256": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
+      "global_rules": 572771,
+      "render_seconds": 116.15447425842285,
+      "residual_surfaces": 26,
+      "residual_instances": 32,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": false,
+      "residuals": [
+        {
+          "surface": "Asahi",
+          "instances": 1,
+          "actual": "L:Asahi",
+          "expected": [
+            "R:Asahi"
+          ]
+        },
+        {
+          "surface": "Fukuwarai'",
+          "instances": 1,
+          "actual": "R:Fuk|L:uw|R:ar|L:ai'",
+          "expected": [
+            "R:Fukuwarai|L:'"
+          ]
+        },
+        {
+          "surface": "HKDSE",
+          "instances": 1,
+          "actual": "L:HKDSE",
+          "expected": [
+            "R:HKDSE"
+          ]
+        },
+        {
+          "surface": "Hannja-ĝi",
+          "instances": 1,
+          "actual": "R:Han|R:nj|L:a-|R:ĝi",
+          "expected": [
+            "R:Hannja-ĝi"
+          ]
+        },
+        {
+          "surface": "Mondial",
+          "instances": 1,
+          "actual": "R:Mond|R:ial",
+          "expected": [
+            "R:Mondial"
+          ]
+        },
+        {
+          "surface": "Primico",
+          "instances": 1,
+          "actual": "R:Primic|L:o",
+          "expected": [
+            "R:Primico"
+          ]
+        },
+        {
+          "surface": "Sinzyuku-ku",
+          "instances": 1,
+          "actual": "L:Sinzyuku-ku",
+          "expected": [
+            "R:Sinzyuku-ku"
+          ]
+        },
+        {
+          "surface": "TK",
+          "instances": 1,
+          "actual": "L:TK",
+          "expected": [
+            "R:TK"
+          ]
+        },
+        {
+          "surface": "Waseda-mati",
+          "instances": 1,
+          "actual": "R:Waseda|L:-|R:mat|L:i",
+          "expected": [
+            "R:Waseda-mati"
+          ]
+        },
+        {
+          "surface": "Watanabe",
+          "instances": 3,
+          "actual": "L:W|R:at|L:anabe",
+          "expected": [
+            "R:Watanabe"
+          ]
+        },
+        {
+          "surface": "Yae",
+          "instances": 3,
+          "actual": "L:Yae",
+          "expected": [
+            "R:Yae"
+          ]
+        },
+        {
+          "surface": "apudon",
+          "instances": 2,
+          "actual": "L:a|R:pud|L:on",
+          "expected": [
+            "R:apud|L:on"
+          ]
+        },
+        {
+          "surface": "dekokjarulojn",
+          "instances": 1,
+          "actual": "R:dek|L:okja|R:rul|L:ojn",
+          "expected": [
+            "R:dek|R:ok|R:jar|R:ul|L:ojn"
+          ]
+        },
+        {
+          "surface": "hongkongano",
+          "instances": 1,
+          "actual": "R:hongkong|L:ano",
+          "expected": [
+            "R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "hongkongano-japanaj",
+          "instances": 1,
+          "actual": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:hongkong|R:an|L:o-|R:japan|L:aj"
+          ]
+        },
+        {
+          "surface": "koreo-hongkongano",
+          "instances": 1,
+          "actual": "R:kore|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:kore|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "miksdevena",
+          "instances": 1,
+          "actual": "R:miks|R:de|R:ven|L:a",
+          "expected": [
+            "R:miks|R:deven|L:a"
+          ]
+        },
+        {
+          "surface": "multdevenuloj",
+          "instances": 1,
+          "actual": "R:mult|R:de|R:ven|L:uloj",
+          "expected": [
+            "R:mult|R:deven|R:ul|L:oj"
+          ]
+        },
+        {
+          "surface": "nederlandano-hongkongano",
+          "instances": 1,
+          "actual": "R:nederland|R:an|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "premi-ceremonio",
+          "instances": 1,
+          "actual": "R:prem|L:i-|R:ceremoni|L:o",
+          "expected": [
+            "R:premi|L:-|R:ceremoni|L:o"
+          ]
+        },
+        {
+          "surface": "radio-elsendoj",
+          "instances": 1,
+          "actual": "R:radi|L:o-|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|L:-|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioelsendoj",
+          "instances": 2,
+          "actual": "R:radi|L:o|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioprogramo",
+          "instances": 1,
+          "actual": "R:radi|L:o|R:program|L:o",
+          "expected": [
+            "R:radio|R:program|L:o"
+          ]
+        },
+        {
+          "surface": "reprezentis",
+          "instances": 1,
+          "actual": "R:re|R:prezent|R:is",
+          "expected": [
+            "R:reprezent|R:is"
+          ]
+        },
+        {
+          "surface": "samas",
+          "instances": 1,
+          "actual": "R:sam|L:as",
+          "expected": [
+            "R:sam|R:as"
+          ]
+        },
+        {
+          "surface": "ĉino-japanaj",
+          "instances": 1,
+          "actual": "L:ĉi|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:ĉin|L:o-|R:japan|L:aj"
+          ]
+        }
+      ],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    },
+    {
+      "language": "ZH",
+      "payload_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-ZH\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "C5822300791CC89AA56F632BE7A88BB20451E2D506BB4CC43A83076D5A28512E",
+      "runtime_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-ZH\\esp_text_replacement_module.py",
+      "runtime_sha256": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
+      "global_rules": 572771,
+      "render_seconds": 118.26535439491272,
+      "residual_surfaces": 26,
+      "residual_instances": 32,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": false,
+      "residuals": [
+        {
+          "surface": "Asahi",
+          "instances": 1,
+          "actual": "L:Asahi",
+          "expected": [
+            "R:Asahi"
+          ]
+        },
+        {
+          "surface": "Fukuwarai'",
+          "instances": 1,
+          "actual": "R:Fuk|L:uw|R:ar|L:ai'",
+          "expected": [
+            "R:Fukuwarai|L:'"
+          ]
+        },
+        {
+          "surface": "HKDSE",
+          "instances": 1,
+          "actual": "L:HKDSE",
+          "expected": [
+            "R:HKDSE"
+          ]
+        },
+        {
+          "surface": "Hannja-ĝi",
+          "instances": 1,
+          "actual": "R:Han|R:nj|L:a-|R:ĝi",
+          "expected": [
+            "R:Hannja-ĝi"
+          ]
+        },
+        {
+          "surface": "Mondial",
+          "instances": 1,
+          "actual": "R:Mond|R:ial",
+          "expected": [
+            "R:Mondial"
+          ]
+        },
+        {
+          "surface": "Primico",
+          "instances": 1,
+          "actual": "R:Primic|L:o",
+          "expected": [
+            "R:Primico"
+          ]
+        },
+        {
+          "surface": "Sinzyuku-ku",
+          "instances": 1,
+          "actual": "L:Sinzyuku-ku",
+          "expected": [
+            "R:Sinzyuku-ku"
+          ]
+        },
+        {
+          "surface": "TK",
+          "instances": 1,
+          "actual": "L:TK",
+          "expected": [
+            "R:TK"
+          ]
+        },
+        {
+          "surface": "Waseda-mati",
+          "instances": 1,
+          "actual": "R:Waseda|L:-|R:mat|L:i",
+          "expected": [
+            "R:Waseda-mati"
+          ]
+        },
+        {
+          "surface": "Watanabe",
+          "instances": 3,
+          "actual": "L:W|R:at|L:anabe",
+          "expected": [
+            "R:Watanabe"
+          ]
+        },
+        {
+          "surface": "Yae",
+          "instances": 3,
+          "actual": "L:Yae",
+          "expected": [
+            "R:Yae"
+          ]
+        },
+        {
+          "surface": "apudon",
+          "instances": 2,
+          "actual": "L:a|R:pud|L:on",
+          "expected": [
+            "R:apud|L:on"
+          ]
+        },
+        {
+          "surface": "dekokjarulojn",
+          "instances": 1,
+          "actual": "R:dek|L:okja|R:rul|L:ojn",
+          "expected": [
+            "R:dek|R:ok|R:jar|R:ul|L:ojn"
+          ]
+        },
+        {
+          "surface": "hongkongano",
+          "instances": 1,
+          "actual": "R:hongkong|L:ano",
+          "expected": [
+            "R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "hongkongano-japanaj",
+          "instances": 1,
+          "actual": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:hongkong|R:an|L:o-|R:japan|L:aj"
+          ]
+        },
+        {
+          "surface": "koreo-hongkongano",
+          "instances": 1,
+          "actual": "R:kore|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:kore|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "miksdevena",
+          "instances": 1,
+          "actual": "R:miks|R:de|R:ven|L:a",
+          "expected": [
+            "R:miks|R:deven|L:a"
+          ]
+        },
+        {
+          "surface": "multdevenuloj",
+          "instances": 1,
+          "actual": "R:mult|R:de|R:ven|L:uloj",
+          "expected": [
+            "R:mult|R:deven|R:ul|L:oj"
+          ]
+        },
+        {
+          "surface": "nederlandano-hongkongano",
+          "instances": 1,
+          "actual": "R:nederland|R:an|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "premi-ceremonio",
+          "instances": 1,
+          "actual": "R:prem|L:i-|R:ceremoni|L:o",
+          "expected": [
+            "R:premi|L:-|R:ceremoni|L:o"
+          ]
+        },
+        {
+          "surface": "radio-elsendoj",
+          "instances": 1,
+          "actual": "R:radi|L:o-|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|L:-|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioelsendoj",
+          "instances": 2,
+          "actual": "R:radi|L:o|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioprogramo",
+          "instances": 1,
+          "actual": "R:radi|L:o|R:program|L:o",
+          "expected": [
+            "R:radio|R:program|L:o"
+          ]
+        },
+        {
+          "surface": "reprezentis",
+          "instances": 1,
+          "actual": "R:re|R:prezent|R:is",
+          "expected": [
+            "R:reprezent|R:is"
+          ]
+        },
+        {
+          "surface": "samas",
+          "instances": 1,
+          "actual": "R:sam|L:as",
+          "expected": [
+            "R:sam|R:as"
+          ]
+        },
+        {
+          "surface": "ĉino-japanaj",
+          "instances": 1,
+          "actual": "L:ĉi|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:ĉin|L:o-|R:japan|L:aj"
+          ]
+        }
+      ],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    },
+    {
+      "language": "KO",
+      "payload_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-KO\\app_data\\置換リスト_ルビ.json",
+      "payload_sha256": "AF496C4F21882574ED77116E375C5511ABD3766C037C407C5366CAFC96E74E62",
+      "runtime_path": "D:\\tmp\\r93_main_audit_20260801\\Esperanto-Kanji-Ruby-KO\\esp_text_replacement_module.py",
+      "runtime_sha256": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
+      "global_rules": 572771,
+      "render_seconds": 117.5205488204956,
+      "residual_surfaces": 26,
+      "residual_instances": 32,
+      "visible_failures": 0,
+      "placeholder_residual_surfaces": 0,
+      "pass": false,
+      "residuals": [
+        {
+          "surface": "Asahi",
+          "instances": 1,
+          "actual": "L:Asahi",
+          "expected": [
+            "R:Asahi"
+          ]
+        },
+        {
+          "surface": "Fukuwarai'",
+          "instances": 1,
+          "actual": "R:Fuk|L:uw|R:ar|L:ai'",
+          "expected": [
+            "R:Fukuwarai|L:'"
+          ]
+        },
+        {
+          "surface": "HKDSE",
+          "instances": 1,
+          "actual": "L:HKDSE",
+          "expected": [
+            "R:HKDSE"
+          ]
+        },
+        {
+          "surface": "Hannja-ĝi",
+          "instances": 1,
+          "actual": "R:Han|R:nj|L:a-|R:ĝi",
+          "expected": [
+            "R:Hannja-ĝi"
+          ]
+        },
+        {
+          "surface": "Mondial",
+          "instances": 1,
+          "actual": "R:Mond|R:ial",
+          "expected": [
+            "R:Mondial"
+          ]
+        },
+        {
+          "surface": "Primico",
+          "instances": 1,
+          "actual": "R:Primic|L:o",
+          "expected": [
+            "R:Primico"
+          ]
+        },
+        {
+          "surface": "Sinzyuku-ku",
+          "instances": 1,
+          "actual": "L:Sinzyuku-ku",
+          "expected": [
+            "R:Sinzyuku-ku"
+          ]
+        },
+        {
+          "surface": "TK",
+          "instances": 1,
+          "actual": "L:TK",
+          "expected": [
+            "R:TK"
+          ]
+        },
+        {
+          "surface": "Waseda-mati",
+          "instances": 1,
+          "actual": "R:Waseda|L:-|R:mat|L:i",
+          "expected": [
+            "R:Waseda-mati"
+          ]
+        },
+        {
+          "surface": "Watanabe",
+          "instances": 3,
+          "actual": "L:W|R:at|L:anabe",
+          "expected": [
+            "R:Watanabe"
+          ]
+        },
+        {
+          "surface": "Yae",
+          "instances": 3,
+          "actual": "L:Yae",
+          "expected": [
+            "R:Yae"
+          ]
+        },
+        {
+          "surface": "apudon",
+          "instances": 2,
+          "actual": "L:a|R:pud|L:on",
+          "expected": [
+            "R:apud|L:on"
+          ]
+        },
+        {
+          "surface": "dekokjarulojn",
+          "instances": 1,
+          "actual": "R:dek|L:okja|R:rul|L:ojn",
+          "expected": [
+            "R:dek|R:ok|R:jar|R:ul|L:ojn"
+          ]
+        },
+        {
+          "surface": "hongkongano",
+          "instances": 1,
+          "actual": "R:hongkong|L:ano",
+          "expected": [
+            "R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "hongkongano-japanaj",
+          "instances": 1,
+          "actual": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:hongkong|R:an|L:o-|R:japan|L:aj"
+          ]
+        },
+        {
+          "surface": "koreo-hongkongano",
+          "instances": 1,
+          "actual": "R:kore|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:kore|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "miksdevena",
+          "instances": 1,
+          "actual": "R:miks|R:de|R:ven|L:a",
+          "expected": [
+            "R:miks|R:deven|L:a"
+          ]
+        },
+        {
+          "surface": "multdevenuloj",
+          "instances": 1,
+          "actual": "R:mult|R:de|R:ven|L:uloj",
+          "expected": [
+            "R:mult|R:deven|R:ul|L:oj"
+          ]
+        },
+        {
+          "surface": "nederlandano-hongkongano",
+          "instances": 1,
+          "actual": "R:nederland|R:an|L:o-|R:hongkong|L:ano",
+          "expected": [
+            "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"
+          ]
+        },
+        {
+          "surface": "premi-ceremonio",
+          "instances": 1,
+          "actual": "R:prem|L:i-|R:ceremoni|L:o",
+          "expected": [
+            "R:premi|L:-|R:ceremoni|L:o"
+          ]
+        },
+        {
+          "surface": "radio-elsendoj",
+          "instances": 1,
+          "actual": "R:radi|L:o-|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|L:-|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioelsendoj",
+          "instances": 2,
+          "actual": "R:radi|L:o|R:el|R:send|L:oj",
+          "expected": [
+            "R:radio|R:el|R:send|L:oj"
+          ]
+        },
+        {
+          "surface": "radioprogramo",
+          "instances": 1,
+          "actual": "R:radi|L:o|R:program|L:o",
+          "expected": [
+            "R:radio|R:program|L:o"
+          ]
+        },
+        {
+          "surface": "reprezentis",
+          "instances": 1,
+          "actual": "R:re|R:prezent|R:is",
+          "expected": [
+            "R:reprezent|R:is"
+          ]
+        },
+        {
+          "surface": "samas",
+          "instances": 1,
+          "actual": "R:sam|L:as",
+          "expected": [
+            "R:sam|R:as"
+          ]
+        },
+        {
+          "surface": "ĉino-japanaj",
+          "instances": 1,
+          "actual": "L:ĉi|R:no|L:-|R:japan|L:aj",
+          "expected": [
+            "R:ĉin|L:o-|R:japan|L:aj"
+          ]
+        }
+      ],
+      "visible_failure_rows": [],
+      "placeholder_surfaces": []
+    }
+  ],
+  "residual_language_surfaces": 78,
+  "visible_failures": 0,
+  "placeholder_residual_surfaces": 0,
+  "pass": false
+}

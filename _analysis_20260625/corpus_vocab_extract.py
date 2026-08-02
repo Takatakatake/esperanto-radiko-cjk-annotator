@@ -21,7 +21,12 @@ def LP(p): return PFX + os.path.abspath(p)
 ap = argparse.ArgumentParser()
 ap.add_argument('--corpus', default=r'C:\Users\yt\.esp_repos\wt_corpus')
 ap.add_argument('--out', default='corpus_words.json')
+ap.add_argument('--scope', choices=('all', 'content'), default='all',
+                help=('all: repo内の全HTML（従来動作） / content: '
+                      'lernolibroj,legajxoj,revuoj,rondolegado の本文HTMLのみ'))
 A = ap.parse_args()
+
+CONTENT_DIRS = ('lernolibroj', 'legajxoj', 'revuoj', 'rondolegado')
 
 RT = re.compile(r'<rt[^>]*>(?:[^<]|<br\s*/?>)*?</rt>')
 RUBYTAG = re.compile(r'</?ruby[^>]*>')          # ← 空文字で除去(語を割らない)
@@ -30,11 +35,30 @@ SCRIPT = re.compile(r'<(script|style)[^>]*>.*?</\1>', re.S | re.I)
 L = "A-Za-zĉĝĥĵŝŭĈĜĤĴŜŬ"
 WORD = re.compile('[' + L + ']{1,40}')
 
+if A.scope == 'content':
+    missing = [name for name in CONTENT_DIRS
+               if not os.path.isdir(os.path.join(A.corpus, name))]
+    if missing:
+        ap.error('content scope requires all content directories; missing: '
+                 + ', '.join(missing))
+    html_paths = []
+    for name in CONTENT_DIRS:
+        directory_paths = glob.glob(
+            os.path.join(A.corpus, name, '**', '*.html'), recursive=True)
+        if not directory_paths:
+            ap.error('content scope requires at least one HTML file in each '
+                     f'content directory; empty: {name}')
+        html_paths.extend(directory_paths)
+else:
+    html_paths = glob.glob(os.path.join(A.corpus, '**', '*.html'), recursive=True)
+
 freq = collections.Counter(); files = 0
-for p in glob.glob(os.path.join(A.corpus, '**', '*.html'), recursive=True):
+for p in html_paths:
     try:
         raw = open(LP(p), encoding='utf-8', errors='replace').read()
-    except Exception:
+    except Exception as error:
+        if A.scope == 'content':
+            ap.error(f'content HTML could not be read: {p}: {error}')
         continue
     files += 1
     raw = SCRIPT.sub(' ', raw)

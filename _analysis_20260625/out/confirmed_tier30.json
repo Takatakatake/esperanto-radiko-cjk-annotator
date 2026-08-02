@@ -2794,6 +2794,86 @@
   "case_sensitive": true
  },
  {
+  "w": "Hannja-ĝi",
+  "target": "Hannja-ĝi",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Asahi",
+  "target": "Asahi",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "HKDSE",
+  "target": "HKDSE",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Mondial",
+  "target": "Mondial",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Primico",
+  "target": "Primico",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Sinzyuku-ku",
+  "target": "Sinzyuku-ku",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "TK",
+  "target": "TK",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Waseda-mati",
+  "target": "Waseda-mati",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Watanabe",
+  "target": "Watanabe",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Yae",
+  "target": "Yae",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "EU",
   "target": "EU",
   "exact_only": true,
@@ -3770,6 +3850,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Chan Sunglong",
+  "target": "Chan Sunglong",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Chapecó",
   "target": "Chapecó",
   "exact_only": true,
@@ -4338,6 +4426,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Hasegaŭa Joŝihumi",
+  "target": "Hasegaŭa Joŝihumi",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Hasegaŭa Teru",
   "target": "Hasegaŭa Teru",
   "exact_only": true,
@@ -4722,6 +4818,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Kato Tokiko",
+  "target": "Kato Tokiko",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Kawazumi Takaki",
   "target": "Kawazumi Takaki",
   "exact_only": true,
@@ -4754,6 +4858,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Kimura Goro Christoph",
+  "target": "Kimura Goro Christoph",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Kimura Kishiro",
   "target": "Kimura Kishiro",
   "exact_only": true,
@@ -4764,6 +4876,14 @@
  {
   "w": "Kita Ikki",
   "target": "Kita Ikki",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Kitagawa Ikuko",
+  "target": "Kitagawa Ikuko",
   "exact_only": true,
   "corpus_managed": true,
   "boundary_only": true,
@@ -5314,6 +5434,14 @@
   "case_sensitive": true
  },
  {
+  "w": "New York",
+  "target": "New York",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Nigra Maro",
   "target": "Nigra Maro",
   "exact_only": true,
@@ -5474,6 +5602,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Probal Dasgupta",
+  "target": "Probal Dasgupta",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Pu Songling",
   "target": "Pu Songling",
   "exact_only": true,
@@ -5530,8 +5666,32 @@
   "case_sensitive": true
  },
  {
+  "w": "Rabindranath Tagore",
+  "target": "Rabindranath Tagore",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Racława",
   "target": "Racława",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Radio Kansai",
+  "target": "Radio Kansai",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Radio Nippon",
+  "target": "Radio Nippon",
   "exact_only": true,
   "corpus_managed": true,
   "boundary_only": true,
@@ -5706,6 +5866,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Sasaki Takao",
+  "target": "Sasaki Takao",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Sasaki Teruhiro",
   "target": "Sasaki Teruhiro",
   "exact_only": true,
@@ -5716,6 +5884,14 @@
  {
   "w": "Sato Ryusuke",
   "target": "Sato Ryusuke",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Senda Noriko",
+  "target": "Senda Noriko",
   "exact_only": true,
   "corpus_managed": true,
   "boundary_only": true,
@@ -6026,6 +6202,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Tôkyô-to",
+  "target": "Tôkyô-to",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "UMESAO Tadao",
   "target": "UMESAO Tadao",
   "exact_only": true,
@@ -6194,6 +6378,14 @@
   "case_sensitive": true
  },
  {
+  "w": "Watanabe Katsuyoshi",
+  "target": "Watanabe Katsuyoshi",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "Wei Ningna",
   "target": "Wei Ningna",
   "exact_only": true,
@@ -6228,6 +6420,14 @@
  {
   "w": "William AULD",
   "target": "William AULD",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Witold Hulewicz",
+  "target": "Witold Hulewicz",
   "exact_only": true,
   "corpus_managed": true,
   "boundary_only": true,
@@ -6562,6 +6762,14 @@
   "case_sensitive": true
  },
  {
+  "w": "tel.",
+  "target": "tel.",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
   "w": "vd.",
   "target": "vd.",
   "exact_only": true,
@@ -6668,6 +6876,14 @@
  {
   "w": "Świętopełek",
   "target": "Świętopełek",
+  "exact_only": true,
+  "corpus_managed": true,
+  "boundary_only": true,
+  "case_sensitive": true
+ },
+ {
+  "w": "Ŝikoku Goro",
+  "target": "Ŝikoku Goro",
   "exact_only": true,
   "corpus_managed": true,
   "boundary_only": true,
@@ -7193,6 +7409,96 @@
   "corpus_managed": true
  },
  {
+  "w": "apudo",
+  "target": "apud/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "dekokjarulo",
+  "target": "dek/ok/jar/ul/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "hongkongano",
+  "target": "hongkong/an/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "hongkongano-japana",
+  "target": "hongkong/an/o/-/japan/a",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "koreo-hongkongano",
+  "target": "kore/o/-/hongkong/an/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "nederlandano-hongkongano",
+  "target": "nederland/an/o/-/hongkong/an/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "miksdevena",
+  "target": "miks/deven/a",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "multdevenulo",
+  "target": "mult/deven/ul/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "premi-ceremonio",
+  "target": "premi/-/ceremoni/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "radioprogramo",
+  "target": "radio/program/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "radioelsendo",
+  "target": "radio/el/send/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "radio-elsendo",
+  "target": "radio/-/el/send/o",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "reprezentis",
+  "target": "reprezent/is",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "samas",
+  "target": "sam/as",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
+  "w": "ĉino-japana",
+  "target": "ĉin/o/-/japan/a",
+  "corpus_managed": true,
+  "ruby_track_only": true
+ },
+ {
   "w": "suprenglisi",
   "target": "supr/e/n/glis/i",
   "corpus_managed": true
@@ -7416,6 +7722,16 @@
   "boundary_only": true,
   "case_sensitive": true,
   "corpus_managed": true
+ },
+ {
+  "w": "Fukuwarai'",
+  "target": "Fukuwarai/'",
+  "typed_roles": "RL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_only": true
  },
  {
   "w": "aglutinino",
@@ -8322,6 +8638,16 @@
   "w": "gigaelektronvolto",
   "target": "giga/elektron/volt/o",
   "typed_roles": "RRRL",
+  "exact_only": true,
+  "boundary_only": true,
+  "case_sensitive": true,
+  "corpus_managed": true,
+  "ruby_only": true
+ },
+ {
+  "w": "Fukuwarai’",
+  "target": "Fukuwarai/’",
+  "typed_roles": "RL",
   "exact_only": true,
   "boundary_only": true,
   "case_sensitive": true,

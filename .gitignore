@@ -51,5 +51,9 @@ Thumbs.db
 _analysis_20260625/out/corpus_run.txt
 _analysis_20260625/out/vere_run.txt
 
+# no-worsening の再開専用cacheと、正式台帳から参照しない局所pre-regen診断
+_analysis_20260625/out/_no_worsening_checkpoint_*.json
+_analysis_20260625/out/_audit_canonical_corpus_surfaces_dd55318_pre_regen.json
+
 # 壊れたgit退避物(Drive同期ロック事故の隔離物)
 .git_broken*/

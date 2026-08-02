@@ -22,6 +22,8 @@ import no_worsening_audit as audit
 import phase619_ordinary_ruby_activation as activation
 import phase619_ordinary_ruby_policy as policy
 import phase619_ordinary_ruby_runtime_gate as runtime_gate
+import preserve_r67_r68_ruby_overlays as overlay_carry
+import r88_mukoz_ruby_policy as r88_policy
 
 
 PHASE597_DIR = Path(os.environ.get(
@@ -41,11 +43,11 @@ GUIDE_DIR = Path(os.environ.get(
     ),
 ))
 JAPANESE_GUIDE = Path(os.environ.get(
-    "ESP_RUBY_HTML_GUIDE_JA",
+    "ESP_PHASE619_RUBY_HTML_GUIDE_JA",
     str(GUIDE_DIR / "エスペラントルビHTML修正ガイド260328.txt"),
 ))
 CHINESE_GUIDE = Path(os.environ.get(
-    "ESP_RUBY_HTML_GUIDE_ZH",
+    "ESP_PHASE619_RUBY_HTML_GUIDE_ZH",
     str(GUIDE_DIR / "世界语HTML修正指南_中文注释版.txt"),
 ))
 
@@ -94,6 +96,48 @@ def synthetic_rendered_results() -> dict:
 
 
 class Phase619OrdinaryRubyTests(unittest.TestCase):
+    def test_r88_mukoz_setting_is_exactly_once_before_reviewed_sibling(self):
+        expected_actions = {
+            "o", "oj", "on", "ojn", "a", "aj", "an", "ajn", "e", "en",
+            "word_boundary", "ruby_track_only",
+            f"ruby_context_annotation:{r88_policy.CONTEXT_KEY}",
+        }
+        for language in ("JA", "ZH", "KO"):
+            app_data = ROOT / f"Esperanto-Kanji-Ruby-{language}" / "app_data"
+            settings = json.loads(
+                (app_data / "分解設定.json").read_text(encoding="utf-8")
+            )
+            base_indexes = [
+                index for index, row in enumerate(settings)
+                if isinstance(row, list) and len(row) == 3
+                and row[0] == r88_policy.STEM
+                and "ruby_track_only" in row[2]
+            ]
+            sibling_indexes = [
+                index for index, row in enumerate(settings)
+                if isinstance(row, list) and len(row) == 3
+                and row[0] == r88_policy.SIBLING_CONTEXT_KEY
+                and "ruby_track_only" in row[2]
+            ]
+            self.assertEqual(len(base_indexes), 1, language)
+            self.assertEqual(len(sibling_indexes), 1, language)
+            self.assertEqual(base_indexes[0] + 1, sibling_indexes[0], language)
+            row = settings[base_indexes[0]]
+            self.assertEqual(row[1], 59000, language)
+            self.assertEqual(set(row[2]), expected_actions, language)
+
+            annotations = json.loads(
+                (app_data / "word_anno.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                annotations[r88_policy.CONTEXT_KEY],
+                [[
+                    r88_policy.STEM,
+                    r88_policy.EXPECTED_GLOSSES[language.lower()],
+                ]],
+                language,
+            )
+
     def test_review_is_exact_seven_row_two_track_partition(self):
         review = policy.load_review()
         self.assertEqual(len(review["entries"]), 7)
@@ -379,8 +423,21 @@ class Phase619OrdinaryRubyTests(unittest.TestCase):
 
     def test_formal_regeneration_replays_and_rechecks_phase619(self):
         source = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
+        overlay_transition = (
+            overlay_carry.load_dd55318_u2019_overlay_transition()
+        )
+        restore_rows = overlay_transition["global_rows"][
+            "target_after_overlay_restore"
+        ]
+        final_rows = overlay_transition["global_rows"][
+            "target_after_existing_postfix_layers"
+        ]
         self.assertNotIn("phase598_parent_payload_delta_gate.py", source)
         self.assertNotIn("port_phase600_glosses.py", source)
+        self.assertIn(
+            "os.environ['ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW']",
+            source,
+        )
         builder = source.index("build_phase619_ordinary_ruby_review.py")
         pre_gate = source.index(
             "phase619_ordinary_ruby_runtime_gate.py",
@@ -398,13 +455,27 @@ class Phase619OrdinaryRubyTests(unittest.TestCase):
         r81 = source.index("fix_ruby_kyodai_meaning_break.py", restore)
         r85 = source.index("fix_ruby_hyphen_joiner.py", r81)
         r86 = source.index("fix_ruby_zhko_diminutive_gloss.py", r85)
+        r88 = source.index("fix_ruby_phase619_mukoz_base.py", r86)
+        r92 = source.index("fix_ruby_homograph_exposure.py", r88)
+        r93 = source.index("fix_ruby_sense_by_kanji.py", r92)
         final_audit = source.index(
-            "'audit', '--expected-global-rows', '572729'",
-            r86,
+            f"'audit', '--expected-global-rows', '{final_rows}'",
+            r93,
         )
         post_gate = source.index(
             "phase619_ordinary_ruby_runtime_gate.py",
             pre_gate + 1,
+        )
+        runner_unit_test = source.index(
+            "test_run_phase558_no_worsening.py", post_gate,
+        )
+        historical_verifier = source.index(
+            "os.path.join(HERE, 'verify_phase558_historical_evidence.py')",
+            runner_unit_test,
+        )
+        sidecar_test = source.index(
+            "test_phase558_no_worsening_sidecar_gate.py",
+            historical_verifier,
         )
         full_audit = source.index(
             "'phase619_learner'",
@@ -412,7 +483,8 @@ class Phase619OrdinaryRubyTests(unittest.TestCase):
         )
         positions = [
             builder, pre_gate, capture, generator, restore,
-            r81, r85, r86, final_audit, post_gate, full_audit,
+            r81, r85, r86, r88, r92, r93, final_audit, post_gate,
+            runner_unit_test, historical_verifier, sidecar_test, full_audit,
         ]
         self.assertEqual(
             positions,
@@ -420,9 +492,28 @@ class Phase619OrdinaryRubyTests(unittest.TestCase):
         )
         self.assertIn(
             "'apply', '--input', R67_R68_OVERLAY_SNAPSHOT,\n"
-            "        '--expected-global-rows', '572713'",
+            f"        '--expected-global-rows', '{restore_rows}'",
             source,
         )
+        self.assertIn(
+            "'fix_ruby_phase619_mukoz_base.py'),\n"
+            "        '--apply', '--no-backup'",
+            source,
+        )
+        self.assertIn(
+            "'fix_ruby_sense_by_kanji.py'),\n"
+            "        '--only', 'epi', '--apply'",
+            source,
+        )
+        self.assertNotIn(
+            "os.path.join(HERE, 'run_phase558_no_worsening.py')",
+            source,
+        )
+        # Phase558 reports are immutable Git evidence at this stage.  Formal
+        # successor regeneration must not depend on two unused historical
+        # corpus worktrees merely to verify those blobs.
+        self.assertNotIn('"ESP_PHASE558_PARENT_CORPUS_PATH"', source)
+        self.assertNotIn('"ESP_PHASE558_CURRENT_CORPUS_PATH"', source)
 
     @unittest.skipUnless(
         PHASE597_DIR.is_dir()

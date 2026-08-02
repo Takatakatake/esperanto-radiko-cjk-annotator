@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "transition": "r68-new-york-order-transition-ccb9398",
+  "source_app_commit": "6a707dd8da4be04da8dba0968b8de9255411af76",
+  "word_anno_transition": {
+    "path": "_analysis_20260625/_word_anno_boundary_transition_ccb9398.json",
+    "file_sha256": "A9FFBC5EC596A4CD7B1927185BD2553845CA3DEC2B0F5F1B342F1132A09B1303",
+    "required_added_key": "New York"
+  },
+  "profiles": {
+    "source": "current-post-temis",
+    "target": "current-ccb9398"
+  },
+  "global_rows": {
+    "source_deployed": 572771,
+    "candidate_raw": 571892,
+    "target_after_overlay_restore": 573240,
+    "target_after_existing_postfix_layers": 573298
+  },
+  "candidate_raw_payload_sha256": {
+    "JA": "93D4DB12D606DBD567905CB92F3BF5988BAEB1233826C3064B2567814F313428",
+    "ZH": "E7619E8B38282688E9F8053EF4983C3057DB70261094AEFAD2FCC510826DBF88",
+    "KO": "47329EB8A496E59F184A849A73070DEFAB0C11AFE2614B1A47DB985CF47490B6"
+  },
+  "overlay_transition": {
+    "unchanged_prefix": "R67H",
+    "reordered_prefix": "R68W",
+    "rows": 1012,
+    "row_content_changes": 0,
+    "source_set_changes": 0,
+    "moved_source": " York ",
+    "source_index_before": 862,
+    "source_index_after": 1006,
+    "shifted_intermediate_rows": 144,
+    "sequence_moved_rows": 145,
+    "sequence_descents": 1
+  },
+  "target_overlay_identity": {
+    "JA": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "EFF64DE3C95FEC66209CA72E1EFE5A8E0EB0C438A89AEA4C200A6C41130F340A",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "7F1E4662EB048D3AE7F85D7D3EB670A6111FBB5055EE9A9466D91419242C970D",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    },
+    "ZH": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "2BE0D3D80BFCFF668D771DB4891A9F8A0E52BBBB4C5F10A7B364A3DA6625D609",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "727AFE5890EAD1BD01C797ADB6DA84FC0B0ABE742799D9650CD78EDAEEA3AEB0",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    },
+    "KO": {
+      "R67H": {
+        "count": 336,
+        "rows_sha256": "3341E8260981925082A3E4D156B64FA2C21A7B7FB6FED8FB97973B941C73B056",
+        "sources_sha256": "0408F60AA78FB00B2A43FAE3A6FDA93E68C1786C660DA6094A0A6E27FCFB919B"
+      },
+      "R68W": {
+        "count": 1012,
+        "rows_sha256": "71D9584663CAC086BB1D4AB2329DB9387CBDB9CD211BA52416A84D0C4A8AD95C",
+        "sources_sha256": "BC7F454537089FE4185FEB121FCC9FD200FFC58F2ADCFC7038ABCEC5488904C6"
+      }
+    }
+  },
+  "policy": {
+    "overlay_row_content_must_remain_identical": true,
+    "overlay_source_set_must_remain_identical": true,
+    "only_reviewed_order_transition_is_allowed": true,
+    "three_language_source_order_must_match": true,
+    "kanji_artifacts_must_remain_byte_identical": true
+  }
+}

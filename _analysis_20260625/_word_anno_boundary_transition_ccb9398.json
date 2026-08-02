@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "transition": "kyoto-202608-and-r94-residual-boundary-transition-ccb9398",
+  "corpus_authority": {
+    "head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029",
+    "tree_oid": "250af9cf8dd9011cd296604787584c516ed2fb79",
+    "content_sha256": "05C4A95250515BF3CBCBE382843DC2A48BC255B4A34FDF6F96771237F7D8B79B"
+  },
+  "parent": {
+    "app_commit": "6a707dd8da4be04da8dba0968b8de9255411af76",
+    "manifest_path": "_analysis_20260625/_word_anno_boundary_scope_manifest.json",
+    "manifest_file_sha256": "9B974F940AC51CB6F5B21638DCDDB3B0F96C7017A1BD9BE97DEF586816C49AAA",
+    "authority_keys": 49356,
+    "authority_sha256": "386FD7889E2074271D619D526F510F5FB9712964E51410145F30D7AA5F2B83A3",
+    "expected_key_counts": {
+      "ja": 49317,
+      "zh": 49356,
+      "ko": 49356
+    }
+  },
+  "candidate": {
+    "canonical_payload_sha256": "DBA373A4D7CBF3A6488A73405DC4167F3DD930B8EF46DE19411976A3F1CE649C",
+    "authority_keys": 49387,
+    "authority_sha256": "06F6B256269DE3A195E959FE4962E98EDBFD77E5AB6F4E81F9472C91B3A3983B",
+    "expected_key_counts": {
+      "ja": 49348,
+      "zh": 49387,
+      "ko": 49387
+    }
+  },
+  "added_keys": [
+    "@typed:Fukuwarai':0",
+    "Asahi",
+    "Chan Sunglong",
+    "HKDSE",
+    "Hannja-ĝi",
+    "Hasegaŭa Joŝihumi",
+    "Kato Tokiko",
+    "Kimura Goro Christoph",
+    "Kitagawa Ikuko",
+    "Mondial",
+    "New York",
+    "Primico",
+    "Probal Dasgupta",
+    "Rabindranath Tagore",
+    "Radio Kansai",
+    "Radio Nippon",
+    "Sasaki Takao",
+    "Senda Noriko",
+    "Sinzyuku-ku",
+    "TK",
+    "Tôkyô-to",
+    "Waseda-mati",
+    "Watanabe",
+    "Watanabe Katsuyoshi",
+    "Witold Hulewicz",
+    "Yae",
+    "radio/-/el/send",
+    "radio/el/send",
+    "radio/program",
+    "tel.",
+    "Ŝikoku Goro"
+  ],
+  "languages": {
+    "ja": {
+      "added": 31,
+      "removed": 0,
+      "changed_keys": ["aŭg."],
+      "canonical_diff_sha256": "BE72F8AFF3FB891BE1C3A99492E77FBF4BCC82369079DE9F8F2E03DC444CF680"
+    },
+    "zh": {
+      "added": 31,
+      "removed": 0,
+      "changed_keys": [],
+      "canonical_diff_sha256": "4E9D2109B9F9CDC1B88EA87313ADCF112522C63355E37464336C2F5ADDA3777D"
+    },
+    "ko": {
+      "added": 31,
+      "removed": 0,
+      "changed_keys": [],
+      "canonical_diff_sha256": "0A5138D584826A70D765C91D9C967E75673F5961471A384DB99C0DEB74E4EC34"
+    }
+  },
+  "policy": {
+    "three_language_boundary_identity_required": true,
+    "glosses_remain_language_local": true,
+    "removed_keys_allowed": false,
+    "wildcard_or_unbounded_authorization": false,
+    "radio_media_gloss_is_compound_context_only": true,
+    "kanji_master_decomposition_is_not_changed": true
+  }
+}

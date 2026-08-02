@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "ledger_id": "corpus-r94-ccb9398-ruby-residual-closure-v1",
+  "description": "Pinned pre-fix closure evidence for the 26 Ruby-boundary residual surfaces (32 corpus instances) at Kyoto corpus ccb9398. This ledger authorizes no mutation by itself.",
+  "authority": {
+    "corpus": {
+      "head_oid": "ccb9398eef2a81eaf7e038e67848f89ad3997029",
+      "tree_oid": "250af9cf8dd9011cd296604787584c516ed2fb79",
+      "branch": "agent/r94-kyoto-ruby-audit",
+      "status_entries": 0,
+      "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "content_sha256": "05C4A95250515BF3CBCBE382843DC2A48BC255B4A34FDF6F96771237F7D8B79B",
+      "scope": {
+        "content_files": 170,
+        "raw_ruby": 350519,
+        "parsed_ruby": 350519,
+        "parsed_units": 272297,
+        "evaluable_instances": 271079,
+        "canonical_surfaces": 21572
+      }
+    },
+    "app_baseline": {
+      "source_head_oid": "6a707dd8da4be04da8dba0968b8de9255411af76",
+      "global_rules_per_language": 572771,
+      "payloads": {
+        "JA": {
+          "sha256": "9981A78E5DC8FE1644901A430F53643706512ED516FB76938DD946B8CFE23A99",
+          "runtime_sha256": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA"
+        },
+        "ZH": {
+          "sha256": "C5822300791CC89AA56F632BE7A88BB20451E2D506BB4CC43A83076D5A28512E",
+          "runtime_sha256": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12"
+        },
+        "KO": {
+          "sha256": "AF496C4F21882574ED77116E375C5511ABD3766C037C407C5366CAFC96E74E62",
+          "runtime_sha256": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A"
+        }
+      },
+      "pre_fix_report": {
+        "path": "_analysis_20260625/out/_audit_canonical_corpus_surfaces_pre_r94_ccb9398.json",
+        "file_sha256": "1BC2080A02BB2CFF5BD68A5C39509FD9B36A28C26664C04C60CA153BCE519E74",
+        "algorithm_sha256": "6A68969E3B4A0FF6580D52BE8645F39E74DC12C525317DEB3FD339F594771B97",
+        "script_sha256": "CA50F38BCA2215150DD346A6E3CBE77816D360CB5DB4A1A91890DB50424AA927"
+      }
+    }
+  },
+  "counts": {
+    "residual_surfaces": 26,
+    "residual_instances": 32,
+    "language_surfaces": 78,
+    "language_instances": 96,
+    "visible_failures": 0,
+    "placeholder_failures": 0,
+    "classifications": {
+      "A_productive_family": 6,
+      "B_kyoto_coarse_context": 5,
+      "C_bounded_proper_foreign": 15
+    }
+  },
+  "policy": {
+    "ruby_track_only": true,
+    "kanji_planned_changes": 0,
+    "kanji_artifacts_must_remain_byte_identical": true,
+    "trilingual_boundary_identity_required": true,
+    "corpus_mutation_authorized_by_ledger": false,
+    "managed_morph_targets": {
+      "apudo": {"target": "apud/o", "ruby_track_only": true},
+      "dekokjarulo": {"target": "dek/ok/jar/ul/o", "ruby_track_only": true},
+      "hongkongano": {"target": "hongkong/an/o", "ruby_track_only": true},
+      "hongkongano-japana": {"target": "hongkong/an/o/-/japan/a", "ruby_track_only": true},
+      "koreo-hongkongano": {"target": "kore/o/-/hongkong/an/o", "ruby_track_only": true},
+      "nederlandano-hongkongano": {"target": "nederland/an/o/-/hongkong/an/o", "ruby_track_only": true},
+      "miksdevena": {"target": "miks/deven/a", "ruby_track_only": true},
+      "multdevenulo": {"target": "mult/deven/ul/o", "ruby_track_only": true},
+      "premi-ceremonio": {"target": "premi/-/ceremoni/o", "ruby_track_only": true},
+      "radioprogramo": {"target": "radio/program/o", "ruby_track_only": true},
+      "radioelsendo": {"target": "radio/el/send/o", "ruby_track_only": true},
+      "radio-elsendo": {"target": "radio/-/el/send/o", "ruby_track_only": true},
+      "reprezentis": {"target": "reprezent/is", "ruby_track_only": true},
+      "samas": {"target": "sam/as", "ruby_track_only": true},
+      "ĉino-japana": {"target": "ĉin/o/-/japan/a", "ruby_track_only": true}
+    },
+    "managed_typed_exact_targets": {
+      "Fukuwarai'": {
+        "target": "Fukuwarai/'",
+        "typed_roles": "RL",
+        "case_sensitive": true,
+        "ruby_only": true
+      }
+    },
+    "strict_track_partitions": {
+      "miksdevena": {
+        "operation": "retag_existing_strict_as_kanji_track_only",
+        "source_entry": {
+          "w": "miksdevena",
+          "target": "miks/de/ven/a",
+          "typed_roles": "RRRL",
+          "exact_only": true,
+          "boundary_only": true,
+          "case_sensitive": true
+        },
+        "effective_entry": {
+          "w": "miksdevena",
+          "target": "miks/de/ven/a",
+          "typed_roles": "RRRL",
+          "exact_only": true,
+          "boundary_only": true,
+          "case_sensitive": true,
+          "kanji_track_only": true
+        },
+        "ruby_target": "miks/deven/a",
+        "kanji_output_change": false
+      }
+    },
+    "proper_foreign": {
+      "match_mode": "case_sensitive_exact",
+      "case_sensitive": true,
+      "exact_only": true,
+      "surfaces": [
+        "Asahi",
+        "Fukuwarai'",
+        "HKDSE",
+        "Hannja-ĝi",
+        "Mondial",
+        "Primico",
+        "Sinzyuku-ku",
+        "TK",
+        "Waseda-mati",
+        "Watanabe",
+        "Yae"
+      ]
+    },
+    "hongkong_derivatives": {
+      "match_mode": "closed_bounded_family",
+      "substring_matching_allowed": false,
+      "global_family_expansion_allowed": false,
+      "surfaces": [
+        "hongkongano",
+        "hongkongano-japanaj",
+        "koreo-hongkongano",
+        "nederlandano-hongkongano"
+      ]
+    },
+    "radio_broadcast_context": {
+      "match_mode": "broadcast_context_bounded",
+      "required_root": "radio",
+      "global_radi_o_rewrite_allowed": false,
+      "physics_radi_root_must_remain_unchanged": true,
+      "residual_surfaces": [
+        "radioprogramo",
+        "radio-elsendoj",
+        "radioelsendoj"
+      ],
+      "existing_semantic_companion_surfaces": [
+        "radioprogramoj"
+      ]
+    },
+    "kyoto_coarse_deven": {
+      "match_mode": "kyoto_coarse_exact",
+      "global_de_ven_collapse_allowed": false,
+      "surfaces": [
+        "miksdevena",
+        "multdevenuloj"
+      ]
+    },
+    "semantic_disambiguation": {
+      "premi_compound_must_not_globalize_over_press_verb": true,
+      "reprezent_ruby_family_must_not_change_kanji_fake_split": true
+    }
+  },
+  "residuals": [
+    {
+      "surface": "Asahi",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 139,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Asahi",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:Asahi", "expected_typed": "R:Asahi"},
+        "ZH": {"actual_typed": "L:Asahi", "expected_typed": "R:Asahi"},
+        "KO": {"actual_typed": "L:Asahi", "expected_typed": "R:Asahi"}
+      }
+    },
+    {
+      "surface": "Fukuwarai'",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 267,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Fukuwarai/'",
+        "roles": "RL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:Fuk|L:uw|R:ar|L:ai'", "expected_typed": "R:Fukuwarai|L:'"},
+        "ZH": {"actual_typed": "R:Fuk|L:uw|R:ar|L:ai'", "expected_typed": "R:Fukuwarai|L:'"},
+        "KO": {"actual_typed": "R:Fuk|L:uw|R:ar|L:ai'", "expected_typed": "R:Fukuwarai|L:'"}
+      }
+    },
+    {
+      "surface": "HKDSE",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 282,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "HKDSE",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:HKDSE", "expected_typed": "R:HKDSE"},
+        "ZH": {"actual_typed": "L:HKDSE", "expected_typed": "R:HKDSE"},
+        "KO": {"actual_typed": "L:HKDSE", "expected_typed": "R:HKDSE"}
+      }
+    },
+    {
+      "surface": "Hannja-ĝi",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+          "line": 282,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Hannja-ĝi",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:Han|R:nj|L:a-|R:ĝi", "expected_typed": "R:Hannja-ĝi"},
+        "ZH": {"actual_typed": "R:Han|R:nj|L:a-|R:ĝi", "expected_typed": "R:Hannja-ĝi"},
+        "KO": {"actual_typed": "R:Han|R:nj|L:a-|R:ĝi", "expected_typed": "R:Hannja-ĝi"}
+      }
+    },
+    {
+      "surface": "Mondial",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 310,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Mondial",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:Mond|R:ial", "expected_typed": "R:Mondial"},
+        "ZH": {"actual_typed": "R:Mond|R:ial", "expected_typed": "R:Mondial"},
+        "KO": {"actual_typed": "R:Mond|R:ial", "expected_typed": "R:Mondial"}
+      }
+    },
+    {
+      "surface": "Primico",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 310,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Primico",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:Primic|L:o", "expected_typed": "R:Primico"},
+        "ZH": {"actual_typed": "R:Primic|L:o", "expected_typed": "R:Primico"},
+        "KO": {"actual_typed": "R:Primic|L:o", "expected_typed": "R:Primico"}
+      }
+    },
+    {
+      "surface": "Sinzyuku-ku",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 314,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Sinzyuku-ku",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:Sinzyuku-ku", "expected_typed": "R:Sinzyuku-ku"},
+        "ZH": {"actual_typed": "L:Sinzyuku-ku", "expected_typed": "R:Sinzyuku-ku"},
+        "KO": {"actual_typed": "L:Sinzyuku-ku", "expected_typed": "R:Sinzyuku-ku"}
+      }
+    },
+    {
+      "surface": "TK",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 310,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "TK",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:TK", "expected_typed": "R:TK"},
+        "ZH": {"actual_typed": "L:TK", "expected_typed": "R:TK"},
+        "KO": {"actual_typed": "L:TK", "expected_typed": "R:TK"}
+      }
+    },
+    {
+      "surface": "Waseda-mati",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 314,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Waseda-mati",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:Waseda|L:-|R:mat|L:i", "expected_typed": "R:Waseda-mati"},
+        "ZH": {"actual_typed": "R:Waseda|L:-|R:mat|L:i", "expected_typed": "R:Waseda-mati"},
+        "KO": {"actual_typed": "R:Waseda|L:-|R:mat|L:i", "expected_typed": "R:Waseda-mati"}
+      }
+    },
+    {
+      "surface": "Watanabe",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 3,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 124,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 128,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 131,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Watanabe",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:W|R:at|L:anabe", "expected_typed": "R:Watanabe"},
+        "ZH": {"actual_typed": "L:W|R:at|L:anabe", "expected_typed": "R:Watanabe"},
+        "KO": {"actual_typed": "L:W|R:at|L:anabe", "expected_typed": "R:Watanabe"}
+      }
+    },
+    {
+      "surface": "Yae",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "proper_foreign_exact",
+      "match_mode": "case_sensitive_exact",
+      "instances": 3,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 138,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 140,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 148,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "Yae",
+        "roles": "R",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:Yae", "expected_typed": "R:Yae"},
+        "ZH": {"actual_typed": "L:Yae", "expected_typed": "R:Yae"},
+        "KO": {"actual_typed": "L:Yae", "expected_typed": "R:Yae"}
+      }
+    },
+    {
+      "surface": "apudon",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 2,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 164,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 240,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "apud/on",
+        "roles": "RL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:a|R:pud|L:on", "expected_typed": "R:apud|L:on"},
+        "ZH": {"actual_typed": "L:a|R:pud|L:on", "expected_typed": "R:apud|L:on"},
+        "KO": {"actual_typed": "L:a|R:pud|L:on", "expected_typed": "R:apud|L:on"}
+      }
+    },
+    {
+      "surface": "dekokjarulojn",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 283,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "dek/ok/jar/ul/ojn",
+        "roles": "RRRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:dek|L:okja|R:rul|L:ojn", "expected_typed": "R:dek|R:ok|R:jar|R:ul|L:ojn"},
+        "ZH": {"actual_typed": "R:dek|L:okja|R:rul|L:ojn", "expected_typed": "R:dek|R:ok|R:jar|R:ul|L:ojn"},
+        "KO": {"actual_typed": "R:dek|L:okja|R:rul|L:ojn", "expected_typed": "R:dek|R:ok|R:jar|R:ul|L:ojn"}
+      }
+    },
+    {
+      "surface": "hongkongano",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "hongkong_closed_bounded",
+      "match_mode": "closed_bounded_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 265,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "hongkong/an/o",
+        "roles": "RRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:hongkong|L:ano", "expected_typed": "R:hongkong|R:an|L:o"},
+        "ZH": {"actual_typed": "R:hongkong|L:ano", "expected_typed": "R:hongkong|R:an|L:o"},
+        "KO": {"actual_typed": "R:hongkong|L:ano", "expected_typed": "R:hongkong|R:an|L:o"}
+      }
+    },
+    {
+      "surface": "hongkongano-japanaj",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "hongkong_closed_bounded",
+      "match_mode": "closed_bounded_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 283,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "hongkong/an/o-/japan/aj",
+        "roles": "RRLRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj", "expected_typed": "R:hongkong|R:an|L:o-|R:japan|L:aj"},
+        "ZH": {"actual_typed": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj", "expected_typed": "R:hongkong|R:an|L:o-|R:japan|L:aj"},
+        "KO": {"actual_typed": "R:hongkong|L:a|R:no|L:-|R:japan|L:aj", "expected_typed": "R:hongkong|R:an|L:o-|R:japan|L:aj"}
+      }
+    },
+    {
+      "surface": "koreo-hongkongano",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "hongkong_closed_bounded",
+      "match_mode": "closed_bounded_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 266,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "kore/o-/hongkong/an/o",
+        "roles": "RLRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:kore|L:o-|R:hongkong|L:ano", "expected_typed": "R:kore|L:o-|R:hongkong|R:an|L:o"},
+        "ZH": {"actual_typed": "R:kore|L:o-|R:hongkong|L:ano", "expected_typed": "R:kore|L:o-|R:hongkong|R:an|L:o"},
+        "KO": {"actual_typed": "R:kore|L:o-|R:hongkong|L:ano", "expected_typed": "R:kore|L:o-|R:hongkong|R:an|L:o"}
+      }
+    },
+    {
+      "surface": "miksdevena",
+      "classification": "B_kyoto_coarse_context",
+      "subgroup": "kyoto_coarse_deven",
+      "match_mode": "kyoto_coarse_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 265,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "miks/deven/a",
+        "roles": "RRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:miks|R:de|R:ven|L:a", "expected_typed": "R:miks|R:deven|L:a"},
+        "ZH": {"actual_typed": "R:miks|R:de|R:ven|L:a", "expected_typed": "R:miks|R:deven|L:a"},
+        "KO": {"actual_typed": "R:miks|R:de|R:ven|L:a", "expected_typed": "R:miks|R:deven|L:a"}
+      }
+    },
+    {
+      "surface": "multdevenuloj",
+      "classification": "B_kyoto_coarse_context",
+      "subgroup": "kyoto_coarse_deven",
+      "match_mode": "kyoto_coarse_exact",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 282,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "mult/deven/ul/oj",
+        "roles": "RRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:mult|R:de|R:ven|L:uloj", "expected_typed": "R:mult|R:deven|R:ul|L:oj"},
+        "ZH": {"actual_typed": "R:mult|R:de|R:ven|L:uloj", "expected_typed": "R:mult|R:deven|R:ul|L:oj"},
+        "KO": {"actual_typed": "R:mult|R:de|R:ven|L:uloj", "expected_typed": "R:mult|R:deven|R:ul|L:oj"}
+      }
+    },
+    {
+      "surface": "nederlandano-hongkongano",
+      "classification": "C_bounded_proper_foreign",
+      "subgroup": "hongkong_closed_bounded",
+      "match_mode": "closed_bounded_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 266,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "nederland/an/o-/hongkong/an/o",
+        "roles": "RRLRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:nederland|R:an|L:o-|R:hongkong|L:ano", "expected_typed": "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"},
+        "ZH": {"actual_typed": "R:nederland|R:an|L:o-|R:hongkong|L:ano", "expected_typed": "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"},
+        "KO": {"actual_typed": "R:nederland|R:an|L:o-|R:hongkong|L:ano", "expected_typed": "R:nederland|R:an|L:o-|R:hongkong|R:an|L:o"}
+      }
+    },
+    {
+      "surface": "premi-ceremonio",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 124,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "premi/-/ceremoni/o",
+        "roles": "RLRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:prem|L:i-|R:ceremoni|L:o", "expected_typed": "R:premi|L:-|R:ceremoni|L:o"},
+        "ZH": {"actual_typed": "R:prem|L:i-|R:ceremoni|L:o", "expected_typed": "R:premi|L:-|R:ceremoni|L:o"},
+        "KO": {"actual_typed": "R:prem|L:i-|R:ceremoni|L:o", "expected_typed": "R:premi|L:-|R:ceremoni|L:o"}
+      }
+    },
+    {
+      "surface": "radioprogramo",
+      "classification": "B_kyoto_coarse_context",
+      "subgroup": "radio_broadcast_context",
+      "match_mode": "broadcast_context_bounded",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 138,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "radio/program/o",
+        "roles": "RRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:radi|L:o|R:program|L:o", "expected_typed": "R:radio|R:program|L:o"},
+        "ZH": {"actual_typed": "R:radi|L:o|R:program|L:o", "expected_typed": "R:radio|R:program|L:o"},
+        "KO": {"actual_typed": "R:radi|L:o|R:program|L:o", "expected_typed": "R:radio|R:program|L:o"}
+      }
+    },
+    {
+      "surface": "reprezentis",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 124,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "reprezent/is",
+        "roles": "RR",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:re|R:prezent|R:is", "expected_typed": "R:reprezent|R:is"},
+        "ZH": {"actual_typed": "R:re|R:prezent|R:is", "expected_typed": "R:reprezent|R:is"},
+        "KO": {"actual_typed": "R:re|R:prezent|R:is", "expected_typed": "R:reprezent|R:is"}
+      }
+    },
+    {
+      "surface": "samas",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 268,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "sam/as",
+        "roles": "RR",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:sam|L:as", "expected_typed": "R:sam|R:as"},
+        "ZH": {"actual_typed": "R:sam|L:as", "expected_typed": "R:sam|R:as"},
+        "KO": {"actual_typed": "R:sam|L:as", "expected_typed": "R:sam|R:as"}
+      }
+    },
+    {
+      "surface": "ĉino-japanaj",
+      "classification": "A_productive_family",
+      "subgroup": "productive_family",
+      "match_mode": "bounded_productive_family",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 268,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "ĉin/o-/japan/aj",
+        "roles": "RLRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "L:ĉi|R:no|L:-|R:japan|L:aj", "expected_typed": "R:ĉin|L:o-|R:japan|L:aj"},
+        "ZH": {"actual_typed": "L:ĉi|R:no|L:-|R:japan|L:aj", "expected_typed": "R:ĉin|L:o-|R:japan|L:aj"},
+        "KO": {"actual_typed": "L:ĉi|R:no|L:-|R:japan|L:aj", "expected_typed": "R:ĉin|L:o-|R:japan|L:aj"}
+      }
+    },
+    {
+      "surface": "radio-elsendoj",
+      "classification": "B_kyoto_coarse_context",
+      "subgroup": "radio_broadcast_context",
+      "match_mode": "broadcast_context_bounded",
+      "instances": 1,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+          "line": 231,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "radio/-/el/send/oj",
+        "roles": "RLRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:radi|L:o-|R:el|R:send|L:oj", "expected_typed": "R:radio|L:-|R:el|R:send|L:oj"},
+        "ZH": {"actual_typed": "R:radi|L:o-|R:el|R:send|L:oj", "expected_typed": "R:radio|L:-|R:el|R:send|L:oj"},
+        "KO": {"actual_typed": "R:radi|L:o-|R:el|R:send|L:oj", "expected_typed": "R:radio|L:-|R:el|R:send|L:oj"}
+      }
+    },
+    {
+      "surface": "radioelsendoj",
+      "classification": "B_kyoto_coarse_context",
+      "subgroup": "radio_broadcast_context",
+      "match_mode": "broadcast_context_bounded",
+      "instances": 2,
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+          "line": 231,
+          "count": 1
+        },
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 144,
+          "count": 1
+        }
+      ],
+      "planned": {
+        "track": "ruby",
+        "target": "radio/el/send/oj",
+        "roles": "RRRL",
+        "kanji_change": false
+      },
+      "languages": {
+        "JA": {"actual_typed": "R:radi|L:o|R:el|R:send|L:oj", "expected_typed": "R:radio|R:el|R:send|L:oj"},
+        "ZH": {"actual_typed": "R:radi|L:o|R:el|R:send|L:oj", "expected_typed": "R:radio|R:el|R:send|L:oj"},
+        "KO": {"actual_typed": "R:radi|L:o|R:el|R:send|L:oj", "expected_typed": "R:radio|R:el|R:send|L:oj"}
+      }
+    }
+  ],
+  "residuals_sha256": "25C1CA86E17A3B65817C4747B79900933807C794062EC51FA8239CBA221FDDE4"
+}

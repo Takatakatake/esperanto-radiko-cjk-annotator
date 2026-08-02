@@ -2,22 +2,22 @@
  "schema_version": 1,
  "description": "Pinned exact case-sensitive app rules for every non-app-alphabet ruby-bearing unit in the reviewed Kyoto corpus.",
  "source": {
-  "head_oid": "d1642c276857c1fe400a6d597214ff7a923e7bd2",
-  "branch": "main",
+  "head_oid": "dd55318c33b36128e64561d4ae7fca587ad974fa",
+  "branch": "agent/r94-kyoto-ruby-audit",
   "status_entries": 0,
   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
-  "content_files": 169,
-  "content_sha256": "C8CAA1940F7F4685CE317B4107E9AA36AF28CBC47A06630CD24092D3C045BE1B",
-  "raw_ruby": 348580,
-  "parsed_ruby": 348580,
-  "parsed_units": 270763
+  "content_files": 170,
+  "content_sha256": "33ED6EA94E45A5434B3AAE035F8C44D97278ACABA9A83714A0167EC0754C70B8",
+  "raw_ruby": 350519,
+  "parsed_ruby": 350519,
+  "parsed_units": 272297
  },
  "counts": {
-  "exact_surfaces": 426,
-  "exact_instances": 1186,
-  "atomic_whole_surfaces": 414,
+  "exact_surfaces": 443,
+  "exact_instances": 1218,
+  "atomic_whole_surfaces": 431,
   "component_surfaces": 12,
-  "annotation_roots": 420
+  "annotation_roots": 437
  },
  "exact_surfaces": [
   {
@@ -919,6 +919,27 @@
     },
     {
      "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "surface": "Chan Sunglong",
+   "target": "Chan Sunglong",
+   "signature": {
+    "reconstruction": "Chan Sunglong",
+    "spans": [
+     {
+      "text": "Chan Sunglong",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Chan Sunglong",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -2733,6 +2754,27 @@
    ]
   },
   {
+   "surface": "Hasegaŭa Joŝihumi",
+   "target": "Hasegaŭa Joŝihumi",
+   "signature": {
+    "reconstruction": "Hasegaŭa Joŝihumi",
+    "spans": [
+     {
+      "text": "Hasegaŭa Joŝihumi",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Hasegaŭa Joŝihumi",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "Hasegaŭa Teru",
    "target": "Hasegaŭa Teru",
    "signature": {
@@ -3908,6 +3950,27 @@
    ]
   },
   {
+   "surface": "Kato Tokiko",
+   "target": "Kato Tokiko",
+   "signature": {
+    "reconstruction": "Kato Tokiko",
+    "spans": [
+     {
+      "text": "Kato Tokiko",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Kato Tokiko",
+   "count": 3,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 3
+    }
+   ]
+  },
+  {
    "surface": "Kawazumi Takaki",
    "target": "Kawazumi Takaki",
    "signature": {
@@ -3996,6 +4059,27 @@
    ]
   },
   {
+   "surface": "Kimura Goro Christoph",
+   "target": "Kimura Goro Christoph",
+   "signature": {
+    "reconstruction": "Kimura Goro Christoph",
+    "spans": [
+     {
+      "text": "Kimura Goro Christoph",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Kimura Goro Christoph",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "Kimura Kishiro",
    "target": "Kimura Kishiro",
    "signature": {
@@ -4034,6 +4118,27 @@
     {
      "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
      "count": 1
+    }
+   ]
+  },
+  {
+   "surface": "Kitagawa Ikuko",
+   "target": "Kitagawa Ikuko",
+   "signature": {
+    "reconstruction": "Kitagawa Ikuko",
+    "spans": [
+     {
+      "text": "Kitagawa Ikuko",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Kitagawa Ikuko",
+   "count": 2,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
     }
    ]
   },
@@ -4598,10 +4703,14 @@
     ]
    },
    "typed": "R:La Revuo Orienta",
-   "count": 6,
+   "count": 8,
    "paths": [
     {
      "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 2
     },
     {
@@ -5665,6 +5774,27 @@
    ]
   },
   {
+   "surface": "New York",
+   "target": "New York",
+   "signature": {
+    "reconstruction": "New York",
+    "spans": [
+     {
+      "text": "New York",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:New York",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "Nigra Maro",
    "target": "Nigra Maro",
    "signature": {
@@ -6163,6 +6293,27 @@
    ]
   },
   {
+   "surface": "Probal Dasgupta",
+   "target": "Probal Dasgupta",
+   "signature": {
+    "reconstruction": "Probal Dasgupta",
+    "spans": [
+     {
+      "text": "Probal Dasgupta",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Probal Dasgupta",
+   "count": 2,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
+    }
+   ]
+  },
+  {
    "surface": "Prof.",
    "target": "Prof.",
    "signature": {
@@ -6343,6 +6494,27 @@
    ]
   },
   {
+   "surface": "Rabindranath Tagore",
+   "target": "Rabindranath Tagore",
+   "signature": {
+    "reconstruction": "Rabindranath Tagore",
+    "spans": [
+     {
+      "text": "Rabindranath Tagore",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Rabindranath Tagore",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "Racława",
    "target": "Racława",
    "signature": {
@@ -6360,6 +6532,48 @@
     {
      "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
      "count": 1
+    }
+   ]
+  },
+  {
+   "surface": "Radio Kansai",
+   "target": "Radio Kansai",
+   "signature": {
+    "reconstruction": "Radio Kansai",
+    "spans": [
+     {
+      "text": "Radio Kansai",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Radio Kansai",
+   "count": 2,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "surface": "Radio Nippon",
+   "target": "Radio Nippon",
+   "signature": {
+    "reconstruction": "Radio Nippon",
+    "spans": [
+     {
+      "text": "Radio Nippon",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Radio Nippon",
+   "count": 2,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
     }
    ]
   },
@@ -6812,6 +7026,27 @@
    ]
   },
   {
+   "surface": "Sasaki Takao",
+   "target": "Sasaki Takao",
+   "signature": {
+    "reconstruction": "Sasaki Takao",
+    "spans": [
+     {
+      "text": "Sasaki Takao",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Sasaki Takao",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "Sasaki Teruhiro",
    "target": "Sasaki Teruhiro",
    "signature": {
@@ -6857,6 +7092,27 @@
    "paths": [
     {
      "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "surface": "Senda Noriko",
+   "target": "Senda Noriko",
+   "signature": {
+    "reconstruction": "Senda Noriko",
+    "spans": [
+     {
+      "text": "Senda Noriko",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Senda Noriko",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -7833,6 +8089,27 @@
    ]
   },
   {
+   "surface": "Tôkyô-to",
+   "target": "Tôkyô-to",
+   "signature": {
+    "reconstruction": "Tôkyô-to",
+    "spans": [
+     {
+      "text": "Tôkyô-to",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Tôkyô-to",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "UMESAO Tadao",
    "target": "UMESAO Tadao",
    "signature": {
@@ -8000,11 +8277,15 @@
     ]
    },
    "typed": "R:Usui Hiroyuki",
-   "count": 3,
+   "count": 4,
    "paths": [
     {
      "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html",
      "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
     },
     {
      "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
@@ -8092,7 +8373,7 @@
     ]
    },
    "typed": "R:Vd.",
-   "count": 7,
+   "count": 8,
    "paths": [
     {
      "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
@@ -8101,6 +8382,10 @@
     {
      "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
      "count": 5
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
     }
    ]
   },
@@ -8318,6 +8603,27 @@
    ]
   },
   {
+   "surface": "Watanabe Katsuyoshi",
+   "target": "Watanabe Katsuyoshi",
+   "signature": {
+    "reconstruction": "Watanabe Katsuyoshi",
+    "spans": [
+     {
+      "text": "Watanabe Katsuyoshi",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Watanabe Katsuyoshi",
+   "count": 2,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
+    }
+   ]
+  },
+  {
    "surface": "Wei Ningna",
    "target": "Wei Ningna",
    "signature": {
@@ -8430,6 +8736,27 @@
    "paths": [
     {
      "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "surface": "Witold Hulewicz",
+   "target": "Witold Hulewicz",
+   "signature": {
+    "reconstruction": "Witold Hulewicz",
+    "spans": [
+     {
+      "text": "Witold Hulewicz",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Witold Hulewicz",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -8823,10 +9150,14 @@
     ]
    },
    "typed": "R:aŭg.|L:-|R:sept.",
-   "count": 1,
+   "count": 2,
    "paths": [
     {
      "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -8948,7 +9279,7 @@
     ]
    },
    "typed": "R:i.a.",
-   "count": 29,
+   "count": 30,
    "paths": [
     {
      "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
@@ -9000,6 +9331,10 @@
     },
     {
      "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
      "count": 1
     }
    ]
@@ -9326,8 +9661,12 @@
     ]
    },
    "typed": "R:p.",
-   "count": 11,
+   "count": 13,
    "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 2
+    },
     {
      "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
      "count": 11
@@ -9682,6 +10021,27 @@
    ]
   },
   {
+   "surface": "tel.",
+   "target": "tel.",
+   "signature": {
+    "reconstruction": "tel.",
+    "spans": [
+     {
+      "text": "tel.",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:tel.",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
+    }
+   ]
+  },
+  {
    "surface": "vd.",
    "target": "vd.",
    "signature": {
@@ -10012,6 +10372,27 @@
     {
      "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
      "count": 2
+    }
+   ]
+  },
+  {
+   "surface": "Ŝikoku Goro",
+   "target": "Ŝikoku Goro",
+   "signature": {
+    "reconstruction": "Ŝikoku Goro",
+    "spans": [
+     {
+      "text": "Ŝikoku Goro",
+      "ruby": true
+     }
+    ]
+   },
+   "typed": "R:Ŝikoku Goro",
+   "count": 1,
+   "paths": [
+    {
+     "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+     "count": 1
     }
    ]
   },
@@ -10660,6 +11041,21 @@
     "ko": [
      {
       "gloss": "[식물]Camellia sinensis",
+      "count": 1
+     }
+    ]
+   }
+  },
+  "Chan Sunglong": {
+   "glosses": {
+    "ja": "[人名]陳崇朗",
+    "zh": "[人名]Chan Sunglong",
+    "ko": "[인명]Chan Sunglong"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]陳崇朗",
       "count": 1
      }
     ]
@@ -11900,6 +12296,21 @@
     ]
    }
   },
+  "Hasegaŭa Joŝihumi": {
+   "glosses": {
+    "ja": "[人名]長谷川義史",
+    "zh": "[人名]Hasegaŭa Joŝihumi",
+    "ko": "[인명]Hasegaŭa Joŝihumi"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]長谷川義史",
+      "count": 1
+     }
+    ]
+   }
+  },
   "Hasegaŭa Teru": {
    "glosses": {
     "ja": "[人名]長谷川テル",
@@ -12715,6 +13126,21 @@
     ]
    }
   },
+  "Kato Tokiko": {
+   "glosses": {
+    "ja": "[人名]加藤登紀子",
+    "zh": "[人名]Kato Tokiko",
+    "ko": "[인명]Kato Tokiko"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]加藤登紀子",
+      "count": 3
+     }
+    ]
+   }
+  },
   "Kawazumi Takaki": {
    "glosses": {
     "ja": "[人名]川住貴紀",
@@ -12781,6 +13207,21 @@
     ]
    }
   },
+  "Kimura Goro Christoph": {
+   "glosses": {
+    "ja": "[人名]木村護郎クリストフ",
+    "zh": "[人名]Kimura Goro Christoph",
+    "ko": "[인명]Kimura Goro Christoph"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]木村護郎クリストフ",
+      "count": 1
+     }
+    ]
+   }
+  },
   "Kimura Kishiro": {
    "glosses": {
     "ja": "[人名]キムラ・キシロウ",
@@ -12807,6 +13248,21 @@
      {
       "gloss": "[人名]KitaIkki",
       "count": 1
+     }
+    ]
+   }
+  },
+  "Kitagawa Ikuko": {
+   "glosses": {
+    "ja": "[人名]北川郁子",
+    "zh": "[人名]Kitagawa Ikuko",
+    "ko": "[인명]Kitagawa Ikuko"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]北川郁子",
+      "count": 2
      }
     ]
    }
@@ -13199,7 +13655,7 @@
     "ja": [
      {
       "gloss": "[雑誌]ラ・レビューオ・オリエンタ",
-      "count": 6
+      "count": 8
      }
     ]
    }
@@ -13921,6 +14377,21 @@
     ]
    }
   },
+  "New York": {
+   "glosses": {
+    "ja": "[地名]ニューヨーク",
+    "zh": "[地名]New York",
+    "ko": "[지명]New York"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[地名]ニューヨーク",
+      "count": 1
+     }
+    ]
+   }
+  },
   "Nigra Maro": {
    "glosses": {
     "ja": "[地名]黒海",
@@ -14275,6 +14746,21 @@
     ]
    }
   },
+  "Probal Dasgupta": {
+   "glosses": {
+    "ja": "[人名]プロバル・ダスグプタ",
+    "zh": "[人名]Probal Dasgupta",
+    "ko": "[인명]Probal Dasgupta"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]プロバル・ダスグプタ",
+      "count": 2
+     }
+    ]
+   }
+  },
   "Prof.": {
    "glosses": {
     "ja": "[略]教授",
@@ -14395,6 +14881,21 @@
     ]
    }
   },
+  "Rabindranath Tagore": {
+   "glosses": {
+    "ja": "[人名]ラビンドラナート・タゴール",
+    "zh": "[人名]Rabindranath Tagore",
+    "ko": "[인명]Rabindranath Tagore"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]ラビンドラナート・タゴール",
+      "count": 1
+     }
+    ]
+   }
+  },
   "Racława": {
    "glosses": {
     "ja": "[人名]ラツワヴァ",
@@ -14406,6 +14907,36 @@
      {
       "gloss": "[人名]ラツワヴァ",
       "count": 1
+     }
+    ]
+   }
+  },
+  "Radio Kansai": {
+   "glosses": {
+    "ja": "[団体]ラジオ関西",
+    "zh": "[团体]Radio Kansai",
+    "ko": "[단체]Radio Kansai"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[団体]ラジオ関西",
+      "count": 2
+     }
+    ]
+   }
+  },
+  "Radio Nippon": {
+   "glosses": {
+    "ja": "[団体]ラジオ日本",
+    "zh": "[团体]Radio Nippon",
+    "ko": "[단체]Radio Nippon"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[団体]ラジオ日本",
+      "count": 2
      }
     ]
    }
@@ -14722,6 +15253,21 @@
     ]
    }
   },
+  "Sasaki Takao": {
+   "glosses": {
+    "ja": "[人名]ササキ・タカオ",
+    "zh": "[人名]Sasaki Takao",
+    "ko": "[인명]Sasaki Takao"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]ササキ・タカオ",
+      "count": 1
+     }
+    ]
+   }
+  },
   "Sasaki Teruhiro": {
    "glosses": {
     "ja": "[人名]佐々木照央",
@@ -14757,6 +15303,21 @@
     "ja": [
      {
       "gloss": "[人名]サトウ・リュウスケ",
+      "count": 1
+     }
+    ]
+   }
+  },
+  "Senda Noriko": {
+   "glosses": {
+    "ja": "[人名]仙田典子",
+    "zh": "[人名]Senda Noriko",
+    "ko": "[인명]Senda Noriko"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]仙田典子",
       "count": 1
      }
     ]
@@ -15467,6 +16028,21 @@
     ]
    }
   },
+  "Tôkyô-to": {
+   "glosses": {
+    "ja": "[地名]東京都",
+    "zh": "[地名]Tôkyô-to",
+    "ko": "[지명]Tôkyô-to"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[地名]東京都",
+      "count": 1
+     }
+    ]
+   }
+  },
   "UMESAO Tadao": {
    "glosses": {
     "ja": "[人名]梅棹忠夫",
@@ -15586,7 +16162,7 @@
      },
      {
       "gloss": "[人名]臼井裕之",
-      "count": 2
+      "count": 3
      }
     ]
    }
@@ -15646,7 +16222,7 @@
     "ja": [
      {
       "gloss": "[略]参照",
-      "count": 5
+      "count": 6
      },
      {
       "gloss": "参照",
@@ -15802,6 +16378,21 @@
     ]
    }
   },
+  "Watanabe Katsuyoshi": {
+   "glosses": {
+    "ja": "[人名]渡辺克義",
+    "zh": "[人名]Watanabe Katsuyoshi",
+    "ko": "[인명]Watanabe Katsuyoshi"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]渡辺克義",
+      "count": 2
+     }
+    ]
+   }
+  },
   "Wei Ningna": {
    "glosses": {
     "ja": "[人名]魏寧娜",
@@ -15857,6 +16448,21 @@
     "ja": [
      {
       "gloss": "[人名]ウィリアム・オールド",
+      "count": 1
+     }
+    ]
+   }
+  },
+  "Witold Hulewicz": {
+   "glosses": {
+    "ja": "[人名]ヴィトルト・フレヴィチ",
+    "zh": "[人名]Witold Hulewicz",
+    "ko": "[인명]Witold Hulewicz"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]ヴィトルト・フレヴィチ",
       "count": 1
      }
     ]
@@ -16110,7 +16716,7 @@
   },
   "aŭg.": {
    "glosses": {
-    "ja": "8月",
+    "ja": "[略]8月",
     "zh": "[简称]aŭg.",
     "ko": "[약]aŭg."
    },
@@ -16118,6 +16724,10 @@
     "ja": [
      {
       "gloss": "8月",
+      "count": 1
+     },
+     {
+      "gloss": "[略]8月",
       "count": 1
      }
     ]
@@ -16197,7 +16807,7 @@
     "ja": [
      {
       "gloss": "とりわけ",
-      "count": 29
+      "count": 30
      }
     ]
    }
@@ -16401,7 +17011,7 @@
     "ja": [
      {
       "gloss": "ペー<br>ジ",
-      "count": 11
+      "count": 13
      }
     ]
    }
@@ -16525,7 +17135,7 @@
      },
      {
       "gloss": "[略]9月",
-      "count": 1
+      "count": 2
      }
     ]
    }
@@ -16581,6 +17191,21 @@
      {
       "gloss": "いわゆる",
       "count": 7
+     }
+    ]
+   }
+  },
+  "tel.": {
+   "glosses": {
+    "ja": "[略]電話",
+    "zh": "[简称]tel.",
+    "ko": "[약]tel."
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[略]電話",
+      "count": 1
      }
     ]
    }
@@ -16791,6 +17416,21 @@
      {
       "gloss": "[人名]シフィエントペウェク",
       "count": 2
+     }
+    ]
+   }
+  },
+  "Ŝikoku Goro": {
+   "glosses": {
+    "ja": "[人名]四國五郎",
+    "zh": "[人名]Ŝikoku Goro",
+    "ko": "[인명]Ŝikoku Goro"
+   },
+   "variants": {
+    "ja": [
+     {
+      "gloss": "[人名]四國五郎",
+      "count": 1
      }
     ]
    }

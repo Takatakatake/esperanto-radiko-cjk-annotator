@@ -25,6 +25,9 @@ TRANSITION_MANIFEST = HERE / "_fake_coarse_transition_review.json"
 FAKE_AUTHORITY_MANIFEST = (
     HERE / "_phase513_fake_coarse_reference_manifest.json"
 )
+SUCCESSOR_BOUNDARY_TRANSITION = (
+    HERE / "_word_anno_boundary_transition_ccb9398.json"
+)
 AUTHORITY_AUDIT_SHA256 = (
     "F50456E073043BAD432736C0EAAC7C8240AEC96EC67A04A17D512B561E58C3D0"
 )
@@ -55,6 +58,32 @@ EXPLICIT_LOCALIZED = {
 }
 
 
+def successor_word_anno_keys():
+    """Return reviewed post-Phase511 keys excluded from historical counts."""
+    payload = load_json(SUCCESSOR_BOUNDARY_TRANSITION)
+    keys = payload.get("added_keys", [])
+    if (
+        payload.get("schema_version") != 1
+        or payload.get("transition")
+        != "kyoto-202608-and-r94-residual-boundary-transition-ccb9398"
+        or len(keys) != 31
+        or len(set(keys)) != 31
+        or any(
+            payload.get("languages", {}).get(language, {}).get("added")
+            != len(keys)
+            for language in LANGUAGES
+        )
+        or payload.get("policy", {}).get(
+            "three_language_boundary_identity_required"
+        ) is not True
+        or payload.get("policy", {}).get(
+            "kanji_master_decomposition_is_not_changed"
+        ) is not True
+    ):
+        raise ValueError("invalid ccb9398 successor word_anno transition")
+    return frozenset(keys)
+
+
 def sha256_bytes(raw):
     return hashlib.sha256(raw).hexdigest().upper()
 
@@ -72,6 +101,7 @@ def load_json(path):
 def localized_root_sets():
     result = {}
     identities = {}
+    successor_keys = successor_word_anno_keys()
     for language, app_code in LANGUAGES.items():
         data_dir = ROOT / f"Esperanto-Kanji-Ruby-{app_code}" / "app_data"
         # The language-local annotation CSV is the largest CSV in each app;
@@ -99,6 +129,10 @@ def localized_root_sets():
             # Phase 619 Ruby sidecar.  It is not a reusable root and must not
             # mutate this historical Phase 511 root-count fixture.
             and key != "mukoz/aĵ"
+            # The ccb9398 transition is separately sealed and tested.  Its
+            # reviewed additions must not rewrite this older Phase 511
+            # evidence fixture merely by increasing the live word_anno set.
+            and key not in successor_keys
         )
         result[language] = roots
         identities[language] = {

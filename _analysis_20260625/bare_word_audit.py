@@ -54,6 +54,16 @@ RUBY_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 TAG_RE = re.compile(r"<[^>]+>", re.DOTALL)
+# Physical lines are not a stable prose unit: formatter-only corpus updates
+# may put an Esperanto sentence and its translation on the same line, or split
+# one long line into several shorter ones.  These explicit flow boundaries are
+# safe recovery points because ``<br>`` inside ``<rt>`` has already been
+# same-length masked before this expression is used.
+SEGMENT_BOUNDARY_RE = re.compile(
+    r"<(?:br\b[^>]*|/?(?:p|div|li|h[1-6]|blockquote|td|th|tr|section|article|main|"
+    r"figure|figcaption|pre)\b[^>]*)>",
+    re.IGNORECASE | re.DOTALL,
+)
 # Full Unicode-letter tokens.  Latin Extended is needed for names such as
 # Oświęcim/István/Universität; Cyrillic is needed so a mixed title such as
 # Китейаŭa is not reduced to the meaningless fragment ``ŭa``.  CJK is
@@ -198,9 +208,19 @@ def visible_line(masked_line: str) -> str:
     return htmllib.unescape(TAG_RE.sub(" ", masked_line))
 
 
-def classify_line(visible: str, has_ruby: bool):
-    cjk_count = len(CJK_RE.findall(visible))
-    latin_count = len(NON_CJK_LETTER_RE.findall(visible))
+def classify_line(
+    visible: str,
+    has_ruby: bool,
+    classification_evidence: str | None = None,
+):
+    # ``visible`` deliberately has complete ruby spans masked so that only
+    # genuinely bare tokens can become candidates.  A recovered segment may,
+    # however, contain a quoted CJK sign (e.g. 乭/畓); count its already-rubied
+    # Esperanto bases as classification evidence so those two signs alone do
+    # not turn an otherwise fully annotated sentence into a translation.
+    evidence = visible if classification_evidence is None else classification_evidence
+    cjk_count = len(CJK_RE.findall(evidence))
+    latin_count = len(NON_CJK_LETTER_RE.findall(evidence))
     raw_tokens = [m.group() for m in WORD_RE.finditer(visible.replace("\x00", " "))]
     lowercase_lexical = [
         w for w in raw_tokens
@@ -218,6 +238,30 @@ def classify_line(visible: str, has_ruby: bool):
     if raw_tokens and esp_tokens / len(raw_tokens) >= 0.60:
         return "plain_line_in_annotated_document"
     return "non_annotation_block"
+
+
+def segment_spans(masked_line: str):
+    """Yield non-boundary spans while retaining offsets into the raw line."""
+    cursor = 0
+    for boundary in SEGMENT_BOUNDARY_RE.finditer(masked_line):
+        if boundary.start() > cursor:
+            yield cursor, boundary.start()
+        cursor = boundary.end()
+    if cursor < len(masked_line):
+        yield cursor, len(masked_line)
+
+
+def ruby_base_classification_evidence(visible: str, ruby_matches) -> str:
+    """Add only ruby base text to the bare-token classification projection.
+
+    Readings are intentionally excluded: they may be Japanese, Chinese, or
+    Korean and must never make an Esperanto segment look like a translation.
+    The supplied matches come from the document-wide regex pass, so a ruby
+    spanning physical lines contributes its base without being reparsed from
+    an incomplete line fragment.
+    """
+    bases = [htmllib.unescape(match.group("rb")) for match in ruby_matches]
+    return visible + (" " + " ".join(bases) if bases else "")
 
 
 def mask_urls(line: str) -> tuple[str, int]:
@@ -262,62 +306,132 @@ def scan_document(path: Path):
         url_spans += n_urls
         line_class = classify_line(vis, has_ruby)
         line_classes[line_class] += 1
-        if line_class not in {"annotated_body", "plain_line_in_annotated_document"}:
-            continue
-        for match in WORD_RE.finditer(vis):
-            token = match.group()
-            before = vis[match.start() - 1] if match.start() else ""
-            after = vis[match.end()] if match.end() < len(vis) else ""
-            lower = token.lower()
-            before_ruby = before == "\x00"
-            after_ruby = after == "\x00"
-            is_attached = before_ruby or after_ruby
-            if is_attached and lower in ATTACHED_WATCH_TOKENS:
-                position = (
-                    "between_rubies" if before_ruby and after_ruby
-                    else "after_ruby_terminal" if before_ruby
-                    else "before_ruby"
+        scannable_classes = {"annotated_body", "plain_line_in_annotated_document"}
+        flow_segments = []
+        if has_ruby:
+            segment_ruby_index = ruby_index
+            for start, end in segment_spans(line):
+                segment_start = offset + start
+                segment_end = offset + end
+                while (
+                    segment_ruby_index < len(ruby_matches)
+                    and ruby_matches[segment_ruby_index].end() <= segment_start
+                ):
+                    segment_ruby_index += 1
+                segment_rubies = []
+                probe_index = segment_ruby_index
+                while probe_index < len(ruby_matches):
+                    ruby_match = ruby_matches[probe_index]
+                    if ruby_match.start() >= segment_end:
+                        break
+                    if ruby_match.end() > segment_start:
+                        segment_rubies.append(ruby_match)
+                    probe_index += 1
+                segment_vis = visible_line(line[start:end])
+                segment_vis, _ = mask_urls(segment_vis)
+                # Ignore formatting-only residue after a terminal boundary.
+                # A ruby-only segment remains substantive through its global
+                # span intersection even though its scan projection is NULs.
+                if not segment_rubies and not WORD_RE.search(segment_vis):
+                    continue
+                flow_segments.append((segment_vis, segment_rubies))
+
+        if len(flow_segments) > 1:
+            # A formatter may join Esperanto and its translation onto one
+            # physical line.  Once explicit flow boundaries give us multiple
+            # substantive segments, never let the whole-line majority leak
+            # Latin names/acronyms out of a short translation.  Ruby-bearing
+            # segments use only global ruby-base evidence; non-ruby segments
+            # must independently qualify as plain Esperanto.
+            scan_units = []
+            for segment_vis, segment_rubies in flow_segments:
+                if segment_rubies:
+                    segment_class = classify_line(
+                        segment_vis,
+                        True,
+                        ruby_base_classification_evidence(segment_vis, segment_rubies),
+                    )
+                    if segment_class == "annotated_body":
+                        scan_units.append((segment_vis, segment_class))
+                else:
+                    segment_class = classify_line(segment_vis, False)
+                    if segment_class == "plain_line_in_annotated_document":
+                        scan_units.append((segment_vis, segment_class))
+        elif line_class in scannable_classes:
+            # Preserve legacy behavior for a single semantic segment.
+            scan_units = [(vis, line_class)]
+        else:
+            # Coverage-nonworsening fallback for a single excluded segment:
+            # reconsider it only when a document-wide ruby span intersects it.
+            scan_units = []
+            for segment_vis, segment_rubies in flow_segments:
+                if not segment_rubies:
+                    continue
+                segment_class = classify_line(
+                    segment_vis,
+                    True,
+                    ruby_base_classification_evidence(segment_vis, segment_rubies),
                 )
-                attached_watch[f"{lower}:{position}"] += 1
-            allowed_kind = allowed_attached_kind(lower, before_ruby, after_ruby)
-            allowed_internal = allowed_kind in {
-                "internal_single_ending", "internal_composite_e_n",
-            }
-            allowed_terminal = allowed_kind == "terminal_ending"
-            if is_attached and (allowed_internal or allowed_terminal):
-                attached += 1
-                attached_internal += int(allowed_internal)
-                attached_terminal += int(allowed_terminal)
-                continue
-            if not is_attached and (len(token) == 1 or lower in GRAMMAR_ENDINGS | METADATA_WORDS):
-                continue
-            candidate_kind = None
-            if is_attached:
-                # Unexpected attached material must be visible even when it is
-                # not in the Esperanto stem list.  This catches both missing
-                # as/is/os/us rubies and a-Litovia-style hyphenated omissions.
-                attached_unexpected += 1
-                candidate_kind = (
-                    "attached_finite_ending_omission"
-                    if lower in ANNOTATED_FINITE_ENDINGS
-                    else "attached_unexpected_token"
-                )
-            elif token[0].isupper() or token.isupper():
-                candidate_kind = "proper_or_acronym"
-            elif is_esperanto(token):
-                candidate_kind = "esperanto_word"
-            if candidate_kind is None:
-                continue
-            occurrences.append({
-                "path": relpath(path),
-                "line": line_no,
-                "token": token,
-                "kind": candidate_kind,
-                "line_class": line_class,
-                "context": re.sub(
-                    r"\s+", " ", re.sub(r"\x00+", "[R]", vis)
-                ).strip()[:500],
-            })
+                if segment_class == "annotated_body":
+                    scan_units.append((segment_vis, segment_class))
+
+        for scan_vis, scan_class in scan_units:
+            for match in WORD_RE.finditer(scan_vis):
+                token = match.group()
+                before = scan_vis[match.start() - 1] if match.start() else ""
+                after = scan_vis[match.end()] if match.end() < len(scan_vis) else ""
+                lower = token.lower()
+                before_ruby = before == "\x00"
+                after_ruby = after == "\x00"
+                is_attached = before_ruby or after_ruby
+                if is_attached and lower in ATTACHED_WATCH_TOKENS:
+                    position = (
+                        "between_rubies" if before_ruby and after_ruby
+                        else "after_ruby_terminal" if before_ruby
+                        else "before_ruby"
+                    )
+                    attached_watch[f"{lower}:{position}"] += 1
+                allowed_kind = allowed_attached_kind(lower, before_ruby, after_ruby)
+                allowed_internal = allowed_kind in {
+                    "internal_single_ending", "internal_composite_e_n",
+                }
+                allowed_terminal = allowed_kind == "terminal_ending"
+                if is_attached and (allowed_internal or allowed_terminal):
+                    attached += 1
+                    attached_internal += int(allowed_internal)
+                    attached_terminal += int(allowed_terminal)
+                    continue
+                if not is_attached and (
+                    len(token) == 1 or lower in GRAMMAR_ENDINGS | METADATA_WORDS
+                ):
+                    continue
+                candidate_kind = None
+                if is_attached:
+                    # Unexpected attached material must be visible even when it is
+                    # not in the Esperanto stem list.  This catches both missing
+                    # as/is/os/us rubies and a-Litovia-style hyphenated omissions.
+                    attached_unexpected += 1
+                    candidate_kind = (
+                        "attached_finite_ending_omission"
+                        if lower in ANNOTATED_FINITE_ENDINGS
+                        else "attached_unexpected_token"
+                    )
+                elif token[0].isupper() or token.isupper():
+                    candidate_kind = "proper_or_acronym"
+                elif is_esperanto(token):
+                    candidate_kind = "esperanto_word"
+                if candidate_kind is None:
+                    continue
+                occurrences.append({
+                    "path": relpath(path),
+                    "line": line_no,
+                    "token": token,
+                    "kind": candidate_kind,
+                    "line_class": scan_class,
+                    "context": re.sub(
+                        r"\s+", " ", re.sub(r"\x00+", "[R]", scan_vis)
+                    ).strip()[:500],
+                })
     return occurrences, {
         "raw_ruby": len(RUBY_RE.findall(raw)),
         "url_spans": url_spans,

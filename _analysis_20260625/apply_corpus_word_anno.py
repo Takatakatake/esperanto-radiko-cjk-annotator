@@ -55,6 +55,9 @@ from phase619_ordinary_ruby_policy import (
 from phase619_ordinary_ruby_activation import (
     activation_report as phase619_activation_report,
 )
+from r88_mukoz_ruby_policy import (
+    morph_context_annotations as r88_mukoz_morph_context_annotations,
+)
 from reviewed_di_semantic_policy import (
     REVIEWED_DI_GLOSSES,
     REVIEWED_SCIENTIFIC_DI_NEGATIVE_KEYS,
@@ -65,6 +68,186 @@ from reviewed_di_semantic_policy import (
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_analysis_20260625" / "out"
+
+
+def canonical_json_sha256(payload):
+    """Hash a JSON value independent of indentation and key order."""
+    raw = json.dumps(
+        payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest().upper()
+
+
+HISTORICAL_BOUNDARY_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_word_anno_boundary_transition_ccb9398.json"
+)
+HISTORICAL_BOUNDARY_TRANSITION = json.loads(
+    HISTORICAL_BOUNDARY_TRANSITION_PATH.read_text(encoding="utf-8")
+)
+if (
+    HISTORICAL_BOUNDARY_TRANSITION.get("schema_version") != 1
+    or HISTORICAL_BOUNDARY_TRANSITION.get("transition")
+    != "kyoto-202608-and-r94-residual-boundary-transition-ccb9398"
+):
+    raise SystemExit("invalid historical ccb9398 word_anno transition ledger")
+BOUNDARY_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_word_anno_boundary_transition_dd55318_u2019.json"
+)
+BOUNDARY_TRANSITION = json.loads(
+    BOUNDARY_TRANSITION_PATH.read_text(encoding="utf-8")
+)
+if (
+    BOUNDARY_TRANSITION.get("schema_version") != 1
+    or BOUNDARY_TRANSITION.get("ledger_id")
+    != "word-anno-boundary-dd55318-u2019-successor-v1"
+):
+    raise SystemExit("invalid dd55318 U+2019 word_anno transition ledger")
+SOURCE_TRANSITION_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_corpus_source_transition_dd55318.json"
+)
+SOURCE_TRANSITION = json.loads(
+    SOURCE_TRANSITION_PATH.read_text(encoding="utf-8")
+)
+if (
+    SOURCE_TRANSITION.get("schema_version") != 1
+    or not SOURCE_TRANSITION.get("policy", {}).get("source_only_transition")
+    or SOURCE_TRANSITION.get("policy", {}).get("word_anno_changed_by_transition")
+):
+    raise SystemExit("invalid dd55318 source-only corpus transition ledger")
+R94_RESIDUAL_LEDGER_PATH = (
+    ROOT / "_analysis_20260625"
+    / "_corpus_r94_ccb9398_residual_closure.json"
+)
+R94_RESIDUAL_LEDGER = json.loads(
+    R94_RESIDUAL_LEDGER_PATH.read_text(encoding="utf-8")
+)
+if R94_RESIDUAL_LEDGER.get("schema_version") != 1:
+    raise SystemExit("invalid ccb9398 residual-closure ledger")
+R94_RESIDUAL_POLICY = R94_RESIDUAL_LEDGER["policy"]
+
+
+def validate_boundary_successor_chain():
+    """Authenticate the one-key successor without rewriting old evidence."""
+    authority = BOUNDARY_TRANSITION.get("authority", {})
+    historical_authority = authority.get(
+        "historical_ccb9398_transition", {}
+    )
+    source_authority = authority.get("corpus_source_transition", {})
+    residual_authority = authority.get("r94_residual_ledger", {})
+    parent = BOUNDARY_TRANSITION.get("parent", {})
+    candidate = BOUNDARY_TRANSITION.get("candidate", {})
+    delta = BOUNDARY_TRANSITION.get("delta", {})
+    policy = BOUNDARY_TRANSITION.get("policy", {})
+    expected_policy = {
+        "derived_from_sealed_ascii_rule": True,
+        "only_unicode_substitution": "U+0027_TO_U+2019",
+        "observed_raw_surface_required": True,
+        "exact_only": True,
+        "word_boundary_required": True,
+        "case_sensitive": True,
+        "typed_roles_required": True,
+        "ruby_only": True,
+        "wildcard_or_substring_authorization": False,
+        "kanji_track_changed": False,
+        "learner_master_changed": False,
+        "corpus_changed": False,
+        "three_language_boundary_identity_required": True,
+        "glosses_remain_language_local": True,
+        "historical_ledgers_rewritten": False,
+    }
+    expected_delta = {
+        "transform": "U+0027_TO_U+2019",
+        "source_surface": "Fukuwarai'",
+        "candidate_surface": "Fukuwarai’",
+        "source_target": "Fukuwarai/'",
+        "candidate_target": "Fukuwarai/’",
+        "source_context_key": "@typed:Fukuwarai':0",
+        "candidate_context_key": "@typed:Fukuwarai’:0",
+        "typed_roles": "RL",
+        "observed_corpus": {
+            "instances": 1,
+            "expected_typed": "R:Fukuwarai|L:'",
+            "contexts": [{
+                "path": (
+                    "revuoj/revuo-orienta/2026/"
+                    "202608_Revuo_eltiritaj_Esperantaj_pagxoj_"
+                    "sen_japana_traduko.html"
+                ),
+                "line": 267,
+                "count": 1,
+            }],
+        },
+        "added_keys": ["@typed:Fukuwarai’:0"],
+        "confirmed_entry": {
+            "w": "Fukuwarai’",
+            "target": "Fukuwarai/’",
+            "typed_roles": "RL",
+            "exact_only": True,
+            "boundary_only": True,
+            "case_sensitive": True,
+            "corpus_managed": True,
+            "ruby_only": True,
+        },
+        "settings_row": [
+            "Fukuwarai/’", 109000,
+            [
+                "ne", "word_boundary", "case_sensitive",
+                "typed_roles:RL", "ruby_only",
+            ],
+        ],
+    }
+    if (
+        historical_authority.get("path")
+        != HISTORICAL_BOUNDARY_TRANSITION_PATH.relative_to(ROOT).as_posix()
+        or historical_authority.get("file_sha256")
+        != hashlib.sha256(
+            HISTORICAL_BOUNDARY_TRANSITION_PATH.read_bytes()
+        ).hexdigest().upper()
+        or source_authority.get("path")
+        != SOURCE_TRANSITION_PATH.relative_to(ROOT).as_posix()
+        or source_authority.get("file_sha256")
+        != hashlib.sha256(SOURCE_TRANSITION_PATH.read_bytes()).hexdigest().upper()
+        or residual_authority.get("path")
+        != R94_RESIDUAL_LEDGER_PATH.relative_to(ROOT).as_posix()
+        or residual_authority.get("file_sha256")
+        != hashlib.sha256(R94_RESIDUAL_LEDGER_PATH.read_bytes()).hexdigest().upper()
+        or policy != expected_policy
+        or delta != expected_delta
+        or parent.get("manifest_path") != candidate.get("manifest_path")
+        or parent.get("manifest_path")
+        != word_anno_boundary.DEFAULT_MANIFEST.relative_to(ROOT).as_posix()
+        or parent.get("canonical_payload_sha256")
+        != HISTORICAL_BOUNDARY_TRANSITION.get("candidate", {}).get(
+            "canonical_payload_sha256"
+        )
+        or parent.get("authority_keys")
+        != HISTORICAL_BOUNDARY_TRANSITION.get("candidate", {}).get(
+            "authority_keys"
+        )
+        or parent.get("authority_sha256")
+        != HISTORICAL_BOUNDARY_TRANSITION.get("candidate", {}).get(
+            "authority_sha256"
+        )
+        or parent.get("expected_key_counts")
+        != HISTORICAL_BOUNDARY_TRANSITION.get("candidate", {}).get(
+            "expected_key_counts"
+        )
+        or candidate.get("authority_keys") != parent.get("authority_keys") + 1
+        or any(
+            candidate.get("expected_key_counts", {}).get(language)
+            != count + 1
+            for language, count in parent.get(
+                "expected_key_counts", {}
+            ).items()
+        )
+    ):
+        raise SystemExit("invalid dd55318 U+2019 boundary successor chain")
+
+
+validate_boundary_successor_chain()
 WRITE = "--write" in sys.argv
 REFRESH_BOUNDARY_MANIFEST = "--refresh-boundary-manifest" in sys.argv
 if REFRESH_BOUNDARY_MANIFEST and not WRITE:
@@ -383,6 +566,24 @@ CASE_SENSITIVE_EXACT_GLOSSES = {
     "Sonja Lang": {"ja": "[人名]ソニア・ラング", "zh": "[人名]索尼娅·朗", "ko": "[인명]소냐 랑"},
     "Alberto Crescenti": {"ja": "[人名]アルベルト・クレシェンティ", "zh": "[人名]阿尔贝托·克雷森蒂", "ko": "[인명]알베르토 크레센티"},
     "Hangeul": {"ja": "[語]ハングル", "zh": "[文字]韩文", "ko": "[언어명]한글"},
+    # The corpus itself identifies this temple as 般若寺.  Keep the complete
+    # proper name in one Ruby span: splitting Hannja-ĝi into accidental
+    # Esperanto-looking pieces would violate the coarse annotation track.
+    "Hannja-ĝi": {"ja": "[寺]般若寺", "zh": "[寺庙]般若寺", "ko": "[사찰]반야사"},
+    # The August 2026 corpus supplies an unambiguous identity/gloss for each
+    # of these written forms.  Keep every row case-sensitive and whole-word
+    # bounded: none licenses a lowercase Esperanto-looking homograph.
+    "Asahi": {"ja": "[雑誌]朝日新聞", "zh": "[报纸]朝日新闻", "ko": "[신문]아사히신문"},
+    "HKDSE": {"ja": "[略]香港中学文憑試", "zh": "[略]香港中学文凭试", "ko": "[약]홍콩중등시험"},
+    "Mondial": {"ja": "[団体]モンディアル", "zh": "[团体]蒙迪亚尔", "ko": "[단체]몬디알"},
+    "Primico": {"ja": "[書]プリミツォ", "zh": "[书]普里米乔", "ko": "[책]프리미초"},
+    "Sinzyuku-ku": {"ja": "[地名]新宿区", "zh": "[地名]新宿区", "ko": "[지명]신주쿠구"},
+    # The short publisher label is kept inside the user's roughly-2x Ruby
+    # width target; the corpus establishes that TK denotes a company here.
+    "TK": {"ja": "TK社", "zh": "TK公司", "ko": "TK사"},
+    "Waseda-mati": {"ja": "[地名]早稲田町", "zh": "[地名]早稻田町", "ko": "[지명]와세다마치"},
+    "Watanabe": {"ja": "[人名]渡辺", "zh": "[人名]渡边", "ko": "[인명]와타나베"},
+    "Yae": {"ja": "[人名]ヤエ", "zh": "[人名]Yae", "ko": "[인명]야에"},
     "EU": {"ja": "[略]欧州連合", "zh": "[简称]欧盟", "ko": "[약]유럽연합"},
     "AFP": {"ja": "[略]フランス通信社", "zh": "[简称]法新社", "ko": "[약]AFP"},
     "TaiwanPlus": {"ja": "[団体]台湾プラス", "zh": "[团体]TaiwanPlus", "ko": "[단체]타이완플러스"},
@@ -665,6 +866,11 @@ TYPED_CONTEXT_GLOSSES = {
     ("HOKKAJDON", 0, "HOKKAJDO"): {
         "ja": "[地名]北海道", "zh": "[地名]北海道", "ko": "[지명]홋카이도",
     },
+    # Corpus punctuation is literal: only Fukuwarai is one reviewed Ruby
+    # unit and the authored trailing apostrophe remains outside the span.
+    ("Fukuwarai'", 0, "Fukuwarai"): {
+        "ja": "[日]福笑い", "zh": "[日语]福笑", "ko": "[일]후쿠와라이",
+    },
 }
 
 # The staged manifests supply only explicitly reviewed localized fallbacks.
@@ -823,6 +1029,9 @@ if PHASE598_FORMAL:
 PHASE619_MORPH_CONTEXT_ANNOTATIONS = {
     language: {} for language in ANNOTATIONS
 }
+R88_MUKOZ_MORPH_CONTEXT_ANNOTATIONS = {
+    language: {} for language in ANNOTATIONS
+}
 if PHASE619_FORMAL:
     _prior_morph_context_keys = {
         key
@@ -853,6 +1062,26 @@ if PHASE619_FORMAL:
                 _phase619_piece,
                 _phase619_glosses[_phase619_language],
             ]]
+    for _r88_key, _r88_annotation in (
+        r88_mukoz_morph_context_annotations().items()
+    ):
+        _r88_piece = _r88_annotation["piece"]
+        _r88_glosses = _r88_annotation["glosses"]
+        if (
+            _r88_key in _prior_morph_context_keys
+            or any(
+                _r88_key in rows
+                for rows in PHASE619_MORPH_CONTEXT_ANNOTATIONS.values()
+            )
+            or set(_r88_glosses) != set(ANNOTATIONS)
+        ):
+            raise SystemExit(
+                f"invalid/duplicate R88 mukoz context annotation: {_r88_key!r}"
+            )
+        for _r88_language in ANNOTATIONS:
+            R88_MUKOZ_MORPH_CONTEXT_ANNOTATIONS[_r88_language][
+                _r88_key
+            ] = [[_r88_piece, _r88_glosses[_r88_language]]]
 
 # The last strict-gate residuals are mostly technical abbreviations, anatomy,
 # and hyphenated proper-name components absent from all three ordinary CSVs.
@@ -986,17 +1215,52 @@ if _unused_strict_glosses:
         f"strict typed glosses are unused: {sorted(_unused_strict_glosses)!r}"
     )
 
+# Canonical corpus parsing maps U+2019 to ASCII apostrophe when it records a
+# typed signature.  Runtime input, however, retains the authored punctuation.
+# Mirror only already-reviewed, case-exact typed annotation keys; this is not a
+# productive apostrophe rule and cannot authorize another word or case form.
+MANAGED_TYPED_CURLY_APOSTROPHE_CONTEXT_KEYS = set()
+for (_surface, _index, _piece), _glosses in list(
+    TYPED_CONTEXT_GLOSSES.items()
+):
+    _curly_surface = curly_apostrophe_variant(_surface)
+    if _curly_surface is None:
+        continue
+    _curly_piece = curly_apostrophe_variant(_piece) or _piece
+    _curly_key = (_curly_surface, _index, _curly_piece)
+    if (
+        _curly_key in TYPED_CONTEXT_GLOSSES
+        and TYPED_CONTEXT_GLOSSES[_curly_key] != _glosses
+    ):
+        raise SystemExit(
+            f"conflicting curly typed annotation: {_curly_key!r}"
+        )
+    TYPED_CONTEXT_GLOSSES[_curly_key] = dict(_glosses)
+    MANAGED_TYPED_CURLY_APOSTROPHE_CONTEXT_KEYS.add(_curly_key)
+
 # Exact slash-keyed compound annotations disambiguate a root only in that
 # composition.  They are never copied onto the standalone homograph.
 SPLIT_CONTEXT_ANNOTATIONS = {
     "ja": {
         "pasi/grafi": [["pasi", "全"], ["grafi", "記述"]],
+        # ``radi/o`` remains the learner-master/Kanji authority.  These three
+        # closed broadcast compounds alone use the coarser Ruby root radio
+        # with its media sense, never the physical-sense gloss "光線".
+        "radio/program": [["radio", "ラジオ"], ["program", "プログラム"]],
+        "radio/el/send": [["radio", "ラジオ"], ["el", "中から"], ["send", "送る"]],
+        "radio/-/el/send": [["radio", "ラジオ"], ["-", "-"], ["el", "中から"], ["send", "送る"]],
     },
     "zh": {
         "pasi/grafi": [["pasi", "全"], ["grafi", "记述"]],
+        "radio/program": [["radio", "广播"], ["program", "节目"]],
+        "radio/el/send": [["radio", "广播"], ["el", "从"], ["send", "发送"]],
+        "radio/-/el/send": [["radio", "广播"], ["-", "-"], ["el", "从"], ["send", "发送"]],
     },
     "ko": {
         "pasi/grafi": [["pasi", "전체"], ["grafi", "기술"]],
+        "radio/program": [["radio", "라디오"], ["program", "프로그램"]],
+        "radio/el/send": [["radio", "라디오"], ["el", "에서"], ["send", "보내다"]],
+        "radio/-/el/send": [["radio", "라디오"], ["-", "-"], ["el", "에서"], ["send", "보내다"]],
     },
 }
 if PHASE619_FORMAL:
@@ -1221,7 +1485,60 @@ MANAGED_MORPH_TARGETS = {
     "radiofonio": {"target": "radiofoni/o"},
     "azia-oceania": {"target": "azi/a/-/oceani/a"},
     "azian-oceanian": {"target": "azi/a/n/-/oceani/a/n"},
+    # ccb9398 canonical-corpus closure.  All rows are Ruby-track-only so the
+    # learner master remains the sole Kanji decomposition authority (notably
+    # re/prezent, radi/o and miks/de/ven).  Families are whole-word bounded by
+    # make_correction; hyphen compounds therefore cannot leak into substrings.
+    "apudo": {"target": "apud/o", "ruby_track_only": True},
+    "dekokjarulo": {
+        "target": "dek/ok/jar/ul/o", "ruby_track_only": True,
+    },
+    "hongkongano": {
+        "target": "hongkong/an/o", "ruby_track_only": True,
+    },
+    "hongkongano-japana": {
+        "target": "hongkong/an/o/-/japan/a", "ruby_track_only": True,
+    },
+    "koreo-hongkongano": {
+        "target": "kore/o/-/hongkong/an/o", "ruby_track_only": True,
+    },
+    "nederlandano-hongkongano": {
+        "target": "nederland/an/o/-/hongkong/an/o",
+        "ruby_track_only": True,
+    },
+    "miksdevena": {
+        "target": "miks/deven/a", "ruby_track_only": True,
+    },
+    "multdevenulo": {
+        "target": "mult/deven/ul/o", "ruby_track_only": True,
+    },
+    "premi-ceremonio": {
+        "target": "premi/-/ceremoni/o", "ruby_track_only": True,
+    },
+    "radioprogramo": {
+        "target": "radio/program/o", "ruby_track_only": True,
+    },
+    "radioelsendo": {
+        "target": "radio/el/send/o", "ruby_track_only": True,
+    },
+    "radio-elsendo": {
+        "target": "radio/-/el/send/o", "ruby_track_only": True,
+    },
+    "reprezentis": {
+        "target": "reprezent/is", "ruby_track_only": True,
+    },
+    "samas": {"target": "sam/as", "ruby_track_only": True},
+    "ĉino-japana": {
+        "target": "ĉin/o/-/japan/a", "ruby_track_only": True,
+    },
 }
+
+_r94_managed_morph_targets = R94_RESIDUAL_POLICY["managed_morph_targets"]
+if {
+    surface: MANAGED_MORPH_TARGETS.get(surface)
+    for surface in _r94_managed_morph_targets
+} != _r94_managed_morph_targets:
+    raise SystemExit("ccb9398 residual managed-morph policy drift")
 
 _phase532_managed_morph_targets = managed_morph_targets()
 _phase532_overlap = set(MANAGED_MORPH_TARGETS) & set(
@@ -1321,7 +1638,20 @@ MANAGED_TYPED_EXACT_TARGETS = {
     "HOKKAJDON": {
         "target": "HOKKAJDO/N", "typed_roles": "RL", "case_sensitive": True,
     },
+    "Fukuwarai'": {
+        "target": "Fukuwarai/'", "typed_roles": "RL",
+        "case_sensitive": True, "ruby_only": True,
+    },
 }
+
+_r94_managed_typed_targets = R94_RESIDUAL_POLICY[
+    "managed_typed_exact_targets"
+]
+if {
+    surface: MANAGED_TYPED_EXACT_TARGETS.get(surface)
+    for surface in _r94_managed_typed_targets
+} != _r94_managed_typed_targets:
+    raise SystemExit("ccb9398 residual typed-exact policy drift")
 
 FAKE_COARSE_TYPED_SURFACES = set()
 for _fake_entry in FAKE_COARSE_APP_ENTRIES:
@@ -1414,6 +1744,29 @@ if PHASE598_FORMAL:
             _phase598_spec
         )
         PHASE598_TYPED_EXACT_SURFACES.add(_phase598_surface)
+
+# Match the same narrow punctuation equivalence already used by ordinary exact
+# and reviewed-exact rules.  Each alias remains whole-word, case-sensitive and
+# track-tagged exactly like its reviewed ASCII authority.
+MANAGED_TYPED_CURLY_APOSTROPHE_SURFACES = set()
+for _surface, _spec in list(MANAGED_TYPED_EXACT_TARGETS.items()):
+    _curly_surface = curly_apostrophe_variant(_surface)
+    if _curly_surface is None:
+        continue
+    if _spec.get("case_sensitive", True) is not True:
+        raise SystemExit(
+            f"apostrophe typed rule must be case-sensitive: {_surface!r}"
+        )
+    _curly_spec = dict(_spec)
+    _curly_spec["target"] = (
+        curly_apostrophe_variant(_spec["target"]) or _spec["target"]
+    )
+    if _curly_surface in MANAGED_TYPED_EXACT_TARGETS:
+        raise SystemExit(
+            f"duplicate curly typed exact surface: {_curly_surface!r}"
+        )
+    MANAGED_TYPED_EXACT_TARGETS[_curly_surface] = _curly_spec
+    MANAGED_TYPED_CURLY_APOSTROPHE_SURFACES.add(_curly_surface)
 
 REVIEWED_TYPED_EXACT_TARGETS = {}
 REVIEWED_TYPED_ANNOTATIONS = dict(REVIEWED_EXACT_MANIFEST["annotations"])
@@ -1678,6 +2031,7 @@ def main():
             if (
                 key.startswith("@phase619-ruby:")
                 and key not in PHASE619_MORPH_CONTEXT_ANNOTATIONS[language]
+                and key not in R88_MUKOZ_MORPH_CONTEXT_ANNOTATIONS[language]
             ):
                 del data[key]
             if (
@@ -1695,6 +2049,7 @@ def main():
         data.update(PHASE558_MORPH_CONTEXT_ANNOTATIONS[language])
         data.update(PHASE598_MORPH_CONTEXT_ANNOTATIONS[language])
         data.update(PHASE619_MORPH_CONTEXT_ANNOTATIONS[language])
+        data.update(R88_MUKOZ_MORPH_CONTEXT_ANNOTATIONS[language])
         for key, pairs in SPLIT_CONTEXT_ANNOTATIONS[language].items():
             data[key] = pairs
         for (surface, index, piece), glosses in TYPED_CONTEXT_GLOSSES.items():
@@ -1851,32 +2206,84 @@ def main():
                     "word_anno candidates violate the pinned three-language "
                     "boundary manifest before write"
                 )
-            expected_phase619_keys = (
-                set(phase619_morph_context_annotations())
-                | set(phase619_split_context_annotations())
-            )
+            transition_parent = BOUNDARY_TRANSITION["parent"]
+            transition_candidate = BOUNDARY_TRANSITION["candidate"]
+            manifest_raw = word_anno_boundary.DEFAULT_MANIFEST.read_bytes()
+            if (
+                hashlib.sha256(manifest_raw).hexdigest().upper()
+                != transition_parent["file_sha256"]
+                or canonical_json_sha256(expected_boundary)
+                != transition_parent["canonical_payload_sha256"]
+                or expected_boundary["authority_keys"]
+                != transition_parent["authority_keys"]
+                or expected_boundary["authority_sha256"]
+                != transition_parent["authority_sha256"]
+                or expected_boundary["expected_key_counts"]
+                != transition_parent["expected_key_counts"]
+            ):
+                raise SystemExit(
+                    "dd55318 U+2019 boundary transition parent drift"
+                )
+            if (
+                canonical_json_sha256(candidate_boundary)
+                != transition_candidate["canonical_payload_sha256"]
+                or candidate_boundary["authority_keys"]
+                != transition_candidate["authority_keys"]
+                or candidate_boundary["authority_sha256"]
+                != transition_candidate["authority_sha256"]
+                or candidate_boundary["expected_key_counts"]
+                != transition_candidate["expected_key_counts"]
+            ):
+                raise SystemExit(
+                    "dd55318 U+2019 boundary transition candidate drift"
+                )
+            exact_source = EXACT_MANIFEST["source"]
+            corpus_authority = BOUNDARY_TRANSITION["authority"]["corpus"]
+            source_candidate = SOURCE_TRANSITION["corpus"]["candidate"]
+            if (
+                corpus_authority["head_oid"] != source_candidate["head_oid"]
+                or corpus_authority["tree_oid"] != source_candidate["tree_oid"]
+                or corpus_authority["content_sha256"]
+                != source_candidate["content_sha256"]
+                or exact_source["head_oid"] != corpus_authority["head_oid"]
+                or exact_source["content_sha256"]
+                != corpus_authority["content_sha256"]
+            ):
+                raise SystemExit(
+                    "dd55318 U+2019 corpus authority drift"
+                )
+            expected_added = set(BOUNDARY_TRANSITION["delta"]["added_keys"])
             for language in ANNOTATIONS:
                 current = json.loads(
                     next(iter(targets(language))).read_text(encoding="utf-8")
                 )
                 candidate = pending_word_anno[language]
-                added = set(candidate) - set(current)
-                removed = set(current) - set(candidate)
-                changed = {
-                    key
-                    for key in set(current) & set(candidate)
+                added_keys = sorted(set(candidate) - set(current))
+                removed_keys = sorted(set(current) - set(candidate))
+                changed_keys = sorted(
+                    key for key in set(current) & set(candidate)
                     if current[key] != candidate[key]
+                )
+                diff = {
+                    "added": {key: candidate[key] for key in added_keys},
+                    "removed": {key: current[key] for key in removed_keys},
+                    "changed": {
+                        key: {"old": current[key], "new": candidate[key]}
+                        for key in changed_keys
+                    },
                 }
+                expected_language = BOUNDARY_TRANSITION["languages"][language]
                 if (
-                    added != expected_phase619_keys
-                    or removed
-                    or changed
+                    set(added_keys) != expected_added
+                    or len(added_keys) != expected_language["added"]
+                    or len(removed_keys) != expected_language["removed"]
+                    or changed_keys != expected_language["changed_keys"]
+                    or canonical_json_sha256(diff)
+                    != expected_language["canonical_diff_sha256"]
                 ):
                     raise SystemExit(
-                        f"{language}: Phase 619 boundary refresh is not the "
-                        f"closed seven-key addition: added={sorted(added)!r} "
-                        f"removed={sorted(removed)!r} "
-                        f"changed={sorted(changed)!r}"
+                        f"{language}: dd55318 U+2019 word_anno transition "
+                        "does not match the sealed per-language delta"
                     )
             pending_writes.append((
                 word_anno_boundary.DEFAULT_MANIFEST,

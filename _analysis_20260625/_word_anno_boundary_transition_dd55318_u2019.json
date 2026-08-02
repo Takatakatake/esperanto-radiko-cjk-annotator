@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "ledger_id": "word-anno-boundary-dd55318-u2019-successor-v1",
+  "description": "Fail-closed successor transition deriving the corpus-observed U+2019 Fukuwarai spelling from the sealed ASCII-apostrophe R94 exact rule. Historical ccb9398 and dd55318 evidence remains immutable.",
+  "authority": {
+    "corpus": {
+      "branch": "agent/r94-kyoto-ruby-audit",
+      "head_oid": "dd55318c33b36128e64561d4ae7fca587ad974fa",
+      "tree_oid": "8ceca918f5a54fd04a09f1af73c8ee4c65accd81",
+      "content_sha256": "33ED6EA94E45A5434B3AAE035F8C44D97278ACABA9A83714A0167EC0754C70B8"
+    },
+    "historical_ccb9398_transition": {
+      "path": "_analysis_20260625/_word_anno_boundary_transition_ccb9398.json",
+      "file_sha256": "A9FFBC5EC596A4CD7B1927185BD2553845CA3DEC2B0F5F1B342F1132A09B1303"
+    },
+    "corpus_source_transition": {
+      "path": "_analysis_20260625/_corpus_source_transition_dd55318.json",
+      "file_sha256": "C3BD6DE90C3BDC3BC1B8008308F1AB94D9FFDE15940757522FC202BEB48BC42A"
+    },
+    "r94_residual_ledger": {
+      "path": "_analysis_20260625/_corpus_r94_ccb9398_residual_closure.json",
+      "file_sha256": "3745A14C9F6AEDA5375B56C2D2A58C8E34C72973B6182980F26467C3B3FD8A57"
+    }
+  },
+  "parent": {
+    "manifest_path": "_analysis_20260625/_word_anno_boundary_scope_manifest.json",
+    "file_sha256": "E0ABAAAC7DED1D26F783C2CFD2AB8C0884AF05F354E2D28FA156F9290E6C7016",
+    "canonical_payload_sha256": "DBA373A4D7CBF3A6488A73405DC4167F3DD930B8EF46DE19411976A3F1CE649C",
+    "authority_keys": 49387,
+    "authority_sha256": "06F6B256269DE3A195E959FE4962E98EDBFD77E5AB6F4E81F9472C91B3A3983B",
+    "expected_key_counts": {
+      "ja": 49348,
+      "zh": 49387,
+      "ko": 49387
+    }
+  },
+  "candidate": {
+    "manifest_path": "_analysis_20260625/_word_anno_boundary_scope_manifest.json",
+    "file_sha256": "D98112F876B1D59134BA65FA26DF117AEB87AB6FBB3203C6988629666BC987A4",
+    "canonical_payload_sha256": "37F68DC06D157D31E3DDD084EA5D29DB503A8DFE54C62964B6CDD54BAF54D6DC",
+    "authority_keys": 49388,
+    "authority_sha256": "E8170C94E71542A33940102317BA68AEE0E351B4F3AA1D7BC47B99364C172DEE",
+    "expected_key_counts": {
+      "ja": 49349,
+      "zh": 49388,
+      "ko": 49388
+    }
+  },
+  "delta": {
+    "transform": "U+0027_TO_U+2019",
+    "source_surface": "Fukuwarai'",
+    "candidate_surface": "Fukuwarai’",
+    "source_target": "Fukuwarai/'",
+    "candidate_target": "Fukuwarai/’",
+    "source_context_key": "@typed:Fukuwarai':0",
+    "candidate_context_key": "@typed:Fukuwarai’:0",
+    "typed_roles": "RL",
+    "observed_corpus": {
+      "instances": 1,
+      "expected_typed": "R:Fukuwarai|L:'",
+      "contexts": [
+        {
+          "path": "revuoj/revuo-orienta/2026/202608_Revuo_eltiritaj_Esperantaj_pagxoj_sen_japana_traduko.html",
+          "line": 267,
+          "count": 1
+        }
+      ]
+    },
+    "added_keys": [
+      "@typed:Fukuwarai’:0"
+    ],
+    "confirmed_entry": {
+      "w": "Fukuwarai’",
+      "target": "Fukuwarai/’",
+      "typed_roles": "RL",
+      "exact_only": true,
+      "boundary_only": true,
+      "case_sensitive": true,
+      "corpus_managed": true,
+      "ruby_only": true
+    },
+    "settings_row": [
+      "Fukuwarai/’",
+      109000,
+      [
+        "ne",
+        "word_boundary",
+        "case_sensitive",
+        "typed_roles:RL",
+        "ruby_only"
+      ]
+    ]
+  },
+  "languages": {
+    "ja": {
+      "source_value": [["Fukuwarai", "[日]福笑い"]],
+      "candidate_value": [["Fukuwarai", "[日]福笑い"]],
+      "added": 1,
+      "removed": 0,
+      "changed_keys": [],
+      "canonical_diff_sha256": "E2C18C33E2664EACA7D2CA3E7B3BDF98F09148EE16153253276C2DD3738B7354"
+    },
+    "zh": {
+      "source_value": [["Fukuwarai", "[日语]福笑"]],
+      "candidate_value": [["Fukuwarai", "[日语]福笑"]],
+      "added": 1,
+      "removed": 0,
+      "changed_keys": [],
+      "canonical_diff_sha256": "F299A2C3DF21AEF5EE944E15E3A89C22038D5946646D988EA89A363949D38054"
+    },
+    "ko": {
+      "source_value": [["Fukuwarai", "[일]후쿠와라이"]],
+      "candidate_value": [["Fukuwarai", "[일]후쿠와라이"]],
+      "added": 1,
+      "removed": 0,
+      "changed_keys": [],
+      "canonical_diff_sha256": "D00741B7BED6DE0CB9D4FA6CD46CB9468296BB7DF135D575EAA3774A12865D34"
+    }
+  },
+  "policy": {
+    "derived_from_sealed_ascii_rule": true,
+    "only_unicode_substitution": "U+0027_TO_U+2019",
+    "observed_raw_surface_required": true,
+    "exact_only": true,
+    "word_boundary_required": true,
+    "case_sensitive": true,
+    "typed_roles_required": true,
+    "ruby_only": true,
+    "wildcard_or_substring_authorization": false,
+    "kanji_track_changed": false,
+    "learner_master_changed": false,
+    "corpus_changed": false,
+    "three_language_boundary_identity_required": true,
+    "glosses_remain_language_local": true,
+    "historical_ledgers_rewritten": false
+  }
+}

@@ -3,7 +3,7 @@
 
 The non-evaluable, punctuated and multi-word exact units are covered by
 ``test_reviewed_exact_manifest.py``.  This gate covers the complementary set:
-every app-alphabet surface parsed from the 169 pinned corpus documents.
+every app-alphabet surface parsed from the 170 pinned corpus documents.
 
 ``ESP_CORPUS_PATH`` is mandatory.  It must name the clean checkout pinned by
 ``_corpus_exact_app_manifest.json``.  By default the deployed JA/ZH/KO Ruby
@@ -35,12 +35,12 @@ RUBY_PAYLOAD_NAME = "置換リスト_ルビ.json"
 DEFAULT_REPORT = HERE / "out" / "_audit_canonical_corpus_surfaces.json"
 PLACEHOLDER_RE = re.compile(r"\$(?:[A-Za-z]+)?\d+\$")
 EXPECTED_SCOPE = {
-    "content_files": 169,
-    "raw_ruby": 348580,
-    "parsed_ruby": 348580,
-    "parsed_units": 270763,
-    "evaluable_instances": 269577,
-    "canonical_surfaces": 21438,
+    "content_files": 170,
+    "raw_ruby": 350519,
+    "parsed_ruby": 350519,
+    "parsed_units": 272297,
+    "evaluable_instances": 271079,
+    "canonical_surfaces": 21572,
     "reviewed_overrides": 625,
 }
 ALGORITHM = {

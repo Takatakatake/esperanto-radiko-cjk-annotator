@@ -35,7 +35,8 @@ PHASE532_GOLD_SHA256 = (
 )
 REQUIRED_ENVIRONMENT = (
     "ESP_GOLD_PATH",
-    "ESP_CORPUS_PATH",
+    "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW",
+    "ESP_PHASE558_PARENT_CORPUS_PATH",
     "ESP_PHASE558_CURRENT_CORPUS_PATH",
 )
 UTF8_ENVIRONMENT = {
@@ -69,7 +70,7 @@ def _file_identity(path: Path):
     }
 
 
-def _formal_input_state() -> dict:
+def _formal_input_state(environ=None) -> dict:
     """Seal the dirty-worktree audit meaning, not merely its Git HEAD.
 
     The formal audit intentionally runs before commit, so HEAD alone cannot
@@ -79,6 +80,8 @@ def _formal_input_state() -> dict:
     used by the three runtimes.  Reports/checkpoints live under ``out`` and
     are deliberately outside this immutable input set.
     """
+    if environ is None:
+        environ = os.environ
     dependencies = sorted(
         {*HERE.glob("*.py"), *HERE.glob("*.json")},
         key=lambda path: path.name,
@@ -99,9 +102,18 @@ def _formal_input_state() -> dict:
         )
         for language in ("JA", "ZH", "KO")
     }
+    review_value = environ.get("ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW")
+    review_path = Path(review_value).resolve() if review_value else None
     return {
         "analysis_dependencies": identities,
         "deployed_app_inputs": app_inputs,
+        "external_phase532_pejvo_review": {
+            "path": str(review_path) if review_path is not None else None,
+            "identity": (
+                _file_identity(review_path)
+                if review_path is not None else None
+            ),
+        },
     }
 
 
@@ -160,19 +172,25 @@ def _load_fresh_reviewed_failure(path: Path, label: str) -> dict:
     return report
 
 
-def _raw_common_arguments() -> list[str]:
-    return [
+def _raw_common_arguments(pejvo_review_path=None) -> list[str]:
+    arguments = [
         "--languages", "JA", "ZH", "KO",
         "--expected-gold-sha256", PHASE532_GOLD_SHA256,
         "--baseline-revision", BASELINE_REVISION,
     ]
+    if pejvo_review_path is not None:
+        arguments.extend([
+            "--fake-coarse-pejvo-disagreement-review",
+            str(pejvo_review_path),
+        ])
+    return arguments
 
 
-def _current_e373_audit_arguments() -> list[str]:
+def _current_e373_audit_arguments(pejvo_review_path=None) -> list[str]:
     return [
         "--current-only-diagnostic",
         "--scope-manifest", str(CURRENT_E373_SCOPE),
-        *_raw_common_arguments(),
+        *_raw_common_arguments(pejvo_review_path),
     ]
 
 
@@ -194,7 +212,9 @@ def _run_current_e373_child() -> None:
 
     audit.atomic_json_dump = redirected_dump
     try:
-        audit.main(_current_e373_audit_arguments())
+        audit.main(_current_e373_audit_arguments(
+            os.environ.get("ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW")
+        ))
     finally:
         audit.atomic_json_dump = original_dump
 
@@ -284,7 +304,7 @@ def run_formal_audits(
     if head_reader is None:
         head_reader = _git_head
     if state_reader is None:
-        state_reader = _formal_input_state
+        state_reader = lambda: _formal_input_state(environ)
     missing = [name for name in REQUIRED_ENVIRONMENT if not environ.get(name)]
     if missing:
         raise RuntimeError(
@@ -309,12 +329,19 @@ def run_formal_audits(
     common_environment.update(UTF8_ENVIRONMENT)
 
     parent_environment = dict(common_environment)
-    parent_environment["ESP_CORPUS_PATH"] = environ["ESP_CORPUS_PATH"]
+    # The historical Phase558 parent gate is pinned to b769038, whereas the
+    # current exact/canonical corpus gate is pinned to d1642c2.  They cannot
+    # safely share the top-level ESP_CORPUS_PATH authority.
+    parent_environment["ESP_CORPUS_PATH"] = environ[
+        "ESP_PHASE558_PARENT_CORPUS_PATH"
+    ]
     parent_command = [
         sys.executable,
         str(RAW_AUDITOR),
         "--current-only-diagnostic",
-        *_raw_common_arguments(),
+        *_raw_common_arguments(
+            environ["ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"]
+        ),
     ]
     _run_fresh_closed_audit(
         parent_command,
@@ -330,7 +357,9 @@ def run_formal_audits(
     full_command = [
         sys.executable,
         str(RAW_AUDITOR),
-        *_raw_common_arguments(),
+        *_raw_common_arguments(
+            environ["ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"]
+        ),
     ]
     _run_fresh_closed_audit(
         full_command,

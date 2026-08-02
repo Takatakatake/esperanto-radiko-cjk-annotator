@@ -17,7 +17,8 @@ class Phase558FormalRunnerTests(unittest.TestCase):
     def environment(self):
         return {
             "ESP_GOLD_PATH": "phase532-gold.txt",
-            "ESP_CORPUS_PATH": "parent-b769",
+            "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW": "phase532-review.json",
+            "ESP_PHASE558_PARENT_CORPUS_PATH": "parent-b769",
             "ESP_PHASE558_CURRENT_CORPUS_PATH": "current-e373",
         }
 
@@ -36,6 +37,15 @@ class Phase558FormalRunnerTests(unittest.TestCase):
             str(runner.CURRENT_E373_SCOPE),
         )
         self.assertIn("--current-only-diagnostic", current)
+        with_review = runner._raw_common_arguments("phase532-review.json")
+        self.assertEqual(
+            with_review[
+                with_review.index(
+                    "--fake-coarse-pejvo-disagreement-review"
+                ) + 1
+            ],
+            "phase532-review.json",
+        )
 
     def test_three_fresh_raw_failures_then_three_sidecars(self):
         calls = []
@@ -104,6 +114,16 @@ class Phase558FormalRunnerTests(unittest.TestCase):
         self.assertEqual(calls[2][1]["ESP_CORPUS_PATH"], "parent-b769")
         self.assertEqual(calls[4][1]["ESP_CORPUS_PATH"], "current-e373")
         self.assertTrue(all(call[1]["PYTHONUTF8"] == "1" for call in calls))
+        self.assertIn(
+            "--fake-coarse-pejvo-disagreement-review", calls[0][0]
+        )
+        self.assertIn(
+            "--fake-coarse-pejvo-disagreement-review", calls[2][0]
+        )
+        self.assertEqual(
+            calls[4][1]["ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"],
+            "phase532-review.json",
+        )
         self.assertIn("parent-current", calls[1][0])
         self.assertIn("full-old-to-new", calls[3][0])
         self.assertIn("current-e373", calls[5][0])
@@ -234,7 +254,12 @@ class Phase558FormalRunnerTests(unittest.TestCase):
             )
 
             def fake_main(arguments):
-                self.assertEqual(arguments, runner._current_e373_audit_arguments())
+                self.assertEqual(
+                    arguments,
+                    runner._current_e373_audit_arguments(
+                        "phase532-review.json"
+                    ),
+                )
                 fake_audit.atomic_json_dump(
                     source, {"complete": True, "gate": False}, indent=1,
                 )
@@ -243,6 +268,13 @@ class Phase558FormalRunnerTests(unittest.TestCase):
             fake_audit.main = fake_main
             with (
                 mock.patch.dict(sys.modules, {"no_worsening_audit": fake_audit}),
+                mock.patch.dict(
+                    runner.os.environ,
+                    {
+                        "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW":
+                        "phase532-review.json",
+                    },
+                ),
                 mock.patch.object(runner, "CURRENT_E373_REPORT", destination),
             ):
                 with self.assertRaises(SystemExit) as caught:
@@ -254,6 +286,21 @@ class Phase558FormalRunnerTests(unittest.TestCase):
                 {"complete": True, "gate": False},
             )
             self.assertIs(fake_audit.atomic_json_dump, atomic_dump)
+
+    def test_missing_phase532_review_fails_before_any_process(self):
+        environment = self.environment()
+        del environment["ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"]
+        process = mock.Mock()
+        with self.assertRaisesRegex(
+            RuntimeError, "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW",
+        ):
+            runner.run_formal_audits(
+                environ=environment,
+                run_process=process,
+                head_reader=lambda: "f" * 40,
+                state_reader=lambda: {"sealed": True},
+            )
+        process.assert_not_called()
 
     def test_missing_fresh_report_and_head_drift_fail_closed(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -9,7 +9,7 @@ runtime and Ruby JSON.  Runtime changes also have focused coverage in
 
 Reference cases are the union of:
 
-* every ruby-bearing word/decomposition in the 169 Kyoto HTML content files;
+* every ruby-bearing word/decomposition in the 170 Kyoto HTML content files;
 * the path-specific 74-instance place-repair manifest;
 * the learner gold dictionary's unmarked rows;
 * a line-paired academic/PEJVO coarse authority for every evaluable learner
@@ -57,7 +57,7 @@ import phase532_ruby_policy as phase532_policy
 
 
 CONTENT_DIRS = ("lernolibroj", "legajxoj", "revuoj", "rondolegado")
-EXPECTED_CONTENT_FILES = 169
+EXPECTED_CONTENT_FILES = 170
 CHECKPOINT_SCHEMA_VERSION = 2
 RESUME_COMPATIBLE_AUDIT_CODE_SHA256 = {
     # This exact revision differs only by the fail-closed language-result
@@ -724,6 +724,7 @@ def load_phase532_reference_review(manifest_path: Path) -> dict:
 def load_fake_coarse_reference(
     gold_raw: bytes, gold_lines: list[str], eligible_marked_rows: dict[int, dict],
     marker_exclusions: collections.Counter, manifest_path: Path | None = None,
+    pejvo_disagreement_review_path: Path | None = None,
 ):
     """Load the fixed non-fake boundary for every evaluable fake-marked row.
 
@@ -749,7 +750,15 @@ def load_fake_coarse_reference(
     entries_sha256 = hashlib.sha256(serialized_entries).hexdigest().upper()
     if entries_sha256 != payload.get("entries_sha256"):
         raise ValueError("fake-coarse entry fingerprint mismatch")
-    review_path = HERE / "_fake_coarse_pejvo_disagreement_review.json"
+    environment_review = os.environ.get(
+        "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"
+    )
+    if pejvo_disagreement_review_path is not None:
+        review_path = pejvo_disagreement_review_path.resolve()
+    elif environment_review:
+        review_path = Path(environment_review).resolve()
+    else:
+        review_path = HERE / "_fake_coarse_pejvo_disagreement_review.json"
     review_raw = review_path.read_bytes()
     review_payload = json.loads(review_raw.decode("utf-8"))
     review_identity = payload.get("pejvo_disagreement_review", {})
@@ -1452,6 +1461,7 @@ def load_fake_coarse_phase532_transition(
 def gold_cases(
     cases, path: Path, raw: bytes, snapshot_identity, expected_sha256,
     enforce_all_fake_coarse=False, fake_coarse_manifest_path: Path | None = None,
+    fake_coarse_pejvo_review_path: Path | None = None,
     phase532_reference_review: dict | None = None,
 ):
     digest = hashlib.sha256(raw).hexdigest().upper()
@@ -1527,6 +1537,7 @@ def gold_cases(
     fake_coarse_by_line, fake_coarse_identity = load_fake_coarse_reference(
         raw, lines, eligible_marked_rows, marker_exclusions,
         manifest_path=fake_coarse_manifest_path,
+        pejvo_disagreement_review_path=fake_coarse_pejvo_review_path,
     )
     (
         phase511_transition_lines,
@@ -1991,12 +2002,14 @@ def scope_projection(
 
 
 def validate_reviewed_reference_scope(
-    projection, conflicts, *, scope_path=None,
+    projection, conflicts, *, scope_path=None, conflict_path=None,
 ):
     scope_path = Path(
         scope_path or HERE / "_no_worsening_scope_manifest.json"
     ).resolve()
-    conflict_path = HERE / "_no_worsening_reference_conflicts.json"
+    conflict_path = Path(
+        conflict_path or HERE / "_no_worsening_reference_conflicts.json"
+    ).resolve()
     expected_scope = json.loads(scope_path.read_text(encoding="utf-8"))
     if expected_scope.get("manifest_schema_version") != 1:
         raise ValueError("unsupported no-worsening scope manifest schema")
@@ -2924,10 +2937,24 @@ def main(argv=None):
         help="Render only current deployed inputs as a faster strict preflight.",
     )
     parser.add_argument(
+        "--current-only-output", type=Path,
+        help=(
+            "Optional output path for --current-only-diagnostic. The default "
+            "historical diagnostic path is unchanged."
+        ),
+    )
+    parser.add_argument(
         "--scope-manifest", type=Path,
         help=(
             "Optional pinned reference-scope manifest. The default remains "
             "the immutable parent manifest beside this script."
+        ),
+    )
+    parser.add_argument(
+        "--conflict-manifest", type=Path,
+        help=(
+            "Optional reviewed conflict manifest paired with --scope-manifest. "
+            "The default remains the immutable parent review."
         ),
     )
     parser.add_argument(
@@ -2962,6 +2989,20 @@ def main(argv=None):
         help="External exact Phase 532 fake/coarse manifest candidate.",
     )
     parser.add_argument(
+        "--fake-coarse-pejvo-disagreement-review",
+        type=Path,
+        default=(
+            Path(os.environ["ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW"])
+            if os.environ.get("ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW")
+            else None
+        ),
+        help=(
+            "PEJVO disagreement review paired with the selected fake/coarse "
+            "manifest. Defaults to ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW, "
+            "then to the sibling tracked review."
+        ),
+    )
+    parser.add_argument(
         "--references-output", type=Path,
         help=(
             "Optional references-only output path; defaults to the local "
@@ -2969,6 +3010,8 @@ def main(argv=None):
         ),
     )
     args = parser.parse_args(argv)
+    if args.current_only_output is not None and not args.current_only_diagnostic:
+        parser.error("--current-only-output requires --current-only-diagnostic")
     if not args.expected_gold_sha256:
         parser.error(
             "--expected-gold-sha256 (or ESP_EXPECTED_GOLD_SHA256) is required"
@@ -3063,6 +3106,9 @@ def main(argv=None):
             enforce_all_fake_coarse=args.enforce_all_fake_coarse,
             fake_coarse_manifest_path=(
                 phase532_manifest_path if phase532_enabled else None
+            ),
+            fake_coarse_pejvo_review_path=(
+                args.fake_coarse_pejvo_disagreement_review
             ),
             phase532_reference_review=phase532_reference_review,
         ),
@@ -3164,6 +3210,7 @@ def main(argv=None):
         return
     reviewed_reference, allowed_by_surface = validate_reviewed_reference_scope(
         projection, conflicts, scope_path=args.scope_manifest,
+        conflict_path=args.conflict_manifest,
     )
     resolved_cases = resolve_reviewed_reference_cases(
         cases, allowed_by_surface
@@ -3275,7 +3322,9 @@ def main(argv=None):
             ),
         }
         diagnostic_path = (
-            HERE / "out" / "_audit_no_worsening_current_only.json"
+            args.current_only_output.resolve()
+            if args.current_only_output is not None
+            else HERE / "out" / "_audit_no_worsening_current_only.json"
         )
         atomic_json_dump(diagnostic_path, diagnostic_output, indent=1)
         print(f"saved: {diagnostic_path}", flush=True)

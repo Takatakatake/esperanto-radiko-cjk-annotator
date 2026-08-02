@@ -6,8 +6,8 @@
   python regenerate_all.py --all-tracks
   1. 偽分解・corpus・Phase532/558/619の固定authorityを検証
   2. Phase532/558/598/619 pre-gate後にRuby 3言語を一括再生成
-  3. R67/R68復元と4つの事後層を経て572,771行をpost-gate
-  4. canonical 21,438表層・apostrophe・構造・回帰を検査
+  3. R67/R68復元とレビュー済み事後層を経て573,299行をpost-gate
+  4. canonical 21,572表層・apostrophe・構造・回帰を検査
   5. Phase619 learnerとword_kanjiのdirect-key coverageを限定監査
   6. 固定62,313行を3言語で正式全量監査
   7. --all-tracksだけ漢字正本再同期・漢字生成・pure導出・.bak掃除
@@ -134,7 +134,8 @@ def _assert_ruby_only_kanji_guard(expected, completed_step):
 # it can replace this snapshot.
 required_inputs = [
     "ESP_GOLD_PATH", "ESP_ACADEMIC_GOLD_PATH", "ESP_PEJVO_ORIGINAL_PATH",
-    "ESP_CORPUS_PATH", "ESP_PHASE558_CURRENT_CORPUS_PATH",
+    "ESP_CORPUS_PATH",
+    "ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW",
     "ESP_PHASE597_CANDIDATE_DIR", "ESP_PHASE619_CANDIDATE_DIR",
     "ESP_PHASE619_RUBY_HTML_GUIDE_JA",
     "ESP_PHASE619_RUBY_HTML_GUIDE_ZH",
@@ -379,6 +380,8 @@ STEPS = [
         '--learner', os.environ['ESP_GOLD_PATH'],
         '--academic', os.environ['ESP_ACADEMIC_GOLD_PATH'],
         '--pejvo-original', os.environ['ESP_PEJVO_ORIGINAL_PATH'],
+        '--review',
+        os.environ['ESP_PHASE532_PEJVO_DISAGREEMENT_REVIEW'],
         '--check',
     ], {}),
     ([
@@ -407,6 +410,20 @@ STEPS = [
         '--check',
     ], {}),
     ([sys.executable, os.path.join(HERE, 'build_corpus_exact_manifest.py'), '--check'], {}),
+    ([
+        sys.executable,
+        os.path.join(
+            HERE, 'build_corpus_source_transition_dd55318.py',
+        ),
+        '--check',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(
+            HERE, 'build_no_worsening_scope_transition_dd55318.py',
+        ),
+        '--check',
+    ], {}),
     ([sys.executable, os.path.join(HERE, 'build_corpus_reviewed_exact_manifest.py'), '--check'], {}),
     ([sys.executable, os.path.join(HERE, 'bare_word_audit.py'), '--require-zero'], {}),
     *([
@@ -497,7 +514,7 @@ STEPS = [
         sys.executable,
         os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
         'apply', '--input', R67_R68_OVERLAY_SNAPSHOT,
-        '--expected-global-rows', '572713',
+        '--expected-global-rows', '573241',
     ], {}),
     ([sys.executable, os.path.join(HERE, 'fix_ruby_postregen.py')], {}),
     ([
@@ -515,10 +532,28 @@ STEPS = [
         os.path.join(HERE, 'fix_ruby_zhko_diminutive_gloss.py'),
         '--apply',
     ], {}),
+    # R88 is a reviewed post-generation layer.  Keeping it here preserves the
+    # 18 reserved $R88M placeholders and the 12 pre-existing placeholders;
+    # putting mukoz into normal generation would renumber ~497k rows/language.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_phase619_mukoz_base.py'),
+        '--apply', '--no-backup',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_homograph_exposure.py'),
+        '--apply',
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_sense_by_kanji.py'),
+        '--only', 'epi', '--apply',
+    ], {}),
     ([
         sys.executable,
         os.path.join(HERE, 'preserve_r67_r68_ruby_overlays.py'),
-        'audit', '--expected-global-rows', '572729',
+        'audit', '--expected-global-rows', '573299',
     ], {}),
     # Re-render the persisted payloads after post-processing as well: the
     # in-memory gate above cannot license a later fixer to alter any of the 58.
@@ -542,7 +577,7 @@ STEPS = [
         os.path.join(HERE, 'phase619_ordinary_ruby_runtime_gate.py'),
         '--deployed', '--batch-size', '32',
     ], {}),
-    # 全21438 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
+    # 全21,572 canonical表記を配置済み3言語runtimeで描画し、残差0を漢字工程前に強制する。
     ([sys.executable, os.path.join(HERE, 'test_canonical_corpus_surfaces.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_canonical_corpus_surfaces.py')], {}),
     # 漢字は正本(エスペラント語根＿漢字割り当て＿20260630)から全面再同期してから統合する(第18R以降の正道)
@@ -566,6 +601,10 @@ STEPS = [
     ([sys.executable, os.path.join(HERE, 'anomaly_scan.py')], {}),
     # 生成規則の単体テスト + 3言語デプロイJSONの実機回帰テスト。
     ([sys.executable, os.path.join(HERE, 'test_generation_regressions.py')], {}),
+    ([sys.executable, os.path.join(HERE, 'test_bare_word_audit.py')], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_vocab_extract_scope.py',
+    )], {}),
     ([sys.executable, os.path.join(HERE, 'test_phase558_ruby_overlay.py')], {}),
     ([sys.executable, os.path.join(
         HERE, 'test_phase598_technical_on.py',
@@ -579,28 +618,71 @@ STEPS = [
     ([sys.executable, os.path.join(
         HERE, 'test_r67_r68_overlay_carry_forward.py',
     )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_r67_r68_overlay_transition_dd55318_u2019.py',
+    )], {}),
     ([
         sys.executable,
-        os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),
+        os.path.join(HERE, 'test_run_phase558_no_worsening.py'),
     ], {}),
     ([sys.executable, os.path.join(HERE, 'test_reviewed_exact_manifest.py')], {}),
     ([sys.executable, os.path.join(
         HERE, 'test_corpus_reviewed_exact_transition.py',
     )], {}),
     ([sys.executable, os.path.join(
+        HERE, 'test_corpus_reviewed_exact_evidence_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_source_transition_dd55318.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_no_worsening_scope_transition_dd55318.py',
+    )], {}),
+    ([sys.executable, os.path.join(
         HERE, 'test_word_anno_boundary_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_word_anno_boundary_transition_ccb9398.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_word_anno_boundary_transition_dd55318_u2019.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_corpus_r94_ccb9398_residual_closure.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_r94_ccb9398_runtime_semantics.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_r88_mukoz_postregen.py',
     )], {}),
     ([sys.executable, os.path.join(
         HERE, 'test_fake_coarse_review_drift.py',
     )], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
     ([sys.executable, os.path.join(HERE, 'check_raw_apostrophe_structure.py')], {}),
-    # Run both isolated Phase 558 authorities.  Each raw audit is expected to
-    # fail on exactly the closed five-row/two-row reviewed delta; only its
-    # matching fail-closed sidecar may admit that report.
+    # Phase558 evidence belongs to adc2982 and is immutable.  Later Ruby rounds
+    # verify it byte-for-byte; they must not regenerate it against a newer
+    # payload (successor evidence is gated separately below).
     ([
         sys.executable,
-        os.path.join(HERE, 'run_phase558_no_worsening.py'),
+        os.path.join(HERE, 'verify_phase558_historical_evidence.py'),
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),
+    ], {}),
+    # Post-R93 successor evidence is separately sealed against the current
+    # deployed app inputs.  The expensive raw current-only audit is a one-time
+    # evidence writer; routine regeneration only validates its immutable
+    # report/manifest pair after every payload writer and structural gate.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'test_post_r93_no_worsening_gate.py'),
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'post_r93_no_worsening_gate.py'),
     ], {}),
     # 固定gold snapshot全行（空白・約物・hyphenを含む）を3言語runtimeで監査。
     # fast版はmoving absolute pathのmonitor-onlyであり、正式工程では使用しない。
