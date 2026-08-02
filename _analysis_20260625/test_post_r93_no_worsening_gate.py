@@ -330,12 +330,14 @@ class PostR93NoWorseningGateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "residual contract"):
             gate.validate_manifest(changed)
 
-    def test_formal_pipeline_keeps_successor_gate_in_fail_closed_order(self):
+    def test_formal_pipeline_keeps_historical_then_versioned_successor_order(self):
         source = (HERE / "regenerate_all.py").read_text(encoding="utf-8")
         ordered_tokens = (
             "'verify_phase558_historical_evidence.py'",
             "'test_post_r93_no_worsening_gate.py'",
-            "'post_r93_no_worsening_gate.py'",
+            "'verify_post_r93_historical_evidence.py'",
+            "'test_post_r98_no_worsening_gate.py'",
+            "'post_r98_no_worsening_gate.py'",
             "'audit_master_3lang_full_snapshot.py'",
         )
         positions = []
@@ -347,6 +349,7 @@ class PostR93NoWorseningGateTests(unittest.TestCase):
             positions.append(source.index(token))
         self.assertEqual(positions, sorted(positions))
         self.assertNotIn("build_post_r93_no_worsening_manifest.py", source)
+        self.assertNotIn("build_post_r98_no_worsening_manifest.py", source)
         self.assertNotIn("'no_worsening_audit.py'", source)
 
 

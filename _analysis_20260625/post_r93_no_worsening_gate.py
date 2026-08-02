@@ -475,16 +475,19 @@ def _validate_reference_identity(report: dict) -> None:
         raise ValueError("post-R93 audited source identity drift")
 
 
-def validate_manifest(manifest: Any) -> dict:
+def validate_manifest(
+    manifest: Any, *, gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
+) -> dict:
     if not isinstance(manifest, dict) or set(manifest) != MANIFEST_TOP_KEYS:
         raise ValueError("post-R93 manifest schema drift")
-    if manifest["schema_version"] != SCHEMA_VERSION or manifest["gate_id"] != GATE_ID:
+    if manifest["schema_version"] != SCHEMA_VERSION or manifest["gate_id"] != gate_id:
         raise ValueError("post-R93 manifest identity drift")
     report_identity = manifest["report"]
     if (
         not isinstance(report_identity, dict)
         or set(report_identity) != REPORT_IDENTITY_KEYS
-        or report_identity["path"] != REPORT_RELATIVE_PATH.as_posix()
+        or report_identity["path"] != report_relative_path.as_posix()
         or not isinstance(report_identity["bytes"], int)
         or report_identity["bytes"] <= 0
         or not is_sha256(report_identity["sha256"])
@@ -542,6 +545,8 @@ def deployed_app_fingerprints() -> dict:
 def validate_report(
     report: Any, *, manifest: dict | None = None,
     current_fingerprints: dict | None = None,
+    gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
 ) -> dict:
     if not isinstance(report, dict) or set(report) != TOP_KEYS:
         raise ValueError("post-R93 current-only report schema drift")
@@ -608,11 +613,14 @@ def validate_report(
         "inputs_stable_sha256": stable_sha256(report["inputs_stable"]),
     }
     if manifest is not None:
-        validate_manifest(manifest)
+        validate_manifest(
+            manifest, gate_id=gate_id,
+            report_relative_path=report_relative_path,
+        )
         if extracted != manifest["sealed"]:
             raise ValueError("post-R93 report no longer matches sealed evidence")
     return {
-        "gate_id": GATE_ID,
+        "gate_id": gate_id,
         "languages": list(LANGUAGES),
         "raw_cases": report["raw_case_count"],
         "resolved_cases": report["case_count"],
@@ -628,16 +636,19 @@ def validate_report(
 
 def build_manifest_from_report(
     report: dict, report_raw: bytes, *, current_fingerprints: dict,
+    gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
 ) -> dict:
     # Validate semantics and live input identity before deriving any seal.
     result = validate_report(
         report, current_fingerprints=current_fingerprints,
+        gate_id=gate_id, report_relative_path=report_relative_path,
     )
     manifest = {
         "schema_version": SCHEMA_VERSION,
-        "gate_id": GATE_ID,
+        "gate_id": gate_id,
         "report": {
-            "path": REPORT_RELATIVE_PATH.as_posix(),
+            "path": report_relative_path.as_posix(),
             "bytes": len(report_raw),
             "sha256": raw_sha256(report_raw),
         },
@@ -658,12 +669,21 @@ def build_manifest_from_report(
         "provenance_counts": dict(EXPECTED_PROVENANCE_COUNTS),
         "sealed": result["sealed"],
     }
-    validate_manifest(manifest)
+    validate_manifest(
+        manifest, gate_id=gate_id,
+        report_relative_path=report_relative_path,
+    )
     return manifest
 
 
-def manifest_bytes(manifest: dict) -> bytes:
-    validate_manifest(manifest)
+def manifest_bytes(
+    manifest: dict, *, gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
+) -> bytes:
+    validate_manifest(
+        manifest, gate_id=gate_id,
+        report_relative_path=report_relative_path,
+    )
     return json.dumps(
         manifest, ensure_ascii=False, indent=2,
     ).encode("utf-8")
@@ -672,6 +692,8 @@ def manifest_bytes(manifest: dict) -> bytes:
 def load_manifest(
     path: Path = MANIFEST_PATH, *,
     expected_sha256: str = EXPECTED_MANIFEST_SHA256,
+    gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
 ) -> tuple[dict, bytes]:
     raw = Path(path).read_bytes()
     observed = raw_sha256(raw)
@@ -685,15 +707,23 @@ def load_manifest(
             f"post-R93 manifest byte drift: {observed} != {expected_sha256}"
         )
     manifest = json.loads(raw.decode("utf-8"))
-    validate_manifest(manifest)
+    validate_manifest(
+        manifest, gate_id=gate_id,
+        report_relative_path=report_relative_path,
+    )
     return manifest, raw
 
 
 def validate_report_bytes(
     report_raw: bytes, *, manifest: dict,
     current_fingerprints: dict,
+    gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
 ) -> dict:
-    validate_manifest(manifest)
+    validate_manifest(
+        manifest, gate_id=gate_id,
+        report_relative_path=report_relative_path,
+    )
     identity = manifest["report"]
     if (
         len(report_raw) != identity["bytes"]
@@ -704,15 +734,19 @@ def validate_report_bytes(
     return validate_report(
         report, manifest=manifest,
         current_fingerprints=current_fingerprints,
+        gate_id=gate_id, report_relative_path=report_relative_path,
     )
 
 
 def validate_deployed(
     *, report_path: Path = REPORT_PATH, manifest_path: Path = MANIFEST_PATH,
     expected_manifest_sha256: str = EXPECTED_MANIFEST_SHA256,
+    gate_id: str = GATE_ID,
+    report_relative_path: Path = REPORT_RELATIVE_PATH,
 ) -> dict:
     manifest, manifest_raw = load_manifest(
         manifest_path, expected_sha256=expected_manifest_sha256,
+        gate_id=gate_id, report_relative_path=report_relative_path,
     )
     report_raw = Path(report_path).read_bytes()
     fingerprints_before = deployed_app_fingerprints()
@@ -720,6 +754,7 @@ def validate_deployed(
         report_raw,
         manifest=manifest,
         current_fingerprints=fingerprints_before,
+        gate_id=gate_id, report_relative_path=report_relative_path,
     )
     if (
         Path(report_path).read_bytes() != report_raw

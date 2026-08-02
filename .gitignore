@@ -55,5 +55,8 @@ _analysis_20260625/out/vere_run.txt
 _analysis_20260625/out/_no_worsening_checkpoint_*.json
 _analysis_20260625/out/_audit_canonical_corpus_surfaces_dd55318_pre_regen.json
 
+# Persistent OS advisory lock for the R98 three-payload transaction.
+_analysis_20260625/out/.r98_root_gloss_transaction.lock
+
 # 壊れたgit退避物(Drive同期ロック事故の隔離物)
 .git_broken*/

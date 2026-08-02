@@ -338,6 +338,9 @@ R67_R68_OVERLAY_SNAPSHOT = os.path.join(
     tempfile.gettempdir(),
     f"esperanto_r67_r68_overlay_{os.getpid()}.json",
 )
+R98_ROOT_GLOSS_LEDGER = os.path.join(
+    HERE, "_r98_root_gloss_transition_ledger.json",
+)
 if ARGS.all_tracks:
     kanji_manifest_path = os.path.join(
         HERE, "_kanji_master_scope_manifest.json",
@@ -489,6 +492,14 @@ STEPS = [
         os.path.join(HERE, 'phase619_ordinary_ruby_runtime_gate.py'),
         '--deployed', '--batch-size', '32',
     ], {}),
+    # R95/R96/R98 landed after the R94 frozen regeneration.  Before the first
+    # writer, derive their exact language/list/key/segment scope again from
+    # the pinned commit pair and require byte identity with the reviewed seal.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'build_r98_root_gloss_transition_ledger.py'),
+        '--check',
+    ], {}),
     # R67/R68 are reviewed post-generation layers.  Seal their exact deployed
     # rows before apply_confirmed rebuilds the large Ruby payloads; re-running
     # the historical discovery script would consult a moving absolute master.
@@ -549,6 +560,15 @@ STEPS = [
         sys.executable,
         os.path.join(HERE, 'fix_ruby_sense_by_kanji.py'),
         '--only', 'epi', '--apply',
+    ], {}),
+    # Carry forward only the reviewed R95/R96/R98 <rt> transitions.  The
+    # exact ledger has no wildcard/root-wide authority and cannot touch a
+    # boundary, source key, placeholder or Kanji artifact.
+    ([
+        sys.executable,
+        os.path.join(HERE, 'fix_ruby_root_gloss_mixup.py'),
+        '--targets', R98_ROOT_GLOSS_LEDGER,
+        '--apply', '--no-backup',
     ], {}),
     ([
         sys.executable,
@@ -657,6 +677,12 @@ STEPS = [
         HERE, 'test_r88_mukoz_postregen.py',
     )], {}),
     ([sys.executable, os.path.join(
+        HERE, 'test_r98_payload_transaction.py',
+    )], {}),
+    ([sys.executable, os.path.join(
+        HERE, 'test_r98_root_gloss_transition.py',
+    )], {}),
+    ([sys.executable, os.path.join(
         HERE, 'test_fake_coarse_review_drift.py',
     )], {}),
     ([sys.executable, os.path.join(HERE, 'check_multilingual_structure.py')], {}),
@@ -672,17 +698,24 @@ STEPS = [
         sys.executable,
         os.path.join(HERE, 'test_phase558_no_worsening_sidecar_gate.py'),
     ], {}),
-    # Post-R93 successor evidence is separately sealed against the current
-    # deployed app inputs.  The expensive raw current-only audit is a one-time
-    # evidence writer; routine regeneration only validates its immutable
-    # report/manifest pair after every payload writer and structural gate.
+    # The post-R93 report/manifest remain immutable historical evidence.  R98
+    # has a separately versioned successor report/manifest whose only allowed
+    # sealed-input delta is the three reviewed Ruby payload fingerprints.
     ([
         sys.executable,
         os.path.join(HERE, 'test_post_r93_no_worsening_gate.py'),
     ], {}),
     ([
         sys.executable,
-        os.path.join(HERE, 'post_r93_no_worsening_gate.py'),
+        os.path.join(HERE, 'verify_post_r93_historical_evidence.py'),
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'test_post_r98_no_worsening_gate.py'),
+    ], {}),
+    ([
+        sys.executable,
+        os.path.join(HERE, 'post_r98_no_worsening_gate.py'),
     ], {}),
     # 固定gold snapshot全行（空白・約物・hyphenを含む）を3言語runtimeで監査。
     # fast版はmoving absolute pathのmonitor-onlyであり、正式工程では使用しない。

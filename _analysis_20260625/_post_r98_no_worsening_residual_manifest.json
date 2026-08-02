@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "gate_id": "post_r98_current_only_no_worsening",
+  "report": {
+    "path": "_analysis_20260625/out/_audit_no_worsening_post_r98.json",
+    "bytes": 222020,
+    "sha256": "72C51660ED8A5243833931312F90240694395034CFE9112064175BB8E4F1CDC3"
+  },
+  "reference_projection": {
+    "raw_cases": 68650,
+    "resolved_cases": 68609,
+    "surfaces": 68559,
+    "raw_reference_sha256": "C26EF076E4FC073868E99233567C3C3CE2A3D0C96E40701A83BD5520C7DA161B",
+    "resolved_reference_sha256": "7CE4C1DCCE293D98A0AB55B6832D13B55D5CCA5FFE90E0B9C050FB11F52577EF",
+    "surface_sha256": "E18AC7EAB4B89744A732C1DE3E3A6150D0FF7CA61D84073D662ED58AE384C489",
+    "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+    "scope_manifest_sha256": "13C989F4B4652CB2984AE96E5DAC3AECDAB6C40F37C7A6632BF5573B045599F0",
+    "conflict_manifest_sha256": "F6ABEC16CC73B2FE74F3F4ECC2803582CB0AD09288B620CCFC2226E0C6B40522",
+    "corpus_content_sha256": "33ED6EA94E45A5434B3AAE035F8C44D97278ACABA9A83714A0167EC0754C70B8",
+    "corpus_head_oid": "dd55318c33b36128e64561d4ae7fca587ad974fa",
+    "corpus_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "total_weight": 324757,
+    "total_cases": 74444
+  },
+  "languages": [
+    "JA",
+    "ZH",
+    "KO"
+  ],
+  "expected_counts": {
+    "raw_cases": 68650,
+    "resolved_cases": 68609,
+    "surfaces": 68559,
+    "residual_surfaces_per_language": 10,
+    "official_wrong_cases_per_language": 1,
+    "exact_wrong_cases_per_language": 1,
+    "regression_cases": 0,
+    "changed_wrong_surfaces": 0,
+    "trilingual_residual_mismatches": 0
+  },
+  "residual_contract": [
+    {
+      "surface": "Gaŭlo-Romiano",
+      "current_typed": "R:Gaŭl|L:o-|R:Romi|R:an|L:o",
+      "provenance": "r85_hyphen_joiner"
+    },
+    {
+      "surface": "Izraelio",
+      "current_typed": "R:Izrael|L:io",
+      "provenance": "phase558_reviewed_predecessor"
+    },
+    {
+      "surface": "endoskopio",
+      "current_typed": "R:endoskopi|L:o",
+      "provenance": "phase619_reviewed_coarse_ruby"
+    },
+    {
+      "surface": "glu-glu-glu",
+      "current_typed": "R:glu-glu-glu",
+      "provenance": "r79_reviewed_atomic_onomatopoeia"
+    },
+    {
+      "surface": "imperialisto",
+      "current_typed": "R:imperialist|L:o",
+      "provenance": "phase619_reviewed_coarse_ruby"
+    },
+    {
+      "surface": "mikroskopio",
+      "current_typed": "R:mikroskopi|L:o",
+      "provenance": "phase619_reviewed_coarse_ruby"
+    },
+    {
+      "surface": "mukozaĵo",
+      "current_typed": "R:mukoz|R:aĵ|L:o",
+      "provenance": "phase619_reviewed_coarse_ruby"
+    },
+    {
+      "surface": "nor",
+      "current_typed": "L:nor",
+      "provenance": "r79_guarded_nonactivation"
+    },
+    {
+      "surface": "reprezenti",
+      "current_typed": "R:reprezent|L:i",
+      "provenance": "r94_kyoto_coarse_reprezent_family"
+    },
+    {
+      "surface": "tia-tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "provenance": "phase558_reviewed_predecessor"
+    }
+  ],
+  "provenance_counts": {
+    "phase558_reviewed_predecessor": 2,
+    "phase619_reviewed_coarse_ruby": 4,
+    "r79_guarded_nonactivation": 1,
+    "r79_reviewed_atomic_onomatopoeia": 1,
+    "r85_hyphen_joiner": 1,
+    "r94_kyoto_coarse_reprezent_family": 1
+  },
+  "sealed": {
+    "residual_entries_sha256": "C5700A98E98789F5247DC0A586406652A31A6199AA69E849D9AE387D58721C3E",
+    "official_wrong_entries_sha256": "994DC0140B6182AB46804080817018851BAAD6A4F46FB7F6CDCDA0226F0917D1",
+    "exact_wrong_entries_sha256": "15F6AD41A1B3C4EADB872FB50F23345E8F012FD440175FCF1FB989852961D9C4",
+    "source_statistics_sha256": "46DB55F4799285CE525CF56F16652DFEE1B86AE4902640EC9F7C1EC749DC2908",
+    "combined_statistics": {
+      "total_weight": 324757,
+      "total_cases": 74444,
+      "baseline_correct_weight": 324747,
+      "baseline_correct_cases": 74434,
+      "current_correct_weight": 324747,
+      "current_correct_cases": 74434,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+    },
+    "app_input_fingerprints": {
+      "JA": {
+        "Esperanto-Kanji-Ruby-JA/main.py": "104A7797E453E62C2C2250A57A92B08C8004737A93755D003BE9019CA901C95B",
+        "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
+        "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "4E1C247CC729DD47C29DA1DE851613AD07FDDED336F7ACDC8877FFC7464B03D3",
+        "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
+        "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "9C7EF1BF1D9C11E209D815AC2092800227E233F9FA71895CB5999D7C316D5EB2",
+        "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-JA/app_data/エスペラント語根-日本語訳ルビ対応リスト.csv": "33CE469EFCE8D77111C281DF36585E981269409F1D33753DA620D56C6AD5CE0E",
+        "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "89ABFF590A9D0306534A3F7BA3DE58DB93CAD1186FA236D2C8F3C63C78270CF3",
+        "Esperanto-Kanji-Ruby-JA/app_data/user_corrections.json": "D4956CE7C8AF5F958E604ACD2617A58018B58BB8ECACE3D05609E6BF45BDF6A8"
+      },
+      "ZH": {
+        "Esperanto-Kanji-Ruby-ZH/main.py": "8A73A5A148F416F583064A2ABB379D1E2485585D241C0B420595EF8CCF3D12B7",
+        "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
+        "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "239911095BD79ED4E9B0D92FFE83B9D07668ECD009B1B69A3AA8668A47E2C557",
+        "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
+        "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "C961DECB759175A092E6B27F781E04608FB7F73918B2AF043DA8D2BCD4280369",
+        "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-中文注释对应列表.csv": "13D248DACD526F7028A35BE28AA846E42FBBF17B718CE824A2AF7D22BC1903E6",
+        "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "89ABFF590A9D0306534A3F7BA3DE58DB93CAD1186FA236D2C8F3C63C78270CF3",
+        "Esperanto-Kanji-Ruby-ZH/app_data/user_corrections.json": "A3D2B578D056B2AB5C46E0D00F7392891080F4672899D716C3854B93ABF38585"
+      },
+      "KO": {
+        "Esperanto-Kanji-Ruby-KO/main.py": "FF11E4A842D8D77CA0E7E76DE3008CB62D8E7044436E541C7AD01482E47AA437",
+        "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
+        "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "239911095BD79ED4E9B0D92FFE83B9D07668ECD009B1B69A3AA8668A47E2C557",
+        "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
+        "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "AE2D59EED3EB1F6F6BE0F88B554A163F1F93164E621A6A83B6068DC0BD9F600B",
+        "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+        "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+        "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+        "Esperanto-Kanji-Ruby-KO/app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv": "29383FEB4A852818F3BEA424E65215A72FD28B302A3E38FEE1CC25599AC6F307",
+        "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "89ABFF590A9D0306534A3F7BA3DE58DB93CAD1186FA236D2C8F3C63C78270CF3",
+        "Esperanto-Kanji-Ruby-KO/app_data/user_corrections.json": "5377753038C41AD4E18DDB4784E2E9FEE214169F8075DDEA031CC679A7A7B558"
+      }
+    },
+    "app_input_fingerprints_sha256": "474B61112025494290D34E345C02161B617A51504BADD32CD0D0BF0CF557E8A3",
+    "checkpoint_context_sha256": "BE582EA40E7848FA8221397435C1138D768EBECD4463969CBF4111C8B90FF47C",
+    "scope_sha256": "2574A36DF5E21817C432219CC2F7D35C41ED3E340F643A2F0315636F47E6C6B3",
+    "reviewed_reference_sha256": "E0FE3377582DEC9FD2E5F67C24814B1B78E37335746E730FFDB9BAF6B97EA2E7",
+    "inputs_stable_sha256": "0ECC812B7CAB8A3495D9E96D2660A183F93BEF6F9C701B121FE138B575CB3661"
+  }
+}
