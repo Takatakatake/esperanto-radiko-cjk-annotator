@@ -1,0 +1,249 @@
+{
+ "schema_version": 1,
+ "phase_from": 597,
+ "phase_to": 619,
+ "candidate_only": false,
+ "policy": "Adopt only seven reviewed ordinary-word Ruby repairs from the frozen Phase 619 master. Ruby follows the academic Kyoto-HTML-level coarse boundary; Kanji continues to follow the learner fake/deep decomposition. Every productive repair is whole-word bounded, JA/ZH/KO use identical R/L boundaries, and no root is split for width.",
+ "sources": {
+  "phase597_learner": {
+   "bytes": 4373830,
+   "lines": 62313,
+   "sha256": "9A610D086E60A1863E1D59D61FE0F844B3EACF4DCEBDBF6AE6354E0D16D99700"
+  },
+  "phase597_academic": {
+   "bytes": 4277601,
+   "lines": 62313,
+   "sha256": "63DAB5BAF932605A2D94843AD249FBE32CB1E8A40B8D244714A17744C0384261"
+  },
+  "phase597_fake_coarse_manifest": {
+   "bytes": 1013538,
+   "lines": 40060,
+   "sha256": "E699B6BF5CE737CF1DAFBF61C9B256DF0339A48B3AA7F24E215F2136B6D00541"
+  },
+  "phase619_learner": {
+   "bytes": 4374847,
+   "lines": 62313,
+   "sha256": "4D89CD96F27D635DDC0EBC08F37DC7B211481F844C1AAE6922EB65749ACBB0D2"
+  },
+  "phase619_academic": {
+   "bytes": 4277594,
+   "lines": 62313,
+   "sha256": "8E5D317521F2399168BA37DD4AA6A9944B98E1E1D717BE6B0989AE753E6CC7F5"
+  },
+  "phase619_pejvo_original": {
+   "bytes": 2841948,
+   "lines": 44104,
+   "sha256": "EFE44C8E85F76CAA8C2C55F3FE1F64CCD2001B381E520D6386670D29D57DBB34"
+  },
+  "phase619_fake_coarse_manifest": {
+   "bytes": 1028015,
+   "lines": 40650,
+   "sha256": "003FAE11D93499AD3D737EE6D31A759F4D0A9BF9EDBCC916B64B22BCBB6AF420"
+  },
+  "phase619_transition_dispositions": {
+   "bytes": 1100,
+   "lines": 24,
+   "sha256": "42D30B155CCEF9832189C382EE2049B89350DA0BFAD5C774E4268D86D90164F6"
+  },
+  "japanese_guide": {
+   "bytes": 131181,
+   "lines": 1835,
+   "sha256": "B8F21605E019A394560A6E4ED5238FE4BEDE7B2A949A0CBC6927189ADADFB965"
+  },
+  "chinese_guide": {
+   "bytes": 118657,
+   "lines": 1907,
+   "sha256": "A3AF2F18004A63A2C6ECB438B9ABBABF62A9B40D15494FC6B6FC0CADA7ECEA46"
+  },
+  "app_parent": {
+   "commit": "8AF4C19F50EA34D8C84767173C716E9B3F45EC5C"
+  },
+  "kyoto_corpus": {
+   "commit": "D1642C276857C1FE400A6D597214FF7A923E7BD2"
+  }
+ },
+ "expected_counts": {
+  "entries": 7,
+  "productive_atomic_ruby_morph": 6,
+  "productive_split_ruby_morph": 1,
+  "ordinary_priority": 7,
+  "proper_name_changes": 0,
+  "productive_endings": 10,
+  "productive_case_variants": 3,
+  "runtime_positive_surfaces_per_language": 210
+ },
+ "entries_sha256": "D96EED41AE3E8716052E2138E0E9D8E7286974A1EF522E399DFB9175E4CB8CC1",
+ "entries": [
+  {
+   "learner_line": 15017,
+   "surface": "imperialisto",
+   "phase597_learner_line": "imperial/ist/o:=imperiisto（帝国主義者）",
+   "phase597_academic_line": "imperial/ist/o:=imperiisto（帝国主義者）",
+   "phase619_learner_line": "imperialist/o:=imperiisto（帝国主義者）",
+   "phase619_academic_line": "imperialist/o:=imperiisto（帝国主義者）",
+   "selected_ruby_target": "imperialist/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:imperialist"
+   },
+   "context_annotation": {
+    "piece": "imperialist",
+    "glosses": {
+     "ja": "帝国主義者",
+     "zh": "帝国主义者",
+     "ko": "제국주의자"
+    }
+   },
+   "reason": "Phase 619 makes imperialist an ordinary long lexical root in both masters. The bounded Ruby sidecar prevents imperial/ist from masking that root without changing the Kanji payload."
+  },
+  {
+   "learner_line": 32464,
+   "surface": "provincialismo",
+   "phase597_learner_line": "provincial/ism/o:【語】=provincismo（地方なまり）##偽分解(PIV正式分解)",
+   "phase597_academic_line": "provincialism/o:【語】=provincismo（地方なまり）",
+   "phase619_learner_line": "provincialism/o:【語】=provincismo（地方なまり）",
+   "phase619_academic_line": "provincialism/o:【語】=provincismo（地方なまり）",
+   "selected_ruby_target": "provincialism/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:provincialism"
+   },
+   "context_annotation": {
+    "piece": "provincialism",
+    "glosses": {
+     "ja": "地方なまり",
+     "zh": "地方口音",
+     "ko": "지방 사투리"
+    }
+   },
+   "reason": "The former learner fake split was retired in Phase 619. A bounded ordinary-word rule selects the now-shared long root while leaving provincismo and provincialo outside its scope."
+  },
+  {
+   "learner_line": 47244,
+   "surface": "endoskopio",
+   "phase597_learner_line": "endo/skop/i/o:【PIV】Ekzamenado per endoskopo.",
+   "phase597_academic_line": "endo/skop/i/o:【PIV】Ekzamenado per endoskopo.",
+   "phase619_learner_line": "endo/skop/i/o:【PIV】Ekzamenado per endoskopo.##偽分解(PIV正式分解)",
+   "phase619_academic_line": "endoskopi/o:【PIV】Ekzamenado per endoskopo.",
+   "selected_ruby_target": "endoskopi/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:endoskopi"
+   },
+   "context_annotation": {
+    "piece": "endoskopi",
+    "glosses": {
+     "ja": "内視鏡検査",
+     "zh": "内镜检查",
+     "ko": "내시경 검사"
+    }
+   },
+   "reason": "The international i-stem is one coarse Ruby root. The learner endo/skop/i split remains authoritative only for Kanji."
+  },
+  {
+   "learner_line": 52038,
+   "surface": "mikroskopio",
+   "phase597_learner_line": "mikro/skop/i/o:【PIV】Esploro pere de mikroskopo.",
+   "phase597_academic_line": "mikro/skop/i/o:【PIV】Esploro pere de mikroskopo.",
+   "phase619_learner_line": "mikro/skop/i/o:【PIV】Esploro pere de mikroskopo.##偽分解",
+   "phase619_academic_line": "mikroskopi/o:【PIV】Esploro pere de mikroskopo.",
+   "selected_ruby_target": "mikroskopi/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:mikroskopi"
+   },
+   "context_annotation": {
+    "piece": "mikroskopi",
+    "glosses": {
+     "ja": "顕微鏡検査",
+     "zh": "显微镜检查",
+     "ko": "현미경 검사"
+    }
+   },
+   "reason": "The international i-stem is one coarse Ruby root. Existing mikroskopo and compound behavior is deliberately not broadened."
+  },
+  {
+   "learner_line": 52263,
+   "surface": "mukozaĵo",
+   "phase597_learner_line": "muk/oz/aj^/o:【PIV】Amaso da viskeca substanco kiu tegas iujn mukozojn, k konsistas precipe el muko, sed ankau^ el deskvamig^intaj c^eloj k mikroboj.",
+   "phase597_academic_line": "muk/oz/aj^/o:【PIV】Amaso da viskeca substanco kiu tegas iujn mukozojn, k konsistas precipe el muko, sed ankau^ el deskvamig^intaj c^eloj k mikroboj.",
+   "phase619_learner_line": "muk/oz/aj^/o:【PIV】Amaso da viskeca substanco kiu tegas iujn mukozojn, k konsistas precipe el muko, sed ankau^ el deskvamig^intaj c^eloj k mikroboj.##偽分解",
+   "phase619_academic_line": "mukoz/aj^/o:【PIV】Amaso da viskeca substanco kiu tegas iujn mukozojn, k konsistas precipe el muko, sed ankau^ el deskvamig^intaj c^eloj k mikroboj.",
+   "selected_ruby_target": "mukoz/aĵ/o",
+   "setting": {
+    "kind": "productive_split_ruby_morph",
+    "ruby_track_only": true,
+    "split_context_key": "mukoz/aĵ"
+   },
+   "split_context_annotations": [
+    {
+     "piece": "mukoz",
+     "glosses": {
+      "ja": "粘膜",
+      "zh": "黏膜",
+      "ko": "점막"
+     }
+    },
+    {
+     "piece": "aĵ",
+     "glosses": {
+      "ja": "事物",
+      "zh": "事物",
+      "ko": "사물"
+     }
+    }
+   ],
+   "reason": "Ruby keeps the lexical mukoz root and the real aĵ suffix separate. The learner muk/oz/aĵ fake split remains available only to Kanji."
+  },
+  {
+   "learner_line": 61484,
+   "surface": "ditionato",
+   "phase597_learner_line": "di/tionat/o:【化】【PIV】Salo de ditionata acido, H 2 O 6 S 2, unu el la politionataj acidoj.##偽分解##過細分解 d/i/tionat/o",
+   "phase597_academic_line": "ditionat/o:【化】【PIV】Salo de ditionata acido, H 2 O 6 S 2, unu el la politionataj acidoj.",
+   "phase619_learner_line": "di/tion/at/o:【化】【PIV】Salo de ditionata acido, H 2 O 6 S 2, unu el la politionataj acidoj.##偽分解(PIV正式分解)##過細分解 d/i/t/i/o/n/at/o",
+   "phase619_academic_line": "ditionat/o:【化】【PIV】Salo de ditionata acido, H 2 O 6 S 2, unu el la politionataj acidoj.",
+   "selected_ruby_target": "ditionat/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:ditionat"
+   },
+   "context_annotation": {
+    "piece": "ditionat",
+    "glosses": {
+     "ja": "ジチオン酸塩",
+     "zh": "连二硫酸盐",
+     "ko": "디티온산염"
+    }
+   },
+   "reason": "The technical root is coarse and atomic for annotation Ruby. Whole-word-bounded normal endings include the attested adjective ditionata; Kanji keeps di/tion/at."
+  },
+  {
+   "learner_line": 61485,
+   "surface": "tetrationato",
+   "phase597_learner_line": "tetra/tionat/o:【化】【PIV】Salo de tetrationata acido, H 2 O 6 S 4.##偽分解",
+   "phase597_academic_line": "tetrationat/o:【化】【PIV】Salo de tetrationata acido, H 2 O 6 S 4.",
+   "phase619_learner_line": "tetra/tion/at/o:【化】【PIV】Salo de tetrationata acido, H 2 O 6 S 4.##偽分解(PIV正式分解)##過細分解 tetra/t/i/o/n/at/o",
+   "phase619_academic_line": "tetrationat/o:【化】【PIV】Salo de tetrationata acido, H 2 O 6 S 4.",
+   "selected_ruby_target": "tetrationat/o",
+   "setting": {
+    "kind": "productive_atomic_ruby_morph",
+    "ruby_track_only": true,
+    "ruby_context_annotation": "@phase619-ruby:tetrationat"
+   },
+   "context_annotation": {
+    "piece": "tetrationat",
+    "glosses": {
+     "ja": "テトラチオン酸塩",
+     "zh": "连四硫酸盐",
+     "ko": "테트라티온산염"
+    }
+   },
+   "reason": "The technical root is coarse and atomic for annotation Ruby. Whole-word-bounded normal endings include the attested adjective tetrationata; Kanji keeps tetra/tion/at."
+  }
+ ]
+}

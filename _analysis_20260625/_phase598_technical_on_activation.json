@@ -1,0 +1,26 @@
+{
+ "schema_version": 1,
+ "active": true,
+ "mode": "phase558_parent_with_phase598_eight_technical_on_sidecar",
+ "parent_phase558": {
+  "activation_sha256": "8401FF7C54F5B93CEB435D9B47BEDC6491C110A8EE04EDFBDF638CBAD8A539D0",
+  "mode": "phase532_parent_with_phase558_five_surface_sidecar",
+  "overlay_review_sha256": "90A8070F4BE8CEB97F4B08A6119F68C69BE6D281C2E358F0529E2D353CAEFD26",
+  "overlay_entries_sha256": "614C9FBF7435583A64FB8CD673D461FD5E9065589063978B7CEAAEB992EFE67C"
+ },
+ "phase598_review": {
+  "phase": 598,
+  "review_sha256": "C151FD6F486D034504BFF38726E058508736096B2C7E36F79FEEBE61C441EB13",
+  "entries_sha256": "EA66E4EF6BEB585A15114F86C4A4A8A14E30F47B0C7FA099958D3B20ED97ACAE",
+  "entries": 8,
+  "productive_ruby_morph": 7,
+  "exact_typed_ruby_only": 1,
+  "positive_surfaces_per_language": 211,
+  "negative_surfaces_per_language": 159,
+  "phase597_learner_sha256": "9A610D086E60A1863E1D59D61FE0F844B3EACF4DCEBDBF6AE6354E0D16D99700",
+  "phase597_academic_sha256": "63DAB5BAF932605A2D94843AD249FBE32CB1E8A40B8D244714A17744C0384261",
+  "base_app_parent_commit": "4682D32496F166802B4A2CF28626F376E12AAE3E",
+  "base_app_parent_tree": "2C494DB69EBAC28EF63A192BEFA017A22710CCD7"
+ },
+ "fallback_policy": "Fail closed; never silently fall back to Phase 558 or broaden generic on after the activated Phase 598 technical-on identity is present."
+}

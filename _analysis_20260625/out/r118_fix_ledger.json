@@ -1,0 +1,410 @@
+[
+ {
+  "w": "Aziajn",
+  "value": "Aziajn",
+  "type": "A恒等",
+  "why": "コーパス実在の大文字形"
+ },
+ {
+  "w": "Azion",
+  "value": "Azion",
+  "type": "A恒等",
+  "why": "コーパス実在の大文字形"
+ },
+ {
+  "w": "Bene",
+  "value": "Bene",
+  "type": "A恒等",
+  "why": "コーパス唯一の用例が「Medalo Alumno Bene Merento」の固有名(2026-08-08実文確認)"
+ },
+ {
+  "w": "Britaj",
+  "value": "Britaj",
+  "type": "A恒等",
+  "why": "コーパス実在の大文字形"
+ },
+ {
+  "w": "Kanae",
+  "value": "Kanae",
+  "type": "A恒等",
+  "why": "人名(SUMII Sue関連文の Kanae)。マスター由来の期待値もラテン"
+ },
+ {
+  "w": "Lucien",
+  "value": "Lucien",
+  "type": "A恒等",
+  "why": "人名。マスター由来の期待値もラテン"
+ },
+ {
+  "w": "Pekinon",
+  "value": "Pekinon",
+  "type": "A恒等",
+  "why": "Pekin/o=ラテン維持の対格。海胆(ウニ)が語中発火していた"
+ },
+ {
+  "w": "Valerie",
+  "value": "Valerie",
+  "type": "A恒等",
+  "why": "人名。マスター由来の期待値もラテン"
+ },
+ {
+  "w": "aziaj",
+  "value": "aziaj",
+  "type": "A恒等",
+  "why": "ラテン維持族 azia"
+ },
+ {
+  "w": "aziajn",
+  "value": "aziajn",
+  "type": "A恒等",
+  "why": "ラテン維持族 azia"
+ },
+ {
+  "w": "britaj",
+  "value": "britaj",
+  "type": "A恒等",
+  "why": "ラテン維持族 brita"
+ },
+ {
+  "w": "britajn",
+  "value": "britajn",
+  "type": "A恒等",
+  "why": "ラテン維持族 brita"
+ },
+ {
+  "w": "britan",
+  "value": "britan",
+  "type": "A恒等",
+  "why": "ラテン維持族 brita"
+ },
+ {
+  "w": "dolarojn",
+  "value": "dolarojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 dolaro"
+ },
+ {
+  "w": "dukatojn",
+  "value": "dukatojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 dukato"
+ },
+ {
+  "w": "ekspertoj",
+  "value": "ekspertoj",
+  "type": "A恒等",
+  "why": "ラテン維持族 eksperto"
+ },
+ {
+  "w": "ekspertojn",
+  "value": "ekspertojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 eksperto"
+ },
+ {
+  "w": "eksperton",
+  "value": "eksperton",
+  "type": "A恒等",
+  "why": "ラテン維持族 eksperto"
+ },
+ {
+  "w": "francaj",
+  "value": "francaj",
+  "type": "A恒等",
+  "why": "ラテン維持族 franca"
+ },
+ {
+  "w": "francajn",
+  "value": "francajn",
+  "type": "A恒等",
+  "why": "ラテン維持族 franca"
+ },
+ {
+  "w": "francan",
+  "value": "francan",
+  "type": "A恒等",
+  "why": "ラテン維持族 franca"
+ },
+ {
+  "w": "italoj",
+  "value": "italoj",
+  "type": "A恒等",
+  "why": "ラテン維持族 italo"
+ },
+ {
+  "w": "italojn",
+  "value": "italojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 italo"
+ },
+ {
+  "w": "italon",
+  "value": "italon",
+  "type": "A恒等",
+  "why": "ラテン維持族 italo"
+ },
+ {
+  "w": "japanojn",
+  "value": "japanojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 japano"
+ },
+ {
+  "w": "skotoj",
+  "value": "skotoj",
+  "type": "A恒等",
+  "why": "ラテン維持族 skoto"
+ },
+ {
+  "w": "skotojn",
+  "value": "skotojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 skoto"
+ },
+ {
+  "w": "skoton",
+  "value": "skoton",
+  "type": "A恒等",
+  "why": "ラテン維持族 skoto"
+ },
+ {
+  "w": "utopiojn",
+  "value": "utopiojn",
+  "type": "A恒等",
+  "why": "ラテン維持族 utopio"
+ },
+ {
+  "w": "Metu",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>u",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "Organiziĝis",
+  "value": "<ruby>器ᴼ<rt class=\"M_M\">organ</rt></ruby><ruby>化<rt class=\"XXL_L\">iz</rt></ruby><ruby>成<rt class=\"XXL_L\">iĝ</rt></ruby>is",
+  "type": "B合成",
+  "why": "基本形 organiziĝi の実描画から構築"
+ },
+ {
+  "w": "detektivajn",
+  "value": "<ruby>检ᴰ<rt class=\"S_S\">detekt</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby>ajn",
+  "type": "B合成",
+  "why": "基本形 detektiva の実描画から構築"
+ },
+ {
+  "w": "efektivigas",
+  "value": "<ruby>效ᴱᵀ<rt class=\"XL_L\">efekt</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby><ruby>使<rt class=\"XXL_L\">ig</rt></ruby>as",
+  "type": "B合成",
+  "why": "基本形 efektivigi の実描画から構築"
+ },
+ {
+  "w": "efektivigis",
+  "value": "<ruby>效ᴱᵀ<rt class=\"XL_L\">efekt</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby><ruby>使<rt class=\"XXL_L\">ig</rt></ruby>is",
+  "type": "B合成",
+  "why": "基本形 efektivigi の実描画から構築"
+ },
+ {
+  "w": "efektiviĝas",
+  "value": "<ruby>效ᴱᵀ<rt class=\"XL_L\">efekt</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby><ruby>成<rt class=\"XXL_L\">iĝ</rt></ruby>as",
+  "type": "B合成",
+  "why": "基本形 efektiviĝi の実描画から構築"
+ },
+ {
+  "w": "efektiviĝis",
+  "value": "<ruby>效ᴱᵀ<rt class=\"XL_L\">efekt</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby><ruby>成<rt class=\"XXL_L\">iĝ</rt></ruby>is",
+  "type": "B合成",
+  "why": "基本形 efektiviĝi の実描画から構築"
+ },
+ {
+  "w": "filozofiaj",
+  "value": "<ruby>哲<rt class=\"XS_S\">filozof</rt></ruby>iaj",
+  "type": "B合成",
+  "why": "基本形 filozofia の実描画から構築"
+ },
+ {
+  "w": "filozofie",
+  "value": "<ruby>哲<rt class=\"XS_S\">filozof</rt></ruby>ie",
+  "type": "B合成",
+  "why": "基本形 filozofia の実描画から構築"
+ },
+ {
+  "w": "firmaon",
+  "value": "<ruby>商ᶠ<rt class=\"S_S\">firma</rt></ruby>on",
+  "type": "B合成",
+  "why": "基本形 firmao の実描画から構築"
+ },
+ {
+  "w": "gastroskopon",
+  "value": "<ruby>胃ᴳ<rt class=\"L_L\">gastr</rt></ruby>o<ruby>镜ˢᴷ<rt class=\"XL_L\">skop</rt></ruby>on",
+  "type": "B合成",
+  "why": "基本形 gastroskopo の実描画から構築"
+ },
+ {
+  "w": "hidrogenbomboj",
+  "value": "<ruby>水ᴴ<rt class=\"XL_L\">hidr</rt></ruby>o<ruby>生ᴳ<rt class=\"XXL_L\">gen</rt></ruby><ruby>弹<rt class=\"XS_S\">bomb</rt></ruby>oj",
+  "type": "B合成",
+  "why": "基本形 hidrogenbombo の実描画から構築"
+ },
+ {
+  "w": "ideogramojn",
+  "value": "<ruby>意<rt class=\"L_L\">ide</rt></ruby>o<ruby>字ᴳᴹ<rt class=\"XL_L\">gram</rt></ruby>ojn",
+  "type": "B合成",
+  "why": "基本形 ideogramo の実描画から構築"
+ },
+ {
+  "w": "intensivajn",
+  "value": "<ruby>烈<rt class=\"XS_S\">intens</rt></ruby><ruby>能ᴵ<rt class=\"XXL_L\">iv</rt></ruby>ajn",
+  "type": "B合成",
+  "why": "基本形 intensiva の実描画から構築"
+ },
+ {
+  "w": "kilogramojn",
+  "value": "<ruby>千ᴷᴵ<rt class=\"XXL_L\">kilo</rt></ruby><ruby>克<rt class=\"XS_S\">gram</rt></ruby>ojn",
+  "type": "B合成",
+  "why": "基本形 kilogramo の実描画から構築"
+ },
+ {
+  "w": "metas",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>as",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "metis",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>is",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "metos",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>os",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "metu",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>u",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "metus",
+  "value": "<ruby>置<rt class=\"M_M\">met</rt></ruby>us",
+  "type": "B合成",
+  "why": "基本形 meti の実描画から構築"
+ },
+ {
+  "w": "milimetrojn",
+  "value": "<ruby>毫<rt class=\"M_M\">mili</rt></ruby><ruby>米<rt class=\"S_S\">metr</rt></ruby>ojn",
+  "type": "B合成",
+  "why": "基本形 milimetro の実描画から構築"
+ },
+ {
+  "w": "miriadoj",
+  "value": "<ruby>万<rt class=\"S_S\">miria</rt></ruby>doj",
+  "type": "B合成",
+  "why": "基本形 miriado の実描画から構築"
+ },
+ {
+  "w": "neŭtronoj",
+  "value": "<ruby>中ᴺᴱ<rt class=\"XL_L\">neŭtr</rt></ruby><ruby>子ᴼ<rt class=\"XXL_L\">on</rt></ruby>oj",
+  "type": "B合成",
+  "why": "基本形 neŭtrono の実描画から構築"
+ },
+ {
+  "w": "organiziĝis",
+  "value": "<ruby>器ᴼ<rt class=\"M_M\">organ</rt></ruby><ruby>化<rt class=\"XXL_L\">iz</rt></ruby><ruby>成<rt class=\"XXL_L\">iĝ</rt></ruby>is",
+  "type": "B合成",
+  "why": "基本形 organiziĝi の実描画から構築"
+ },
+ {
+  "w": "pacifismon",
+  "value": "<ruby>和ᴾᶠ<rt class=\"XL_L\">pacif</rt></ruby><ruby>主义<rt class=\"XXL_L\">ism</rt></ruby>on",
+  "type": "B合成",
+  "why": "基本形 pacifismo の実描画から構築"
+ },
+ {
+  "w": "prototipoj",
+  "value": "<ruby>原ᴾᵀ<rt class=\"XL_L\">proto</rt></ruby><ruby>型<rt class=\"XXL_L\">tip</rt></ruby>oj",
+  "type": "B合成",
+  "why": "基本形 prototipo の実描画から構築"
+ },
+ {
+  "w": "prototipojn",
+  "value": "<ruby>原ᴾᵀ<rt class=\"XL_L\">proto</rt></ruby><ruby>型<rt class=\"XXL_L\">tip</rt></ruby>ojn",
+  "type": "B合成",
+  "why": "基本形 prototipo の実描画から構築"
+ },
+ {
+  "w": "radioamatoroj",
+  "value": "<ruby>射ᴿ<rt class=\"XL_L\">radi</rt></ruby>o<ruby>好<rt class=\"XXS_S\">ama<br>tor</rt></ruby>oj",
+  "type": "B合成",
+  "why": "基本形 radioamatoro の実描画から構築"
+ },
+ {
+  "w": "radioprogramoj",
+  "value": "<ruby>射ᴿ<rt class=\"XL_L\">radi</rt></ruby>o<ruby>程<rt class=\"XXS_S\">prog<br>ram</rt></ruby>oj",
+  "type": "B合成",
+  "why": "基本形 radioprogramo の実描画から構築"
+ },
+ {
+  "w": "reprezentaj",
+  "value": "<ruby>再<rt class=\"XXL_L\">re</rt></ruby><ruby>呈<rt class=\"XXS_S\">prez<br>ent</rt></ruby>aj",
+  "type": "B合成",
+  "why": "基本形 reprezenta の実描画から構築"
+ },
+ {
+  "w": "reprezentantaj",
+  "value": "<ruby>再<rt class=\"XXL_L\">re</rt></ruby><ruby>呈<rt class=\"XXS_S\">prez<br>ent</rt></ruby><ruby>在<rt class=\"L_L\">ant</rt></ruby>aj",
+  "type": "B合成",
+  "why": "基本形 reprezentanta の実描画から構築"
+ },
+ {
+  "w": "reprezentante",
+  "value": "<ruby>再<rt class=\"XXL_L\">re</rt></ruby><ruby>呈<rt class=\"XXS_S\">prez<br>ent</rt></ruby><ruby>在<rt class=\"L_L\">ant</rt></ruby>e",
+  "type": "B合成",
+  "why": "基本形 reprezentanta の実描画から構築"
+ },
+ {
+  "w": "reprezentas",
+  "value": "<ruby>再<rt class=\"XXL_L\">re</rt></ruby><ruby>呈<rt class=\"XXS_S\">prez<br>ent</rt></ruby>as",
+  "type": "B合成",
+  "why": "基本形 reprezenti の実描画から構築"
+ },
+ {
+  "w": "sindone",
+  "value": "<ruby>己<rt class=\"XXL_L\">si</rt></ruby>n<ruby>给<rt class=\"M_M\">don</rt></ruby>e",
+  "type": "B合成",
+  "why": "基本形 sindona の実描画から構築"
+ },
+ {
+  "w": "sinsekvaj",
+  "value": "<ruby>己<rt class=\"XXL_L\">si</rt></ruby>n<ruby>随<rt class=\"S_S\">sekv</rt></ruby>aj",
+  "type": "B合成",
+  "why": "基本形 sinsekva の実描画から構築"
+ },
+ {
+  "w": "sinsekvajn",
+  "value": "<ruby>己<rt class=\"XXL_L\">si</rt></ruby>n<ruby>随<rt class=\"S_S\">sekv</rt></ruby>ajn",
+  "type": "B合成",
+  "why": "基本形 sinsekva の実描画から構築"
+ },
+ {
+  "w": "sintenojn",
+  "value": "<ruby>己<rt class=\"XXL_L\">si</rt></ruby>n<ruby>持<rt class=\"L_L\">ten</rt></ruby>ojn",
+  "type": "B合成",
+  "why": "基本形 sinteno の実描画から構築"
+ },
+ {
+  "w": "sinĝenon",
+  "value": "<ruby>己<rt class=\"XXL_L\">si</rt></ruby>n<ruby>扰<rt class=\"M_M\">ĝen</rt></ruby>on",
+  "type": "B合成",
+  "why": "基本形 sinĝeno の実描画から構築"
+ },
+ {
+  "w": "videoludon",
+  "value": "<ruby>视ⱽ<rt class=\"XL_L\">vide</rt></ruby>o<ruby>玩<rt class=\"L_L\">lud</rt></ruby>on",
+  "type": "B合成",
+  "why": "基本形 videoludo の実描画から構築"
+ }
+]

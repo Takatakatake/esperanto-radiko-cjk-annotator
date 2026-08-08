@@ -1,0 +1,15 @@
+{
+ "app_accuracy_effective": 99.697,
+ "app_true_errors_inst": 326,
+ "corpus_errors_words": 47,
+ "corpus_errors_inst": 95,
+ "both_valid_words": 41,
+ "neither_words": 11,
+ "app_err_subclasses": {
+  "ekde(語彙化論争)": 55,
+  "国際語境界(-logi-/-krat-)": 20,
+  "app接辞/語尾の分離漏れ": 68,
+  "固有名詞・外来語をappが過分解": 76,
+  "その他app境界ずれ": 54
+ }
+}

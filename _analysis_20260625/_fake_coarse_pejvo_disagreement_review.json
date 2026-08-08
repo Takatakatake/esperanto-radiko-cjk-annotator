@@ -1,0 +1,141 @@
+{
+ "schema_version": 1,
+ "expected_entries": 15,
+ "entries": [
+  {
+   "learner_line": 2560,
+   "surface": "Asirio",
+   "academic_decomposition": "Asiri/o",
+   "pejvo_decompositions": ["Asir/i/o"],
+   "selected_decomposition": "Asiri/o",
+   "decision": "paired_academic",
+   "reason": "The line-paired academic row preserves the proper-name root Asiri; the learner and historical PEJVO split is explicitly marked fake and would expose a literal io tail in Ruby."
+  },
+  {
+   "learner_line": 3631,
+   "surface": "bibliofilio",
+   "academic_decomposition": "bibliofil/i/o",
+   "pejvo_decompositions": ["bibliofili/o"],
+   "selected_decomposition": "bibliofili/o",
+   "decision": "pejvo_coarse",
+   "reason": "The direct long-root reading is the conservative Ruby boundary; splitting final -i/o would expose an unsupported literal io tail."
+  },
+  {
+   "learner_line": 8902,
+   "surface": "elektrodinamismo",
+   "academic_decomposition": "elektr/o/dinamism/o",
+   "pejvo_decompositions": ["elektrodinamism/o"],
+   "selected_decomposition": "elektr/o/dinamism/o",
+   "decision": "paired_academic",
+   "reason": "The paired academic row keeps the productive elektr/o compound boundary while treating the explicitly fake dinam/ism split as the coarse root dinamism; the deployed Ruby already follows this two-track boundary."
+  },
+  {
+   "learner_line": 8966,
+   "surface": "elektrotipio",
+   "academic_decomposition": "elektrotip/i/o",
+   "pejvo_decompositions": ["elektrotipi/o"],
+   "selected_decomposition": "elektrotipi/o",
+   "decision": "pejvo_coarse",
+   "reason": "The direct long-root gloss is safer for Ruby and avoids an unnatural literal io tail."
+  },
+  {
+   "learner_line": 9727,
+   "surface": "epicikloido",
+   "academic_decomposition": "epicikl/oid/o",
+   "pejvo_decompositions": ["epicikloid/o"],
+   "selected_decomposition": "epicikloid/o",
+   "decision": "pejvo_coarse",
+   "reason": "PIV explicitly heads epicikloid/o as a whole; the conservative Ruby boundary follows that long root."
+  },
+  {
+   "learner_line": 10260,
+   "surface": "fagocitozo",
+   "academic_decomposition": "fagocit/oz/o",
+   "pejvo_decompositions": ["fagocitoz/o"],
+   "selected_decomposition": "fagocitoz/o",
+   "decision": "pejvo_coarse",
+   "reason": "The long-root boundary avoids suggesting an unsupported productive -oz analysis in Ruby."
+  },
+  {
+   "learner_line": 10994,
+   "surface": "filantropio",
+   "academic_decomposition": "filantrop/i/o",
+   "pejvo_decompositions": ["filantropi/o"],
+   "selected_decomposition": "filantropi/o",
+   "decision": "pejvo_coarse",
+   "reason": "The direct long-root gloss is safer for Ruby and avoids an unnatural literal io tail."
+  },
+  {
+   "learner_line": 11931,
+   "surface": "fototipio",
+   "academic_decomposition": "fototip/i/o",
+   "pejvo_decompositions": ["fototipi/o"],
+   "selected_decomposition": "fototipi/o",
+   "decision": "pejvo_coarse",
+   "reason": "The direct long-root gloss is safer for Ruby and avoids an unnatural literal io tail."
+  },
+  {
+   "learner_line": 12826,
+   "surface": "geometredoj",
+   "academic_decomposition": "geometr/ed/oj",
+   "pejvo_decompositions": ["geometred/oj"],
+   "selected_decomposition": "geometred/oj",
+   "decision": "pejvo_coarse",
+   "reason": "This is the already deployed conservative long-root boundary; adding the deeper split would provide no Ruby-level benefit."
+  },
+  {
+   "learner_line": 14409,
+   "surface": "hipocikloido",
+   "academic_decomposition": "hipocikl/oid/o",
+   "pejvo_decompositions": ["hipocikloid/o"],
+   "selected_decomposition": "hipocikloid/o",
+   "decision": "pejvo_coarse",
+   "reason": "PIV explicitly heads hipocikloid/o as a whole; the conservative Ruby boundary follows that long root."
+  },
+  {
+   "learner_line": 26156,
+   "surface": "Moravio",
+   "academic_decomposition": "Moravi/o",
+   "pejvo_decompositions": ["Morav/i/o"],
+   "selected_decomposition": "Moravi/o",
+   "decision": "paired_academic",
+   "reason": "The line-paired academic row preserves the geographical root Moravi; the learner and historical PEJVO split is explicitly marked fake and would expose a literal io tail in Ruby."
+  },
+  {
+   "learner_line": 37924,
+   "surface": "stenotipio",
+   "academic_decomposition": "stenotip/i/o",
+   "pejvo_decompositions": ["stenotipi/o"],
+   "selected_decomposition": "stenotipi/o",
+   "decision": "pejvo_coarse",
+   "reason": "The direct long-root gloss is safer for Ruby and avoids an unnatural literal io tail."
+  },
+  {
+   "learner_line": 48901,
+   "surface": "heroino",
+   "academic_decomposition": "heroin/o",
+   "pejvo_decompositions": ["hero/in/o"],
+   "selected_decomposition": "heroin/o",
+   "decision": "paired_academic",
+   "reason": "The same-line academic row is the drug sense heroino; PEJVO hero/in/o is the distinct heroine homograph."
+  },
+  {
+   "learner_line": 50167,
+   "surface": "kateto",
+   "academic_decomposition": "katet/o",
+   "pejvo_decompositions": ["kat/et/o"],
+   "selected_decomposition": "katet/o",
+   "decision": "paired_academic",
+   "reason": "The same-line academic row is the chemical cathode term; kat/et/o is the distinct diminutive-cat analysis."
+  },
+  {
+   "learner_line": 56315,
+   "surface": "tornado",
+   "academic_decomposition": "tornad/o",
+   "pejvo_decompositions": ["torn/ad/o"],
+   "selected_decomposition": "tornad/o",
+   "decision": "paired_academic",
+   "reason": "The same-line academic row is the meteorological loanword; the surface-only torn/ad/o analysis is not sense-aligned evidence."
+  }
+ ]
+}

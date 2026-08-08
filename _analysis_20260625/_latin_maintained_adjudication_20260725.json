@@ -1,0 +1,3390 @@
+{
+ "generated": "2026-07-25 第65R",
+ "scope": "エクスポート基準の残差のうち「マスターはラテン維持 / appが漢字化」584語(語頭大文字の固有名詞495 + 小文字89)の裁定",
+ "method": "10エージェントで分担分類 → CLOSABLE判定のみ敵対的反証(デフォルトrefuted=true)",
+ "counts": {
+  "total": 584,
+  "closable_survived": 328,
+  "closable_refuted": 95,
+  "structural": 135,
+  "master_gap": 26
+ },
+ "note": "closable_survived はアプリ側で語スコープのラテン固定を入れれば閉じられる候補。ただし固定キーが裸語根になると別語根の接頭辞になり退行する(反証で95件却下: Doro→dor が dorm/dors/dorn/dorlot/dorid の接頭辞 等)ため、実装は「完全一致の表層キー」に限ること。第65Rでは未実施。",
+ "closable_survived": [
+  {
+   "w": "Abisenujo",
+   "app": "Abisen器o",
+   "master": "Abisenujo",
+   "reason": "abisen-は民族名のみで、マスターでもabisen/oはラテン。小文字abisenujoという普通名詞は存在しない。"
+  },
+  {
+   "w": "Adonaj",
+   "app": "A给aj",
+   "master": "Adonaj",
+   "reason": "adon-はヘブライ神名のみ。adonid/o・Adonis/oもマスターでラテンなので前方一致の巻き添えも無い。"
+  },
+  {
+   "w": "Afganlando",
+   "app": "Afgan国o",
+   "master": "Afganlando",
+   "reason": "afgan/o自体がマスターでラテン。国名専用で小文字普通名詞は無い。"
+  },
+  {
+   "w": "Afganujo",
+   "app": "Afgan器o",
+   "master": "Afganujo",
+   "reason": "同上。afgan+ujは国名専用で、失うのは器のみ。"
+  },
+  {
+   "w": "Agripino",
+   "app": "Agrip女o",
+   "master": "Agripino",
+   "reason": "Agrip-は人名のみ(Agrip/oもラテン)。-inの女性形で普通名詞読み無し。"
+  },
+  {
+   "w": "Akadujo",
+   "app": "Akad器o",
+   "master": "Akadujo",
+   "reason": "akad/aはラテン、akademi-は別(長い)語根なので巻き添え無し。古代国名専用。"
+  },
+  {
+   "w": "Akvitanujo",
+   "app": "Akvitan器o",
+   "master": "Akvitanujo",
+   "reason": "akvitan/oはラテン、地方名専用。語幹Akvitanujは他語に前方一致しない。"
+  },
+  {
+   "w": "Albanujo",
+   "app": "Alban器o",
+   "master": "Albanujo",
+   "reason": "alban/oはラテンで国名専用。小文字albanujoという普通名詞は無い。"
+  },
+  {
+   "w": "Albertino",
+   "app": "Albert女o",
+   "master": "Albertino",
+   "reason": "人名Albert+-inの女性形。小文字albertinoは存在しない。"
+  },
+  {
+   "w": "Alfonsino",
+   "app": "Alfons女o",
+   "master": "Alfonsino",
+   "reason": "人名Alfons+-inの女性形で、普通名詞読みは無い。"
+  },
+  {
+   "w": "Amalekidoj",
+   "app": "Amalek子oj",
+   "master": "Amalekidoj",
+   "reason": "聖書の部族名+-id。Amalek/oもラテンで、小文字の普通名詞は無い。"
+  },
+  {
+   "w": "Amonidoj",
+   "app": "Amon子oj",
+   "master": "Amonidoj",
+   "reason": "聖書の民族名+-id。化石はamonit/o(菊石)と別語根で、Amonidは他語に前方一致しない。"
+  },
+  {
+   "w": "Amono",
+   "app": "爱ono",
+   "master": "Amono",
+   "reason": "神名専用。amoniak(氨)・amonit(菊石)は語根が長く最長一致で守られるため巻き添え無し。"
+  },
+  {
+   "w": "Angelino",
+   "app": "Angel女o",
+   "master": "Angelino",
+   "reason": "天使の語根はanĝel(天使)であり綴りangelとは別。よってAngelinoは人名専用で安全。"
+  },
+  {
+   "w": "Anneto",
+   "app": "Ann小o",
+   "master": "Anneto",
+   "reason": "人名Ann+-etの愛称形。語根annは存在せず、小文字annetoも無い。"
+  },
+  {
+   "w": "Apolonio",
+   "app": "A金ᴾo",
+   "master": "Apolonio",
+   "reason": "人名Apolon由来(Apolon/oもラテン)。小文字apolonioという普通名詞は無い。"
+  },
+  {
+   "w": "Arabujo",
+   "app": "Arab器o",
+   "master": "Arabujo",
+   "reason": "arab/oはラテンで、arab+ujは地名専用。arabesk(纹ᴬ)は別語根で無傷。"
+  },
+  {
+   "w": "Armenujo",
+   "app": "Armen器o",
+   "master": "Armenujo",
+   "reason": "armen/oはラテンで国名専用。小文字普通名詞は存在しない。"
+  },
+  {
+   "w": "Atenoj",
+   "app": "A持oj",
+   "master": "Atenoj",
+   "reason": "都市名専用。atenc(害ᴬ)/atend(待)/atent(注)は5字語根で最長一致により守られるため巻き添え無し。"
+  },
+  {
+   "w": "Atreidoj",
+   "app": "Atre子oj",
+   "master": "Atreidoj",
+   "reason": "神話の家系名+-id。Atre/oもラテンで、atrepsi等は別語根。"
+  },
+  {
+   "w": "Babelturo",
+   "app": "Babel塔o",
+   "master": "Babelturo",
+   "reason": "Babelは固有名でラテン、合成語全体も唯一のバベル塔を指す固有名。語幹Babelturは他語に前方一致せずbabel/ism/oも無傷。"
+  },
+  {
+   "w": "Badenlando",
+   "app": "Baden国o",
+   "master": "Badenlando",
+   "reason": "地名Baden+-land。Baden/oもラテンで小文字普通名詞は無い。"
+  },
+  {
+   "w": "Baltujo",
+   "app": "Balt器o",
+   "master": "Baltujo",
+   "reason": "balt/oはラテンで地域名専用。balte(带ᴮᴸ)は別語根で無傷。"
+  },
+  {
+   "w": "Barnabanoj",
+   "app": "Barnab员ᴬoj",
+   "master": "Barnabanoj",
+   "reason": "聖人名Barnab+-anの修道会名。Barnab/oもラテンで普通名詞読みは無い。"
+  },
+  {
+   "w": "Bavarujo",
+   "app": "Bavar器o",
+   "master": "Bavarujo",
+   "reason": "bavar/oはラテンで地名専用。失うのは器のみ。"
+  },
+  {
+   "w": "Belgujo",
+   "app": "Belg器o",
+   "master": "Belgujo",
+   "reason": "belg/oはラテンで国名専用。bel/grajn(美粒)等は別語幹で無傷。"
+  },
+  {
+   "w": "Belorusujo",
+   "app": "Belorus器o",
+   "master": "Belorusujo",
+   "reason": "belorus/oはラテンで国名専用。小文字普通名詞は無い。"
+  },
+  {
+   "w": "Beotujo",
+   "app": "Beot器o",
+   "master": "Beotujo",
+   "reason": "beot/oはラテンで古代地方名専用。"
+  },
+  {
+   "w": "Bohemujo",
+   "app": "Bohem器o",
+   "master": "Bohemujo",
+   "reason": "bohem/o自体マスターでラテン。-ujは地名用で小文字bohemujoという普通名詞は無い。"
+  },
+  {
+   "w": "Brazilio",
+   "app": "Br庇ᴬio",
+   "master": "Brazilio",
+   "reason": "brazil系はマスターで全てラテン。現行のBr庇ᴬio はazil(庇)を拾った誤分解で、固定は害なく改善。"
+  },
+  {
+   "w": "Bretonujo",
+   "app": "Breton器o",
+   "master": "Bretonujo",
+   "reason": "breton/oはラテンで地名専用。小文字普通名詞は無い。"
+  },
+  {
+   "w": "Britujo",
+   "app": "Brit器o",
+   "master": "Britujo",
+   "reason": "brit/oはラテンで国名専用。失うのは器のみ。"
+  },
+  {
+   "w": "Budhonasko",
+   "app": "佛o生o",
+   "master": "Budhonasko",
+   "reason": "語幹Budhonaskは他語に前方一致せず(最長一致でbudh/an/o等は無傷)、祭日名として常に大文字。小文字普通名詞は無い。"
+  },
+  {
+   "w": "Bulgarujo",
+   "app": "Bulgar器o",
+   "master": "Bulgarujo",
+   "reason": "bulgar/oはラテンで国名専用。小文字bulgarujoという普通名詞は無い。"
+  },
+  {
+   "w": "Burgundujo",
+   "app": "Burgund器o",
+   "master": "Burgundujo",
+   "reason": "burgund/o はマスターでも既にラテン、burgunduj で始まる小文字見出しは皆無で衝突ゼロ。"
+  },
+  {
+   "w": "Centrafriko",
+   "app": "央afriko",
+   "master": "Centrafriko",
+   "reason": "Afrik が固有名で中央アフリカ国名、centrafrik 始まりの小文字見出しは無く央の脱落のみ。"
+  },
+  {
+   "w": "Cirenano",
+   "app": "Ciren员ᴬo",
+   "master": "Cirenano",
+   "reason": "Ciren は地名で ciren 始まりの小文字語根は存在せず、-an は地名住民形。"
+  },
+  {
+   "w": "Cisterciano",
+   "app": "Cisterci员ᴬo",
+   "master": "Cisterciano",
+   "reason": "地名由来の修道会名(-an)で cisterci 始まりの小文字見出しは無く、宗派名ルールに従いラテン固定可。"
+  },
+  {
+   "w": "Dalmatujo",
+   "app": "Dalmat器o",
+   "master": "Dalmatujo",
+   "reason": "dalmat/o・dalmatik/o は既にラテン、dalmatuj 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Damaskano",
+   "app": "缎ᴰ员ᴬo",
+   "master": "Damaskano",
+   "reason": "damask/o(缎ᴰ)・damasken/i(嵌ᴰ)は damaskan で始まらず保全され、小文字damaskanoは実在しない(現行の缎ᴰ员ᴬは誤分解)。"
+  },
+  {
+   "w": "Danaidinoj",
+   "app": "Dana子女oj",
+   "master": "Danaidinoj",
+   "reason": "Dana は神話人名で danaidin 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Danaidoj",
+   "app": "Dana子oj",
+   "master": "Danaidoj",
+   "reason": "固有名+id(子孫)の神話名で danaid 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Danlando",
+   "app": "Dan国o",
+   "master": "Danlando",
+   "reason": "dan/a 等は既にラテン、語幹danland に一致する小文字見出しは無く国の脱落のみ。"
+  },
+  {
+   "w": "Danteca",
+   "app": "Dant性a",
+   "master": "Danteca",
+   "reason": "Dant は人名で dantec 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Danteska",
+   "app": "Dant风ᴱa",
+   "master": "Danteska",
+   "reason": "人名+esk の様式形容詞で dantesk 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Danujo",
+   "app": "Dan器o",
+   "master": "Danujo",
+   "reason": "danuj で始まる小文字見出しは無く、dan/a(ラテン)にも影響しない。"
+  },
+  {
+   "w": "Detrojtrivero",
+   "app": "Detrojt河o",
+   "master": "Detrojtrivero",
+   "reason": "固有名+river の河川名で detrojtriver 衝突は無い。"
+  },
+  {
+   "w": "Edomo",
+   "app": "E-屋o",
+   "master": "Edomo",
+   "reason": "聖書地名で edom 始まりの小文字見出しは無い(現行 E-屋o は dom→屋 の誤マッチ)。"
+  },
+  {
+   "w": "Egiptujo",
+   "app": "Egipt器o",
+   "master": "Egiptujo",
+   "reason": "egipt/a・egipt/an/o は egiptuj で始まらず、語幹egiptuj に衝突は無い。"
+  },
+  {
+   "w": "Ejfelturo",
+   "app": "Ejfel塔o",
+   "master": "Ejfelturo",
+   "reason": "固有名+tur の建造物名で ejfeltur 衝突は無い(塔の脱落のみ)。"
+  },
+  {
+   "w": "Elohimisto",
+   "app": "Elohim家o",
+   "master": "Elohimisto",
+   "reason": "神名+ist の宗派名で elohimist 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Eneido",
+   "app": "Ene子o",
+   "master": "Eneido",
+   "reason": "語幹eneid は Eneo(ene)と別語幹で、eneid 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Englujo",
+   "app": "Engl器o",
+   "master": "Englujo",
+   "reason": "engl/o は既にラテン、en/glut/i 等は engluj で始まらず衝突ゼロ。"
+  },
+  {
+   "w": "Eoliano",
+   "app": "Eoli员ᴬo",
+   "master": "Eoliano",
+   "reason": "Eol は神名/固有名、eol/a・eol/harp/o は eolian で始まらず衝突は無い。"
+  },
+  {
+   "w": "Ernestino",
+   "app": "Ernest女o",
+   "master": "Ernestino",
+   "reason": "人名+in の女性名で ernestin 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Estonujo",
+   "app": "Eston器o",
+   "master": "Estonujo",
+   "reason": "固定語幹は estonuj なので est/ont/a(是/将/a)には一致せず安全、eston/o は既にラテン。"
+  },
+  {
+   "w": "Etiopujo",
+   "app": "Etiop器o",
+   "master": "Etiopujo",
+   "reason": "etiop/o は既にラテン、etiopuj 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Etruskujo",
+   "app": "Etrusk器o",
+   "master": "Etruskujo",
+   "reason": "etrusk/a・etrusk/o は既にラテン、etruskuj 衝突は無い。"
+  },
+  {
+   "w": "Evemerismo",
+   "app": "Evemer主义o",
+   "master": "Evemerismo",
+   "reason": "人名+ism の学説名で evemerism 始まりの小文字見出しは無く、固有名-ismルールに従う。"
+  },
+  {
+   "w": "Farsalpoemo",
+   "app": "Farsal诗o",
+   "master": "Farsalpoemo",
+   "reason": "固有名+poem の作品名で farsalpoem 衝突は無い。"
+  },
+  {
+   "w": "Fenicujo",
+   "app": "Fenic器o",
+   "master": "Fenicujo",
+   "reason": "fenic/a・fenic/o は既にラテン、fenicuj 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Filipino",
+   "app": "Filip女o",
+   "master": "Filipino",
+   "reason": "filipin を1語根扱いにしても filipin/a(ラテン)・filipin/an/o(filipin/员ᴬ/o)はマスター通りで、filipendul/o(草ᶠᴾ)には一致しない。"
+  },
+  {
+   "w": "Filipinoj",
+   "app": "Filip女oj",
+   "master": "Filipinoj",
+   "reason": "同語幹filipin で漢字を持つ小文字見出しへの被害は無く、国名としてラテン固定可。"
+  },
+  {
+   "w": "Finnlando",
+   "app": "Finn国o",
+   "master": "Finnlando",
+   "reason": "finn/a・finn/o は既にラテン、finnland 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Finnujo",
+   "app": "Finn器o",
+   "master": "Finnujo",
+   "reason": "finnuj 衝突は無く、finn-ugr/a 等にも影響しない。"
+  },
+  {
+   "w": "Flandrujo",
+   "app": "Flandr器o",
+   "master": "Flandrujo",
+   "reason": "flandr/a・flandr/ism/o は flandruj で始まらず、衝突ゼロ。"
+  },
+  {
+   "w": "Franclingvio",
+   "app": "Franc语io",
+   "master": "Franclingvio",
+   "reason": "固定語幹 franclingvi は franc/lingv/a(franc/语/a)・franc/lingv/an/o に一致せず语は保全される。"
+  },
+  {
+   "w": "Francujo",
+   "app": "Franc器o",
+   "master": "Francujo",
+   "reason": "franc/a・franc/ig/i(franc使i)等は francuj で始まらず衝突ゼロ。"
+  },
+  {
+   "w": "Frislando",
+   "app": "Fris国o",
+   "master": "Frislando",
+   "reason": "fris/a・fris/o は既にラテン、frisland 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Frisujo",
+   "app": "Fris器o",
+   "master": "Frisujo",
+   "reason": "frisk/a 等は frisuj で始まらず、衝突は無い。"
+  },
+  {
+   "w": "Galatujo",
+   "app": "Galat器o",
+   "master": "Galatujo",
+   "reason": "galat/o は既にラテン、galatuj 始まりの小文字見出しは無い。"
+  },
+  {
+   "w": "Galegujo",
+   "app": "Galeg器o",
+   "master": "Galegujo",
+   "reason": "ガリシア(地名)。galeg-は語根でなくmasterもgalego/galegaをラテン維持、小文字普通名詞なし。"
+  },
+  {
+   "w": "Gallujo",
+   "app": "Gall器o",
+   "master": "Gallujo",
+   "reason": "ガリア(国名)。gall-(ll)は語根でなく、gal-(胆)とは綴りが異なり前方一致衝突もない。"
+  },
+  {
+   "w": "Gaskonujo",
+   "app": "Gaskon器o",
+   "master": "Gaskonujo",
+   "reason": "ガスコーニュ。-uj国名で、gaskono/gaskoniもmasterはラテン維持。容器読みなし。"
+  },
+  {
+   "w": "Georgurbo",
+   "app": "Georg市o",
+   "master": "Georgurbo",
+   "reason": "ジョージタウン。固有名+urbで小文字普通名詞なし(georgino=ダリアは前方一致外)。"
+  },
+  {
+   "w": "Greklando",
+   "app": "Grek国o",
+   "master": "Greklando",
+   "reason": "ギリシャ(国名)。-land国名で、masterもgreko/grekaをラテン維持しており普通名詞読みなし。"
+  },
+  {
+   "w": "Grekujo",
+   "app": "Grek器o",
+   "master": "Grekujo",
+   "reason": "ギリシャ(国名)。-uj国名で、grek+容器という普通名詞読みは非現実的。"
+  },
+  {
+   "w": "Gustavino",
+   "app": "Gustav女o",
+   "master": "Gustavino",
+   "reason": "人名グスタヴァ。人名+in(女性形)で同綴の普通名詞なし。"
+  },
+  {
+   "w": "Gvatemalurbo",
+   "app": "Gvatemal市o",
+   "master": "Gvatemalurbo",
+   "reason": "グアテマラシティ。固有地名+urbで小文字普通名詞なし。"
+  },
+  {
+   "w": "Helvetujo",
+   "app": "Helvet器o",
+   "master": "Helvetujo",
+   "reason": "スイス。-uj国名でhelveto/helvetaもmasterはラテン維持。"
+  },
+  {
+   "w": "Heraklidoj",
+   "app": "Herakl子oj",
+   "master": "Heraklidoj",
+   "reason": "ヘラクレスの子孫。神名+id(子孫)で普通名詞読みなし。"
+  },
+  {
+   "w": "Heslando",
+   "app": "Hes国o",
+   "master": "Heslando",
+   "reason": "ヘッセン。地名+landで、hesoもmasterはラテン維持。"
+  },
+  {
+   "w": "Hesujo",
+   "app": "Hes器o",
+   "master": "Hesujo",
+   "reason": "ヘッセン。-uj国名で普通名詞読みなし。"
+  },
+  {
+   "w": "Hindujo",
+   "app": "Hind器o",
+   "master": "Hindujo",
+   "reason": "インド。-uj国名でhindo/hindaもmasterはラテン維持、容器読みなし。"
+  },
+  {
+   "w": "Hispanujo",
+   "app": "Hispan器o",
+   "master": "Hispanujo",
+   "reason": "スペイン。-uj国名でhispano/hispanaもラテン維持。"
+  },
+  {
+   "w": "Hungarujo",
+   "app": "Hungar器o",
+   "master": "Hungarujo",
+   "reason": "ハンガリー。-uj国名でhungaro/hungaraもラテン維持。"
+  },
+  {
+   "w": "Iberujo",
+   "app": "Iber器o",
+   "master": "Iberujo",
+   "reason": "イベリア。-uj国名でibero/iberaもラテン維持、iberiso(草ᴵᴮ)は前方一致外。"
+  },
+  {
+   "w": "Italujo",
+   "app": "Ital器o",
+   "master": "Italujo",
+   "reason": "イタリア。-uj国名でitalo/italaもmasterはラテン維持。"
+  },
+  {
+   "w": "Ivo",
+   "app": "能ᴵo",
+   "master": "Ivo",
+   "reason": "人名イヴ。export上\"iv\"始まりはIvano/Ivoのみで衝突語なし(象牙はeburo)。現行の能ᴵo(-iv-接尾辞)は偽分解。"
+  },
+  {
+   "w": "Jakobino",
+   "app": "Jakob女o",
+   "master": "Jakobino",
+   "reason": "人名+in(女性形)。同綴の普通名詞なし。"
+  },
+  {
+   "w": "Japanujo",
+   "app": "Japan器o",
+   "master": "Japanujo",
+   "reason": "日本。-uj国名でjapana/japanoもmasterはラテン維持。"
+  },
+  {
+   "w": "Johanino",
+   "app": "Johan女o",
+   "master": "Johanino",
+   "reason": "ヨハンナ。人名+in(女性形)で同綴の普通名詞なし。"
+  },
+  {
+   "w": "Jordanujo",
+   "app": "Jordan器o",
+   "master": "Jordanujo",
+   "reason": "ヨルダン。-uj国名で普通名詞読みなし。"
+  },
+  {
+   "w": "Jorubolando",
+   "app": "Jorubo国o",
+   "master": "Jorubolando",
+   "reason": "ヨルバランド。民族固有名+landで、jorubo/jorubaもmasterはラテン維持。"
+  },
+  {
+   "w": "Jorubujo",
+   "app": "Jorub器o",
+   "master": "Jorubujo",
+   "reason": "同上。-uj国名で容器読みは非現実的。"
+  },
+  {
+   "w": "Jozefino",
+   "app": "Jozef女o",
+   "master": "Jozefino",
+   "reason": "ジョゼフィーヌ。人名+in(女性形)で同綴の普通名詞なし。"
+  },
+  {
+   "w": "Judujo",
+   "app": "Jud器o",
+   "master": "Judujo",
+   "reason": "ユダヤ(地名)。-uj国名でjudo/judaもラテン維持、容器読みは意味を成さない。"
+  },
+  {
+   "w": "Jugoslavujo",
+   "app": "Jugoslav器o",
+   "master": "Jugoslavujo",
+   "reason": "ユーゴスラビア。-uj国名でjugoslavo/jugoslavaもラテン維持。"
+  },
+  {
+   "w": "Jukonteritorio",
+   "app": "Jukon领o",
+   "master": "Jukonteritorio",
+   "reason": "ユーコン準州。固有地名+teritorioの固有名複合で小文字普通名詞なし。"
+  },
+  {
+   "w": "Juliino",
+   "app": "七月女o",
+   "master": "Juliino",
+   "reason": "人名Julia(女性形)専用。語根juliin-で始まる他語はマスターに0件(bleed=0)で、juli/o=七月・juli/a=七月aは無傷。小文字juliino「七月の女」は語として存在しない。"
+  },
+  {
+   "w": "Kabilujo",
+   "app": "Kabil器o",
+   "master": "Kabilujo",
+   "reason": "カビール人の国名。語根kabiluj-のbleed=0、kabil-は漢字マップ未登録。小文字kabilujoに普通名詞読みは無い。"
+  },
+  {
+   "w": "Kablando",
+   "app": "Kab国o",
+   "master": "Kablando",
+   "reason": "喜望峰地方の地名。kabland-のbleed=0で、kabl/o=缆(ケーブル)より長いので誤吸収も防げる。小文字kablando「岬の国」は実在しない造語。"
+  },
+  {
+   "w": "Kabulrivero",
+   "app": "Kabul河o",
+   "master": "Kabulrivero",
+   "reason": "カブール川の固有名。kabulriver-のbleed=0、rivero単体や他のkab-語に波及しない。小文字読みは無い。"
+  },
+  {
+   "w": "Kaburbo",
+   "app": "Kab市o",
+   "master": "Kaburbo",
+   "reason": "ケープタウンの地名。kaburb-のbleed=0。kab/oはマスターでもラテン(kab/o||kab/o)なので失うのは市のみ、小文字「岬の街」は実用語でない。"
+  },
+  {
+   "w": "Kafrujo",
+   "app": "Kafr器o",
+   "master": "Kafrujo",
+   "reason": "カフラリア(民族名+ujo)。kafruj-のbleed=0で、綴りの違うkafujo(コーヒー容器)には触れない。小文字kafrujoの普通名詞読みは無い。"
+  },
+  {
+   "w": "Kajenrivero",
+   "app": "辣ᴷᴶ河o",
+   "master": "Kajenrivero",
+   "reason": "カイエンヌ川の固有名。kajenriver-はkajen-より長くbleed=0なので、辣ᴷᴶのkajena piproは無傷のまま閉じられる。"
+  },
+  {
+   "w": "Kansasurbo",
+   "app": "Kansas市o",
+   "master": "Kansasurbo",
+   "reason": "カンザスシティの地名。kansasurb-のbleed=0、小文字読み無し。urbo単体には波及しない。"
+  },
+  {
+   "w": "Kapetidoj",
+   "app": "Kapet子oj",
+   "master": "Kapetidoj",
+   "reason": "カペー朝(王朝名+id)。kapetid-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Kariano",
+   "app": "蛀牙员ᴬo",
+   "master": "Kariano",
+   "reason": "カリア地方の住民。karian-のbleed=0で、kari/o=蛀牙(齲蝕)は前方一致上まったく別語のまま残る。小文字kariano「齲蝕の一員」は意味を成さない。"
+  },
+  {
+   "w": "Karolidoj",
+   "app": "Karol子oj",
+   "master": "Karolidoj",
+   "reason": "カロリング朝の王朝名。karolid-のbleed=0、小文字karolidoは実在しない。"
+  },
+  {
+   "w": "Karolino",
+   "app": "Karol女o",
+   "master": "Karolino",
+   "reason": "女性人名/地名。karolin-のbleed=1だが漢字行は0件で退行なし。小文字karolinoの普通名詞読みは無い。"
+  },
+  {
+   "w": "Kartvelujo",
+   "app": "Kartvel器o",
+   "master": "Kartvelujo",
+   "reason": "ジョージア(民族名+ujo)。kartveluj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Katalunujo",
+   "app": "Katalun器o",
+   "master": "Katalunujo",
+   "reason": "カタルーニャ(民族名+ujo)。katalunuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Keltujo",
+   "app": "Kelt器o",
+   "master": "Keltujo",
+   "reason": "ケルト人の国。keltuj-のbleed=0、小文字keltujoに固有名以外の読みは無い。"
+  },
+  {
+   "w": "Kimrujo",
+   "app": "Kimr器o",
+   "master": "Kimrujo",
+   "reason": "ウェールズ。kimruj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Kirgizujo",
+   "app": "Kirgiz器o",
+   "master": "Kirgizujo",
+   "reason": "キルギス。kirgizuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Klaranino",
+   "app": "清员ᴬ女o",
+   "master": "Klaranino",
+   "reason": "クララ会修道女(聖人名+an+in)。klaranin-のbleed=0で、klar-(清)語族はこの長い語根に一切吸収されない。小文字klaranino「清の女会員」は意味を成さない。"
+  },
+  {
+   "w": "Koloradolando",
+   "app": "Kolorado国o",
+   "master": "Koloradolando",
+   "reason": "コロラド州の地名。koloradoland-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Komilando",
+   "app": "Komi国o",
+   "master": "Komilando",
+   "reason": "コミ人の土地(民族名+lando)。komiland-のbleed=0、小文字読み無し。"
+  },
+  {
+   "w": "Koreujo",
+   "app": "Kore器o",
+   "master": "Koreujo",
+   "reason": "朝鮮。koreuj-のbleed=0で、kor/o(心)やkore(心から)には前方一致しない。小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Kristobapto",
+   "app": "Kristo洗ᴮo",
+   "master": "Kristobapto",
+   "reason": "キリストの洗礼という宗教固有名。kristobapt-のbleed=0で、Krist-は既に未対応、bapt-語族には波及しない。"
+  },
+  {
+   "w": "Kroatujo",
+   "app": "Kroat器o",
+   "master": "Kroatujo",
+   "reason": "クロアチア。kroatuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Kronido",
+   "app": "冠子o",
+   "master": "Kronido",
+   "reason": "クロノスの子(ゼウス)の神話名。kronid-のbleed=0で、kron/o=冠やkronik-=慢は無傷。小文字kronido「冠の子」は語として存在しない。"
+  },
+  {
+   "w": "Ksantipino",
+   "app": "Ksantip女o",
+   "master": "Ksantipino",
+   "reason": "クサンティッペ(人名)。ksantipin-のbleed=0、小文字読み無し。"
+  },
+  {
+   "w": "Kunluno",
+   "app": "共月o",
+   "master": "Kunluno",
+   "reason": "崑崙山脈の中国地名で、共月oは偽分解。kunlun-のbleed=0、小文字kunluno「共なる月」は実用語でない。"
+  },
+  {
+   "w": "Kurdujo",
+   "app": "Kurd器o",
+   "master": "Kurdujo",
+   "reason": "クルディスタン。kurduj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Lakonujo",
+   "app": "简ᴸ器o",
+   "master": "Lakonujo",
+   "reason": "ラコニア地方。lakonuj-はbleed=0でlakonismo/lakonaを巻き込まないため、Lakonioと違い安全に閉じられる。"
+  },
+  {
+   "w": "Laktovojo",
+   "app": "乳o路o",
+   "master": "Laktovojo",
+   "reason": "銀河の固有名。laktovoj-のbleed=0でlakt-/voj-語族に波及せず、小文字laktovojo「乳の道」の一般名詞用法は実質存在しない。"
+  },
+  {
+   "w": "Laplando",
+   "app": "菜ᴸᴾ国o",
+   "master": "Laplando",
+   "reason": "ラップランドの地名。lapland-のbleed=0で、lap/o=菜ᴸᴾ(ゴボウ)は無傷。小文字laplando「牛蒡の国」は語でない。"
+  },
+  {
+   "w": "Laponujo",
+   "app": "Lapon器o",
+   "master": "Laponujo",
+   "reason": "ラップ人の国。laponuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Latvujo",
+   "app": "Latv器o",
+   "master": "Latvujo",
+   "reason": "ラトビア。latvuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Leopoldino",
+   "app": "Leopold女o",
+   "master": "Leopoldino",
+   "reason": "女性人名(Leopold+in)。leopoldin-のbleed=0、小文字読み無し。"
+  },
+  {
+   "w": "Letonujo",
+   "app": "Leton器o",
+   "master": "Letonujo",
+   "reason": "ラトビア(民族名+ujo)。letonuj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Leviido",
+   "app": "Levi子o",
+   "master": "Leviido",
+   "reason": "レビ族(聖書固有名+id)。leviid-のbleed=0で、lev/i(挙げる)には前方一致しない。小文字leviidoは語として存在しない。"
+  },
+  {
+   "w": "Ligurujo",
+   "app": "Ligur器o",
+   "master": "Ligurujo",
+   "reason": "リグリア。liguruj-のbleed=0、小文字の普通名詞読みは無い。"
+  },
+  {
+   "w": "Liono",
+   "app": "他ono",
+   "master": "Liono",
+   "reason": "リヨン(市)のみ。小文字liono は語ではなく(獅子はleono)、マスターも Lion/o 一件のみ。現行の他ono は li=他 の誤前方一致でむしろ有害。"
+  },
+  {
+   "w": "Litovujo",
+   "app": "Litov器o",
+   "master": "Litovujo",
+   "reason": "リトアニア国名。マスターは litov/a・litov/o も含め族全体がラテンで、語幹litovujで前方一致する漢字語は皆無。"
+  },
+  {
+   "w": "Livonujo",
+   "app": "Livon器o",
+   "master": "Livonujo",
+   "reason": "リヴォニア国名。マスターの livon/o もラテンで一貫、語幹livonujの前方一致漢字語なし。"
+  },
+  {
+   "w": "Lombardujo",
+   "app": "当ᴸ器o",
+   "master": "Lombardujo",
+   "reason": "ロンバルディア国名。質屋は lombard/ej/o が正規で「lombardujo(質の容器)」という普通名詞は存在せず、語幹lombardujの衝突もなし。"
+  },
+  {
+   "w": "Longobardujo",
+   "app": "Longobard器o",
+   "master": "Longobardujo",
+   "reason": "ランゴバルド族の国。longobard/o もマスターでラテン、小文字普通名詞なし。"
+  },
+  {
+   "w": "Luareto",
+   "app": "Luar小o",
+   "master": "Luareto",
+   "reason": "ロワール(Luaro)の指小形の地名。luar-は語根ではなく小文字普通名詞は成立しない。"
+  },
+  {
+   "w": "Luarvalo",
+   "app": "Luar谷o",
+   "master": "Luarvalo",
+   "reason": "ロワール渓谷の固有地名。luar-が語根でないため小文字読みが無く、語幹luarvalの衝突もなし。"
+  },
+  {
+   "w": "Ludovikino",
+   "app": "Ludovik女o",
+   "master": "Ludovikino",
+   "reason": "人名Ludovikoの女性形。人名+-in-で普通名詞読みは無く、衝突語もなし。"
+  },
+  {
+   "w": "Luksemburgujo",
+   "app": "Luksemburg器o",
+   "master": "Luksemburgujo",
+   "reason": "ルクセンブルク国名。luksemburg/an/o は別語幹で影響を受けず、小文字普通名詞は存在しない。"
+  },
+  {
+   "w": "Luzido",
+   "app": "Luz子o",
+   "master": "Luzido",
+   "reason": "Luzo(ルーゾ)の裔=ポルトガル人の意の固有語。luz-という普通語根は無く(光はlum-)、luzern/luzul とは語幹が別。"
+  },
+  {
+   "w": "Luzidoj",
+   "app": "Luz子oj",
+   "master": "Luzidoj",
+   "reason": "同上の複数形(ルジアダス/ルーゾの裔)。小文字普通名詞は存在しない。"
+  },
+  {
+   "w": "Makedonujo",
+   "app": "Makedon器o",
+   "master": "Makedonujo",
+   "reason": "マケドニア国名。makedon/a・makedon/o ともマスターでラテン、語幹makedonujの衝突なし。"
+  },
+  {
+   "w": "Malagasujo",
+   "app": "Malagas器o",
+   "master": "Malagasujo",
+   "reason": "マダガスカル国名。malagas族は全ラテンで一貫し、小文字普通名詞なし。"
+  },
+  {
+   "w": "Malgrandazio",
+   "app": "反大azio",
+   "master": "Malgrandazio",
+   "reason": "小アジアの固有地名。語幹malgrandaziは他語と前方一致せず(malgranda 系は短くて別マッチ)、小文字同綴語も無い。"
+  },
+  {
+   "w": "Mariujo",
+   "app": "Mari器o",
+   "master": "Mariujo",
+   "reason": "マリ(Mari)の地名。mari-という普通語根は無く、mari/skarab/o とも語幹mariujで衝突しない。"
+  },
+  {
+   "w": "Marsokampo",
+   "app": "Marso田o",
+   "master": "Marsokampo",
+   "reason": "ローマのマルスの野。固有名の複合で小文字普通名詞は無く、語幹marsokampの衝突もなし。"
+  },
+  {
+   "w": "Mazdaismo",
+   "app": "Mazda主义o",
+   "master": "Mazdaismo",
+   "reason": "ゾロアスター教。Mazda/o 族が全ラテンで一貫し、語幹mazdaismの前方一致漢字語なし(宗派は救済しない方針通り)。"
+  },
+  {
+   "w": "Mazdaisto",
+   "app": "Mazda家o",
+   "master": "Mazdaisto",
+   "reason": "同上の信者。固有神名+-ist で普通名詞読みは無く、衝突語もなし。"
+  },
+  {
+   "w": "Meksikujo",
+   "app": "Meksik器o",
+   "master": "Meksikujo",
+   "reason": "メキシコ国名。meksik/an/o は別語幹で影響なし、小文字同綴の普通名詞も無い。"
+  },
+  {
+   "w": "Meksikurbo",
+   "app": "Meksik市o",
+   "master": "Meksikurbo",
+   "reason": "メキシコシティ。固有都市名で小文字普通名詞読みが無く、語幹meksikurbの衝突もなし。"
+  },
+  {
+   "w": "Merovidoj",
+   "app": "Merov子oj",
+   "master": "Merovidoj",
+   "reason": "メロヴィング家。Merov/o 族は全ラテン、人名+-id で普通名詞読み無し。"
+  },
+  {
+   "w": "Mezameriko",
+   "app": "中ameriko",
+   "master": "Mezameriko",
+   "reason": "中米の固有地域名。語幹mezamerikの前方一致漢字語は無く、小文字でも同一語。"
+  },
+  {
+   "w": "Mezoriento",
+   "app": "中东o",
+   "master": "Mezoriento",
+   "reason": "中東の固有地域名。マスター一件のみで語幹mezorientの衝突が無く、別義の同綴語も無い。"
+  },
+  {
+   "w": "Mezpacifiko",
+   "app": "中pacifiko",
+   "master": "Mezpacifiko",
+   "reason": "中部太平洋の固有地域名。語幹mezpacifikで前方一致する語は無い。"
+  },
+  {
+   "w": "Mitraejo",
+   "app": "Mitra所o",
+   "master": "Mitraejo",
+   "reason": "ミトラ神殿。Mitra/o 族は全ラテンで一貫し、語幹mitraejは mitr/a→冠ᴹ/a や mitral/o(机枪)と前方一致しない。"
+  },
+  {
+   "w": "Mitraismo",
+   "app": "Mitra主义o",
+   "master": "Mitraismo",
+   "reason": "ミトラ教。固有神名+-ism で普通名詞読み無し、語幹mitraismの衝突もなし。"
+  },
+  {
+   "w": "Mitraisto",
+   "app": "Mitra家o",
+   "master": "Mitraisto",
+   "reason": "ミトラ教徒。同上で語幹mitraistの前方一致漢字語なし。"
+  },
+  {
+   "w": "Moabido",
+   "app": "Moab子o",
+   "master": "Moabido",
+   "reason": "モアブ人。Moab/o 族は全ラテンで、地名+-id の普通名詞読みは無い。"
+  },
+  {
+   "w": "Moldavujo",
+   "app": "Moldav器o",
+   "master": "Moldavujo",
+   "reason": "モルドヴァ国名。moldav/o・moldav/a もラテンで一貫し、moldavik/o(草ᴹᴰ)とは語幹が別。"
+  },
+  {
+   "w": "Mongolujo",
+   "app": "Mongol器o",
+   "master": "Mongolujo",
+   "reason": "モンゴル国名。mongol/o・mongol/a はラテン、mongol/ism/o も語幹mongolujと前方一致しない。"
+  },
+  {
+   "w": "Montekristo",
+   "app": "山ekristo",
+   "master": "Montekristo",
+   "reason": "モンテ・クリスト(島・伯爵)。語幹montekristは他のmont-語と一致せず、小文字普通名詞も存在しない。"
+  },
+  {
+   "w": "Moraviano",
+   "app": "Moravi员ᴬo",
+   "master": "Moraviano",
+   "reason": "モラヴィア住民。Morav/o 族は全ラテンで、語幹moravianの前方一致漢字語なし。"
+  },
+  {
+   "w": "Moskvano",
+   "app": "Moskv员ᴬo",
+   "master": "Moskvano",
+   "reason": "モスクワ市民。Moskv/o 族はラテンで一貫、moskv-に普通語根の意味はない。"
+  },
+  {
+   "w": "Moskvulo",
+   "app": "Moskv者o",
+   "master": "Moskvulo",
+   "reason": "同上(-ul形)。固有地名派生のみで、小文字同綴の普通名詞は存在しない。"
+  },
+  {
+   "w": "Mozelvino",
+   "app": "Mozel酒o",
+   "master": "Mozelvino",
+   "reason": "モーゼルワイン。マスターは Mozel/o も Mozel/vin/o も全ラテンと裁定済みで、別義の同綴語も語幹衝突も無い。"
+  },
+  {
+   "w": "NRO",
+   "app": "N-木ᴿ",
+   "master": "NRO",
+   "reason": "非政府組織の略号。エスペラントに nr- で始まる語は無く、前方一致の巻き添えがゼロ。"
+  },
+  {
+   "w": "Napoleonidoj",
+   "app": "Napoleon子oj",
+   "master": "Napoleonidoj",
+   "reason": "ナポレオン家。Napoleon/o・Napoleon/a も全ラテンで、人名+-id の普通名詞読みは無い。"
+  },
+  {
+   "w": "Navarano",
+   "app": "Navar员ᴬo",
+   "master": "Navarano",
+   "reason": "ナバラ住民。Navar/o 族はラテンで一貫し、語幹navaranの衝突なし。"
+  },
+  {
+   "w": "Nazaretano",
+   "app": "Nazaret员ᴬo",
+   "master": "Nazaretano",
+   "reason": "ナザレ人。Nazaret/o 族は全ラテンで、naz-(鼻)とは語幹nazaretanが別物として長く一致するため干渉しない。"
+  },
+  {
+   "w": "Nigramara",
+   "app": "黑a海a",
+   "master": "Nigramara",
+   "reason": "黒海の形容詞。マスターは Nigr/a Mar/o も全ラテンで方針一貫、語幹nigramarで前方一致する漢字語は無く別義の同綴語も無い。"
+  },
+  {
+   "w": "Nordameriko",
+   "app": "北ameriko",
+   "master": "Nordameriko",
+   "reason": "北アメリカの固有地名。amerik は普通語根でなく、小文字 nordameriko という普通名詞は存在しない。"
+  },
+  {
+   "w": "Normandujo",
+   "app": "Normand器o",
+   "master": "Normandujo",
+   "reason": "ノルマンディーの地名+uj。小文字 normandujo に相当する普通名詞はない。"
+  },
+  {
+   "w": "Norvegujo",
+   "app": "Norveg器o",
+   "master": "Norvegujo",
+   "reason": "ノルウェーの国名専用形。普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Nubiano",
+   "app": "云i员ᴬo",
+   "master": "Nubiano",
+   "reason": "語根 nubi は存在せず(nub=雲は別語)、小文字 nubiano は正規派生にならない。地名+an の固有名のみ。"
+  },
+  {
+   "w": "Numidujo",
+   "app": "Numid器o",
+   "master": "Numidujo",
+   "reason": "古代ヌミディアの地名+uj。小文字の普通名詞は存在しない。"
+  },
+  {
+   "w": "Nurenbergano",
+   "app": "Nurenberg员ᴬo",
+   "master": "Nurenbergano",
+   "reason": "都市名ニュルンベルク+an の住民名。普通名詞読みはない。"
+  },
+  {
+   "w": "Oceanidinoj",
+   "app": "洋子女oj",
+   "master": "Oceanidinoj",
+   "reason": "オケアニス(神話のニンフ)。マスター方針で神話名はラテン維持が正しく、小文字 oceanidino の普通名詞用法はない。"
+  },
+  {
+   "w": "Okcitanujo",
+   "app": "Okcitan器o",
+   "master": "Okcitanujo",
+   "reason": "オクシタニアの地方名+uj。普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Orano",
+   "app": "金ano",
+   "master": "Orano",
+   "reason": "アルジェリアの都市名。or(金)+an は意味を成さず、小文字 orano は正規派生でない。"
+  },
+  {
+   "w": "Palestinano",
+   "app": "Palestin员ᴬo",
+   "master": "Palestinano",
+   "reason": "地名+an の住民名。小文字の普通名詞読みはない。"
+  },
+  {
+   "w": "Parcino",
+   "app": "Parc女o",
+   "master": "Parcino",
+   "reason": "運命の女神パルカの女性形。語根 parc はエスペラントに存在しない(公園は park)。"
+  },
+  {
+   "w": "Parnasano",
+   "app": "Parnas员ᴬo",
+   "master": "Parnasano",
+   "reason": "高踏派(詩派)の成員名。マスター方針で流派・宗派名はラテン維持が正しい。"
+  },
+  {
+   "w": "Parnasismo",
+   "app": "Parnas主义o",
+   "master": "Parnasismo",
+   "reason": "高踏主義=固有名由来の流派名。小文字の普通名詞読みはない。"
+  },
+  {
+   "w": "Parsiismo",
+   "app": "Parsi主义o",
+   "master": "Parsiismo",
+   "reason": "パールシー教=宗派名。マスター方針でラテン維持が正しい。"
+  },
+  {
+   "w": "Paskinsulo",
+   "app": "Pask岛o",
+   "master": "Paskinsulo",
+   "reason": "イースター島の固有地名のみを指し、小文字 paskinsulo という普通名詞は存在しない。"
+  },
+  {
+   "w": "Patagonujo",
+   "app": "Patagon器o",
+   "master": "Patagonujo",
+   "reason": "パタゴニアの地名+uj。普通名詞読みは存在しない。"
+  },
+  {
+   "w": "PatroNia",
+   "app": "父o我们a",
+   "master": "PatroNia",
+   "reason": "主の祈りの題名(語中大文字の引用形)。普通名詞としての小文字読みはない。"
+  },
+  {
+   "w": "Patronia",
+   "app": "父o我们a",
+   "master": "Patronia",
+   "reason": "同じく主の祈りの連結形。patrono の形容詞は patrona であり、小文字 patronia は正規派生でない。"
+  },
+  {
+   "w": "Peleido",
+   "app": "Pele子o",
+   "master": "Peleido",
+   "reason": "ペーレウスの子(アキレウス)の呼称。語根 pele はなく普通名詞読みはない。"
+  },
+  {
+   "w": "Pentekostano",
+   "app": "Pentekost员ᴬo",
+   "master": "Pentekostano",
+   "reason": "五旬節派=宗派名。マスター方針で宗派はラテン維持が正しく、Pentekost/o も既にラテン確定。"
+  },
+  {
+   "w": "Persujo",
+   "app": "Pers器o",
+   "master": "Persujo",
+   "reason": "ペルシアの国名専用形。小文字 persujo という普通名詞はない。"
+  },
+  {
+   "w": "Petrarkeca",
+   "app": "Petrark性a",
+   "master": "Petrarkeca",
+   "reason": "人名ペトラルカ+ec。普通名詞・普通形容詞としての小文字読みはない。"
+  },
+  {
+   "w": "Petrarkeska",
+   "app": "Petrark风ᴱa",
+   "master": "Petrarkeska",
+   "reason": "同じく人名+esk の様式形容詞。小文字の普通語読みはない。"
+  },
+  {
+   "w": "Petrarkismo",
+   "app": "Petrark主义o",
+   "master": "Petrarkismo",
+   "reason": "ペトラルカ主義=人名由来の流派名。普通名詞読みはない。"
+  },
+  {
+   "w": "Pikardujo",
+   "app": "Pikard器o",
+   "master": "Pikardujo",
+   "reason": "ピカルディの地方名+uj。普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Pindoj",
+   "app": "P值oj",
+   "master": "Pindoj",
+   "reason": "ピンドス山脈。マスターは小文字 pind/o もラテンのため、固定による漢字損失はない。"
+  },
+  {
+   "w": "Podo",
+   "app": "足ᴾᴼo",
+   "master": "Podo",
+   "reason": "map の pod→足 は sci 分類の結合形専用で、マスターに独立見出し pod/o は存在しない(podio/podagro等のみ)。"
+  },
+  {
+   "w": "Pollando",
+   "app": "Pol国o",
+   "master": "Pollando",
+   "reason": "ポーランドの国名。マスターは pol/a もラテンで、小文字 pollando という普通名詞はない。"
+  },
+  {
+   "w": "Polujo",
+   "app": "Pol器o",
+   "master": "Polujo",
+   "reason": "同国の旧国名形。pol は普通語根として漢字を持たず(pol/o もラテン)、小文字の普通名詞読みはない。"
+  },
+  {
+   "w": "Portlanda",
+   "app": "运国a",
+   "master": "Portlanda",
+   "reason": "ポートランド(セメント含む)由来の形容詞で、小文字用法でも指示対象は固有名。運国a は port/land の偽分解。"
+  },
+  {
+   "w": "Portlando",
+   "app": "运国o",
+   "master": "Portlando",
+   "reason": "都市名。port(運)+land(国)は意味を成さず、小文字 portlando の普通名詞読みはない。"
+  },
+  {
+   "w": "Portluiso",
+   "app": "运luiso",
+   "master": "Portluiso",
+   "reason": "ポートルイス(モーリシャス首都)の固有地名専用。"
+  },
+  {
+   "w": "Portoprinco",
+   "app": "运o侯o",
+   "master": "Portoprinco",
+   "reason": "ポルトープランスの固有地名。port+princ は普通複合語として意味を成さない。"
+  },
+  {
+   "w": "Portugalujo",
+   "app": "Portugal器o",
+   "master": "Portugalujo",
+   "reason": "ポルトガルの国名専用形。普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Prusujo",
+   "app": "Prus器o",
+   "master": "Prusujo",
+   "reason": "プロイセンの国名専用形。小文字 prusujo という普通名詞はない。"
+  },
+  {
+   "w": "Puranoj",
+   "app": "P天王星oj",
+   "master": "Puranoj",
+   "reason": "ヒンドゥー聖典プラーナ。語根 puran は存在せず、現行の P天王星oj は urano の誤前方一致で固定はむしろ改善。"
+  },
+  {
+   "w": "REF",
+   "app": "缩帆",
+   "master": "REF",
+   "reason": "全大文字の略号。小文字 ref は語尾を欠き単語として存在せず(縮帆は ref/i)、文頭衝突は起きない。"
+  },
+  {
+   "w": "REU",
+   "app": "再U",
+   "master": "REU",
+   "reason": "全大文字の団体略号。小文字 reu という単語は存在しない(現行の再U は re の誤前方一致)。"
+  },
+  {
+   "w": "Rafaeleca",
+   "app": "Rafael性a",
+   "master": "Rafaeleca",
+   "reason": "人名ラファエロ+ec の形容詞。普通名詞・普通形容詞としての小文字読みはない。"
+  },
+  {
+   "w": "Rejnlando",
+   "app": "Rejn国o",
+   "master": "Rejnlando",
+   "reason": "Rejn(ライン川)は固有名で語根登録が無く、小文字 rejnlando という普通名詞は存在しない。"
+  },
+  {
+   "w": "Romanio",
+   "app": "小说io",
+   "master": "Romanio",
+   "reason": "国名専用で小文字 romanio は存在しない。ただし前方一致で romanisto(小说家o)/romanika を巻き込まぬよう全語形単位で固定すること。"
+  },
+  {
+   "w": "Romanismo",
+   "app": "Rom员ᴬ主义o",
+   "master": "Romanismo",
+   "reason": "語幹Rom(ローマ)は既にラテンで-an+-ismの固有名派生。別義の小文字普通名詞は無く、損失は接辞漢字のみ。"
+  },
+  {
+   "w": "Rumanujo",
+   "app": "Ruman器o",
+   "master": "Rumanujo",
+   "reason": "-ujo国名は常に大文字で小文字 rumanujo は無い。小文字 rumana/rumano はラテンのままで前方一致衝突も無い。"
+  },
+  {
+   "w": "Rutenujo",
+   "app": "Ruten器o",
+   "master": "Rutenujo",
+   "reason": "地名の-ujo形で小文字 rutenujo は無い。小文字 ruteno/rutena はラテンで、ruteniato(ruteni盐ᴬo)とも前方一致しない。"
+  },
+  {
+   "w": "Sabenujo",
+   "app": "Saben器o",
+   "master": "Sabenujo",
+   "reason": "古代民族名+-ujoの国名で小文字形は無い。小文字 sabena/sabeno はラテンのままで衝突しない。"
+  },
+  {
+   "w": "Saksujo",
+   "app": "Saks器o",
+   "master": "Saksujo",
+   "reason": "-ujo国名専用。小文字 saksa/sakso はラテンで、saksikolo(鸟ˢˢ)等とも前方一致しない。"
+  },
+  {
+   "w": "Samariano",
+   "app": "Samari员ᴬo",
+   "master": "Samariano",
+   "reason": "地名Samarioの住民名で語幹は既にラテン。別義の小文字普通名詞は無く、損失は接辞漢字(员ᴬ)のみ。"
+  },
+  {
+   "w": "Sanmarino",
+   "app": "健浸ᴹᴿo",
+   "master": "Sanmarino",
+   "reason": "国名専用。小文字 sanmarino は意味を成さず(san+marinは偽分解)、san(健)系との前方一致衝突も無い。"
+  },
+  {
+   "w": "Santomeo",
+   "app": "健tomeo",
+   "master": "Santomeo",
+   "reason": "国名専用で小文字形は存在せず、san(健)を巻き込む前方一致も無い。"
+  },
+  {
+   "w": "Sara",
+   "app": "S群a",
+   "master": "Sara",
+   "reason": "人名専用で小文字 sara という語は無い(現行のS群aは-ar-の誤検出)。saraceni系は長い語根が優先され保護される。"
+  },
+  {
+   "w": "Saraj",
+   "app": "S群aj",
+   "master": "Saraj",
+   "reason": "地名・人名専用で、小文字 saraj という普通名詞は存在しない。"
+  },
+  {
+   "w": "Sardujo",
+   "app": "Sard器o",
+   "master": "Sardujo",
+   "reason": "-ujo国名専用。小文字 sarda/sardo はラテンで、sardino(鱼ˢᴰ)等とは前方一致しない。"
+  },
+  {
+   "w": "Sarlando",
+   "app": "Sar国o",
+   "master": "Sarlando",
+   "reason": "Sar(ザール川)は固有名で、小文字 sarlando という普通名詞は存在しない。"
+  },
+  {
+   "w": "Sarmatujo",
+   "app": "Sarmat器o",
+   "master": "Sarmatujo",
+   "reason": "古代民族の-ujo国名。小文字 sarmato はラテンのままで衝突しない。"
+  },
+  {
+   "w": "Saro",
+   "app": "S群o",
+   "master": "Saro",
+   "reason": "川名の固有名専用で、小文字 saro という語根・派生は存在しない。"
+  },
+  {
+   "w": "Sasanidoj",
+   "app": "Sasan子oj",
+   "master": "Sasanidoj",
+   "reason": "王朝名+-idの固有名で、小文字 sasan 系の普通名詞は存在しない。"
+  },
+  {
+   "w": "Senegalujo",
+   "app": "Senegal器o",
+   "master": "Senegalujo",
+   "reason": "-ujo国名形には小文字読みが無く、senegala(无等a)とは前方一致しない(現行も語幹はラテン、損失は器のみ)。"
+  },
+  {
+   "w": "Serapejo",
+   "app": "Serap所o",
+   "master": "Serapejo",
+   "reason": "神名Serapo+-ejの神殿名で、小文字 serap 系の普通名詞は存在しない。"
+  },
+  {
+   "w": "Serbujo",
+   "app": "Serb器o",
+   "master": "Serbujo",
+   "reason": "-ujo国名専用。小文字 serba/serbo はラテンのままで衝突が無く、損失は器のみ。"
+  },
+  {
+   "w": "SieraNevado",
+   "app": "己eraNevado",
+   "master": "SieraNevado",
+   "reason": "山脈の固有名専用で、小文字 sieranevado という普通名詞は存在しない。"
+  },
+  {
+   "w": "Sieraleono",
+   "app": "Siera狮o",
+   "master": "Sieraleono",
+   "reason": "国名専用で小文字形は無く、leono(狮)とは前方一致しないため漢字損失が波及しない。"
+  },
+  {
+   "w": "Skajpo",
+   "app": "S和ᴷpo",
+   "master": "Skajpo",
+   "reason": "ブランドの固有名で、小文字 skajpo という普通名詞は無い(現行のS和ᴷpoはkaj=和の誤検出)。"
+  },
+  {
+   "w": "Skandinavujo",
+   "app": "Skandinav器o",
+   "master": "Skandinavujo",
+   "reason": "-ujo地域名専用。小文字 skandinava/skandinavo はラテンのままで衝突しない。"
+  },
+  {
+   "w": "Skitujo",
+   "app": "Skit器o",
+   "master": "Skitujo",
+   "reason": "古代民族の-ujo国名。小文字 skita/skito はラテンで、skitereno(滑ˢ地ᵀᴺ)とは語頭が異なる。"
+  },
+  {
+   "w": "Skotlando",
+   "app": "Skot国o",
+   "master": "Skotlando",
+   "reason": "-lando国名専用。小文字 skota/skoto はラテンのままで前方一致衝突が無い。"
+  },
+  {
+   "w": "Slovakujo",
+   "app": "Slovak器o",
+   "master": "Slovakujo",
+   "reason": "-ujo国名専用で小文字形は無く、slovaka/slovako はラテンのまま。"
+  },
+  {
+   "w": "Slovenujo",
+   "app": "Sloven器o",
+   "master": "Slovenujo",
+   "reason": "-ujo国名専用で小文字形は無く、slovena/sloveno はラテンのまま。"
+  },
+  {
+   "w": "Somalujo",
+   "app": "Somal器o",
+   "master": "Somalujo",
+   "reason": "-ujo国名専用。小文字 somala/somalo はラテンのままで衝突しない。"
+  },
+  {
+   "w": "Sovetujo",
+   "app": "Sovet器o",
+   "master": "Sovetujo",
+   "reason": "-ujo国名専用。小文字 soveto/soveta はラテンのままで、損失は器のみ。"
+  },
+  {
+   "w": "Sovetunio",
+   "app": "Sovet联o",
+   "master": "Sovetunio",
+   "reason": "国名専用で小文字 sovetunio は無く、sovet系小文字はラテンのまま(損失は联のみ)。"
+  },
+  {
+   "w": "Sparta",
+   "app": "S部a",
+   "master": "Sparta",
+   "reason": "spart-は一般語根として未登録(別綴りのsparti/o=木ˢᴬのみ)で、小文字spartaの普通語読みは存在しない。現行S部aはpart(部)の誤マッチ。"
+  },
+  {
+   "w": "Sparto",
+   "app": "S部o",
+   "master": "Sparto",
+   "reason": "固有地名専用の綴りで、spart-は語根未登録。ラテン固定してもspartio(木ˢᴬ)は綴りが異なり無傷。"
+  },
+  {
+   "w": "Stefanino",
+   "app": "Stefan女o",
+   "master": "Stefanino",
+   "reason": "人名Stefan+in+oで、stefan-は一般語根に無く小文字普通名詞は存在しない。"
+  },
+  {
+   "w": "Svazilando",
+   "app": "Svazi国o",
+   "master": "Svazilando",
+   "reason": "Svazi=民族固有名+lando、svazi-の一般語根は無く小文字読みも同一固有名。"
+  },
+  {
+   "w": "Svedlando",
+   "app": "Sved国o",
+   "master": "Svedlando",
+   "reason": "マスターでもsved/oはラテン維持の固有民族名で、普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Svedujo",
+   "app": "Sved器o",
+   "master": "Svedujo",
+   "reason": "固有民族名sved+ujの国名形で、-ujoの容器読みも意味を成さない。"
+  },
+  {
+   "w": "Svislando",
+   "app": "Svis国o",
+   "master": "Svislando",
+   "reason": "マスターでもsvis/oはラテン維持の固有民族名、小文字普通名詞は無い。"
+  },
+  {
+   "w": "Svisujo",
+   "app": "Svis器o",
+   "master": "Svisujo",
+   "reason": "固有民族名svis+ujの国名形で普通名詞読みが無い。"
+  },
+  {
+   "w": "Tajlando",
+   "app": "Taj国o",
+   "master": "Tajlando",
+   "reason": "taj=固有民族名でtaj-の一般語根は無く、綴りの異なるtajlandano(taj/国/员ᴬ/o)への前方一致漏出も起きない。"
+  },
+  {
+   "w": "Tanganjiklando",
+   "app": "Tanganjik国o",
+   "master": "Tanganjiklando",
+   "reason": "固有地名Tanganjik+landoで小文字普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Tantroj",
+   "app": "T洞ᴬoj",
+   "master": "Tantroj",
+   "reason": "tantr-は語根未登録で、現行T洞ᴬojはantr(洞)の誤マッチにすぎず守るべき小文字語が無い。"
+  },
+  {
+   "w": "Tatarujo",
+   "app": "Tatar器o",
+   "master": "Tatarujo",
+   "reason": "マスターでもtatar/oはラテンの固有民族名、-ujo国名形で普通名詞読みは無い。"
+  },
+  {
+   "w": "Toskanujo",
+   "app": "Toskan器o",
+   "master": "Toskanujo",
+   "reason": "マスターでもtoskan/oはラテンの固有名で、-ujo国名形に普通名詞読みは無い。"
+  },
+  {
+   "w": "Trakio",
+   "app": "轨ᵀio",
+   "master": "Trakio",
+   "reason": "trak(轨)は語根だが-i-o国名接尾は民族名専用で、trak+i+oの普通名詞派生は成立しない。"
+  },
+  {
+   "w": "Trakujo",
+   "app": "轨ᵀ器o",
+   "master": "Trakujo",
+   "reason": "トラキア人+ujの国名形で、-ujoの容器読み「軌道入れ」は意味を成さず衝突語も無い。"
+  },
+  {
+   "w": "Turkmenujo",
+   "app": "Turkmen器o",
+   "master": "Turkmenujo",
+   "reason": "固有民族名Turkmen+ujの国名形で普通名詞読みは無い。"
+  },
+  {
+   "w": "Turkujo",
+   "app": "Turk器o",
+   "master": "Turkujo",
+   "reason": "マスターでもturk/oはラテンの固有民族名、「トルコ人入れ」の容器読みは成立しない。"
+  },
+  {
+   "w": "Ukrainujo",
+   "app": "Ukrain器o",
+   "master": "Ukrainujo",
+   "reason": "マスターでもukrain/oはラテンの固有民族名で、-ujo国名形に普通名詞読みは無い。"
+  },
+  {
+   "w": "Usono",
+   "app": "U声o",
+   "master": "Usono",
+   "reason": "uson-は語根未登録の国名で、現行U声oはson(声)の誤マッチ。ラテン固定はむしろ改善。"
+  },
+  {
+   "w": "Uzbekujo",
+   "app": "Uzbek器o",
+   "master": "Uzbekujo",
+   "reason": "マスターでもuzbek/oはラテンの固有民族名、-ujo国名形で普通名詞読みは無い。"
+  },
+  {
+   "w": "Valonujo",
+   "app": "Valon器o",
+   "master": "Valonujo",
+   "reason": "マスターでもvalon/oはラテンの固有民族名で、val(谷)とは綴り境界が異なり普通名詞読みは無い。"
+  },
+  {
+   "w": "Vatikanurbo",
+   "app": "Vatikan市o",
+   "master": "Vatikanurbo",
+   "reason": "Vatikanが固有地名で、urb(市)は一般語根だが合成全体は固有国名にしかならない。"
+  },
+  {
+   "w": "Venecilando",
+   "app": "Veneci国o",
+   "master": "Venecilando",
+   "reason": "固有地名Veneci+landoで、veneci-の一般語根は無い。"
+  },
+  {
+   "w": "Verdakabo",
+   "app": "绿akabo",
+   "master": "Verdakabo",
+   "reason": "verdは一般語根だが形容詞語幹+名詞のベタ書き合成は通常書かず(verda kaboと分かち書き)、この綴りは固有国名専用。"
+  },
+  {
+   "w": "Viktorina",
+   "app": "Viktor女a",
+   "master": "Viktorina",
+   "reason": "人名Viktor+in+aで、viktor-は一般語根に無い(勝利はvenk-)。"
+  },
+  {
+   "w": "Viktorino",
+   "app": "Viktor女o",
+   "master": "Viktorino",
+   "reason": "人名Viktor+in+oの女性名で、小文字普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Vilhelmino",
+   "app": "Vilhelm女o",
+   "master": "Vilhelmino",
+   "reason": "人名Vilhelm+in+oで、vilhelm-は一般語根に無い。"
+  },
+  {
+   "w": "Vjetnamujo",
+   "app": "Vjetnam器o",
+   "master": "Vjetnamujo",
+   "reason": "マスターでもvjetnam/oはラテンの固有民族名、-ujo国名形で普通名詞読みは無い。"
+  },
+  {
+   "w": "Voltalando",
+   "app": "Volta国o",
+   "master": "Voltalando",
+   "reason": "Volta=固有地名(オートボルタ)でマップにvolt語根の登録も無く、小文字普通名詞読みは存在しない。"
+  },
+  {
+   "w": "Zoe",
+   "app": "兽ᶻe",
+   "master": "Zoe",
+   "reason": "人名で、現行兽ᶻeはzo(兽)の誤マッチ。マスターにzoeで始まる一般語が無く前方一致の巻き添えも生じない。"
+  },
+  {
+   "w": "Zululando",
+   "app": "Zulu国o",
+   "master": "Zululando",
+   "reason": "マスターでもzulu/oはラテンの固有民族名で、小文字普通名詞読みは存在しない。"
+  },
+  {
+   "w": "ace",
+   "app": "科ᴬe",
+   "master": "ace",
+   "reason": "マスターは ace/ を PIV の化学接頭辞として単独ラテン維持。app の 科ᴬe は生物科名接尾辞 -ac-(科) への綴り一致誤爆で、acer(枫)/acet(醋)/aceton は語幹が長く最長一致で保護されるため衝突なし。"
+  },
+  {
+   "w": "adsorbi",
+   "app": "ad吸ˢᴿi",
+   "master": "adsorbi",
+   "reason": "マスターは adsorb/i を単一語根でラテン維持（国際語まるごと借用）。app の ad吸ˢᴿi は先頭に未処理の ad が残る典型的な偽分解で、adsorb 始まりの他語もなく衝突なし。"
+  },
+  {
+   "w": "aina",
+   "app": "a女a",
+   "master": "aina",
+   "reason": "マスターは ain/a をラテン維持（アイヌ民族名）。a+in(女)+a は純然たる綴り一致誤分解で、ain 始まりの語は ain 系のみ、衝突なし。"
+  },
+  {
+   "w": "aino",
+   "app": "a女o",
+   "master": "aino",
+   "reason": "aina と同一語幹 ain（アイヌ人）。マスターはラテン維持、app の a女o は誤分解、衝突する漢字語なし。"
+  },
+  {
+   "w": "aktinistoj",
+   "app": "ak桶ᵀ家oj",
+   "master": "aktinistoj",
+   "reason": "マスターは aktinist/oj をラテン維持（分類群 Actinistia）。app の ak桶ᵀ家oj は tin(桶)+ist(家) への誤爆で意味不通、語幹8字のため aktin(射)系とも衝突しない。"
+  },
+  {
+   "w": "alkanalo",
+   "app": "alkan向o",
+   "master": "alkanalo",
+   "reason": "マスターは alk/an/al/o を全部ラテン維持（PIV 系統的化学名）。app の 向 は前置詞 al への誤爆で、alkanal 始まりの派生語は存在せず衝突なし。"
+  },
+  {
+   "w": "alkanolo",
+   "app": "alkan比o",
+   "master": "alkanolo",
+   "reason": "マスターは alk/an/ol/o をラテン維持。唯一の前方一致語 alkanolato はマスターも alk/an/ol/盐ᴬ/o であり、alkanol をラテン固定しても結果は同一（無害な衝突）。"
+  },
+  {
+   "w": "anormala",
+   "app": "a正ᴺa",
+   "master": "anormala",
+   "reason": "マスターは anormal/a を単一語根でラテン維持（借用の a-normal）。app は先頭 a を残したまま 正ᴺ を当てる偽分解で、anormal 始まりの漢字語もなく衝突なし。"
+  },
+  {
+   "w": "atrakcio",
+   "app": "a拉ᵀᴷo",
+   "master": "atrakcio",
+   "reason": "マスターは atrakci/o をラテン維持（出し物の意）。app の a拉ᵀᴷo は先頭 a が浮いた trakci(拉) 誤爆で、atrakci 始まりの他語もなく衝突なし。"
+  },
+  {
+   "w": "balta",
+   "app": "b高a",
+   "master": "balta",
+   "reason": "マスターは balt/a をラテン維持（バルト人＝民族名で救済不要）。b+alt(高) は誤分解。前方一致する balte/o(带ᴮᴸ) は語幹が1字長く最長一致で保護される。"
+  },
+  {
+   "w": "balto",
+   "app": "b高o",
+   "master": "balto",
+   "reason": "balta と同一語幹 balt（バルト人）。マスターはラテン維持、app の b高o は誤分解、balteo は語幹が長いため無傷。"
+  },
+  {
+   "w": "beja",
+   "app": "b所a",
+   "master": "beja",
+   "reason": "マスターは bej/a をラテン維持（馬の赤褐色＝bay）。app の b所a は場所接尾辞 ej への誤爆で意味不通、衝突なし。"
+  },
+  {
+   "w": "bejo",
+   "app": "b所o",
+   "master": "bejo",
+   "reason": "マスターは bej/o をラテン維持（トルコの太守 bey）。b+ej(所) は綴り一致誤分解で、bej 始まりの漢字語は存在しない。"
+  },
+  {
+   "w": "blezi",
+   "app": "b伤ᴸi",
+   "master": "blezi",
+   "reason": "マスターは blez/i をラテン維持（舌足らずに発音する）。b+lez(伤) は誤分解で、blez 始まりの漢字語はなく衝突なし。"
+  },
+  {
+   "w": "bluti",
+   "app": "b焊i",
+   "master": "bluti",
+   "reason": "マスターは blut/i をラテン維持（粉をふるう）。b+lut(焊=はんだ付け) は無関係な誤爆で、blut 始まりの他語もない。"
+  },
+  {
+   "w": "brazi",
+   "app": "b剃i",
+   "master": "brazi",
+   "reason": "マスターは braz/i をラテン維持（ろう付け）。b+raz(剃) は誤分解。brazil は語幹が長くマスターもラテンのため衝突なし。"
+  },
+  {
+   "w": "dabi",
+   "app": "d杉",
+   "master": "dabi",
+   "reason": "マスターは dab/i をラテン維持（軽く押し当てて拭く）。app の d杉 は abi(モミ)への誤爆で意味不通、dab 始まりの漢字語なし。"
+  },
+  {
+   "w": "dopi",
+   "app": "d组i",
+   "master": "dopi",
+   "reason": "マスターは派生語でも dop をラテン維持（dop/ad/o→dop/行/o）。d+op(组) は誤分解で、dopler も語幹が長くマスターもラテンのため衝突なし。"
+  },
+  {
+   "w": "dora",
+   "app": "d金a",
+   "master": "dora",
+   "reason": "マスターは dor/a をラテン維持（ドリア旋法）、dor/i/an/o も同様。app の d金a は or(金)への誤爆で、dorm/dorlot/dors は語幹が長く無傷。"
+  },
+  {
+   "w": "enharmonaj",
+   "app": "内谐ᴴᴬaj",
+   "master": "enharmonaj",
+   "reason": "マスターは enharmon を単一語根としてラテン維持（音楽用語の丸ごと借用＝国際語融合基準）。app の 内谐ᴴᴬ は en+harmon の再分解で、enharmon 始まりの漢字語もなく衝突なし。"
+  },
+  {
+   "w": "esperanta",
+   "app": "望在a",
+   "master": "esperanta",
+   "reason": "マップに proper/esperant=未対応 が明示登録されており（未対応センチネル漏れ）、マスターは esperant/ist/o→esperant/家/o 等 一族すべてで esperant をラテン維持。望在a は明確な違反。"
+  },
+  {
+   "w": "esperante",
+   "app": "望在e",
+   "master": "esperante",
+   "reason": "同上。マスターは「希望して」の意の esperant/e も ##偽分解(衝突語) と注記した上でラテン描画しており、衝突を認識済みで両義ともラテンと裁定している。"
+  },
+  {
+   "w": "esperanto",
+   "app": "望在o",
+   "master": "esperanto",
+   "reason": "同上。esperant は proper/未対応 の13語根の一つで、「希望する人」の語義も ##偽分解(衝突語) 付きでラテン維持と明記されている。"
+  },
+  {
+   "w": "filipina",
+   "app": "filip女a",
+   "master": "filipina",
+   "reason": "マスターは filipin/an/o→filipin/员ᴬ/o と filipin をラテン維持。filip+in(女) は綴り一致誤分解で、filipin 始まりの漢字語はなく衝突なし。"
+  },
+  {
+   "w": "grondi",
+   "app": "gr波i",
+   "master": "grondi",
+   "reason": "マスターは grond/i をラテン維持（=grundi）。gr+ond(波) は誤分解で、grond 始まりの漢字語はない。"
+  },
+  {
+   "w": "henikoz",
+   "app": "嘶ikoz",
+   "master": "henikoz",
+   "reason": "マスターは henikoz/ をラテン維持（PIV の炭素21接頭辞、alk/ と同型）。app の 嘶ikoz は heni(いななく)への誤爆で意味不通、7字語幹で衝突なし。"
+  },
+  {
+   "w": "hopi",
+   "app": "h组i",
+   "master": "hopi",
+   "reason": "マスターは hop/i・hop/o・hop/ad/i→hop/行/i と一貫して hop をラテン維持。h+op(组) は誤分解で衝突なし。"
+  },
+  {
+   "w": "impozi",
+   "app": "im姿ᴾi",
+   "master": "impozi",
+   "reason": "マスターは impoz/i をラテン維持（印刷の組付け）。先頭 im が浮いた 姿ᴾ 誤爆で、impoz 始まりの漢字語はない（imposto は別綴り）。"
+  },
+  {
+   "w": "indenti",
+   "app": "in齿i",
+   "master": "indenti",
+   "reason": "マスターは indent/i をラテン維持（=des^ovi）。in- はエスペラントの接頭辞ではなく、先頭 in を残した 齿 誤爆は典型的偽分解、衝突なし。"
+  },
+  {
+   "w": "iniciatoro",
+   "app": "创ᴵᶜ金o",
+   "master": "iniciatoro",
+   "reason": "マスターは iniciator/o をラテン維持。app の 创ᴵᶜ金o は -or- を「金(or)」と読む明白な誤りで、語幹9字は iniciat(创) より長いため iniciati/iniciato の 创 は保持される。"
+  },
+  {
+   "w": "invoki",
+   "app": "in呼i",
+   "master": "invoki",
+   "reason": "マスターは invok/i をラテン維持（法：援用する）。先頭 in が浮いた vok(呼) 誤爆で、invok 始まりの漢字語もなく衝突なし。"
+  },
+  {
+   "w": "kalumeto",
+   "app": "k柴o",
+   "master": "kalumeto",
+   "reason": "master は kalumet/o 単一語根。app は k+alumet(マッチ棒→柴)と綴り一致で切っており、平和パイプ calumet は atomic 借用語なので偽分解。"
+  },
+  {
+   "w": "klami",
+   "app": "k跛i",
+   "master": "klami",
+   "reason": "master は klam/i 単一語根。app の k+lam(跛)は綴り一致の偽分解(ただし固定は語形 klami 限定にし、klamidomonad/o=藻ᴷᴰ を prefix で巻き込まないこと)。"
+  },
+  {
+   "w": "lila",
+   "app": "l具a",
+   "master": "lila",
+   "reason": "master は lil/a(ライラック色)。app の l+il(具)+a は残片 l を生む明白な偽分解で意味的にも無根拠。"
+  },
+  {
+   "w": "majorano",
+   "app": "major员ᴬo",
+   "master": "majorano",
+   "reason": "master は majoran/o 単一語根。マヨラナは atomic な植物名で、app の major+an(员ᴬ)は接尾辞 -an- との綴り一致の偽分解。"
+  },
+  {
+   "w": "merkapto",
+   "app": "链节捕o",
+   "master": "merkapto",
+   "reason": "master は merkapto/ も merkaptan/o もラテン維持。app の mer(链节)+kapt(捕)は化学語を語根合成に見せかけた偽分解。"
+  },
+  {
+   "w": "moreloj",
+   "app": "m耳oj",
+   "master": "moreloj",
+   "reason": "master は morel/oj 単一語根。app の m+orel(耳)は残片 m を生む綴り一致の偽分解。"
+  },
+  {
+   "w": "neralo",
+   "app": "ner向o",
+   "master": "neralo",
+   "reason": "master 自身が ner/al/o と分節しつつラテン維持(piridoks/al/fosf/at/o でも al はラテン)。app の化学接尾辞 -al- を前置詞 al(向)と読む処理が誤り。"
+  },
+  {
+   "w": "nitrozo",
+   "app": "氮富ᴼo",
+   "master": "nitrozo",
+   "reason": "master は nitrozo/ 単一語根で nitrozo/il/o=nitrozo/基/o でもラテン維持。app の nitr(氮)+oz(富ᴼ)は master 方針に反する分解。"
+  },
+  {
+   "w": "nono",
+   "app": "壬o",
+   "master": "nono",
+   "reason": "non→壬 は bare alias ledger で「アルキル語幹隣接」限定(non/an/o=壬an o)。裸の non/o(九度)は master でラテンなので文脈ゲート漏れ。固定は語形 nono 限定にし non/an/o の 壬 を残すこと。"
+  },
+  {
+   "w": "piridoksalo",
+   "app": "piridoks向o",
+   "master": "piridoksalo",
+   "reason": "master は piridoks/al/o とラテン維持(piridoks/al/fosf/at/o でも al はラテン)。app が化学 -al- を前置詞 al(向)と誤認している。"
+  },
+  {
+   "w": "piridoksolo",
+   "app": "piridoks比o",
+   "master": "piridoksolo",
+   "reason": "master は piridoks/ol/o とラテン維持。app が化学 -ol- を接続詞 ol(比)と誤認しており neralo/alkanolo と同型の誤り。"
+  },
+  {
+   "w": "precepto",
+   "app": "p方ᴿo",
+   "master": "precepto",
+   "reason": "master は precept/o 単一語根。app の p+recept(方ᴿ)+o は残片 p を生む綴り一致の偽分解。"
+  },
+  {
+   "w": "sarda",
+   "app": "s热ᴬa",
+   "master": "sarda",
+   "reason": "master は sard/a ラテン(sard/oniks/o でも sard はラテン)。app の s+ard(热ᴬ)は残片 s を生む偽分解で、対象は固有名系。"
+  },
+  {
+   "w": "semidoj",
+   "app": "s龟ᴱoj",
+   "master": "semidoj",
+   "reason": "master は semid/o・semid/a・semid/oj いずれもラテン(民族名)。app の s+emid(亀 emido)は残片 s を生む偽分解。"
+  },
+  {
+   "w": "seskvi",
+   "app": "s风ᴱ你",
+   "master": "seskvi",
+   "reason": "master は seskvi/ 単一語根(sesqui- 1.5倍)。app が末尾を代名詞 vi(你)と読むのは明白な偽分解。"
+  },
+  {
+   "w": "tioaldehido",
+   "app": "那oaldehido",
+   "master": "tioaldehido",
+   "reason": "化学接頭辞 thio-(硫)を相関詞 tio(那)と誤認している。master は tio/aldehid/o 全体をラテン維持。"
+  },
+  {
+   "w": "tioamido",
+   "app": "那oamido",
+   "master": "tioamido",
+   "reason": "同じく thio- を相関詞 tio(那)と誤認。master は tio/amid/o をラテン維持で、語頭固定しても相関詞 tio 自体には影響しない。"
+  },
+  {
+   "w": "tioetero",
+   "app": "那oetero",
+   "master": "tioetero",
+   "reason": "thio- を相関詞 tio(那)と誤認した偽分解。master は tio/eter/o をラテン維持。"
+  },
+  {
+   "w": "tiofenolo",
+   "app": "那ofenolo",
+   "master": "tiofenolo",
+   "reason": "thio- を相関詞 tio(那)と誤認した偽分解。master は tio/fen/ol/o をラテン維持。"
+  },
+  {
+   "w": "tioketono",
+   "app": "那oketono",
+   "master": "tioketono",
+   "reason": "thio- を相関詞 tio(那)と誤認した偽分解。master は tio/keton/o をラテン維持。"
+  },
+  {
+   "w": "undek",
+   "app": "un十",
+   "master": "undek",
+   "reason": "master は undek/ 単一語根(化学 undec-, C11)。app の un+dek(十)は数詞 dek との綴り一致による偽分解。"
+  }
+ ],
+ "closable_refuted": [
+  {
+   "w": "Adampomo",
+   "app": "Adam苹o",
+   "master": "Adampomo",
+   "reason": "固有名詞ではなく普通名詞(のど仏)。CLOSABLEの前提『固有名詞としてしか存在しない』が事実として誤り。マスターは語根pomに常に苹を与える(pom/o→苹/o, pom/uj/o→苹/器/o, pom/arb/o→苹/树/o)。PIV通りの小文字adampomoならマスター規則上adam/苹/oが期待されるが、アプリは大小文字非区別なのでラテン固定は小文字読みの苹も殺す。※bleedは0(adampom前方一致1件)なので、マスター実測値Adam/pom/o=ラテンを権威として優先するなら覆せる裁定。"
+  },
+  {
+   "w": "Adventisto",
+   "app": "Advent家o",
+   "master": "Adventisto",
+   "reason": "『宗派の一員』を表す普通名詞で、エスペラントでは通常小文字(kristano/baptisto/metodisto型)。マスターは同型のbapt/ist/o→洗ᴮ/家/o(小文字)とBapt/ist/o→ラテン(大文字)を両方登録しており、この語類が大小文字で割当を分ける実例が現に存在する。人名由来-istも小文字なら家付与(marks/家・stalin/家・trocki/家・budh/佛家)。アプリは大小文字非区別なのでラテン固定は小文字読みの家を一律に抑圧する。※bleedは0。"
+  },
+  {
+   "w": "Akvinano",
+   "app": "Akvin员ᴬo",
+   "master": "Akvinano",
+   "reason": "-anoは『アクィノの住人』を表す派生普通名詞。マスターは同一構文を小文字なら员ᴬ付きで描画する(brazil/an/o→brazil/员ᴬ/o、bohem/i/an/o→bohem/i/员ᴬ/o、francisk/an/o→francisk/员ᴬ/o)。小文字akvinanoは正規の普通名詞として成立し得るのに、アプリは大小文字非区別なのでラテン固定が员ᴬを殺す。※bleedは0(akvinan前方一致は自身の語形のみ、akv/水やAkvintとは分岐)。"
+  },
+  {
+   "w": "Aleksandrianismo",
+   "app": "Aleksandri员ᴬ主义o",
+   "master": "Aleksandrianismo",
+   "reason": "-an+-ismは主義名を作る普通名詞。マスターの/an/ism/oは小文字12件超(kartezi/员ᴬ/主义, luter/, nestori/, pelagi/, volter/, kanti/, francisk/, amerik/, maltus/, konfuce/, krist/, arj/)が全て漢字付きで、大文字ラテンは4件のみ。人名・地名由来でも小文字化して漢字を付けるのがマスターの多数派であり、小文字aleksandrianismoは正規に成立する。ラテン固定は员ᴬ主义を抑圧する。※bleedは0。"
+  },
+  {
+   "w": "Anakreoneska",
+   "app": "Anakreon风ᴱa",
+   "master": "Anakreoneska",
+   "reason": "-eskは『〜風の』を作る生産的接尾辞で、生成語は定義上の普通形容詞。マスターは同じ詩人名由来の小文字bokac^/esk/a→bokac^/风ᴱ/aに风ᴱを与えており、japan/esk/a→japan/风ᴱ/a等も同様。小文字anakreoneskaは正規の形容詞として十分成立し、ラテン固定は风ᴱを殺す。※bleedは0なので、Dant/esk/a・Petrark/esk/aと揃える方針を採るなら覆せる。"
+  },
+  {
+   "w": "Antilano",
+   "app": "Antil员ᴬo",
+   "master": "Antilano",
+   "reason": "『アンティル諸島の住人』を表す-ano派生普通名詞。マスターは同一構文を小文字なら员ᴬ付きで描画する(brazil/an/o→brazil/员ᴬ/o、amerik/an/ism/o、bohem/i/an/o)。小文字antilanoは正規に成立し得るのに、アプリの大小文字非区別ゆえラテン固定が员ᴬを殺す。※bleedは0(antilop/羚ᴬ・antilid/豆ᴬᴺは6文字目で分岐し無傷)。"
+  },
+  {
+   "w": "Atenano",
+   "app": "Aten员ᴬo",
+   "master": "Atenano",
+   "reason": "『アテナイ人』を表す-ano派生普通名詞。マスターは同一構文を小文字brazil/an/o→brazil/员ᴬ/o、bohem/i/an/o→员ᴬで漢字付与する一方、Aten/an/oは大文字ラテンという分裂状態にある。アプリは大小文字非区別なので、ラテン固定は小文字表記atenanoの员ᴬを殺す。※bleedは0(atenanは6文字で、Atenc害ᴬ/Atend待ᴬ/Atent注とは5文字目で分岐)。大文字-ano 65件の一貫クラスを優先する方針なら覆せる。"
+  },
+  {
+   "w": "Atikeco",
+   "app": "Atik性o",
+   "master": "Atikeco",
+   "reason": "語根atikは小文字の一般語生活を持つ: マスターにatik/a(小文字)、atik/ism/o→atik/主义/o、atik/it/o→atik/炎ᵀ/oが存在し、atiko自体が建築・解剖の『屋階/上鼓室』という普通名詞。さらにAtik/ec/oはマスター62k中、句を除けば唯一の大文字/ec/o(小文字/ec/oは1036件全てに性)であり、大文字化自体が異常値の疑いが濃い。ラテン固定は小文字読みatikecoの性を殺す。※fanatikecoはfanatikec(9文字)キーで保護済み、bleedは0。"
+  },
+  {
+   "w": "Bizancismo",
+   "app": "Bizanc主义o",
+   "master": "Bizancismo",
+   "reason": "-ismoは教義・傾向を表す普通名詞。マスターは固有名由来でも小文字化して主义を与える実例を多数持つ: Babel/o(大文字)に対しbabel/ism/o→babel/主义/o、他にbelg/ism/o・arab/ism/o・atik/ism/o・kalvin/ism/o・marks/ism/o・stalin/ism/oが全て小文字で主义。同一構文でBizanc/ism/oだけ大文字ラテンなのは揺れであり、小文字bizancismoは正規の普通名詞として成立する。アプリ非区別ゆえ固定は主义を殺す。※bleedは0。"
+  },
+  {
+   "w": "Bonapartisto",
+   "app": "Bonapart家o",
+   "master": "Bonapartisto",
+   "reason": "政治党派員を表す普通名詞で、通常小文字表記。マスターは人名由来-istを小文字なら家付与する例が多数(marks/ist/o→marks/家, stalin/ist/o→stalin/家, trocki/ist/o→trocki/家)。加えてBapt/ist/o(ラテン)とbapt/ist/o(洗ᴮ/家/o)の大小文字二重登録が、この語類で割当が大小文字により割れる事実を証明している。アプリは非区別なのでラテン固定は小文字読みの家を潰す。※bleedは0(bonapartist前方一致1件)。"
+  },
+  {
+   "w": "Diano",
+   "app": "二ᴰᴵano",
+   "master": "Diano",
+   "reason": "危険。Dianoは語根+語尾なので固定キーは裸の4字語根dianにならざるを得ず、これはマスター漢字語根diant(石=ナデシコ/カーネーション)の真の接頭辞になる。dianto/diantojは正規の普通名詞で文頭大文字化が普通に起こり(例 Diantoj floras.)、大小文字無視のprefixエンジンでdianが先に食えば石が消える。しかも未対応センチネルの最長一致処理は現在まさに修理中(タスク#17: 13語根/949箇所の漏れ、うちum/rus/angl/germanが同型の接頭辞ハザード)であり、修理完了・回帰検証前に同型を増やすべきでない。現行の二ᴰᴵano誤マッチはdiant側を壊さない別手段(語全体の例外登録等)で是正すべき。"
+  },
+  {
+   "w": "Diono",
+   "app": "二ᴰᴵono",
+   "master": "Diono",
+   "reason": "危険。固定キーは裸の4字語根dionとなり、マスター漢字語根dione(草ᴰᴺ=ハエトリグサ属Dionaea)の真の接頭辞になる。dioneo/dioneojは植物の普通名詞で文頭大文字化しうるため、最長一致が効かなければ草が消える。stadion/o(赛场)等の内部出現は最左一致で守られるが、dione衝突だけは最長一致依存で、その未対応センチネル処理が現在修理中(#17)。修理・検証完了までは固定すべきでない。"
+  },
+  {
+   "w": "Doro",
+   "app": "D金o",
+   "master": "Doro",
+   "reason": "最も危険。Dor/oは語根+語尾なので固定キーは3字語根dorとなり、dorm(睡)/dors(背)/dorn(刺)/dorlot(宠)/dorid(贝)という5つの漢字語根の真の接頭辞になる。dormi・dorso・dorno・dorlotiは基礎語彙で文頭大文字(Dormas…/Dorso…)が日常的に発生し、最長一致が1箇所でも崩れれば大量退行になる。さらにdorを内部に含む漢字見出しが113語(ador/i拜, odor等)あり露出面が本バッチ最大。現行のD金o誤マッチ1語の是正という利得に対しリスクが釣り合わず、かつ未対応センチネル漏れが13語根949箇所で未修理(#17)の現時点では固定不可。"
+  },
+  {
+   "w": "Frankujo",
+   "app": "Frank器o",
+   "master": "Frankujo",
+   "reason": "frank/o は【貨】フラン(=100 centimoj)＝小文字の可算具体名詞(PIV確認)。X/uj/o=容器はマスターに400件超の生きた造語型(mon/uj/o=钱/器/o, benzin/uj/o=汽油/器/o, ink/uj/o=墨/器/o)。よって小文字 frankujo=「フラン入れ(小銭入れ)」は monujo と完全に平行な正規の普通名詞として成立し、ラテン固定は uj=器 を失わせる。「固有名詞としてしか存在しない」は偽。"
+  },
+  {
+   "w": "Galileano",
+   "app": "Galile员ᴬo",
+   "master": "Galileano",
+   "reason": "エスペラントでは地名・人名由来の -ano 派生は小文字の普通名詞であり、マスター自身が pariz/an/o=pariz/员ᴬ/o、krist/an/o=krist/员ᴬ/o、eu^rop/an/o=eu^rop/员ᴬ/o と小文字で 员ᴬ を与えている。galileano(ガリラヤ人/キリスト教徒の意でも用いる)は同型の小文字普通名詞として完全に成立し、ラテン固定は an=员ᴬ を失わせる。"
+  },
+  {
+   "w": "Gambio",
+   "app": "腿ᴳio",
+   "master": "Gambio",
+   "reason": "分解が Gamb/i/o で語根 \"Gamb\" は小文字の生きた漢字語根 gamb=腿(gamb/o=腿ᴳ/o) と大文字小文字を無視すれば同一。アプリは case-insensitive 前方一致なので、閉じ処理を語根 Gamb 単位で入れると gambo(腿ᴳ) が丸ごと退行する。安全に閉じるには必ず6文字 \"gambio\" 以上のキーが必要という条件付きで、前担当の「衝突ゼロ」という主張は語根同一性を見落としている。"
+  },
+  {
+   "w": "Golfofluo",
+   "app": "湾o流o",
+   "master": "Golfofluo",
+   "reason": "語頭語根 Golf は小文字の生きた漢字語根 golf=湾 と同一(golf/o=湾/o, golf/ej/o=湾/所/o 等10件)、後半も flu=流。golfo+fluo は完全に透明な複合で、小文字 golfofluo=「湾の流れ/湾流」は普通名詞として自由に造語可能。ラテン固定は 湾+流 を同時に失わせ、語根単位で入れれば golfo族が全滅する。"
+  },
+  {
+   "w": "Grandoriento",
+   "app": "大东o",
+   "master": "Grandoriento",
+   "reason": "grand=大(小文字見出し67件)、orient=东。エスペラントでは grandurbo(大都市)型の形容詞+名詞の固着複合が標準的造語であり、小文字 grandoriento=「大東方」は普通名詞として成立し得る。ラテン固定は 大+东 を失わせ、キーを短く取れば grand 族67件が巻き添えになる。"
+  },
+  {
+   "w": "Grenpluvo",
+   "app": "谷ᴳ雨o",
+   "master": "Grenpluvo",
+   "reason": "gren=谷・pluv=雨 とも極めて生きた語根で、マスターは同型複合を全て漢字化している: neg^/pluv/o=雪/雨/o, glaci/pluv/o=冰/雨/o, nebul/pluv/o=雾/雨/o。Gren/pluv/o だけがラテンで族から浮いている。小文字 grenpluvo=「穀物の雨」は orpluvo/s^tonpluvo 型の正規複合として成立し、ラテン固定は 谷+雨(=節気「谷雨」として字面まで正しい訳)を捨てることになる。"
+  },
+  {
+   "w": "Gruzio",
+   "app": "砾io",
+   "master": "Gruzio",
+   "reason": "最も危険な一件。分解 Gruz/i/o の語根 \"Gruz\" は小文字の生きた漢字語根 gruz=砾 と大文字小文字無視で完全同一であり、小文字側には gruz/i(砾/i=動詞)・gruz/o(砾/o)・gruz/mal/san/o(砾/反/健/o) が実在する。アプリは case-insensitive 前方一致なので、語根単位でラテン固定すれば 砾 が全滅する。前担当の「gruzi/gruzo は前方一致外」は fix key を厳密に6文字 \"gruzio\" に限った場合のみ成立する条件付き主張で、無条件のCLOSABLE判定は危険。"
+  },
+  {
+   "w": "Hanovrano",
+   "app": "Hanovr员ᴬo",
+   "master": "Hanovrano",
+   "reason": "マスター自身が pariz/an/o を pariz/员ᴬ/o と小文字・漢字付きで扱っている(都市名+ano=住民)。hanovrano はパリジャンと完全に同型の小文字普通名詞であり「固有名詞としてしか存在しない」は偽。ラテン固定は an=员ᴬ を失わせ、parizano と非対称な退行を生む。"
+  },
+  {
+   "w": "Hegelano",
+   "app": "Hegel员ᴬo",
+   "master": "Hegelano",
+   "reason": "マスターは人名由来の -ano を小文字・漢字付きで扱っている: kartezi/an/o=kartezi/员ᴬ/o(デカルト派), kalvin/an/o=kalvin/员ᴬ/o, luter/an/o=luter/员ᴬ/o。hegelano はこれらと同型の小文字普通名詞(ヘーゲル派の人)で、ラテン固定は 员ᴬ を失わせる。"
+  },
+  {
+   "w": "Hermesbusto",
+   "app": "Hermes胸ᴮˢo",
+   "master": "Hermesbusto",
+   "reason": "指示対象は特定の像ではなく彫刻の一類型であり、マスターは同義の小文字普通名詞 herm/o(PIV: Cipo, kun barba kapo k elstara peniso) を別立てしている。bust/o=胸ᴮˢ も生きた語根。小文字 hermesbusto=「ヘルメス柱像(という種類の像)」は普通名詞として成立し、ラテン固定は 胸 を失わせる。"
+  },
+  {
+   "w": "Herodano",
+   "app": "Herod员ᴬo",
+   "master": "Herodano",
+   "reason": "宗派・党派の成員を表す -ano をマスターは一貫して小文字・漢字付きで扱う: luter/an/o=luter/员ᴬ/o, kalvin/an/o=kalvin/员ᴬ/o, mahomet/an/o=mahomet/员ᴬ/o, islam/an/o=islam/员ᴬ/o, krist/an/o=krist/员ᴬ/o。herodano(ヘロデ派の人)はこの族の一員で小文字普通名詞として成立する。"
+  },
+  {
+   "w": "Hitlerano",
+   "app": "Hitler员ᴬo",
+   "master": "Hitlerano",
+   "reason": "マスターは人名由来の政治的追随者を小文字・漢字付きで扱う: stalin/ist/o=stalin/家/o, marks/ist/o=marks/家/o、また nazi/o・nazi/a も小文字見出し。hitlerano はこの族と同型の小文字普通名詞であり、ラテン固定は an=员ᴬ を失わせて族内非対称を生む。"
+  },
+  {
+   "w": "Holandano",
+   "app": "Holand员ᴬo",
+   "master": "Holandano",
+   "reason": "決定的反証。マスター自身が nederland/an/o=nederland/员ᴬ/o、island/an/o=island/员ᴬ/o、irland/an/o=irland/员ᴬ/o、さらに rus/land/an/o=rus/国/员ᴬ/o と、国名+ano を全て小文字・漢字付きで登録している。holandano(オランダ人)は完全に同型の小文字普通名詞で「固有名詞としてしか存在しない」は明白に偽。ラテン固定は 员ᴬ の退行。"
+  },
+  {
+   "w": "Idisto",
+   "app": "子家o",
+   "master": "Idisto",
+   "reason": "二重に危険。(1) 分解 Id/ist/o の語根 \"Id\" は小文字の生きた漢字語根 id=子 と同一で、小文字側に id/o(子/o)・id/ar/o(子/群/o)・id/ar/an/o が実在するため語根単位の閉じ処理は 子 を全滅させる。(2) PIV定義は「Persono, kiu uzadas Idon」＝人の類を指す普通名詞で、マスター自身が完全同型の esperant/ist/o を小文字 esperant/家/o として登録している。よって小文字 idisto は正規の普通名詞であり「固有名詞としてしか存在しない」は偽。"
+  },
+  {
+   "w": "Iduoj",
+   "app": "I二oj",
+   "master": "Iduoj",
+   "reason": "PIV定義を確認すると Iduo は人名でも民族名でもなく「ローマ暦で月を二分する日＝イードゥス(15日/13日)」という毎月反復する暦日名。マスターは同じローマ暦日名 kalend/o・kalend/oj を小文字で 初一/o・初一/oj と漢字化しており、Iduoj だけラテンは族不整合。暦日名は普通名詞クラスなので「固有名詞としてしか存在しない」は偽。"
+  },
+  {
+   "w": "Indianisto",
+   "app": "Indian家o",
+   "master": "Indianisto",
+   "reason": "マスター自身が indian/o と indian/a を小文字見出しで持っており、indian- 族はそもそも固有名詞ではなく普通名詞族。indianisto(インディアン研究者)は oriental/ist/o=东ᴼᴸ/家/o、marks/ist/o=marks/家/o と同型の小文字普通名詞で、ラテン固定は ist=家 を失わせる。エクスポートの大文字 Indian/ist/o 自体がデータ側の揺れ。"
+  },
+  {
+   "w": "Internacio",
+   "app": "间族o",
+   "master": "Internacio",
+   "reason": "構成語根が全て普通語根(inter=间, naci=族)で、\"internaci\" 始まりの小文字見出しは29件すべて 间/族 付き。安全に閉じるには fix key を厳密に10文字 \"internacio\" にする必要があり、1文字でも短く取ると internacia/internaciismo/internaciulo など29件が一斉に退行する高爆風半径。加えて inter+nacio は透明な複合で小文字読みも排除しきれない。無条件CLOSABLEは危険。"
+  },
+  {
+   "w": "Izraelido",
+   "app": "Izrael子o",
+   "master": "Izraelido",
+   "reason": "マスター自身が完全同型の kanaan/id/o を小文字 kanaan/子/o として登録している(固有名語根+id=子、民族名クラス)。izraelido(イスラエル人/イスラエルの子孫)も同じ民族名クラスの小文字普通名詞として成立し、ラテン固定は id=子 を失わせて kanaanido と非対称になる。"
+  },
+  {
+   "w": "Izraelidoj",
+   "app": "Izrael子oj",
+   "master": "Izraelidoj",
+   "reason": "PIV定義(49612)が「Deveninto de Izraelo = hebreo. Vd Semido」。同義語hebreoはマスターで小文字(hebre/o)、Vd先のセム族はマスターで小文字＋漢字付き(s^em/id/oj || s^em/子/oj, s^em/id/o || s^em/子/o)。すなわち民族名-idoは小文字表記が正規で、その場合子(id)が付く。izrael-は漢字マップ未登録なのでizrael/子/ojは偽分解ではなく正しい部分描画。izraelid-をラテン固定すると小文字「izraelidoj」から子が消える。ŝemidoj(子あり)との不整合も生む。"
+  },
+  {
+   "w": "Jafetida",
+   "app": "Jafet子a",
+   "master": "Jafetida",
+   "reason": "最大の危険。PIV定義(49621)は「(pp lingvo) Apartenanta al la grupo de tre diversaj lingvoj, parolataj en la Kau^kaza regiono」＝語族形容詞(ヤペテ語族の)。マスターは同型同義の語族形容詞を全て小文字＋漢字で描画している: s^em/id/a || s^em/子/a(セム語系の), latin/id/a || latin/子/a, g^erman/id/a || g^erman/子/a。ŝem/Ĥam/Jafetはノアの三兄弟でありマスター自身がŝemidaのみ小文字＋子にしている(Ĥamido/Jafetidaは大文字ラテン)。「jafetidaj lingvoj」という小文字形容詞は完全に正規であり、jafetid-をラテン固定すると子が消える。jafet-は未登録なので偽分解の危険もなく、子は正しい。"
+  },
+  {
+   "w": "Jakobano",
+   "app": "Jakob员ᴬo",
+   "master": "Jakobano",
+   "reason": "決定的反証。マスター自身のコーパス(漢字注入_学習者版 52181行, monofizit/a のPIV定義)に小文字形が実在する: 「la monofizitaj eklezioj armena, jakobana, kopta」。PIV定義(49624)は「Ano de Siria sekto」＝シリア教派の一員で、同じシリア系教派のnestorianoはマスターで小文字＋漢字(nestori/an/o || nestori/员ᴬ/o)。他にkalvin/an/o || kalvin/员ᴬ/o, luter/an/o || luter/员ᴬ/o, mahomet/an/o || mahomet/员ᴬ/oと、人名由来の教派-anoは全て小文字＋员ᴬ。jakob-は漢字マップ未登録なのでjakob/员ᴬ/oは正しい描画であり、jakoban-をラテン固定すると実在する小文字形容詞jakobanaから员ᴬが消える。"
+  },
+  {
+   "w": "Jakobisto",
+   "app": "Jakob家o",
+   "master": "Jakobisto",
+   "reason": "PIV定義(49626)は「Ano de la angla partio, kiu apogis la Stuartojn」＝ジャコバイト党員。マスターは同種のフランス党派を小文字で登録している(jakoben/o, jakoben/ism/o || jakoben/主义/o)。派閥・宗派の-isto/-anoは小文字が正規: budh/ist/o || 佛/家/o, hebre/ist/o || hebre/家/o, jud/ist/o || jud/家/o, kalvin/an/o || kalvin/员ᴬ/o。jakob-は未登録なので小文字jakobistoはjakob/家/oが正しい描画。jakobist-をラテン固定すると家が消える。"
+  },
+  {
+   "w": "Jakobulo",
+   "app": "Jakob者o",
+   "master": "Jakobulo",
+   "reason": "PIV定義(49627)は「(ark.) = dominikano」＝ドミニコ会士の古語。修道会士名はエスペラントで小文字が正規で、マスターも jezuit/o, jezuit/a, jezuit/ism/o || jezuit/主义/o, jezuit/ej/o || jezuit/所/o と小文字＋漢字で扱っている。dominikanoの同義語である以上、小文字jakobuloは正規の普通名詞として成立する。jakob-は未登録なのでjakob/者/o(ul=者)が正しい部分描画であり、jakobul-のラテン固定は者を消す。"
+  },
+  {
+   "w": "Javeisto",
+   "app": "Jave家o",
+   "master": "Javeisto",
+   "reason": "(未検証)"
+  },
+  {
+   "w": "Kainidoj",
+   "app": "Kain子oj",
+   "master": "Kainidoj",
+   "reason": "PIV定義(49802)「Posteuloj de Kaino」。マスターは全く同型・同カテゴリ(創世記の個人名から派生した民族名)である kanaan/id/o を小文字＋漢字で描画している: kanaan/id/o || kanaan/子/o(カナン人)。同様に s^em/id/o || s^em/子/o も小文字＋子。kain-は漢字マップ未登録なので小文字kainidojはkain/子/ojが正しい部分描画であり、kainid-のラテン固定は子を消す。kanaanido(子あり)との整合性も崩れる。"
+  },
+  {
+   "w": "Kartagano",
+   "app": "Kartag员ᴬo",
+   "master": "Kartagano",
+   "reason": "PIV定義(50126)は「Ano de la semida gento, kiu fondis Kartagon」＝民族(gento)の一員。マスターは民族名とその派生語を一貫して小文字＋漢字で扱う: hebre/o(小文字)/hebre/in/o || hebre/女/o / hebre/ist/o || hebre/家/o / hebre/ism/o || hebre/主义/o、arab/o、kopt/o、そして住民-anoも pariz/an/o || pariz/员ᴬ/o, egipt/an/o || egipt/员ᴬ/o, azi/an/o, amerik/an/o, sir/i/an/o と小文字＋员ᴬ。kartag-は漢字マップ未登録なので小文字kartaganoはkartag/员ᴬ/oが正しい部分描画であり、kartagan-のラテン固定は员ᴬを消す。"
+  },
+  {
+   "w": "Kastiliano",
+   "app": "Kastili员ᴬo",
+   "master": "Kastiliano",
+   "reason": "PIV定義(50145)「Ano de la c^efa gento de Kastilio」＝民族(gento)の一員。マスター自身が小文字形 kastili/a lingv/o || kastili/a 语/o を登録しており、kastili-の小文字派生が現に使われることを示す。民族-anoの小文字＋员ᴬは sir/i/an/o || sir/i/员ᴬ/o, pariz/an/o || pariz/员ᴬ/o 等で確立。kastili-は漢字マップ未登録なので小文字kastilianoはkastili/员ᴬ/oが正しい描画であり、kastilian-のラテン固定は员ᴬを消す。"
+  },
+  {
+   "w": "Korintano",
+   "app": "Korint员ᴬo",
+   "master": "Korintano",
+   "reason": "前担当の「小文字読み無し」は事実誤認。-an-派生の住民名はエスペラントでは固有名ではなく小文字で書く普通名詞であり、マスター自身が小文字demonymに员ᴬを付与している(troj/员ᴬ/o=trojano、rom/i/员ᴬ/o、pariz/员ᴬ/o、azi/员ᴬ/o、luksemburg/员ᴬ/o、makedon/i/员ᴬ/o)。アプリは大小無区別なのでkorintanをラテン固定すると、小文字korintano(聖書「la korintanoj」等で普通に出る)の员ᴬが消え、afrikano/trojanoと族不整合になる。失うのは-an-の1字だが、退行方向は明確。"
+  },
+  {
+   "w": "Kornelieca",
+   "app": "Korneli性a",
+   "master": "Kornelieca",
+   "reason": "-ec-派生形容詞は固有名由来でも普通形容詞(kafkeca/danteca型)であり、小文字表記が正規。マスターも小文字の-ecには性を付与している(azi/ec/a→azi/性/a、roman/ec/a→小说/性/a)。korneliec-をラテン固定すると小文字「kornelieca(コルネイユ的な悲劇)」の性が消える。人名+-in-(人名を作る)と違い、-ec-は語類を普通形容詞に変える点が決定的。"
+  },
+  {
+   "w": "Lacedemonano",
+   "app": "Lacedemon员ᴬo",
+   "master": "Lacedemonano",
+   "reason": "Korintanoと同じ-an-住民名クラス。マスターは小文字demonymに员ᴬを与えており(troj/员ᴬ/o、rom/i/员ᴬ/o、pariz/员ᴬ/o)、古代民族名も例外でない(trojanoが小文字収録済み)。小文字lacedemonano(スパルタ人)は歴史記述で正規の普通名詞であり、ラテン固定は员ᴬの消失を招く。"
+  },
+  {
+   "w": "Latiano",
+   "app": "Lati员ᴬo",
+   "master": "Latiano",
+   "reason": "-an-住民名クラス(ラティウム人)。マスターの小文字demonymは员ᴬを保持(troj/员ᴬ/o、pariz/员ᴬ/o、azi/员ᴬ/o)ので、小文字latianoは正規の普通名詞として成立し、ラテン固定で员ᴬが消える。なお lat/i=条ᴸ/i(桟)やlatin-系はlatian-と前方一致しないため、そちらの心配は無い。"
+  },
+  {
+   "w": "Lidiano",
+   "app": "Lidi员ᴬo",
+   "master": "Lidiano",
+   "reason": "-an-住民名クラス(リュディア人)。小文字demonymに员ᴬを与えるマスターの方針(troj/员ᴬ/o、rom/i/员ᴬ/o、makedon/i/员ᴬ/o)からすれば、小文字lidianoは正規の普通名詞であり、lidian-のラテン固定は员ᴬの消失を招く。"
+  },
+  {
+   "w": "Litvano",
+   "app": "Litv员ᴬo",
+   "master": "Litvano",
+   "reason": "民族名は小文字の普通名詞(マスターも litov/o, kroat/o, latv/o, leton/o, lapon/o を小文字収録)。その-an-派生には员ᴬが付く(luksemburg/员ᴬ/o、makedon/i/员ᴬ/o)。よって小文字litvano「リトアニア人」は正規の普通名詞であり、litvan-固定で员ᴬが消える。lit/vagon/o=床/厢との衝突が無いことは正しいが、それは安全性の証明にならない。"
+  },
+  {
+   "w": "Lorenano",
+   "app": "Loren员ᴬo",
+   "master": "Lorenano",
+   "reason": "-an-住民名クラス(ロレーヌ人)。マスターの小文字demonymは员ᴬを保持しており(pariz/员ᴬ/o、troj/员ᴬ/o)、小文字lorenanoは正規の普通名詞。lorenan-をラテン固定すると员ᴬが消え、pariziano等と不整合になる。"
+  },
+  {
+   "w": "Manilkanabo",
+   "app": "Manil麻o",
+   "master": "Manilkanabo",
+   "reason": "最も明確な反証。マニラ麻は繊維素材の普通名詞であり固有名詞ではない(「ŝnuro el manilkanabo」のように小文字で書かれる)。前担当自身も「小文字でも同一語」と認めており、「固有名詞としてしか存在しない」という分類前提が成立していない。マスターのkanab族は全て漢字(kanab/o=麻/o, kanab/tol/o=麻/布/o, kanab/ej/o=麻/所/o)、かつ地名由来の生物・素材名も普通部分の漢字を保持する(Japan/a larik/o→Japan/a 落松/o、japan/a kameli/o→japan/a 茶ᴷ/o)。Manil/kanab/oの全ラテンは族の外れ値で、これをアプリに固定すると小文字manilkanaboから麻が消える退行になる。"
+  },
+  {
+   "w": "Mantuano",
+   "app": "Mantu员ᴬo",
+   "master": "Mantuano",
+   "reason": "-an-住民名クラス(マントヴァ人)。マスターは小文字の都市住民名に员ᴬを与えており(pariz/员ᴬ/o)、小文字mantuanoは正規の普通名詞。man/tuk/o=手/巾との非衝突は正しいが、それは小文字demonymの员ᴬ喪失を防がない。"
+  },
+  {
+   "w": "Marsano",
+   "app": "Mars员ᴬo",
+   "master": "Marsano",
+   "reason": "「火星人」はSF・科学文で小文字で使われる正規の普通名詞であり、固有名詞ではない。マスター自身が同類の住民名詞を小文字+员ᴬで収録している(ekster/ter/an/o→外ᴱ/地/员ᴬ/o、azi/员ᴬ/o、troj/员ᴬ/o)。marsan-をラテン固定すると小文字marsano/marsanojの员ᴬが消え、eksterteranoとの族不整合になる。mar/sal/o=海/塩等と衝突しない点は安全性の証明にならない。"
+  },
+  {
+   "w": "Medujo",
+   "app": "Med器o",
+   "master": "Medujo",
+   "reason": "【致命】med/oはマスターに小文字で2件登録され、うち一方のグロスは『【料】蜂蜜酒(mead), >>mielakvo』=正真正銘の普通名詞。-uj-は器を持つ生産的接尾辞で、マスター自身がakv/uj/o→水/器/o, ole/uj/o→油/器/o, benzin/uj/o→汽油/器/o, lakt/uj/o→乳/器/o, medikament/uj/o→药/器/oと液体・物質の容器に器を与えている。よって小文字medujo=『蜂蜜酒の容器』はmed/器/oを受けるべき完全に正規の普通名詞であり、Medujo(メディア)とは別語彙素の同綴。ラテン固定すると器が消える。前担当は『med/o自体がラテンなので漢字喪失が無い』としたが、喪失するのはmedではなくujの器である点を見落としている。"
+  },
+  {
+   "w": "Nereidinoj",
+   "app": "虫ᴺᴱ子女oj",
+   "master": "Nereidinoj",
+   "reason": "マスターに小文字 nere/id/o→虫ᴺᴱ/子/o および nere/o→虫ᴺᴱ/o が漢字付きで実在する(動物学のゴカイ属)。-in-は動物の雌形として完全に生産的で、マスター自身が bov/in/o→牛/女/o, kat/in/o→猫/女/o, kok/in/o→鸡/女/o, hund/in/o→犬/女/o を与えている。したがって小文字 nereidino(j)=『雌のゴカイ』は虫ᴺᴱ/子/女/oを受けるべき正規の普通名詞として成立し得る、神話名とは別語彙素の同綴。ラテン固定は生きた漢字語根を握り潰す危険がある(さらに語幹をnereidまで削るとnere/id/o虫ᴺᴱ/子を直撃するため、固定キーは必ずnereidin以上に保つ必要がある)。"
+  },
+  {
+   "w": "Nina",
+   "app": "我们na",
+   "master": "Nina",
+   "reason": "【致命】Nin/aは語根Nin+形容詞語尾aの構造なので、語幹抽出は必ずninを生む。ninはエスペラント最高頻度語の一つである代名詞ni(我们)の対格形そのもので、マスターにも ni/n→我们/n として漢字付きで実在する。ラテン固定キーがninに落ちた瞬間、『Nin li vidis.』のような文頭対格をはじめ全てのninが漢字を失う破滅的退行になる。前担当自身が『現行の我们na は ni の誤前方一致』と述べており、このエンジンが実際にni/nin近傍で前方一致していることを裏づけている。-a終止の固有名は語幹誤抽出のリスクが構造的に高く、この綴りを固定するのは危険。"
+  },
+  {
+   "w": "Noaido",
+   "app": "Noa子o",
+   "master": "Noaido",
+   "reason": "(未検証)"
+  },
+  {
+   "w": "Nonoj",
+   "app": "壬oj",
+   "master": "Nonoj",
+   "reason": "【致命】マスターに小文字 non/o が『【キ】【PIV】Diservo, kanonika horo, ordinare pregxata je la 15a horo.』(教会の定時課ノナ)という独立の普通名詞として登録済み。その複数形 nonoj は Non/oj(ローマ暦のノナエ)と完全同綴の別語彙素。さらに語幹をnonまで削ると non/→壬/ および non/an/o→壬/an/o の漢字を直撃する。現状non/oがラテンなのは可変の裁定事実にすぎず、生きた普通名詞の綴りをラテン固定するのは本規則が禁じるパターンそのもの。"
+  },
+  {
+   "w": "Novjorko",
+   "app": "新jorko",
+   "master": "Novjorko",
+   "reason": "【致命】学習者版マスターに小文字 nov/jork/a→新/jork/a と nov/jork/an/o→新/jork/员ᴬ/o が漢字付きで実在し(学術版にも novjork/an/o→novjork/员ᴬ/o)、いずれも語幹novjorkで前方一致する。Nov/jork/oをラテン固定すると、語幹キーがnovjorkに落ちた場合これら小文字既存語から新・员ᴬが消える実測済みの退行になる。前担当の『jorkは語根でなく衝突なし』は、マスター自身が持つこの2件のnovjork-始まり漢字エントリを見落としている。"
+  },
+  {
+   "w": "Nubio",
+   "app": "云io",
+   "master": "Nubio",
+   "reason": "【致命】語幹nubiは、マスターに実在する nub/ig^/i→云/成/i の厳密な前方一致プレフィクスである。さらにnubigi/nubigo/nubigxo/nubiga等、nub(云)から規則的に派生する生きた常用語がすべてnubiで始まる。最長前方一致方式ではラテン固定キーnubi(4字)がnub(3字→云)に勝つため、これら全てが雲の漢字を失う。前担当の『nub+iという語根結合は普通語として成立しない』は語彙論としては正しいが、エンジンのプレフィクス衝突という本質的な危険を見落としている。"
+  },
+  {
+   "w": "Odiseado",
+   "app": "Odise行o",
+   "master": "Odiseado",
+   "reason": "小文字 odiseado はエスペラントで『長く波乱に富んだ旅・遍歴(an odyssey)』を意味する正規の普通名詞として確立しており(可算: lia odiseado tra Euxropo)、叙事詩名Odiseadoとは別義の同綴。-ad→行はマスターで極めて生産的な漢字であり、マスターは meksik/员ᴬ/o・mongol/主义/o・novjork/员ᴬ/o のようにラテン語根+漢字接辞のハイブリッドを実際に許容している。したがって小文字用法は Odise/行/o を受け得る。前担当も『比喩的な小文字用法があっても…損失は-adの行のみ』と喪失自体を認めており、生きた普通名詞から漢字接辞を奪うのは本規則が禁じる退行そのもの。"
+  },
+  {
+   "w": "Sansimonisto",
+   "app": "Sansimon家o",
+   "master": "Sansimonisto",
+   "reason": "マスター自身が sansimon/ism/o を『小文字』で 主义 付き登録しており(sansimon主义o)、同族の -ist 形だけを固有名扱いするのは内部矛盾。マスターは marks/ist/o=marks家o, stalin/ist/o, trocki/ist/o と人名由来の主義者名詞を一貫して小文字＋家で扱う。小文字 sansimonisto(サン=シモン主義者)は正規の普通名詞として成立し、ラテン固定は 'sansimonist'(idx21090)の 家 を失わせる退行。"
+  },
+  {
+   "w": "Socinanismo",
+   "app": "Socin员ᴬ主义o",
+   "master": "Socinanismo",
+   "reason": "マスターは同型の宗派名 kalvin/ism/o・luter/an/ism/o・francisk/an/ism/o・kartezi/an/ism/o をすべて『小文字』＋员ᴬ/主义 で登録している。人名Socino由来のソッツィーニ派も同じ類型で、小文字 socinanismo は正規の普通名詞として成立する。ラテン固定は 'socinanism'(idx35003)の 员ᴬ主义 を消す退行。"
+  },
+  {
+   "w": "Socinano",
+   "app": "Socin员ᴬo",
+   "master": "Socinano",
+   "reason": "マスター自身が kalvin/an/o=kalvin员ᴬo, luter/an/o, epikur/an/o, benedikt/an/o, francisk/an/o と人名由来の信奉者名詞を一貫して小文字＋员ᴬ で扱っており、Socinano だけ大文字固有名扱いするのは不整合。小文字 socinano(ソッツィーニ派信徒)は正規の普通名詞で、固定は 'socinano'(idx129179)の 员ᴬ を失わせる。"
+  },
+  {
+   "w": "Socinismo",
+   "app": "Socin主义o",
+   "master": "Socinismo",
+   "reason": "同上。マスターの kalvin/ism/o=kalvin主义o, darvin/ism/o, platon/ism/o, luter/ism/o はいずれも人名由来かつ小文字＋主义。小文字 socinismo は同型で成立し、ラテン固定は 'socinism'(idx111782)の 主义 を消す退行。エスペラントでは主義名は固有名由来でも小文字が規範。"
+  },
+  {
+   "w": "Sodomano",
+   "app": "Sodom员ᴬo",
+   "master": "Sodomano",
+   "reason": "マスター自身が sodom/ism/o を『小文字』＋主义(sodom主义o)で登録しており、語幹 sodom は小文字普通語の語幹として既に稼働している。加えて市名由来の -an- 住民名はマスターでも pariz/an/o=pariz员ᴬo, nov/jork/an/o のように小文字が規範。小文字 sodomano(ソドム住民/男色者)は成立し、'sodomano'(idx129170)の 员ᴬ を失う退行になる。"
+  },
+  {
+   "w": "Spartakano",
+   "app": "Spartak员ᴬo",
+   "master": "Spartakano",
+   "reason": "マスターは人名由来の政治的信奉者名詞を marks/ist/o=marks家o, stalin/ist/o, trocki/ist/o, epikur/an/o のように一貫して小文字＋家/员ᴬ で登録している。スパルタクス団員も同型で、小文字 spartakano は正規の普通名詞として成立する。ラテン固定は 'spartakano'(idx45745)および spartakana/spartakane の 员ᴬ を消す退行。"
+  },
+  {
+   "w": "Spartakisto",
+   "app": "Spartak家o",
+   "master": "Spartakisto",
+   "reason": "stalin/ist/o=stalin家o, trocki/ist/o=trocki家o と全く同型(人名＋-ist の政治党派員)で、マスターはこれらを小文字＋家 で登録済み。小文字 spartakisto(スパルタクス団員)は正規の普通名詞であり、'spartakist'(idx34934)の 家 を失わせるのは退行。Spartak/o 本体のラテン維持とは独立の問題。"
+  },
+  {
+   "w": "Spartano",
+   "app": "Spart员ᴬo",
+   "master": "Spartano",
+   "reason": "マスターは都市名由来の住民名を pariz/an/o=pariz员ᴬo, nov/jork/an/o=新jork员ᴬo, krist/an/o のように小文字＋员ᴬ で登録しており、Aten/an/o だけラテンなのは既知の不整合。アプリも小文字 'spartano'(idx129161)/'spartana'(idx129167)に 员ᴬ を与えている。小文字 spartano/spartana(スパルタ人/質実剛健な)は正規の普通名詞・形容詞として成立し、固定は 员ᴬ を消す退行。"
+  },
+  {
+   "w": "Sudameriko",
+   "app": "南ameriko",
+   "master": "Sudameriko",
+   "reason": "アプリのエントリは語幹 'sudamerik'(idx55543)→南amerik の1件のみで、これが sudamerika / sudamerikano / sudamerikanoj も同時に処理している(実測確認)。ラテン固定すると、小文字で書かれる正規の一般形容詞 sudamerika(南米の)・普通名詞 sudamerikano から一般語根 sud の 南 が消える。sud は 南 を持つ高頻度content語根であり、これは明確な退行。"
+  },
+  {
+   "w": "Tahitiano",
+   "app": "Tahiti员ᴬo",
+   "master": "Tahitiano",
+   "reason": "語釈は「Loĝanto de Tahitio」＝住民名詞。PMEG準拠で固有名由来の派生普通名詞は小文字書き(kristano型)であり、マスター自身が小文字の同型語に漢字を与えている: brazil/员ᴬ/o, afrik/员ᴬ/o, egipt/员ᴬ/o, argentin/员ᴬ/o, uson/an/o→uson/员ᴬ/o。大小無視のラテン固定は正規の小文字普通名詞 tahitiano から接尾辞 an=员ᴬ を消す退行になる。"
+  },
+  {
+   "w": "Tantrismo",
+   "app": "Tantr主义o",
+   "master": "Tantrismo",
+   "reason": "語釈は「Hinda filozofio…」＝主義名の普通名詞。マスターは小文字の同型 -ismo に一貫して主义を与える: budh/主义/o, hindu/主义/o, zoroastr/主义/o, darvin/主义/o, kalvin/主义/o。PMEGでも主義名は小文字。ラテン固定は小文字 tantrismo から ism=主义 を奪う。"
+  },
+  {
+   "w": "Tiberano",
+   "app": "Tiber员ᴬo",
+   "master": "Tiberano",
+   "reason": "語釈「Romano: Tiberan', de kie vi nun venas?」＝住民名詞。固有名由来の-an-派生は小文字が正規(PMEG)で、マスター自身 moskvano型に相当する小文字語群(afrik/员ᴬ/o 等)に员ᴬを与える。大小無視固定は小文字 tiberano の员ᴬを消す。"
+  },
+  {
+   "w": "Tirolkanto",
+   "app": "Tirol唱o",
+   "master": "Tirolkanto",
+   "reason": "語釈「Kanto kun jodlaj partoj」＝歌のジャンルを指す普通名詞。マスターは同系列の小文字複合語に一貫して唱を与える: lul/唱/o, popol/唱/o, furor/唱/o, glor/唱/o。固有語幹+一般語根の小文字複合でも第2要素は漢字化される(venus/镜/o, taj/国/员ᴬ/o)。ラテン固定は小文字 tirolkanto から kant=唱 を奪う。"
+  },
+  {
+   "w": "Trinitatano",
+   "app": "Trinitat员ᴬo",
+   "master": "Trinitatano",
+   "reason": "語釈「Kristano, kiu kredas la dogmon pri Triunuo. Vd unitariano」——語釈自身が並列語 unitariano を小文字表記している。マスターの小文字宗派名は全て漢字付き: krist/员ᴬ/o, luter/员ᴬ/o, kalvin/员ᴬ/o, budh/员ᴬ/o, islam/员ᴬ/o。ラテン固定は小文字 trinitatano の员ᴬを消す。"
+  },
+  {
+   "w": "Ursulanino",
+   "app": "Ursul员ᴬ女o",
+   "master": "Ursulanino",
+   "reason": "語釈「Anino de iu monaĥina ordeno」＝修道会員という普通名詞。マスターは同種の修道会員名を小文字＋漢字で登録: francisk/员ᴬ/o, dominik/员ᴬ/o, benedikt/员ᴬ/o。小文字 ursulanino では an=员ᴬ・in=女 の2形態素が失われる退行になる。"
+  },
+  {
+   "w": "Valdano",
+   "app": "Vald员ᴬo",
+   "master": "Valdano",
+   "reason": "語釈「Membro de tiu grupo(ワルド派)」＝宗派員の普通名詞。マスターは同型の小文字宗派員に员ᴬを与える(luter/员ᴬ/o, kalvin/员ᴬ/o, krist/员ᴬ/o)。PMEGも固有名由来の派生普通名詞は小文字。ラテン固定は小文字 valdano の员ᴬを消す。"
+  },
+  {
+   "w": "Valdismo",
+   "app": "Vald主义o",
+   "master": "Valdismo",
+   "reason": "語釈「Doktrino k movado de la Valdanoj」＝主義名。マスターの小文字-ismo系は全て主义付き(kalvin/主义/o, luter/员ᴬ/主义/o, zoroastr/主义/o)。小文字 valdismo は正規表記であり、ラテン固定で ism=主义 を失う。"
+  },
+  {
+   "w": "Valezianoj",
+   "app": "Valezi员ᴬoj",
+   "master": "Valezianoj",
+   "reason": "住民名/家系員名の-an-派生で、PMEG準拠なら小文字 valezianoj が正規。マスターは小文字-an-派生に一貫して员ᴬを与える(afrik/员ᴬ/o型、volter/员ᴬ/主义/o)。大小無視固定は小文字形の员ᴬを消すため危険。"
+  },
+  {
+   "w": "Vendeano",
+   "app": "Vende员ᴬo",
+   "master": "Vendeano",
+   "reason": "語釈「1 Loĝanto de tiu departemento. 2 Ano de la kontraŭrespublika ribelo」＝住民名/党派員の普通名詞。小文字が正規表記(PMEG)で、マスターの小文字-an-派生は员ᴬ付き。ラテン固定は小文字 vendeano の员ᴬを消す。"
+  },
+  {
+   "w": "Venusmonto",
+   "app": "Venus山o",
+   "master": "Venusmonto",
+   "reason": "語釈【解】「2 La bazo de la polekso en la manplato. Sin. tenaro; 3 Meza elstaraĵo antaŭ la vulvo」＝解剖学の普通名詞(母指球/恥丘)。マスターは小文字venus複合語の第2要素に必ず漢字を与える: venus/镜/o, venus/浴/所/o, venus/毛/群/o, venus/鞋/o。小文字 venusmonto をラテン固定すると mont=山 が失われる。"
+  },
+  {
+   "w": "Volterano",
+   "app": "Volter员ᴬo",
+   "master": "Volterano",
+   "reason": "決定的反証: マスター自身が小文字 volter/an/ism/o を volter/员ᴬ/主义/o と漢字付きで登録している(大文字 Volter/an/o のみラテン)。語釈も「Tiu, kiu sekvas la vojon de Voltero」＝信奉者という普通名詞で、PMEG準拠の小文字 volterano が正規。大小無視のラテン固定はこの小文字形の员ᴬを消す。"
+  },
+  {
+   "w": "gero",
+   "app": "g粒o",
+   "master": "gero",
+   "reason": "語根 ger(3字) をラテン固定すると、より短い生産的接頭辞 ge(双) を最長一致で遮蔽する。ge- は極めて生産的(マスターだけで ge/ 合成42語)で、r で始まる語根と結ぶと gereĝoj(ge/reĝ/oj=双/王), geriĉuloj, geregantoj, geredaktoroj 等『ger…』の正規語が無数に成立する。これらは現状 ge→双 が当たっているが、ger 登録後は 双 も後続語根の漢字も消える。語形 gero に限定しても geroluloj(ge/rol/ul/oj) が接頭部一致する。前担当は長い語幹(gerani/geril/german)しか点検しておらず、短い ge- 側の遮蔽を見落としている。"
+  },
+  {
+   "w": "karei",
+   "app": "亲ei",
+   "master": "karei",
+   "reason": "語根 kare(4字) をラテン固定すると、より短い kar(亲,3字) を最長一致で遮蔽する。マスター実測で kar/e→亲/e(親しく), kar/ec/o→亲/性/o, kar/eg/a→亲/巨/a の3語が『kare』で始まっており、いずれも日常頻用語(Karega amiko! 等)。kare 登録後はこれらの 亲 が消える。前担当は『kar(亲)への誤接続』と現象を認識しながら、固定側が逆に kar 系を潰すことを検討していない。語形 karei 限定にしない限り重大な退行。"
+  },
+  {
+   "w": "liano",
+   "app": "他ano",
+   "master": "liano",
+   "reason": "語根は lian(4字)。これを未対応登録すると、所有代名詞 lia の対格『lian』(彼の〜を)と完全一致する。マスターは li/a→他/a と漢字を与えており、lian は現状 li(他,2字) が当たるが、lian(4字) 登録後は最長一致で 他 が消える。『lian』はエスペラント散文で極めて高頻度の機能語であり、これは balteo 等の稀語より遥かに深刻な退行。前担当は『代名詞 li との綴り一致』を偽分解の原因として挙げながら、固定側が代名詞対格そのものを潰す点を見落としている。"
+  },
+  {
+   "w": "piono",
+   "app": "敬ᴾono",
+   "master": "piono",
+   "reason": "語根 pion(4字) をラテン固定すると、より短い pio(脓,3字) を最長一致で遮蔽する。マスター実測に pio/nefr/it/o→脓ᴾᴵ/肾ᴺ/炎ᵀ/o と pio/nefr/oz/o→脓ᴾᴵ/肾ᴺ/症ᴼ/o が実在し、両語とも表層が『pion…』で始まるため 脓 が消える(後続 肾 も語幹が切り裂かれ破綻)。pionir(拓,6字)は長いので無傷だが、前担当は長い側しか見ておらず短い pio- 側の遮蔽を検討していない。語形 piono 限定にしない限り退行。"
+  },
+  {
+   "w": "pita",
+   "app": "p受a",
+   "master": "pita",
+   "reason": "pit/a は固有名詞ではなく PIV の正規普通形容詞『Malgrandaĉa(卑小な)』(漢字注入_学習者版 53473行)。しかも -a 語尾込みの4字を固定すると前方一致が派生語を食う: PIV の定義文自身が挙げる pitanima(pit/anim/a, anim=魂)は 'pita'+'nima' に切られて 魂 が消える。pitagor/ism/o(主义) も語頭4字一致。pitang/o(木ᴾᵀ) が助かるのは pitang(len6)が map にあり最長一致が効く前提の賭けにすぎず、前担当自身が『想定』と認めている。4字という短さで退行面が広すぎる。"
+  },
+  {
+   "w": "plasi",
+   "app": "p留i",
+   "master": "plasi",
+   "reason": "plas/i は『ŝparloki＝預託する』の正規他動詞(注入コーパス 30516行)で普通語。動詞語尾 -i を含む文字列を固定すると、前方一致が i始まりの接尾辞13種(map: ig使/il具/iĝ成/ist家/it受/int过/ism主义/ind值/in女/iz化/iv能/id子/ing座)の頭1字を奪う。plasita(受)・plasilo(具)・plasigi(使)・plasisto(家) が一斉に漢字を失う。固定するなら語根 'plas' 側だが、そちらは plasm/o(浆)・plast/o(塑)・plastik/o(塑ᴾᴷ)・plastr/o(膏ᴾᴸ) と最長一致の綱渡りになる。現状変更は危険。"
+  },
+  {
+   "w": "pondi",
+   "app": "p波i",
+   "master": "pondi",
+   "reason": "pond/i は統計の『重み付けする』正規他動詞で固有名詞ではない。master 自身の PIV 訳文が 'pondita meznombro; ponditaj indicoj' を挙げている(注入コーパス 53700行)。'pondi' を固定すると pondita/ponditaj は 'pondi'+'ta(j)' に切られ it=受 が消える。pondilo(具)・pondigi(使) も同様。-i 語尾を含む固定は前方一致エンジンと構造的に相性が悪い。"
+  },
+  {
+   "w": "rilegi",
+   "app": "ri读i",
+   "master": "rilegi",
+   "reason": "rileg/i は PIV 収録の正規動詞(=relegacii, 注入コーパス 54419行)であって普通語。ri- が非標準接頭辞であることは語根の正当性とは無関係で、固定の安全性を保証しない。-i 込みの固定は前方一致で rilegita(it=受)・rilegilo(il=具)・rileginta(int=过)・rilegigi(ig=使) の漢字を奪う。固定するなら語根 'rileg' であり、提案された語形 'rilegi' は不可。"
+  },
+  {
+   "w": "samoa",
+   "app": "同oa",
+   "master": "samoa",
+   "reason": "master 自身が samo/an/o → samo/员ᴬ/o と漢字を与えている。'samoa'(5字)は samoano の先頭5字と完全一致するため、前方一致エンジンでは 'samoa'+'no' に切られて 员ᴬ が消える。前担当の『固定は語形 samoa 限定にし samo/员ᴬ/o を保つこと』は大文字小文字非依存・前方一致という前提の下では実現不能な条件。さらに逃げ場もない: 語根 'samo' 側に落とすと今度は普通名詞 sam/o → 同/o(map: sam=同)が潰れる。どちらに固定しても退行が出る。"
+  },
+  {
+   "w": "sardo",
+   "app": "s热ᴬo",
+   "master": "sardo",
+   "reason": "master は sard/oniks/o → sard/玛瑙/o(oniks=玛瑙 が map にある)。sardonikso は s-a-r-d-o-n... で 'sardo' と先頭5字が一致するため、'sardo' をラテン固定すると 'sardo'+'nikso' に切られて 玛瑙 が消える。正しい固定対象は語根 'sard' で、それなら sard(ラテン)+oniks(玛瑙) と master に一致し、sardin/o(鱼ˢᴰ, len6)も最長一致で保護される。提案どおり語形 'sardo' を固定するのは退行。"
+  },
+  {
+   "w": "solvati",
+   "app": "解ˢ被i",
+   "master": "solvati",
+   "reason": "solvat/i は PIV の正規動詞(=solvant(um)i, 注入コーパス 55217行)で普通語。-i 込み固定は前方一致で i始まり接尾辞群を食う: solvatita(受)・solvatiĝi(成)・solvatilo(具)・solvatigi(使) が漢字を失う。『-ati 動詞形は非標準』という理由付けも誤りで、solvat- は独立語根なので -i は正規の動詞語尾。固定するなら語根 'solvat' であり、語形 'solvati' は不可。"
+  },
+  {
+   "w": "steni",
+   "app": "s持i",
+   "master": "steni",
+   "reason": "sten/i は PIV の正規動詞『速記する』で、master が載せる PIV の例文自体が 'steni paroladon; stenistino; stenomaŝino; stenotajpistino' を含む(注入コーパス 55413行)。'steni' を固定すると stenisto/stenistino は 'steni'+'sto(...)' に切られ ist=家・in=女 が消える。stenigi(使)・stenilo(具) も同様。語根 'sten' 固定なら sten/o/graf/o → sten/记ᴳ/o と master 通りになるので、語形 'steni' 固定は明確に劣る。"
+  },
+  {
+   "w": "sumera",
+   "app": "总粒a",
+   "master": "sumera",
+   "reason": "master 自身が sumer/an/o → sumer/员ᴬ/o と漢字を与えており、'sumera'(6字)は sumerano の先頭6字と一致するため 员ᴬ が消える。前担当の『語形 sumera 限定で sumer/员ᴬ/o を保つ』は前方一致エンジンでは成立しない。加えて語根 'sumer' 側に落とす逃げ道も塞がれている: master には sum/er/o → 总/粒/o という普通名詞(加数)が存在し、そちらが潰れる。"
+  },
+  {
+   "w": "temperi",
+   "app": "时粒i",
+   "master": "temperi",
+   "reason": "temper/i は『テンペラ技法で描く』の正規自動詞(注入コーパス 40197行)で普通語。-i 込み固定は前方一致で temperisto(ist=家)・temperita(it=受)・temperinta(int=过)・temperilo(il=具) の漢字を奪う。なお語根 'temper' 固定なら temperament/o(禀, len11)・temperatur/o(温, len10) が最長一致で保護され安全側だが、提案されているのは語形 'temperi' なので不可。"
+  },
+  {
+   "w": "usona",
+   "app": "u声a",
+   "master": "usona",
+   "reason": "master は uson/an/o → uson/员ᴬ/o と漢字を与えており、'usona'(5字)は usonano の先頭5字と一致するため前方一致で 'usona'+'no' に切られ 员ᴬ が消える。前担当の『語形 usona 限定』は大文字小文字非依存・前方一致のエンジンでは実装不能な条件。正しい固定は語根 'uson' で、それなら uson/员ᴬ/o も uson/风ˢ/a(uson/stil/a)も uson/a 球ᶠ/o 等の句も master 通りに保たれる。提案どおりの語形固定は退行。"
+  },
+  {
+   "w": "zapi",
+   "app": "z芹ᴬ",
+   "master": "zapi",
+   "reason": "zap/i は PIV の正規自動詞(テレビのザッピング, 注入コーパス 57003行)で普通語。'zapi' を固定すると前方一致で zapilo(il=具, まさに『リモコン』を意味する自然な派生語)・zapinta(int=过)・zapisto(家)・zapigi(使) の漢字が消える。api=芹 の誤読を潰したいなら語根 'zap' 固定(zaporog/o はラテンなので無害)であって、語形 'zapi' の固定は不可。"
+  }
+ ],
+ "structural": [
+  {
+   "w": "Adena",
+   "app": "腺ᴬa",
+   "master": "Adena"
+  },
+  {
+   "w": "Akvisto",
+   "app": "水家o",
+   "master": "Akvisto"
+  },
+  {
+   "w": "Alpoj",
+   "app": "峰oj",
+   "master": "Alpoj"
+  },
+  {
+   "w": "Amano",
+   "app": "爱ano",
+   "master": "Amano"
+  },
+  {
+   "w": "Antarkto",
+   "app": "南ᴬo",
+   "master": "Antarkto"
+  },
+  {
+   "w": "Apokalipso",
+   "app": "末启o",
+   "master": "Apokalipso"
+  },
+  {
+   "w": "Arkto",
+   "app": "极ᴬo",
+   "master": "Arkto"
+  },
+  {
+   "w": "Artezo",
+   "app": "自流o",
+   "master": "Artezo"
+  },
+  {
+   "w": "Azenfelo",
+   "app": "驴皮ᶠo",
+   "master": "Azenfelo"
+  },
+  {
+   "w": "Baktrio",
+   "app": "双驼o",
+   "master": "Baktrio"
+  },
+  {
+   "w": "Biblia",
+   "app": "经a",
+   "master": "Biblia"
+  },
+  {
+   "w": "Biblio",
+   "app": "经o",
+   "master": "Biblio"
+  },
+  {
+   "w": "Blubarbo",
+   "app": "蓝胡o",
+   "master": "Blubarbo"
+  },
+  {
+   "w": "Bonaero",
+   "app": "良气o",
+   "master": "Bonaero"
+  },
+  {
+   "w": "Bonespera",
+   "app": "良望a",
+   "master": "Bonespera"
+  },
+  {
+   "w": "Bonespero",
+   "app": "良望o",
+   "master": "Bonespero"
+  },
+  {
+   "w": "Budao",
+   "app": "佛ᴮᴬo",
+   "master": "Budao"
+  },
+  {
+   "w": "Celsio",
+   "app": "摄氏ᶜᴱo",
+   "master": "Celsio"
+  },
+  {
+   "w": "Dancigo",
+   "app": "舞使o",
+   "master": "Dancigo"
+  },
+  {
+   "w": "Drakono",
+   "app": "严ᴰo",
+   "master": "Drakono"
+  },
+  {
+   "w": "Eburio",
+   "app": "象牙io",
+   "master": "Eburio"
+  },
+  {
+   "w": "Egea",
+   "app": "巨ea",
+   "master": "Egea"
+  },
+  {
+   "w": "Elizeo",
+   "app": "福ᴱo",
+   "master": "Elizeo"
+  },
+  {
+   "w": "Emirlandoj",
+   "app": "Emir国oj",
+   "master": "Emirlandoj"
+  },
+  {
+   "w": "Eneo",
+   "app": "内eo",
+   "master": "Eneo"
+  },
+  {
+   "w": "Eternulo",
+   "app": "永者o",
+   "master": "Eternulo"
+  },
+  {
+   "w": "Eventoj",
+   "app": "事ᴱoj",
+   "master": "Eventoj"
+  },
+  {
+   "w": "FEL",
+   "app": "皮ᶠ",
+   "master": "FEL"
+  },
+  {
+   "w": "Feroa",
+   "app": "铁ᶠᴼa",
+   "master": "Feroa"
+  },
+  {
+   "w": "Feroo",
+   "app": "铁ᶠᴼo",
+   "master": "Feroo"
+  },
+  {
+   "w": "Ganga",
+   "app": "脉石a",
+   "master": "Ganga"
+  },
+  {
+   "w": "Gehena",
+   "app": "狱ᴳa",
+   "master": "Gehena"
+  },
+  {
+   "w": "Gracioj",
+   "app": "雅oj",
+   "master": "Gracioj"
+  },
+  {
+   "w": "Grakoj",
+   "app": "啼oj",
+   "master": "Grakoj"
+  },
+  {
+   "w": "Gruzujo",
+   "app": "砾器o",
+   "master": "Gruzujo"
+  },
+  {
+   "w": "Helmi",
+   "app": "盔ᴴi",
+   "master": "Helmi"
+  },
+  {
+   "w": "Hero",
+   "app": "杰",
+   "master": "Hero"
+  },
+  {
+   "w": "Indioj",
+   "app": "金ᴵoj",
+   "master": "Indioj"
+  },
+  {
+   "w": "Inkvizicia",
+   "app": "审判a",
+   "master": "Inkvizicia"
+  },
+  {
+   "w": "Interreto",
+   "app": "间网o",
+   "master": "Interreto"
+  },
+  {
+   "w": "Jona",
+   "app": "离子a",
+   "master": "Jona"
+  },
+  {
+   "w": "Kaboverdo",
+   "app": "Kabo绿o",
+   "master": "Kaboverdo"
+  },
+  {
+   "w": "Kajeno",
+   "app": "辣ᴷᴶo",
+   "master": "Kajeno"
+  },
+  {
+   "w": "Kalvaria",
+   "app": "受难a",
+   "master": "Kalvaria"
+  },
+  {
+   "w": "Kanarioj",
+   "app": "雀ᴷoj",
+   "master": "Kanarioj"
+  },
+  {
+   "w": "Kandelfesto",
+   "app": "烛庆o",
+   "master": "Kandelfesto"
+  },
+  {
+   "w": "Kantiano",
+   "app": "Kanti员ᴬo",
+   "master": "Kantiano"
+  },
+  {
+   "w": "Karisoj",
+   "app": "假虎刺oj",
+   "master": "Karisoj"
+  },
+  {
+   "w": "Klaro",
+   "app": "清o",
+   "master": "Klaro"
+  },
+  {
+   "w": "Kola",
+   "app": "颈a",
+   "master": "Kola"
+  },
+  {
+   "w": "Kolombio",
+   "app": "鸽io",
+   "master": "Kolombio"
+  },
+  {
+   "w": "Kristnasko",
+   "app": "Krist生o",
+   "master": "Kristnasko"
+  },
+  {
+   "w": "Laborpartio",
+   "app": "劳党o",
+   "master": "Laborpartio"
+  },
+  {
+   "w": "Lakonio",
+   "app": "简ᴸio",
+   "master": "Lakonio"
+  },
+  {
+   "w": "Laroj",
+   "app": "鸥ᴸoj",
+   "master": "Laroj"
+  },
+  {
+   "w": "Lea",
+   "app": "背风a",
+   "master": "Lea"
+  },
+  {
+   "w": "Lesbano",
+   "app": "Lesb员ᴬo",
+   "master": "Lesbano"
+  },
+  {
+   "w": "Liberio",
+   "app": "自由io",
+   "master": "Liberio"
+  },
+  {
+   "w": "Liliputo",
+   "app": "微ᴸo",
+   "master": "Liliputo"
+  },
+  {
+   "w": "Lispo",
+   "app": "咬舌o",
+   "master": "Lispo"
+  },
+  {
+   "w": "Lombardio",
+   "app": "当ᴸio",
+   "master": "Lombardio"
+  },
+  {
+   "w": "MET",
+   "app": "甲",
+   "master": "MET"
+  },
+  {
+   "w": "MONATO",
+   "app": "月ᴹO",
+   "master": "MONATO"
+  },
+  {
+   "w": "Maja",
+   "app": "五月a",
+   "master": "Maja"
+  },
+  {
+   "w": "Malio",
+   "app": "反io",
+   "master": "Malio"
+  },
+  {
+   "w": "Markizoj",
+   "app": "侯ᴹoj",
+   "master": "Markizoj"
+  },
+  {
+   "w": "Nombroj",
+   "app": "数oj",
+   "master": "Nombroj"
+  },
+  {
+   "w": "Nordisto",
+   "app": "北家o",
+   "master": "Nordisto"
+  },
+  {
+   "w": "Novlando",
+   "app": "新国o",
+   "master": "Novlando"
+  },
+  {
+   "w": "Orfelo",
+   "app": "金皮ᶠo",
+   "master": "Orfelo"
+  },
+  {
+   "w": "Pamparo",
+   "app": "原ᴾᴾ群o",
+   "master": "Pamparo"
+  },
+  {
+   "w": "Pampoj",
+   "app": "原ᴾᴾoj",
+   "master": "Pampoj"
+  },
+  {
+   "w": "Parkoj",
+   "app": "园ᴾoj",
+   "master": "Parkoj"
+  },
+  {
+   "w": "Plejaltulo",
+   "app": "最高者o",
+   "master": "Plejaltulo"
+  },
+  {
+   "w": "Plejpotenca",
+   "app": "最力a",
+   "master": "Plejpotenca"
+  },
+  {
+   "w": "Plejpotenculo",
+   "app": "最力者o",
+   "master": "Plejpotenculo"
+  },
+  {
+   "w": "Protea",
+   "app": "帝王花a",
+   "master": "Protea"
+  },
+  {
+   "w": "Punika",
+   "app": "榴ᴾa",
+   "master": "Punika"
+  },
+  {
+   "w": "Readmono",
+   "app": "再劝o",
+   "master": "Readmono"
+  },
+  {
+   "w": "Reformacio",
+   "app": "改革o",
+   "master": "Reformacio"
+  },
+  {
+   "w": "Renesanco",
+   "app": "复兴o",
+   "master": "Renesanco"
+  },
+  {
+   "w": "Reo",
+   "app": "再o",
+   "master": "Reo"
+  },
+  {
+   "w": "Resurekto",
+   "app": "复活o",
+   "master": "Resurekto"
+  },
+  {
+   "w": "Rokmontaro",
+   "app": "岩山群o",
+   "master": "Rokmontaro"
+  },
+  {
+   "w": "Romanigi",
+   "app": "Rom员ᴬ使i",
+   "master": "Romanigi"
+  },
+  {
+   "w": "Rostroj",
+   "app": "鼻ᴿˢoj",
+   "master": "Rostroj"
+  },
+  {
+   "w": "Rozkrucismo",
+   "app": "玫十字主义o",
+   "master": "Rozkrucismo"
+  },
+  {
+   "w": "Rurvalo",
+   "app": "乡谷o",
+   "master": "Rurvalo"
+  },
+  {
+   "w": "SATano",
+   "app": "SA制革o",
+   "master": "SATano"
+  },
+  {
+   "w": "SEK",
+   "app": "干",
+   "master": "SEK"
+  },
+  {
+   "w": "SI",
+   "app": "己",
+   "master": "SI"
+  },
+  {
+   "w": "Sagisto",
+   "app": "矢家o",
+   "master": "Sagisto"
+  },
+  {
+   "w": "Sallago",
+   "app": "盐湖o",
+   "master": "Sallago"
+  },
+  {
+   "w": "Samoo",
+   "app": "同oo",
+   "master": "Samoo"
+  },
+  {
+   "w": "Sargasmaro",
+   "app": "藻ˢ海o",
+   "master": "Sargasmaro"
+  },
+  {
+   "w": "Saturna",
+   "app": "土ˢᵀa",
+   "master": "Saturna"
+  },
+  {
+   "w": "Saturno",
+   "app": "土ˢᵀo",
+   "master": "Saturno"
+  },
+  {
+   "w": "Savarmeo",
+   "app": "救军o",
+   "master": "Savarmeo"
+  },
+  {
+   "w": "Savonto",
+   "app": "救将o",
+   "master": "Savonto"
+  },
+  {
+   "w": "Senegalo",
+   "app": "无等o",
+   "master": "Senegalo"
+  },
+  {
+   "w": "Serpentisto",
+   "app": "蛇家o",
+   "master": "Serpentisto"
+  },
+  {
+   "w": "Siano",
+   "app": "己ano",
+   "master": "Siano"
+  },
+  {
+   "w": "Sita",
+   "app": "鸟ˢᴵa",
+   "master": "Sita"
+  },
+  {
+   "w": "Somerkomenco",
+   "app": "夏始ᴷo",
+   "master": "Somerkomenco"
+  },
+  {
+   "w": "Statoj",
+   "app": "态oj",
+   "master": "Statoj"
+  },
+  {
+   "w": "Sudana",
+   "app": "南员ᴬa",
+   "master": "Sudana"
+  },
+  {
+   "w": "Sudisto",
+   "app": "南家o",
+   "master": "Sudisto"
+  },
+  {
+   "w": "Temis",
+   "app": "题is",
+   "master": "Temis"
+  },
+  {
+   "w": "Templano",
+   "app": "庙员ᴬo",
+   "master": "Templano"
+  },
+  {
+   "w": "Tendofesto",
+   "app": "帐o庆o",
+   "master": "Tendofesto"
+  },
+  {
+   "w": "Triunuo",
+   "app": "三一o",
+   "master": "Triunuo"
+  },
+  {
+   "w": "Trojanoj",
+   "app": "Troj员ᴬoj",
+   "master": "Trojanoj"
+  },
+  {
+   "w": "Tronoj",
+   "app": "座ᵀoj",
+   "master": "Tronoj"
+  },
+  {
+   "w": "Turlando",
+   "app": "塔国o",
+   "master": "Turlando"
+  },
+  {
+   "w": "Venero",
+   "app": "性病o",
+   "master": "Venero"
+  },
+  {
+   "w": "Vintrokomenco",
+   "app": "冬o始ᴷo",
+   "master": "Vintrokomenco"
+  },
+  {
+   "w": "Virgo",
+   "app": "贞o",
+   "master": "Virgo"
+  },
+  {
+   "w": "Virhidro",
+   "app": "男水ᴴo",
+   "master": "Virhidro"
+  },
+  {
+   "w": "agao",
+   "app": "办ao",
+   "master": "agao"
+  },
+  {
+   "w": "alk",
+   "app": "驼鹿",
+   "master": "alk"
+  },
+  {
+   "w": "ato",
+   "app": "被o",
+   "master": "ato"
+  },
+  {
+   "w": "avio",
+   "app": "a你o",
+   "master": "avio"
+  },
+  {
+   "w": "blanketo",
+   "app": "白小o",
+   "master": "blanketo"
+  },
+  {
+   "w": "diazo",
+   "app": "神无生",
+   "master": "diazo"
+  },
+  {
+   "w": "dista",
+   "app": "d家a",
+   "master": "dista"
+  },
+  {
+   "w": "egeo",
+   "app": "巨eo",
+   "master": "egeo"
+  },
+  {
+   "w": "elektrumo",
+   "app": "电umo",
+   "master": "elektrumo"
+  },
+  {
+   "w": "hematozooj",
+   "app": "血ᴴᵀ症ᴼooj",
+   "master": "hematozooj"
+  },
+  {
+   "w": "hemo",
+   "app": "血ᴴ",
+   "master": "hemo"
+  },
+  {
+   "w": "lombarda",
+   "app": "当ᴸa",
+   "master": "lombarda"
+  },
+  {
+   "w": "oleumo",
+   "app": "油umo",
+   "master": "oleumo"
+  },
+  {
+   "w": "peta",
+   "app": "求a",
+   "master": "peta"
+  },
+  {
+   "w": "polo",
+   "app": "马球",
+   "master": "polo"
+  },
+  {
+   "w": "servila",
+   "app": "务具a",
+   "master": "servila"
+  },
+  {
+   "w": "tempere",
+   "app": "时粒e",
+   "master": "tempere"
+  }
+ ],
+ "master_gap": [
+  {
+   "w": "Cindromerkredo",
+   "app": "灰ᶜo水ᴹo",
+   "master": "Cindromerkredo",
+   "reason": "cindr(灰)+merkred(水)の全一般語根の透明複合で衝突は無いが、灰水曜の意味訳を捨てる是非はマスター側の再判断事項。"
+  },
+  {
+   "w": "Dipatrino",
+   "app": "神父女o",
+   "master": "Dipatrino",
+   "reason": "di+patr+in の全一般語根(神の母)で衝突は無いが、意味訳を捨てるかはマスター側判断が要る。"
+  },
+  {
+   "w": "Eburbordo",
+   "app": "象牙岸o",
+   "master": "Eburbordo",
+   "reason": "ebur(象牙)+bord(岸)の全一般語根でCJKでは象牙海岸と意味訳が標準、衝突は無いがマスター側の再判断事項。"
+  },
+  {
+   "w": "Ekstremoriento",
+   "app": "极东o",
+   "master": "Ekstremoriento",
+   "reason": "ekstrem(极)+orient(东)の全一般語根で衝突は無いが、極東の意味訳を捨てる是非はマスター判断。"
+  },
+  {
+   "w": "Ercmontaro",
+   "app": "矿ᴱ山群o",
+   "master": "Ercmontaro",
+   "reason": "erc(矿)+mont(山)+ar の全一般語根で衝突は無いが、鉱山山脈の意味訳を捨てる是非はマスター判断。"
+  },
+  {
+   "w": "Fajrolando",
+   "app": "火o国o",
+   "master": "Fajrolando",
+   "reason": "fajr(火)+land(国)の全一般語根で衝突は無いが、火の国の意味訳を捨てる是非はマスター判断。"
+  },
+  {
+   "w": "Flambirdo",
+   "app": "焰鸟o",
+   "master": "Flambirdo",
+   "reason": "flam(焰)+bird(鸟)の全一般語根で衝突は無いが、火の鳥の意味訳を捨てる是非はマスター判断。"
+  },
+  {
+   "w": "Gadidoj",
+   "app": "鱼ᴳᴰ子oj",
+   "master": "Gadidoj",
+   "reason": "gad(鱼ᴳᴰ)+id の全一般語根で前方一致衝突は無いが、felis/ed/oj(猫ᶠ/科ᴱ)が漢字化される一方で本語だけラテンなのは族不整合でマスター再判断が要る。"
+  },
+  {
+   "w": "Mamono",
+   "app": "财魔o",
+   "master": "Mamono",
+   "reason": "マスター自身が mamon/ism/o→财魔/主义/o と同語根に漢字を与えており、Mamon/o だけラテンは不整合。語幹mamonのラテン化はmamonismoを壊すためマスター側で決着すべき。"
+  },
+  {
+   "w": "Marvirineto",
+   "app": "海男女小o",
+   "master": "Marvirineto",
+   "reason": "マスターは mar/vir/in/o→海/男/女/o に漢字を与えており、その指小形だけラテンは不整合。小文字marvirineto(人魚姫=普通名詞)が正規派生なので固定は不可。"
+  },
+  {
+   "w": "Mesia",
+   "app": "救世a",
+   "master": "Mesia",
+   "reason": "マスターが mesi/an/ism/o→救世/员ᴬ/主义/o に漢字を与える一方Mesi/aはラテンで不整合。しかも mesia は mesianismo と前方一致するため固定すれば退行する。"
+  },
+  {
+   "w": "Mesiado",
+   "app": "救世行o",
+   "master": "Mesiado",
+   "reason": "同じ mesi 語根がマスター内で漢字(mesianismo=救世)とラテンに割れている。語幹mesiでの照合次第でmesianismoを壊すため、マスター側で語根方針を決めるべき。"
+  },
+  {
+   "w": "Mesio",
+   "app": "救世o",
+   "master": "Mesio",
+   "reason": "Mesi/oはラテンだが同語根の mesi/an/ism/o は救世を保持。語幹mesiは mesianismo の前方一致になるためアプリ側固定は危険。"
+  },
+  {
+   "w": "Mikronezio",
+   "app": "微nezio",
+   "master": "Mikronezio",
+   "reason": "マスターは mikro/nezi/an/o→微/nezi/员ᴬ/o に漢字を与えつつ Mikro/nezi/o のみラテンで不整合。語幹mikroneziの固定は住民形の微を落とす。"
+  },
+  {
+   "w": "Montenegro",
+   "app": "山e黑ᴺᴱo",
+   "master": "Montenegro",
+   "reason": "マスターは mont/e/negr/a→山/e/黑ᴺᴱ/a と mont/e/negr/an/o に漢字を与えながら基本形 Mont/e/negr/o のみラテンで自家撞着。固定すると派生形が退行するためマスター側の統一が先。"
+  },
+  {
+   "w": "Muzoj",
+   "app": "诗ᴹoj",
+   "master": "Muzoj",
+   "reason": "マスターに muz/o→诗ᴹ/o, muz/id/o→诗ᴹ/子/o があるのに複数形 Muz/oj だけラテンで不整合。語幹muzの固定は muziko/muzeo まで巻き込む危険もある。"
+  },
+  {
+   "w": "Pasko",
+   "app": "庆ᴾo",
+   "master": "Pasko",
+   "reason": "マスターは小文字 pask/a→庆ᴾa に漢字を与えつつ Pask/o のみラテンで内部不整合。app固定より master 側の統一判断が先。"
+  },
+  {
+   "w": "Petriplado",
+   "app": "Petri皿o",
+   "master": "Petriplado",
+   "reason": "シャーレは実験器具の普通名詞。polic/hund/o→警犬o と同様に plad→皿 が与えられるべきで、全ラテンは master 側の欠落。"
+  },
+  {
+   "w": "Pomerihundo",
+   "app": "Pomeri犬o",
+   "master": "Pomerihundo",
+   "reason": "ポメラニアン=犬種という普通名詞。polic/hund/o→警犬o と同様 hund→犬 が与えられるべきで、全ラテンは master 側の欠落。"
+  },
+  {
+   "w": "Printempokomenco",
+   "app": "春o始ᴷo",
+   "master": "Printempokomenco",
+   "reason": "printempo+komenco の純粋な普通複合語「春の始まり(春分)」。固有名ではなく、ラテン維持は master 側の欠落。"
+  },
+  {
+   "w": "Prujnofalo",
+   "app": "霜ᴾo落o",
+   "master": "Prujnofalo",
+   "reason": "prujno+falo の純粋な普通複合語「霜の降下」。固有名要素がなく、全ラテンは master 側の欠落。"
+  },
+  {
+   "w": "Urano",
+   "app": "天王星o",
+   "master": "Urano",
+   "reason": "マップにelem uran=天王星があるのに export はUran/oをラテン(他惑星Marso/Venuso/Neptunoも一律ラテン)で、天王星oは意味的には正しく孤立マップ由来のマスター内不整合。app側ラテン固定でなくマスター側の裁定が必要。"
+  },
+  {
+   "w": "anhidro",
+   "app": "无水o",
+   "master": "anhidro",
+   "reason": "app の 无水o はマスター自身のマップ行 piv/anhidr=无水 に由来し、マスターも anhidra を 无ᴬ水ᴴa と漢字化している。接頭辞見出しだけラテンなのは割当漏れに見えるため、appは触らずマスターへ照会。"
+  },
+  {
+   "w": "klementino",
+   "app": "木ᴷᴸᴱo",
+   "master": "klementino",
+   "reason": "map に piv klementin→木 が実在し export も klementin/uj/o=木ᴷᴸᴱ器o, klementin/arb/o=木ᴷᴸᴱ树o。klement/in/o 行だけ誤分節でラテン化しており app の 木ᴷᴸᴱo が正しい。"
+  },
+  {
+   "w": "tekstila",
+   "app": "文ᵀ具a",
+   "master": "tekstila",
+   "reason": "master 自身が PEJVO 行で tekst/il/o=文ᵀ/具/o と漢字化しており、PIV 行の tekstil/a だけラテン。app の 文ᵀ具a は上位権威行と整合しており master 側の割当漏れに見える。"
+  },
+  {
+   "w": "umbra",
+   "app": "鱼ᵁa",
+   "master": "umbra",
+   "reason": "map に piv umbr→鱼 があり export も umbr/o=鱼ᵁ/o が2行。umbr/a 行だけラテンで app の 鱼ᵁa は master 自身の語根割当と一致するため割当漏れの疑い。"
+  }
+ ]
+}

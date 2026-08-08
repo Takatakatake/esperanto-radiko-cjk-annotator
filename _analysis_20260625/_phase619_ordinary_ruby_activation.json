@@ -1,0 +1,25 @@
+{
+ "schema_version": 1,
+ "active": true,
+ "mode": "phase598_parent_with_phase619_seven_ordinary_word_sidecar",
+ "parent_phase598": {
+  "activation_sha256": "06E5E4944EA5B61BCF21E02D26FA11B9D48BEF13270A207D21294029B23C2069",
+  "mode": "phase558_parent_with_phase598_eight_technical_on_sidecar",
+  "review_sha256": "C151FD6F486D034504BFF38726E058508736096B2C7E36F79FEEBE61C441EB13",
+  "entries_sha256": "EA66E4EF6BEB585A15114F86C4A4A8A14E30F47B0C7FA099958D3B20ED97ACAE"
+ },
+ "phase619_review": {
+  "phase_from": 597,
+  "phase_to": 619,
+  "review_sha256": "5BA83778181568ED90D989A4AFE866059F759DA2F46B7F6D8746FAFCEAAD4C4F",
+  "entries_sha256": "D96EED41AE3E8716052E2138E0E9D8E7286974A1EF522E399DFB9175E4CB8CC1",
+  "entries": 7,
+  "productive_atomic_ruby_morph": 6,
+  "productive_split_ruby_morph": 1,
+  "phase619_learner_sha256": "4D89CD96F27D635DDC0EBC08F37DC7B211481F844C1AAE6922EB65749ACBB0D2",
+  "phase619_academic_sha256": "8E5D317521F2399168BA37DD4AA6A9944B98E1E1D717BE6B0989AE753E6CC7F5",
+  "phase619_transition_dispositions_sha256": "42D30B155CCEF9832189C382EE2049B89350DA0BFAD5C774E4268D86D90164F6",
+  "kyoto_corpus_commit": "D1642C276857C1FE400A6D597214FF7A923E7BD2"
+ },
+ "fallback_policy": "Fail closed; never silently omit the adopted Phase 619 ordinary-word Ruby sidecar or let it alter the Kanji track."
+}

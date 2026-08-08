@@ -1,0 +1,726 @@
+[
+ {
+  "w": "tokipono",
+  "target": "tokipon/o"
+ },
+ {
+  "w": "feminismo",
+  "target": "feminism/o"
+ },
+ {
+  "w": "jilano",
+  "target": "jilan/o"
+ },
+ {
+  "w": "ideografio",
+  "target": "ideografi/o"
+ },
+ {
+  "w": "aŭstrio",
+  "target": "aŭstri/o"
+ },
+ {
+  "w": "krato",
+  "target": "krat/o"
+ },
+ {
+  "w": "kampuso",
+  "target": "kampus/o"
+ },
+ {
+  "w": "isto",
+  "target": "ist/o"
+ },
+ {
+  "w": "butanoo",
+  "target": "butano/o"
+ },
+ {
+  "w": "psikologio",
+  "target": "psikologi/o"
+ },
+ {
+  "w": "organizo",
+  "target": "organiz/i"
+ },
+ {
+  "w": "gerdao",
+  "target": "gerda/o"
+ },
+ {
+  "w": "alternativo",
+  "target": "alternativ/o"
+ },
+ {
+  "w": "koronaviruso",
+  "target": "koronavirus/o"
+ },
+ {
+  "w": "poznano",
+  "target": "poznan/o"
+ },
+ {
+  "w": "gvido",
+  "target": "gvid/i"
+ },
+ {
+  "w": "sitelenpono",
+  "target": "sitelenpon/o"
+ },
+ {
+  "w": "plio",
+  "target": "pli/o"
+ },
+ {
+  "w": "resumo",
+  "target": "resum/o"
+ },
+ {
+  "w": "parolo",
+  "target": "parol/i"
+ },
+ {
+  "w": "rameno",
+  "target": "ramen/o"
+ },
+ {
+  "w": "ismo",
+  "target": "ism/o"
+ },
+ {
+  "w": "neologismo",
+  "target": "neologism/o"
+ },
+ {
+  "w": "vesperto",
+  "target": "vespert/o"
+ },
+ {
+  "w": "supo",
+  "target": "sup/o"
+ },
+ {
+  "w": "hipotezo",
+  "target": "hipotez/o"
+ },
+ {
+  "w": "alto",
+  "target": "alt/o"
+ },
+ {
+  "w": "peno",
+  "target": "pen/i"
+ },
+ {
+  "w": "dialogo",
+  "target": "dialog/o"
+ },
+ {
+  "w": "sabato",
+  "target": "sabat/o"
+ },
+ {
+  "w": "feminicido",
+  "target": "feminicid/o"
+ },
+ {
+  "w": "ĥino",
+  "target": "ĥin/o"
+ },
+ {
+  "w": "karaĵo",
+  "target": "karaĵ/o"
+ },
+ {
+  "w": "animacio",
+  "target": "animaci/o"
+ },
+ {
+  "w": "signo",
+  "target": "sign/o"
+ },
+ {
+  "w": "posteno",
+  "target": "posten/o"
+ },
+ {
+  "w": "staro",
+  "target": "star/i"
+ },
+ {
+  "w": "rido",
+  "target": "rid/o"
+ },
+ {
+  "w": "forto",
+  "target": "fort/o"
+ },
+ {
+  "w": "dormo",
+  "target": "dorm/i"
+ },
+ {
+  "w": "peĉjoo",
+  "target": "peĉjo/o"
+ },
+ {
+  "w": "etimologio",
+  "target": "etimologi/o"
+ },
+ {
+  "w": "mangao",
+  "target": "manga/o"
+ },
+ {
+  "w": "socio",
+  "target": "soci/o"
+ },
+ {
+  "w": "klaso",
+  "target": "klas/o"
+ },
+ {
+  "w": "organismo",
+  "target": "organism/o"
+ },
+ {
+  "w": "veno",
+  "target": "ven/i"
+ },
+ {
+  "w": "dojmo",
+  "target": "dojm/o"
+ },
+ {
+  "w": "monto",
+  "target": "mont/o"
+ },
+ {
+  "w": "vero",
+  "target": "ver/o"
+ },
+ {
+  "w": "kilogramo",
+  "target": "kilogram/o"
+ },
+ {
+  "w": "asociacio",
+  "target": "asociaci/o"
+ },
+ {
+  "w": "demografio",
+  "target": "demografi/o"
+ },
+ {
+  "w": "romio",
+  "target": "romi/o"
+ },
+ {
+  "w": "orientalismo",
+  "target": "orientalism/o"
+ },
+ {
+  "w": "antropologo",
+  "target": "antropolog/o"
+ },
+ {
+  "w": "farto",
+  "target": "fart/o"
+ },
+ {
+  "w": "tipografo",
+  "target": "tipograf/o"
+ },
+ {
+  "w": "pragmatiko",
+  "target": "pragmatik/o"
+ },
+ {
+  "w": "rifuĝo",
+  "target": "rifuĝ/i"
+ },
+ {
+  "w": "sudeto",
+  "target": "sudet/o"
+ },
+ {
+  "w": "ĉifro",
+  "target": "ĉifr/o"
+ },
+ {
+  "w": "buroo",
+  "target": "buro/o"
+ },
+ {
+  "w": "rumanio",
+  "target": "rumani/o"
+ },
+ {
+  "w": "tvitero",
+  "target": "tviter/o"
+ },
+ {
+  "w": "minibuso",
+  "target": "minibus/o"
+ },
+ {
+  "w": "revizio",
+  "target": "revizi/i"
+ },
+ {
+  "w": "pandemio",
+  "target": "pandemi/o"
+ },
+ {
+  "w": "hipocentro",
+  "target": "hipocentr/o"
+ },
+ {
+  "w": "eblo",
+  "target": "ebl/o"
+ },
+ {
+  "w": "tago",
+  "target": "tag/o"
+ },
+ {
+  "w": "fejsbuko",
+  "target": "fejsbuk/o"
+ },
+ {
+  "w": "cebuo",
+  "target": "cebu/o"
+ },
+ {
+  "w": "samo",
+  "target": "sam/o"
+ },
+ {
+  "w": "aparto",
+  "target": "apart/o"
+ },
+ {
+  "w": "jugoslavio",
+  "target": "jugoslavi/o"
+ },
+ {
+  "w": "kvaro",
+  "target": "kvar/o"
+ },
+ {
+  "w": "fojo",
+  "target": "foj/o"
+ },
+ {
+  "w": "psikanalizisto",
+  "target": "psikanalizist/o"
+ },
+ {
+  "w": "psikoterapeŭto",
+  "target": "psikoterapeŭt/o"
+ },
+ {
+  "w": "pseŭdonimo",
+  "target": "pseŭdonim/o"
+ },
+ {
+  "w": "blindo",
+  "target": "blind/o"
+ },
+ {
+  "w": "peco",
+  "target": "pec/o"
+ },
+ {
+  "w": "ĝemo",
+  "target": "ĝem/o"
+ },
+ {
+  "w": "tŝanglo",
+  "target": "tŝangl/o"
+ },
+ {
+  "w": "timpuo",
+  "target": "timpu/o"
+ },
+ {
+  "w": "piasto",
+  "target": "piast/o"
+ },
+ {
+  "w": "geografio",
+  "target": "geografi/o"
+ },
+ {
+  "w": "ĉielo",
+  "target": "ĉiel/o"
+ },
+ {
+  "w": "masivo",
+  "target": "masiv/o"
+ },
+ {
+  "w": "veleto",
+  "target": "velet/o"
+ },
+ {
+  "w": "piano",
+  "target": "pian/o"
+ },
+ {
+  "w": "seoulo",
+  "target": "seoul/o"
+ },
+ {
+  "w": "kapo",
+  "target": "kap/o"
+ },
+ {
+  "w": "kilometro",
+  "target": "kilometr/o"
+ },
+ {
+  "w": "karo",
+  "target": "kar/o"
+ },
+ {
+  "w": "haro",
+  "target": "har/o"
+ },
+ {
+  "w": "tondo",
+  "target": "tond/o"
+ },
+ {
+  "w": "janĉjoo",
+  "target": "janĉjo/o"
+ },
+ {
+  "w": "pikarido",
+  "target": "pikarid/o"
+ },
+ {
+  "w": "ĝusto",
+  "target": "ĝust/o"
+ },
+ {
+  "w": "bluo",
+  "target": "blu/o"
+ },
+ {
+  "w": "sato",
+  "target": "sat/o"
+ },
+ {
+  "w": "plejo",
+  "target": "plej/o"
+ },
+ {
+  "w": "plano",
+  "target": "plan/o"
+ },
+ {
+  "w": "ŝanĝo",
+  "target": "ŝanĝ/i"
+ },
+ {
+  "w": "aŭdo",
+  "target": "aŭd/i"
+ },
+ {
+  "w": "fredoo",
+  "target": "fredo/o"
+ },
+ {
+  "w": "koro",
+  "target": "kor/o"
+ },
+ {
+  "w": "leono",
+  "target": "leon/o"
+ },
+ {
+  "w": "faro",
+  "target": "far/i"
+ },
+ {
+  "w": "greno",
+  "target": "gren/o"
+ },
+ {
+  "w": "folio",
+  "target": "foli/o"
+ },
+ {
+  "w": "vagono",
+  "target": "vagon/o"
+ },
+ {
+  "w": "apudo",
+  "target": "apud/o"
+ },
+ {
+  "w": "lito",
+  "target": "lit/o"
+ },
+ {
+  "w": "ŝato",
+  "target": "ŝat/o"
+ },
+ {
+  "w": "varmo",
+  "target": "varm/o"
+ },
+ {
+  "w": "movo",
+  "target": "mov/o"
+ },
+ {
+  "w": "bono",
+  "target": "bon/o"
+ },
+ {
+  "w": "kuraco",
+  "target": "kurac/i"
+ },
+ {
+  "w": "spico",
+  "target": "spic/o"
+ },
+ {
+  "w": "regiono",
+  "target": "region/o"
+ },
+ {
+  "w": "soifo",
+  "target": "soif/o"
+ },
+ {
+  "w": "jajoo",
+  "target": "jajo/o"
+ },
+ {
+  "w": "sido",
+  "target": "sid/i"
+ },
+ {
+  "w": "scio",
+  "target": "sci/i"
+ },
+ {
+  "w": "nekrologo",
+  "target": "nekrolog/o"
+ },
+ {
+  "w": "jesuo",
+  "target": "jesu/o"
+ },
+ {
+  "w": "novo",
+  "target": "nov/o"
+ },
+ {
+  "w": "instagramo",
+  "target": "instagram/o"
+ },
+ {
+  "w": "oksigeno",
+  "target": "oksigen/o"
+ },
+ {
+  "w": "hibisko",
+  "target": "hibisk/o"
+ },
+ {
+  "w": "kiropterologo",
+  "target": "kiropterolog/o"
+ },
+ {
+  "w": "mondo",
+  "target": "mond/o"
+ },
+ {
+  "w": "imperialismo",
+  "target": "imperialism/o"
+ },
+ {
+  "w": "atajalo",
+  "target": "atajal/o"
+ },
+ {
+  "w": "distriko",
+  "target": "distrik/o"
+ },
+ {
+  "w": "kantono",
+  "target": "kanton/o"
+ },
+ {
+  "w": "pazigrafio",
+  "target": "pazigrafi/o"
+ },
+ {
+  "w": "parto",
+  "target": "part/o"
+ },
+ {
+  "w": "konkurencivo",
+  "target": "konkurenciv/o"
+ },
+ {
+  "w": "enketo",
+  "target": "enket/i"
+ },
+ {
+  "w": "poluso",
+  "target": "polus/o"
+ },
+ {
+  "w": "feministo",
+  "target": "feminist/o"
+ },
+ {
+  "w": "rasisto",
+  "target": "rasist/o"
+ },
+ {
+  "w": "analizo",
+  "target": "analiz/i"
+ },
+ {
+  "w": "etnoo",
+  "target": "etno/o"
+ },
+ {
+  "w": "boreliozo",
+  "target": "borelioz/o"
+ },
+ {
+  "w": "invigilo",
+  "target": "invigil/o"
+ },
+ {
+  "w": "luzacio",
+  "target": "luzaci/o"
+ },
+ {
+  "w": "aseptiko",
+  "target": "aseptik/o"
+ },
+ {
+  "w": "hokkajdo",
+  "target": "hokkajd/o"
+ },
+ {
+  "w": "gluo",
+  "target": "glu/o"
+ },
+ {
+  "w": "marko",
+  "target": "mark/o"
+ },
+ {
+  "w": "amaro",
+  "target": "amar/o"
+ },
+ {
+  "w": "suspekto",
+  "target": "suspekt/i"
+ },
+ {
+  "w": "severo",
+  "target": "sever/o"
+ },
+ {
+  "w": "limo",
+  "target": "lim/o"
+ },
+ {
+  "w": "periodo",
+  "target": "period/o"
+ },
+ {
+  "w": "akvo",
+  "target": "akv/o"
+ },
+ {
+  "w": "civilizacio",
+  "target": "civilizaci/o"
+ },
+ {
+  "w": "lupo",
+  "target": "lup/o"
+ },
+ {
+  "w": "kodo",
+  "target": "kod/o"
+ },
+ {
+  "w": "rompo",
+  "target": "romp/i"
+ },
+ {
+  "w": "epistolo",
+  "target": "epistol/o"
+ },
+ {
+  "w": "jaro",
+  "target": "jar/o"
+ },
+ {
+  "w": "pretendo",
+  "target": "pretend/i"
+ },
+ {
+  "w": "nobelo",
+  "target": "nobel/o"
+ },
+ {
+  "w": "respekto",
+  "target": "respekt/i"
+ },
+ {
+  "w": "instruo",
+  "target": "instru/i"
+ },
+ {
+  "w": "fabriko",
+  "target": "fabrik/o"
+ },
+ {
+  "w": "popularo",
+  "target": "popular/o"
+ },
+ {
+  "w": "vegano",
+  "target": "vegan/o"
+ },
+ {
+  "w": "duolingo",
+  "target": "duoling/o"
+ },
+ {
+  "w": "videoo",
+  "target": "video/o"
+ },
+ {
+  "w": "hidrogeno",
+  "target": "hidrogen/o"
+ },
+ {
+  "w": "mojoso",
+  "target": "mojos/o"
+ },
+ {
+  "w": "vico",
+  "target": "vic/o"
+ },
+ {
+  "w": "banko",
+  "target": "bank/o"
+ },
+ {
+  "w": "falo",
+  "target": "fal/o"
+ }
+]

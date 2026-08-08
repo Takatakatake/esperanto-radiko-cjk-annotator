@@ -1,0 +1,25 @@
+{
+ "schema_version": 1,
+ "active": true,
+ "mode": "phase532_parent_with_phase558_five_surface_sidecar",
+ "parent_phase532": {
+  "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+  "reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+  "projection_sha256": "75AC6732AACD145F91EE7866738E57D073A998F1634AADA9D28CCFE3FBCAD3D6",
+  "fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+  "strict_entries_sha256": "CA736E47CEAC5F128FFB491A976C930C0B37895D498ECF7656A9AC17F2C3B017"
+ },
+ "overlay_review": {
+  "phase_from": 532,
+  "phase_to": 558,
+  "review_sha256": "90A8070F4BE8CEB97F4B08A6119F68C69BE6D281C2E358F0529E2D353CAEFD26",
+  "entries_sha256": "614C9FBF7435583A64FB8CD673D461FD5E9065589063978B7CEAAEB992EFE67C",
+  "entries": 5,
+  "productive_ruby_morph": 2,
+  "exact_typed_ruby_only": 3,
+  "strict_supersessions": 1,
+  "phase558_learner_sha256": "21D8B88C79D8D1E45A23CF9987006688EB0308084652AE50FFA2ED337215E4D4",
+  "phase558_academic_sha256": "6BAF43D0A2981B0ED48A576178991B48A33AF9AFCA9795D8ED213B2FD460FCFB"
+ },
+ "fallback_policy": "Fail closed; never silently fall back to Phase 532 after an activated Phase 558 overlay identity is present."
+}

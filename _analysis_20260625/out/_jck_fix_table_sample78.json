@@ -1,0 +1,2810 @@
+[
+ {
+  "sev": "high",
+  "root": "german",
+  "ex": "alt/german",
+  "issue": "mistranslation",
+  "langs": "ko",
+  "cur": {
+   "JA": "ドイツの",
+   "ZH": "德",
+   "KO": "도덕적 선"
+  },
+  "csv": {
+   "JA": "ドイツ",
+   "ZH": "德国",
+   "KO": "독일인"
+  },
+  "master": {
+   "ja": "ドイツの",
+   "zh": "德",
+   "ko": "도덕적 선"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "독일의/게르만"
+  },
+  "fix": {
+   "KO": "독일인"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "KOの「도덕적 선(道徳的善)」はgerman(ドイツ/ゲルマン)と全く無関係な誤訳で、例語alt/german(高地ドイツ語)にも合わない。"
+ },
+ {
+  "sev": "high",
+  "root": "cikl",
+  "ex": "po/cikl",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "ポー",
+   "ZH": "周期",
+   "KO": "주기"
+  },
+  "csv": {
+   "JA": "周期",
+   "ZH": "周期",
+   "KO": "주기"
+  },
+  "master": {},
+  "rec": {
+   "JA": "周期/サイクル",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "周期"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JAの「ポー」はcikl(周期・サイクル)の訳として無意味で、ZH/KOの「周期/주기」と乖離した明らかな誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "mal",
+  "ex": "po/mal/grand",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "ポー",
+   "ZH": "相反",
+   "KO": "정반대"
+  },
+  "csv": {
+   "JA": "正反対",
+   "ZH": "反",
+   "KO": "반대"
+  },
+  "master": {
+   "ja": " ポー",
+   "zh": "相反",
+   "ko": "정반대"
+  },
+  "rec": {
+   "JA": "反対(逆/正反対)",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "正反対"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JAの「ポー」は例語 po/mal/grand の先頭「po」を誤って音写したもので、超高頻度(883)の反対接頭辞 mal の意味になっておらず、正しいZH「相反」KO「정반대」と乖離している。"
+ },
+ {
+  "sev": "high",
+  "root": "gen",
+  "ex": "gen/manipul/ad",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "天才",
+   "ZH": "天才",
+   "KO": "천재"
+  },
+  "csv": {
+   "JA": "生成",
+   "ZH": "生成",
+   "KO": "생성"
+  },
+  "master": {
+   "ja": "天才",
+   "zh": "天才",
+   "ko": "천재"
+  },
+  "rec": {
+   "JA": "遺伝子",
+   "ZH": "基因",
+   "KO": "유전자"
+  },
+  "fix": {
+   "JA": "生成",
+   "ZH": "生成",
+   "KO": "생성"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 gen/manipul/ad(遺伝子操作)の語根 gen は「遺伝子(geno)」であり、「天才(genio)」ではないため全言語で誤訳。"
+ },
+ {
+  "sev": "high",
+  "root": "ŝos",
+  "ex": "suk/ŝos",
+  "issue": "mistranslation",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "若枝を伸ばす",
+   "ZH": "公路",
+   "KO": "포장도로"
+  },
+  "csv": {
+   "JA": "若枝を伸ばす",
+   "ZH": "公路",
+   "KO": "포장도로"
+  },
+  "master": {},
+  "rec": {
+   "JA": "若枝/新芽を出す",
+   "ZH": "嫩芽/新枝",
+   "KO": "새순/어린싹"
+  },
+  "fix": {
+   "ZH": "嫩芽/新枝",
+   "KO": "새순/어린싹"
+  },
+  "src": {
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "ŝos は「若枝・新芽(ŝoso)」の意。ZH「公路」・KO「포장도로」は「舗装道路(ŝoseo)」と取り違えた誤訳で、JAのみ正しい。"
+ },
+ {
+  "sev": "high",
+  "root": "drag",
+  "ex": "drag/il",
+  "issue": "mistranslation",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "浚渫する",
+   "ZH": "龙",
+   "KO": "용"
+  },
+  "csv": {
+   "JA": "浚渫する",
+   "ZH": "龙",
+   "KO": "용"
+  },
+  "master": {
+   "ja": "浚渫する",
+   "zh": "龙",
+   "ko": "용"
+  },
+  "rec": {
+   "JA": "浚渫する",
+   "ZH": "疏浚/挖泥",
+   "KO": "준설하다"
+  },
+  "fix": {
+   "ZH": "疏浚/挖泥",
+   "KO": "준설하다"
+  },
+  "src": {
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "drag は「浚渫する(dragi)」の意(例 drag/il=浚渫機)だが、ZH「龙」・KO「용」は音写で「竜(dragon)」と混同した誤訳。"
+ },
+ {
+  "sev": "high",
+  "root": "tin",
+  "ex": "tin/ist",
+  "issue": "mistranslation",
+  "langs": "zh",
+  "cur": {
+   "JA": "桶",
+   "ZH": "蛾",
+   "KO": "통"
+  },
+  "csv": {
+   "JA": "桶",
+   "ZH": "蛾",
+   "KO": "통"
+  },
+  "master": {
+   "ja": "桶",
+   "zh": "蛾",
+   "ko": "통"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "桶/大缸/木盆",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "桶/大缸/木盆"
+  },
+  "src": {
+   "ZH": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "tin は「桶・大桶(tino)」(例 tin/ist=桶職人)だが、ZH「蛾」は「蛾(tineo)」と取り違えた誤訳。JA/KO は正しい。"
+ },
+ {
+  "sev": "high",
+  "root": "part",
+  "ex": "urb/o/part",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "党",
+   "ZH": "政党",
+   "KO": "정당"
+  },
+  "csv": {
+   "JA": "部分",
+   "ZH": "部分",
+   "KO": "부분"
+  },
+  "master": {
+   "ja": "党",
+   "zh": "政党",
+   "ko": "정당"
+  },
+  "rec": {
+   "JA": "部分",
+   "ZH": "部分",
+   "KO": "부분"
+  },
+  "fix": {
+   "JA": "部分",
+   "ZH": "部分",
+   "KO": "부분"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 urb/o/part(=都市の一部)が示すとおり part は「部分」を表す語根であり、「党/政党」は別語根 parti(政党)の意味を当てた誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "lit",
+  "ex": "lit",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "ベッド",
+   "ZH": "可溶",
+   "KO": "가용"
+  },
+  "csv": {
+   "JA": "ベッド",
+   "ZH": "床铺",
+   "KO": "침대"
+  },
+  "master": {
+   "ja": "ベッド",
+   "zh": "床",
+   "ko": "침대"
+  },
+  "rec": {
+   "JA": "ベッド",
+   "ZH": "床",
+   "KO": "침대"
+  },
+  "fix": {
+   "ZH": "床铺",
+   "KO": "침대"
+  },
+  "src": {
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "lito=「ベッド」でJAは正しいが、ZH「可溶」・KO「가용(可溶)」は無関係な語義で、3言語が分裂した明白な誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "hum",
+  "ex": "hum/iĝ",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "腐植土",
+   "ZH": "人类",
+   "KO": "인간"
+  },
+  "csv": {
+   "JA": "腐植土",
+   "ZH": "腐殖土",
+   "KO": "부식토"
+  },
+  "master": {},
+  "rec": {
+   "JA": "腐植土",
+   "ZH": "腐殖质/腐殖土",
+   "KO": "부식토"
+  },
+  "fix": {
+   "ZH": "腐殖土",
+   "KO": "부식토"
+  },
+  "src": {
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 hum/iĝ(=腐植化)からJA「腐植土」が正しく、ZH「人类」KO「인간」は human(人間)と取り違えた誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "rad",
+  "ex": "muel/rad",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "光線",
+   "ZH": "光线",
+   "KO": "광선"
+  },
+  "csv": {
+   "JA": "[機]車輪",
+   "ZH": "轮子",
+   "KO": "바퀴"
+  },
+  "master": {
+   "ja": "光線",
+   "zh": "光线",
+   "ko": "광선"
+  },
+  "rec": {
+   "JA": "車輪",
+   "ZH": "车轮",
+   "KO": "바퀴"
+  },
+  "fix": {
+   "JA": "[機]車輪",
+   "ZH": "轮子",
+   "KO": "바퀴"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 muel/rad(=水車の輪)が示すとおり rad は「車輪」であり、「光線」は別語根 radi(光線)の意味を当てた誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "morf",
+  "ex": "meta/morf",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "形",
+   "ZH": "超",
+   "KO": "초"
+  },
+  "csv": {
+   "JA": "形",
+   "ZH": "形",
+   "KO": "형태"
+  },
+  "master": {
+   "ja": "形",
+   "zh": "超",
+   "ko": "초"
+  },
+  "rec": {
+   "JA": "形",
+   "ZH": "形",
+   "KO": "형"
+  },
+  "fix": {
+   "ZH": "形",
+   "KO": "형태"
+  },
+  "src": {
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "morf は「形・形態」を意味し JA 形 は正しいが、ZH「超」・KO「초」は隣接語根 meta(4-92 超/超/초)の意味が誤って混入しており、形とは全く無関係。"
+ },
+ {
+  "sev": "high",
+  "root": "hor",
+  "ex": "po/hor",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "ポー",
+   "ZH": "小时",
+   "KO": "한 시간"
+  },
+  "csv": {
+   "JA": "時間",
+   "ZH": "时刻",
+   "KO": "시간"
+  },
+  "master": {
+   "ja": " ポー",
+   "zh": "小时",
+   "ko": "한 시간"
+  },
+  "rec": {
+   "JA": "時間",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "時間"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "hor は「時間」の意味で ZH 小时・KO 한 시간 は正しいが、JA「ポー」は例語 po/hor の接頭辞 po を音写したもので、語根 hor の訳になっていない。"
+ },
+ {
+  "sev": "high",
+  "root": "grand",
+  "ex": "po/mal/grand",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "正反対",
+   "ZH": "大的",
+   "KO": "큰"
+  },
+  "csv": {
+   "JA": "大きい",
+   "ZH": "大",
+   "KO": "큰"
+  },
+  "master": {
+   "ja": "正反対",
+   "zh": "大的",
+   "ko": "큰"
+  },
+  "rec": {
+   "JA": "大きい",
+   "ZH": "大",
+   "KO": "큰"
+  },
+  "fix": {
+   "JA": "大きい"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "grand は「大きい」で ZH 大的・KO 큰 は正しいが、JA「正反対」は意味が全く逆・無関係で明らかな誤り。"
+ },
+ {
+  "sev": "high",
+  "root": "ad",
+  "ex": "odise/ad",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "叙事詩",
+   "ZH": "史诗",
+   "KO": "서사시"
+  },
+  "csv": {
+   "JA": "継続行為",
+   "ZH": "持续",
+   "KO": "지속"
+  },
+  "master": {},
+  "rec": {
+   "JA": "継続/反復",
+   "ZH": "持续/反复",
+   "KO": "계속/반복"
+  },
+  "fix": {
+   "JA": "継続行為",
+   "ZH": "持续",
+   "KO": "지속"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「-ad」は継続・反復の行為を表す接辞なのに、例語 odise/ad(オデュッセイア)全体の訳『叙事詩』を当てており語根忠実でない。"
+ },
+ {
+  "sev": "high",
+  "root": "ar",
+  "ex": "mont/ar",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "脈",
+   "ZH": "脉",
+   "KO": "맥"
+  },
+  "csv": {
+   "JA": "集団",
+   "ZH": "群体",
+   "KO": "무리"
+  },
+  "master": {
+   "ja": "脈",
+   "zh": "脉",
+   "ko": "맥"
+  },
+  "rec": {
+   "JA": "群/集合",
+   "ZH": "群/集合",
+   "KO": "무리/집합"
+  },
+  "fix": {
+   "JA": "集団",
+   "ZH": "群体",
+   "KO": "무리"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「-ar」は集合を表す接辞なのに、mont/ar(山脈)の『脈』を語義に当てており全体語由来で語根忠実でない。"
+ },
+ {
+  "sev": "high",
+  "root": "grand",
+  "ex": "po/grand",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "ポー",
+   "ZH": "大的",
+   "KO": "큰"
+  },
+  "csv": {
+   "JA": "大きい",
+   "ZH": "大",
+   "KO": "큰"
+  },
+  "master": {
+   "ja": " ポー",
+   "zh": "大的",
+   "ko": "큰"
+  },
+  "rec": {
+   "JA": "大きい/大",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "大きい"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "grand の中核義は『大きい』だが JA 欄が『ポー』となっており意味を成さない誤り(前置詞 po の混入と思われる)。"
+ },
+ {
+  "sev": "mid",
+  "root": "glan",
+  "ex": "mar/glan",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "フジツボ",
+   "ZH": "藤壶",
+   "KO": "따개비"
+  },
+  "csv": {
+   "JA": "[植]ドングリ",
+   "ZH": "橡子",
+   "KO": "도토리"
+  },
+  "master": {
+   "ja": "フジツボ",
+   "zh": "藤壶",
+   "ko": "따개비"
+  },
+  "rec": {
+   "JA": "どんぐり/亀頭",
+   "ZH": "橡实/龟头",
+   "KO": "도토리/귀두"
+  },
+  "fix": {
+   "JA": "[植]ドングリ",
+   "ZH": "橡子",
+   "KO": "도토리"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「フジツボ」はmar/glan(海のドングリ＝フジツボ)の合成的全体語訳であり、語根glan自身は「ドングリ/亀頭」を意味する。"
+ },
+ {
+  "sev": "mid",
+  "root": "mari",
+  "ex": "mari/best",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "テントウムシ",
+   "ZH": "瓢虫",
+   "KO": "무당벌레"
+  },
+  "csv": {
+   "JA": "マリア",
+   "ZH": "玛丽亚",
+   "KO": "마리아"
+  },
+  "master": {
+   "ja": "テントウムシ",
+   "zh": "瓢虫",
+   "ko": "무당벌레"
+  },
+  "rec": {
+   "JA": "マリア",
+   "ZH": "玛丽",
+   "KO": "마리아"
+  },
+  "fix": {
+   "JA": "マリア",
+   "ZH": "玛丽亚",
+   "KO": "마리아"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「テントウムシ」はmari/best(マリアの虫)の全体語訳で、語根mari自身は人名「マリア」を指す。"
+ },
+ {
+  "sev": "mid",
+  "root": "lapon",
+  "ex": "lapon/i",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "ラップランド",
+   "ZH": "拉普兰",
+   "KO": "라플란드"
+  },
+  "csv": {
+   "JA": "ラップランド",
+   "ZH": "拉普兰",
+   "KO": "라플란드"
+  },
+  "master": {},
+  "rec": {
+   "JA": "ラップ人/サーミ人",
+   "ZH": "拉普人/萨米人",
+   "KO": "라프인/사미인"
+  },
+  "fix": {
+   "JA": "ラップ人/サーミ人",
+   "ZH": "拉普人/萨米人",
+   "KO": "라프인/사미인"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "「ラップランド」は地名でlapon/i(＋国-i)の全体語訳であり、語根lapon自身は民族「ラップ人/サーミ人」を指す。"
+ },
+ {
+  "sev": "mid",
+  "root": "fon",
+  "ex": "anti/fon",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "唱",
+   "ZH": "唱",
+   "KO": "창"
+  },
+  "csv": {
+   "JA": "背景",
+   "ZH": "背景",
+   "KO": "배경"
+  },
+  "master": {
+   "ja": "背景",
+   "zh": "背景",
+   "ko": "배경"
+  },
+  "rec": {
+   "JA": "音/声",
+   "ZH": "音/声",
+   "KO": "소리/음"
+  },
+  "fix": {
+   "JA": "背景",
+   "ZH": "背景",
+   "KO": "배경"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「唱(歌う)」はanti/fon(交唱)の全体語義で、語根fon自身は「音・声」(別行0-298のfon=音と不整合)。"
+ },
+ {
+  "sev": "mid",
+  "root": "moder",
+  "ex": "moder/ig/aĵ",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "減速",
+   "ZH": "慢化",
+   "KO": "감속"
+  },
+  "csv": {
+   "JA": "適度の",
+   "ZH": "适度",
+   "KO": "적당한"
+  },
+  "master": {},
+  "rec": {
+   "JA": "和らげる/加減する",
+   "ZH": "缓和/使适度",
+   "KO": "완화하다/조절하다"
+  },
+  "fix": {
+   "JA": "適度の",
+   "ZH": "适度",
+   "KO": "적당한"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「減速/慢化」はmoder/ig/aĵ(減速材=モデレーター)の応用義で、語根moder自身は「和らげる・適度にする」を意味する。"
+ },
+ {
+  "sev": "mid",
+  "root": "fakultat",
+  "ex": "fakultat/estr",
+  "issue": "mistranslation",
+  "langs": "ko",
+  "cur": {
+   "JA": "学部",
+   "ZH": "学院",
+   "KO": "학술원"
+  },
+  "csv": {
+   "JA": "学部",
+   "ZH": "院系",
+   "KO": "학부"
+  },
+  "master": {
+   "ja": "学部",
+   "zh": "学院",
+   "ko": "학술원"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "학부/단과대학"
+  },
+  "fix": {
+   "KO": "학부"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "KOの「학술원(学術院＝アカデミー)」は大学のfakultat(学部)とは別物で、例語fakultat/estr(学部長)にも合わない。"
+ },
+ {
+  "sev": "mid",
+  "root": "tapiŝ",
+  "ex": "tapiŝ/bomb/ad",
+  "issue": "mistranslation",
+  "langs": "zh",
+  "cur": {
+   "JA": "絨毯",
+   "ZH": "挂毯",
+   "KO": "카펫"
+  },
+  "csv": {
+   "JA": "絨毯",
+   "ZH": "地毯",
+   "KO": "카펫"
+  },
+  "master": {},
+  "rec": {
+   "JA": "",
+   "ZH": "地毯",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "地毯"
+  },
+  "src": {
+   "ZH": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "ZHの「挂毯(壁掛けタペストリー)」は床の敷物tapiŝ(絨毯)と異なり、例語tapiŝ/bomb/ad(絨毯爆撃=地毯式轰炸)にも合わない。"
+ },
+ {
+  "sev": "mid",
+  "root": "ĉel",
+  "ex": "sun/ĉel",
+  "issue": "mistranslation",
+  "langs": "ja|ko",
+  "cur": {
+   "JA": "独居房",
+   "ZH": "小室",
+   "KO": "독방"
+  },
+  "csv": {
+   "JA": "細胞",
+   "ZH": "细胞",
+   "KO": "세포"
+  },
+  "master": {},
+  "rec": {
+   "JA": "細胞/電池セル/小室",
+   "ZH": "",
+   "KO": "세포/전지/칸"
+  },
+  "fix": {
+   "JA": "細胞",
+   "KO": "세포"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JA「独居房」KO「독방」は監獄の独房を指し、例語sun/ĉel(太陽電池のセル)に不適切かつZH「小室」とも不整合。"
+ },
+ {
+  "sev": "mid",
+  "root": "muŝ",
+  "ex": "muŝ/bugr/ad",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "些細",
+   "ZH": "细枝",
+   "KO": "사소"
+  },
+  "csv": {
+   "JA": "[虫]ハエ",
+   "ZH": "苍蝇",
+   "KO": "파리"
+  },
+  "master": {},
+  "rec": {
+   "JA": "蝿(ハエ)",
+   "ZH": "苍蝇",
+   "KO": "파리"
+  },
+  "fix": {
+   "JA": "[虫]ハエ",
+   "ZH": "苍蝇",
+   "KO": "파리"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "語根 muŝ の中核義は昆虫の「蝿」だが、全体語 muŝ/bugr/ad(重箱の隅をつつく=瑣末)の合成的ニュアンス「些細」を語根に当てており語根忠実性違反。"
+ },
+ {
+  "sev": "mid",
+  "root": "bar",
+  "ex": "mal/bar",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "圧",
+   "ZH": "压",
+   "KO": "압"
+  },
+  "csv": {
+   "JA": "障害",
+   "ZH": "障碍",
+   "KO": "장애"
+  },
+  "master": {
+   "ja": "圧",
+   "zh": "压",
+   "ko": "압"
+  },
+  "rec": {
+   "JA": "妨げる(塞ぐ/障壁)",
+   "ZH": "阻挡",
+   "KO": "막다"
+  },
+  "fix": {
+   "JA": "障害",
+   "ZH": "障碍",
+   "KO": "장애"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 mal/bar(=閉塞を除く・開く)から bar は「遮る/塞ぐ」の意であり、圧力単位由来の「圧」は語根義として誤り。"
+ },
+ {
+  "sev": "mid",
+  "root": "hidr",
+  "ex": "hidr/oid",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "ヒドラ",
+   "ZH": "水",
+   "KO": "물"
+  },
+  "csv": {
+   "JA": "[動]ヒドラ",
+   "ZH": "水螅",
+   "KO": "히드라"
+  },
+  "master": {
+   "ja": "ヒドラ",
+   "zh": "水",
+   "ko": "물"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "水螅(ヒドラ)",
+   "KO": "히드라"
+  },
+  "fix": {
+   "ZH": "水螅",
+   "KO": "히드라"
+  },
+  "src": {
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 hidr/oid(ヒドロ虫)の文脈では hidr=動物のヒドラを指し、JAは正しく「ヒドラ」だがZH/KOは別義「水」を当てており言語間で不整合。"
+ },
+ {
+  "sev": "mid",
+  "root": "oranĝ",
+  "ex": "oranĝ/uj",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "オランジュ",
+   "ZH": "奥朗日",
+   "KO": "오랑주"
+  },
+  "csv": {
+   "JA": "[果]オレンジ",
+   "ZH": "橙",
+   "KO": "오렌지"
+  },
+  "master": {},
+  "rec": {
+   "JA": "オレンジ(橙)",
+   "ZH": "橙",
+   "KO": "오렌지"
+  },
+  "fix": {
+   "JA": "[果]オレンジ",
+   "ZH": "橙",
+   "KO": "오렌지"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 oranĝ/uj(=オレンジの木)から oranĝ は果物「オレンジ」の意だが、フランスの地名「オランジュ市」の音写を当てており例語と矛盾している。"
+ },
+ {
+  "sev": "mid",
+  "root": "maŭr",
+  "ex": "maŭr/uj",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "マウレタニア",
+   "ZH": "毛里塔尼亚",
+   "KO": "마우레타니아"
+  },
+  "csv": {
+   "JA": "ムーア人",
+   "ZH": "摩尔人",
+   "KO": "무어인"
+  },
+  "master": {},
+  "rec": {
+   "JA": "ムーア人",
+   "ZH": "摩尔人",
+   "KO": "무어인"
+  },
+  "fix": {
+   "JA": "ムーア人",
+   "ZH": "摩尔人",
+   "KO": "무어인"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "語根 maŭr は「ムーア人」。例語 maŭr/uj は maŭr+uj(=ムーア人の国=マウレタニア)であり、接尾辞ujの「国」まで含めた全体語義を語根に当てている。"
+ },
+ {
+  "sev": "mid",
+  "root": "saturn",
+  "ex": "saturn/ism",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "鉛中毒",
+   "ZH": "铅中毒",
+   "KO": "납중독"
+  },
+  "csv": {
+   "JA": "サトゥルヌス",
+   "ZH": "萨图尔努斯",
+   "KO": "사투르누스"
+  },
+  "master": {
+   "ja": "鉛中毒",
+   "zh": "铅中毒",
+   "ko": "납중독"
+  },
+  "rec": {
+   "JA": "鉛",
+   "ZH": "铅",
+   "KO": "납"
+  },
+  "fix": {
+   "JA": "サトゥルヌス",
+   "ZH": "萨图尔努斯",
+   "KO": "사투르누스"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 saturn/ism(鉛中毒=saturnism)の「中毒」は接尾辞ism由来であり、語根 saturn(錬金術のサターン=鉛)は「鉛」であるべき。全体語義を語根に含めている。"
+ },
+ {
+  "sev": "mid",
+  "root": "kanton",
+  "ex": "kanton",
+  "issue": "jck_inconsistency",
+  "langs": "ja",
+  "cur": {
+   "JA": "広東",
+   "ZH": "州郡",
+   "KO": "칸톤"
+  },
+  "csv": {
+   "JA": "(フランスの)郡",
+   "ZH": "郡",
+   "KO": "주"
+  },
+  "master": {
+   "ja": "州郡",
+   "zh": "州郡",
+   "ko": "칸톤"
+  },
+  "rec": {
+   "JA": "州/カントン(行政区)",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "(フランスの)郡"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "kanton の共通義は行政区の「カントン」で、ZH「州郡」KO「칸톤」は行政区を指すが、JA「広東」は中国の地名Canton(広州)と取り違えており不整合。"
+ },
+ {
+  "sev": "mid",
+  "root": "kultur",
+  "ex": "infan/kultur",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "育児",
+   "ZH": "育儿",
+   "KO": "육아"
+  },
+  "csv": {
+   "JA": "(を)栽培する",
+   "ZH": "栽培",
+   "KO": "재배하다"
+  },
+  "master": {
+   "ja": "育児",
+   "zh": "育儿",
+   "ko": "육아"
+  },
+  "rec": {
+   "JA": "養育(育成)",
+   "ZH": "养育(培育)",
+   "KO": "양육(육성)"
+  },
+  "fix": {
+   "JA": "(を)栽培する",
+   "ZH": "栽培",
+   "KO": "재배하다"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 infan/kultur の「育児=子どもの養育」の「児(子ども)」部分は infan 由来。語根 kultur は「養育/栽培/文化」であり、子ども概念を含めるのは全体語義で語根忠実性違反。"
+ },
+ {
+  "sev": "mid",
+  "root": "ĥam",
+  "ex": "ĥam/id",
+  "issue": "mistranslation",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "ハム",
+   "ZH": "火腿",
+   "KO": "햄"
+  },
+  "csv": {
+   "JA": "ハム",
+   "ZH": "火腿",
+   "KO": "햄"
+  },
+  "master": {},
+  "rec": {
+   "JA": "",
+   "ZH": "含(ノアの子)",
+   "KO": "함(노아의 아들)"
+  },
+  "fix": {
+   "ZH": "含(ノアの子)",
+   "KO": "함(노아의 아들)"
+  },
+  "src": {
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "例語 ĥam/id(ハム族)の ĥam は聖書のノアの子「ハム」であり、ZH「火腿」・KO「햄」の食品ハム(=ŝinko)は誤訳。"
+ },
+ {
+  "sev": "mid",
+  "root": "kontraŭ",
+  "ex": "kontraŭ/sifilis",
+  "issue": "mistranslation",
+  "langs": "ja",
+  "cur": {
+   "JA": "向かって",
+   "ZH": "对抗",
+   "KO": "반대"
+  },
+  "csv": {
+   "JA": "(に)向かって",
+   "ZH": "对抗",
+   "KO": "반대하여"
+  },
+  "master": {},
+  "rec": {
+   "JA": "に反対して/抗-",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "(に)向かって"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "kontraŭ は「～に反対して・抗-」の意(例 kontraŭ/sifilis=抗梅毒)。JA「向かって」は方向(～へ)を示し、ZH「对抗」KO「반대」の対立義とズレる。"
+ },
+ {
+  "sev": "mid",
+  "root": "kard",
+  "ex": "felt/o/kard",
+  "issue": "jck_inconsistency",
+  "langs": "zh",
+  "cur": {
+   "JA": "すく",
+   "ZH": "蓟",
+   "KO": "머리카락을 빗다"
+  },
+  "csv": {
+   "JA": "ヒレアザミ",
+   "ZH": "蓟",
+   "KO": "엉겅퀴"
+  },
+  "master": {
+   "ja": "すく",
+   "zh": "蓟",
+   "ko": "머리카락을 빗다"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "梳理/梳(羊毛)",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "梳理/梳(羊毛)"
+  },
+  "src": {
+   "ZH": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "例語(フェルトの梳毛)では kard=「梳く(kardi)」の動作。JA「すく」KO「머리카락을 빗다」は動作を示すが、ZH「蓟(アザミ)」は植物名で不一致。"
+ },
+ {
+  "sev": "mid",
+  "root": "pseŭd",
+  "ex": "pseŭd",
+  "issue": "learning_quality",
+  "langs": "ja",
+  "cur": {
+   "JA": "=kaŝ-",
+   "ZH": "伪",
+   "KO": "가짜"
+  },
+  "csv": {
+   "JA": "仮名",
+   "ZH": "假名",
+   "KO": "가짜"
+  },
+  "master": {},
+  "rec": {
+   "JA": "偽/擬(にせ)",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "仮名"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "pseŭd は「偽・擬(pseudo)」の意。JAの「=kaŝ-」は他語根への参照表記で訳になっておらず、kaŝ(隠す)とも意味が異なり学習上不適切。"
+ },
+ {
+  "sev": "mid",
+  "root": "ĉar",
+  "ex": "sid/ĉar/et",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "~だから",
+   "ZH": "因为",
+   "KO": "…이기 때문에"
+  },
+  "csv": {
+   "JA": "なぜなら",
+   "ZH": "因为",
+   "KO": "때문에"
+  },
+  "master": {},
+  "rec": {
+   "JA": "車/荷車",
+   "ZH": "车/大车",
+   "KO": "수레"
+  },
+  "fix": {
+   "JA": "なぜなら",
+   "ZH": "车/大车",
+   "KO": "때문에"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "監査推奨",
+   "KO": "CSV既定"
+  },
+  "tier": "推奨含",
+  "reason": "例語 sid/ĉar/et(乳母車)の ĉar は「車(ĉaro)」だが、全言語が接続詞「~だから(ĉar)」と訳しており例語の語義と不一致。"
+ },
+ {
+  "sev": "mid",
+  "root": "kaze",
+  "ex": "kaze/ig/il",
+  "issue": "mistranslation",
+  "langs": "ko",
+  "cur": {
+   "JA": "カード",
+   "ZH": "酪",
+   "KO": "카드"
+  },
+  "csv": {
+   "JA": "[化]凝乳",
+   "ZH": "凝乳",
+   "KO": "응유"
+  },
+  "master": {
+   "ja": "カード",
+   "zh": "酪",
+   "ko": "카드"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "응유/커드"
+  },
+  "fix": {
+   "KO": "응유"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "kaze は「凝乳・カゼイン(kazeo)」の意(例 kaze/ig/il=凝乳剤)。KO「카드」は「カード(card)」を意味し誤りで、「커드/응유」とすべき。"
+ },
+ {
+  "sev": "mid",
+  "root": "ism",
+  "ex": "peon/ism",
+  "issue": "learning_quality",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "ism",
+   "ZH": "ism",
+   "KO": "ism"
+  },
+  "csv": {
+   "JA": "主義",
+   "ZH": "主义",
+   "KO": "주의"
+  },
+  "master": {
+   "ja": "ism",
+   "zh": "ism",
+   "ko": "ism"
+  },
+  "rec": {
+   "JA": "主義",
+   "ZH": "主义",
+   "KO": "주의"
+  },
+  "fix": {
+   "JA": "主義",
+   "ZH": "主义",
+   "KO": "주의"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "接尾辞 ism がラテン語のまま未訳で全言語に残っており、「主義/-ism」等に訳すべき。"
+ },
+ {
+  "sev": "mid",
+  "root": "bast",
+  "ex": "bast",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "靭皮",
+   "ZH": "棒",
+   "KO": "막대기"
+  },
+  "csv": {
+   "JA": "[植]じん皮",
+   "ZH": "树皮",
+   "KO": "인피"
+  },
+  "master": {
+   "ja": "靭皮",
+   "zh": "棒",
+   "ko": "막대기"
+  },
+  "rec": {
+   "JA": "靭皮",
+   "ZH": "韧皮/树皮纤维",
+   "KO": "인피"
+  },
+  "fix": {
+   "ZH": "树皮",
+   "KO": "인피"
+  },
+  "src": {
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "basto=「靭皮(樹皮繊維)」でJAは正しいが、ZH「棒」KO「막대기」は bastono(棒)と混同した誤り。"
+ },
+ {
+  "sev": "mid",
+  "root": "pod",
+  "ex": "a/pod",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "演壇",
+   "ZH": "讲台",
+   "KO": "연단"
+  },
+  "csv": {
+   "JA": "演壇",
+   "ZH": "讲台",
+   "KO": "연단"
+  },
+  "master": {
+   "ja": "演壇",
+   "zh": "讲台",
+   "ko": "연단"
+  },
+  "rec": {
+   "JA": "足",
+   "ZH": "足",
+   "KO": "발"
+  },
+  "fix": {
+   "JA": "足",
+   "ZH": "足",
+   "KO": "발"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "例語 a/pod(=無足の)では pod は「足」の意味だが、訳「演壇/讲台」は別語根 podi(演壇)の意味を当てた誤り(cf 3-131 pod=足)。"
+ },
+ {
+  "sev": "mid",
+  "root": "rod",
+  "ex": "el/rod/iĝ",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "錨地",
+   "ZH": "锚地",
+   "KO": "묘박지"
+  },
+  "csv": {
+   "JA": "停泊地",
+   "ZH": "泊地",
+   "KO": "정박소"
+  },
+  "master": {},
+  "rec": {
+   "JA": "齧る/侵食する",
+   "ZH": "啃蚀/侵蚀",
+   "KO": "갉다/침식하다"
+  },
+  "fix": {
+   "JA": "停泊地",
+   "ZH": "泊地",
+   "KO": "정박소"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 el/rod/iĝ(=侵食され去る)では rodi は「齧る/侵食する」の意味だが、訳は同綴異義の「錨地(roado)」で不一致。"
+ },
+ {
+  "sev": "mid",
+  "root": "nobel",
+  "ex": "ne/nobel",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "ノーベル",
+   "ZH": "诺贝尔",
+   "KO": "노벨"
+  },
+  "csv": {
+   "JA": "貴族",
+   "ZH": "贵族",
+   "KO": "귀족"
+  },
+  "master": {
+   "ja": "ノーベル",
+   "zh": "诺贝尔",
+   "ko": "노벨"
+  },
+  "rec": {
+   "JA": "貴族",
+   "ZH": "贵族",
+   "KO": "귀족"
+  },
+  "fix": {
+   "JA": "貴族",
+   "ZH": "贵族",
+   "KO": "귀족"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 ne/nobel(=非貴族の)が示すとおり nobelo は「貴族」であり、固有名「ノーベル」を当てるのは誤り。"
+ },
+ {
+  "sev": "mid",
+  "root": "kanel",
+  "ex": "ŝraŭb/in/kanel",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "シナモン",
+   "ZH": "肉桂",
+   "KO": "계피"
+  },
+  "csv": {
+   "JA": "シナモン",
+   "ZH": "肉桂",
+   "KO": "계피"
+  },
+  "master": {},
+  "rec": {
+   "JA": "溝/縦溝",
+   "ZH": "凹槽/沟槽",
+   "KO": "홈"
+  },
+  "fix": {
+   "JA": "溝/縦溝",
+   "ZH": "凹槽/沟槽",
+   "KO": "홈"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "例語 ŝraŭb/in/kanel(=ねじの溝)では kanelo は「溝/縦溝」の意味だが、訳「シナモン(cinamo)」は別語で語義不一致。"
+ },
+ {
+  "sev": "mid",
+  "root": "il",
+  "ex": "form/i/il",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "基",
+   "ZH": "基",
+   "KO": "기"
+  },
+  "csv": {
+   "JA": "道具",
+   "ZH": "工具",
+   "KO": "도구"
+  },
+  "master": {
+   "ja": "道具",
+   "zh": "工具",
+   "ko": "도구"
+  },
+  "rec": {
+   "JA": "道具/器具",
+   "ZH": "工具/器具",
+   "KO": "도구/기구"
+  },
+  "fix": {
+   "JA": "道具",
+   "ZH": "工具",
+   "KO": "도구"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "頻度1159の道具接尾辞 -il(例 gut/ig/il=点滴器, lamp/ŝirm/il=電灯傘)であり中核義は「道具/器具」、「基(化学基)」は誤り。"
+ },
+ {
+  "sev": "mid",
+  "root": "ec",
+  "ex": "vandal/ec",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "行為",
+   "ZH": "行为",
+   "KO": "행위"
+  },
+  "csv": {
+   "JA": "性質",
+   "ZH": "性",
+   "KO": "성질"
+  },
+  "master": {
+   "ja": "行為",
+   "zh": "行为",
+   "ko": "행위"
+  },
+  "rec": {
+   "JA": "性質/状態",
+   "ZH": "性质/状态",
+   "KO": "성질/상태"
+  },
+  "fix": {
+   "JA": "性質",
+   "ZH": "性",
+   "KO": "성질"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "接尾辞 -ec は「性質/状態」を表す語根(cf 3-55=性質)であり、vandal/ec 全体の「行為」を当てるのは合成義で語根不忠実。"
+ },
+ {
+  "sev": "mid",
+  "root": "ĉiel",
+  "ex": "ĉiel",
+  "issue": "jck_inconsistency",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "空",
+   "ZH": "各种",
+   "KO": "온갖"
+  },
+  "csv": {
+   "JA": "色々に",
+   "ZH": "以各种方式",
+   "KO": "여러모로"
+  },
+  "master": {},
+  "rec": {
+   "JA": "あらゆる方法で/どの点でも",
+   "ZH": "无论如何/以各种方式",
+   "KO": "어떻게든/온갖 방법으로"
+  },
+  "fix": {
+   "JA": "色々に",
+   "ZH": "以各种方式",
+   "KO": "여러모로"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JAは「空(ĉielo)」だがZH「各种」KO「온갖」は相関詞 ĉiel(あらゆる方法で)寄りで、3言語が別語義に分裂している。"
+ },
+ {
+  "sev": "mid",
+  "root": "fart",
+  "ex": "fart",
+  "issue": "jck_inconsistency",
+  "langs": "ja|zh",
+  "cur": {
+   "JA": "暮らす",
+   "ZH": "感觉",
+   "KO": "건강 상태가 어떻다"
+  },
+  "csv": {
+   "JA": "暮らす",
+   "ZH": "健康状况",
+   "KO": "지내다"
+  },
+  "master": {
+   "ja": "~の健康状態である",
+   "zh": "感觉",
+   "ko": "건강 상태가 어떻다"
+  },
+  "rec": {
+   "JA": "(体調が)～である",
+   "ZH": "过得(如何)/健康状况如何",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "(体調が)～である",
+   "ZH": "健康状况"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "CSV既定"
+  },
+  "tier": "推奨含",
+  "reason": "farti=「(健康・体調が)～である」だが、JA「暮らす」・ZH「感觉(=senti)」がKOの健康状態義とズレて3言語が不揃い。"
+ },
+ {
+  "sev": "mid",
+  "root": "buf",
+  "ex": "akuŝ/buf",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "助産ヒキガエル",
+   "ZH": "产婆蟾",
+   "KO": "산파두꺼비"
+  },
+  "csv": {
+   "JA": "ヒキガエル",
+   "ZH": "蟾蜍",
+   "KO": "두꺼비"
+  },
+  "master": {},
+  "rec": {
+   "JA": "ヒキガエル",
+   "ZH": "蟾蜍",
+   "KO": "두꺼비"
+  },
+  "fix": {
+   "JA": "ヒキガエル",
+   "ZH": "蟾蜍",
+   "KO": "두꺼비"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "buf 自体は「ヒキガエル」であり、訳の「助産/产婆/산파」の部分は併合語根 akuŝ(出産)由来で、全体語 akuŝ/buf(助産ヒキガエル)の意味を当ててしまっている。"
+ },
+ {
+  "sev": "mid",
+  "root": "cist",
+  "ex": "kole/cist",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "胆嚢",
+   "ZH": "胆囊",
+   "KO": "쓸개"
+  },
+  "csv": {
+   "JA": "胆嚢",
+   "ZH": "胆囊",
+   "KO": "쓸개"
+  },
+  "master": {
+   "ja": "胆嚢",
+   "zh": "胆囊",
+   "ko": "쓸개"
+  },
+  "rec": {
+   "JA": "膀胱/嚢",
+   "ZH": "膀胱/囊",
+   "KO": "방광/낭"
+  },
+  "fix": {
+   "JA": "膀胱/嚢",
+   "ZH": "膀胱/囊",
+   "KO": "방광/낭"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "cist 自体は「膀胱・嚢(cyst)」であり、「胆」の意は併合語根 kole 由来で、全体語 kole/cist(胆嚢)の意味を語根に当ててしまっている。"
+ },
+ {
+  "sev": "mid",
+  "root": "hipo",
+  "ex": "hipo/tenar",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "小",
+   "ZH": "小",
+   "KO": "소"
+  },
+  "csv": {
+   "JA": "低下",
+   "ZH": "低",
+   "KO": "저"
+  },
+  "master": {
+   "ja": "小",
+   "zh": "小",
+   "ko": "소"
+  },
+  "rec": {
+   "JA": "下/低",
+   "ZH": "下/低",
+   "KO": "하/저"
+  },
+  "fix": {
+   "JA": "低下",
+   "ZH": "低",
+   "KO": "저"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "接頭辞 hipo は「下・低・不足」の意味(例 hipo/plazi=発育不全)であり、「小/小/소(小さい)」は不正確で hypo- の中核義とずれている。"
+ },
+ {
+  "sev": "mid",
+  "root": "lin",
+  "ex": "lin/sem",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "線",
+   "ZH": "线",
+   "KO": "선"
+  },
+  "csv": {
+   "JA": "[植]亜麻",
+   "ZH": "亚麻",
+   "KO": "아마"
+  },
+  "master": {
+   "ja": "線",
+   "zh": "线",
+   "ko": "선"
+  },
+  "rec": {
+   "JA": "亜麻",
+   "ZH": "亚麻",
+   "KO": "아마"
+  },
+  "fix": {
+   "JA": "[植]亜麻",
+   "ZH": "亚麻",
+   "KO": "아마"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "lin は『亜麻』(lin/sem=亜麻仁)を意味するのに『線』と訳しており、linio(線)と取り違えた誤訳。"
+ },
+ {
+  "sev": "mid",
+  "root": "elektr",
+  "ex": "elektr/on/mikro/skop",
+  "issue": "root_faithfulness",
+  "langs": "ja|ko",
+  "cur": {
+   "JA": "電子",
+   "ZH": "电",
+   "KO": "전자"
+  },
+  "csv": {
+   "JA": "電気",
+   "ZH": "电",
+   "KO": "전기"
+  },
+  "master": {
+   "ja": "電気",
+   "zh": "电",
+   "ko": "전기"
+  },
+  "rec": {
+   "JA": "電気",
+   "ZH": "",
+   "KO": "전기"
+  },
+  "fix": {
+   "JA": "電気",
+   "KO": "전기"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "語根 elektr は『電気(の)』で、JA『電子』・KO『전자』は elektr/on(electron)の全体語義を当てており語根忠実でない(ZH『电』は適切)。"
+ },
+ {
+  "sev": "mid",
+  "root": "golf",
+  "ex": "golf/lud",
+  "issue": "jck_inconsistency",
+  "langs": "zh|ko",
+  "cur": {
+   "JA": "ゴルフ",
+   "ZH": "海湾",
+   "KO": "바다에 깊게 들어간 만"
+  },
+  "csv": {
+   "JA": "湾",
+   "ZH": "海湾",
+   "KO": "만"
+  },
+  "master": {
+   "ja": "ゴルフ",
+   "zh": "高尔夫",
+   "ko": "골프"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "高尔夫",
+   "KO": "골프"
+  },
+  "fix": {
+   "ZH": "高尔夫",
+   "KO": "만"
+  },
+  "src": {
+   "ZH": "監査推奨",
+   "KO": "CSV既定"
+  },
+  "tier": "推奨含",
+  "reason": "例語 golf/lud はゴルフ競技を指すのに、ZH『海湾』・KO は『湾(gulf)』と訳し JA『ゴルフ』と意味がずれている。"
+ },
+ {
+  "sev": "mid",
+  "root": "palanken",
+  "ex": "palanken",
+  "issue": "mistranslation",
+  "langs": "ko",
+  "cur": {
+   "JA": "かご",
+   "ZH": "轿",
+   "KO": "바구니"
+  },
+  "csv": {
+   "JA": "かご(東洋の乗物)",
+   "ZH": "轿子",
+   "KO": "가마"
+  },
+  "master": {
+   "ja": "かご",
+   "zh": "轿",
+   "ko": "바구니"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "가마"
+  },
+  "fix": {
+   "KO": "가마"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "palanken は『輿(palanquin)』で ZH『轿』は正しいが、KO『바구니』は『籠(basket)』であり誤り。"
+ },
+ {
+  "sev": "mid",
+  "root": "etil",
+  "ex": "etil/ism",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "アルコール",
+   "ZH": "酒精",
+   "KO": "알코올"
+  },
+  "csv": {
+   "JA": "エチル",
+   "ZH": "乙基",
+   "KO": "에틸"
+  },
+  "master": {
+   "ja": "アルコール",
+   "zh": "酒精",
+   "ko": "알코올"
+  },
+  "rec": {
+   "JA": "エチル",
+   "ZH": "乙基",
+   "KO": "에틸"
+  },
+  "fix": {
+   "JA": "エチル",
+   "ZH": "乙基",
+   "KO": "에틸"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "語根 etil は『エチル(基)』で、例語 etil/ism(アルコール依存)全体の義『アルコール』を当てるのは語根忠実でない。"
+ },
+ {
+  "sev": "mid",
+  "root": "logi",
+  "ex": "taŭt/o/logi",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "反復",
+   "ZH": "反复",
+   "KO": "반복"
+  },
+  "csv": {
+   "JA": "学",
+   "ZH": "学",
+   "KO": "학"
+  },
+  "master": {},
+  "rec": {
+   "JA": "論/言",
+   "ZH": "论述",
+   "KO": "논/말"
+  },
+  "fix": {
+   "JA": "学",
+   "ZH": "学",
+   "KO": "학"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "「-logi」は『学・言説』を表し、taŭt/o/logi(同語反復)の『反復』は taŭt 由来であって logi の語義ではない。"
+ },
+ {
+  "sev": "mid",
+  "root": "pod",
+  "ex": "skaf/o/pod",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "類",
+   "ZH": "类",
+   "KO": "류"
+  },
+  "csv": {
+   "JA": "演壇",
+   "ZH": "讲台",
+   "KO": "연단"
+  },
+  "master": {
+   "ja": "類",
+   "zh": "类",
+   "ko": "류"
+  },
+  "rec": {
+   "JA": "足",
+   "ZH": "足",
+   "KO": "발"
+  },
+  "fix": {
+   "JA": "演壇",
+   "ZH": "讲台",
+   "KO": "연단"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "pod は『足』(skaf/o/pod=掘足類の足)を意味するのに『類(class)』と訳しており、分類接尾の全体機能を当てた誤り。"
+ },
+ {
+  "sev": "low",
+  "root": "agrip",
+  "ex": "agrip/in",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "アグリッピナ",
+   "ZH": "阿格里庇娜",
+   "KO": "아그리피나"
+  },
+  "csv": {
+   "JA": "アグリッピナ",
+   "ZH": "阿格里庇娜",
+   "KO": "아그리피나"
+  },
+  "master": {},
+  "rec": {
+   "JA": "アグリッパ",
+   "ZH": "阿格里帕",
+   "KO": "아그리파"
+  },
+  "fix": {
+   "JA": "アグリッパ",
+   "ZH": "阿格里帕",
+   "KO": "아그리파"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "「アグリッピナ」は女性形でagrip/in(＋女性-in)の全体語訳であり、語根agrip自身は男性名「アグリッパ」を指す。"
+ },
+ {
+  "sev": "low",
+  "root": "ruten",
+  "ex": "ruten/uj",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "ルテニア",
+   "ZH": "鲁塞尼亚",
+   "KO": "루테니아"
+  },
+  "csv": {
+   "JA": "ルテニア",
+   "ZH": "鲁塞尼亚",
+   "KO": "루테니아"
+  },
+  "master": {},
+  "rec": {
+   "JA": "ルテニア人",
+   "ZH": "鲁塞尼亚人",
+   "KO": "루테니아인"
+  },
+  "fix": {
+   "JA": "ルテニア人",
+   "ZH": "鲁塞尼亚人",
+   "KO": "루테니아인"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "「ルテニア」は地域名でruten/uj(＋国-uj)の全体語訳であり、語根ruten自身は民族「ルテニア人」を指す。"
+ },
+ {
+  "sev": "low",
+  "root": "redakt",
+  "ex": "tekst/o/redakt/il",
+  "issue": "malformed",
+  "langs": "ko",
+  "cur": {
+   "JA": "書く",
+   "ZH": "草拟",
+   "KO": "문서나 기사를 작성하고 정"
+  },
+  "csv": {
+   "JA": "(を)編集する",
+   "ZH": "编辑",
+   "KO": "편집하다"
+  },
+  "master": {
+   "ja": "書く",
+   "zh": "草拟",
+   "ko": "문서나 기사를 작성하고 정"
+  },
+  "rec": {
+   "JA": "編集する/起草する",
+   "ZH": "",
+   "KO": "문서를 작성·편집하다"
+  },
+  "fix": {
+   "KO": "편집하다"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "KO欄が「…작성하고 정」で途中欠落しており学習補助として不完全（本来は「작성·편집하다」）。"
+ },
+ {
+  "sev": "low",
+  "root": "sklerot",
+  "ex": "sklerot",
+  "issue": "mistranslation",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "強膜菌核",
+   "ZH": "巩膜菌核",
+   "KO": "공막균핵"
+  },
+  "csv": {
+   "JA": "強膜菌核",
+   "ZH": "巩膜菌核",
+   "KO": "공막균핵"
+  },
+  "master": {
+   "ja": "強膜菌核",
+   "zh": "巩膜菌核",
+   "ko": "공막균핵"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {},
+  "src": {},
+  "tier": "要判断",
+  "reason": "「強膜(sclera)」と「菌核(sclerotium)」という無関係な2語義を1語に無理に合成しており、実在しない不整合な複合ルビになっている。"
+ },
+ {
+  "sev": "low",
+  "root": "fen",
+  "ex": "fen/o/tip",
+  "issue": "root_faithfulness",
+  "langs": "zh",
+  "cur": {
+   "JA": "表現",
+   "ZH": "表型",
+   "KO": "표현"
+  },
+  "csv": {
+   "JA": "フェーン",
+   "ZH": "焚风",
+   "KO": "푄"
+  },
+  "master": {
+   "ja": "表現",
+   "zh": "表型",
+   "ko": "표현"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "表现",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "焚风"
+  },
+  "src": {
+   "ZH": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "語根 fen(pheno=現れる/示す)はJA「表現」KO「표현」が適切だが、ZH「表型」は tip(型)まで含んだ全体語 phenotype の訳であり、語根に接尾辞義を取り込んでいる。"
+ },
+ {
+  "sev": "low",
+  "root": "oz",
+  "ex": "celul/oz",
+  "issue": "learning_quality",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "oz",
+   "ZH": "oz",
+   "KO": "oz"
+  },
+  "csv": {
+   "JA": "症",
+   "ZH": "症",
+   "KO": "증"
+  },
+  "master": {
+   "ja": "oz",
+   "zh": "oz",
+   "ko": "oz"
+  },
+  "rec": {
+   "JA": "～に富む/-症",
+   "ZH": "富含/-症",
+   "KO": "풍부/-증"
+  },
+  "fix": {
+   "JA": "症",
+   "ZH": "症",
+   "KO": "증"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "接尾辞 oz(-osus「～に富む」/-osis)がラテン語のまま未訳で全言語に残っており学習上不適切。"
+ },
+ {
+  "sev": "low",
+  "root": "muk",
+  "ex": "muk/oz",
+  "issue": "jck_inconsistency",
+  "langs": "zh",
+  "cur": {
+   "JA": "粘液",
+   "ZH": "粘",
+   "KO": "점액"
+  },
+  "csv": {
+   "JA": "[生]粘液",
+   "ZH": "粘液",
+   "KO": "점액"
+  },
+  "master": {
+   "ja": "粘液",
+   "zh": "黏液",
+   "ko": "점액"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "黏液",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "粘液"
+  },
+  "src": {
+   "ZH": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "muk は名詞「粘液(muko)」。JA「粘液」KO「점액」は正しいが、ZH「粘」は形容詞「粘い」で不完全、「黏液」とすべき。"
+ },
+ {
+  "sev": "low",
+  "root": "ileks",
+  "ex": "ileks/kverk",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "トキワガシ",
+   "ZH": "冬青栎",
+   "KO": "상록참나무"
+  },
+  "csv": {
+   "JA": "[植]モチノキ",
+   "ZH": "冬青树",
+   "KO": "호랑가시나무"
+  },
+  "master": {
+   "ja": "トキワガシ",
+   "zh": "冬青栎",
+   "ko": "상록참나무"
+  },
+  "rec": {
+   "JA": "ヒイラギ/モチノキ属",
+   "ZH": "冬青",
+   "KO": "호랑가시나무"
+  },
+  "fix": {
+   "JA": "[植]モチノキ",
+   "ZH": "冬青树",
+   "KO": "호랑가시나무"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "ileks 単独は「ヒイラギ属(Ilex)」の意だが、全言語が合成語 ileks/kverk(トキワガシ=常緑オーク)の全体義で訳しており語根忠実性に反する。"
+ },
+ {
+  "sev": "low",
+  "root": "oj-kant",
+  "ex": "majstr/oj-kant/ist",
+  "issue": "malformed",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "oj-歌う",
+   "ZH": "oj-唱",
+   "KO": "oj-노래하다"
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "oj-歌う",
+   "zh": "oj-唱",
+   "ko": "oj-노래하다"
+  },
+  "rec": {
+   "JA": "歌う",
+   "ZH": "唱",
+   "KO": "노래하다"
+  },
+  "fix": {
+   "JA": "歌う",
+   "ZH": "唱",
+   "KO": "노래하다"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "複数語尾「oj」が語根 kant(歌う)に付いたまま「oj-歌う」とルビ化されており不正形。語根訳は「歌う」のみとすべき。"
+ },
+ {
+  "sev": "low",
+  "root": "a-komik",
+  "ex": "hero/a-komik",
+  "issue": "malformed",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "a-こっけいな",
+   "ZH": "a-可笑",
+   "KO": "a-우스운"
+  },
+  "csv": {
+   "JA": "",
+   "ZH": "",
+   "KO": ""
+  },
+  "master": {
+   "ja": "a-こっけいな",
+   "zh": "a-可笑",
+   "ko": "a-우스운"
+  },
+  "rec": {
+   "JA": "こっけいな",
+   "ZH": "可笑/滑稽",
+   "KO": "우스운"
+  },
+  "fix": {
+   "JA": "こっけいな",
+   "ZH": "可笑/滑稽",
+   "KO": "우스운"
+  },
+  "src": {
+   "JA": "監査推奨",
+   "ZH": "監査推奨",
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "形容詞語尾「a」が語根 komik(こっけいな)に付いたまま「a-こっけいな」とルビ化されており不正形。語根訳は「こっけいな」のみとすべき。"
+ },
+ {
+  "sev": "low",
+  "root": "pseŭdo",
+  "ex": "pseŭdo/sufiks",
+  "issue": "learning_quality",
+  "langs": "ja",
+  "cur": {
+   "JA": "=kaŝ-",
+   "ZH": "伪",
+   "KO": "가짜"
+  },
+  "csv": {
+   "JA": "=kaŝ-",
+   "ZH": "伪",
+   "KO": "가짜"
+  },
+  "master": {},
+  "rec": {
+   "JA": "偽/擬似",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "偽/擬似"
+  },
+  "src": {
+   "JA": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "JA欄がエスペラント「=kaŝ-」への参照のみで日本語訳になっておらず、意味(偽/擬似)としても不正確。"
+ },
+ {
+  "sev": "low",
+  "root": "fart",
+  "ex": "bon/fart",
+  "issue": "mistranslation",
+  "langs": "zh",
+  "cur": {
+   "JA": "~の健康状態である",
+   "ZH": "感觉",
+   "KO": "건강 상태가 어떻다"
+  },
+  "csv": {
+   "JA": "暮らす",
+   "ZH": "健康状况",
+   "KO": "지내다"
+  },
+  "master": {
+   "ja": "~の健康状態である",
+   "zh": "感觉",
+   "ko": "건강 상태가 어떻다"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "过得(如何)/健康状况如何",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "健康状况"
+  },
+  "src": {
+   "ZH": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JA/KOは健康状態義で正しいが、ZH「感觉(feel=senti)」は farti の「(健康が)～である」からズレている。"
+ },
+ {
+  "sev": "low",
+  "root": "mars",
+  "ex": "mars/o/kamp",
+  "issue": "root_faithfulness",
+  "langs": "ja|zh|ko",
+  "cur": {
+   "JA": "練兵場",
+   "ZH": "练兵场",
+   "KO": "연병장"
+  },
+  "csv": {
+   "JA": "マルス",
+   "ZH": "玛尔斯",
+   "KO": "마르스"
+  },
+  "master": {},
+  "rec": {
+   "JA": "(軍神)マルス",
+   "ZH": "玛尔斯(战神)",
+   "KO": "마르스(군신)"
+  },
+  "fix": {
+   "JA": "マルス",
+   "ZH": "玛尔斯",
+   "KO": "마르스"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "ZH": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "例語 mars/o/kamp(=マルスの野)全体が持つ「練兵場」を当てているが、語根 mars 自身は軍神「マルス」。"
+ },
+ {
+  "sev": "low",
+  "root": "bit",
+  "ex": "bit/et",
+  "issue": "jck_inconsistency",
+  "langs": "ko",
+  "cur": {
+   "JA": "係柱",
+   "ZH": "缆桩",
+   "KO": "비트"
+  },
+  "csv": {
+   "JA": "ビット",
+   "ZH": "比特",
+   "KO": "비트"
+  },
+  "master": {
+   "ja": "係柱",
+   "zh": "缆桩",
+   "ko": "비트"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "계선주"
+  },
+  "fix": {
+   "KO": "계선주"
+  },
+  "src": {
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "JA「係柱」ZH「缆桩」は繋船柱の意味だが、KO「비트」は音写のみで係柱の語義を伝えていない。"
+ },
+ {
+  "sev": "low",
+  "root": "koregon",
+  "ex": "koregon",
+  "issue": "jck_inconsistency",
+  "langs": "ko",
+  "cur": {
+   "JA": "コクチマス",
+   "ZH": "白鲑",
+   "KO": "송어"
+  },
+  "csv": {
+   "JA": "コクチマス",
+   "ZH": "白鲑",
+   "KO": "송어"
+  },
+  "master": {
+   "ja": "コクチマス",
+   "zh": "白鲑",
+   "ko": "송어"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "백송어류/시스코"
+  },
+  "fix": {
+   "KO": "백송어류/시스코"
+  },
+  "src": {
+   "KO": "監査推奨"
+  },
+  "tier": "推奨含",
+  "reason": "JA「コクチマス」ZH「白鲑」はコレゴヌス属(白鮭類)を指すが、KO「송어(マス)」は別属でズレる。"
+ },
+ {
+  "sev": "low",
+  "root": "nov",
+  "ex": "nov/riĉ/ul",
+  "issue": "learning_quality",
+  "langs": "ja|ko",
+  "cur": {
+   "JA": "ニュー",
+   "ZH": "新",
+   "KO": "뉴"
+  },
+  "csv": {
+   "JA": "新しい",
+   "ZH": "新",
+   "KO": "새로운"
+  },
+  "master": {},
+  "rec": {
+   "JA": "新しい",
+   "ZH": "新",
+   "KO": "새로운"
+  },
+  "fix": {
+   "JA": "新しい",
+   "KO": "새로운"
+  },
+  "src": {
+   "JA": "CSV既定",
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "nov は「新しい」で ZH 新 は語義を示すが、JA「ニュー」・KO「뉴」は英語 new の音写にすぎず、学習用ルビとして中核義(新しい/새로운)を伝えていない。"
+ },
+ {
+  "sev": "low",
+  "root": "sekund",
+  "ex": "sekund",
+  "issue": "malformed",
+  "langs": "ja",
+  "cur": {
+   "JA": "o 秒",
+   "ZH": "秒",
+   "KO": "초"
+  },
+  "csv": {
+   "JA": "秒",
+   "ZH": "秒钟",
+   "KO": "초"
+  },
+  "master": {
+   "ja": "秒",
+   "zh": "秒",
+   "ko": "초"
+  },
+  "rec": {
+   "JA": "秒",
+   "ZH": "",
+   "KO": ""
+  },
+  "fix": {
+   "JA": "秒"
+  },
+  "src": {
+   "JA": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "JA 訳欄が「o 秒」となっており、エスペラント語尾 o が混入した不整形。ZH/KO は「秒/초」で正しく、JA も本来「秒」であるべき。"
+ },
+ {
+  "sev": "low",
+  "root": "ko",
+  "ex": "ko/valent",
+  "issue": "root_faithfulness",
+  "langs": "zh",
+  "cur": {
+   "JA": "共有",
+   "ZH": "共价",
+   "KO": "공유"
+  },
+  "csv": {
+   "JA": "余",
+   "ZH": "余",
+   "KO": "여"
+  },
+  "master": {
+   "ja": "共有",
+   "zh": "共价",
+   "ko": "공유"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "共/共同",
+   "KO": ""
+  },
+  "fix": {
+   "ZH": "余"
+  },
+  "src": {
+   "ZH": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "ko は接頭辞『共・co-』だが ZH『共价』は ko/valent 全体(共有結合)で価数部分を含み語根忠実でない。"
+ },
+ {
+  "sev": "low",
+  "root": "muslin",
+  "ex": "muslin",
+  "issue": "mistranslation",
+  "langs": "ko",
+  "cur": {
+   "JA": "モスリン",
+   "ZH": "薄纱",
+   "KO": "튈"
+  },
+  "csv": {
+   "JA": "[織]モスリン",
+   "ZH": "薄纱",
+   "KO": "모슬린"
+  },
+  "master": {
+   "ja": "モスリン",
+   "zh": "薄纱",
+   "ko": "튈"
+  },
+  "rec": {
+   "JA": "",
+   "ZH": "",
+   "KO": "모슬린"
+  },
+  "fix": {
+   "KO": "모슬린"
+  },
+  "src": {
+   "KO": "CSV既定"
+  },
+  "tier": "CSV",
+  "reason": "muslin(モスリン)は KO で『모슬린』が適切だが、別素材の『튈(チュール)』を当てており誤り。"
+ }
+]

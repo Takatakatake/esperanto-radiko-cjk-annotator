@@ -1,0 +1,195 @@
+{
+ "scope": "all_169_content_html_documents",
+ "reason": "These files are navigation pages or explicit plain-source variants, not annotation-bearing HTML. They are inventoried rather than silently omitted.",
+ "tally": {
+  "navigation/index": 17,
+  "plain-source/Gerda": 28,
+  "plain-source/bilingual": 1
+ },
+ "documents": [
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\Gerda_malaperis_2006_verkita_de_Claude_Piron_txt.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_00.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_01.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_02.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_03.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_04.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_05.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_06.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_07.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_08.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_09.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_10.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_11.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_12.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_13.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_14.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_15.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_16.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_17.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_18.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_19.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_20.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_21.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_22.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_23.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_24.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_25.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\gerda_malaperis_txt_26.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\index_txt.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\Gerda_malaperis_2006_verkita_de_Claude_Piron\\index_txt_files.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\eseoj-kaj-artikoloj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\historio-kaj-biografioj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\kunvenoj-kaj-prelegoj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\vere-aux-fantazie\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj\\vere-aux-fantazie\\vere_aux_fantazie_du-lingva.html",
+   "exclusion": "plain-source/bilingual"
+  },
+  {
+   "path": "lernolibroj\\esperanto-express\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "lernolibroj\\fujimaki\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "lernolibroj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj\\revuo-orienta\\2025\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj\\revuo-orienta\\2026\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj\\revuo-orienta\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "rondolegado\\2026-03\\index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "rondolegado\\index.html",
+   "exclusion": "navigation/index"
+  }
+ ]
+}

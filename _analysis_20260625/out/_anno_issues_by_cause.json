@@ -1,0 +1,2746 @@
+{
+ "DIVERGE_JAのみ非分割(ZH/KO正)": [
+  {
+   "id": 0,
+   "t": "DIVERGE",
+   "key": "agresiva",
+   "status": "ISSUE",
+   "correct_decomp": "agres/iv/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "agresiv[侵略的]",
+     "correct": "agres[攻撃]+iv[性質]",
+     "why": "一語に圧縮; masterはagres/iv分割"
+    }
+   ],
+   "note": "ZH/KOは正(master準拠)。JAのみ非分割で語根忠実でない",
+   "agreed": true
+  },
+  {
+   "id": 2,
+   "t": "DIVERGE",
+   "key": "alternativa",
+   "status": "ISSUE",
+   "correct_decomp": "altern/at/iv/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "alternativ[代替の]",
+     "correct": "altern[交互に起こる]+at[受動継続]+iv[性質]",
+     "why": "全体語義を一根に圧縮; goldは4語根分割"
+    }
+   ],
+   "note": "gold=altern/at/iv/a。JAのみ未分割で非語根忠実。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 11,
+   "t": "DIVERGE",
+   "key": "demografio",
+   "status": "ISSUE",
+   "correct_decomp": "dem/o/grafi/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "demografi[人口統計]",
+     "correct": "dem[人口]+o+grafi[記述]",
+     "why": "全体語義を一根に圧縮; goldはdem/o/grafi"
+    }
+   ],
+   "note": "gold=dem/o/grafi/o。JAのみ未分割。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 12,
+   "t": "DIVERGE",
+   "key": "detektiva",
+   "status": "ISSUE",
+   "correct_decomp": "detekt/iv/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "detektiv[探偵]",
+     "correct": "detekt[検出]+iv[性質]",
+     "why": "全体語義を一根に圧縮; goldはdetekt/iv"
+    }
+   ],
+   "note": "gold=detekt/iv/a。JAのみ未分割で全体語義。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 13,
+   "t": "DIVERGE",
+   "key": "detektivi",
+   "status": "ISSUE",
+   "correct_decomp": "detekt/iv/i",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "detektiv[探偵]",
+     "correct": "detekt[検出]+iv[性質]",
+     "why": "全体語義を一根に圧縮; goldはdetekt/iv"
+    }
+   ],
+   "note": "gold=detekt/iv/i。JAのみ未分割。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 14,
+   "t": "DIVERGE",
+   "key": "detektivo",
+   "status": "ISSUE",
+   "correct_decomp": "detekt/iv/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "detektiv[探偵]",
+     "correct": "detekt[検出]+iv[性質]",
+     "why": "全体語義を一根に圧縮; goldはdetekt/iv"
+    }
+   ],
+   "note": "gold=detekt/iv/o。JAのみ未分割。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 17,
+   "t": "DIVERGE",
+   "key": "dividendo",
+   "status": "ISSUE",
+   "correct_decomp": "divid/end/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "dividend[配当金]",
+     "correct": "divid[分ける]+end[必要]",
+     "why": "全体語義を一根に圧縮、語根非忠実"
+    }
+   ],
+   "note": "ZH/KOの分割(分割+必要)はmaster準拠で正。JAのみ一語化が非忠実",
+   "agreed": true
+  },
+  {
+   "id": 25,
+   "t": "DIVERGE",
+   "key": "etimologia",
+   "status": "ISSUE",
+   "correct_decomp": "etim/o/logi/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "etimologi[語源学]",
+     "correct": "etim[語源]+o+logi[学]",
+     "why": "全体語義を一根に圧縮、語根非忠実"
+    }
+   ],
+   "note": "gold=etim/o/logi/a。JAのみ未分割。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 29,
+   "t": "DIVERGE",
+   "key": "golfofluo",
+   "status": "ISSUE",
+   "correct_decomp": "golfo/flu/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "flu[流れる]",
+     "correct": "golfo[湾]+flu[流れる]",
+     "why": "先頭根golfo脱落の過分解、湾流の湾が欠落"
+    }
+   ],
+   "note": "ZH/KO(海湾+流)は正。JAは先頭1根孤立欠落の既知欠陥。golfo=Gulf(湾流)",
+   "agreed": true
+  },
+  {
+   "id": 53,
+   "t": "DIVERGE",
+   "key": "karakteriza",
+   "status": "ISSUE",
+   "correct_decomp": "karakter/iz/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "karakteriz[(を)特色づける]",
+     "correct": "karakter[性質]+iz[化]",
+     "why": "全体語義を一根に圧縮、非語根忠実"
+    }
+   ],
+   "note": "ZH/KOが正しい分解。JAをkarakter+izに分割",
+   "agreed": true
+  },
+  {
+   "id": 65,
+   "t": "DIVERGE",
+   "key": "masiva",
+   "status": "ISSUE",
+   "correct_decomp": "mas/iv/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "masiv[どっしり重い]",
+     "correct": "mas[かたまり]+iv[性質]",
+     "why": "合成語義を一根に圧縮、非語根忠実"
+    }
+   ],
+   "note": "gold=mas/iv/a(日=かたまり/性質)。JAのみ全体語義。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 76,
+   "t": "DIVERGE",
+   "key": "organisma",
+   "status": "ISSUE",
+   "correct_decomp": "organ/ism/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "organism[[生]有機体]",
+     "correct": "organ[器官]+ism[主義]",
+     "why": "PIV偽分解=organ/ism。非語根忠実"
+    }
+   ],
+   "note": "gold=organ/ism/a(PIV正式分解)。JAのみ全体語義。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 77,
+   "t": "DIVERGE",
+   "key": "organiza",
+   "status": "ISSUE",
+   "correct_decomp": "organ/iz/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "organiz[(を)組織する]",
+     "correct": "organ[器官]+iz[化]",
+     "why": "gold分解=organ/iz。非語根忠実"
+    }
+   ],
+   "note": "gold=organ/iz/a(日=器官/化)。JAのみ全体語義。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 78,
+   "t": "DIVERGE",
+   "key": "organizo",
+   "status": "ISSUE",
+   "correct_decomp": "organ/iz/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "organiz[(を)組織する]",
+     "correct": "organ[器官]+iz[化]",
+     "why": "gold分解=organ/iz。非語根忠実"
+    }
+   ],
+   "note": "gold=organ/iz/o。JAのみ全体語義。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 79,
+   "t": "DIVERGE",
+   "key": "orientalismo",
+   "status": "ISSUE",
+   "correct_decomp": "oriental/ism/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "orientalism[オリエンタリズム]",
+     "correct": "oriental[東洋]+ism[主義]",
+     "why": "gold偽分解=oriental/ism。非語根忠実(音写)"
+    }
+   ],
+   "note": "gold=oriental/ism/o。JAのみ音写一体。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 82,
+   "t": "DIVERGE",
+   "key": "pazigrafio",
+   "status": "ISSUE",
+   "correct_decomp": "pazi/grafi/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "pazigrafi[普遍文字法]",
+     "correct": "pazi[普遍]+grafi[記述]",
+     "why": "全体語義を一根に圧縮。gold同様2分割が根忠実"
+    }
+   ],
+   "note": "gold=pazi/grafi/o(普遍/記述)。ZH/KO分割は正。JAが一体語訳",
+   "agreed": true
+  },
+  {
+   "id": 85,
+   "t": "DIVERGE",
+   "key": "psikologia",
+   "status": "ISSUE",
+   "correct_decomp": "psik/o/logi/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "psikologi[心理学]",
+     "correct": "psik[心理]+logi[学]",
+     "why": "全体語義を一根に。gold para/psik/o/logi同様分割可"
+    }
+   ],
+   "note": "gold:psik=心理,logi=学。ZH/KO分割が根忠実。JAが一体語訳",
+   "agreed": true
+  },
+  {
+   "id": 96,
+   "t": "DIVERGE",
+   "key": "sovetunio",
+   "status": "ISSUE",
+   "correct_decomp": "sovet/uni/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "sovetuni[[地名]ソビエト連邦]",
+     "correct": "sovet[ソビエト]+uni[同盟]",
+     "why": "全体を一語名にし語根忠実でない。masterはsovet/o+uni/o"
+    }
+   ],
+   "note": "ZH/KO分割が正。sovetunio=sovet(ソビエト)+unio(同盟)",
+   "agreed": true
+  }
+ ],
+ "DIVERGE_KOで-an脱落等": [
+  {
+   "id": 1,
+   "t": "DIVERGE",
+   "key": "ahimsano",
+   "status": "ISSUE",
+   "correct_decomp": "ahims/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "ahims[비폭력]",
+     "correct": "ahims[비폭력]+an[구성원]",
+     "why": "-an(成員)欠落; 他言語と非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-anが脱落(GAP)",
+   "agreed": true
+  },
+  {
+   "id": 3,
+   "t": "DIVERGE",
+   "key": "alzacano",
+   "status": "ISSUE",
+   "correct_decomp": "alzac/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "alzac[알자스]",
+     "correct": "alzac[알자스]+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an脱落(GAP)",
+   "agreed": true
+  },
+  {
+   "id": 5,
+   "t": "DIVERGE",
+   "key": "asiriano",
+   "status": "ISSUE",
+   "correct_decomp": "asir/i/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "asir[아시리아]",
+     "correct": "asir[아시리아]+i+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "ZHは亚述+an。KOで-an脱落(GAP)。masterはasir/i/an/o",
+   "agreed": true
+  },
+  {
+   "id": 6,
+   "t": "DIVERGE",
+   "key": "aŭstriano",
+   "status": "ISSUE",
+   "correct_decomp": "aŭstr/i/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "aŭstr[오스트리아]",
+     "correct": "aŭstr[오스트리아]+i+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an脱落(GAP)。masterはaŭstr/i/an/o",
+   "agreed": true
+  },
+  {
+   "id": 7,
+   "t": "DIVERGE",
+   "key": "babilonano",
+   "status": "ISSUE",
+   "correct_decomp": "babilon/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "babilon[바빌론]",
+     "correct": "babilon[바빌론]+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an脱落(GAP)",
+   "agreed": true
+  },
+  {
+   "id": 8,
+   "t": "DIVERGE",
+   "key": "brazilano",
+   "status": "ISSUE",
+   "correct_decomp": "brazil/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "brazil[브라질]",
+     "correct": "brazil[브라질]+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an脱落(GAP)。masterはbrazil/an/o",
+   "agreed": true
+  },
+  {
+   "id": 9,
+   "t": "DIVERGE",
+   "key": "brunejano",
+   "status": "ISSUE",
+   "correct_decomp": "brunej/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "brunej[브루나이]",
+     "correct": "brunej[브루나이]+an[구성원]",
+     "why": "-an(成員)欠落; 地名のみで非並行"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an脱落(GAP)",
+   "agreed": true
+  },
+  {
+   "id": 20,
+   "t": "DIVERGE",
+   "key": "egiptano",
+   "status": "ISSUE",
+   "correct_decomp": "egipt/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "egipt[이집트]",
+     "correct": "egipt[이집트]+an[구성원]",
+     "why": "-an-(成員)欠落、master=이집트/구성원"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)",
+   "agreed": true
+  },
+  {
+   "id": 23,
+   "t": "DIVERGE",
+   "key": "epikurano",
+   "status": "ISSUE",
+   "correct_decomp": "epikur/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "epikur[에피쿠로스]",
+     "correct": "epikur[에피쿠로스]+an[구성원]",
+     "why": "-an-(成員/学派の人)欠落"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)",
+   "agreed": true
+  },
+  {
+   "id": 24,
+   "t": "DIVERGE",
+   "key": "esperantano",
+   "status": "ISSUE",
+   "correct_decomp": "esperant/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "esperant[중립적 국제어]",
+     "correct": "esperant[중립적 국제어]+an[구성원]",
+     "why": "-an-(成員/賛同者)欠落"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)。esperant一体は借用語で可",
+   "agreed": true
+  },
+  {
+   "id": 27,
+   "t": "DIVERGE",
+   "key": "friulano",
+   "status": "ISSUE",
+   "correct_decomp": "friul/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "friul[프리울리]",
+     "correct": "friul[프리울리]+an[구성원]",
+     "why": "-an-(成員)欠落、master=프리울리/구성원"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)",
+   "agreed": true
+  },
+  {
+   "id": 30,
+   "t": "DIVERGE",
+   "key": "gvineano",
+   "status": "ISSUE",
+   "correct_decomp": "gvine/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "gvine[기니]",
+     "correct": "gvine[기니]+an[구성원]",
+     "why": "-an-(成員)欠落、master=기니/구성원"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)",
+   "agreed": true
+  },
+  {
+   "id": 31,
+   "t": "DIVERGE",
+   "key": "haitiano",
+   "status": "ISSUE",
+   "correct_decomp": "haiti/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "haiti[아이티]",
+     "correct": "haiti[아이티]+an[구성원]",
+     "why": "-an-(成員)欠落、master=아이티/구성원"
+    }
+   ],
+   "note": "JA/ZHは+an[成員]で正。KOのみ-an脱落(原則2)",
+   "agreed": true
+  },
+  {
+   "id": 39,
+   "t": "DIVERGE",
+   "key": "hitlerano",
+   "status": "ISSUE",
+   "correct_decomp": "hitler/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "hitler[히틀러]",
+     "correct": "hitler[히틀러]+an[구성원]",
+     "why": "-an-(成員/추종자)欠落。固有名のみ"
+    }
+   ],
+   "note": "KOで-an-が欠落。JA/ZHは正(成員)。hitler+anが正解",
+   "agreed": true
+  },
+  {
+   "id": 44,
+   "t": "DIVERGE",
+   "key": "iliriano",
+   "status": "ISSUE",
+   "correct_decomp": "iliri/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "iliri[일리리아]",
+     "correct": "iliri[일리리아]+an[구성원]",
+     "why": "-an-(成員)欠落。地名のみ"
+    }
+   ],
+   "note": "KOで-an-(구성원)が欠落。JA/ZHは正。地名+成員が正解",
+   "agreed": true
+  },
+  {
+   "id": 47,
+   "t": "DIVERGE",
+   "key": "irlandano",
+   "status": "ISSUE",
+   "correct_decomp": "irland/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "irland[아일랜드]",
+     "correct": "irland[아일랜드]+an[구성원]",
+     "why": "-an-(成員)欠落。地名のみ"
+    }
+   ],
+   "note": "KOで-an-(구성원)が欠落。JA/ZHは正。地名+成員が正解",
+   "agreed": true
+  },
+  {
+   "id": 48,
+   "t": "DIVERGE",
+   "key": "islamano",
+   "status": "ISSUE",
+   "correct_decomp": "islam/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "islam[이슬람교]",
+     "correct": "islam[이슬람교]+an[구성원]",
+     "why": "-an-(成員)の語根が欠落"
+    }
+   ],
+   "note": "JA/ZHは正。KOにan[구성원]を追加(masterは구성원)",
+   "agreed": true
+  },
+  {
+   "id": 49,
+   "t": "DIVERGE",
+   "key": "islandano",
+   "status": "ISSUE",
+   "correct_decomp": "island/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "island[아이슬란드]",
+     "correct": "island[아이슬란드]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 50,
+   "t": "DIVERGE",
+   "key": "israelano",
+   "status": "ISSUE",
+   "correct_decomp": "israel/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "israel[이스라엘]",
+     "correct": "israel[이스라엘]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 51,
+   "t": "DIVERGE",
+   "key": "jamajkano",
+   "status": "ISSUE",
+   "correct_decomp": "jamajk/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "jamajk[자메이카]",
+     "correct": "jamajk[자메이카]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 52,
+   "t": "DIVERGE",
+   "key": "kanadano",
+   "status": "ISSUE",
+   "correct_decomp": "kanad/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "kanad[캐나다]",
+     "correct": "kanad[캐나다]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加(master一致)",
+   "agreed": true
+  },
+  {
+   "id": 54,
+   "t": "DIVERGE",
+   "key": "kaŝmirano",
+   "status": "ISSUE",
+   "correct_decomp": "kaŝmir/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "kaŝmir[카슈미르]",
+     "correct": "kaŝmir[카슈미르]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 55,
+   "t": "DIVERGE",
+   "key": "koloniano",
+   "status": "ISSUE",
+   "correct_decomp": "koloni/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "koloni[식민지]",
+     "correct": "koloni[식민지]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 56,
+   "t": "DIVERGE",
+   "key": "komorano",
+   "status": "ISSUE",
+   "correct_decomp": "komor/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "komor[코모로]",
+     "correct": "komor[코모로]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 57,
+   "t": "DIVERGE",
+   "key": "komunano",
+   "status": "ISSUE",
+   "correct_decomp": "komun/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "komun[공통의]",
+     "correct": "komun[공통의]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。komunは共通の(master一致)。KOにan追加",
+   "agreed": true
+  },
+  {
+   "id": 58,
+   "t": "DIVERGE",
+   "key": "komunumano",
+   "status": "ISSUE",
+   "correct_decomp": "komun/um/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "komun[공통의]+um[없음]",
+     "correct": "komun[공통의]+um[불정]+an[구성원]",
+     "why": "-an-欠落、umはmasterで불정"
+    }
+   ],
+   "note": "JA/ZH正(komun+um+an)。KOにan[구성원]追加、umは불정に",
+   "agreed": true
+  },
+  {
+   "id": 59,
+   "t": "DIVERGE",
+   "key": "korintano",
+   "status": "ISSUE",
+   "correct_decomp": "korint/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "korint[코린토스]",
+     "correct": "korint[코린토스]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 60,
+   "t": "DIVERGE",
+   "key": "korsikano",
+   "status": "ISSUE",
+   "correct_decomp": "korsik/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "korsik[코르시카]",
+     "correct": "korsik[코르시카]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加(master一致)",
+   "agreed": true
+  },
+  {
+   "id": 62,
+   "t": "DIVERGE",
+   "key": "malaviano",
+   "status": "ISSUE",
+   "correct_decomp": "malavi/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "malavi[말라위]",
+     "correct": "malavi[말라위]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 63,
+   "t": "DIVERGE",
+   "key": "maldivano",
+   "status": "ISSUE",
+   "correct_decomp": "maldiv/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "maldiv[몰디브]",
+     "correct": "maldiv[몰디브]+an[구성원]",
+     "why": "-an-(成員)が欠落"
+    }
+   ],
+   "note": "JA/ZH正。KOにan[구성원]追加",
+   "agreed": true
+  },
+  {
+   "id": 64,
+   "t": "DIVERGE",
+   "key": "marŝalano",
+   "status": "ISSUE",
+   "correct_decomp": "marŝal/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "marŝal[마셜]",
+     "correct": "marŝal[마셜]+an[구성원]",
+     "why": "-an-(구성원)欠落、地名のみ"
+    }
+   ],
+   "note": "KOで成員語根が脱落。JA/ZHは正",
+   "agreed": true
+  },
+  {
+   "id": 66,
+   "t": "DIVERGE",
+   "key": "maŭriciano",
+   "status": "ISSUE",
+   "correct_decomp": "maŭrici/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "maŭrici[모리셔스]",
+     "correct": "maŭrici[모리셔스]+an[구성원]",
+     "why": "-an-(구성원)欠落、地名のみ"
+    }
+   ],
+   "note": "KOで成員脱落。JA/ZH正",
+   "agreed": true
+  },
+  {
+   "id": 67,
+   "t": "DIVERGE",
+   "key": "meksikano",
+   "status": "ISSUE",
+   "correct_decomp": "meksik/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "meksik[멕시코]",
+     "correct": "meksik[멕시코]+an[구성원]",
+     "why": "-an-(구성원)欠落"
+    }
+   ],
+   "note": "gold=meksik/an/o。KOで成員脱落",
+   "agreed": true
+  },
+  {
+   "id": 69,
+   "t": "DIVERGE",
+   "key": "napolano",
+   "status": "ISSUE",
+   "correct_decomp": "napol/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "napol[나폴리]",
+     "correct": "napol[나폴리]+an[구성원]",
+     "why": "-an-(구성원)欠落"
+    }
+   ],
+   "note": "gold=napol/an/o。KOで成員脱落",
+   "agreed": true
+  },
+  {
+   "id": 71,
+   "t": "DIVERGE",
+   "key": "nepalano",
+   "status": "ISSUE",
+   "correct_decomp": "nepal/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "nepal[네팔]",
+     "correct": "nepal[네팔]+an[구성원]",
+     "why": "-an-(구성원)欠落"
+    }
+   ],
+   "note": "gold=nepal/an/o。KOで成員脱落",
+   "agreed": true
+  },
+  {
+   "id": 73,
+   "t": "DIVERGE",
+   "key": "okinavano",
+   "status": "ISSUE",
+   "correct_decomp": "okinav/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "okinav[오키나와]",
+     "correct": "okinav[오키나와]+an[구성원]",
+     "why": "-an-(구성원)欠落"
+    }
+   ],
+   "note": "gold=okinav/an/o。KOで成員脱落",
+   "agreed": true
+  },
+  {
+   "id": 80,
+   "t": "DIVERGE",
+   "key": "palaŭano",
+   "status": "ISSUE",
+   "correct_decomp": "palaŭ/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "palaŭ[팔라우]",
+     "correct": "palaŭ[팔라우]+an[구성원]",
+     "why": "-an-(成員)が脱落。gold準拠で구성원を追加"
+    }
+   ],
+   "note": "gold=palaŭ/an/o(パラオ/成員)。JA/ZHは正、KOがan欠落",
+   "agreed": true
+  },
+  {
+   "id": 81,
+   "t": "DIVERGE",
+   "key": "paroĥano",
+   "status": "ISSUE",
+   "correct_decomp": "paroĥ/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "paroĥ[본당]",
+     "correct": "paroĥ[본당]+an[구성원]",
+     "why": "-an-(成員)欠落。教区の成員を表す根を補う"
+    }
+   ],
+   "note": "gold=paroĥ/an/o(小教区/成員)。KOのみan欠落",
+   "agreed": true
+  },
+  {
+   "id": 89,
+   "t": "DIVERGE",
+   "key": "reuniano",
+   "status": "ISSUE",
+   "correct_decomp": "reuni/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "reuni[레위니옹]",
+     "correct": "reuni[레위니옹]+an[구성원]",
+     "why": "-an-(成員)欠落。reuniは地名一語、re+uniでない"
+    }
+   ],
+   "note": "gold=reuni/an/o(レユニオン/成員)。KOのみan欠落",
+   "agreed": true
+  },
+  {
+   "id": 90,
+   "t": "DIVERGE",
+   "key": "siberiano",
+   "status": "ISSUE",
+   "correct_decomp": "siberi/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "siberi[시베리아]",
+     "correct": "siberi[시베리아]+an[구성원]",
+     "why": "-an-(成員)欠落。gold準拠で구성원追加"
+    }
+   ],
+   "note": "gold=siberi/an/o。JA/ZH正、KOがan欠落",
+   "agreed": true
+  },
+  {
+   "id": 91,
+   "t": "DIVERGE",
+   "key": "siciliano",
+   "status": "ISSUE",
+   "correct_decomp": "sicili/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "sicili[시칠리아]",
+     "correct": "sicili[시칠리아]+an[구성원]",
+     "why": "-an-(成員)欠落"
+    }
+   ],
+   "note": "gold=sicili/an/o。KOのみan欠落",
+   "agreed": true
+  },
+  {
+   "id": 92,
+   "t": "DIVERGE",
+   "key": "sileziano",
+   "status": "ISSUE",
+   "correct_decomp": "silezi/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "silezi[실레시아]",
+     "correct": "silezi[실레시아]+an[구성원]",
+     "why": "-an-(成員)欠落"
+    }
+   ],
+   "note": "gold=silezi/an/o。KOのみan欠落",
+   "agreed": true
+  },
+  {
+   "id": 94,
+   "t": "DIVERGE",
+   "key": "sovetano",
+   "status": "ISSUE",
+   "correct_decomp": "sovet/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "sovet[소비에트]",
+     "correct": "sovet[소비에트]+an[구성원]",
+     "why": "-an-(成員)欠落"
+    }
+   ],
+   "note": "gold=sovet/an/o(ソビエト/成員)。KOのみan欠落",
+   "agreed": true
+  },
+  {
+   "id": 97,
+   "t": "DIVERGE",
+   "key": "spartano",
+   "status": "ISSUE",
+   "correct_decomp": "spart/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "spart[스파르타]",
+     "correct": "spart[스파르타]+an[구성원]",
+     "why": "-an-(成員)語根を脱落。master韓=스파르타/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an=구성원が欠落",
+   "agreed": true
+  },
+  {
+   "id": 98,
+   "t": "DIVERGE",
+   "key": "sumerano",
+   "status": "ISSUE",
+   "correct_decomp": "sumer/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "sumer[수메르]",
+     "correct": "sumer[수메르]+an[구성원]",
+     "why": "-an-を脱落。master韓=수메르/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 101,
+   "t": "DIVERGE",
+   "key": "tibetano",
+   "status": "ISSUE",
+   "correct_decomp": "tibet/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "tibet[티베트]",
+     "correct": "tibet[티베트]+an[구성원]",
+     "why": "-an-を脱落。master韓=티베트/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 102,
+   "t": "DIVERGE",
+   "key": "togolano",
+   "status": "ISSUE",
+   "correct_decomp": "togol/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "togol[토고]",
+     "correct": "togol[토고]+an[구성원]",
+     "why": "-an-を脱落。master韓=토고/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 104,
+   "t": "DIVERGE",
+   "key": "tuvalano",
+   "status": "ISSUE",
+   "correct_decomp": "tuval/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "tuval[투발루]",
+     "correct": "tuval[투발루]+an[구성원]",
+     "why": "-an-を脱落。master韓=투발루/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 105,
+   "t": "DIVERGE",
+   "key": "veneciano",
+   "status": "ISSUE",
+   "correct_decomp": "veneci/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "veneci[베네치아]",
+     "correct": "veneci[베네치아]+an[구성원]",
+     "why": "-an-を脱落。master韓=베네치아/구성원"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 106,
+   "t": "DIVERGE",
+   "key": "volterano",
+   "status": "ISSUE",
+   "correct_decomp": "volter/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "volter[볼테르]",
+     "correct": "volter[볼테르]+an[구성원]",
+     "why": "-an-を脱落。master韓=볼테르/구성원(volteranismo参照)"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落",
+   "agreed": true
+  },
+  {
+   "id": 107,
+   "t": "DIVERGE",
+   "key": "ŝintoano",
+   "status": "ISSUE",
+   "correct_decomp": "ŝinto/an/o",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "ŝinto[신토]",
+     "correct": "ŝinto[신토]+an[구성원]",
+     "why": "-an-を脱落。成員語根が欠落"
+    }
+   ],
+   "note": "JA/ZHは正。KOで-an欠落。신토は神道の妥当な音訳",
+   "agreed": true
+  }
+ ],
+ "DIVERGE_ZH/KO偽友分割(JA正)": [
+  {
+   "id": 4,
+   "t": "DIVERGE",
+   "key": "antibiotiko",
+   "status": "ISSUE",
+   "correct_decomp": "anti/bio/tik/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "tik[被套布]",
+     "correct": "tik[(借用語の一部, 訳さず)]",
+     "why": "-tik-は科学接尾辞; 寝具生地は偽の友"
+    },
+    {
+     "lang": "ko",
+     "current": "tik[티킹]",
+     "correct": "tik[(借用語の一部, 訳さず)]",
+     "why": "-tik-は科学接尾辞; 티킹は偽の友"
+    }
+   ],
+   "note": "JA正(一語)。masterもtik無訳。ZH/KOのtik誤訳",
+   "agreed": true
+  },
+  {
+   "id": 10,
+   "t": "DIVERGE",
+   "key": "civilizacia",
+   "status": "ISSUE",
+   "correct_decomp": "civil/iz/aci/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "civil[市民]+iz[化]+aci[名词化]",
+     "correct": "civil[文明]+iz[化]+aci[名词化]",
+     "why": "civilizacio文脈ではcivil=文明。goldも文明と注釈"
+    },
+    {
+     "lang": "ko",
+     "current": "civil[시민]+iz[화]+aci[명사화]",
+     "correct": "civil[문명]+iz[화]+aci[명사화]",
+     "why": "この文脈はcivil=문명。市民は誤"
+    }
+   ],
+   "note": "gold=文明/化/名詞化。JA(一体civilizaci文明)も可。ZH/KOのcivil根訳が誤",
+   "agreed": true
+  },
+  {
+   "id": 15,
+   "t": "DIVERGE",
+   "key": "dialoga",
+   "status": "ISSUE",
+   "correct_decomp": "dialog/a",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "dia[通过]+log[言]",
+     "correct": "dialog[对话]",
+     "why": "dia-は接頭でない偽の友; 一語"
+    },
+    {
+     "lang": "ko",
+     "current": "dia[통과]+log[말]",
+     "correct": "dialog[대화]",
+     "why": "dia-は接頭でない偽の友; 一語"
+    }
+   ],
+   "note": "監査原則1の典型誤分解。dia/logは偽の友。JAの一体が正。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 16,
+   "t": "DIVERGE",
+   "key": "dialogi",
+   "status": "ISSUE",
+   "correct_decomp": "dialog/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "dia[通过]+log[言]",
+     "correct": "dialog[对话]",
+     "why": "dialogは一語、dia-は接頭でなく偽分解"
+    },
+    {
+     "lang": "ko",
+     "current": "dia[통과]+log[말]",
+     "correct": "dialog[대화]",
+     "why": "dialogは一語、dia-は接頭でなく偽分解"
+    }
+   ],
+   "note": "JA(対話)が正。ZH/KOは典型偽友。masterもdia/log偽分解扱いだが原則1で不可",
+   "agreed": true
+  },
+  {
+   "id": 22,
+   "t": "DIVERGE",
+   "key": "ekologio",
+   "status": "ISSUE",
+   "correct_decomp": "eko/logi/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "ek[开始]+ologi[学]",
+     "correct": "eko[环境]+logi[学]",
+     "why": "ek-は起動接頭でなくeco=eko(環境)、偽分解"
+    },
+    {
+     "lang": "ko",
+     "current": "ek[시작]+ologi[학]",
+     "correct": "eko[환경]+logi[학]",
+     "why": "ek-は起動接頭でなくeco=eko(환경)、偽分解"
+    }
+   ],
+   "note": "原則1の典型誤。masterはeko/logi[環境/学]。#21と同語幹なのにここだけek+ologi誤分割",
+   "agreed": true
+  },
+  {
+   "id": 26,
+   "t": "DIVERGE",
+   "key": "etimologio",
+   "status": "ISSUE",
+   "correct_decomp": "etim/o/logi/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "etimologi[語源学]",
+     "correct": "etim[語源]+o+logi[学]",
+     "why": "全体語義を一根に圧縮、語根非忠実"
+    },
+    {
+     "lang": "zh",
+     "current": "etim[词源]+ologi[学]",
+     "correct": "etim[词源]+o+logi[学]",
+     "why": "連結母音oをlogiに併合、正は-logi-"
+    },
+    {
+     "lang": "ko",
+     "current": "etim[어원]+ologi[학]",
+     "correct": "etim[어원]+o+logi[학]",
+     "why": "連結母音oをlogiに併合、正は-logi-"
+    }
+   ],
+   "note": "gold=etim/o/logi/o。ja未分割、zh/koはol併合。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 33,
+   "t": "DIVERGE",
+   "key": "hidratigi",
+   "status": "ISSUE",
+   "correct_decomp": "hidrat/ig/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "drat[金属线]+ig",
+     "correct": "hidrat[水合物]+ig",
+     "why": "語根はhidrat(水和物)。dratは別語=針金の偽友"
+    },
+    {
+     "lang": "ko",
+     "current": "drat[금속선]+ig",
+     "correct": "hidrat[수화물]+ig",
+     "why": "語根はhidrat(水和)。dratは針金の偽友"
+    }
+   ],
+   "note": "ZH/KOがhidratをdrat(針金)と誤切。JA(hidrat=水和物)が正",
+   "agreed": true
+  },
+  {
+   "id": 41,
+   "t": "DIVERGE",
+   "key": "ideogramo",
+   "status": "ISSUE",
+   "correct_decomp": "ide/o/gram/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "gram[克]",
+     "correct": "gram[记录]",
+     "why": "-gram-は記録/字(電報等)。質量単位克は偽友"
+    },
+    {
+     "lang": "ko",
+     "current": "gram[그램]",
+     "correct": "gram[기록]",
+     "why": "-gram-は記録/글자。単位gramは偽友"
+    }
+   ],
+   "note": "ZH/KOがgramを質量単位(克/그램)と誤訳。正=記録/记录/기록",
+   "agreed": true
+  },
+  {
+   "id": 43,
+   "t": "DIVERGE",
+   "key": "ideologio",
+   "status": "ISSUE",
+   "correct_decomp": "ide/o/logi/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "ologi[学]",
+     "correct": "logi[学]",
+     "why": "gold分解はlogi。連結oを根に含めず非一貫(#42はlogi)"
+    },
+    {
+     "lang": "ko",
+     "current": "ologi[학]",
+     "correct": "logi[학]",
+     "why": "gold分解はlogi。#42(logi)と非並行な切り方"
+    }
+   ],
+   "note": "意味(学)は正だが切片がologi。gold/同family#42はlogi。分解の非一貫を指摘",
+   "agreed": true
+  },
+  {
+   "id": 45,
+   "t": "DIVERGE",
+   "key": "inflamigi",
+   "status": "ISSUE",
+   "correct_decomp": "inflam/ig/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "flam[火焰]+ig",
+     "correct": "inflam[炎症]+ig",
+     "why": "語根はinflam(炎症)。flam(火焰)は偽友の過分解"
+    },
+    {
+     "lang": "ko",
+     "current": "flam[불꽃]+ig",
+     "correct": "inflam[염증]+ig",
+     "why": "語根はinflam(炎症)。flam(불꽃)は偽友"
+    }
+   ],
+   "note": "ZH/KOがinflamをflam(炎/火焰)と誤切。JA(inflam=炎症)が正",
+   "agreed": true
+  },
+  {
+   "id": 61,
+   "t": "DIVERGE",
+   "key": "kortegano",
+   "status": "ISSUE",
+   "correct_decomp": "korteg/an/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "kort[中庭]+eg[強大]",
+     "correct": "korteg[宮廷]",
+     "why": "korteg=宮廷の独立根。kort+egは偽分解"
+    },
+    {
+     "lang": "zh",
+     "current": "kort[庭院]+eg[强大]",
+     "correct": "korteg[宫廷]",
+     "why": "廷臣であり大庭院の成員ではない"
+    },
+    {
+     "lang": "ko",
+     "current": "kort[집 안의 뜰]+eg[강대]",
+     "correct": "korteg[궁정]+an[구성원]",
+     "why": "偽分割かつ-an欠落"
+    }
+   ],
+   "note": "kortegano=廷臣。korteg(宮廷)+an が正。kort+egは偽の友",
+   "agreed": true
+  },
+  {
+   "id": 68,
+   "t": "DIVERGE",
+   "key": "montenegrano",
+   "status": "ISSUE",
+   "correct_decomp": "montenegr/an/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "mont[山]+negr[黒]+an[成員]",
+     "correct": "montenegr[モンテネグロ]+an[成員]",
+     "why": "偽の友。地名一語、語源破片誤割"
+    },
+    {
+     "lang": "zh",
+     "current": "mont[山]+negr[黑]+an[成员]",
+     "correct": "montenegr[黑山]+an[成员]",
+     "why": "偽の友。地名一語、語源破片誤割"
+    },
+    {
+     "lang": "ko",
+     "current": "montenegr[몬테네그로]",
+     "correct": "montenegr[몬테네그로]+an[구성원]",
+     "why": "-an(성원)を脱落、非並行"
+    }
+   ],
+   "note": "master=montenegr/an/o。KOの地名根は正だがan欠落",
+   "agreed": true
+  },
+  {
+   "id": 70,
+   "t": "DIVERGE",
+   "key": "nebuligi",
+   "status": "ISSUE",
+   "correct_decomp": "nebul/ig/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "ne[不]+bul[球]+ig[使役]",
+     "correct": "nebul[雾]+ig[使…]",
+     "why": "nebul(霧)を不+球と偽分解(偽の友)"
+    },
+    {
+     "lang": "ko",
+     "current": "ne[아니]+bul[둥근 덩어리]+ig[시키다]",
+     "correct": "nebul[안개]+ig[시키다]",
+     "why": "nebul(안개)を ne+bul に偽分解"
+    }
+   ],
+   "note": "gold=nebul/i(霧)。JA正。ZH/KOは偽の友で誤",
+   "agreed": true
+  },
+  {
+   "id": 72,
+   "t": "DIVERGE",
+   "key": "ofendita",
+   "status": "ISSUE",
+   "correct_decomp": "ofend/it/a",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "fend[劈开]+it[被动完成]",
+     "correct": "ofend[冒犯]+it[被动完成]",
+     "why": "語根ofend(冒犯)を fend(劈开)に誤分解"
+    },
+    {
+     "lang": "ko",
+     "current": "fend[쪼개다]+it[수동완료]",
+     "correct": "ofend[모욕하다]+it[수동완료]",
+     "why": "ofend(모욕)を fend(쪼개다)に誤分解"
+    }
+   ],
+   "note": "gold=ofend/it(冒犯/모욕)。JA正。ZH/KOは同綴異義の偽の友",
+   "agreed": true
+  },
+  {
+   "id": 83,
+   "t": "DIVERGE",
+   "key": "plaŭdigi",
+   "status": "ISSUE",
+   "correct_decomp": "plaŭd/ig/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "aŭd[听见]+ig[使役]",
+     "correct": "plaŭd[溅/哗啦作响]+ig[使役]",
+     "why": "plを切捨てhomograph aŭd(聞く)を誤採用"
+    },
+    {
+     "lang": "ko",
+     "current": "aŭd[듣다]+ig[시키다]",
+     "correct": "plaŭd[철벅거리다]+ig[시키다]",
+     "why": "plを切捨てaŭd(聞く)を誤採用。偽の友"
+    }
+   ],
+   "note": "plaŭd=水音を立てる。JA正。ZH/KOがaŭd誤割当",
+   "agreed": true
+  },
+  {
+   "id": 86,
+   "t": "DIVERGE",
+   "key": "radiofonio",
+   "status": "ISSUE",
+   "correct_decomp": "radi/o/foni/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "radiofoni[ラジオで]",
+     "correct": "radio[無線]+foni[無線電話]",
+     "why": "一体語訳かつ「で」助詞混入。分割し根訳に"
+    },
+    {
+     "lang": "zh",
+     "current": "radio[光线]",
+     "correct": "radio[无线电/收音机]",
+     "why": "ここは無線放送。光线はhomograph誤訳"
+    },
+    {
+     "lang": "ko",
+     "current": "radio[광선]",
+     "correct": "radio[라디오/무선]",
+     "why": "ここは無線放送。광선(光線)は文脈誤訳"
+    }
+   ],
+   "note": "radiofoni=ラジオ放送。radi=無線/ラジオが正(光線は文脈誤)",
+   "agreed": true
+  },
+  {
+   "id": 87,
+   "t": "DIVERGE",
+   "key": "resume",
+   "status": "ISSUE",
+   "correct_decomp": "resum/e",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "re[再次]+sum[总和]",
+     "correct": "resum[总结/概括]",
+     "why": "resumは借用一語根。re-+sum-は偽分解"
+    },
+    {
+     "lang": "ko",
+     "current": "re[다시]+sum[합계]",
+     "correct": "resum[요약]",
+     "why": "resumは一語根。re-+sumに分割は誤り"
+    }
+   ],
+   "note": "gold=resum(要約/总结/요약)。JA正。ZH/KOがre+sum偽分解",
+   "agreed": true
+  },
+  {
+   "id": 88,
+   "t": "DIVERGE",
+   "key": "resumi",
+   "status": "ISSUE",
+   "correct_decomp": "resum/i",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "re[再次]+sum[总和]",
+     "correct": "resum[总结/概括]",
+     "why": "resumは借用一語根。re-+sum-は偽分解"
+    },
+    {
+     "lang": "ko",
+     "current": "re[다시]+sum[합계]",
+     "correct": "resum[요약하다]",
+     "why": "resumは一語根。re-+sumに分割は誤り"
+    }
+   ],
+   "note": "gold=resum(要約)。JA正。ZH/KOがre+sum偽分解",
+   "agreed": true
+  },
+  {
+   "id": 93,
+   "t": "DIVERGE",
+   "key": "somaliano",
+   "status": "ISSUE",
+   "correct_decomp": "somal/i/an/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "somal[ソマリ]+an[成員]",
+     "correct": "somal[ソマリ]+i+an[成員]",
+     "why": "連結-i-欠落。master=somal/i/an/o"
+    },
+    {
+     "lang": "zh",
+     "current": "somal[索马里]+an[成员]",
+     "correct": "somal[索马里]+i+an[成员]",
+     "why": "連結-i-欠落。master準拠"
+    },
+    {
+     "lang": "ko",
+     "current": "somal[소말리]",
+     "correct": "somal[소말리]+i+an[구성원]",
+     "why": "-i-と-an両方欠落。master=소말리/i/구성원"
+    }
+   ],
+   "note": "master=somal/i/an/o。3言語とも-i-欠落、KOは-anも脱落",
+   "agreed": true
+  },
+  {
+   "id": 95,
+   "t": "DIVERGE",
+   "key": "sovetiano",
+   "status": "ISSUE",
+   "correct_decomp": "sovet/i/an/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "sovet[ソビエト]+an[成員]",
+     "correct": "sovet[ソビエト]+i+an[成員]",
+     "why": "連結-i-欠落。master=sovet/i/an/o(ソ連人)"
+    },
+    {
+     "lang": "zh",
+     "current": "sovet[苏维埃]+an[成员]",
+     "correct": "sovet[苏维埃]+i+an[成员]",
+     "why": "連結-i-欠落。master準拠"
+    },
+    {
+     "lang": "ko",
+     "current": "sovet[소비에트]",
+     "correct": "sovet[소비에트]+i+an[구성원]",
+     "why": "-i-と-an両方欠落"
+    }
+   ],
+   "note": "master=sovet/i/an/o(ソ連人)。#94 sovetano(評議員,-i無)と別語。-i-で意味分化",
+   "agreed": true
+  },
+  {
+   "id": 99,
+   "t": "DIVERGE",
+   "key": "telefona",
+   "status": "ISSUE",
+   "correct_decomp": "telefon/a",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "tele[远]+fon[音]",
+     "correct": "telefon[电话]",
+     "why": "国際借用語を分割。fon=音は語源破片で文脈誤り"
+    },
+    {
+     "lang": "ko",
+     "current": "tele[원격]+fon[음]",
+     "correct": "telefon[전화]",
+     "why": "借用語を過分割。fon=음は語源破片"
+    }
+   ],
+   "note": "telefonは一語借用語。JA[電話]が正。masterもtele/fonを偽分解と明記",
+   "agreed": true
+  },
+  {
+   "id": 100,
+   "t": "DIVERGE",
+   "key": "telefono",
+   "status": "ISSUE",
+   "correct_decomp": "telefon/o",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "tele[远]+fon[音]",
+     "correct": "telefon[电话]",
+     "why": "国際借用語を分割。fon=音は語源破片で文脈誤り"
+    },
+    {
+     "lang": "ko",
+     "current": "tele[원격]+fon[음]",
+     "correct": "telefon[전화]",
+     "why": "借用語を過分割。fon=음は語源破片"
+    }
+   ],
+   "note": "telefon=電話の一語。JA[電話]が正。master偽分解扱い",
+   "agreed": true
+  },
+  {
+   "id": 103,
+   "t": "DIVERGE",
+   "key": "trompita",
+   "status": "ISSUE",
+   "correct_decomp": "tromp/it/a",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "romp[打破]+it[被动完成]",
+     "correct": "tromp[欺骗]+it[被动完成]",
+     "why": "同綴り異義の誤分割。tromp(欺く)≠romp(打破)"
+    },
+    {
+     "lang": "ko",
+     "current": "romp[깨뜨리다]+it[수동완료]",
+     "correct": "tromp[속이다]+it[수동완료]",
+     "why": "homograph誤り。trompi(속이다)を t+romp と誤割"
+    }
+   ],
+   "note": "JAが正(tromp=だます)。ZH/KOはromp(破壊)の偽の友",
+   "agreed": true
+  }
+ ],
+ "DIVERGE_その他": [
+  {
+   "id": 18,
+   "t": "DIVERGE",
+   "key": "efektiva",
+   "status": "ISSUE",
+   "correct_decomp": "efekt/iv/a",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "efektiv[現実の]",
+     "correct": "efekt[効果/印象]+iv[性質]",
+     "why": "全体語義を一根に圧縮、語根非忠実"
+    },
+    {
+     "lang": "ko",
+     "current": "efekt[강한 인상]+iv[성질]",
+     "correct": "efekt[효과]+iv[성질]",
+     "why": "ZH效果と非並行、効果義に統一すべき"
+    }
+   ],
+   "note": "分割は正(master=efekt/iv)。efekt=効果/印象。ZH效果に韓も合わせ並行化",
+   "agreed": true
+  },
+  {
+   "id": 19,
+   "t": "DIVERGE",
+   "key": "efektive",
+   "status": "ISSUE",
+   "correct_decomp": "efekt/iv/e",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "efektiv[現実の]",
+     "correct": "efekt[効果/印象]+iv[性質]",
+     "why": "全体語義を一根に圧縮、語根非忠実"
+    },
+    {
+     "lang": "ko",
+     "current": "efekt[강한 인상]+iv[성질]",
+     "correct": "efekt[효과]+iv[성질]",
+     "why": "ZH效果と非並行、効果義に統一すべき"
+    }
+   ],
+   "note": "#18の副詞形。同じ是正",
+   "agreed": true
+  },
+  {
+   "id": 84,
+   "t": "DIVERGE",
+   "key": "pseŭdonima",
+   "status": "ISSUE",
+   "correct_decomp": "pseŭdo/nim/o",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "pseŭdonim[偽名]",
+     "correct": "pseŭdo[偽]+nim[名]",
+     "why": "全体語義を一根に圧縮。master=偽/名"
+    },
+    {
+     "lang": "ko",
+     "current": "nim[이름]",
+     "correct": "nim[명]",
+     "why": "master KO nim=명(이름はnom)"
+    }
+   ],
+   "note": "master=pseŭdo/nim/o。ZH分割が正。JA非語根忠実",
+   "agreed": true
+  }
+ ],
+ "GAP_言語欠落": [
+  {
+   "id": 108,
+   "t": "GAP",
+   "key": "aci",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "名詞化",
+     "why": "JA欠落。master civil/iz/aci/o の日訳が名詞化で並行"
+    }
+   ],
+   "note": "-aci-は国際語-ation由来の偽分解片。ZH名词化/KO명사화に並行しJA名詞化",
+   "agreed": true
+  },
+  {
+   "id": 109,
+   "t": "GAP",
+   "key": "agresiv",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "好斗的/有侵略性的",
+     "why": "ZH欠落。ja=侵略的に並行"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "공격적인",
+     "why": "KO欠落。ja=侵略的に並行"
+    }
+   ],
+   "note": "本来agres[攻撃]+iv[性質]に分割すべき(master)。一語化は非語根忠実",
+   "agreed": true
+  },
+  {
+   "id": 110,
+   "t": "GAP",
+   "key": "antibiotik",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "抗生素",
+     "why": "ZH欠落。抗生物質の標準中国語"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "항생제",
+     "why": "KO欠落。抗生物質の標準韓国語"
+    }
+   ],
+   "note": "科学借用語として一語化が正。anti+bio+tik分割やtik=被套布は誤り(偽の友)",
+   "agreed": true
+  },
+  {
+   "id": 111,
+   "t": "GAP",
+   "key": "aŭstri",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "[地名]奥地利",
+     "why": "ZH欠落。master中=奥地利"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "[지명]오스트리아",
+     "why": "KO欠落。master韓=오스트리아"
+    }
+   ],
+   "note": "masterはaŭstr/i/oに分割(国名接尾-i-)。本項は地名一語として日中韓並行を充足",
+   "agreed": true
+  },
+  {
+   "id": 112,
+   "t": "GAP",
+   "key": "ddt",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "DDT",
+     "why": "化学略号。3言語並行に欠落補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "DDT",
+     "why": "略号DDTのまま。欠落補填"
+    }
+   ],
+   "note": "ddtは農薬DDTの略号。一語扱い可。ja/ko=DDT, zh=滴滴涕で並行化",
+   "agreed": true
+  },
+  {
+   "id": 113,
+   "t": "GAP",
+   "key": "demografi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "人口统计",
+     "why": "欠落。jaと並行に補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "인구통계",
+     "why": "欠落。並行に補填"
+    }
+   ],
+   "note": "本来dem(人口)+o+grafi(記述)に分解可だが一体ならja人口統計/zh人口统计/ko인구통계",
+   "agreed": true
+  },
+  {
+   "id": 114,
+   "t": "GAP",
+   "key": "detektiv",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "侦探",
+     "why": "欠落。探偵に相当する中国語を補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "탐정",
+     "why": "欠落。探偵に相当する韓国語を補填"
+    }
+   ],
+   "note": "detektiv=探偵(借用語、一体可)。ja探偵/zh侦探/ko탐정",
+   "agreed": true
+  },
+  {
+   "id": 115,
+   "t": "GAP",
+   "key": "dividend",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "股息",
+     "why": "欠落。配当金の中国語を補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "배당금",
+     "why": "欠落。配当金の韓国語を補填"
+    }
+   ],
+   "note": "dividend=配当金。PIVではdivid/end分解だが一体ならja配当金/zh股息/ko배당금",
+   "agreed": true
+  },
+  {
+   "id": 116,
+   "t": "GAP",
+   "key": "ekologi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "エコロジー",
+     "correct": "生態学/エコロジー",
+     "why": "可だがzh/ko欠落、並行化要"
+    },
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "生态学",
+     "why": "欠落補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "생태학",
+     "why": "欠落補填"
+    }
+   ],
+   "note": "ekologi一体。ek-(起動接頭)に割らないこと厳守。eko(環境)+logi(学)も可",
+   "agreed": true
+  },
+  {
+   "id": 117,
+   "t": "GAP",
+   "key": "etimologi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "词源学",
+     "why": "欠落。語源学の中国語補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "어원학",
+     "why": "欠落。語源学の韓国語補填"
+    }
+   ],
+   "note": "etim(語源)+o+logi(学)分解可。一体ならja語源学/zh词源学/ko어원학",
+   "agreed": true
+  },
+  {
+   "id": 118,
+   "t": "GAP",
+   "key": "golfo",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "湾",
+     "why": "欠落。zh海湾と並行に補填"
+    },
+    {
+     "lang": "ko",
+     "current": "바다에 깊게 들어간 만",
+     "correct": "만",
+     "why": "冗長な定義文。簡潔な語根訳に"
+    }
+   ],
+   "note": "golf/oは同綴り異義(湾/ゴルフ)。ここは湾。ja湾/zh海湾/ko만で並行",
+   "agreed": true
+  },
+  {
+   "id": 119,
+   "t": "GAP",
+   "key": "hipocentr",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "震源",
+     "why": "欠落。爆心地でなく震源が正"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "진원",
+     "why": "欠落。震源を補填"
+    },
+    {
+     "lang": "ja",
+     "current": "爆心地",
+     "correct": "震源",
+     "why": "hipocentr=地震の震源(PIV)、爆心地は誤訳"
+    }
+   ],
+   "note": "hipo/centr=震源(地中の地震発生点)。原爆の爆心地はhipocentroと別。ja要修正",
+   "agreed": true
+  },
+  {
+   "id": 120,
+   "t": "GAP",
+   "key": "hiv",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "HIV",
+     "why": "欠落。略号HIVで補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "HIV",
+     "why": "欠落。略号HIVで補填"
+    },
+    {
+     "lang": "zh",
+     "current": "艾滋病毒",
+     "correct": "HIV/艾滋病毒",
+     "why": "HIVウイルス。略号併記が並行的"
+    }
+   ],
+   "note": "hiv=HIV(略号、一体)。ja/ko=HIV, zh艾滋病毒で並行化",
+   "agreed": true
+  },
+  {
+   "id": 121,
+   "t": "GAP",
+   "key": "ideogram",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "表意文字",
+     "why": "欠落。jaと同形で補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "표의문자",
+     "why": "欠落。表意文字を補填"
+    }
+   ],
+   "note": "ide(観念)+o+gram(記録)分解可。一体ならja表意文字/zh表意文字/ko표의문자",
+   "agreed": true
+  },
+  {
+   "id": 122,
+   "t": "GAP",
+   "key": "ideologi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "意识形态",
+     "why": "欠落。イデオロギーの中国語補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "이데올로기",
+     "why": "欠落。イデオロギーの韓国語補填"
+    }
+   ],
+   "note": "ide(観念)+o+logi(学)分解可。一体ならja/zh意识形态/ko이데올로기",
+   "agreed": true
+  },
+  {
+   "id": 123,
+   "t": "GAP",
+   "key": "intensiv",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "强化的/集中的",
+     "why": "欠落。集中的の中国語補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "집중적",
+     "why": "欠落。集中的の韓国語補填"
+    }
+   ],
+   "note": "intens(強烈)+iv分解が本来。一体ならja集中的/zh强化的/ko집중적",
+   "agreed": true
+  },
+  {
+   "id": 124,
+   "t": "GAP",
+   "key": "jugoslavi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "南斯拉夫",
+     "why": "欠落。地名を補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "유고슬라비아",
+     "why": "欠落。地名を補填"
+    }
+   ],
+   "note": "jugoslav(地名)。jugoslavi/oはjugoslav/i/oが正。zh南斯拉夫/ko유고슬라비아",
+   "agreed": true
+  },
+  {
+   "id": 125,
+   "t": "GAP",
+   "key": "khz",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "kHz",
+     "why": "欠落。略号で補填"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "kHz",
+     "why": "欠落。略号で補填"
+    },
+    {
+     "lang": "zh",
+     "current": "千赫",
+     "correct": "千赫",
+     "why": "ja/ko略号とzh訳語で非並行"
+    }
+   ],
+   "note": "khz=キロヘルツ(略号)。kilo(千)+herc分解が理想。一体ならja/ko=kHz, zh千赫",
+   "agreed": true
+  },
+  {
+   "id": 126,
+   "t": "GAP",
+   "key": "kilobit",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "キロビット",
+     "why": "欠落補填(zh千比特と並行)"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "킬로비트",
+     "why": "欠落補填"
+    }
+   ],
+   "note": "kilo(千)+bit(ビット)分解が理想。一体ならja千ビット/zh千比特/ko킬로비트で並行",
+   "agreed": true
+  },
+  {
+   "id": 127,
+   "t": "GAP",
+   "key": "kilokalori",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "キロカロリー",
+     "why": "欠落補填(zh千卡と並行)"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "킬로칼로리",
+     "why": "欠落補填"
+    }
+   ],
+   "note": "kilo(千)+kalori(カロリー)分解が理想。一体ならja千カロリー/zh千卡/ko킬로칼로리",
+   "agreed": true
+  },
+  {
+   "id": 128,
+   "t": "GAP",
+   "key": "mhz",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "メガヘルツ",
+     "why": "周波数単位MHzの欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "메가헤르츠",
+     "why": "単位MHzの欠落"
+    }
+   ],
+   "note": "mhz=MHz(兆赫)。ja/koを並行補充",
+   "agreed": true
+  },
+  {
+   "id": 129,
+   "t": "GAP",
+   "key": "orientalism",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "东方主义",
+     "why": "orientalismの訳欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "오리엔탈리즘",
+     "why": "訳欠落"
+    }
+   ],
+   "note": "オリエンタリズム。zh/ko補充",
+   "agreed": true
+  },
+  {
+   "id": 130,
+   "t": "GAP",
+   "key": "pazi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "",
+     "correct": "普遍",
+     "why": "ja欠落、zh/koと並行"
+    }
+   ],
+   "note": "pazi=普遍/보편。ja補充",
+   "agreed": true
+  },
+  {
+   "id": 131,
+   "t": "GAP",
+   "key": "pazigrafi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "普遍文字法",
+     "correct": "普遍(pazi)+記述(grafi)",
+     "why": "一語根に合成語義を圧縮し非語根忠実"
+    },
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "普遍(pazi)+记述(grafi)",
+     "why": "zh欠落(zhはpazi/grafiに分割済)"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "보편(pazi)+기술(grafi)",
+     "why": "ko欠落(koはpazi/grafiに分割済)"
+    }
+   ],
+   "note": "正=pazi/graf/i。jaのみ未分割。zh/koはpazi/grafi済で並行",
+   "agreed": true
+  },
+  {
+   "id": 132,
+   "t": "GAP",
+   "key": "radiofoni",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "ラジオで",
+     "correct": "ラジオ放送",
+     "why": "格語尾混入、非語根忠実"
+    },
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "无线电广播",
+     "why": "訳欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "라디오 방송",
+     "why": "訳欠落"
+    }
+   ],
+   "note": "radiofoni=ラジオ放送。jaの「で」除去、zh/ko補充",
+   "agreed": true
+  },
+  {
+   "id": 133,
+   "t": "GAP",
+   "key": "rasist",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "人種差別",
+     "correct": "人種(ras)+主義者(ist)",
+     "why": "合成語義を一根に圧縮、非語根忠実"
+    },
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "种族(ras)+主义者(ist)",
+     "why": "zh欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "종족(ras)+주의자(ist)",
+     "why": "ko欠落"
+    }
+   ],
+   "note": "rasist=ras(人種)+ist(者)。ras/istで分割が正。zh/ko補充",
+   "agreed": true
+  },
+  {
+   "id": 134,
+   "t": "GAP",
+   "key": "romi",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "罗马",
+     "why": "romi訳欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "로마",
+     "why": "訳欠落"
+    }
+   ],
+   "note": "romi=ローマ。zh/ko補充",
+   "agreed": true
+  },
+  {
+   "id": 135,
+   "t": "GAP",
+   "key": "rumani",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "[地名]罗马尼亚",
+     "why": "rumani訳欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "[지명]루마니아",
+     "why": "訳欠落"
+    }
+   ],
+   "note": "rumani=ルーマニア。zh/ko補充",
+   "agreed": true
+  },
+  {
+   "id": 136,
+   "t": "GAP",
+   "key": "sovetuni",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "",
+     "correct": "[地名]苏联",
+     "why": "sovetuni訳欠落"
+    },
+    {
+     "lang": "ko",
+     "current": "",
+     "correct": "[지명]소련",
+     "why": "訳欠落"
+    }
+   ],
+   "note": "sovet(ソビエト)+uni(同盟)。zh/ko補充",
+   "agreed": true
+  }
+ ],
+ "GLOSS_誤訳/非並行": [
+  {
+   "id": 141,
+   "t": "GLOSS",
+   "key": "afekci",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "作用",
+     "why": "非並行",
+     "correct": "影響"
+    }
+   ],
+   "note": "afekci=影響(医/心)。jaのみ「作用」で非並行、zh/koの影响/영향に揃える",
+   "agreed": true
+  },
+  {
+   "id": 146,
+   "t": "GLOSS",
+   "key": "akĉent",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "억양",
+     "correct": "사투리(말씨/악센트)",
+     "why": "억양=抑揚。ja訛り/zh口音(訛り)と非並行"
+    }
+   ],
+   "note": "PIV=話者の発音癖=訛り。koの억양は別概念。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 156,
+   "t": "GLOSS",
+   "key": "angin",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "アンギナ",
+     "correct": "咽峡炎(アンギナ)",
+     "why": "音写のみで語義不明、中の咽峡炎と非並行"
+    },
+    {
+     "lang": "ko",
+     "current": "앙기나",
+     "correct": "인두염/협심증(咽峡炎)",
+     "why": "音写のみで語義不明、中と非並行"
+    }
+   ],
+   "note": "ja/koは音写のみ。zhのみ語義。並行不足。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 176,
+   "t": "GLOSS",
+   "key": "balote",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "ヤマガラシ属",
+     "correct": "バロタ属(クロバナハッカ属)",
+     "why": "ヤマガラシ属はBarbarea(アブラナ科)で別科の誤り"
+    },
+    {
+     "lang": "zh",
+     "current": "夏至草属",
+     "correct": "绵参属(欧夏至草/Ballota属)",
+     "why": "夏至草属はLagopsisで別属。Ballotaと不一致"
+    }
+   ],
+   "note": "ko=발로타속(Ballota音訳)が正。ja/zhは別属を当て非並行",
+   "agreed": true
+  },
+  {
+   "id": 185,
+   "t": "GLOSS",
+   "key": "bistr",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "ビスタ色",
+     "correct": "ビスター色(焦げ茶)",
+     "why": "bistre=ビスター。ビスタは誤記。中韓暗褐色と非並行"
+    }
+   ],
+   "note": "bistre=暗褐色顔料。jaビスタは誤記(vista混同)。判定B支持",
+   "agreed": false
+  },
+  {
+   "id": 194,
+   "t": "GLOSS",
+   "key": "bum",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ja",
+     "current": "ブーム",
+     "correct": "帆桁(下桁)／ブーム(帆桁)",
+     "why": "PIVのbumoは帆の下桁・浮遮材。経済的好況の意は別語で非並行"
+    },
+    {
+     "lang": "ko",
+     "current": "붐",
+     "correct": "하활(돛의 아랫활대)/붐",
+     "why": "음역만으로는 경제 호황으로 오독, zh吊杆と非並行"
+    }
+   ],
+   "note": "zh吊杆(spar/jib)が原義。ja/ko音写は好況の意に誤読され非並行。",
+   "agreed": true
+  },
+  {
+   "id": 211,
+   "t": "GLOSS",
+   "key": "didelf",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "袋鼠",
+     "correct": "负鼠",
+     "why": "袋鼠はカンガルー。didelfはオポッサム"
+    }
+   ],
+   "note": "ja/koは正しい(オポッサム)。zhのみ誤訳=カンガルー。",
+   "agreed": true
+  },
+  {
+   "id": 218,
+   "t": "GLOSS",
+   "key": "drag",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "龙",
+     "correct": "疏浚",
+     "why": "drag/i=浚渫。龙(竜)はdrakoとの同綴り誤友"
+    },
+    {
+     "lang": "ko",
+     "current": "용",
+     "correct": "준설하다",
+     "why": "drag/i=浚渫。용(竜)はdrakoとの同綴り誤友"
+    }
+   ],
+   "note": "jaのみ正(浚渫する)。zh/koが竜の偽の友。drag≠drako。",
+   "agreed": true
+  },
+  {
+   "id": 226,
+   "t": "GLOSS",
+   "key": "elafr",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "步甲属",
+     "correct": "圆步甲属(Elaphrus)",
+     "why": "步甲属はCarabus(karabo)。elafr=Elaphrusは別属、非並行"
+    }
+   ],
+   "note": "JA/KOはElaphrus音訳で正。ZHが近縁別属の訳になり不一致",
+   "agreed": true
+  },
+  {
+   "id": 231,
+   "t": "GLOSS",
+   "key": "enu",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "zh",
+     "current": "生厌",
+     "correct": "厌倦(无聊)",
+     "why": "生厌は嫌悪寄り。ja退屈/ko지루(退屈)と並行弱"
+    }
+   ],
+   "note": "enui=退屈/うんざり。zh生厌は嫌悪寄り。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 250,
+   "t": "GLOSS",
+   "key": "foin",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "담비",
+     "correct": "흰목도리담비(석초)",
+     "why": "담비は属一般。ja/zhは石貂(種特定)で非並行"
+    }
+   ],
+   "note": "foino=ムナジロテン/石貂(種)。ko담비は属一般。判定A支持",
+   "agreed": false
+  },
+  {
+   "id": 276,
+   "t": "GLOSS",
+   "key": "hebefreni",
+   "status": "ISSUE",
+   "correct_decomp": "",
+   "problems": [
+    {
+     "lang": "ko",
+     "current": "파과형조현",
+     "correct": "파과형 정신분열(파과병)",
+     "why": "조현が不完全(조현병が正)。語が途切れ"
+    }
+   ],
+   "note": "hebefreni=破瓜病(解体型統合失調)。ko조현は不完全語。判定A支持",
+   "agreed": false
+  }
+ ]
+}

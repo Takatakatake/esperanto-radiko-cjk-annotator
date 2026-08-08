@@ -1,0 +1,3032 @@
+[
+ {
+  "word": "laringito",
+  "decomp": "laring/it/o",
+  "glosses": [
+   [
+    "laring",
+    "喉頭"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】急性喉頭炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "altruismo",
+  "decomp": "altru/ism/o",
+  "glosses": [
+   [
+    "altru",
+    "利他"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【哲】利他主義,=malegoismo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "barometro",
+  "decomp": "bar/o/metr/o",
+  "glosses": [
+   [
+    "bar",
+    "圧"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【気】アネロイド気圧計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "antipodo",
+  "decomp": "anti/pod/o",
+  "glosses": [
+   [
+    "anti",
+    "対蹠"
+   ],
+   [
+    "pod",
+    "地"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【地理】対蹠地（たいせきち）",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "antiprotono",
+  "decomp": "anti/prot/on/o",
+  "glosses": [
+   [
+    "anti",
+    "反"
+   ],
+   [
+    "prot",
+    "陽"
+   ],
+   [
+    "on",
+    "子"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】反陽子",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "apendicito",
+  "decomp": "apendic/it/o",
+  "glosses": [
+   [
+    "apendic",
+    "虫垂"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】虫垂炎,盲腸炎（俗称）",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "arteriosklerozo",
+  "decomp": "arteri/o/skler/oz/o",
+  "glosses": [
+   [
+    "arteri",
+    "動脈"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "skler",
+    "硬化"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】動脈硬化症",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "artrito",
+  "decomp": "artr/it/o",
+  "glosses": [
+   [
+    "artr",
+    "関節"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【病】関節炎,=artikinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "bakteriologio",
+  "decomp": "bakteri/o/logi/o",
+  "glosses": [
+   [
+    "bakteri",
+    "細菌"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】細菌学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "cekumito",
+  "decomp": "cekum/it/o",
+  "glosses": [
+   [
+    "cekum",
+    "盲腸"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】盲腸炎,=cekuminflamo,>>apendicito",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "meningito",
+  "decomp": "mening/it/o",
+  "glosses": [
+   [
+    "mening",
+    "髄膜"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】脳脊髄膜炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "dermatito",
+  "decomp": "dermat/it/o",
+  "glosses": [
+   [
+    "dermat",
+    "皮膚"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】皮膚炎,=hau^tinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "dermito",
+  "decomp": "derm/it/o",
+  "glosses": [
+   [
+    "derm",
+    "皮膚"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】皮膚炎,=hau^tinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "dialektologio",
+  "decomp": "dialekt/o/logi/o",
+  "glosses": [
+   [
+    "dialekt",
+    "方言"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "方言学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "dialektologo",
+  "decomp": "dialekt/o/log/o",
+  "glosses": [
+   [
+    "dialekt",
+    "方言"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "方言学者",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "dinamometro",
+  "decomp": "dinam/o/metr/o",
+  "glosses": [
+   [
+    "dinam",
+    "動力"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【機】動力計;《般》力量計,筋力計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "elektrolizi",
+  "decomp": "elektr/o/liz/i",
+  "glosses": [
+   [
+    "elektr",
+    "電気"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "liz",
+    "分解"
+   ],
+   [
+    "i",
+    "i"
+   ]
+  ],
+  "def": "［他］【電】電気分解する,電解する",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "elektrolizo",
+  "decomp": "elektr/o/liz/o",
+  "glosses": [
+   [
+    "elektr",
+    "電気"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "liz",
+    "分解"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【電】電気分解,電解",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "encefalito",
+  "decomp": "encefal/it/o",
+  "glosses": [
+   [
+    "encefal",
+    "脳"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】脳炎,=cerbinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "enterito",
+  "decomp": "enter/it/o",
+  "glosses": [
+   [
+    "enter",
+    "腸"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】腸炎,=intesta inflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "entomologio",
+  "decomp": "entom/o/logi/o",
+  "glosses": [
+   [
+    "entom",
+    "昆虫"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}昆虫学",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "entomologo",
+  "decomp": "entom/o/log/o",
+  "glosses": [
+   [
+    "entom",
+    "昆虫"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}昆虫学者",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ependimito",
+  "decomp": "ependim/it/o",
+  "glosses": [
+   [
+    "ependim",
+    "上衣"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】（脳室）上衣炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etimologio",
+  "decomp": "etim/o/logi/o",
+  "glosses": [
+   [
+    "etim",
+    "語源"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}語源学;語源",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etimologo",
+  "decomp": "etim/o/log/o",
+  "glosses": [
+   [
+    "etim",
+    "語源"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}語源学者",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etiologio",
+  "decomp": "eti/o/logi/o",
+  "glosses": [
+   [
+    "eti",
+    "病因"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}病因学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etiologo",
+  "decomp": "eti/o/log/o",
+  "glosses": [
+   [
+    "eti",
+    "病因"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}病因学者",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etnologio",
+  "decomp": "etn/o/logi/o",
+  "glosses": [
+   [
+    "etn",
+    "民族"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}民族学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "etnologo",
+  "decomp": "etn/o/log/o",
+  "glosses": [
+   [
+    "etn",
+    "民族"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "民族学者",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ezofagito",
+  "decomp": "ezofag/it/o",
+  "glosses": [
+   [
+    "ezofag",
+    "食道"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】食道炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "fagocito",
+  "decomp": "fag/o/cit/o",
+  "glosses": [
+   [
+    "fag",
+    "食"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "cit",
+    "細胞"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【生】食細胞",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "faringito",
+  "decomp": "faring/it/o",
+  "glosses": [
+   [
+    "faring",
+    "咽頭"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】咽頭炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "farmakologio",
+  "decomp": "farmak/o/logi/o",
+  "glosses": [
+   [
+    "farmak",
+    "薬理"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "薬理学",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "farmakologo",
+  "decomp": "farmak/o/log/o",
+  "glosses": [
+   [
+    "farmak",
+    "薬理"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "薬理学者",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "fenomenologio",
+  "decomp": "fenomen/o/logi/o",
+  "glosses": [
+   [
+    "fenomen",
+    "現象"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【哲】現象学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "fosfata",
+  "decomp": "fosf/at/a",
+  "glosses": [
+   [
+    "fosf",
+    "リン"
+   ],
+   [
+    "at",
+    "酸"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "【化】リン酸",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "fosfato",
+  "decomp": "fosf/at/o",
+  "glosses": [
+   [
+    "fosf",
+    "リン"
+   ],
+   [
+    "at",
+    "酸塩"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【化】リン酸塩",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "gastrotomio",
+  "decomp": "gastr/o/tomi/o",
+  "glosses": [
+   [
+    "gastr",
+    "胃"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "tomi",
+    "切開"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】胃切開術",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "gingivito",
+  "decomp": "gingiv/it/o",
+  "glosses": [
+   [
+    "gingiv",
+    "歯肉"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】歯肉炎,=gingivinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "heksaedro",
+  "decomp": "heksa/edr/o",
+  "glosses": [
+   [
+    "heksa",
+    "六"
+   ],
+   [
+    "edr",
+    "面体"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【数】六面体,=sesedro",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "hemisfera",
+  "decomp": "hemi/sfer/a",
+  "glosses": [
+   [
+    "hemi",
+    "半"
+   ],
+   [
+    "sfer",
+    "球"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "半球の,=duonsfera,=duongloba",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "hemisfero",
+  "decomp": "hemi/sfer/o",
+  "glosses": [
+   [
+    "hemi",
+    "半"
+   ],
+   [
+    "sfer",
+    "球"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【天】半球,=duonsfero;【地理】【解】半球,=duonglobo",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "heterogena",
+  "decomp": "hetero/gen/a",
+  "glosses": [
+   [
+    "hetero",
+    "異"
+   ],
+   [
+    "gen",
+    "質"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "【学】異質の,不均質の;混成の,><homogena",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "hidrocefala",
+  "decomp": "hidr/o/cefal/a",
+  "glosses": [
+   [
+    "hidr",
+    "水"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "cefal",
+    "頭"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "水頭症の",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "hidrocefalo",
+  "decomp": "hidr/o/cefal/o",
+  "glosses": [
+   [
+    "hidr",
+    "水"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "cefal",
+    "頭"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】水頭症,脳水腫（しゅ）",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "hidroterapio",
+  "decomp": "hidr/o/terapi/o",
+  "glosses": [
+   [
+    "hidr",
+    "水"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "terapi",
+    "治療"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【医】水治療法",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "ideologio",
+  "decomp": "ide/o/logi/o",
+  "glosses": [
+   [
+    "ide",
+    "観念"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}イデオロギー,観念形態;【哲】観念学;《転》空理空論",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ideologo",
+  "decomp": "ide/o/log/o",
+  "glosses": [
+   [
+    "ide",
+    "観念"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "理論家,イデオローグ;【哲】観念学派の人;《転》空論家",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "impresionismo",
+  "decomp": "impresion/ism/o",
+  "glosses": [
+   [
+    "impresion",
+    "印象"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【芸】印象主義,印象派",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "interferometro",
+  "decomp": "interfer/o/metr/o",
+  "glosses": [
+   [
+    "interfer",
+    "干渉"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】干渉計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "izodinamo",
+  "decomp": "izo/dinam/o",
+  "glosses": [
+   [
+    "izo",
+    "等"
+   ],
+   [
+    "dinam",
+    "力"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】等力線",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "izokrona",
+  "decomp": "izo/kron/a",
+  "glosses": [
+   [
+    "izo",
+    "等"
+   ],
+   [
+    "kron",
+    "時"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "【理】等時性の",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "kojlito",
+  "decomp": "kojl/it/o",
+  "glosses": [
+   [
+    "kojl",
+    "結腸"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】結腸炎,大腸炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "kolorometro",
+  "decomp": "kolor/o/metr/o",
+  "glosses": [
+   [
+    "kolor",
+    "色"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】比色計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "konjunktivito",
+  "decomp": "konjunktiv/it/o",
+  "glosses": [
+   [
+    "konjunktiv",
+    "結膜"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】結膜炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "medolito",
+  "decomp": "medol/it/o",
+  "glosses": [
+   [
+    "medol",
+    "髄"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】骨髄炎",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "merkantilismo",
+  "decomp": "merkantil/ism/o",
+  "glosses": [
+   [
+    "merkantil",
+    "重商"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【経】重商主義",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "meteologio",
+  "decomp": "meteo/logi/o",
+  "glosses": [
+   [
+    "meteo",
+    "気象"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "気象学,=meteorologio",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "meteologo",
+  "decomp": "meteo/log/o",
+  "glosses": [
+   [
+    "meteo",
+    "気象"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "気象学者,=meteorologo",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "mineralogio",
+  "decomp": "minera/logi/o",
+  "glosses": [
+   [
+    "minera",
+    "鉱物"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}鉱物学",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "mineralogo",
+  "decomp": "minera/log/o",
+  "glosses": [
+   [
+    "minera",
+    "鉱物"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}鉱物学者",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "mitologio",
+  "decomp": "mit/o/logi/o",
+  "glosses": [
+   [
+    "mit",
+    "神話"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}神話学;神話体系,神話集",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "mitologo",
+  "decomp": "mit/o/log/o",
+  "glosses": [
+   [
+    "mit",
+    "神話"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}神話学者",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "mjelito",
+  "decomp": "mjel/it/o",
+  "glosses": [
+   [
+    "mjel",
+    "脊髄"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】脊髄炎,=mjelinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "nanosekundo",
+  "decomp": "nano/sekund/o",
+  "glosses": [
+   [
+    "nano",
+    "ナノ"
+   ],
+   [
+    "sekund",
+    "秒"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【単】ナノ秒（ns）",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "naturalismo",
+  "decomp": "natural/ism/o",
+  "glosses": [
+   [
+    "natural",
+    "自然"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【芸】【哲】自然主義",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "neŭrastenio",
+  "decomp": "neŭr/asteni/o",
+  "glosses": [
+   [
+    "neŭr",
+    "神経"
+   ],
+   [
+    "asteni",
+    "衰弱"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】神経衰弱",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "neŭrologio",
+  "decomp": "neŭr/o/logi/o",
+  "glosses": [
+   [
+    "neŭr",
+    "神経"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "神経学,神経内科（学）",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "neŭroza",
+  "decomp": "neŭr/oz/a",
+  "glosses": [
+   [
+    "neŭr",
+    "神経"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "ノイローゼの,神経症の",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "neŭrozo",
+  "decomp": "neŭr/oz/o",
+  "glosses": [
+   [
+    "neŭr",
+    "神経"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】ノイローゼ,神経症",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "nihilismo",
+  "decomp": "nihil/ism/o",
+  "glosses": [
+   [
+    "nihil",
+    "虚無"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}ニヒリズム,虚無主義",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "oftalmito",
+  "decomp": "oftalm/it/o",
+  "glosses": [
+   [
+    "oftalm",
+    "眼"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】眼炎,=okulinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "orkidito",
+  "decomp": "orkid/it/o",
+  "glosses": [
+   [
+    "orkid",
+    "精巣"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】精巣炎,睾丸炎,=testikinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ornitologio",
+  "decomp": "ornit/o/logi/o",
+  "glosses": [
+   [
+    "ornit",
+    "鳥"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}鳥学,鳥類学",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ornitologo",
+  "decomp": "ornit/o/log/o",
+  "glosses": [
+   [
+    "ornit",
+    "鳥"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}鳥学者,鳥類学者",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ostologio",
+  "decomp": "ost/o/logi/o",
+  "glosses": [
+   [
+    "ost",
+    "骨"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "骨学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ostracismo",
+  "decomp": "ostrac/ism/o",
+  "glosses": [
+   [
+    "ostrac",
+    "陶片"
+   ],
+   [
+    "ism",
+    "追放"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【史】（古代ギリシアの）陶片追放,オストラシズム",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "pacifismo",
+  "decomp": "pacif/ism/o",
+  "glosses": [
+   [
+    "pacif",
+    "平和"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}平和主義,=pacismo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "pankromata",
+  "decomp": "pan/kromat/a",
+  "glosses": [
+   [
+    "pan",
+    "全"
+   ],
+   [
+    "kromat",
+    "色"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "【写】（乳剤が）全色性の,パンクロの",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "paŭperismo",
+  "decomp": "paŭper/ism/o",
+  "glosses": [
+   [
+    "paŭper",
+    "貧困"
+   ],
+   [
+    "ism",
+    "状態"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "（社会の）貧困状態",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "pedologio",
+  "decomp": "pedo/logi/o",
+  "glosses": [
+   [
+    "pedo",
+    "児童"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "《稀》児童学,育児学",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "pietismo",
+  "decomp": "piet/ism/o",
+  "glosses": [
+   [
+    "piet",
+    "敬虔"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【キ】敬虔主義（17世紀末ドイツのルター派教会からおこった宗教運動）",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "pleŭrito",
+  "decomp": "pleŭr/it/o",
+  "glosses": [
+   [
+    "pleŭr",
+    "胸膜"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】胸膜炎,（旧用語で）肋膜炎（ろくまくえん）",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "polenozo",
+  "decomp": "polen/oz/o",
+  "glosses": [
+   [
+    "polen",
+    "花粉"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】花粉症",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "politologo",
+  "decomp": "polit/o/log/o",
+  "glosses": [
+   [
+    "polit",
+    "政治"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "政治学者,=politiksciencisto",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "prototipo",
+  "decomp": "proto/tip/o",
+  "glosses": [
+   [
+    "proto",
+    "原"
+   ],
+   [
+    "tip",
+    "型"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}原型,基本型,=pratipo;【機】試作品,プロトタイプ",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "psikrometro",
+  "decomp": "psikr/o/metr/o",
+  "glosses": [
+   [
+    "psikr",
+    "乾湿"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】乾湿計",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "refleksologio",
+  "decomp": "refleks/o/logi/o",
+  "glosses": [
+   [
+    "refleks",
+    "反射"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【生】反射学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "refraktometro",
+  "decomp": "refrakt/o/metr/o",
+  "glosses": [
+   [
+    "refrakt",
+    "屈折"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】屈折計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "rojalismo",
+  "decomp": "rojal/ism/o",
+  "glosses": [
+   [
+    "rojal",
+    "王党"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "王政主義,王党主義",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sinkrona",
+  "decomp": "sin/kron/a",
+  "glosses": [
+   [
+    "sin",
+    "共"
+   ],
+   [
+    "kron",
+    "時"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "同時に起きる;【電】同期の,同期した;【語】共時的な",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "sismologio",
+  "decomp": "sism/o/logi/o",
+  "glosses": [
+   [
+    "sism",
+    "地震"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【学】地震学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sklerozo",
+  "decomp": "skler/oz/o",
+  "glosses": [
+   [
+    "skler",
+    "硬化"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】硬化症,>>malmolig^o",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sociologia",
+  "decomp": "soci/o/logi/a",
+  "glosses": [
+   [
+    "soci",
+    "社会"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "社会学の",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sociologio",
+  "decomp": "soci/o/logi/o",
+  "glosses": [
+   [
+    "soci",
+    "社会"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}社会学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sociologo",
+  "decomp": "soci/o/log/o",
+  "glosses": [
+   [
+    "soci",
+    "社会"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}社会学者,=sociologiisto",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "sonmetro",
+  "decomp": "son/metr/o",
+  "glosses": [
+   [
+    "son",
+    "音"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【環】騒音計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "speleologio",
+  "decomp": "spele/o/logi/o",
+  "glosses": [
+   [
+    "spele",
+    "洞穴"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "洞穴学,=kavernoscienco",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "spiritualismo",
+  "decomp": "spiritual/ism/o",
+  "glosses": [
+   [
+    "spiritual",
+    "精神"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}【哲】唯心論;【宗】心霊主義;《般》精神主義",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "stomakito",
+  "decomp": "stomak/it/o",
+  "glosses": [
+   [
+    "stomak",
+    "胃"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】胃炎,=stomakinflamo",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "ŝovinismo",
+  "decomp": "ŝovin/ism/o",
+  "glosses": [
+   [
+    "ŝovin",
+    "排外"
+   ],
+   [
+    "ism",
+    "主義"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}排他的愛国心,排外主義,ショービニスム",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "tartrata",
+  "decomp": "tartr/at/a",
+  "glosses": [
+   [
+    "tartr",
+    "酒石"
+   ],
+   [
+    "at",
+    "酸"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "【化】酒石酸",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "tartrato",
+  "decomp": "tartr/at/o",
+  "glosses": [
+   [
+    "tartr",
+    "酒石"
+   ],
+   [
+    "at",
+    "酸塩"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【化】酒石酸塩",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "taŭtologio",
+  "decomp": "taŭt/o/logi/o",
+  "glosses": [
+   [
+    "taŭt",
+    "同語"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "反復"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【論】同語反復;【修】類語反復",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "telemetrio",
+  "decomp": "tele/metri/o",
+  "glosses": [
+   [
+    "tele",
+    "遠隔"
+   ],
+   [
+    "metri",
+    "測定"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【学】遠隔測定",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "teleologio",
+  "decomp": "teleo/logi/o",
+  "glosses": [
+   [
+    "teleo",
+    "目的"
+   ],
+   [
+    "logi",
+    "論"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【哲】目的論",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "tensiometro",
+  "decomp": "tensi/o/metr/o",
+  "glosses": [
+   [
+    "tensi",
+    "張力"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】張力計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "teologia",
+  "decomp": "te/o/logi/a",
+  "glosses": [
+   [
+    "te",
+    "神"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "a",
+    "a"
+   ]
+  ],
+  "def": "神学の,神学上の",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "teologio",
+  "decomp": "te/o/logi/o",
+  "glosses": [
+   [
+    "te",
+    "神"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}神学",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "teologo",
+  "decomp": "te/o/log/o",
+  "glosses": [
+   [
+    "te",
+    "神"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "log",
+    "学者"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "{Ｏ}神学者,=teologiisto",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "teratologio",
+  "decomp": "terat/o/logi/o",
+  "glosses": [
+   [
+    "terat",
+    "奇形"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【生】奇形学",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "termodinamiko",
+  "decomp": "term/o/dinamik/o",
+  "glosses": [
+   [
+    "term",
+    "熱"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "dinamik",
+    "力学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】熱力学",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "termoelektro",
+  "decomp": "term/o/elektr/o",
+  "glosses": [
+   [
+    "term",
+    "熱"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "elektr",
+    "電気"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】熱電気",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "termologio",
+  "decomp": "term/o/logi/o",
+  "glosses": [
+   [
+    "term",
+    "熱"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "logi",
+    "学"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】熱学",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "termostatiko",
+  "decomp": "term/o/statik/o",
+  "glosses": [
+   [
+    "term",
+    "熱"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "statik",
+    "静力"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】熱静力学",
+  "marks": [
+   "##偽分解",
+   "##過細分解"
+  ]
+ },
+ {
+  "word": "tonsilito",
+  "decomp": "tonsil/it/o",
+  "glosses": [
+   [
+    "tonsil",
+    "扁桃"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】扁桃炎（へんとうえん）",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "traĥeito",
+  "decomp": "traĥe/it/o",
+  "glosses": [
+   [
+    "traĥe",
+    "気管"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】気管炎,=trakeito",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "traĥeotomio",
+  "decomp": "traĥe/o/tomi/o",
+  "glosses": [
+   [
+    "traĥe",
+    "気管"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "tomi",
+    "切開"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】気管切開,=trakeotomio",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "trakeito",
+  "decomp": "trake/it/o",
+  "glosses": [
+   [
+    "trake",
+    "気管"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】気管炎,=trah^eito",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "trakeotomio",
+  "decomp": "trake/o/tomi/o",
+  "glosses": [
+   [
+    "trake",
+    "気管"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "tomi",
+    "切開"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【医】気管切開,=trah^eotomio",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "trombozo",
+  "decomp": "tromb/oz/o",
+  "glosses": [
+   [
+    "tromb",
+    "血栓"
+   ],
+   [
+    "oz",
+    "症"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】血栓症",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "vaginito",
+  "decomp": "vagin/it/o",
+  "glosses": [
+   [
+    "vagin",
+    "膣"
+   ],
+   [
+    "it",
+    "炎"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【病】膣炎（ちつえん）",
+  "marks": [
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "vakumetro",
+  "decomp": "vaku/metr/o",
+  "glosses": [
+   [
+    "vaku",
+    "真空"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】真空計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ },
+ {
+  "word": "vibrometro",
+  "decomp": "vibr/o/metr/o",
+  "glosses": [
+   [
+    "vibr",
+    "振動"
+   ],
+   [
+    "o",
+    "o"
+   ],
+   [
+    "metr",
+    "計"
+   ],
+   [
+    "o",
+    "o"
+   ]
+  ],
+  "def": "【理】振動計",
+  "marks": [
+   "##偽分解(PIV正式分解)",
+   "##偽分解"
+  ]
+ }
+]

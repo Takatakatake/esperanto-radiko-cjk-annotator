@@ -1,0 +1,29 @@
+# Keep only hash-pinned audit inputs and generated app artifacts byte-stable.
+/_analysis_20260625/_*.json text eol=lf
+/_analysis_20260625/localized_atomic_root_families.json text eol=lf
+/_analysis_20260625/localized_global_exact_reviewed.json text eol=lf
+/_analysis_20260625/no_worsening_guards.json text eol=lf
+/_analysis_20260625/no_worsening_audit.py text eol=lf
+/_analysis_20260625/check_canonical_corpus_surfaces.py text eol=lf
+/_analysis_20260625/out/_audit_no_worsening.json text eol=lf
+/_analysis_20260625/out/_audit_canonical_corpus_surfaces.json text eol=lf
+/_analysis_20260625/out/confirmed_tier30.json text eol=lf
+/_analysis_20260625/out/word_anno_*.json text eol=lf
+/_analysis_20260625/out/word_kanji.json text eol=lf
+/_analysis_20260625/out/kanji_root.csv text eol=lf
+
+/Esperanto-Kanji-Ruby-*/main.py text eol=lf
+/Esperanto-Kanji-Ruby-*/esp_generation_module.py text eol=lf
+/Esperanto-Kanji-Ruby-*/esp_overlay_module.py text eol=lf
+/Esperanto-Kanji-Ruby-*/esp_replacement_json_make_module.py text eol=lf
+/Esperanto-Kanji-Ruby-*/esp_text_replacement_module.py text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/word_anno.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/分解設定.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/置換リスト_ルビ.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/置換リスト_漢字.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/置換リスト_漢字_純粋置換.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/placeholders_skip.txt text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/placeholders_localcapture.txt text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/char_widths.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/user_corrections.json text eol=lf
+/Esperanto-Kanji-Ruby-*/app_data/*.csv text eol=lf

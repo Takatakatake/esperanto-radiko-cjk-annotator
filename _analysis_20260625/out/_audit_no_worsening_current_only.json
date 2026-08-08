@@ -1,0 +1,6003 @@
+{
+ "scope": {
+  "corpus": {
+   "files": 169,
+   "raw_ruby": 348971,
+   "parsed_ruby": 348971,
+   "parsed_units": 271065,
+   "eligible_units": 271065,
+   "word_alphabet_units": 269879,
+   "extended_reference_units": 1186,
+   "extended_reference_unique_rows": 677,
+   "extended_reference_unique_surfaces": 426,
+   "extended_reference_reasons": {
+    "contains_space": 833,
+    "outside_app_word_alphabet": 353
+   },
+   "extended_reference_sha256": "55611F15B3D66A285609CB98C236695905EF668673E452067AAFF6895646981B",
+   "extended_reference_manifest": [
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Biblioteko Vatikana",
+     "typed": "R:Biblioteko Vatikana",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Chapecó",
+     "typed": "R:Chapecó",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Johán Valano",
+     "typed": "R:Johán Valano",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "La Chaŭ-de-Fonds",
+     "typed": "R:La Chaŭ-de-Fonds",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "M.O.S.",
+     "typed": "R:M.O.S.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Prof.",
+     "typed": "R:Prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "San-Franciska Ŝtata Universitato",
+     "typed": "R:San-Franciska Ŝtata Universitato",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Vatikana Biblioteko",
+     "typed": "R:Vatikana Biblioteko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+     "surface": "Ĝeneva Universitato",
+     "typed": "R:Ĝeneva Universitato",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_00.html",
+     "surface": "Chapecó",
+     "typed": "R:Chapecó",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_00.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_00.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_16.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html",
+     "surface": "Biblioteko Vatikana",
+     "typed": "R:Biblioteko Vatikana",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html",
+     "surface": "Prof.",
+     "typed": "R:Prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html",
+     "surface": "Vatikana Biblioteko",
+     "typed": "R:Vatikana Biblioteko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_25.html",
+     "surface": "Prof.",
+     "typed": "R:Prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "Johán Valano",
+     "typed": "R:Johán Valano",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "La Chaŭ-de-Fonds",
+     "typed": "R:La Chaŭ-de-Fonds",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "M.O.S.",
+     "typed": "R:M.O.S.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "San-Franciska Ŝtata Universitato",
+     "typed": "R:San-Franciska Ŝtata Universitato",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+     "surface": "Ĝeneva Universitato",
+     "typed": "R:Ĝeneva Universitato",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "IŜIUĈI Joŝiki",
+     "typed": "R:IŜIUĈI Joŝiki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "Nakao Sasuke",
+     "typed": "R:Nakao Sasuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "Probal DASGUPTA",
+     "typed": "R:Probal DASGUPTA",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "UMESAO Tadao",
+     "typed": "R:UMESAO Tadao",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "YONEYAMA Toshinao",
+     "typed": "R:YONEYAMA Toshinao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "jan.",
+     "typed": "R:jan.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+     "surface": "Ōtō",
+     "typed": "R:Ōtō",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html",
+     "surface": "Usui Hiroyuki",
+     "typed": "R:Usui Hiroyuki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Adam Mickiewicz-universitato",
+     "typed": "R:Adam Mickiewicz|L:-|R:universitat|L:o",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Albrecht Hohenzollern",
+     "typed": "R:Albrecht Hohenzollern",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Alumno Bene Merento",
+     "typed": "R:Alumno Bene Merento",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Andreas Mikulitsch",
+     "typed": "R:Andreas Mikulitsch",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Bolesław",
+     "typed": "R:Bolesław",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Brześnica",
+     "typed": "R:Brześnica",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Chełm",
+     "typed": "R:Chełm",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Chełmno",
+     "typed": "R:Chełmno",
+     "reason": "outside_app_word_alphabet",
+     "count": 14
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Chełmno-privilegio",
+     "typed": "R:Chełmno|L:-|R:privilegi|L:o",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Chełmno-regionon",
+     "typed": "R:Chełmno|L:-|R:region|L:on",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Châtre",
+     "typed": "R:Châtre",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Collegium Historicum",
+     "typed": "R:Collegium Historicum",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Elbląg",
+     "typed": "R:Elbląg",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Emilia Freiin von Damnitz",
+     "typed": "R:Emilia Freiin von Damnitz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Ferdinand Sauerbruch",
+     "typed": "R:Ferdinand Sauerbruch",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Françoise",
+     "typed": "R:Françoise",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Freiburg in Schlesien",
+     "typed": "R:Freiburg in Schlesien",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Grody Czerwieńskie",
+     "typed": "R:Grody Czerwieńskie",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Góry Stołowe",
+     "typed": "R:Góry Stołowe",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Görlitz",
+     "typed": "R:Görlitz",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Henri Albert",
+     "typed": "R:Henri Albert",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Henrietta Pacher",
+     "typed": "R:Henrietta Pacher",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Hermann von Salza",
+     "typed": "R:Hermann von Salza",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "I.a.",
+     "typed": "R:I.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Ignacy Jan Paderewski",
+     "typed": "R:Ignacy Jan Paderewski",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Jan Antoni Mikulicz-Radecki",
+     "typed": "R:Jan Antoni Mikulicz-Radecki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Jan Mikulicz",
+     "typed": "R:Jan Mikulicz",
+     "reason": "contains_space",
+     "count": 7
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Jan Mikulicz Radecki",
+     "typed": "R:Jan Mikulicz Radecki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Jarosław",
+     "typed": "R:Jarosław",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Jelenia Góra",
+     "typed": "R:Jelenia Góra",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Johann Freiherr von Mikulicz-Radecki",
+     "typed": "R:Johann Freiherr von Mikulicz-Radecki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Kasper Schwenckfeld",
+     "typed": "R:Kasper Schwenckfeld",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Kołobrzeg",
+     "typed": "R:Kołobrzeg",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Kraków",
+     "typed": "R:Kraków",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Krystyna Grochocka",
+     "typed": "R:Krystyna Grochocka",
+     "reason": "contains_space",
+     "count": 12
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Królewiec",
+     "typed": "R:Królewiec",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Königsberg",
+     "typed": "R:Königsberg",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Kłodzka",
+     "typed": "R:Kłodzka",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Kłodzko",
+     "typed": "R:Kłodzko",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "La Grange",
+     "typed": "R:La Grange",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Leonard Thurneyssen",
+     "typed": "R:Leonard Thurneyssen",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Lądek-Zdrój",
+     "typed": "R:Lądek-Zdrój",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Marta Żbikowska-Cieśla",
+     "typed": "R:Marta Żbikowska-Cieśla",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Marysieńka",
+     "typed": "R:Marysieńka",
+     "reason": "outside_app_word_alphabet",
+     "count": 15
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Marysieńska",
+     "typed": "R:Marysieńska",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Międzygórze",
+     "typed": "R:Międzygórze",
+     "reason": "outside_app_word_alphabet",
+     "count": 17
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Nowy Świat-strato",
+     "typed": "R:Nowy Świat|L:-|R:strat|L:o",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Père-Lachaise",
+     "typed": "R:Père-Lachaise",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Racława",
+     "typed": "R:Racława",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Radziwiłł",
+     "typed": "R:Radziwiłł",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Różycki",
+     "typed": "R:Różycki",
+     "reason": "outside_app_word_alphabet",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Stanisław",
+     "typed": "R:Stanisław",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Staniątki",
+     "typed": "R:Staniątki",
+     "reason": "outside_app_word_alphabet",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Stirpium et fossilium silesiae catalogus",
+     "typed": "R:Stirpium et fossilium silesiae catalogus",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Szklarska Poręba",
+     "typed": "R:Szklarska Poręba",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Tadeusz Dobosz",
+     "typed": "R:Tadeusz Dobosz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "The Conversation",
+     "typed": "R:The Conversation",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Theodor Billroth",
+     "typed": "R:Theodor Billroth",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Uniwersytet Przyrodniczy",
+     "typed": "R:Uniwersytet Przyrodniczy",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Virtuti Militario",
+     "typed": "R:Virtuti Militari|L:o",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Wilanów",
+     "typed": "R:Wilanów",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Wilanów-kvartalo",
+     "typed": "R:Wilanów|L:-|R:kvartal|L:o",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Wołyń",
+     "typed": "R:Wołyń",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Wrocław",
+     "typed": "R:Wrocław",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 13
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Łazienki-parko",
+     "typed": "R:Łazienki|L:-|R:park|L:o",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Śnieżnik",
+     "typed": "R:Śnieżnik",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Świebodzice",
+     "typed": "R:Świebodzice",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Świeradów",
+     "typed": "R:Świeradów",
+     "reason": "outside_app_word_alphabet",
+     "count": 6
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Świeradów-Zdrój",
+     "typed": "R:Świeradów-Zdrój",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+     "surface": "Świętopełek",
+     "typed": "R:Świętopełek",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+     "surface": "François",
+     "typed": "R:François",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+     "surface": "jan Itan",
+     "typed": "R:jan Itan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+     "surface": "jan Minasa",
+     "typed": "R:jan Minasa",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+     "surface": "jan Osame",
+     "typed": "R:jan Osame",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+     "surface": "jan Peton",
+     "typed": "R:jan Peton",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Hidemaru",
+     "typed": "R:DEGUĈI Hidemaru",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Kijoko",
+     "typed": "R:DEGUĈI Kijoko",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Kurenai",
+     "typed": "R:DEGUĈI Kurenai",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Nao",
+     "typed": "R:DEGUĈI Nao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Naohi",
+     "typed": "R:DEGUĈI Naohi",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "DEGUĈI Onisaburo",
+     "typed": "R:DEGUĈI Onisaburo",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "Kokoro no ĉjou",
+     "typed": "R:Kokoro no ĉjou",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "L. C. Zaleski-Zamenhof",
+     "typed": "R:L. C. Zaleski-Zamenhof",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "Simo Milojeviĉ",
+     "typed": "R:Simo Milojeviĉ",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "k.a.",
+     "typed": "R:k.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "-Osaka Kenji",
+     "typed": "L:-|R:Osaka Kenji",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Chen Shengshu",
+     "typed": "R:Chen Shengshu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Chen Zhaoying",
+     "typed": "R:Chen Zhaoying",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Guo Houjue",
+     "typed": "R:Guo Houjue",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "OSAKA Kenji",
+     "typed": "R:OSAKA Kenji",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Osaka Kenji",
+     "typed": "R:Osaka Kenji",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Osaka Kenzi",
+     "typed": "R:Osaka Kenzi",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Qin Diqing",
+     "typed": "R:Qin Diqing",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Sakalĉô",
+     "typed": "R:Sakalĉô",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Sun-ku san",
+     "typed": "R:Sun-ku san",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Yu Daoquan",
+     "typed": "R:Yu Daoquan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "del.de",
+     "typed": "R:del.de",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/osakakenji.html",
+     "surface": "Ĝ.Sekretario",
+     "typed": "R:Ĝ.|R:Sekretari|L:o",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/historio-kaj-biografioj/renard_corsetti.html",
+     "surface": "Anna Löwenstein",
+     "typed": "R:Anna Löwenstein",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "IŜIUĈI Joŝiki",
+     "typed": "R:IŜIUĈI Joŝiki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "Löwenstein",
+     "typed": "R:Löwenstein",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "Nakao Sasuke",
+     "typed": "R:Nakao Sasuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "YONEYAMA Toshinao",
+     "typed": "R:YONEYAMA Toshinao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "Ōto",
+     "typed": "R:Ōto",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+     "surface": "Ōtō",
+     "typed": "R:Ōtō",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "'F-ino Gudula'",
+     "typed": "L:'|R:F-ino Gudula|L:'",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Aleksandr Ŝtejnman",
+     "typed": "R:Aleksandr Ŝtejnman",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Britaj Insuloj",
+     "typed": "R:Britaj Insuloj",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Ching Liben",
+     "typed": "R:Ching Liben",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "David Ŝahar",
+     "typed": "R:David Ŝahar",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "F-ino Gudula",
+     "typed": "R:F-ino Gudula",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Franca Esperantisto",
+     "typed": "R:Franca Esperantisto",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Gao Tzong",
+     "typed": "R:Gao Tzong",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Gaskiya Corporation",
+     "typed": "R:Gaskiya Corporation",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Gerda Malaperis",
+     "typed": "R:Gerda Malaperis",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Goh Kah-bin",
+     "typed": "R:Goh Kah-bin",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Hausa Literature and the Hausa Sound System",
+     "typed": "R:Hausa Literature and the Hausa Sound System",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "INSTRUISTO DUNGGUO",
+     "typed": "R:INSTRUISTO DUNGGUO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Instruisto Dungguo",
+     "typed": "R:Instruisto Dungguo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Jean Biétrumé Picard",
+     "typed": "R:Jean Biétrumé Picard",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Jen Guosjang",
+     "typed": "R:Jen Guosjang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "José",
+     "typed": "R:José",
+     "reason": "outside_app_word_alphabet",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Juĝisto Liang",
+     "typed": "R:Juĝisto Liang",
+     "reason": "contains_space",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Ka Karatu",
+     "typed": "R:Ka Karatu",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Komuneca Spirito",
+     "typed": "R:Komuneca Spirito",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "La Chaŭ-de-Fonds",
+     "typed": "R:La Chaŭ-de-Fonds",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "La vana kanto",
+     "typed": "R:La vana kanto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "La Ŝodfon'",
+     "typed": "R:La Ŝodfon'",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Lucien Thevenin",
+     "typed": "R:Lucien Thevenin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Mahmud Idris",
+     "typed": "R:Mahmud Idris",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Mastro Pikar",
+     "typed": "R:Mastro Pikar",
+     "reason": "contains_space",
+     "count": 20
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Mastro Pikarn",
+     "typed": "R:Mastro Pikar|L:n",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "S-ro Dungguo",
+     "typed": "R:S-ro Dungguo",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Sovetskij Uzbekistan",
+     "typed": "R:Sovetskij Uzbekistan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Tan Fu",
+     "typed": "R:Tan Fu",
+     "reason": "contains_space",
+     "count": 7
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "The Straits Times",
+     "typed": "R:The Straits Times",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Tusiama Mabinda",
+     "typed": "R:Tusiama Mabinda",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Tutmonda San-Organizo",
+     "typed": "R:Tutmonda San-Organizo",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "University of London Press",
+     "typed": "R:University of London Press",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Vere aŭ Fantazie",
+     "typed": "R:Vere aŭ Fantazie",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Victor Petitjean",
+     "typed": "R:Victor Petitjean",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Xin Shijie",
+     "typed": "R:Xin Shijie",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Zagreba Metodo",
+     "typed": "R:Zagreba Metodo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "Zhong Qin Meiri Hanyu",
+     "typed": "R:Zhong Qin Meiri Hanyu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "f-ino Gudula",
+     "typed": "R:f-ino Gudula",
+     "reason": "contains_space",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "fraŭlino Gudula",
+     "typed": "R:fraŭlino Gudula",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "instruisto Dungguo",
+     "typed": "R:instruisto Dungguo",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "s-ino Delfonto",
+     "typed": "R:s-ino Delfonto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "s-ro Dungguo",
+     "typed": "R:s-ro Dungguo",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "s-ro Gao Ŝoufang",
+     "typed": "R:s-ro Gao Ŝoufang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "s-ro Jen",
+     "typed": "R:s-ro Jen",
+     "reason": "contains_space",
+     "count": 12
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "s-ro Jen Guos-jang",
+     "typed": "R:s-ro Jen Guos-jang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "sinjoro Jen",
+     "typed": "R:sinjoro Jen",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+     "surface": "Franca Esperantisto",
+     "typed": "R:Franca Esperantisto",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+     "surface": "Gerda Malaperis",
+     "typed": "R:Gerda Malaperis",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+     "surface": "Vere aŭ Fantazie",
+     "typed": "R:Vere aŭ Fantazie",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+     "surface": "Zagreba Metodo",
+     "typed": "R:Zagreba Metodo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_02.html",
+     "surface": "Tutmonda San-Organizo",
+     "typed": "R:Tutmonda San-Organizo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_03.html",
+     "surface": "Tan Fu",
+     "typed": "R:Tan Fu",
+     "reason": "contains_space",
+     "count": 7
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_08.html",
+     "surface": "s-ino Delfonto",
+     "typed": "R:s-ino Delfonto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+     "surface": "INSTRUISTO DUNGGUO",
+     "typed": "R:INSTRUISTO DUNGGUO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+     "surface": "Instruisto Dungguo",
+     "typed": "R:Instruisto Dungguo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+     "surface": "S-ro Dungguo",
+     "typed": "R:S-ro Dungguo",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+     "surface": "instruisto Dungguo",
+     "typed": "R:instruisto Dungguo",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+     "surface": "s-ro Dungguo",
+     "typed": "R:s-ro Dungguo",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_20.html",
+     "surface": "Komuneca Spirito",
+     "typed": "R:Komuneca Spirito",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_23.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_24.html",
+     "surface": "José",
+     "typed": "R:José",
+     "reason": "outside_app_word_alphabet",
+     "count": 5
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+     "surface": "David Ŝahar",
+     "typed": "R:David Ŝahar",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+     "surface": "La Chaŭ-de-Fonds",
+     "typed": "R:La Chaŭ-de-Fonds",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+     "surface": "La Ŝodfon'",
+     "typed": "R:La Ŝodfon'",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_31.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_32.html",
+     "surface": "La vana kanto",
+     "typed": "R:La vana kanto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_32.html",
+     "surface": "Lucien Thevenin",
+     "typed": "R:Lucien Thevenin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "Gao Tzong",
+     "typed": "R:Gao Tzong",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "Jen Guosjang",
+     "typed": "R:Jen Guosjang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "Juĝisto Liang",
+     "typed": "R:Juĝisto Liang",
+     "reason": "contains_space",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "s-ro Gao Ŝoufang",
+     "typed": "R:s-ro Gao Ŝoufang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "s-ro Jen",
+     "typed": "R:s-ro Jen",
+     "reason": "contains_space",
+     "count": 12
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "s-ro Jen Guos-jang",
+     "typed": "R:s-ro Jen Guos-jang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+     "surface": "sinjoro Jen",
+     "typed": "R:sinjoro Jen",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_34.html",
+     "surface": "Britaj Insuloj",
+     "typed": "R:Britaj Insuloj",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_34.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_35.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_39.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "'F-ino Gudula'",
+     "typed": "L:'|R:F-ino Gudula|L:'",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "F-ino Gudula",
+     "typed": "R:F-ino Gudula",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "Mastro Pikar",
+     "typed": "R:Mastro Pikar",
+     "reason": "contains_space",
+     "count": 20
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "Mastro Pikarn",
+     "typed": "R:Mastro Pikar|L:n",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "f-ino Gudula",
+     "typed": "R:f-ino Gudula",
+     "reason": "contains_space",
+     "count": 8
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+     "surface": "fraŭlino Gudula",
+     "typed": "R:fraŭlino Gudula",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_44.html",
+     "surface": "Claude Piron",
+     "typed": "R:Claude Piron",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_44.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Aleksandr Ŝtejnman",
+     "typed": "R:Aleksandr Ŝtejnman",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Ching Liben",
+     "typed": "R:Ching Liben",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "F-ino Gudula",
+     "typed": "R:F-ino Gudula",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Gaskiya Corporation",
+     "typed": "R:Gaskiya Corporation",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Goh Kah-bin",
+     "typed": "R:Goh Kah-bin",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Hausa Literature and the Hausa Sound System",
+     "typed": "R:Hausa Literature and the Hausa Sound System",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Jean Biétrumé Picard",
+     "typed": "R:Jean Biétrumé Picard",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Ka Karatu",
+     "typed": "R:Ka Karatu",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Komuneca Spirito",
+     "typed": "R:Komuneca Spirito",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Mahmud Idris",
+     "typed": "R:Mahmud Idris",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Sovetskij Uzbekistan",
+     "typed": "R:Sovetskij Uzbekistan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "The Straits Times",
+     "typed": "R:The Straits Times",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Tusiama Mabinda",
+     "typed": "R:Tusiama Mabinda",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Tutmonda San-Organizo",
+     "typed": "R:Tutmonda San-Organizo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "University of London Press",
+     "typed": "R:University of London Press",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Victor Petitjean",
+     "typed": "R:Victor Petitjean",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Xin Shijie",
+     "typed": "R:Xin Shijie",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+     "surface": "Zhong Qin Meiri Hanyu",
+     "typed": "R:Zhong Qin Meiri Hanyu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Alfred Michaŭ",
+     "typed": "R:Alfred Michaŭ",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Alfred Pitois",
+     "typed": "R:Alfred Pitois",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Alphonse Mistler",
+     "typed": "R:Alphonse Mistler",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Andreo Cseh",
+     "typed": "R:Andreo Cseh",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "D-ro Karl Beckmann",
+     "typed": "R:D-ro Karl Beckmann",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Edmond Privat",
+     "typed": "R:Edmond Privat",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Edwin Hubble",
+     "typed": "R:Edwin Hubble",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Erich Scheurmann",
+     "typed": "R:Erich Scheurmann",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Erošenko",
+     "typed": "R:Erošenko",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "F.Faulhaber",
+     "typed": "R:F.Faulhaber",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Gabrijel Divjanović",
+     "typed": "R:Gabrijel Divjanović",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Jui Ĉuunoŝin",
+     "typed": "R:Jui Ĉuunoŝin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Julio Baghy",
+     "typed": "R:Julio Baghy",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "L'Espérantiste",
+     "typed": "R:L'Espérantiste",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "L. de Beaufront",
+     "typed": "R:L. de Beaufront",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "L.Leau",
+     "typed": "R:L.Leau",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Lemaître",
+     "typed": "R:Lemaître",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Leo Tolstoj",
+     "typed": "R:Leo Tolstoj",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Leopold Einstein",
+     "typed": "R:Leopold Einstein",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Louis de Beaufront",
+     "typed": "R:Louis de Beaufront",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Martin Schleyer",
+     "typed": "R:Martin Schleyer",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "PS2.0",
+     "typed": "R:PS2.0",
+     "reason": "outside_app_word_alphabet",
+     "count": 4
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Paul Couderc",
+     "typed": "R:Paul Couderc",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Tibor Sekelj",
+     "typed": "R:Tibor Sekelj",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "Volapük",
+     "typed": "R:Volapük",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "YONEYAMA Sankiĉi",
+     "typed": "R:YONEYAMA Sankiĉi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "ekz.",
+     "typed": "R:ekz.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 8
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 14
+    },
+    {
+     "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki1.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "surface": "D-ro Karl Beckmann",
+     "typed": "R:D-ro Karl Beckmann",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "surface": "Leo Tolstoj",
+     "typed": "R:Leo Tolstoj",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "surface": "Leopold Einstein",
+     "typed": "R:Leopold Einstein",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "surface": "Martin Schleyer",
+     "typed": "R:Martin Schleyer",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki10.html",
+     "surface": "Volapük",
+     "typed": "R:Volapük",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki11.html",
+     "surface": "Alfred Michaŭ",
+     "typed": "R:Alfred Michaŭ",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki11.html",
+     "surface": "L'Espérantiste",
+     "typed": "R:L'Espérantiste",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki11.html",
+     "surface": "L. de Beaufront",
+     "typed": "R:L. de Beaufront",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki11.html",
+     "surface": "L.Leau",
+     "typed": "R:L.Leau",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki11.html",
+     "surface": "Louis de Beaufront",
+     "typed": "R:Louis de Beaufront",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki12.html",
+     "surface": "Andreo Cseh",
+     "typed": "R:Andreo Cseh",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki12.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki12.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki13.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki14.html",
+     "surface": "YONEYAMA Sankiĉi",
+     "typed": "R:YONEYAMA Sankiĉi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki15.html",
+     "surface": "Alphonse Mistler",
+     "typed": "R:Alphonse Mistler",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki15.html",
+     "surface": "Erošenko",
+     "typed": "R:Erošenko",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki15.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki16.html",
+     "surface": "Jui Ĉuunoŝin",
+     "typed": "R:Jui Ĉuunoŝin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki16.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki16.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki17.html",
+     "surface": "Erich Scheurmann",
+     "typed": "R:Erich Scheurmann",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki17.html",
+     "surface": "F.Faulhaber",
+     "typed": "R:F.Faulhaber",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki19.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki19.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki2.html",
+     "surface": "Julio Baghy",
+     "typed": "R:Julio Baghy",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki20.html",
+     "surface": "PS2.0",
+     "typed": "R:PS2.0",
+     "reason": "outside_app_word_alphabet",
+     "count": 4
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki20.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki3.html",
+     "surface": "Alfred Pitois",
+     "typed": "R:Alfred Pitois",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki3.html",
+     "surface": "Edmond Privat",
+     "typed": "R:Edmond Privat",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki3.html",
+     "surface": "Julio Baghy",
+     "typed": "R:Julio Baghy",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki3.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki5.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki6.html",
+     "surface": "ekz.",
+     "typed": "R:ekz.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki6.html",
+     "surface": "k.t.p.",
+     "typed": "R:k.t.p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki8.html",
+     "surface": "Edwin Hubble",
+     "typed": "R:Edwin Hubble",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki8.html",
+     "surface": "Gabrijel Divjanović",
+     "typed": "R:Gabrijel Divjanović",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki8.html",
+     "surface": "Lemaître",
+     "typed": "R:Lemaître",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki8.html",
+     "surface": "Paul Couderc",
+     "typed": "R:Paul Couderc",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki8.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "lernolibroj/fujimaki/fujimaki9.html",
+     "surface": "Tibor Sekelj",
+     "typed": "R:Tibor Sekelj",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Bruno Mars",
+     "typed": "R:Bruno Mars",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "KYOKU Bunshin",
+     "typed": "R:KYOKU Bunshin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "OZASA Rjota",
+     "typed": "R:OZASA Rjota",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "ROSÉ",
+     "typed": "R:ROSÉ",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Sūzin",
+     "typed": "R:Sūzin",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "TANIGUCHI Naoya",
+     "typed": "R:TANIGUCHI Naoya",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Albert Stalin GARRIDO",
+     "typed": "R:Albert Stalin GARRIDO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Alfa Resort Hotel and Conference",
+     "typed": "R:Alfa Resort Hotel and Conference",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Baduy Luar",
+     "typed": "R:Baduy Luar",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "D.R.",
+     "typed": "R:D.R.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Daigo Fukuryu Maru",
+     "typed": "R:Daigo Fukuryu Maru",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "HASEGAWA Teru",
+     "typed": "R:HASEGAWA Teru",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "HIRAI Kaichirō",
+     "typed": "R:HIRAI Kaichirō",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Hori Yasuo",
+     "typed": "R:Hori Yasuo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Nihon Hidankyo",
+     "typed": "R:Nihon Hidankyo",
+     "reason": "contains_space",
+     "count": 10
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "One World",
+     "typed": "R:One World",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Pulau Seribu",
+     "typed": "R:Pulau Seribu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "TANAKA Terumi",
+     "typed": "R:TANAKA Terumi",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Tanaka Terumi",
+     "typed": "R:Tanaka Terumi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Terumi Tanaka",
+     "typed": "R:Terumi Tanaka",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Tok Pisin",
+     "typed": "R:Tok Pisin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "USUI Hiroyuki",
+     "typed": "R:USUI Hiroyuki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "ISHIWARA Taiga",
+     "typed": "R:ISHIWARA Taiga",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "IŜIUĈI Joŝiki",
+     "typed": "R:IŜIUĈI Joŝiki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "LÁSZLÓ",
+     "typed": "R:LÁSZLÓ",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Nakao Sasuke",
+     "typed": "R:Nakao Sasuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Sugawa Soichiro",
+     "typed": "R:Sugawa Soichiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "TAKADA Ĵotaro",
+     "typed": "R:TAKADA Ĵotaro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Valerie TEO",
+     "typed": "R:Valerie TEO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Vd.",
+     "typed": "R:Vd.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "YONEYAMA Toshinao",
+     "typed": "R:YONEYAMA Toshinao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Ōto",
+     "typed": "R:Ōto",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+     "surface": "Ōtō",
+     "typed": "R:Ōtō",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "BAK Giwan",
+     "typed": "R:BAK Giwan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Boris LOMANOV",
+     "typed": "R:Boris LOMANOV",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "HORI Yasuo",
+     "typed": "R:HORI Yasuo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ISHIHARA Taiga",
+     "typed": "R:ISHIHARA Taiga",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "JOYAMA Tsukika",
+     "typed": "R:JOYAMA Tsukika",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "LIU Donghong",
+     "typed": "R:LIU Donghong",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "LIU Shifu",
+     "typed": "R:LIU Shifu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ludwig Maximilian",
+     "typed": "R:Ludwig Maximilian",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "MIYAMOTO Masao",
+     "typed": "R:MIYAMOTO Masao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "MURAKAMI (poste HIROSE) Kanae",
+     "typed": "R:MURAKAMI (poste HIROSE) Kanae",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Miyamoto M.",
+     "typed": "R:Miyamoto M.",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SASAKI Shura",
+     "typed": "R:SASAKI Shura",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SASAKI Taruhiro",
+     "typed": "R:SASAKI Taruhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SASAKI Teruhiro",
+     "typed": "R:SASAKI Teruhiro",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SATO Ryusuke",
+     "typed": "R:SATO Ryusuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUN Minĝiao",
+     "typed": "R:SUN Minĝiao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "TIDA Syuntaro",
+     "typed": "R:TIDA Syuntaro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Tibor SEKELJ",
+     "typed": "R:Tibor SEKELJ",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "W. Auld",
+     "typed": "R:W. Auld",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "William AULD",
+     "typed": "R:William AULD",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "YAMAKAWA Shuichi",
+     "typed": "R:YAMAKAWA Shuichi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ziphil SHALEIRAS",
+     "typed": "R:Ziphil SHALEIRAS",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Китейаŭa",
+     "typed": "R:Китейаŭa",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Китейаба",
+     "typed": "R:Китейаба",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Он Heeyeon",
+     "typed": "R:Он Heeyeon",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Alessandra MADELLA",
+     "typed": "R:Alessandra MADELLA",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "BAK Giwan",
+     "typed": "R:BAK Giwan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "CHANG Youngeun",
+     "typed": "R:CHANG Youngeun",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "CHOI Manwon",
+     "typed": "R:CHOI Manwon",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "CHU Fumin",
+     "typed": "R:CHU Fumin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "HAN Sugheui",
+     "typed": "R:HAN Sugheui",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KOMAKI Tokiko",
+     "typed": "R:KOMAKI Tokiko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kjušu",
+     "typed": "R:Kjušu",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Liang Yukun",
+     "typed": "R:Liang Yukun",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Pu Songling",
+     "typed": "R:Pu Songling",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SASAKI Teruhiro",
+     "typed": "R:SASAKI Teruhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUZUKI Ryuzo",
+     "typed": "R:SUZUKI Ryuzo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "TAKAHASHI Mizuki",
+     "typed": "R:TAKAHASHI Mizuki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Tsurezure Gogaku Nikki",
+     "typed": "R:Tsurezure Gogaku Nikki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "USUI Hiroyuki",
+     "typed": "R:USUI Hiroyuki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ZHANG Yan",
+     "typed": "R:ZHANG Yan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Academia Vivarium Novum",
+     "typed": "R:Academia Vivarium Novum",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Angela OEHLER",
+     "typed": "R:Angela OEHLER",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Franz JONAS",
+     "typed": "R:Franz JONAS",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ivo LAPENNA",
+     "typed": "R:Ivo LAPENNA",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUZUKI Ryuzo",
+     "typed": "R:SUZUKI Ryuzo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "aŭg.-sept.",
+     "typed": "R:aŭg.|L:-|R:sept.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Alfa Resort Hotel and Conference",
+     "typed": "R:Alfa Resort Hotel and Conference",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Doi Hirokazu",
+     "typed": "R:Doi Hirokazu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Golden Kamuy",
+     "typed": "R:Golden Kamuy",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "HIROTAKA Masaaki",
+     "typed": "R:HIROTAKA Masaaki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "HITOFUŜI Hakka",
+     "typed": "R:HITOFUŜI Hakka",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "IŠIHARA Tadajoŝi",
+     "typed": "R:IŠIHARA Tadajoŝi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KOGAHATA Noriko",
+     "typed": "R:KOGAHATA Noriko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kep ENDERBY",
+     "typed": "R:Kep ENDERBY",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUGIMOTO Sajĉi",
+     "typed": "R:SUGIMOTO Sajĉi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUMI Yusuke",
+     "typed": "R:SUMI Yusuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "SUZUKI Ryuzo",
+     "typed": "R:SUZUKI Ryuzo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "So Jinsu",
+     "typed": "R:So Jinsu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sonja Lang",
+     "typed": "R:Sonja Lang",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "TAKADA Jotaro",
+     "typed": "R:TAKADA Jotaro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "WATANABE Katsuyoshi",
+     "typed": "R:WATANABE Katsuyoshi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "YAMAKAWA Shuichi",
+     "typed": "R:YAMAKAWA Shuichi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "pp.",
+     "typed": "R:pp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.n.",
+     "typed": "R:t.n.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "vd.",
+     "typed": "R:vd.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+     "surface": "Guo Moruo",
+     "typed": "R:Guo Moruo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+     "surface": "Hasegaŭa Teru",
+     "typed": "R:Hasegaŭa Teru",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+     "surface": "Luchuan Yingzi",
+     "typed": "R:Luchuan Yingzi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+     "surface": "MORIKAWA Kazunori",
+     "typed": "R:MORIKAWA Kazunori",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Hirata Sizu",
+     "typed": "R:Hirata Sizu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "István Ertl",
+     "typed": "R:István Ertl",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KAWAZUMI Takaki",
+     "typed": "R:KAWAZUMI Takaki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KITAGAWA Ikuko",
+     "typed": "R:KITAGAWA Ikuko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "Hirata Sizu",
+     "typed": "R:Hirata Sizu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "István Ertl",
+     "typed": "R:István Ertl",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "KITAGAWA Ikuko",
+     "typed": "R:KITAGAWA Ikuko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "Kawazumi Takaki",
+     "typed": "R:Kawazumi Takaki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "La Revuo Orienta",
+     "typed": "R:La Revuo Orienta",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+     "surface": "Otto Zeidlitz",
+     "typed": "R:Otto Zeidlitz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Eleanor Ashbourne",
+     "typed": "R:Eleanor Ashbourne",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Freie Universität Berlin",
+     "typed": "R:Freie Universität Berlin",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Hitofushi Hakka",
+     "typed": "R:Hitofushi Hakka",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kurita Kimiaki",
+     "typed": "R:Kurita Kimiaki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Lafcadio Hearn",
+     "typed": "R:Lafcadio Hearn",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "MaMiya Midori",
+     "typed": "R:MaMiya Midori",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Miron Schmekel",
+     "typed": "R:Miron Schmekel",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ekz.",
+     "typed": "R:ekz.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 3
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Bogusław",
+     "typed": "R:Bogusław",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Franz JONAS",
+     "typed": "R:Franz JONAS",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ivo Lapenna",
+     "typed": "R:Ivo Lapenna",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "JOYAMA Tsukika",
+     "typed": "R:JOYAMA Tsukika",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Jasper NEERGAARD",
+     "typed": "R:Jasper NEERGAARD",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KIMURA Goro Christoph",
+     "typed": "R:KIMURA Goro Christoph",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "KURATA Rei",
+     "typed": "R:KURATA Rei",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Navalona LAHATRINIAINA",
+     "typed": "R:Navalona LAHATRINIAINA",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Oświęcim",
+     "typed": "R:Oświęcim",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Paul NEERGAARD",
+     "typed": "R:Paul NEERGAARD",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ranja ZAFINIFOTSY",
+     "typed": "R:Ranja ZAFINIFOTSY",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "TOYOTOMI Hideyosi",
+     "typed": "R:TOYOTOMI Hideyosi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Victoria Peak",
+     "typed": "R:Victoria Peak",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Weil am Rhein",
+     "typed": "R:Weil am Rhein",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Alessandra Madella",
+     "typed": "R:Alessandra Madella",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Antoni Gaudí",
+     "typed": "R:Antoni Gaudí",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Duan Jike",
+     "typed": "R:Duan Jike",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Gaudí",
+     "typed": "R:Gaudí",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Liu Baoguo",
+     "typed": "R:Liu Baoguo",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Maruki Iri",
+     "typed": "R:Maruki Iri",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Maximiliano Garcia",
+     "typed": "R:Maximiliano Garcia",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "One World Festival",
+     "typed": "R:One World Festival",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Ruta autoguiada",
+     "typed": "R:Ruta autoguiada",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sagrada Família",
+     "typed": "R:Sagrada Família",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sant Pau d'Ordal",
+     "typed": "R:Sant Pau d'Ordal",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sasaki Teruhiro",
+     "typed": "R:Sasaki Teruhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sugawa Soichiro",
+     "typed": "R:Sugawa Soichiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sun Minĝiao",
+     "typed": "R:Sun Minĝiao",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Takada Ĵotaro",
+     "typed": "R:Takada Ĵotaro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Vd.",
+     "typed": "R:Vd.",
+     "reason": "outside_app_word_alphabet",
+     "count": 5
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Wei Ningna",
+     "typed": "R:Wei Ningna",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Zhang Di",
+     "typed": "R:Zhang Di",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Zhang Yan",
+     "typed": "R:Zhang Yan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ekz.",
+     "typed": "R:ekz.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ĉ.",
+     "typed": "R:ĉ.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kimura Kishiro",
+     "typed": "R:Kimura Kishiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kyanjin Gompa",
+     "typed": "R:Kyanjin Gompa",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kyanjin Ri",
+     "typed": "R:Kyanjin Ri",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Peace Himalaya",
+     "typed": "R:Peace Himalaya",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Yoshida Masanori",
+     "typed": "R:Yoshida Masanori",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "i.a.",
+     "typed": "R:i.a.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "prof.",
+     "typed": "R:prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Agnieszka Mozer",
+     "typed": "R:Agnieszka Mozer",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Aikawa Setuko",
+     "typed": "R:Aikawa Setuko",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Barbara Pietrzak",
+     "typed": "R:Barbara Pietrzak",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Dariusz Feller",
+     "typed": "R:Dariusz Feller",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Esperanta Kafejo Ponto",
+     "typed": "R:Esperanta Kafejo Ponto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Gabriela Kosiarska",
+     "typed": "R:Gabriela Kosiarska",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Granda Budho",
+     "typed": "R:Granda Budho",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Hama-Ronda Tago",
+     "typed": "R:Hama-Ronda Tago",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Hirano Noboru",
+     "typed": "R:Hirano Noboru",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Irek Bobrzak",
+     "typed": "R:Irek Bobrzak",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kimoto Yasuhiro",
+     "typed": "R:Kimoto Yasuhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Kita Ikki",
+     "typed": "R:Kita Ikki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "La Revuo Orienta",
+     "typed": "R:La Revuo Orienta",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Lucien Péraire",
+     "typed": "R:Lucien Péraire",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Miyoshi Etsuo",
+     "typed": "R:Miyoshi Etsuo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Nacia Biblioteko",
+     "typed": "R:Nacia Biblioteko",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Nakajima Miki",
+     "typed": "R:Nakajima Miki",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Nigra Maro",
+     "typed": "R:Nigra Maro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Orienta Azio",
+     "typed": "R:Orienta Azio",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Pola Retradio",
+     "typed": "R:Pola Retradio",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Prof.",
+     "typed": "R:Prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Péraire",
+     "typed": "R:Péraire",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Péraire cifereca",
+     "typed": "R:Péraire cifereca",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sabata Kunveno",
+     "typed": "R:Sabata Kunveno",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Sato Ryusuke",
+     "typed": "R:Sato Ryusuke",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Suzuki Ryuzo",
+     "typed": "R:Suzuki Ryuzo",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Tida Syuntaro",
+     "typed": "R:Tida Syuntaro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Tida Syuntarô",
+     "typed": "R:Tida Syuntarô",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Univ. de Kioto",
+     "typed": "R:Univ. de Kioto",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Universitato Adam Mickiewicz",
+     "typed": "R:Universitato Adam Mickiewicz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Universitato de Kioto",
+     "typed": "R:Universitato de Kioto",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Usui Hiroyuki",
+     "typed": "R:Usui Hiroyuki",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Varsovia Vento",
+     "typed": "R:Varsovia Vento",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Yamakawa Shuichi",
+     "typed": "R:Yamakawa Shuichi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "p.",
+     "typed": "R:p.",
+     "reason": "outside_app_word_alphabet",
+     "count": 11
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "prof.",
+     "typed": "R:prof.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "sept.",
+     "typed": "R:sept.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "vd.",
+     "typed": "R:vd.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "Île-de-France",
+     "typed": "R:Île-de-France",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+     "surface": "ĝubaan araban",
+     "typed": "R:ĝubaan araban",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Alberto Crescenti",
+     "typed": "R:Alberto Crescenti",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "BUENOSA ERO",
+     "typed": "R:BUENOSA ERO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Buenos Aires",
+     "typed": "R:Buenos Aires",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "CEO Score",
+     "typed": "R:CEO Score",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Camellia sinensis",
+     "typed": "R:Camellia sinensis",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Chien Yuechen",
+     "typed": "R:Chien Yuechen",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Chris Elliott",
+     "typed": "R:Chris Elliott",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Dan Maxwell",
+     "typed": "R:Dan Maxwell",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Daniel Markovitz",
+     "typed": "R:Daniel Markovitz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "David Beckham",
+     "typed": "R:David Beckham",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Dong Hua",
+     "typed": "R:Dong Hua",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Edmond Privat",
+     "typed": "R:Edmond Privat",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Edward Said",
+     "typed": "R:Edward Said",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Ethan Corgatelli",
+     "typed": "R:Ethan Corgatelli",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "FM Korea",
+     "typed": "R:FM Korea",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Feminism With Him",
+     "typed": "R:Feminism With Him",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Feminism with Him",
+     "typed": "R:Feminism with Him",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Feng Shui",
+     "typed": "R:Feng Shui",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "François",
+     "typed": "R:François",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Global Voices",
+     "typed": "R:Global Voices",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Hankook Research",
+     "typed": "R:Hankook Research",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Harry Potter",
+     "typed": "R:Harry Potter",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Hun Min Jeong Eum",
+     "typed": "R:Hun Min Jeong Eum",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "István Ertl",
+     "typed": "R:István Ertl",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Jang Jaeuk",
+     "typed": "R:Jang Jaeuk",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Johano Paŭlo Schiavi",
+     "typed": "R:Johano Paŭlo Schiavi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "John Kuk",
+     "typed": "R:John Kuk",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Juan Pablo Schiavi",
+     "typed": "R:Juan Pablo Schiavi",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Kasing Lung",
+     "typed": "R:Kasing Lung",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Kerry Kan",
+     "typed": "R:Kerry Kan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Korea meritokratio",
+     "typed": "R:Korea meritokratio",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Korean Meritocracy",
+     "typed": "R:Korean Meritocracy",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Kwon Young-kook",
+     "typed": "R:Kwon Young-kook",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Lee Han",
+     "typed": "R:Lee Han",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Lee Jae-myung",
+     "typed": "R:Lee Jae-myung",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Lee Jun-seok",
+     "typed": "R:Lee Jun-seok",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Mark Fettes",
+     "typed": "R:Mark Fettes",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Miko Sloper",
+     "typed": "R:Miko Sloper",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Międzyrzecz",
+     "typed": "R:Międzyrzecz",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Namba Fumiharu",
+     "typed": "R:Namba Fumiharu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Oh Eunchan",
+     "typed": "R:Oh Eunchan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Park Kwonil",
+     "typed": "R:Park Kwonil",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Pop Mart",
+     "typed": "R:Pop Mart",
+     "reason": "contains_space",
+     "count": 7
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Preston Miller Firestone",
+     "typed": "R:Preston Miller Firestone",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Saichō",
+     "typed": "R:Saichō",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Sanada Shinji",
+     "typed": "R:Sanada Shinji",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Sasaki Teruhiro",
+     "typed": "R:Sasaki Teruhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Sisa In",
+     "typed": "R:Sisa In",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Sonja Lang",
+     "typed": "R:Sonja Lang",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Squid Game",
+     "typed": "R:Squid Game",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Suvam Pal",
+     "typed": "R:Suvam Pal",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Suvan Pal",
+     "typed": "R:Suvan Pal",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Te Urewera",
+     "typed": "R:Te Urewera",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "The Financial Times",
+     "typed": "R:The Financial Times",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "The Meritocracy Trap",
+     "typed": "R:The Meritocracy Trap",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Wang Ning",
+     "typed": "R:Wang Ning",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Wang Tianyi",
+     "typed": "R:Wang Tianyi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "Yoon Suk Yeol",
+     "typed": "R:Yoon Suk Yeol",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "jan Itan",
+     "typed": "R:jan Itan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "jan Minasa",
+     "typed": "R:jan Minasa",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "jan Osame",
+     "typed": "R:jan Osame",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "jan Peton",
+     "typed": "R:jan Peton",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Alberto Crescenti",
+     "typed": "R:Alberto Crescenti",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "BUENOSA ERO",
+     "typed": "R:BUENOSA ERO",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Buenos Aires",
+     "typed": "R:Buenos Aires",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "CEO Score",
+     "typed": "R:CEO Score",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Camellia sinensis",
+     "typed": "R:Camellia sinensis",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Chien Yuechen",
+     "typed": "R:Chien Yuechen",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Chris Elliott",
+     "typed": "R:Chris Elliott",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Dan Maxwell",
+     "typed": "R:Dan Maxwell",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Daniel Markovitz",
+     "typed": "R:Daniel Markovitz",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "David Beckham",
+     "typed": "R:David Beckham",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Dong Hua",
+     "typed": "R:Dong Hua",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Edmond Privat",
+     "typed": "R:Edmond Privat",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Edward Said",
+     "typed": "R:Edward Said",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Ethan Corgatelli",
+     "typed": "R:Ethan Corgatelli",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "FM Korea",
+     "typed": "R:FM Korea",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Feminism With Him",
+     "typed": "R:Feminism With Him",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Feminism with Him",
+     "typed": "R:Feminism with Him",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Feng Shui",
+     "typed": "R:Feng Shui",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "François",
+     "typed": "R:François",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Global Voices",
+     "typed": "R:Global Voices",
+     "reason": "contains_space",
+     "count": 5
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Hankook Research",
+     "typed": "R:Hankook Research",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Harry Potter",
+     "typed": "R:Harry Potter",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Hun Min Jeong Eum",
+     "typed": "R:Hun Min Jeong Eum",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "István Ertl",
+     "typed": "R:István Ertl",
+     "reason": "contains_space",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Jang Jaeuk",
+     "typed": "R:Jang Jaeuk",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Johano Paŭlo Schiavi",
+     "typed": "R:Johano Paŭlo Schiavi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "John Kuk",
+     "typed": "R:John Kuk",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Juan Pablo Schiavi",
+     "typed": "R:Juan Pablo Schiavi",
+     "reason": "contains_space",
+     "count": 3
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Kasing Lung",
+     "typed": "R:Kasing Lung",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Kerry Kan",
+     "typed": "R:Kerry Kan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Korea meritokratio",
+     "typed": "R:Korea meritokratio",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Korean Meritocracy",
+     "typed": "R:Korean Meritocracy",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Kwon Young-kook",
+     "typed": "R:Kwon Young-kook",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Lee Han",
+     "typed": "R:Lee Han",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Lee Jae-myung",
+     "typed": "R:Lee Jae-myung",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Lee Jun-seok",
+     "typed": "R:Lee Jun-seok",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Mark Fettes",
+     "typed": "R:Mark Fettes",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Miko Sloper",
+     "typed": "R:Miko Sloper",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Międzyrzecz",
+     "typed": "R:Międzyrzecz",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Namba Fumiharu",
+     "typed": "R:Namba Fumiharu",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Oh Eunchan",
+     "typed": "R:Oh Eunchan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Park Kwonil",
+     "typed": "R:Park Kwonil",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Pop Mart",
+     "typed": "R:Pop Mart",
+     "reason": "contains_space",
+     "count": 7
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Preston Miller Firestone",
+     "typed": "R:Preston Miller Firestone",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Saichō",
+     "typed": "R:Saichō",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Sanada Shinji",
+     "typed": "R:Sanada Shinji",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Sasaki Teruhiro",
+     "typed": "R:Sasaki Teruhiro",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Sisa In",
+     "typed": "R:Sisa In",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Sonja Lang",
+     "typed": "R:Sonja Lang",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Squid Game",
+     "typed": "R:Squid Game",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Suvam Pal",
+     "typed": "R:Suvam Pal",
+     "reason": "contains_space",
+     "count": 4
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Suvan Pal",
+     "typed": "R:Suvan Pal",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Te Urewera",
+     "typed": "R:Te Urewera",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "The Financial Times",
+     "typed": "R:The Financial Times",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "The Meritocracy Trap",
+     "typed": "R:The Meritocracy Trap",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Wang Ning",
+     "typed": "R:Wang Ning",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Wang Tianyi",
+     "typed": "R:Wang Tianyi",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "Yoon Suk Yeol",
+     "typed": "R:Yoon Suk Yeol",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "jan Itan",
+     "typed": "R:jan Itan",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "jan Minasa",
+     "typed": "R:jan Minasa",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "jan Osame",
+     "typed": "R:jan Osame",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "jan Peton",
+     "typed": "R:jan Peton",
+     "reason": "contains_space",
+     "count": 1
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "ktp.",
+     "typed": "R:ktp.",
+     "reason": "outside_app_word_alphabet",
+     "count": 2
+    },
+    {
+     "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+     "surface": "t.e.",
+     "typed": "R:t.e.",
+     "reason": "outside_app_word_alphabet",
+     "count": 1
+    }
+   ],
+   "case_preserved_instances": 34791,
+   "excluded_units": 0,
+   "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
+  },
+  "corpus_repository": {
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "branch": "main",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "place_manifest": {
+   "rows": 48,
+   "instances": 74
+  },
+  "gold": {
+   "path": "D:\\tmp\\esperanto_stage_20260718_phase532_candidate\\世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
+   "sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "expected_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "bytes": 4372552,
+   "mtime_ns": 1784360080003000000,
+   "consistent_snapshot": true,
+   "lines": 62313,
+   "nul_bytes": 0,
+   "replacement_chars": 0,
+   "selected_records": 55413,
+   "included_unmarked": 52223,
+   "excluded_fake": 3179,
+   "included_fake_coarse_entries": 191,
+   "included_fake_coarse_surfaces": 190,
+   "fake_coarse_sources": {
+    "gold_fake_coarse_pejvo_original": 34,
+    "gold_phase532_selected_ruby_policy": 35,
+    "gold_fake_coarse_paired_academic": 120,
+    "gold_fake_coarse_project_reviewed_override": 2
+   },
+   "fake_coarse_reference": {
+    "path": "_analysis_20260625/_fake_coarse_reference_manifest.json",
+    "sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+    "entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+    "academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+    "pejvo_original_sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF",
+    "pejvo_disagreement_review": {
+     "path": "_fake_coarse_pejvo_disagreement_review.json",
+     "sha256": "3E9D6A702C6724894F724AEE4AF684883C650CC8E95564348DC5F536DB52B4DF",
+     "entries": 13
+    },
+    "project_boundary_review": {
+     "path": "_fake_coarse_project_boundary_review.json",
+     "sha256": "020F94D1C96216CF0411A51BCFDE25827C4B49C79E27B76803C65E900560FCDF",
+     "entries": 2
+    },
+    "paired_invariant": {
+     "unmarked_rows": 58796,
+     "unmarked_identical_decomposition": 58796,
+     "academic_rows_without_fake_marker": 62313,
+     "marked_rows": 3517,
+     "marked_different_decomposition": 3517,
+     "marked_gloss_context_matches_academic": 3517
+    },
+    "counts": {
+     "entries": 3238,
+     "marker_excluded_rows": 279,
+     "marker_exclusions_by_reason": {
+      "contains_space": 264,
+      "non_evaluable_surface": 15
+     },
+     "source_rows": {
+      "pejvo_original": 1402,
+      "pejvo_reviewed_override": 9,
+      "paired_academic": 1825,
+      "project_reviewed_override": 2
+     },
+     "academic_rows_with_nonmatching_pejvo_homographs": 13,
+     "exact_surfaces": 3222,
+     "duplicate_exact_surface_rows": 16,
+     "casefold_surfaces": 3211,
+     "duplicate_casefold_surface_rows": 27
+    }
+   },
+   "fake_coarse_transition": {
+    "historical_c679_b090": {
+     "path": "_analysis_20260625/_fake_coarse_transition_review.json",
+     "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
+     "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
+     "entries": 136,
+     "effective_entries": 134,
+     "evaluable_entries": 133,
+     "full_master_only_entries": 1,
+     "full_master_only_lines": [
+      15993
+     ],
+     "superseded_entries": 1,
+     "superseded_lines": [
+      45205
+     ],
+     "retired_entries": 1,
+     "retired_lines": [
+      2704
+     ],
+     "retired_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    },
+    "ff33_delta": {
+     "path": "_analysis_20260625/_fake_coarse_ff33_transition_review.json",
+     "sha256": "BD5E4B5A2BC7D6D37AB910E2A250F203CF402DFAF8BDF933265863D1FF3F247A",
+     "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
+     "entries": 1,
+     "evaluable_entries": 1,
+     "full_master_only_entries": 0
+    },
+    "final_5e_delta": {
+     "path": "_analysis_20260625/_fake_coarse_5e_transition_review.json",
+     "sha256": "4DB426E02930B87B9581C820DA0AF04F993180BBFC0DC16D39619A501AE59783",
+     "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
+     "entries": 1,
+     "evaluable_entries": 1,
+     "full_master_only_entries": 0
+    },
+    "phase511_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase511_transition_review.json",
+     "sha256": "72D3CDE187680F4CD0DD178915FEBF9DD1FA421B1C4AC17B25374720FDB9CEA8",
+     "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+     "entries": 21,
+     "evaluable_entries": 21,
+     "full_master_only_entries": 0,
+     "historical_supersessions": 1
+    },
+    "evaluable_entries": 191,
+    "full_master_only_entries": 1,
+    "phase532_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase532_transition_review.json",
+     "sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "entries": 35,
+     "evaluable_entries": 35,
+     "full_master_only_entries": 0,
+     "retired_historical_entries": 1,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    }
+   },
+   "fake_coarse_enforcement": "reviewed_transitions",
+   "official_overrides": 11,
+   "project_ruby_boundary_overrides": 2,
+   "duplicate_surfaces": 254,
+   "duplicate_rows": 262,
+   "mixed_marker_surfaces": 36,
+   "mixed_marker_surface_list": [
+    "Karolino",
+    "Unesko",
+    "debati",
+    "dominanto",
+    "esperante",
+    "estrado",
+    "farado",
+    "fekulo",
+    "grenadilo",
+    "haloo",
+    "heroino",
+    "interfaco",
+    "kaseto",
+    "kateto",
+    "korveto",
+    "lupino",
+    "medio",
+    "nomado",
+    "paktolo",
+    "partio",
+    "pistilo",
+    "protestanto",
+    "radaro",
+    "reprezenti",
+    "resumi",
+    "retuŝi",
+    "romana",
+    "romano",
+    "sia",
+    "sudano",
+    "sumero",
+    "teismo",
+    "tempero",
+    "tornado",
+    "varianto",
+    "velaro"
+   ],
+   "unmarked_conflicts": [],
+   "atomic_hyphen_review": {
+    "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
+    "entries": 41,
+    "sha256": "FC8DB5DDE724F0693512695E79D63059073E8D36CDBE0F025D4F6DEA829D2BC5"
+   },
+   "phase532_selected_ruby_policy": {
+    "source": "gold_phase532_selected_ruby_policy",
+    "ordinary_reference_expressions": 57,
+    "bounded_multiword_expressions": 1,
+    "identity": {
+     "phase": 532,
+     "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+     "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+     "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+     "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+     "unmarked_entries": 23,
+     "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "fake_transition_entries": 35,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+     "retired_historical_entries": 1,
+     "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+     "selected_expressions": 58,
+     "ordinary_reference_expressions": 57,
+     "bounded_multiword_expressions": 1
+    },
+    "authority_carry_forward": {
+     "phase_from": 513,
+     "phase_to": 532,
+     "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+     "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+     "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+     "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+     "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+     "authority_groups": 5,
+     "reviewed_learner_lines": 113,
+     "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
+    }
+   }
+  }
+ },
+ "case_count": 68485,
+ "raw_case_count": 68524,
+ "surface_count": 68435,
+ "languages": [
+  {
+   "language": "JA",
+   "comparison": {
+    "comparison": "current_only",
+    "sources": {
+     "gold_fake_coarse_paired_academic": {
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_pejvo_original": {
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_project_reviewed_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_official_override": {
+      "total_weight": 11,
+      "total_cases": 11,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
+      "current_correct_weight": 11,
+      "current_correct_cases": 11,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_project_ruby_boundary_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_unmarked": {
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_corpus": {
+      "total_weight": 271065,
+      "total_cases": 21877,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
+      "current_correct_weight": 271065,
+      "current_correct_cases": 21877,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_place_manifest": {
+      "total_weight": 74,
+      "total_cases": 36,
+      "baseline_correct_weight": 74,
+      "baseline_correct_cases": 36,
+      "current_correct_weight": 74,
+      "current_correct_cases": 36,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     }
+    },
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 0,
+     "regression_cases": 0,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    },
+    "regression_cases": [],
+    "changed_to_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "current_place_manifest_wrong_cases": [],
+    "current_official_override_wrong_cases": [],
+    "current_project_ruby_boundary_override_wrong_cases": [],
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [],
+    "gate": false
+   },
+   "input_fingerprint": {
+    "Esperanto-Kanji-Ruby-JA/main.py": "104A7797E453E62C2C2250A57A92B08C8004737A93755D003BE9019CA901C95B",
+    "Esperanto-Kanji-Ruby-JA/esp_text_replacement_module.py": "61E1F0A9AE3CD045E3908295E6E072DE9449B5791E2BB1DF38D9EB4D10D385CA",
+    "Esperanto-Kanji-Ruby-JA/esp_overlay_module.py": "67FFCD02808259350FA6C3C7111220125F63A019C64676BA200058DC17629D35",
+    "Esperanto-Kanji-Ruby-JA/esp_replacement_json_make_module.py": "E26060A2B811D38D65DE9788947AC5E844BCBA15E44C5C7DAE4C34B9D84B65FB",
+    "Esperanto-Kanji-Ruby-JA/app_data/置換リスト_ルビ.json": "6CD74961833DB558236B5E0E7EFD2769876775EB931B991271BCD2C61F5D8570",
+    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+    "Esperanto-Kanji-Ruby-JA/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+    "Esperanto-Kanji-Ruby-JA/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+    "Esperanto-Kanji-Ruby-JA/app_data/エスペラント語根-日本語訳ルビ対応リスト.csv": "33CE469EFCE8D77111C281DF36585E981269409F1D33753DA620D56C6AD5CE0E",
+    "Esperanto-Kanji-Ruby-JA/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC",
+    "Esperanto-Kanji-Ruby-JA/app_data/user_corrections.json": "D4956CE7C8AF5F958E604ACD2617A58018B58BB8ECACE3D05609E6BF45BDF6A8"
+   },
+   "input_stable": true,
+   "gate": false
+  },
+  {
+   "language": "ZH",
+   "comparison": {
+    "comparison": "current_only",
+    "sources": {
+     "gold_fake_coarse_paired_academic": {
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_pejvo_original": {
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_project_reviewed_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_official_override": {
+      "total_weight": 11,
+      "total_cases": 11,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
+      "current_correct_weight": 11,
+      "current_correct_cases": 11,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_project_ruby_boundary_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_unmarked": {
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_corpus": {
+      "total_weight": 271065,
+      "total_cases": 21877,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
+      "current_correct_weight": 271065,
+      "current_correct_cases": 21877,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_place_manifest": {
+      "total_weight": 74,
+      "total_cases": 36,
+      "baseline_correct_weight": 74,
+      "baseline_correct_cases": 36,
+      "current_correct_weight": 74,
+      "current_correct_cases": 36,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     }
+    },
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 0,
+     "regression_cases": 0,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    },
+    "regression_cases": [],
+    "changed_to_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "current_place_manifest_wrong_cases": [],
+    "current_official_override_wrong_cases": [],
+    "current_project_ruby_boundary_override_wrong_cases": [],
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [],
+    "gate": false
+   },
+   "input_fingerprint": {
+    "Esperanto-Kanji-Ruby-ZH/main.py": "8A73A5A148F416F583064A2ABB379D1E2485585D241C0B420595EF8CCF3D12B7",
+    "Esperanto-Kanji-Ruby-ZH/esp_text_replacement_module.py": "B0E7437961168203815BC5DD96FD624068AC9612FA054263C8A33349719C4E12",
+    "Esperanto-Kanji-Ruby-ZH/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
+    "Esperanto-Kanji-Ruby-ZH/esp_replacement_json_make_module.py": "4872B85221C602D2F895C3F0A502AA2FAC5407A2EA92DC4FB9A539F9CD304DB0",
+    "Esperanto-Kanji-Ruby-ZH/app_data/置換リスト_ルビ.json": "4605B96F57DE4E2068C01FE47401F5378F5280AFE87821F2C3610033771ED728",
+    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+    "Esperanto-Kanji-Ruby-ZH/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+    "Esperanto-Kanji-Ruby-ZH/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+    "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-中文注释对应列表.csv": "13D248DACD526F7028A35BE28AA846E42FBBF17B718CE824A2AF7D22BC1903E6",
+    "Esperanto-Kanji-Ruby-ZH/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC",
+    "Esperanto-Kanji-Ruby-ZH/app_data/user_corrections.json": "A3D2B578D056B2AB5C46E0D00F7392891080F4672899D716C3854B93ABF38585"
+   },
+   "input_stable": true,
+   "gate": false
+  },
+  {
+   "language": "KO",
+   "comparison": {
+    "comparison": "current_only",
+    "sources": {
+     "gold_fake_coarse_paired_academic": {
+      "total_weight": 120,
+      "total_cases": 120,
+      "baseline_correct_weight": 120,
+      "baseline_correct_cases": 120,
+      "current_correct_weight": 120,
+      "current_correct_cases": 120,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_pejvo_original": {
+      "total_weight": 34,
+      "total_cases": 33,
+      "baseline_correct_weight": 34,
+      "baseline_correct_cases": 33,
+      "current_correct_weight": 34,
+      "current_correct_cases": 33,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_fake_coarse_project_reviewed_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_official_override": {
+      "total_weight": 11,
+      "total_cases": 11,
+      "baseline_correct_weight": 11,
+      "baseline_correct_cases": 11,
+      "current_correct_weight": 11,
+      "current_correct_cases": 11,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_phase532_selected_ruby_policy": {
+      "total_weight": 57,
+      "total_cases": 57,
+      "baseline_correct_weight": 57,
+      "baseline_correct_cases": 57,
+      "current_correct_weight": 57,
+      "current_correct_cases": 57,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_project_ruby_boundary_override": {
+      "total_weight": 2,
+      "total_cases": 2,
+      "baseline_correct_weight": 2,
+      "baseline_correct_cases": 2,
+      "current_correct_weight": 2,
+      "current_correct_cases": 2,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "gold_unmarked": {
+      "total_weight": 52162,
+      "total_cases": 52162,
+      "baseline_correct_weight": 52160,
+      "baseline_correct_cases": 52160,
+      "current_correct_weight": 52160,
+      "current_correct_cases": 52160,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_corpus": {
+      "total_weight": 271065,
+      "total_cases": 21877,
+      "baseline_correct_weight": 271065,
+      "baseline_correct_cases": 21877,
+      "current_correct_weight": 271065,
+      "current_correct_cases": 21877,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     },
+     "html_place_manifest": {
+      "total_weight": 74,
+      "total_cases": 36,
+      "baseline_correct_weight": 74,
+      "baseline_correct_cases": 36,
+      "current_correct_weight": 74,
+      "current_correct_cases": 36,
+      "regression_weight": 0,
+      "regression_cases": 0,
+      "improvement_weight": 0,
+      "improvement_cases": 0
+     }
+    },
+    "combined": {
+     "total_weight": 323527,
+     "total_cases": 74300,
+     "baseline_correct_weight": 323525,
+     "baseline_correct_cases": 74298,
+     "current_correct_weight": 323525,
+     "current_correct_cases": 74298,
+     "regression_weight": 0,
+     "regression_cases": 0,
+     "improvement_weight": 0,
+     "improvement_cases": 0
+    },
+    "regression_cases": [],
+    "changed_to_unreferenced_wrong_surfaces": [],
+    "current_unreferenced_wrong_surfaces": [
+     {
+      "surface": "Izraelio",
+      "expected_options": [
+       "Izraeli/o"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "Izraelio",
+        "spans": [
+         {
+          "text": "Izraeli",
+          "ruby": true
+         },
+         {
+          "text": "o",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "Izrael/io",
+      "baseline_typed": "R:Izrael|L:io",
+      "current": "Izrael/io",
+      "current_typed": "R:Izrael|L:io",
+      "current_signature": {
+       "reconstruction": "Izraelio",
+       "spans": [
+        {
+         "text": "Izrael",
+         "ruby": true
+        },
+        {
+         "text": "io",
+         "ruby": false
+        }
+       ]
+      }
+     },
+     {
+      "surface": "tia-tia",
+      "expected_options": [
+       "ti/a-ti/a"
+      ],
+      "expected_signatures": [
+       {
+        "reconstruction": "tia-tia",
+        "spans": [
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a-",
+          "ruby": false
+         },
+         {
+          "text": "ti",
+          "ruby": true
+         },
+         {
+          "text": "a",
+          "ruby": false
+         }
+        ]
+       }
+      ],
+      "sources": [
+       "gold_unmarked"
+      ],
+      "baseline": "tia/-/tia",
+      "baseline_typed": "R:tia|L:-|R:tia",
+      "current": "tia/-/tia",
+      "current_typed": "R:tia|L:-|R:tia",
+      "current_signature": {
+       "reconstruction": "tia-tia",
+       "spans": [
+        {
+         "text": "tia",
+         "ruby": true
+        },
+        {
+         "text": "-",
+         "ruby": false
+        },
+        {
+         "text": "tia",
+         "ruby": true
+        }
+       ]
+      }
+     }
+    ],
+    "current_place_manifest_wrong_cases": [],
+    "current_official_override_wrong_cases": [],
+    "current_project_ruby_boundary_override_wrong_cases": [],
+    "current_exact_required_wrong_cases": [],
+    "weighted_worsening_sources": [],
+    "gate": false
+   },
+   "input_fingerprint": {
+    "Esperanto-Kanji-Ruby-KO/main.py": "FF11E4A842D8D77CA0E7E76DE3008CB62D8E7044436E541C7AD01482E47AA437",
+    "Esperanto-Kanji-Ruby-KO/esp_text_replacement_module.py": "C29CD09925EF9C49F4AD6506B5FA83119E7536BEEF4C09BCA3AD9891F0E0AA7A",
+    "Esperanto-Kanji-Ruby-KO/esp_overlay_module.py": "44A27D59DD3DBA180DF4CE58CB105BCAAA0BCABAF3FC8E40579E103FA255C6B1",
+    "Esperanto-Kanji-Ruby-KO/esp_replacement_json_make_module.py": "EC926A292E876D0577890EAE75D6770CAD2B71D526F883DF5AA14CE4F0FBCD78",
+    "Esperanto-Kanji-Ruby-KO/app_data/置換リスト_ルビ.json": "F61101764CF1892D8DB4FD3F508214A966748AB7AD9E88E30FAA1D8AB6726DD0",
+    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_skip.txt": "28AE04AE3B75275A7FB59DFBF646716AAC226A818B3E9D6EDE4C777911B435E4",
+    "Esperanto-Kanji-Ruby-KO/app_data/placeholders_localcapture.txt": "53B421C161230AACCC5243D1F3BC96D37345A33E04CCF4A7C888BCA76107160A",
+    "Esperanto-Kanji-Ruby-KO/app_data/char_widths.json": "AC009C26AF1D7FAE05E8969D86042B5BAFF5F482B226C575E1CEF8D27AEA2C7B",
+    "Esperanto-Kanji-Ruby-KO/app_data/에스페란토 어근-한국어 번역 루비 대응 목록.csv": "29383FEB4A852818F3BEA424E65215A72FD28B302A3E38FEE1CC25599AC6F307",
+    "Esperanto-Kanji-Ruby-KO/app_data/世界语词根-汉字对应列表_参照2新割当_7791.csv": "3BEF29AC615F5B3F5FA267D27C78919E87BB7B97075B249F9833CBD05C03E6EC",
+    "Esperanto-Kanji-Ruby-KO/app_data/user_corrections.json": "5377753038C41AD4E18DDB4784E2E9FEE214169F8075DDEA031CC679A7A7B558"
+   },
+   "input_stable": true,
+   "gate": false
+  }
+ ],
+ "reference_projection": {
+  "schema_version": 5,
+  "case_count": 68524,
+  "surface_count": 68435,
+  "reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+  "reference_conflict_count": 89,
+  "reference_conflicts_sha256": "16FD7BFCF7C1FC1840400FC4D09B83BCA96B987971C12C5BDE1A5D6A5D42404E",
+  "corpus": {
+   "files": 169,
+   "raw_ruby": 348971,
+   "parsed_ruby": 348971,
+   "parsed_units": 271065,
+   "eligible_units": 271065,
+   "word_alphabet_units": 269879,
+   "extended_reference_units": 1186,
+   "extended_reference_unique_rows": 677,
+   "extended_reference_unique_surfaces": 426,
+   "extended_reference_reasons": {
+    "contains_space": 833,
+    "outside_app_word_alphabet": 353
+   },
+   "extended_reference_sha256": "55611F15B3D66A285609CB98C236695905EF668673E452067AAFF6895646981B",
+   "case_preserved_instances": 34791,
+   "excluded_units": 0,
+   "content_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6"
+  },
+  "corpus_repository": {
+   "head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+   "branch": "main",
+   "status_entries": 0,
+   "status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "place_manifest": {
+   "rows": 48,
+   "instances": 74
+  },
+  "gold": {
+   "sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "bytes": 4372552,
+   "lines": 62313,
+   "nul_bytes": 0,
+   "replacement_chars": 0,
+   "selected_records": 55413,
+   "included_unmarked": 52223,
+   "excluded_fake": 3179,
+   "official_overrides": 11,
+   "project_ruby_boundary_overrides": 2,
+   "included_fake_coarse_entries": 191,
+   "included_fake_coarse_surfaces": 190,
+   "fake_coarse_sources": {
+    "gold_fake_coarse_pejvo_original": 34,
+    "gold_phase532_selected_ruby_policy": 35,
+    "gold_fake_coarse_paired_academic": 120,
+    "gold_fake_coarse_project_reviewed_override": 2
+   },
+   "fake_coarse_reference": {
+    "path": "_analysis_20260625/_fake_coarse_reference_manifest.json",
+    "sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+    "entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+    "academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+    "pejvo_original_sha256": "B551510513C1924E65E64CF87EA4CE39128E80717E3A3F53847753F8A0557CBF",
+    "pejvo_disagreement_review": {
+     "path": "_fake_coarse_pejvo_disagreement_review.json",
+     "sha256": "3E9D6A702C6724894F724AEE4AF684883C650CC8E95564348DC5F536DB52B4DF",
+     "entries": 13
+    },
+    "project_boundary_review": {
+     "path": "_fake_coarse_project_boundary_review.json",
+     "sha256": "020F94D1C96216CF0411A51BCFDE25827C4B49C79E27B76803C65E900560FCDF",
+     "entries": 2
+    },
+    "paired_invariant": {
+     "unmarked_rows": 58796,
+     "unmarked_identical_decomposition": 58796,
+     "academic_rows_without_fake_marker": 62313,
+     "marked_rows": 3517,
+     "marked_different_decomposition": 3517,
+     "marked_gloss_context_matches_academic": 3517
+    },
+    "counts": {
+     "entries": 3238,
+     "marker_excluded_rows": 279,
+     "marker_exclusions_by_reason": {
+      "contains_space": 264,
+      "non_evaluable_surface": 15
+     },
+     "source_rows": {
+      "pejvo_original": 1402,
+      "pejvo_reviewed_override": 9,
+      "paired_academic": 1825,
+      "project_reviewed_override": 2
+     },
+     "academic_rows_with_nonmatching_pejvo_homographs": 13,
+     "exact_surfaces": 3222,
+     "duplicate_exact_surface_rows": 16,
+     "casefold_surfaces": 3211,
+     "duplicate_casefold_surface_rows": 27
+    }
+   },
+   "fake_coarse_transition": {
+    "historical_c679_b090": {
+     "path": "_analysis_20260625/_fake_coarse_transition_review.json",
+     "sha256": "D20633B41904776B5A6954F6EAC8F72335DCE3FEE51213AA9245A360E3027E34",
+     "entries_sha256": "B8B1036BF0164960429B2FD079EBF62A71FA02425FC0A4D8EB7B84F127BCCF01",
+     "entries": 136,
+     "effective_entries": 134,
+     "evaluable_entries": 133,
+     "full_master_only_entries": 1,
+     "full_master_only_lines": [
+      15993
+     ],
+     "superseded_entries": 1,
+     "superseded_lines": [
+      45205
+     ],
+     "retired_entries": 1,
+     "retired_lines": [
+      2704
+     ],
+     "retired_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    },
+    "ff33_delta": {
+     "path": "_analysis_20260625/_fake_coarse_ff33_transition_review.json",
+     "sha256": "BD5E4B5A2BC7D6D37AB910E2A250F203CF402DFAF8BDF933265863D1FF3F247A",
+     "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
+     "entries": 1,
+     "evaluable_entries": 1,
+     "full_master_only_entries": 0
+    },
+    "final_5e_delta": {
+     "path": "_analysis_20260625/_fake_coarse_5e_transition_review.json",
+     "sha256": "4DB426E02930B87B9581C820DA0AF04F993180BBFC0DC16D39619A501AE59783",
+     "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
+     "entries": 1,
+     "evaluable_entries": 1,
+     "full_master_only_entries": 0
+    },
+    "phase511_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase511_transition_review.json",
+     "sha256": "72D3CDE187680F4CD0DD178915FEBF9DD1FA421B1C4AC17B25374720FDB9CEA8",
+     "entries_sha256": "3F7DBBB34ECE9D3657444818F753755176C89E66307E4AE0E0297A59B8919BFF",
+     "entries": 21,
+     "evaluable_entries": 21,
+     "full_master_only_entries": 0,
+     "historical_supersessions": 1
+    },
+    "evaluable_entries": 191,
+    "full_master_only_entries": 1,
+    "phase532_delta": {
+     "path": "_analysis_20260625/_fake_coarse_phase532_transition_review.json",
+     "sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "entries": 35,
+     "evaluable_entries": 35,
+     "full_master_only_entries": 0,
+     "retired_historical_entries": 1,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99"
+    }
+   },
+   "fake_coarse_enforcement": "reviewed_transitions",
+   "duplicate_surfaces": 254,
+   "duplicate_rows": 262,
+   "mixed_marker_surfaces": 36,
+   "atomic_hyphen_review": {
+    "path": "_analysis_20260625/_no_worsening_atomic_hyphen_roots.json",
+    "entries": 41,
+    "sha256": "FC8DB5DDE724F0693512695E79D63059073E8D36CDBE0F025D4F6DEA829D2BC5"
+   },
+   "phase532_selected_ruby_policy": {
+    "source": "gold_phase532_selected_ruby_policy",
+    "ordinary_reference_expressions": 57,
+    "bounded_multiword_expressions": 1,
+    "identity": {
+     "phase": 532,
+     "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+     "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+     "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+     "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+     "unmarked_entries": 23,
+     "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+     "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+     "fake_transition_entries": 35,
+     "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+     "retired_historical_entries": 1,
+     "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+     "selected_expressions": 58,
+     "ordinary_reference_expressions": 57,
+     "bounded_multiword_expressions": 1
+    },
+    "authority_carry_forward": {
+     "phase_from": 513,
+     "phase_to": 532,
+     "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+     "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+     "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+     "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+     "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+     "authority_groups": 5,
+     "reviewed_learner_lines": 113,
+     "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
+    }
+   }
+  },
+  "phase532_ruby_policy": {
+   "phase": 532,
+   "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+   "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5",
+   "unmarked_review_sha256": "102453D25B03B56704B74B5DCEB2DDC030C58E7080CC098AB543D37BA2669E11",
+   "unmarked_entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+   "unmarked_entries": 23,
+   "fake_transition_sha256": "47198D840AD496693AB5A72DFB6C38D5CC45AD5D847BF435C0BC9ADC85AA96A5",
+   "fake_transition_entries_sha256": "B441D2242638A6BD09B6933EC92E078AA0C6EF51104E6559AD5DBD32F1C730F1",
+   "fake_transition_entries": 35,
+   "retired_historical_entries_sha256": "0079404290137D0CB0A91D865AF38D5CBFA1AD5195541DF073BFA1B93BCF4E99",
+   "retired_historical_entries": 1,
+   "selected_expression_sha256": "FBD601878888B5CFFF0D9E319EA74B013B718C04D0888F0EC1A4B2467B532155",
+   "selected_expressions": 58,
+   "ordinary_reference_expressions": 57,
+   "bounded_multiword_expressions": 1
+  },
+  "phase532_authority_carry_forward": {
+   "phase_from": 513,
+   "phase_to": 532,
+   "ledger_sha256": "D4D4CD8BFC274A006BDA89C8B5E250B4EE1D4286969552F484237E1FF3B97A90",
+   "phase513_fake_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+   "phase513_fake_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+   "phase532_fake_manifest_sha256": "5F743A916742BE022EFDEC30D24B5ACA0EB2A9156A2086FBB01740DDC356A060",
+   "phase532_fake_entries_sha256": "8F823A44A62AFB38321662FB843F52D9E97FB5953962CD5B75406B2F1EBC4368",
+   "authority_groups": 5,
+   "reviewed_learner_lines": 113,
+   "reviewed_line_union_sha256": "29A7E25096900620BF3919F90893BC5C146C303D5A14609622C85DA6007AE365"
+  }
+ },
+ "resolved_reference": {
+  "case_count": 68485,
+  "surface_count": 68435,
+  "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6"
+ },
+ "reviewed_reference": {
+  "scope_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_scope_manifest.json",
+  "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
+  "conflict_manifest": "D:\\tmp\\codex_app_phase558_overlay_candidate_20260721\\_analysis_20260625\\_no_worsening_reference_conflicts.json",
+  "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94",
+  "reviewed_conflicts": 89,
+  "contextual_multi_signature_conflicts": 50
+ },
+ "checkpoint_context": {
+  "checkpoint_schema_version": 2,
+  "reference_schema_version": 5,
+  "head_oid": "dcfca809b711075788ee00b6323cdd2ea31618ff",
+  "raw_reference_sha256": "308121D186957A792073F1620C5A4E5EA80D3B7EAA87DFE39573E05A2FE822A9",
+  "reference_sha256": "C6409A1F5CBF5C4ECB14D16592FA5238A141800A3DC69C3676EAF4016A5092A6",
+  "surface_sha256": "CC3BAFBC6CD1558BF9BD3FCC680245819CA1C1059AE4AEE8BAAA0F64415576FE",
+  "corpus_sha256": "264E4217BE484ABC2DC5EF7A22D83C56076C255BFB389F8218A0C215DD2420B6",
+  "corpus_head_oid": "b769038ef15346a536ce93721d6f0f46849db0ea",
+  "corpus_status_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "place_manifest_sha256": "54E1EF11A6FE8ED2D7AAE83AFCC7029D0FA39603F72FE30450EA24249F35A0C3",
+  "gold_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+  "audit_code_sha256": "43FDC5AFEAD1F92DDF4D177D559FE411686443DA2D86665F912C82CE8018FEA3",
+  "scope_manifest_sha256": "3A56C4C87BBB739A8D12D3E9EB19310F648CB4E735AD705054CD19A579060215",
+  "conflict_manifest_sha256": "2EDE9CDCB492D1B99C990818EF2E82809C49BDB9943EAB163E04B93C4FA58D94"
+ },
+ "inputs_stable": {
+  "gold": true,
+  "head": true,
+  "corpus": true,
+  "place_manifest": true,
+  "audit_code": true,
+  "review_manifests": true,
+  "app_inputs": true
+ },
+ "complete": true,
+ "gate": false
+}

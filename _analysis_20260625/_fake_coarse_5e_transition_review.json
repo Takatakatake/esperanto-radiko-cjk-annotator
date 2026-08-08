@@ -1,0 +1,45 @@
+{
+ "schema_version": 1,
+ "source_fake_coarse_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+ "source_fake_coarse_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+ "sources": {
+  "learner": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
+   "bytes": 4371657,
+   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+   "lines": 62313
+  },
+  "academic": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学術版_utf8_20260416.txt",
+   "bytes": 4277566,
+   "sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
+   "lines": 62313
+  }
+ },
+ "counts": {
+  "entries": 1,
+  "evaluable_entries": 1,
+  "new_fake_marker_rows": 1
+ },
+ "localized_glosses": {
+  "ja": "千分率",
+  "zh": "千分率",
+  "ko": "천분율"
+ },
+ "entries_sha256": "B0CF495ECDEA78DEA86AEB72CFF5252140C67D342947A391200CA9936BF41E1F",
+ "entries": [
+  {
+   "learner_line": 53890,
+   "surface": "promilo",
+   "learner_decomposition": "pro/mil/o",
+   "coarse_decomposition": "promil/o",
+   "academic_decomposition": "promil/o",
+   "authority": "paired_academic",
+   "target": "promil/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "category": "reviewed_5e_new_fake_marker",
+   "reason": "5E paired-master delta: the learner keeps pro/mil/o only on the fake/Kanji track; annotation ruby follows the paired academic promil/o lexical root."
+  }
+ ]
+}

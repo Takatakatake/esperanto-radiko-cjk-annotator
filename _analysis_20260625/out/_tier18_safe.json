@@ -1,0 +1,150 @@
+[
+ {
+  "w": "akrediti",
+  "target": "akredit/i"
+ },
+ {
+  "w": "apartigi",
+  "target": "apart/ig/i"
+ },
+ {
+  "w": "diskonti",
+  "target": "diskont/i"
+ },
+ {
+  "w": "diskonto",
+  "target": "diskont/o"
+ },
+ {
+  "w": "erektiĝi",
+  "target": "erekt/iĝ/i"
+ },
+ {
+  "w": "fero",
+  "target": "fer/o"
+ },
+ {
+  "w": "frajtigi",
+  "target": "frajt/ig/i"
+ },
+ {
+  "w": "frostigi",
+  "target": "frost/ig/i"
+ },
+ {
+  "w": "frostiĝi",
+  "target": "frost/iĝ/i"
+ },
+ {
+  "w": "identigi",
+  "target": "ident/ig/i"
+ },
+ {
+  "w": "iriso",
+  "target": "iris/o"
+ },
+ {
+  "w": "knokaŭti",
+  "target": "knokaŭt/i"
+ },
+ {
+  "w": "krustiĝi",
+  "target": "krust/iĝ/i"
+ },
+ {
+  "w": "lama",
+  "target": "lam/a"
+ },
+ {
+  "w": "malfiksi",
+  "target": "mal/fiks/i"
+ },
+ {
+  "w": "maljungi",
+  "target": "mal/jung/i"
+ },
+ {
+  "w": "malkroĉi",
+  "target": "mal/kroĉ/i"
+ },
+ {
+  "w": "malkudri",
+  "target": "mal/kudr/i"
+ },
+ {
+  "w": "malmiksi",
+  "target": "mal/miks/i"
+ },
+ {
+  "w": "malmunti",
+  "target": "mal/munt/i"
+ },
+ {
+  "w": "malnajli",
+  "target": "mal/najl/i"
+ },
+ {
+  "w": "markoto",
+  "target": "markot/o"
+ },
+ {
+  "w": "ofendeti",
+  "target": "ofend/et/i"
+ },
+ {
+  "w": "ofendiĝi",
+  "target": "ofend/iĝ/i"
+ },
+ {
+  "w": "onin",
+  "target": "oni/n"
+ },
+ {
+  "w": "parano",
+  "target": "paran/o"
+ },
+ {
+  "w": "sonato",
+  "target": "sonat/o"
+ },
+ {
+  "w": "trompiĝi",
+  "target": "tromp/iĝ/i"
+ },
+ {
+  "w": "vendinstigo",
+  "target": "vend/instig/o"
+ },
+ {
+  "w": "vestiĝi",
+  "target": "vest/iĝ/i"
+ },
+ {
+  "w": "veto",
+  "target": "vet/o"
+ },
+ {
+  "w": "honorato",
+  "target": "honorat/o"
+ },
+ {
+  "w": "prezervi",
+  "target": "prezerv/i"
+ },
+ {
+  "w": "vestiĝo",
+  "target": "vestiĝ/o"
+ },
+ {
+  "w": "eĥolokalizi",
+  "target": "eĥ/o/lokaliz/i"
+ },
+ {
+  "w": "eĥolokalizilo",
+  "target": "eĥ/o/lokaliz/il/o"
+ },
+ {
+  "w": "kilometrilo",
+  "target": "kilo/metr/il/o"
+ }
+]

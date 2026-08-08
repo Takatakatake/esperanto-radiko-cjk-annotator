@@ -1,0 +1,385 @@
+# -*- coding: utf-8 -*-
+"""ルビ再生成後の同綴り共存fixup(恒久運用)。E_stem語幹キーと衝突する語形限定の上書き:
+ - 相関詞 ĉiel(単独/ĉiele) → 色々に/以各种方式/여러모로 (名詞ĉielo=空はword_anno側)
+ - 形容詞 lama/laman/lamaj/lamajn/lame → lam+語尾 (僧lamao=ラマ僧はword_anno側)
+再生成のたびに実行: python fix_ruby_postregen.py
+"""
+import json, os, sys, re, unicodedata
+from collections import Counter
+from pathlib import Path
+
+from atomic_json import atomic_file_copy, atomic_json_dump
+from gen_replacement import load_app_replacement_helper
+from reviewed_di_semantic_policy import (
+    EXPECTED_THEOLOGICAL_DI_GLOBAL_RULES,
+    THEOLOGICAL_DI_GLOSSES,
+    THEOLOGICAL_DI_RUNTIME_AUTHORITY,
+    THEOLOGICAL_DI_RUNTIME_RULE_MULTIPLICITY,
+)
+sys.stdout.reconfigure(encoding="utf-8")
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_authoritative_exact_surfaces(root=ROOT):
+    """Return exact-case and casefold surfaces that post-fixups may not edit."""
+    exact_surfaces = set()
+    casefold_surfaces = set()
+    for name in (
+        "_corpus_exact_app_manifest.json",
+        "_corpus_reviewed_exact_app_manifest.json",
+    ):
+        path = root / "_analysis_20260625" / name
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        exact_surfaces.update(
+            unicodedata.normalize("NFC", row["surface"])
+            for row in payload["exact_surfaces"]
+        )
+    for path in (
+        root / "_analysis_20260625" / "no_worsening_guards.json",
+        root / "_analysis_20260625" / "_strict_gold_reference_fixes.json",
+        root / "_analysis_20260625" / "out" / "confirmed_tier30.json",
+    ):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        entries = payload.get("entries", []) if isinstance(payload, dict) else payload
+        for entry in entries:
+            if not entry.get("exact_only"):
+                continue
+            surface = unicodedata.normalize("NFC", entry["w"])
+            if entry.get("case_sensitive"):
+                exact_surfaces.add(surface)
+            else:
+                casefold_surfaces.add(surface.casefold())
+    return exact_surfaces, casefold_surfaces
+
+
+AUTHORITATIVE_EXACT_SURFACES, AUTHORITATIVE_CASEFOLD_SURFACES = (
+    load_authoritative_exact_surfaces()
+)
+
+
+def is_authoritative_exact_surface(surface):
+    normalized = unicodedata.normalize("NFC", surface)
+    return (
+        normalized in AUTHORITATIVE_EXACT_SURFACES
+        or normalized.casefold() in AUTHORITATIVE_CASEFOLD_SURFACES
+    )
+
+CORR_CIEL={'JA':'色々に','ZH':'以各种方式','KO':'여러모로'}
+RUBY_BLOCK_RE = re.compile(
+    r'<ruby>(?P<piece>[^<]+)<rt class="[^"]+">'
+    r'(?P<gloss>.*?)</rt></ruby>'
+)
+
+# E_stem語幹キーがwa未収録/別noslで root既定に落ちる語の per-word piece 再構築
+WORD_PIECES={
+  'anestezi': [('an',{'JA':'無','ZH':'无','KO':'무'}),
+               ('estez',{'JA':'感覚','ZH':'感觉','KO':'감각'}),
+               ('i',None)],
+  # 粗ルビでは dinamism を一体化する（PEJVO原典・学術版と一致）。
+  # 学習者版の dinam/ism は漢字トラック用の偽分解として別途そのまま尊重する。
+  'dinamism': [('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'})],
+  'elektrodinamism': [
+               ('elektr',{'JA':'電気','ZH':'电','KO':'전기'}),
+               ('o',None),
+               ('dinamism',{'JA':'力動主義','ZH':'动力主义','KO':'역동주의'}),
+  ],
+  # 医学-it-(炎症)・化学-at-(塩)は分詞ではなく「偽の友」。E_stem既定の it=受動完了/at=受動継続
+  # を、既存 wa['mening/it']/wa['nitr/at'] と同じ正しいグロス(炎/酸塩)へ後処理で是正。
+  # (コーパスの粗ルビ meningit=髄膜炎/nitrat=硝酸塩 とも意味整合。漢字トラックは元より正)
+  # 固有名詞のルビ一体化(コーパス粗さ整合; gold偽分解 nov/jork 等は漢字トラック専用)
+  # 典拠: コーパス実グロス Novjork=[地名]ニューヨーク / Bonaer=[地名]ブエノスアイレス(KO=부에노스아이레스)
+  #        Manil=[地名]マニラ / detektiv=探偵 (第72R監査 corpus_errors 4語=36箇所の解消)
+  'novjork': [('novjork',{'JA':'[地名]ニューヨーク','ZH':'[地名]纽约','KO':'[지명]뉴욕'})],
+  'bonaer': [('bonaer',{'JA':'[地名]ブエノスアイレス','ZH':'[地名]布宜诺斯艾利斯','KO':'[지명]부에노스아이레스'})],
+  'manil': [('manil',{'JA':'[地名]マニラ','ZH':'[地名]马尼拉','KO':'[지명]마닐라'})],
+  'detektiv': [('detektiv',{'JA':'探偵','ZH':'侦探','KO':'탐정'})],
+  'meningit': [('mening',{'JA':'髄膜','ZH':'脑膜','KO':'수막'}),
+               ('it',{'JA':'炎','ZH':'炎','KO':'염'})],
+  'nitrat':   [('nitr',{'JA':'窒素','ZH':'氮','KO':'질소'}),
+               ('at',{'JA':'酸塩','ZH':'酸盐','KO':'산염'})],
+}
+_WP_END={'','o','on','oj','ojn','a','aj','an','ajn','e','en','ist','isto','iston','istoj'}
+ADJ_LAM={'JA':'足が不自由な','ZH':'跛行的','KO':'다리 저는'}
+CIEL_FORMS={'ĉiel','ĉiele'}
+LAMA_FORMS={'lama','laman','lamaj','lamajn','lame'}
+
+
+# 大文字語頭でのみ適用する固有名詞 piece 再構築(小文字の同綴り一般語は不変)。
+# Butano(国名ブータン) vs butano(ブタンガス): 小文字CSV既定 butan=ブタン を保持したまま、
+# 大文字語形にのみ地名グロスを割り当てる(コーパス Butan<rt>[地名]ブータン と整合)。
+CAP_WORD_PIECES={
+  'butan': [('butan',{'JA':'[地名]ブータン','ZH':'[地名]不丹','KO':'[지명]부탄'})],
+}
+
+
+def rewrite_reviewed_theological_di(src, rendered, app):
+    """Return one exact God/two semantic correction, or ``None`` off-scope."""
+    normalized_src = unicodedata.normalize('NFC', src)
+    expected_signature = THEOLOGICAL_DI_RUNTIME_AUTHORITY.get(
+        normalized_src.casefold()
+    )
+    if expected_signature is None:
+        return None
+    if is_authoritative_exact_surface(normalized_src):
+        raise ValueError(
+            f'theological di/exact-surface authority collision: {src!r}'
+        )
+    if app not in THEOLOGICAL_DI_GLOSSES:
+        raise ValueError(f'unsupported theological di language: {app!r}')
+
+    matches = list(RUBY_BLOCK_RE.finditer(rendered))
+    actual_signature = tuple(
+        unicodedata.normalize('NFC', match.group('piece')).casefold()
+        for match in matches
+    )
+    if actual_signature != expected_signature:
+        raise ValueError(
+            f'theological di ruby signature drift for {src!r}: '
+            f'{actual_signature!r} != {expected_signature!r}'
+        )
+    di_indexes = [
+        index for index, piece in enumerate(actual_signature)
+        if piece == 'di'
+    ]
+    expected_di_index = expected_signature.index('di')
+    if di_indexes != [expected_di_index]:
+        raise ValueError(
+            f'theological di ruby position drift for {src!r}: '
+            f'{di_indexes!r} != {[expected_di_index]!r}'
+        )
+
+    old_gloss, new_gloss = THEOLOGICAL_DI_GLOSSES[app]
+    di_match = matches[expected_di_index]
+    current_gloss = di_match.group('gloss')
+    if current_gloss not in (old_gloss, new_gloss):
+        raise ValueError(
+            f'theological di gloss drift for {src!r}: {current_gloss!r}'
+        )
+    # The reviewed old/new glosses have identical Arial16 widths.  Replace
+    # only the rt text span: rb, class, tags and authored breaks remain bytes.
+    return (
+        rendered[:di_match.start('gloss')]
+        + new_gloss
+        + rendered[di_match.end('gloss'):]
+    )
+
+
+def rewrite_surface_core(src, app, format_piece):
+    """Return a replacement core, or ``None`` when no fixup may apply."""
+    if is_authoritative_exact_surface(src):
+        return None
+    sl = src.casefold()
+    if sl in CIEL_FORMS:
+        stem = src[:4]
+        return format_piece(stem, CORR_CIEL[app]) + src[4:]
+    if src[:1].isupper() and any(
+        sl.startswith(stem) and sl[len(stem):] in _WP_END
+        for stem in CAP_WORD_PIECES
+    ):
+        stem = next(
+            candidate for candidate in CAP_WORD_PIECES
+            if sl.startswith(candidate) and sl[len(candidate):] in _WP_END
+        )
+        pos = 0
+        parts = []
+        for piece, glosses in CAP_WORD_PIECES[stem]:
+            segment = src[pos:pos + len(piece)]
+            pos += len(piece)
+            parts.append(
+                segment if glosses is None
+                else format_piece(segment, glosses[app])
+            )
+        return ''.join(parts) + src[pos:]
+    if any(
+        sl.startswith(stem) and sl[len(stem):] in _WP_END
+        for stem in WORD_PIECES
+    ):
+        stem = next(
+            candidate for candidate in WORD_PIECES
+            if sl.startswith(candidate) and sl[len(candidate):] in _WP_END
+        )
+        pos = 0
+        parts = []
+        for piece, glosses in WORD_PIECES[stem]:
+            segment = src[pos:pos + len(piece)]
+            pos += len(piece)
+            parts.append(
+                segment if glosses is None
+                else format_piece(segment, glosses[app])
+            )
+        return ''.join(parts) + src[pos:]
+    if sl in LAMA_FORMS:
+        stem = src[:3]
+        return format_piece(stem, ADJ_LAM[app]) + src[3:]
+    return None
+
+
+def prepare_app(app):
+    base=ROOT / f"Esperanto-Kanji-Ruby-{app}" / "app_data"
+    dep=base / "置換リスト_ルビ.json"
+    with dep.open(encoding="utf-8") as stream:
+        d=json.load(stream)
+    M = load_app_replacement_helper(
+        ROOT / f"Esperanto-Kanji-Ruby-{app}"
+    )
+    with (base / "char_widths.json").open(encoding="utf-8") as stream:
+        cw=json.load(stream)
+    FMT='HTML格式_Ruby文字_大小调整'
+    old_di_gloss, new_di_gloss = THEOLOGICAL_DI_GLOSSES[app]
+    try:
+        old_di_width = sum(cw[character] for character in old_di_gloss)
+        new_di_width = sum(cw[character] for character in new_di_gloss)
+    except KeyError as error:
+        raise ValueError(
+            f'{app}: theological di gloss has no Arial16 width: {error.args[0]!r}'
+        ) from error
+    if old_di_width != new_di_width:
+        raise ValueError(
+            f'{app}: theological di gloss width drift: '
+            f'{old_di_width!r} != {new_di_width!r}'
+        )
+    global_buckets = [
+        key for key in d if 'replacements_final_list' in key
+    ]
+    if len(global_buckets) != 1:
+        raise ValueError(
+            f'{app}: global replacement bucket drift: {global_buckets!r}'
+        )
+    global_bucket = global_buckets[0]
+    theological_di_rows = []
+    n=0
+    for k in d:
+        for e in d[k]:
+            if len(e)<2 or not isinstance(e[0],str) or not isinstance(e[1],str): continue
+            old=e[0]
+            left_len=len(old)-len(old.lstrip())
+            right_len=len(old)-len(old.rstrip())
+            core_end=len(old)-right_len if right_len else len(old)
+            leading=old[:left_len]
+            trailing=old[core_end:]
+            src=unicodedata.normalize('NFC',old[left_len:core_end])
+            theological_surface = src.casefold()
+            if (
+                theological_surface in THEOLOGICAL_DI_RUNTIME_AUTHORITY
+                and k != global_bucket
+            ):
+                raise ValueError(
+                    f'{app}: theological di surface leaked outside global '
+                    f'bucket: {k!r} {src!r}'
+                )
+            rendered_core_end = (
+                len(e[1]) - right_len if right_len else len(e[1])
+            )
+            theological_di = (
+                rewrite_reviewed_theological_di(
+                    src,
+                    e[1][left_len:rendered_core_end],
+                    app,
+                )
+                if k == global_bucket
+                else None
+            )
+            if theological_di is not None:
+                theological_di_rows.append(theological_surface)
+                nb=leading+theological_di+trailing
+                if nb!=e[1]: e[1]=nb; n+=1
+                continue
+            rewritten = rewrite_surface_core(
+                src,
+                app,
+                lambda piece, gloss: M.output_format(
+                    piece, gloss, FMT, cw,
+                ),
+            )
+            if rewritten is not None:
+                nb=leading+rewritten+trailing
+                if nb!=e[1]: e[1]=nb; n+=1
+    actual_theological_di_multiplicity = Counter(theological_di_rows)
+    if (
+        len(theological_di_rows) != EXPECTED_THEOLOGICAL_DI_GLOBAL_RULES
+        or actual_theological_di_multiplicity
+        != Counter(THEOLOGICAL_DI_RUNTIME_RULE_MULTIPLICITY)
+    ):
+        raise ValueError(
+            f'{app}: theological di deployed scope drift: '
+            f'rows={len(theological_di_rows)} '
+            f'surfaces={len(actual_theological_di_multiplicity)} '
+            f'multiplicity={dict(actual_theological_di_multiplicity)!r}'
+        )
+    return dep, d, n
+
+
+def transactional_payload_writes(prepared, *, replace=os.replace):
+    """Replace all three payloads as one rollback-protected transaction."""
+    staged = []
+    rollbacks = []
+    replaced = []
+    try:
+        for destination, payload, _count in prepared:
+            stage = destination.with_name(
+                destination.name + ".phase558_postregen_staged"
+            )
+            rollback = destination.with_name(
+                destination.name + ".phase558_postregen_rollback"
+            )
+            if stage.exists() or rollback.exists():
+                raise ValueError(
+                    f"stale Phase 558 postregen transaction: {destination}"
+                )
+            # Own the path before the dump begins so a writer that creates a
+            # partial stage and then raises cannot strand a stale transaction.
+            staged.append((stage, destination))
+            atomic_json_dump(stage, payload)
+            # Re-read every staged JSON before the first deployed byte changes.
+            if json.loads(stage.read_text(encoding="utf-8")) != payload:
+                raise ValueError(f"postregen staged payload drift: {destination}")
+            # Register before copy for the same reason: a copy may complete its
+            # replace and fail only in its subsequent validation.
+            rollbacks.append((rollback, destination))
+            atomic_file_copy(destination, rollback)
+        for stage, destination in staged:
+            replace(stage, destination)
+            replaced.append(destination)
+    except Exception:
+        rollback_errors = []
+        for rollback, destination in rollbacks:
+            try:
+                if destination in replaced and rollback.exists():
+                    replace(rollback, destination)
+                elif rollback.exists():
+                    rollback.unlink()
+            except Exception as error:
+                rollback_errors.append((str(destination), repr(error)))
+        for stage, _destination in staged:
+            if stage.exists():
+                stage.unlink()
+        if rollback_errors:
+            raise RuntimeError(
+                f"Phase 558 postregen rollback failed: {rollback_errors!r}"
+            )
+        raise
+    else:
+        for rollback, _destination in rollbacks:
+            if rollback.exists():
+                rollback.unlink()
+
+
+def process_app(app):
+    """Compatibility helper for a single app; formal main writes all three."""
+    prepared = prepare_app(app)
+    transactional_payload_writes([prepared])
+    return prepared[2]
+
+
+def main():
+    prepared = [prepare_app(app) for app in ("JA", "ZH", "KO")]
+    transactional_payload_writes(prepared)
+    for app, (_destination, _payload, count) in zip(
+        ("JA", "ZH", "KO"), prepared,
+    ):
+        print(f"[{app}] postregen fixup {count}")
+    print("完了")
+
+
+if __name__ == "__main__":
+    main()

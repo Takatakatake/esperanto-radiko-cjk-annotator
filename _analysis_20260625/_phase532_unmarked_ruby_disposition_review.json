@@ -1,0 +1,44 @@
+{
+ "schema_version": 1,
+ "phase": 532,
+ "candidate_only": false,
+ "policy": "For the frozen Phase 532 source delta, adopt only the four reviewed ordinary Ruby repairs and otherwise retain the deployed Kyoto-level Ruby boundary until a separate review changes it.",
+ "sources": {
+  "baseline_learner_sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+  "baseline_academic_sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
+  "candidate_learner_sha256": "6B403AA30BBCBBA4C9E41A2CF48D1AD2FC1D5A5DB1154CAF1260A361566E3226",
+  "candidate_academic_sha256": "FE632820E7752A555787C926C0A843CD82B2F79D4177A6D8D1E9622CA96393A5"
+ },
+ "expected_counts": {
+  "entries": 23,
+  "already_aligned": 2,
+  "adopt_shared_ruby_repair": 4,
+  "retain_current_granularity_pending": 17
+ },
+ "entries_sha256": "BDE281D9016972B2896EFF812C706E1355A5C531580FCA23B7F875A70FD238ED",
+ "entries": [
+  {"learner_line":2704,"surface":"atletiko","selected_ruby_decomposition":"atletik/o","disposition":"retain_current_granularity_pending","reason_code":"historical_fake_marker_retired_keep_deployed_coarse"},
+  {"learner_line":3114,"surface":"balistika","selected_ruby_decomposition":"balistik/a","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":3115,"surface":"balistiko","selected_ruby_decomposition":"balistik/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":12905,"surface":"gimnastika","selected_ruby_decomposition":"gimnastik/a","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":12906,"surface":"gimnastikejo","selected_ruby_decomposition":"gimnastik/ej/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":12907,"surface":"gimnastiki","selected_ruby_decomposition":"gimnastik/i","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":12908,"surface":"gimnastikisto","selected_ruby_decomposition":"gimnastik/ist/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":12909,"surface":"gimnastiko","selected_ruby_decomposition":"gimnastik/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":20825,"surface":"kuracgimnastiko","selected_ruby_decomposition":"kurac/gimnastik/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":27984,"surface":"numismatiko","selected_ruby_decomposition":"numismatik/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":34352,"surface":"ritma gimnastiko","selected_ruby_decomposition":"ritm/a gimnastik/o","disposition":"retain_current_granularity_pending","reason_code":"multiword_outer_ik_requires_separate_ruby_review"},
+  {"learner_line":38814,"surface":"suprenglisi","selected_ruby_decomposition":"supr/e/n/glis/i","disposition":"adopt_shared_ruby_repair","reason_code":"directional_adverb_e_plus_accusative_n","setting":{"target":"supr/e/n/glis/i","track":"shared","productive":true}},
+  {"learner_line":44124,"surface":"Sud-Sudano","selected_ruby_decomposition":"Sud-Sudan/o","disposition":"already_aligned","reason_code":"deployed_runtime_already_matches_candidate"},
+  {"learner_line":44566,"surface":"agregato","selected_ruby_decomposition":"agregat/o","disposition":"retain_current_granularity_pending","reason_code":"suffix_at_requires_separate_ruby_review"},
+  {"learner_line":48339,"surface":"gimnastikilo","selected_ruby_decomposition":"gimnastik/il/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":48550,"surface":"grenadilbero","selected_ruby_decomposition":"grenadil/ber/o","disposition":"already_aligned","reason_code":"deployed_runtime_already_matches_candidate"},
+  {"learner_line":51607,"surface":"lulu","selected_ruby_decomposition":"lul/u","disposition":"adopt_shared_ruby_repair","reason_code":"reviewed_imperative_ending","setting":{"target":"lul/u","track":"shared","productive":false,"supersedes_strict_target":"lulu"}},
+  {"learner_line":53116,"surface":"pasivaĵo","selected_ruby_decomposition":"pasiv/aĵ/o","disposition":"adopt_shared_ruby_repair","reason_code":"remove_false_pas_iv_split","setting":{"target":"pasiv/aĵ/o","track":"shared","productive":true}},
+  {"learner_line":53117,"surface":"pasivigi","selected_ruby_decomposition":"pasiv/ig/i","disposition":"adopt_shared_ruby_repair","reason_code":"remove_false_pas_iv_split","setting":{"target":"pasiv/ig/i","track":"shared","productive":true}},
+  {"learner_line":55187,"surface":"sofistiko","selected_ruby_decomposition":"sofistik/o","disposition":"retain_current_granularity_pending","reason_code":"outer_ik_requires_separate_ruby_review"},
+  {"learner_line":56377,"surface":"transita","selected_ruby_decomposition":"transit/a","disposition":"retain_current_granularity_pending","reason_code":"transit_trans_it_requires_separate_ruby_review"},
+  {"learner_line":56378,"surface":"transite","selected_ruby_decomposition":"transit/e","disposition":"retain_current_granularity_pending","reason_code":"transit_trans_it_requires_separate_ruby_review"},
+  {"learner_line":56379,"surface":"transitisto","selected_ruby_decomposition":"transit/ist/o","disposition":"retain_current_granularity_pending","reason_code":"transit_trans_it_requires_separate_ruby_review"}
+ ]
+}

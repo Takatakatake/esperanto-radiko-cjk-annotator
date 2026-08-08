@@ -1,0 +1,23 @@
+[
+ {
+  "word": "antoni",
+  "verdict": "corpus_error",
+  "note": "Antoni(例: Antoni Grabowski等のポーランド語名)は固有名詞全体保持が正で、コーパスのanton/iは語尾iを不当に切った境界ずれ。",
+  "vok": true,
+  "vnote": "4件はJan Antoni Mikulicz-RadeckiとAntoni Gaudíの人名で全体保持が正、コーパスのanton/iは人名分断の明白な誤りでcorpus_error判定は妥当(前回のBOTH_VALID裁定の方が甘すぎた)。"
+ },
+ {
+  "word": "pense",
+  "verdict": "corpus_error",
+  "note": "正しくはpens/e(考え+副詞語尾)で、コーパスのpen/seは境界ずれの明白な誤り(同語の別エントリではpens/eと正しく分解されている)。",
+  "vok": true,
+  "vnote": "「sen pense」「en pense」等すべて思考のpens/eが正(パンジーはpense/oでo必要)、このエントリのコーパス支持・アプリ誤り判定は妥当。"
+ },
+ {
+  "word": "nemunas",
+  "verdict": "corpus_error",
+  "note": "リトアニアの川名ネムナスは固有名詞全体保持(app)が正で、corpusのn/em/u/nasは明白な過分解。",
+  "vok": true,
+  "vnote": "コーパス実体n/em/u/nas(明白な過分解)と文脈「la rivero Nemunas」を確認、川名の丸ごと保持(app)が正でcorpus_error判定は妥当。"
+ }
+]

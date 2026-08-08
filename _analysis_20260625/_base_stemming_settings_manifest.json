@@ -1,0 +1,35 @@
+{
+ "schema_version": 1,
+ "description": "Pinned language-independent base morphology settings used before confirmed-tier overlays.",
+ "file": "_base_stemming_settings.json",
+ "line_endings": "canonical_lf",
+ "bytes": 150346,
+ "sha256": "50F40E9E057C833CA2163D3832C2A843A4700D0AC5A2701CE1388E2D33C814F5",
+ "rows": 1779,
+ "header_rows": 1,
+ "semantic_rows": 1778,
+ "semantic_sha256": "06A91312DCFD2B4B805FB432E8B937FEF65192F26536E5E2E61F0B4352258A87",
+ "provenance": {
+  "git_head": "87ee70700fee2be18c5372be312b8c8d18ebd948",
+  "source_paths": {
+   "ja": "Esperanto-Kanji-Ruby-JA/app_data/分解設定.json",
+   "zh": "Esperanto-Kanji-Ruby-ZH/app_data/分解設定.json",
+   "ko": "Esperanto-Kanji-Ruby-KO/app_data/分解設定.json"
+  },
+  "extraction": "Exact JA blob payload; runtime replaces only the localized explanatory header row.",
+  "ja_blob": "6b97a1bbff185d8e58ed4d622761e479b49b1ad2",
+  "zh_blob": "03f581488fa8418494ee08109f4202f69e7a5fdb",
+  "ko_blob": "39effa90650a5e4a2108967be0ff474dc805ad2a",
+  "head_three_language_semantic_equal": true,
+  "stale_backup_audit": {
+   "ja_rows": 1918,
+   "ko_rows": 1918,
+   "ja_ko_semantic_equal": true,
+   "zh_rows": 1919,
+   "zh_common_stem_action_diffs": 619,
+   "zh_word_boundary_only_action_diffs": 619,
+   "zh_case_sensitive_extra": "Kacumi",
+   "zh_redecomposed_keys": ["id/o/n", "mi/a/j", "ni/a/n"]
+  }
+ }
+}

@@ -1,0 +1,2767 @@
+{
+ "scope": "all_corpus_content_html",
+ "files": 169,
+ "annotated_documents": 123,
+ "annotated_document_paths": [
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_00.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_01.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_02.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_03.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_04.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_05.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_06.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_07.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_08.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_09.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_10.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_11.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_12.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_13.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_14.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_15.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_16.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_17.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_18.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_19.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_20.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_21.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_22.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_23.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_24.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_25.html",
+  "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_26.html",
+  "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+  "legajxoj/eseoj-kaj-artikoloj/Revuo_eseoj_verkitaj_de_s-ro_usui_corrected.html",
+  "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+  "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+  "legajxoj/historio-kaj-biografioj/oomoto_esperanto.html",
+  "legajxoj/historio-kaj-biografioj/osakakenji.html",
+  "legajxoj/historio-kaj-biografioj/renard_corsetti.html",
+  "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_01.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_02.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_03.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_04.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_05.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_06.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_07.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_08.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_09.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_10.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_11.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_12.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_13.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_14.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_16.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_17.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_18.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_19.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_20.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_21.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_22.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_23.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_24.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_25.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_26.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_27.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_29.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_30.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_31.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_32.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_34.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_35.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_36.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_37.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_39.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_40.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_41.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_43.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_44.html",
+  "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+  "lernolibroj/esperanto-express/esperanto_express_corrected.html",
+  "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+  "lernolibroj/fujimaki/fujimaki1.html",
+  "lernolibroj/fujimaki/fujimaki10.html",
+  "lernolibroj/fujimaki/fujimaki11.html",
+  "lernolibroj/fujimaki/fujimaki12.html",
+  "lernolibroj/fujimaki/fujimaki13.html",
+  "lernolibroj/fujimaki/fujimaki14.html",
+  "lernolibroj/fujimaki/fujimaki15.html",
+  "lernolibroj/fujimaki/fujimaki16.html",
+  "lernolibroj/fujimaki/fujimaki17.html",
+  "lernolibroj/fujimaki/fujimaki18.html",
+  "lernolibroj/fujimaki/fujimaki19.html",
+  "lernolibroj/fujimaki/fujimaki2.html",
+  "lernolibroj/fujimaki/fujimaki20.html",
+  "lernolibroj/fujimaki/fujimaki3.html",
+  "lernolibroj/fujimaki/fujimaki4.html",
+  "lernolibroj/fujimaki/fujimaki5.html",
+  "lernolibroj/fujimaki/fujimaki6.html",
+  "lernolibroj/fujimaki/fujimaki7.html",
+  "lernolibroj/fujimaki/fujimaki8.html",
+  "lernolibroj/fujimaki/fujimaki9.html",
+  "revuoj/revuo-orienta/2025/202503,Revuo,eltiritaj_Esperantaj_pagxoj.html",
+  "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+  "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+  "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2025/202508_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2025/2512_revuo_hasegawa_teru_kun_japana_traduko.html",
+  "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202601_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj_alia_versio.html",
+  "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/202607_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "revuoj/revuo-orienta/2026/RO_202605_eltiritaj_esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+  "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+  "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html"
+ ],
+ "zero_ruby_documents": 46,
+ "zero_ruby_tally": {
+  "navigation/index": 17,
+  "plain-source/Gerda": 28,
+  "plain-source/bilingual": 1
+ },
+ "zero_ruby_paths": [
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/Gerda_malaperis_2006_verkita_de_Claude_Piron_txt.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_00.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_01.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_02.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_03.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_04.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_05.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_06.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_07.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_08.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_09.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_10.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_11.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_12.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_13.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_14.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_15.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_16.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_17.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_18.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_19.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_20.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_21.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_22.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_23.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_24.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_25.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/gerda_malaperis_txt_26.html",
+   "exclusion": "plain-source/Gerda"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/index_txt.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/Gerda_malaperis_2006_verkita_de_Claude_Piron/index_txt_files.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/historio-kaj-biografioj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_du-lingva.html",
+   "exclusion": "plain-source/bilingual"
+  },
+  {
+   "path": "lernolibroj/esperanto-express/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "lernolibroj/fujimaki/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "lernolibroj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "revuoj/revuo-orienta/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "rondolegado/2026-03/index.html",
+   "exclusion": "navigation/index"
+  },
+  {
+   "path": "rondolegado/index.html",
+   "exclusion": "navigation/index"
+  }
+ ],
+ "document_accounting_gate": true,
+ "totals": {
+  "ruby": 348971,
+  "url_spans": 95,
+  "attached_morphology_tokens": 116304,
+  "attached_allowed_internal": 1190,
+  "attached_allowed_terminal": 115114,
+  "attached_unexpected_tokens": 7,
+  "lines_non_annotation_block": 31799,
+  "lines_translation_or_note": 22012,
+  "lines_annotated_body": 80802,
+  "lines_plain_line_in_annotated_document": 101,
+  "lines_foreign_source_block": 2
+ },
+ "attached_watch_inventory": {
+  "an:after_ruby_terminal": 4398,
+  "en:after_ruby_terminal": 285,
+  "en:between_rubies": 46,
+  "ia:after_ruby_terminal": 3,
+  "io:after_ruby_terminal": 567,
+  "on:after_ruby_terminal": 9130
+ },
+ "candidate_occurrences": 241,
+ "candidate_unique_path_token": 209,
+ "reviewed_occurrences": 241,
+ "unresolved_true_missing": 0,
+ "coverage_gate": true,
+ "review_config_entries": 209,
+ "review_keys_used": 235,
+ "review_config_gate": true,
+ "review_unused_keys": [],
+ "review_count_mismatches": [],
+ "unresolved": [],
+ "reviewed": [
+  {
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html",
+   "line": 446,
+   "token": "Kore",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]: [R]n ? [R] [R], “Kore ikutsu ?”",
+   "review_category": "foreign_language_example",
+   "reason": "Japanese example phrase shown for comparison, outside Esperanto reading prose."
+  },
+  {
+   "path": "lernolibroj/esperanto-express/esperanto_express_corrected.html",
+   "line": 449,
+   "token": "Kore",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]: [R]e [R] [R]e [R]u, “Kore ikura ?”",
+   "review_category": "foreign_language_example",
+   "reason": "Japanese example phrase shown for comparison, outside Esperanto reading prose."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3136,
+   "token": "Guk-kon",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Guk-kon\", [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3143,
+   "token": "Gukkon",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Gukkon\", [R]e [R] [R] [R]o.",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3769,
+   "token": "ac",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3769,
+   "token": "ad",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3769,
+   "token": "ba",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3769,
+   "token": "da",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3770,
+   "token": "ec",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3770,
+   "token": "ed",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3770,
+   "token": "aca",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3773,
+   "token": "ec",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "ec,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3874,
+   "token": "Malamikete",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Malamikete [R] las nacjes",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3874,
+   "token": "las",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Malamikete [R] las nacjes",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3875,
+   "token": "Kadó",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Kadó, kadó, [R] temp' está!",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3875,
+   "token": "temp",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Kadó, kadó, [R] temp' está!",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3876,
+   "token": "tot",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] tot' homoze in familje",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 3876,
+   "token": "in",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] tot' homoze in familje",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 6117,
+   "token": "komenius",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] (komenius) [R] [R] [R]a,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 6656,
+   "token": "lui",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "(lui [R] bofron),",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 6859,
+   "token": "loo",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "(loo), [R] 12 ([R] [R])",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 7212,
+   "token": "ĉe",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] (ĉe) [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/Esperanto_meznivela_sola_lernolibro_verkita_de_sro_fujximaki_260215.html",
+   "line": 11132,
+   "token": "a'n",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "[R]an [R]a'n ([R]",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki10.html",
+   "line": 282,
+   "token": "komenius",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] (komenius) [R] [R] [R]a,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki11.html",
+   "line": 254,
+   "token": "lui",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "(lui de bofron),",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki11.html",
+   "line": 254,
+   "token": "de",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "(lui de bofron),",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki11.html",
+   "line": 457,
+   "token": "loo",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "(loo), [R] 12 ([R] [R])",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki12.html",
+   "line": 325,
+   "token": "ĉe",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] (ĉe) [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki17.html",
+   "line": 847,
+   "token": "a'n",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "[R]an [R]a'n ([R]",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki5.html",
+   "line": 494,
+   "token": "Guk-kon",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Guk-kon\", [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki5.html",
+   "line": 501,
+   "token": "Gukkon",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Gukkon\", [R]e [R] [R] [R]o.",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 625,
+   "token": "ac",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 625,
+   "token": "ad",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 625,
+   "token": "ba",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 625,
+   "token": "da",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]on [R] [R]a [R]o ([R] a, ab, ac, ad,...ba, ca, da,...e, eb,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 626,
+   "token": "ec",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 626,
+   "token": "ed",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 626,
+   "token": "aca",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "ec, ed,...aba, aca,... [R]",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki6.html",
+   "line": 629,
+   "token": "ec",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "ec,",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 215,
+   "token": "Malamikete",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Malamikete [R] las nacjes",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 215,
+   "token": "las",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Malamikete [R] las nacjes",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 216,
+   "token": "Kadó",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Kadó, kadó, [R] temp' está!",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 216,
+   "token": "temp",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Kadó, kadó, [R] temp' está!",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 217,
+   "token": "tot",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] tot' homoze in familje",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "lernolibroj/fujimaki/fujimaki7.html",
+   "line": 217,
+   "token": "in",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] tot' homoze in familje",
+   "review_category": "foreign_or_constructed_example",
+   "reason": "Quoted phonotactic, historical-language, or constructed-language example retained in its source spelling."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+   "line": 149,
+   "token": "Area",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]a[R]e [R] [R] [R]n [R]on [R] [R], [R] [R] [R] [R]o[R]o ([R]e: Area Studies) [R] [R]o, [R] [R] [R]n: '[R] [R] [R]o[R]i [R] [R]o?'**",
+   "review_category": "quoted_english_term",
+   "reason": "English discipline name quoted as the source-language equivalent, not Esperanto prose."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/La_eseo_pri_Butano.html",
+   "line": 149,
+   "token": "Studies",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]a[R]e [R] [R] [R]n [R]on [R] [R], [R] [R] [R] [R]o[R]o ([R]e: Area Studies) [R] [R]o, [R] [R] [R]n: '[R] [R] [R]o[R]i [R] [R]o?'**",
+   "review_category": "quoted_english_term",
+   "reason": "English discipline name quoted as the source-language equivalent, not Esperanto prose."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+   "line": 1005,
+   "token": "XVI",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]aj [R]oj, [R] [R]o [R] [R] [R]a [R] [R]aj [R]oj, [R]oj [R] [R]aj [R]oj [R] [R] [R] [R]o [R] [R] XVI [R]o [R] [R] [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "roman_numeral_notation",
+   "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+   "line": 1147,
+   "token": "III",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "### [R], [R] [R]a [R]o [R] [R] III [R]",
+   "review_category": "roman_numeral_notation",
+   "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+   "line": 1198,
+   "token": "II",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]e [R] [R]o [R] [R] [R] [R] [R] [R]aj [R]oj [R] [R]a [R] [R], [R] [R]e [R] [R] [R]a [R]on [R] [R]o [R] [R]o [R]e [R] [R]o II [R] [R].",
+   "review_category": "roman_numeral_notation",
+   "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/pola_retradio.html",
+   "line": 1312,
+   "token": "III",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]o [R] [R]o III [R] [R] 1696 [R] [R] [R] [R].",
+   "review_category": "roman_numeral_notation",
+   "reason": "Roman numeral used as a historical ordinal or structural label, not an unannotated word."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+   "line": 247,
+   "token": "jan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o “jan” [R] [R] [R] “[R]o”, [R] [R] [R]a [R] [R] [R]i [R] [R] [R]a [R]o [R] [R]a [R]o.",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+   "line": 283,
+   "token": "sike",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+   "line": 328,
+   "token": "luka",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+   "line": 328,
+   "token": "mute",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/eseoj-kaj-artikoloj/tokipona_esperanto.html",
+   "line": 328,
+   "token": "ale",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100).",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or example intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 154,
+   "token": "Wikipedia",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o: Wikipedia/Luc Viatour CC BY-SA 3.0",
+   "review_category": "source_credit",
+   "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 154,
+   "token": "Luc",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o: Wikipedia/Luc Viatour CC BY-SA 3.0",
+   "review_category": "source_credit",
+   "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 154,
+   "token": "Viatour",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o: Wikipedia/Luc Viatour CC BY-SA 3.0",
+   "review_category": "source_credit",
+   "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 154,
+   "token": "CC",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o: Wikipedia/Luc Viatour CC BY-SA 3.0",
+   "review_category": "source_credit",
+   "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 154,
+   "token": "BY-SA",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o: Wikipedia/Luc Viatour CC BY-SA 3.0",
+   "review_category": "source_credit",
+   "reason": "Image license/attribution text retained verbatim outside the annotated prose."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 172,
+   "token": "u",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "[R]e [R], [R]e [R]e [R] [R]aj [R]oj, [R] [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R]a [R]o, [R]e [R]o [R] [R] [R]a [R]o ([R]), [R] [R] [R]o [R]o [R] [R] [R]u[R]no ([R]-[R]u-[R]n-o).",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 172,
+   "token": "no",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "[R]e [R], [R]e [R]e [R] [R]aj [R]oj, [R] [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R]a [R]o, [R]e [R]o [R] [R] [R]a [R]o ([R]), [R] [R] [R]o [R]o [R] [R] [R]u[R]no ([R]-[R]u-[R]n-o).",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "legajxoj/kunvenoj-kaj-prelegoj/20250521_komuna_kunveno_en_la_japana.html",
+   "line": 172,
+   "token": "n-o",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "[R]e [R], [R]e [R]e [R] [R]aj [R]oj, [R] [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R]a [R]o, [R]e [R]o [R] [R] [R]a [R]o ([R]), [R] [R] [R]o [R]o [R] [R] [R]u[R]no ([R]-[R]u-[R]n-o).",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 31965,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R] [R]a [R]o: No standing.",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 31986,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "No",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 31995,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "No standing [R] [R]:",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 32003,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "『No",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 32114,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o No standing [R],",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 37898,
+   "token": "Eeeeeeej",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Eeeeeeej,\" [R]",
+   "review_category": "onomatopoeia",
+   "reason": "Expressive drawn-out cry whose spelling is intentionally preserved."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 37925,
+   "token": "a-a-a-a-a-a-blo",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "\"[R] [R]a-a-a-a-a-a-blo,\" [R] [R] [R]o, [R], [R]",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie.html",
+   "line": 40306,
+   "token": "ĵan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e: ĵan bjetrime' pikar').",
+   "review_category": "pronunciation_transcription",
+   "reason": "Pronunciation rendering following the already annotated full personal name."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_00.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_01.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_02.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_03.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_04.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_05.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_06.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_07.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_08.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_09.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_10.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_11.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_12.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_13.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_14.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_15.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_16.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_17.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_18.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_19.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_20.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_21.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_22.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_23.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_24.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_25.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_26.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_27.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_28.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_29.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_30.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_31.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_32.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_33.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_34.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_35.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_36.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_37.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 695,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R] [R] [R]a [R]o: No standing.",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 716,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "No",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 725,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "No standing [R] [R]:",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 733,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "『No",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_38.html",
+   "line": 844,
+   "token": "No",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]o No standing [R],",
+   "review_category": "quoted_english_phrase",
+   "reason": "The English sign text 'No standing' is the object of the linguistic discussion."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_39.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_40.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_41.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+   "line": 1867,
+   "token": "Eeeeeeej",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "\"Eeeeeeej,\" [R]",
+   "review_category": "onomatopoeia",
+   "reason": "Expressive drawn-out cry whose spelling is intentionally preserved."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_42.html",
+   "line": 1894,
+   "token": "a-a-a-a-a-a-blo",
+   "kind": "attached_unexpected_token",
+   "line_class": "annotated_body",
+   "context": "\"[R] [R]a-a-a-a-a-a-blo,\" [R] [R] [R]o, [R], [R]",
+   "review_category": "grammar_or_pronunciation_notation",
+   "reason": "Deliberate stutter, repeated ending, or segmented sound/letter notation; not a missing lexical ruby."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_43.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_44.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+   "line": 126,
+   "token": "Hejmo",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "Hejmo /",
+   "review_category": "navigation_link",
+   "reason": "Chapter navigation label; it is interface text, not annotated reading prose."
+  },
+  {
+   "path": "legajxoj/vere-aux-fantazie/vere_aux_fantazie_45.html",
+   "line": 264,
+   "token": "ĵan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e: ĵan bjetrime' pikar').",
+   "review_category": "pronunciation_transcription",
+   "reason": "Pronunciation rendering following the already annotated full personal name."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 285,
+   "token": "Fūsui",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "review_category": "quoted_source_term",
+   "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 285,
+   "token": "Qi",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "review_category": "quoted_source_term",
+   "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 285,
+   "token": "Ki",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R] [R]on [R] [R] [R]a [R]o [R] [R], [R] [R] [R] [R]a [R]o [R] [R] 1100 [R]oj. [R] [R]a [R]io [R] [R] [R]a [R]o [R]a [R] ([R]e: Fūsui), [R] [R]e [R] “[R]ajn [R]ojn” [R] Qi ([R]e: Ki) [R] [R]i [R]ojn [R] [R] [R]o. [R] [R]oj [R] [R] [R]on [R] [R] [R]i [R]on [R]an [R] [R]o, [R] [R] [R] [R]i, [R] [R] [R] [R]i [R] [R]o [R] [R] [R]a [R]o [R] \"[R]aj [R]oj” [R]e [R] [R]e [R] [R] [R]. [R]j “[R]oj” [R] [R] [R] [R]o, [R] [R]a [R]a [R]o [R] [R] [R] [R]a [R]o [R] [R] [R]o... [R], [R] [R] [R] [R]a [R]o, [",
+   "review_category": "quoted_source_term",
+   "reason": "Chinese/Japanese technical term and romanization explicitly quoted for comparison."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 358,
+   "token": "Nobel",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] Nobel Lecture, delivered by [R], 2024",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 358,
+   "token": "Lecture",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] Nobel Lecture, delivered by [R], 2024",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 360,
+   "token": "The",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "© The Nobel Foundation 2024 ([R] [R]-[R]o 2024)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 360,
+   "token": "Nobel",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "© The Nobel Foundation 2024 ([R] [R]-[R]o 2024)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 360,
+   "token": "Foundation",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "© The Nobel Foundation 2024 ([R] [R]-[R]o 2024)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Nobel",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Peace",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Prize",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Nobel",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Prize",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Outreach",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Jo",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Straube",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Jo",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202504_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 465,
+   "token": "Straube",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Photo: Nobel Peace Prize lecture 2024 ID: 163110 ([R]o: [R]a [R]a [R]o 2024 ID: 163110) © Nobel Prize Outreach. Photo: Jo Straube ([R]o [R] [R]-[R]a [R]o: [R]o [R] Jo Straube)",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/photo credit or copyright line retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 410,
+   "token": "Lecture",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R] Lecture, delivered by [R] [R], 2024**",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/copyright credit retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 416,
+   "token": "The",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**© The [R] Foundation 2024 ([R] [R]-[R]o 2024)**",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/copyright credit retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 416,
+   "token": "Foundation",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**© The [R] Foundation 2024 ([R] [R]-[R]o 2024)**",
+   "review_category": "source_credit",
+   "reason": "English Nobel lecture/copyright credit retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 552,
+   "token": "et",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**11. et ↔ □□□**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 555,
+   "token": "as",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**12. □□□as [R]i [R]n, [R]n [R] [R].**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 564,
+   "token": "du",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**17. [R] [R] du□□on [R] [R]o.**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 603,
+   "token": "OL",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**OL N LU**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 603,
+   "token": "LU",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**OL N LU**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202505_Revuo_eltiritaj_Esperantaj_pagxoj.html",
+   "line": 607,
+   "token": "IR",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**IR B E**",
+   "review_category": "grammar_or_code_example",
+   "reason": "Letter/blank puzzle or explicitly isolated grammar fragment, not continuous reading prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 127,
+   "token": "ZAMENHOF",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "ZAMENHOF AGED IS",
+   "review_category": "image_text",
+   "reason": "Erroneous English wording transcribed from an AI-generated image."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 127,
+   "token": "AGED",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "ZAMENHOF AGED IS",
+   "review_category": "image_text",
+   "reason": "Erroneous English wording transcribed from an AI-generated image."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 127,
+   "token": "IS",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "ZAMENHOF AGED IS",
+   "review_category": "image_text",
+   "reason": "Erroneous English wording transcribed from an AI-generated image."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 468,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anyhy ira inati - [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 470,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anyhy ira wa inati - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 472,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anyhy ira wa inatanon - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 474,
+   "token": "anona",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira debo inatanon - [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 474,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira debo inatanon - [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 476,
+   "token": "anona",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira wawi sohidi - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 476,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira wawi sohidi - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 478,
+   "token": "anona",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira wawi inakubikowa - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 478,
+   "token": "ira",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "anona ira wawi inakubikowa - [R] [R] [R]oj",
+   "review_category": "foreign_language_example",
+   "reason": "Source-language data in a linguistics problem retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 490,
+   "token": "jol",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]o 2 [R] [R]a [R]: [[R] jol2025-se.pdf",
+   "review_category": "file_name",
+   "reason": "PDF file name, not prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 490,
+   "token": "se",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]o 2 [R] [R]a [R]: [[R] jol2025-se.pdf",
+   "review_category": "file_name",
+   "reason": "PDF file name, not prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 778,
+   "token": "JP",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 778,
+   "token": "Tôkyô-to",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 778,
+   "token": "Sinzyuku-ku",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202506_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 778,
+   "token": "Waseda-mati",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 156,
+   "token": "Gakusei-jidai-ni-ĉikara-o-ireta-koto",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]a [R]o [R] [R]a[R]a [R]o [R] [R] [R]aj [R]aj [R]oj. [R] [R] [R]o [R] [R] [R]a [R]o Gakusei-jidai-ni-ĉikara-o-ireta-koto ([R] [R] [R] [R] [R]ajn [R]ajn [R]ojn).**",
+   "review_category": "foreign_language_example",
+   "reason": "Romanized Japanese phrase explicitly presented as a source-language expression."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 410,
+   "token": "JP",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 410,
+   "token": "Tôkyô-to",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 410,
+   "token": "Sinzyuku-ku",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 410,
+   "token": "Waseda-mati",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202507_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 410,
+   "token": "tel",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 352,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]e, [R]a [R]o \"moku\" [R] [R]i \"[R]i (i-[R]o)\", \"[R]o (o-[R]o)\" [R] \"[R]a (a-[R]o)\" [R]., [R] [R]e [R] [R] [R]o [R] [R]o.**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 358,
+   "token": "li",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]e, [R] [R]o \"soweli li moku e kili\", \"moku\" [R] \"[R]i\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 358,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]e, [R] [R]o \"soweli li moku e kili\", \"moku\" [R] \"[R]i\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 358,
+   "token": "kili",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]e, [R] [R]o \"soweli li moku e kili\", \"moku\" [R] \"[R]i\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 358,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]e, [R] [R]o \"soweli li moku e kili\", \"moku\" [R] \"[R]i\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 361,
+   "token": "mi",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]o \"mi pali e moku\", \"moku\" [R] \"[R]o\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 361,
+   "token": "pali",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]o \"mi pali e moku\", \"moku\" [R] \"[R]o\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 361,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]o \"mi pali e moku\", \"moku\" [R] \"[R]o\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 361,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R] [R]o \"mi pali e moku\", \"moku\" [R] \"[R]o\".**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 431,
+   "token": "Tokipone",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**Tokipone: Mi pali e moku!**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 431,
+   "token": "Mi",
+   "kind": "proper_or_acronym",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**Tokipone: Mi pali e moku!**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 431,
+   "token": "pali",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**Tokipone: Mi pali e moku!**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2025/202510_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 431,
+   "token": "moku",
+   "kind": "esperanto_word",
+   "line_class": "plain_line_in_annotated_document",
+   "context": "**Tokipone: Mi pali e moku!**",
+   "review_category": "quoted_tokipona",
+   "reason": "Toki Pona word or sentence intentionally retained in Toki Pona spelling."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 106,
+   "token": "Es",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R]a Es(peranta) Fes(to)**",
+   "review_category": "wordplay_notation",
+   "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 106,
+   "token": "peranta",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R]a Es(peranta) Fes(to)**",
+   "review_category": "wordplay_notation",
+   "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 106,
+   "token": "Fes",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R] [R]a Es(peranta) Fes(to)**",
+   "review_category": "wordplay_notation",
+   "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 106,
+   "token": "to",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R] [R]a Es(peranta) Fes(to)**",
+   "review_category": "wordplay_notation",
+   "reason": "Parenthesized expansion of the event-name wordplay, not a bare Esperanto omission."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202602_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 265,
+   "token": "ramen",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**[R]i *ramen* [R] [R]io [R] [R] [R] [R] [R]aj [R]aj [R]oj...**",
+   "review_category": "quoted_source_term",
+   "reason": "Italicized Japanese food name discussed as a loan/source term."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 188,
+   "token": "Österreich",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R]a [R]o, [R], [R]e [R]e [R] [R] [R] [R]oj: \"[R]o\" [R] [R]e \"Österreich\" [R]a [R]o, [R] \"[R]o\" [R] [R] [R] [R]a [R]o [R] [R]o -\"Auster\".",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 188,
+   "token": "Auster",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] [R]a [R]o, [R], [R]e [R]e [R] [R] [R] [R]oj: \"[R]o\" [R] [R]e \"Österreich\" [R]a [R]o, [R] \"[R]o\" [R] [R] [R] [R]a [R]o [R] [R]o -\"Auster\".",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 444,
+   "token": "goi",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] M goi* [R] Thank you: [R]a [R]a [R]o [R] [R]o",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 444,
+   "token": "Thank",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R] M goi* [R] Thank you: [R]a [R]a [R]o [R] [R]o",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 554,
+   "token": "tea",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]e [R]a afternoon tea ([R]a [R]o) [R] [R], [R] [R] [R]e [R]a [R]o [R] [R] [R]n [R]e [R]an!",
+   "review_category": "quoted_source_language",
+   "reason": "German, Vietnamese, English, Korean, Chinese, or Toki Pona example retained verbatim."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 680,
+   "token": "JP",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 680,
+   "token": "Tôkyô-to",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 680,
+   "token": "Sinzyuku-ku",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 680,
+   "token": "Waseda-mati",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202603_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 680,
+   "token": "tel",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3 tel.: +81-3-3203-4581, [R]o: +81-3-3203-4582, [R]-[R]o: jeia-b",
+   "review_category": "postal_address",
+   "reason": "Romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 469,
+   "token": "Hola",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Hola! ― [R]on!",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 472,
+   "token": "Com",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Com estàs? ― [R] [R] [R]?",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 475,
+   "token": "Moltes",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "(Moltes) Gràcies ― ([R]an) [R]on.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 475,
+   "token": "Gràcies",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "(Moltes) Gràcies ― ([R]an) [R]on.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 478,
+   "token": "De",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "De res ― [R]e.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 481,
+   "token": "D'on",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "D'on ets? ― [R] [R] [R] [R]?",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 484,
+   "token": "Sóc",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Sóc [R] Japó. ― [R] [R] [R] [R]io.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 484,
+   "token": "Japó",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Sóc [R] Japó. ― [R] [R] [R] [R]io.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 487,
+   "token": "Una",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Una birra, si us plau. ― [R] [R] [R] [R]on.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 487,
+   "token": "si",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Una birra, si us plau. ― [R] [R] [R] [R]on.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 487,
+   "token": "us",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Una birra, si us plau. ― [R] [R] [R] [R]on.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 490,
+   "token": "Parlo",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Parlo una mica [R] català. ― [R] [R] [R] [R]an [R]e.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 490,
+   "token": "una",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Parlo una mica [R] català. ― [R] [R] [R] [R]an [R]e.",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 493,
+   "token": "Com",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "Com es diu ... [R] català? ― [R] [R] [R] ... [R] [R] [R]a?",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202604_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 493,
+   "token": "diu",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "Com es diu ... [R] català? ― [R] [R] [R] ... [R] [R] [R]a?",
+   "review_category": "quoted_catalan",
+   "reason": "Catalan phrase in a side-by-side language lesson, intentionally not Esperanto-annotated."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 419,
+   "token": "JP",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 419,
+   "token": "Tôkyô-to",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 419,
+   "token": "Sinzyuku-ku",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 419,
+   "token": "Waseda-mati",
+   "kind": "proper_or_acronym",
+   "line_class": "annotated_body",
+   "context": "**[R]a [R]o-[R]o / JP-162-0042 Tôkyô-to Sinzyuku-ku Waseda-mati 12-3**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 422,
+   "token": "tel",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**tel.: +81-3-3203-4581, fakso: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "revuoj/revuo-orienta/2026/202606_Revuo_eltiritaj_Esperantaj_pagxoj_kun_japanaj_tradukoj.html",
+   "line": 422,
+   "token": "fakso",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "**tel.: +81-3-3203-4581, fakso: +81-3-3203-4582, [R]-[R]o: jeia-b**",
+   "review_category": "postal_address",
+   "reason": "Telephone/fax label or romanized postal address outside the annotated article prose."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 471,
+   "token": "dol",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R] [R]a [R]o [R] [R]-[R]aj [R]oj. [R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io. [R] [R]aj [R]oj [R]e [R] [R] [R] [R] [R]oj, [R] [R] [R]a [R]o [R] [R]a [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 557,
+   "token": "jan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o “jan” [R] [R] [R] “[R]o”, [R] [R] [R]a [R] [R] [R]i [R] [R] [R]a [R]o [R] [R]a [R]o. [R]oj [R] [R]aj [R] [R] [R]aj [R]oj, [R] [R]e [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 569,
+   "token": "sike",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]i [R]ojn [R] [R]j [R] [R] [R]a [R]o, [R] [R]e [R] [R] [R] [R] [R]ojn [R]e. [R] [R] “[R]o” [R]e [R] [R]i [R]i waso ([R]o). [R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 584,
+   "token": "luka",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 584,
+   "token": "mute",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 584,
+   "token": "ale",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_JA.html",
+   "line": 716,
+   "token": "guan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o. [R] [R] [R]a [R]o [R] [R]aj [R]oj [R] [R] [R]e [R]a, [R] [R]o [R] [R]aj [R]oj. [R] [R]o [R] [R] [R]a [R]o [R] [R] [R]oj [R]e [R]aj [R] [R] [R]o, [R] [R]o [R] [R]o, [R]aj [R]oj, [R]j [R] [R]on [R] [R] [R]en[R]on [R] [R]a [R]o [R] [R]oj, [R]o [R] [R]oj [R] [R]o [R] [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 471,
+   "token": "dol",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R] [R]a [R]o [R] [R]-[R]aj [R]oj. [R] [R]io [R]e [R] [R] [R]oj 乭 ( dol, [R]o) [R] 畓 ( dap, [R]a [R]o), [R]j [R] [R] [R]aj [R] [R]io. [R] [R]aj [R]oj [R]e [R] [R] [R] [R] [R]oj, [R] [R] [R]a [R]o [R] [R]a [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 557,
+   "token": "jan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]o “jan” [R] [R] [R] “[R]o”, [R] [R] [R]a [R] [R] [R]i [R] [R] [R]a [R]o [R] [R]a [R]o. [R]oj [R] [R]aj [R] [R] [R]aj [R]oj, [R] [R]e [R] [R]oj.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 569,
+   "token": "sike",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R] [R]i [R]ojn [R] [R]j [R] [R] [R]a [R]o, [R] [R]e [R] [R] [R] [R] [R]ojn [R]e. [R] [R] “[R]o” [R]e [R] [R]i [R]i waso ([R]o). [R] [R] [R]i [R] [R]e, [R] [R]i [R]e waso sike ([R]o[R]o).",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 584,
+   "token": "luka",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 584,
+   "token": "mute",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 584,
+   "token": "ale",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "– [R] [R] [R]a [R]o [R] [R]a [R]o [R] [R] [R]o [R] [R]oj [R] 2001. [R] [R]o [R] [R]e: wan (1), tu (2), luka (5), mute (20), ale (100). [R] [R]aj [R]oj [R] [R] 100 [R] [R] [R]e [R] [R] [R] 2025 (20-[R]e 100 [R] 20 [R] 5). [R]aj [R] [R]ajn [R]ojn, [R]e “[R]e [R]” [R] “[R] [R]e [R]”, [R] [R]i [R] [R] [R]o [R] [R] [R]an [R]on [R] [R]e 78 [R]oj [R] 79 [R]oj [R] [R] [R]a [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  },
+  {
+   "path": "rondolegado/2026-03/rondolegada_materialoj_202603_enhavoj_KO.html",
+   "line": 716,
+   "token": "guan",
+   "kind": "esperanto_word",
+   "line_class": "annotated_body",
+   "context": "[R]e, [R] [R]o [R] [R] [R]o [R] *guan* ([R]i, [R]i) [R] *xi* ([R]o), [R]e [R] [R]on, [R] [R] [R]aj [R]oj [R] [R] [R]a [R]o. [R] [R] [R]a [R]o [R] [R]aj [R]oj [R] [R] [R]e [R]a, [R] [R]o [R] [R]aj [R]oj. [R] [R]o [R] [R] [R]a [R]o [R] [R] [R]oj [R]e [R]aj [R] [R] [R]o, [R] [R]o [R] [R]o, [R]aj [R]oj, [R]j [R] [R]on [R] [R] [R]en[R]on [R] [R]a [R]o [R] [R]oj, [R]o [R] [R]oj [R] [R]o [R] [R]o.",
+   "review_category": "quoted_source_language",
+   "reason": "Toki Pona, Chinese, or Korean source term/readout explicitly discussed as foreign-language data."
+  }
+ ]
+}

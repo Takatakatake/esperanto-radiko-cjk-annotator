@@ -1,0 +1,45 @@
+{
+ "schema_version": 1,
+ "source_fake_coarse_manifest_sha256": "8C507321A27ACD3FE9F919E82C1C380833D6D51760C122467D49757511004504",
+ "source_fake_coarse_entries_sha256": "A542BC4464CDA30FBE39C28F0EFBEE51EECE83EEABBEA5D3A201388DA3AA7DEB",
+ "sources": {
+  "learner": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学習者版_utf8_20260416.txt",
+   "bytes": 4371657,
+   "sha256": "1435F5B1CD1B0BB8224521A8262E3CA740B07B7523E805545A4E3CA7447A286C",
+   "lines": 62313
+  },
+  "academic": {
+   "name": "世界语全部单词_大约44100个(原pejvo.txt)_学術版_utf8_20260416.txt",
+   "bytes": 4277566,
+   "sha256": "4C813C48B3C4919601FA51E25B6AA3628A0A6793A39C49F1DDFB22A9112E1A0A",
+   "lines": 62313
+  }
+ },
+ "counts": {
+  "entries": 1,
+  "evaluable_entries": 1,
+  "new_fake_marker_rows": 1
+ },
+ "localized_glosses": {
+  "ja": "トマス派",
+  "zh": "托马斯派",
+  "ko": "토마스파"
+ },
+ "entries_sha256": "3296A91605BCDD1E946966B72AEAC9855F3488347CA6A12913C679F86430ED31",
+ "entries": [
+  {
+   "learner_line": 56273,
+   "surface": "Tomisto",
+   "learner_decomposition": "Tom/ist/o",
+   "coarse_decomposition": "Tomist/o",
+   "academic_decomposition": "Tomist/o",
+   "authority": "paired_academic",
+   "target": "Tomist/o",
+   "typed_roles": "RL",
+   "case_sensitive": true,
+   "category": "reviewed_ff33_new_fake_marker",
+   "reason": "FF33 paired-master delta: the learner keeps Tom/ist/o only on the fake/Kanji track; annotation ruby follows the paired academic Tomist/o lexical root."
+  }
+ ]
+}

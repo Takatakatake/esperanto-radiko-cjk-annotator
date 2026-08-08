@@ -1,0 +1,490 @@
+[
+ {
+  "w": "efektive",
+  "target": "efektiv/e"
+ },
+ {
+  "w": "ideologia",
+  "target": "ideologi/a"
+ },
+ {
+  "w": "sintenon",
+  "target": "sin/ten/on"
+ },
+ {
+  "w": "detektivajn",
+  "target": "detektiv/ajn"
+ },
+ {
+  "w": "mekanismo",
+  "target": "mekanism/o"
+ },
+ {
+  "w": "astronomia",
+  "target": "astronomi/a"
+ },
+ {
+  "w": "astronomoj",
+  "target": "astronom/oj"
+ },
+ {
+  "w": "teleskopo",
+  "target": "teleskop/o"
+ },
+ {
+  "w": "astronomo",
+  "target": "astronom/o"
+ },
+ {
+  "w": "kilometroj",
+  "target": "kilometr/oj"
+ },
+ {
+  "w": "teleskopoj",
+  "target": "teleskop/oj"
+ },
+ {
+  "w": "mikroskopo",
+  "target": "mikroskop/o"
+ },
+ {
+  "w": "hipotezoj",
+  "target": "hipotez/oj"
+ },
+ {
+  "w": "astronomio",
+  "target": "astronomi/o"
+ },
+ {
+  "w": "devena",
+  "target": "deven/a"
+ },
+ {
+  "w": "maleta",
+  "target": "mal/et/a"
+ },
+ {
+  "w": "milovano",
+  "target": "milovan/o"
+ },
+ {
+  "w": "aŭtomobilo",
+  "target": "aŭtomobil/o"
+ },
+ {
+  "w": "sinteno",
+  "target": "sin/ten/o"
+ },
+ {
+  "w": "efektivan",
+  "target": "efektiv/an"
+ },
+ {
+  "w": "sinsekve",
+  "target": "sin/sekv/e"
+ },
+ {
+  "w": "ortografio",
+  "target": "ortografi/o"
+ },
+ {
+  "w": "ideogramojn",
+  "target": "ideogram/ojn"
+ },
+ {
+  "w": "mekanismon",
+  "target": "mekanism/on"
+ },
+ {
+  "w": "organizaj",
+  "target": "organiz/aj"
+ },
+ {
+  "w": "anonimulo",
+  "target": "anonim/ul/o"
+ },
+ {
+  "w": "organizaĵoj",
+  "target": "organiz/aĵ/oj"
+ },
+ {
+  "w": "efektiviĝ",
+  "target": "efektiv/iĝ"
+ },
+ {
+  "w": "oorganiz",
+  "target": "o/organiz"
+ },
+ {
+  "w": "militkapt",
+  "target": "milit/kapt"
+ },
+ {
+  "w": "organiziĝ",
+  "target": "organiz/iĝ"
+ },
+ {
+  "w": "sovetunio",
+  "target": "sovetuni/o"
+ },
+ {
+  "w": "organiza",
+  "target": "organiz/a"
+ },
+ {
+  "w": "seninter",
+  "target": "sen/inter"
+ },
+ {
+  "w": "civilizacio",
+  "target": "civilizaci/o"
+ },
+ {
+  "w": "ŝtatgvidantoj",
+  "target": "ŝtat/gvid/ant/oj"
+ },
+ {
+  "w": "paragrafo",
+  "target": "paragraf/o"
+ },
+ {
+  "w": "prototipoj",
+  "target": "prototip/oj"
+ },
+ {
+  "w": "kolektiva",
+  "target": "kolektiv/a"
+ },
+ {
+  "w": "dividendo",
+  "target": "dividend/o"
+ },
+ {
+  "w": "anonime",
+  "target": "anonim/e"
+ },
+ {
+  "w": "kolektive",
+  "target": "kolektiv/e"
+ },
+ {
+  "w": "radioterapio",
+  "target": "radio/terapi/o"
+ },
+ {
+  "w": "zoologo",
+  "target": "zoolog/o"
+ },
+ {
+  "w": "darvinisto",
+  "target": "darvin/ist/o"
+ },
+ {
+  "w": "organiziĝo",
+  "target": "organiz/iĝ/o"
+ },
+ {
+  "w": "ultranaciisto",
+  "target": "ultra/naci/ist/o"
+ },
+ {
+  "w": "sinsekv",
+  "target": "sin/sekv"
+ },
+ {
+  "w": "radiofonie",
+  "target": "radiofoni/e"
+ },
+ {
+  "w": "agresivan",
+  "target": "agresiv/an"
+ },
+ {
+  "w": "intensivan",
+  "target": "intensiv/an"
+ },
+ {
+  "w": "ideologio",
+  "target": "ideologi/o"
+ },
+ {
+  "w": "kilogramojn",
+  "target": "kilogram/ojn"
+ },
+ {
+  "w": "efektivigi",
+  "target": "efektiv/ig/i"
+ },
+ {
+  "w": "civilizacion",
+  "target": "civilizaci/on"
+ },
+ {
+  "w": "papalagoj",
+  "target": "papalag/oj"
+ },
+ {
+  "w": "papalago",
+  "target": "papalag/o"
+ },
+ {
+  "w": "organizo",
+  "target": "organiz/o"
+ },
+ {
+  "w": "geografie",
+  "target": "geografi/e"
+ },
+ {
+  "w": "organizi",
+  "target": "organiz/i"
+ },
+ {
+  "w": "organizoj",
+  "target": "organiz/oj"
+ },
+ {
+  "w": "reprezentas",
+  "target": "reprezent/as"
+ },
+ {
+  "w": "intensivajn",
+  "target": "intensiv/ajn"
+ },
+ {
+  "w": "ekologio",
+  "target": "ekologi/o"
+ },
+ {
+  "w": "skalan",
+  "target": "skal/an"
+ },
+ {
+  "w": "telefona",
+  "target": "telefon/a"
+ },
+ {
+  "w": "opajn",
+  "target": "op/ajn"
+ },
+ {
+  "w": "etetaj",
+  "target": "et/et/aj"
+ },
+ {
+  "w": "antibiotiko",
+  "target": "antibiotik/o"
+ },
+ {
+  "w": "religiistoj",
+  "target": "religi/ist/oj"
+ },
+ {
+  "w": "proksimiĝantan",
+  "target": "proksim/iĝ/ant/an"
+ },
+ {
+  "w": "sekvantoj",
+  "target": "sekv/ant/oj"
+ },
+ {
+  "w": "ŝtonerojn",
+  "target": "ŝton/er/ojn"
+ },
+ {
+  "w": "jetis",
+  "target": "jet/is"
+ },
+ {
+  "w": "totalisman",
+  "target": "total/ism/an"
+ },
+ {
+  "w": "antaro",
+  "target": "ant/ar/o"
+ },
+ {
+  "w": "iston",
+  "target": "ist/on"
+ },
+ {
+  "w": "antan",
+  "target": "ant/an"
+ },
+ {
+  "w": "finis",
+  "target": "fin/is"
+ },
+ {
+  "w": "ontan",
+  "target": "ont/an"
+ },
+ {
+  "w": "miriadoj",
+  "target": "miriad/oj"
+ },
+ {
+  "w": "malproksimegaj",
+  "target": "mal/proksim/eg/aj"
+ },
+ {
+  "w": "proksimiĝadis",
+  "target": "proksim/iĝ/ad/is"
+ },
+ {
+  "w": "jugoslavio",
+  "target": "jugoslavi/o"
+ },
+ {
+  "w": "rubaĵujon",
+  "target": "rub/aĵ/uj/on"
+ },
+ {
+  "w": "irkucko",
+  "target": "irkuck/o"
+ },
+ {
+  "w": "doloregis",
+  "target": "dolor/eg/is"
+ },
+ {
+  "w": "sekvantan",
+  "target": "sekv/ant/an"
+ },
+ {
+  "w": "austra",
+  "target": "austr/a"
+ },
+ {
+  "w": "ekrevis",
+  "target": "ek/rev/is"
+ },
+ {
+  "w": "pseudonimo",
+  "target": "pseudonim/o"
+ },
+ {
+  "w": "donistoj",
+  "target": "don/ist/oj"
+ },
+ {
+  "w": "istaro",
+  "target": "ist/ar/o"
+ },
+ {
+  "w": "radiofonio",
+  "target": "radio/fon/io"
+ },
+ {
+  "w": "radioaj",
+  "target": "radio/aj"
+ },
+ {
+  "w": "istajn",
+  "target": "ist/ajn"
+ },
+ {
+  "w": "bulgario",
+  "target": "bulgari/o"
+ },
+ {
+  "w": "iĝojn",
+  "target": "iĝ/ojn"
+ },
+ {
+  "w": "brazilio",
+  "target": "brazil/io"
+ },
+ {
+  "w": "sirio",
+  "target": "sir/io"
+ },
+ {
+  "w": "adekva",
+  "target": "adekv/a"
+ },
+ {
+  "w": "igantojn",
+  "target": "ig/ant/ojn"
+ },
+ {
+  "w": "sende",
+  "target": "sen/de"
+ },
+ {
+  "w": "buĉilojn",
+  "target": "buĉ/il/ojn"
+ },
+ {
+  "w": "sanaj",
+  "target": "san/aj"
+ },
+ {
+  "w": "japanion",
+  "target": "japanio/n"
+ },
+ {
+  "w": "istan",
+  "target": "ist/an"
+ },
+ {
+  "w": "malsukcesinta",
+  "target": "mal/sukces/int/a"
+ },
+ {
+  "w": "ularan",
+  "target": "ul/ar/an"
+ },
+ {
+  "w": "koreion",
+  "target": "koreio/n"
+ },
+ {
+  "w": "venejon",
+  "target": "ven/ej/on"
+ },
+ {
+  "w": "tiajn",
+  "target": "tia/jn"
+ },
+ {
+  "w": "oceania",
+  "target": "ocean/ia"
+ },
+ {
+  "w": "istinon",
+  "target": "ist/in/on"
+ },
+ {
+  "w": "adojn",
+  "target": "ad/ojn"
+ },
+ {
+  "w": "fotografio",
+  "target": "fot/o/graf/io"
+ },
+ {
+  "w": "diskon",
+  "target": "dis/kon"
+ },
+ {
+  "w": "ularo",
+  "target": "ul/ar/o"
+ },
+ {
+  "w": "igantoj",
+  "target": "ig/ant/oj"
+ },
+ {
+  "w": "iganto",
+  "target": "ig/ant/o"
+ },
+ {
+  "w": "istaj",
+  "target": "ist/aj"
+ },
+ {
+  "w": "progresis",
+  "target": "progres/is"
+ }
+]

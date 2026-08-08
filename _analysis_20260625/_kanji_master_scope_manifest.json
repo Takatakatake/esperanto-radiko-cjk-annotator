@@ -1,0 +1,27 @@
+{
+ "schema_version": 1,
+ "description": "Pinned read-only Kanji authority inputs from clean commit 0adeec7ce749c918e79a883444db026f5bad410e for deterministic formal regeneration.",
+ "source_head_oid": "0adeec7ce749c918e79a883444db026f5bad410e",
+ "files": [
+  {
+   "name": "_kanji_map_master.tsv",
+   "bytes": 194544,
+   "sha256": "83997031A29B142204EEECFD4D289FC88C4D2B222DEC05E4A846461AE0D0E831"
+  },
+  {
+   "name": "_identifier_sidecar.tsv",
+   "bytes": 531422,
+   "sha256": "768A704F9F87B338EB5448CAABC1E1AA3E4205F63447420F9252122EEF2EAD71"
+  },
+  {
+   "name": "漢字注入_学習者版_20260620.txt",
+   "bytes": 5257614,
+   "sha256": "FA429B27BA5642F05FD396A86413C64F05409A44DD9689848E7EB8678824EE08"
+  },
+  {
+   "name": "漢字注入_学術版_20260620.txt",
+   "bytes": 5145022,
+   "sha256": "59E7BA3C407F0A95DE4CE58DB803E30174836FC7CACFDE95D6947CEB44D9401D"
+  }
+ ]
+}

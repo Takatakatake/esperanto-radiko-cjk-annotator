@@ -1,0 +1,30 @@
+bum/o【日=ブーム/o｜中=吊杆/o｜韓=붐/o】:【海】ブーム,帆げた
+butan/o【日=ブタン/o｜中=丁烷/o｜韓=뷰테인/o】:【化】ブタン
+Butan/o【日=ブタン/o｜中=丁烷/o｜韓=뷰테인/o】:【国名】ブータン（アジア）
+butan/ol/o【日=ブタン/アルコール/o｜中=丁烷/醇/o｜韓=뷰테인/알코올/o】:【化】ブタノール（ブチルアルコール）##偽分解##過細分解 butan/o/l/o
+Cejlon/o【日=セイロン/o｜中=锡兰/o｜韓=실론/o】:【国名】セイロン（スリランカの旧称）,>>Sri-Lanko
+Cejlon/o【日=セイロン/o｜中=锡兰/o｜韓=실론/o】:【地名】セイロン島（インド洋北部）
+centi-【日=センチ-｜中=厘-｜韓=센티-】:［接頭辞］【学】センチ〜（補助単位，＝１００分の１）
+centiar/o【日=平方メートル/o｜中=平方米/o｜韓=제곱미터/o】:【単】平方メートル,=kvadrata metro
+centi/gram/o【日=センチ/グラム/o｜中=厘/克/o｜韓=센티/그램/o】:{Ｏ}【単】センチグラム##偽分解(PIV正式分解)
+centi/litr/o【日=センチ/リットル/o｜中=厘/升/o｜韓=센티/리터/o】:{Ｏ}【単】センチリットル##偽分解(PIV正式分解)
+centi/metr/o【日=センチ/メートル/o｜中=厘/米/o｜韓=센티/미터/o】:{Ｂ}【単】センチメートル（cm）##偽分解(PIV正式分解)
+centim/o【日=サンチーム/o｜中=分/o｜韓=데시/o】:{Ｏ}【貨】サンチーム,=centono de franko;センチモ,=centono de peseto
+cibernetik/o【日=サイバネティクス/o｜中=控制论/o｜韓=사이버네틱스/o】:サイバネティックス,=kibernetiko
+citiz/o【日=エニシダ/o｜中=金雀儿/o｜韓=금작화/o】:【植】エニシダ（属）
+Dahome/o【日=ダオメー/o｜中=达荷美/o｜韓=다호메이/o】:【国名】ダオメー（ベナンの旧称）,=Benino
+Dardanel/oj【日=ダーダネルス/oj｜中=达达尼尔/oj｜韓=다르다넬스/oj】:【地名】ダーダネルス海峡（トルコ北西部）
+de/katiz/i【日=の/つや出し/i｜中=的/轧光/i｜韓=의/광택/i】:［他］=malkatizi（つや消しする）
+kibernetik/o【日=サイバネティクス/o｜中=控制论/o｜韓=사이버네틱스/o】:サイバネティックス,=cibernetiko
+budle/o【日=フジウツギ属/o｜中=醉鱼草属/o｜韓=부들레야속/o】:【植】【PIV】G. (Genro) (Buddleja el budleacoj) de arboj k trunkarbustoj kun kvarflankaj s^osoj, lancetformaj folioj k infloreskoj (spikoj, panikloj au^ glomeruloj), kiuj pro nektaro de la floroj tre allogas papiliojn; c^. (c^irkau^) 100 sp-oj (specioj) el Ameriko, Afriko k precipe Azio; multaj sp-oj (specioj) kultivataj por ornamo, kelkaj adventicaj. Sin. (sinonimo) papiliarbo.
+butanon/o【日=ブタノン/o｜中=丁酮/o｜韓=부타논/o】:【化】【PIV】Ketono (metil-etil-ketono), CH 3-CH 2-CO-CH 3, tre grava solvanto simila al acetono.
+centil/o【日=百分位/o｜中=百分位/o｜韓=백분위/o】:【PIV】(pp (se paroli pri) finia vico de nombroj) Nombro tia, ke unu, du … au^ nau^dek nau^ centonoj de la nombroj malsuperas g^in. Vd mediano, kvarilo, dekilo, plurilo.
+cent/i/foli/o【日=百/i/葉/o｜中=百/i/叶/o｜韓=백/i/식물의 잎/o】:【植】【PIV】Centfolia rozo. Vd muskrozo. -> trifolio, milfolio.##偽分解
+centi/grad/a【日=センチ/程度/a｜中=厘/程度/a｜韓=센티/정도/a】:【PIV】= centezimala, centuma.##偽分解(PIV正式分解)
+centipeli/o【日=蜂巣胃/o｜中=网胃/o｜韓=벌집위/o】:【動】【PIV】(centipellio) La dua stomaka pos^o de la remac^uloj, trovig^anta post la rumeno. Sin. (sinonimo) retostomako. Vd abomaso, omaso, rumeno.
+cerkari/o【日=セルカリア/o｜中=尾蚴/o｜韓=유미유충/o】:【動】【PIV】Vostohava larvo de iuj trematodoj, i.a. (interalie, inter aliaj) fasciolo.
+ciliar/o【日=毛様体/o｜中=睫状体/o｜韓=섬모체/o】:【解】【PIV】(corpus ciliare) Ringoforma muskola-vaskula membrano, situanta c^irkau^ la kristalino k servanta al la akomodig^o.
+ciprined/oj【日=コイ科/oj｜中=鲤科/oj｜韓=잉어과/oj】:【動】【PIV】Fam. (Familio) (Cyprinidae) de ciprinoformaj fis^oj, al kiu apartenas alburno, bramo, leu^cisko, tinko k.a. (kaj aliaj)
+dekat/i【日=蒸絨/i｜中=蒸呢/i｜韓=증융/i】:【服】【PIV】(tr (transitiva)) Elmeti teksaj^on al akvovaporo, por eviti postan kunstrec^ig^on, forigante la apreturon.
+dekatlon/o【日=十種競技/o｜中=十项全能/o｜韓=10종경기/o】:【PIV】Dekparta atletika konkurso.
+deltaplan/o【日=ハンググライダ/o｜中=悬挂滑翔翼/o｜韓=행글라이더/o】:【PIV】Deltaforma alo el nilona teksaj^o, uzata por senmotora flugo.
