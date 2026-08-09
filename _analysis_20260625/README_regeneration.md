@@ -294,6 +294,14 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   感嘆詞`!`約60・コーパスがアプリを支持する同綴り衝突)を超えたら非0終了。
 - fix_ruby_inflection_resegment.py … 上記で見つかった「語幹が切られた語尾変化形」を
   アプリ自身の基本形キーの訳語で組み直す(第114R新設・発明ゼロ・冪等)。
+- ★第126R(2026-08-09): ベースライン補正 user_corrections.json(sporti 1語)を撤去=空リスト化。
+  merge_overlay の shadow 機構は**ゲート対象JSONの値より優先**されるため、ベースラインが
+  古いと「JSONは直っているのに実行時は旧値」になる(第125R型の死角)。sporti は現行GGが
+  素で正描画するため冗長で、残る効果はZHルビ訳語のGG乖離(运动 vs GG=体育运动)と
+  全大文字形のサイズclass差のみだった。**以後ベースラインへ補正を入れる場合は、
+  scratchpad r126_overlay_audit.py 方式(3言語×ルビ/漢字/純粋のオーバーレイ有無差分)で
+  ゲート対象JSONとの乖離を必ず測る**。機構(セッション補正・autofix・アップロード)は無変更。
+  旧ファイルは fuyou/20260808_r116_baks/user_corrections_*.json.bak_preR126。app 3808155。
 - ★第125R教訓(2026-08-09): 置換リスト_漢字_純粋置換.json は置換リスト_漢字.jsonの
   **派生物**(derive_pure_kanji.pyでrt/rubyタグ剥がし・3アプリ共有・JA配下1本)なのに、
   第116R〜124Rの9ラウンドで再導出を怠り第110R世代(8/5)のまま配信していた
