@@ -1,15 +1,5 @@
-# 第123R B類: マスター既存部品で合成可能なマスター外エスペラント実語(第124R軸+照会)
-judaraj	jud=ラテン+ar=群 → jud群aj
-judisman	jud主义an
-kafeja	kaf/ej/o→kaf所o 実在。kaf所a が本筋
-kafeto	kaf小o(et=小)
-kafpulvoro	kaf+粉ᴾ?合成要検討
-kaftrinki	kaf+飲i合成要検討
-psikanalizisto	psik=心ᴾˢ+析+家 → 心ᴾˢ析家o
-rasistaj	ras=种ᴿ → 种ᴿ家aj
-romiajn	romi 語根がマスター外。照会
-ruslanda	rus/land/an/o→rus国员o 実在 → rus国a
-ruslingva	rus语a
-taŭismo	taŭ がマスター外。道主义o 候補はマスター照会
-ĉinlingvaj	ĉin=ラテン+语 → ĉin语aj
-ĉinlingvan	ĉin语an
+# 第123R B類の照会リスト(第124R裁定後の残り)
+# ★第124R実測: kafeja/kafeto/kafpulvoro/kaftrinki/ruslanda/ruslingva/ĉinlingvaj/ĉinlingvan/judaraj/judisman は既に正描画(kaf所a型=ラテン固定短語根+接尾辞漢字。第123R署名の誤検出)
+# ★psikanalizisto/rasistaj は第124Rで合成是正済(心ᴾˢ析家o/种ᴿ家aj)
+taŭismo	taŭ語根がマスター外。道主义o候補はマスター照会
+romiajn	romi語根がマスター外。照会

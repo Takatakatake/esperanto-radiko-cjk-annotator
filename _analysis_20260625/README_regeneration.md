@@ -294,6 +294,13 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   感嘆詞`!`約60・コーパスがアプリを支持する同綴り衝突)を超えたら非0終了。
 - fix_ruby_inflection_resegment.py … 上記で見つかった「語幹が切られた語尾変化形」を
   アプリ自身の基本形キーの訳語で組み直す(第114R新設・発明ゼロ・冪等)。
+- fix_kanji_compose_r124.py … 第123R照会リストB類の裁定と是正(第124R)。★12語中10語
+  (kafeja=kaf所a/ruslanda=rus国a/ĉinlingvaj=ĉin语aj等)は**既に正描画**=第123R署名
+  「語頭1-3字ラテン+CJK」がラテン固定短語根(kaf/rus/ĉin/jud)+接尾辞漢字の正当パターンを
+  誤検出していた(再flag禁止)。真に壊れていたのは psikanalizisto(psi渠化家o=渠が食う)と
+  rasistaj(r辅aj=辅が食う)の2語のみ → マスター実在部品の実描画連結で合成
+  (心ᴾˢ析家o/种ᴿ家aj。rt連結+ラテン=元表層の完全性検査付き)。冪等($R124C)。
+  残る照会は taŭismo/romiajn(語根がマスター外)のみ。
 - fix_kanji_ruby_bareout_r123.py … マスター外残余5,139語のガーブル署名スイープ(第123R、
   scratchpad r123_residue_sweep.py: 漢字頭食い署名408+ルビ語頭裸6)の是正。外国固有名詞・
   外国語引用347語を漢字裸化(Cambridge→C龙香子双 / Adam→A妃 型の根絶)+ルビ6語
