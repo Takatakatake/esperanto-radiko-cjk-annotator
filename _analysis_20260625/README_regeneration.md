@@ -294,6 +294,14 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   感嘆詞`!`約60・コーパスがアプリを支持する同綴り衝突)を超えたら非0終了。
 - fix_ruby_inflection_resegment.py … 上記で見つかった「語幹が切られた語尾変化形」を
   アプリ自身の基本形キーの訳語で組み直す(第114R新設・発明ゼロ・冪等)。
+- ★第125R教訓(2026-08-09): 置換リスト_漢字_純粋置換.json は置換リスト_漢字.jsonの
+  **派生物**(derive_pure_kanji.pyでrt/rubyタグ剥がし・3アプリ共有・JA配下1本)なのに、
+  第116R〜124Rの9ラウンドで再導出を怠り第110R世代(8/5)のまま配信していた
+  (ユーザーが実機で francajn 誤分解を発見)。**漢字JSONに書き込む全ツールの適用後は
+  derive_pure_kanji.py を必ず実行**(regenerate_all.py経由なら自動)。再導出後の検証は
+  **audit_pure_kanji_derivation.py**(第125R新設・常設ゲート)=①派生同一性全行
+  ②マーカー集計一致 ③コーパス実使用22,259語(out/_r109_corpus_words.json)で
+  純粋置換出力==ルビ付き出力のタグ剥がし(不一致0)。不一致で非0終了。app cf4f303。
 - fix_kanji_compose_r124.py … 第123R照会リストB類の裁定と是正(第124R)。★12語中10語
   (kafeja=kaf所a/ruslanda=rus国a/ĉinlingvaj=ĉin语aj等)は**既に正描画**=第123R署名
   「語頭1-3字ラテン+CJK」がラテン固定短語根(kaf/rus/ĉin/jud)+接尾辞漢字の正当パターンを
