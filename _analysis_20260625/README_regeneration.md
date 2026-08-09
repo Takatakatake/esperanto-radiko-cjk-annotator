@@ -294,6 +294,12 @@ cleanな京大HTML repoを指し、HEAD・branch・status・169文書の内容ha
   感嘆詞`!`約60・コーパスがアプリを支持する同綴り衝突)を超えたら非0終了。
 - fix_ruby_inflection_resegment.py … 上記で見つかった「語幹が切られた語尾変化形」を
   アプリ自身の基本形キーの訳語で組み直す(第114R新設・発明ゼロ・冪等)。
+- audit_spelling_fidelity.py … ★表示綴り忠実性ゲート(第129R新設)。全行の構造的不変量
+  「ルビ行=タグ剥がし後の可視エスペラント==キー / 漢字行=rt連結+裸ラテン==キー」を
+  3言語×両軌道×(GG/GL/G2)の約350万行で検査。初回はルビ軌道1.87M行**完全**・漢字軌道で
+  第118R合成の取りこぼし2件(Metu/Organiziĝis=大文字化キーにrt小文字残り)を検出。
+- fix_kanji_rt_capitalization_r129.py … 上記2件の是正(第129R)。先頭rtの1字目大文字化のみの
+  値手術(漢字グリフ・発火位置・ID不変をfail-closedで保証)。冪等。
 - audit_notation_equivalence.py … ★三表記入力(ĉ/cx/c^)等価性ゲート(第128R新設)。
   orchestrateは最初に convert_to_circumflex するため「正規化後文字列が等しい⟺出力が等しい」
   が全機能経路(%/@込み)で成立する=文字列レベル検査が完全証明。①変換辞書6本+挙動の
